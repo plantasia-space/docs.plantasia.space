@@ -3,7 +3,37 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Orbit&display=swap');
+/* Lato and Orbit are served from this site (`static/fonts/`), not fetched from a font host. A
+ * webfont request hands that host every visitor's IP before they have read a word, and there is
+ * nothing to gain from it once the bytes are ours. Latin subsets — enough for the English and
+ * Spanish docs — at ~14KB each.
+ *
+ * Orbit is single-weight upstream, so the old `family=Orbit` request returned exactly the 400
+ * declared below. Lato ships 400 and 700; the headings below ask for 600, which CSS resolves to
+ * the 700 face, same as before. */
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbit';
+  src: url('/fonts/Orbit-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 h1,
 h2,
