@@ -44,7 +44,7 @@ When you invite specific xPlorers, you can assign roles:
 
 - **Viewer** — can view and experience
 - **Publisher** — can publish content inside the entity
-- **Editor** — can edit and manage the entity
+- **Editor** — can edit the entity, publish inside it, and invite other xPlorers
 
 ### General Access (Link or Public Rules)
 
@@ -58,6 +58,20 @@ Default roles for general access can be:
 - Viewer
 - Publisher
 - Editor
+
+### Who Can Change These Settings
+
+Inviting people and opening an entity up are two different decisions, so they sit with different people:
+
+- **Owner** — everything: invite and remove xPlorers, change their roles, and set General Access
+- **Editor** — can invite and remove xPlorers and change their roles, but cannot change General Access
+- **Publisher** and **Viewer** — cannot change collaboration settings
+
+Editors can bring in another pair of hands, since they already edit and publish the entity. Deciding whether anyone with the link can reach it stays with the owner alone — as does archiving or deleting it.
+
+If a setting is not yours to change, you will see it greyed out with a note explaining why, rather than an error after the fact.
+
+Audio has no collaborator list. Its audience is the owner's to set — see [Audio Visibility](#audio-visibility-audience) above.
 
 This model is optimized for collaboration, contributions, and shared creation.
 

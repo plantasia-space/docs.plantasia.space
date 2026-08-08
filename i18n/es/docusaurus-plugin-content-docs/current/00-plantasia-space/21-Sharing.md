@@ -44,7 +44,7 @@ Cuando invitas xPlorers especificos, puedes asignar roles:
 
 - **Viewer**: puede ver y experimentar
 - **Publisher**: puede publicar contenido dentro de la entidad
-- **Editor**: puede editar y administrar la entidad
+- **Editor**: puede editar la entidad, publicar dentro de ella e invitar a otrxs xPlorers
 
 ### Acceso general (reglas de enlace o publico)
 
@@ -58,6 +58,20 @@ Los roles por defecto para el acceso general pueden ser:
 - Viewer
 - Publisher
 - Editor
+
+### Quien puede cambiar estos ajustes
+
+Invitar personas y abrir una entidad son dos decisiones distintas, asi que corresponden a personas distintas:
+
+- **Owner**: todo. Invitar y quitar xPlorers, cambiar sus roles y definir el Acceso general
+- **Editor**: puede invitar y quitar xPlorers y cambiar sus roles, pero no puede cambiar el Acceso general
+- **Publisher** y **Viewer**: no pueden cambiar los ajustes de colaboracion
+
+Lxs Editors pueden sumar otro par de manos, ya que de por si editan y publican la entidad. Decidir si cualquiera con el enlace puede llegar a ella queda solo en manos de quien es Owner, igual que archivarla o eliminarla.
+
+Si un ajuste no es tuyo para cambiar, lo veras desactivado con una nota que explica por que, en lugar de un error despues de intentarlo.
+
+El Audio no tiene lista de colaboradorxs: su audiencia la define quien es Owner. Mira [Visibilidad del audio](#visibilidad-del-audio-audiencia) mas arriba.
 
 Este modelo esta optimizado para colaboracion, aportes y creacion compartida.
 

@@ -67,10 +67,15 @@ h3 {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+/* Infima's own scale, on a 16px base. The previous values shrank every level —
+   h3 landed at 0.8rem, smaller than the body text it introduces, so subheadings
+   read as less important than the paragraphs under them and the sections listed
+   in the table of contents disappeared into the page.
+   Floor to keep if these are ever retuned: h3 has to stay above 1rem. */
 :root {
-  --ps-heading-h1: 1.5rem;
-  --ps-heading-h2: 1.2rem;
-  --ps-heading-h3: 0.8rem;
+  --ps-heading-h1: 2rem;
+  --ps-heading-h2: 1.5rem;
+  --ps-heading-h3: 1.25rem;
 }
 
 :where(.markdown, .theme-doc-markdown) h1 {

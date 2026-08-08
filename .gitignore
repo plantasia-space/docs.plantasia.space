@@ -22,7 +22,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # Local mkcert TLS certs for Caddy HTTPS dev proxy — NEVER commit (contains private key)
-.certs/
+# No trailing slash: with one, this only matches a directory, and the worktree
+# tooling links .certs as a symlink — which walked straight past the rule and
+# got committed.
+.certs
 
 # Agent skills system — kept local until validated; do not publish to this public repo
 .agents/
