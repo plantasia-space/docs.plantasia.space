@@ -67,6 +67,16 @@ h3 {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+/* Pages keep Infima's measure — 1140px, and 1320px above 1440px — centred in
+   the window rather than run edge to edge.
+   Nothing is set here on purpose. A bare `.container { max-width: 100% }` used
+   to override it, and because that rule tied with Infima's own
+   `@media (min-width: 1440px) { .container { ... } }`, the winner came down to
+   the order the bundler happened to emit: full width under `docusaurus start`,
+   capped and centred in the built site. Same source, two layouts, which is why
+   the deployed site had a left margin that never showed up locally. With that
+   rule gone the defaults apply, and they apply the same in both. */
+
 /* Infima's own scale, on a 16px base. The previous values shrank every level —
    h3 landed at 0.8rem, smaller than the body text it introduces, so subheadings
    read as less important than the paragraphs under them and the sections listed
@@ -426,11 +436,24 @@ ul li {
   margin: 1.5rem 0;
 }
 
+/* Same three rules as the markdown figures below — cap at the column, never
+   past the source's own size, never past the height ceiling, centred.
+   `mobile-client_mid.webp` on the Sensors page is 1147x1920: a portrait phone
+   shot, and the reason a blanket full width does not work here. */
 .ps-doc-themed-image {
   display: block;
-  width: 100%;
-  max-width: 720px;
+  margin-inline: auto;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: var(--ps-doc-media-max-height);
+}
+
+/* Vectors are the exception: the Sync diagrams are authored at 720x300 but
+   lose nothing on the way up, so they take the full column. */
+.ps-doc-themed-image[src$='.svg'] {
+  width: 100%;
+  max-height: none;
 }
 
 .ps-doc-themed-image--dark {
@@ -445,11 +468,8 @@ ul li {
   display: block;
 }
 
-@media (min-width: 996px) {
-  .ps-doc-video {
-    width: 77%;
-  }
-}
+/* Videos used to drop to 77% on desktop while the screenshots beside them
+   stayed full width. One width for all page media; the rule is gone. */
 
 
 /* src/css/custom.css */
@@ -471,9 +491,64 @@ ul li {
   color: #fff;
 }
 
-.container {
+/* ---------------------------------------------------------------------------
+   Doc page measure
+
+   Docusaurus narrows the article to 75% only on pages that render a right-hand
+   table of contents. Pages with no `##` headings — `docs/index` and the four
+   section landing pages — get no table of contents and so ran a third wider
+   than every other page. Reserve the column on all of them so the text starts
+   and ends in the same place whichever page you are reading.
+
+   Written as `.row > .col[class*=...]` on purpose: the theme's own rule is
+   already `!important`, so this has to outrank it on specificity rather than
+   on which one the bundler emits last.
+   --------------------------------------------------------------------------- */
+@media (min-width: 997px) {
+  .row > .col[class*='docItemCol'] {
+    max-width: 75% !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Doc page media
+
+   Three rules, in order, for anything sitting on its own line:
+
+   1. Never wider than the column. The wide screenshots are all ~1920px, so
+      they land on the same left and right edge as each other — which was the
+      whole point.
+   2. Never bigger than its own source. `max-width` with no `width` means an
+      image stops at its natural size: a 340px crop of a menu or a button stays
+      a 340px crop instead of being blown up to a blurry full-width slab.
+   3. Never taller than `--ps-doc-media-max-height`. A portrait screenshot at
+      full column width runs past a screenful and pushes the text off the page;
+      the ceiling holds it to something you can take in at once. `width: auto`
+      keeps the aspect ratio while the height is doing the limiting.
+
+   Centred, so the ones that come in under the column width read as deliberate
+   rather than as a ragged left edge.
+
+   An image with text beside it is an inline UI icon (the play and orbiter
+   marks in the audio pages), not a figure — `:only-child` leaves those alone.
+   --------------------------------------------------------------------------- */
+:root {
+  --ps-doc-media-max-height: 70vh;
+}
+
+.markdown p > img:only-child,
+.markdown p > a:only-child > img:only-child {
+  display: block;
+  margin: 1.5rem auto;
+  width: auto;
+  height: auto;
   max-width: 100%;
-  margin: 0 auto;
+  max-height: var(--ps-doc-media-max-height);
+}
+
+.markdown p img:not(:only-child) {
+  vertical-align: middle;
+  max-width: 100%;
 }
 
 /* Responsive Iframes */
