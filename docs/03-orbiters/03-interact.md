@@ -95,7 +95,7 @@ Jamming mode is the primary interaction mode.
 - X and Y are controlled by movement across the screen
 - Z is controlled via zoom gestures or dedicated controls
 
-You can also use the knobs directly.
+You can also use the knobs directly, or tilt a phone — see [Sensors](./sensors).
 
 ### Reset to equilibrium
 
