@@ -71,6 +71,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          // `/en/…` only redirects to the unprefixed English pages (see en-redirect).
+          ignorePatterns: ['/en/**'],
+        },
       },
     ],
   ],
@@ -190,7 +194,7 @@ const config = {
         language: ['en', 'es'], // Specify the language(s) to be indexed
         highlightSearchTermsOnTargetPage: true, // Highlight search terms on the target page
         explicitSearchResultPath: true, // Explicitly define search result paths
-        ignoreFiles: ['/deck', '/es/deck'],
+        ignoreFiles: ['/deck', '/es/deck', 'en/*'],
       },
     ],
   ],
