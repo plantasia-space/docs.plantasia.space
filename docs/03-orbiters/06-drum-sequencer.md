@@ -39,8 +39,8 @@ plays, the new beat starts on the Orbiter's **launch grid** (the grid picker in 
 first knob in Beats), so the switch always lands on a bar line. A mute waits for the grid the same
 way.
 
-While a switch waits, its pad is outlined and **fills up as the boundary nears**, and counts down the
-quarter notes left (**in 3 ♩**). Tap the beat that is playing to take the switch back.
+While a switch waits, its pad blinks and counts down the beats left, like Play does when it waits
+for the grid. Tap the beat that is playing to take the switch back.
 
 ## Recording
 
