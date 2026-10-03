@@ -18,18 +18,22 @@ You meet it in two places, which always show the same state:
 
 ## Pad functions
 
-Pick what the pads do with **Voices**, **Beats**, **Steps**, **Tunings** or **Mutes**. The buttons
+Pick what the pads do: **Beats** and **Mutes** work on the beat, **Steps**, **Tunings** and **Voices** on its notes. The buttons
 around the pads follow the function: an action that would do nothing there is greyed out.
 
 | Function | The pads… | Also available |
 |---|---|---|
 | **Voices** | play each drum voice (bank A, or bank B with **Bank B**) and select it | Roll, Accent, Rec, Generate, Copy/Paste/Erase |
-| **Beats** | pick the beat that plays | Bank B, Copy/Paste/Erase of the whole beat, Length |
-| **Steps** | set the selected voice's steps; hold a pad to edit that step on the knobs | Accent, Page, Generate, Copy/Paste/Erase of the voice's row |
+| **Beats** | pick the beat that plays | Beat roll, Bank B, Copy/Paste/Erase of the whole beat, Length |
+| **Steps** | set the selected voice's steps; hold a pad to edit that step on the knobs | Roll, Accent, Page, Generate, Copy/Paste/Erase of the voice's row |
 | **Tunings** | play the selected voice across the pads, a semitone (or more, with **Spread**) apart | Roll, Accent, Rec |
-| **Mutes** | mute or unmute each voice | Bank B, Unmute all |
+| **Mutes** | mute or unmute each voice | Beat roll, Bank B, Unmute all |
 
-The four knobs above the screen change with the function too. Their names and values are shown on
+The four knobs under the screen change with the function too.
+
+**Roll** follows the function. In Beats and Mutes it is **Beat roll**: the beat repeats a short slice,
+at the roll rate (the Roll knob in Beats), from where you switched it on. In the other functions,
+**Roll** repeats a pad while you hold it. Their names and values are shown on
 the screen.
 
 ## Switching beats
@@ -86,7 +90,7 @@ badges like any module's:
 
 - axes can drive **Swing**, **Human**, **Roll rate**, the **FX** ribbons' amounts and the Euclid
   knobs (**Hits**, **Rotate**, **Chance**, **Mutate**);
-- toggles can flip **Roll**, **Euclid**, each ribbon's **Latch**, and each voice's **mute** (switch
+- toggles can flip **Roll**, **Beat roll**, **Euclid**, each ribbon's **Latch**, and each voice's **mute** (switch
   to **Mutes** to see the mute badges on the pads).
 
 A control an axis or toggle drives is locked in the editor and follows it.
