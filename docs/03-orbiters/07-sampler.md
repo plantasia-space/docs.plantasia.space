@@ -35,10 +35,18 @@ sequencer's voices).
 
 ## The screen
 
-The screen draws the zone you played last (before any note, the one nearest the middle of the
-keyboard). **Start** and **End** are handles you can drag; outside them the sample is shaded. With
-**Loop** on, the loop span is marked from **Loop** to End. While a note sounds, a dot shows where it
-is reading. The bottom line names the zone and the read span.
+The screen has two parts. On top, the zone you played last (before any note, the one nearest the
+middle of the keyboard), drawn as fine strands as tall as the sound is loud; outside **Start** … **End**
+they fade. **Start** and **End** are handles you can drag. With **Loop** on, a bar marks the span from
+**Loop** to End, and the strands inside it weave into a mesh: that part repeats.
+
+Below, every zone of the instrument sits as a small square at its pitch, octaves labelled (a kit names
+its sounds), the zone you played last the large one. Each note sounding sends a thread from its zone up
+to where it is reading, with a dot that fades as the note does: the newest thread bright, older ones
+faint. A chord shows as threads from several zones. The bottom line names the zone and how long it plays.
+
+While a new instrument loads, the screen shows a thin progress line and stays silent until it is ready
+(in a room, the room plays on meanwhile). If it can't load, it says why.
 
 ## Sample
 
