@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="system-ui, -apple-system, Segoe UI, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Audio or Notes: how World I, II and III are wired</title>
+  <desc id="d">An Audio Orbiter plays its audio in World I and shapes it with effects in II and III, one after another. A Notes Orbiter plays up to three MIDI instruments side by side, one in each World dimension, each through its own effects.</desc>
+  <style>
+    .h { font-size: 17px; font-weight: 600; fill: #8a96a3; }
+    .s { font-size: 12.5px; fill: #8a96a3; }
+    .n { font-size: 13px; font-weight: 600; fill: #5fa8d3; }
+    .k { font-size: 11.5px; fill: #8a96a3; }
+    .w { stroke: #5fa8d3; stroke-width: 2; fill: none; }
+    .b { stroke: #5fa8d3; stroke-width: 1.6; fill: rgba(95,168,211,0.08); }
+    .e { stroke: #8a96a3; stroke-width: 1.4; fill: none; stroke-dasharray: 4 3; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5fa8d3"/></marker></defs>
+
+  <!-- Audio -->
+  <text class="h" x="20" y="32">Audio Orbiter</text>
+  <text class="s" x="20" y="52">One instrument: World I plays the audio, II and III shape it.</text>
+  <text class="k" x="20" y="118">audio</text>
+  <path class="w" d="M58 114 H96" marker-end="url(#a)"/>
+  <rect class="b" x="98" y="88" width="170" height="52" rx="8"/>
+  <text class="n" x="183" y="110" text-anchor="middle">I · Track player</text>
+  <text class="k" x="183" y="128" text-anchor="middle">or Granular</text>
+  <path class="w" d="M268 114 H306" marker-end="url(#a)"/>
+  <rect class="e" x="308" y="88" width="150" height="52" rx="8"/>
+  <text class="n" x="383" y="110" text-anchor="middle">II · effects</text>
+  <text class="k" x="383" y="128" text-anchor="middle">no instrument</text>
+  <path class="w" d="M458 114 H496" marker-end="url(#a)"/>
+  <rect class="e" x="498" y="88" width="150" height="52" rx="8"/>
+  <text class="n" x="573" y="110" text-anchor="middle">III · effects</text>
+  <text class="k" x="573" y="128" text-anchor="middle">no instrument</text>
+  <path class="w" d="M648 114 H700" marker-end="url(#a)"/>
+  <text class="k" x="706" y="118">out</text>
+
+  <line x1="20" y1="168" x2="740" y2="168" stroke="#8a96a3" stroke-opacity="0.35"/>
+
+  <!-- Notes -->
+  <text class="h" x="20" y="204">Notes Orbiter</text>
+  <text class="s" x="20" y="224">Up to three MIDI instruments, side by side: one per World dimension.</text>
+  <text class="k" x="20" y="317">MIDI in</text>
+  <path class="w" d="M70 313 C 140 313, 140 268, 214 268" marker-end="url(#a)"/>
+  <path class="w" d="M70 313 H214" marker-end="url(#a)"/>
+  <path class="w" d="M70 313 C 140 313, 140 358, 214 358" marker-end="url(#a)"/>
+  <rect class="b" x="216" y="248" width="300" height="40" rx="8"/>
+  <text class="n" x="232" y="273">I</text><text class="k" x="256" y="273">MIDI effects → synth → effects</text>
+  <rect class="b" x="216" y="293" width="300" height="40" rx="8"/>
+  <text class="n" x="232" y="318">II</text><text class="k" x="256" y="318">MIDI effects → synth → effects</text>
+  <rect class="b" x="216" y="338" width="300" height="40" rx="8" stroke-dasharray="5 3"/>
+  <text class="n" x="232" y="363">III</text><text class="k" x="256" y="363">optional: switch it on for a third</text>
+  <path class="w" d="M516 268 C 590 268, 590 313, 650 313"/>
+  <path class="w" d="M516 313 H650"/>
+  <path class="w" d="M516 358 C 590 358, 590 313, 650 313"/>
+  <path class="w" d="M650 313 H700" marker-end="url(#a)"/>
+  <text class="k" x="706" y="317">out</text>
+  <text class="k" x="216" y="402">Each one is heard only through its own chain, from its own surface and MIDI channel.</text>
+</svg>
