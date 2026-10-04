@@ -62,6 +62,13 @@ The envelope every note goes through, drawn above its knobs: **Attack**, **Decay
 full) and **Level**. At the defaults (1 ms attack, sustain 100 %) the sample plays as recorded.
 Velocity never changes which layer plays: a hard hit always picks the hard recording.
 
+Attack, Decay and Release can each be **bent**. The small hollow handle in the middle of each sloped
+segment is its curve: drag it across the segment to bend it, from **−100 %** to **+100 %**.
+**+** is fast at the start (a quick rise, a quick drop and a long tail), **−** slow (a swell, a fall
+that holds before it goes). Double-click a handle to straighten it. A bent segment's handle is
+filled in. What the graph draws is what you hear, and a curve can be mapped to an axis like any
+other control.
+
 ## LFO, Mod wheel, Voice
 
 These three groups start folded; open them from their column.
