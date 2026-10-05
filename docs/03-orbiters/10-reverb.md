@@ -1,0 +1,97 @@
+---
+title: Reverb
+sidebar_position: 11
+sidebar_custom_props:
+  icon: Waves
+---
+
+Two reverbs put a sound in a space, from a small room to a long hall: the **Reverb**, with every
+control in reach, and the **One Reverb**, one knob that does it all. Both go in any effects rack. The
+Reverb's home is a **Moon**; the One Reverb is mostly an insert on a World dimension or the Star.
+
+## On a Moon, or as an insert
+
+A **Moon** is a send and return: the World is sent to it, and what it returns is added to the dry
+World through the Star's mixer. So a reverb on a Moon should return only the reverb, never the dry
+sound again, or the dry is heard twice.
+
+- **An effect added to a Moon starts at Dry/wet 100 %.** This goes for every effect with a Dry/wet
+  knob, the Reverb included. You can still turn it down for a deliberate dry leak.
+- **How much reverb you hear** is the mixer's: the Moon level and the crossfade on the Star.
+- **The tail outlives the sound.** The Moon runs after the World, so a World dimension going quiet
+  doesn't stop the tail. When the send is closed, nothing more goes in and what is ringing rings out.
+
+As an **insert** on a World dimension or the Star, a reverb blends with the sound it is on. Both
+load doing nothing (the Reverb at Dry/wet 0 %, the One Reverb at Amount 0 %): turn them up to hear
+them.
+
+## Reverb
+
+### Space
+
+| Control | What it does |
+|---|---|
+| **Decay** | How long the tail rings, in seconds, before it fades by 60 dB: about 0.5 s is a small room, 2–4 s a hall, 10 s and more an ambient wash. 0.2 … 20 s. |
+| **Pre-delay** | A gap before the reverb starts, 0 … 200 ms: keeps the sound in front of its room. |
+| **Bass** | How long the low end rings, compared to Decay (×0.5 … ×2). Below ×1 keeps long tails clean. |
+| **Freeze** | Holds the tail forever and stops new sound from getting in: play a chord, freeze it, and play over the pad it leaves. Turn it off and the tail fades at Decay again. Freeze can be mapped to the Orbiter's toggles. |
+
+### Tone
+
+These shape the reverb only; the dry sound is never filtered.
+
+| Control | What it does |
+|---|---|
+| **Damping** | Above this frequency the tail fades faster: lower sounds darker and further away. 1 … 20 kHz. |
+| **Low cut** | Removes lows before the reverb, so the tail doesn't get muddy. **Off** at 20 Hz. |
+| **High cut** | Removes highs before the reverb, for a softer, darker tail. **Off** at 20 kHz. |
+| **Width** | How wide the tail spreads: 0 % is a mono tail. |
+
+### Output
+
+**Dry/wet** blends the dry sound with the reverb (0 % as it loads, 100 % on a Moon), and **Trim**
+sets the level after it.
+
+### The screen
+
+A wireframe cube hangs in a starry sky above the sound, with rings spreading out from it.
+
+- **The cube's size is Decay.** It turns slowly while sound plays.
+- **Rings** leave the sound at one fixed speed; each ring's brightness is how loud the tail still is
+  at that age, so a short decay fades near the centre and a long one reaches the edge. The empty
+  dotted disc in the middle is the **pre-delay**.
+- **Bass** is the tall, faint rings: they die before the bright ones below ×1 and outlast them above.
+- **Damping** is the sparks rising up the beam, up to a dotted line: lower damping, lower line.
+- **Low and High cut** are bars closing the beam from its edges, low down and high up.
+- **Width** is how wide the beam and the rings spread.
+- **Dry/wet** lights the cube's front corners. At 0 % the whole picture is muted and reads **Dry · 0 %**.
+- **Freeze** stops everything where it is and turns the beam solid: **Frozen**.
+
+The word on the screen names the space by its Decay: **Room**, **Hall** or **Wash**. Below the
+picture, Decay and how long the lows and the highs ring. The picture moves only while sound plays; at
+rest, and with your system's reduced-motion setting, it is a still picture of the current values.
+
+## One Reverb
+
+One knob, **Amount**, with the One badge. Turn it up and the sound moves from a dry booth into a
+close room, then a long, darker hall, while its level stays about where it was. The first half
+gives a sound air without sounding "reverbed"; past 50 % it opens into a hall. Everything else is
+set for you: the decay, how the lows and highs fade, the pre-delay, and cuts that keep the tail
+clear of mud and fizz. At 0 % it does nothing.
+
+**On a Moon it turns into a send by itself:** it returns only the reverb, with no dry, so there is
+nothing to set. An untouched One Reverb on a Moon (Amount 0 %) returns silence.
+
+### The screen
+
+A craft hovers over the sound: hidden at 0 %, a small, tall dome at a low Amount (a booth) that
+widens into a flat saucer (a hall). Its echoes ring out on the ground beneath it, more of them as
+the room grows, and the lights on its rim and the ladder on the right follow how loud the reverb is.
+The big number is the decay in seconds; the word says **Room** or **Hall**. On a Moon the sound
+under the saucer is drawn hollow (the dry stays on the World side) and the screen reads
+**Send · Room** or **Send · Hall**.
+
+## Mapping
+
+Every Reverb control can be mapped to the Orbiter's axes, and Freeze to its toggles; the One
+Reverb's Amount maps like any knob: see [Edit](./02-edit.md).
