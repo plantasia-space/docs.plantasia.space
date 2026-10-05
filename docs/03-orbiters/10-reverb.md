@@ -74,23 +74,30 @@ picture of the current values.
 
 ## One Reverb
 
-One knob, **Amount**, with the One badge. Turn it up and the sound moves from a dry booth into a
-close room, then a long, darker hall, while its level stays about where it was. The first half
-gives a sound air without sounding "reverbed"; past 50 % it opens into a hall. Everything else is
-set for you: the decay, how the lows and highs fade, the pre-delay, and cuts that keep the tail
-clear of mud and fizz. At 0 % it does nothing.
+One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
+reverb; at 0 it does nothing, and either way the level stays about where it was.
+
+- **Turn it up** (+): the sound moves from a dry booth into a close room, then a long, darker hall.
+  The first half gives a sound air without sounding "reverbed"; past +50 it opens into a hall.
+- **Turn it down** (−): a bright, airy plate with a thin low end. Further down it waits longer
+  before it starts (up to 100 ms) and rings longer, so it **blooms** after the note.
+
+Everything else is set for you: the decay, how the lows and highs fade, the pre-delay and the cuts.
+Map Amount to an axis and one gesture sweeps from the bloom, through dry, to the hall.
 
 **On a Moon it turns into a send by itself:** it returns only the reverb, with no dry, so there is
-nothing to set. An untouched One Reverb on a Moon (Amount 0 %) returns silence.
+nothing to set. An untouched One Reverb on a Moon (Amount 0) returns silence.
 
 ### The screen
 
-A craft hovers over the sound: hidden at 0 %, a small, tall dome at a low Amount (a booth) that
-widens into a flat saucer (a hall). Its echoes ring out on the ground beneath it, more of them as
-the room grows, and the lights on its rim and the ladder on the right follow how loud the reverb is.
-The big number is the decay in seconds; the word says **Room** or **Hall**. On a Moon the sound
-under the saucer is drawn hollow (the dry stays on the World side) and the screen reads
-**Send · Room** or **Send · Hall**.
+A craft hovers over the sound: hidden at 0, a small, tall dome that widens into a flat saucer as
+you turn further either way. Turned up it flies dome up (a room, a hall); turned down it flies upside
+down, shining on the sound (a plate), and its echoes start past a dotted ring: the gap before the
+bloom. Its echoes ring out on the ground beneath it, more of them as the space grows, and the lights
+on its rim and the ladder on the right follow how loud the reverb is. The big number is the decay in
+seconds; the word says **Room** or **Hall** turned up, **Plate** or **Bloom** turned down. On a Moon
+the sound under the craft is drawn hollow (the dry stays on the World side) and the screen reads
+**Send ·** and the word.
 
 ## Mapping
 
