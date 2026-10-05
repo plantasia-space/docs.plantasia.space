@@ -56,20 +56,21 @@ sets the level after it.
 
 A wireframe cube hangs in a starry sky above the sound, with rings spreading out from it.
 
+- **The big number, top left, is Dry/wet** (0 … 100): how much of the reverb you hear. At 0 % it
+  turns grey and the whole picture is muted (**Dry · 0 %**).
 - **The cube's size is Decay.** It turns slowly while sound plays.
 - **Rings** leave the sound at one fixed speed; each ring's brightness is how loud the tail still is
   at that age, so a short decay fades near the centre and a long one reaches the edge. The empty
   dotted disc in the middle is the **pre-delay**.
-- **Bass** is the tall, faint rings: they die before the bright ones below ×1 and outlast them above.
 - **Damping** is the sparks rising up the beam, up to a dotted line: lower damping, lower line.
 - **Low and High cut** are bars closing the beam from its edges, low down and high up.
 - **Width** is how wide the beam and the rings spread.
-- **Dry/wet** lights the cube's front corners. At 0 % the whole picture is muted and reads **Dry · 0 %**.
 - **Freeze** stops everything where it is and turns the beam solid: **Frozen**.
 
 The word on the screen names the space by its Decay: **Room**, **Hall** or **Wash**. Below the
-picture, Decay and how long the lows and the highs ring. The picture moves only while sound plays; at
-rest, and with your system's reduced-motion setting, it is a still picture of the current values.
+picture, Dry/wet, then Decay, the pre-delay and how long the lows and the highs ring. The picture
+moves only while sound plays; at rest, and with your system's reduced-motion setting, it is a still
+picture of the current values.
 
 ## One Reverb
 
