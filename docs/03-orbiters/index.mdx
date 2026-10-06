@@ -9,12 +9,18 @@ sidebar_custom_props:
 ---
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
-import { Pencil, Power } from 'lucide-react';
+import { Pencil, Power, Rocket } from 'lucide-react';
 import ReleaseIcon from '@site/static/img/symbols-12-25/release-current.svg';
 
 Orbiters are instruments you *play*.
 
 <NavigationGrid>
+  <NavigationCard
+    href="/docs/orbiters/quickstart"
+    label="Quickstart"
+    icon={<Rocket />}
+    description="Your first Orbiter in 5 minutes."
+  />
   <NavigationCard 
     href="/docs/orbiters/release"
     label="Release"
@@ -48,7 +54,7 @@ An Orbiter connects three things:
 When an Orbiter is open, you can:
 
 - **Play and loop** the Audio
-- **Move in three axes (X, Y, Z)** to transform the sound
+- **Move in three <Term id="axis">axes</Term> (X, Y, Z)** to transform the sound
 - **Switch dimensions (1 / 2 / 3)** to access different transformation setups
 - **Add modulation** using the Cosmic LFO per axis
 
@@ -62,6 +68,15 @@ Some controls are global (for example: **transport**, **loop**, and often **volu
 
 ## What this section covers
 
-- **Release**: create and publish a new Orbiter
-- **Edit**: update an existing Orbiter after it’s been created
-- **Interact**: play an Orbiter on an Audio and explore its dimensions
+- **[Quickstart](/docs/orbiters/quickstart)**: your first Orbiter in 5 minutes, from an empty Studio to playing it
+- **[Release](/docs/orbiters/release)**: create and publish a new Orbiter
+- **[Edit](/docs/orbiters/edit)**: update an existing Orbiter after it’s been created
+- **[Interact](/docs/orbiters/interact)**: play an Orbiter on an Audio and explore its dimensions
+- **[Sync](/docs/orbiters/sync)**: play several Orbiters together on one shared tempo
+- **[Sensors](/docs/orbiters/sensors)**: play an Orbiter by tilting a phone
+
+And the modules you build an Orbiter from, in three categories:
+
+- **[Instruments](/docs/orbiters/instruments)**: what makes the sound, an audio you choose or notes
+- **[Audio effects](/docs/orbiters/audio-effects)**: what shapes the sound, in a World dimension, on the Star or on a Moon
+- **[MIDI effects](/docs/orbiters/midi-effects)**: what makes and reshapes the notes before the instrument plays them

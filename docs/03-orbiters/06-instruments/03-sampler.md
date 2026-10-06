@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 The **Sampler** (Rhizome) plays real recorded instruments under the keys: pick a piano, a marimba
 or a small percussion kit and it plays, in tune, across the keyboard. It is a notes instrument: it
-sits at the head of a World dimension, after any generator and MIDI effects, and the notes you play
+sits at the head of a <Term id="world-dimension">World dimension</Term>, after any generator and MIDI effects, and the notes you play
 (the keys, MIDI, the piano roll, a sequencer) sound through it.
 
 An **instrument** is a set of recordings and a map of where each one plays: a **zone** is one
@@ -16,11 +16,15 @@ recording on a range of keys, sometimes in several **velocity layers** (soft and
 the right zone for every note by itself.
 
 
-![The Sampler playing the Kawai grand: the sample and its zones on the screen, then Sample, Amp, and the LFO, Mod wheel and Voice tabs.](/img/orbiters/instruments/sampler.jpg)
+<ModulePicture
+  src="/img/orbiters/instruments/sampler.jpg"
+  alt="The Sampler playing the Kawai grand: the sample and its zones on the screen, then Sample, Amp, and the LFO, Mod wheel and Voice tabs."
+  dots={[[1, 79.8, 4.1], [2, 50, 14.2], [3, 5.6, 82.1], [4, 14.8, 82.1], [5, 24, 82.1], [6, 33.2, 82.1], [7, 42.4, 82.1], [8, 9.6, 61.4], [9, 15.7, 61.4], [10, 47.5, 52], [11, 88.7, 75], [12, 93.2, 75], [13, 97.6, 75]]}
+/>
 
 ## Picking an instrument
 
-The instrument's name is the button in the module's header. Press it to open the list of
+The instrument's name is the <Dot>1</Dot>button in the module's header. Press it to open the list of
 **libraries** and their instruments. Each row shows the instrument's tags, how many zones (and
 layers or round robins) it has, its size, and where it comes from with its licence.
 
@@ -38,7 +42,7 @@ sequencer's voices).
 
 ## The screen
 
-The screen has two parts. On top, the zone you played last (before any note, the one nearest the
+<Dot>2</Dot>The screen has two parts. On top, the zone you played last (before any note, the one nearest the
 middle of the keyboard), drawn as fine strands as tall as the sound is loud; outside **Start** … **End**
 they fade. **Start** and **End** are handles you can drag. With **Loop** on, a bar marks the span from
 **Loop** to End, and the strands inside it weave into a mesh: that part repeats.
@@ -58,17 +62,17 @@ works the same on every zone of the instrument.
 
 | Control | What it does |
 |---|---|
-| **Start** | Where a note starts reading. Raise it to skip the attack and start in the body of the sound. Acts from the next note. |
-| **End** | Where reading stops, or turns back with Loop on. Lower it for shorter, clipped notes. |
-| **Loop start** | Where the loop turns back to, in % of Start … End. Only with Loop on. |
-| **Transpose** | Moves the pitch of every zone, in semitones; the zones stay on their keys. |
-| **Fine** | Fine tuning, in cents. |
-| **One-shot** | Every note plays to End whatever you do with the key: for drums. Loop is ignored while it is on. |
-| **Loop** | When the read reaches End it turns back to Loop start (with a short crossfade, so it never clicks), and keeps looping through the release: sustained pads and drones from short samples. |
+| <Dot>3</Dot>**Start** | Where a note starts reading. Raise it to skip the attack and start in the body of the sound. Acts from the next note. |
+| <Dot>4</Dot>**End** | Where reading stops, or turns back with Loop on. Lower it for shorter, clipped notes. |
+| <Dot>5</Dot>**Loop start** | Where the loop turns back to, in % of Start … End. Only with Loop on. |
+| <Dot>6</Dot>**Transpose** | Moves the pitch of every zone, in semitones; the zones stay on their keys. |
+| <Dot>7</Dot>**Fine** | Fine tuning, in cents. |
+| <Dot>8</Dot>**One-shot** | Every note plays to End whatever you do with the key: for drums. Loop is ignored while it is on. |
+| <Dot>9</Dot>**Loop** | When the read reaches End it turns back to Loop start (with a short crossfade, so it never clicks), and keeps looping through the release: sustained pads and drones from short samples. |
 
 ## Amp
 
-The envelope every note goes through, drawn above its knobs: **Attack**, **Decay**, **Sustain** and
+<Dot>10</Dot>The envelope every note goes through, drawn above its knobs: **Attack**, **Decay**, **Sustain** and
 **Release**, then **Velocity** (how much a note's velocity moves its level; at 0 every note is
 full) and **Level**. At the defaults (1 ms attack, sustain 100 %) the sample plays as recorded.
 Velocity never changes which layer plays: a hard hit always picks the hard recording.
@@ -77,20 +81,20 @@ Attack, Decay and Release can each be **bent**. The small hollow handle in the m
 segment is its curve: drag it across the segment to bend it, from **−100 %** to **+100 %**.
 **+** is fast at the start (a quick rise, a quick drop and a long tail), **−** slow (a swell, a fall
 that holds before it goes). Double-click a handle to straighten it. A bent segment's handle is
-filled in. What the graph draws is what you hear, and a curve can be mapped to an axis like any
+filled in. What the graph draws is what you hear, and a curve can be mapped to an <Term id="axis">axis</Term> like any
 other control.
 
 ## LFO, Mod wheel, Voice
 
 These three groups start folded; open them from their column.
 
-- **LFO**: one LFO for the whole instrument, **synced** to the transport (a note value or bars) or
+- <Dot>11</Dot>**LFO**: one LFO for the whole instrument, **synced** to the transport (a note value or bars) or
   free (in Hz), with six shapes. **Pitch** is its vibrato depth (in semitones), **Level** its
   tremolo depth.
-- **Mod wheel**: what the wheel moves — **LFO** (extra vibrato on top of the LFO's), **Level** (a
+- <Dot>12</Dot>**Mod wheel**: what the wheel moves — **LFO** (extra vibrato on top of the LFO's), **Level** (a
   swell: at Amount 100 % the instrument is silent until you move the wheel) or **Pitch** (up to
   +2 semitones) — and how far (**Amount**).
-- **Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time),
+- <Dot>13</Dot>**Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time),
   **Legato** (with Mono, a note played over a held one keeps the sample playing and only bends its
   pitch, with **Glide** for how long the slide takes).
 

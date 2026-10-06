@@ -10,7 +10,7 @@ sidebar_custom_props:
 
 Ve a **Publicar → Nuevo Orbitador**.
 
-![Nuevo Orbitador](https://herbarium.plantasia.space/docs/es/media/orbiters/new.png)
+![Nuevo Orbitador](/img/orbiters/release/new.es.png)
 
 El formulario de publicación te permite definir la **identidad visual** del Orbitador, elegir un **contexto de vista previa** y configurar su **panel** y **motor** por dimensión.
 

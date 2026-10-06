@@ -9,19 +9,28 @@ sidebar_custom_props:
 quieter or louder than the one before, and can climb or fall in pitch. A chord echoes as a chord.
 
 It is a MIDI effect: it sits in an Orbiter's chain before the instrument, after the generator if
-there is one, so an arpeggio or a step line can echo too. It loads silent (Level at 0 %), so adding
-it changes nothing until you turn Level up.
+there is one, so an arpeggio or a step line can echo too.
+
+:::tip[Loads silent]
+
+Note Echo loads with Level at 0 %, so adding it changes nothing until you turn Level up.
+
+:::
 
 
-![Note Echo as it loads, Level at 0 %: the Bounce screen, then Delay, Per repeat and Input.](/img/orbiters/midi-effects/note-echo.jpg)
+<ModulePicture
+  src="/img/orbiters/midi-effects/note-echo.jpg"
+  alt="Note Echo as it loads, Level at 0 %: the Bounce screen, then Delay, Per repeat and Input."
+  dots={[[1, 32.5, 64.1], [2, 9.5, 82.1], [3, 25, 82.1], [4, 43.5, 82.1], [5, 59, 82.1], [6, 74.6, 82.1], [7, 98, 75.3], [8, 50, 14.2]]}
+/>
 
 ## Delay
 
-- **Sync** on: the delay is a note value on the Orbiter's tempo, from 1/2 to 1/32, dotted and
+- <Dot>1</Dot>**Sync** on: <Dot>2</Dot>**Delay** is a note value on the Orbiter's tempo, from 1/2 to 1/32, dotted and
   triplet ones included ("1/8D").
 - **Sync** off: the delay is in milliseconds, up to 1 s. At the very bottom of the knob it reads
   **0 ms**: every repeat sounds at once with the note, so with **Pitch** set, one key plays a chord.
-- **Repeats**: how many times each note plays again, 1 to 15. Each repeat is a voice of the
+- <Dot>3</Dot>**Repeats**: how many times each note plays again, 1 to 15. Each repeat is a voice of the
   instrument, so the knob only goes as far as the instrument's voices allow. Hover it to see why it
   stops there (with 4 voices, 3 repeats fill the instrument's 16 voices). Lower the instrument's
   voices to allow more repeats.
@@ -32,20 +41,20 @@ once.
 
 ## Per repeat
 
-- **Level**: how loud the first repeat is, as a share of the note you played.
-- **Feedback**: each further repeat, times this. Under 100 % the echoes fade, over 100 % they swell
+- <Dot>4</Dot>**Level**: how loud the first repeat is, as a share of the note you played.
+- <Dot>5</Dot>**Feedback**: each further repeat, times this. Under 100 % the echoes fade, over 100 % they swell
   (up to full velocity).
-- **Pitch**: added on every repeat, in semitones. +7 st plays the repeats a fifth, then a ninth,
+- <Dot>6</Dot>**Pitch**: added on every repeat, in semitones. +7 st plays the repeats a fifth, then a ninth,
   then two octaves… higher. A repeat that would leave the keyboard is silent.
 
 ## Input
 
-**Thru** plays the note you played, then its repeats. **Mute** plays only the repeats: a pure
+<Dot>7</Dot>**Thru** plays the note you played, then its repeats. **Mute** plays only the repeats: a pure
 delay.
 
 ## The screen: Bounce
 
-The note lands on the middle line and bounces once per repeat. The space between landings is the
+<Dot>8</Dot>The note lands on the middle line and bounces once per repeat. The space between landings is the
 delay (the faint dots are the beats), the height of each arc is how loud that repeat is, and each
 landing sits higher or lower by its pitch. A repeat that won't sound stays as a dashed ghost: muted,
 too quiet, off the keyboard, or past the echo's longest reach (the dashed line, about 2.7 s).
@@ -56,7 +65,7 @@ hides, and so do the taps: the mutes keep what you set.
 
 ## Mapping
 
-Axes can drive **Delay** (the note value, or the milliseconds), **Level**, **Feedback** and
+<Term id="axis">Axes</Term> can drive **Delay** (the note value, or the milliseconds), **Level**, **Feedback** and
 **Pitch**: stretch the echo like tape, fade the repeats in, or bend a climb from fourths to octaves.
 Toggles can flip **Sync** and **Input**. **Repeats** changes the instrument's voices, so it isn't
 mappable.

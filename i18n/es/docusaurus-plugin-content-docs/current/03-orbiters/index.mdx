@@ -9,12 +9,18 @@ sidebar_custom_props:
 ---
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
-import { Pencil, Power } from 'lucide-react';
+import { Pencil, Power, Rocket } from 'lucide-react';
 import ReleaseIcon from '@site/static/img/symbols-12-25/release-current.svg';
 
 Los Orbitadores son instrumentos que se *tocan*.
 
 <NavigationGrid>
+  <NavigationCard
+    href="/docs/orbiters/quickstart"
+    label="Primeros pasos"
+    icon={<Rocket />}
+    description="Tu primer Orbitador en 5 minutos."
+  />
   <NavigationCard 
     href="/docs/orbiters/release"
     label="Publicar"
@@ -62,6 +68,15 @@ Algunos controles son globales (por ejemplo: **transporte**, **loop** y a menudo
 
 ## Qué cubre esta sección
 
-- **Publicar**: crear y publicar un nuevo Orbitador
-- **Editar**: actualizar un Orbitador existente después de crearlo
-- **Usar**: tocar un Orbitador sobre un Audio y explorar sus dimensiones
+- **[Primeros pasos](/docs/orbiters/quickstart)**: tu primer Orbitador en 5 minutos, del Studio vacío a tocarlo
+- **[Publicar](/docs/orbiters/release)**: crear y publicar un nuevo Orbitador
+- **[Editar](/docs/orbiters/edit)**: actualizar un Orbitador existente después de crearlo
+- **[Usar](/docs/orbiters/interact)**: tocar un Orbitador sobre un Audio y explorar sus dimensiones
+- **[Sincronización](/docs/orbiters/sync)**: tocar varios Orbitadores juntos con un mismo tempo
+- **[Sensores](/docs/orbiters/sensors)**: tocar un Orbitador inclinando el teléfono
+
+Y los módulos con los que se construye un Orbitador, en tres categorías (estas páginas están en inglés por ahora):
+
+- **[Instrumentos](/docs/orbiters/instruments)**: lo que hace el sonido, un audio que eliges o notas
+- **[Efectos de audio](/docs/orbiters/audio-effects)**: lo que da forma al sonido, en una dimensión de Mundo, en la Estrella o en una Luna
+- **[Efectos MIDI](/docs/orbiters/midi-effects)**: lo que crea y transforma las notas antes de que el instrumento las toque

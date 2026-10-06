@@ -10,7 +10,7 @@ sidebar_custom_props:
 
 Go to **Release → New Orbiter**.
 
-![New Orbiter](https://herbarium.plantasia.space/docs/en/media/orbiters/new.png)
+![New Orbiter](/img/orbiters/release/new.png)
 
 The release form lets you define the Orbiter's **visual identity**, choose a **preview context**, and configure its **panel** and **engine** per dimension.
 
@@ -88,7 +88,7 @@ Each dimension has its own engine configuration and may offer different effects 
 Each mapped control has three key points:
 
 - **Minimum**: effect behavior at one extreme
-- **Equilibrium**: the center point (usually a bypass / neutral state)
+- **<Term id="equilibrium">Equilibrium</Term>**: the center point (usually a bypass / neutral state)
 - **Maximum**: effect behavior at the opposite extreme
 
 A useful strategy is to keep **equilibrium at 0** as a reliable “no effect” reference point.
