@@ -15,7 +15,12 @@ export default function devFeedsPlugin(context) {
       if (isServer || process.env.NODE_ENV === 'production') return {};
       const servedDir = path.join(context.generatedFilesDir, 'dev-feeds');
       const statics = [];
-      for (const blog of BLOGS) {
+      // The default locale builds to build/<blog>, the others to build/<locale>/<blog>.
+      const { defaultLocale, locales } = context.i18n;
+      const routes = locales.flatMap((locale) =>
+        BLOGS.map((blog) => (locale === defaultLocale ? blog : `${locale}/${blog}`)),
+      );
+      for (const blog of routes) {
         const builtDir = path.join(context.siteDir, 'build', blog);
         const files = FEEDS.filter((name) => fs.existsSync(path.join(builtDir, name)));
         if (files.length === 0) continue;
@@ -26,7 +31,7 @@ export default function devFeedsPlugin(context) {
         for (const name of files) fs.copyFileSync(path.join(builtDir, name), path.join(target, name));
         statics.push({
           directory: target,
-          publicPath: `/${blog}`,
+          publicPath: `${context.baseUrl}${blog}`,
           watch: false,
           // No index page and no slash redirect: `/${blog}` itself stays the dev page.
           staticOptions: { index: false, redirect: false },
