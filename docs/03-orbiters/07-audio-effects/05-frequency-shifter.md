@@ -9,7 +9,7 @@ The **Frequency shifter** moves every frequency in a sound by the same number of
 effects rack, as an insert or on a <Term id="moon">Moon</Term>: a drum loop, a pad, a voice, a
 whole mix.
 
-**What it does that a pitch shifter doesn't.** A pitch shifter multiplies: up an octave, 100 Hz
+**What it does that a pitch shifter doesn't.** A [pitch shifter](/docs/orbiters/audio-effects/pitch-shifter) multiplies: up an octave, 100 Hz
 becomes 200 Hz and 1 000 Hz becomes 2 000 Hz, so the harmonics stay in line and the sound stays in
 tune with itself. A frequency shifter **adds**: shifted up 50 Hz, 100 Hz becomes 150 Hz but
 1 000 Hz becomes 1 050 Hz. The harmonics stop lining up, so the sound turns metallic, bell-like,
