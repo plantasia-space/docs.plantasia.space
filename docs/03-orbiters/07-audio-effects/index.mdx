@@ -1,0 +1,65 @@
+---
+title: Audio effects
+sidebar_label: Overview
+description: The effects that shape an Orbiter's sound — where they go and how they behave.
+sidebar_position: 0
+sidebar_custom_props:
+  icon: EyeIcon
+---
+
+import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
+import SignalChain from '@site/src/components/docs/SignalChain';
+import { Waves, Timer, Wind, AudioLines } from 'lucide-react';
+
+An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
+it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
+places.
+
+<SignalChain
+  highlight={['audio', 'star', 'moon']}
+  caption="Audio effects go after the instrument in a World dimension, on the Star, or on a Moon."
+/>
+
+## Three places for an effect
+
+| Place | What it hears | Good for |
+|---|---|---|
+| **Insert on a World dimension** | only that dimension's sound | colouring one part: a chorus on the pad, a flanger on the drums |
+| **Insert on the Star** | everything, after the mixer | one effect over the whole Orbiter |
+| **On a Moon** | what the World sends to it; it returns only the effect | a shared reverb or delay, mixed in with the Moon level |
+
+A Moon is a **send and return**: it adds its effect next to the dry sound instead of replacing it.
+That is why an effect added to a Moon starts at **Dry/wet 100 %**, and why the Reverb and the Delay
+feel most at home there.
+
+Each place holds **up to three** audio effects, run in order from left to right.
+
+## Two versions of each effect
+
+Most effects come as a pair:
+
+- **The full module**, with every control in reach, for when you want to shape it.
+- **The One** version, one **Amount** knob that does it all, often in two directions (a slow sway one
+  way, a fast shimmer the other). Quick to use and the easiest to map to an axis.
+
+| Effect | Full | One | Most at home |
+|---|---|---|---|
+| [Reverb](/docs/orbiters/audio-effects/reverb) | Reverb | One Reverb | Moon (Reverb), insert (One Reverb) |
+| [Delay](/docs/orbiters/audio-effects/delay) | Delay | One Echo | Moon (Delay), insert (One Echo) |
+| [Flanger](/docs/orbiters/audio-effects/flanger) | Flanger | One Flanger | insert |
+| [Chorus](/docs/orbiters/audio-effects/chorus) | Chorus | One Chorus | insert, Moon too |
+
+## Every effect loads doing nothing
+
+An effect you add changes nothing until you turn it up: inserts load at Dry/wet 0 % (or Amount
+0 %). So you can drop one in while you play and bring it in by ear, or map it to an axis that rests
+on its equilibrium.
+
+## Every audio effect
+
+<NavigationGrid>
+  <NavigationCard href="/docs/orbiters/audio-effects/reverb" label="Reverb" icon={<Waves />} description="Put a sound in a space, from a small room to a long hall." />
+  <NavigationCard href="/docs/orbiters/audio-effects/delay" label="Delay" icon={<Timer />} description="Repeat a sound in time: synced echoes, dub, slapback." />
+  <NavigationCard href="/docs/orbiters/audio-effects/flanger" label="Flanger" icon={<Wind />} description="A moving comb: the jet whoosh, through-zero included." />
+  <NavigationCard href="/docs/orbiters/audio-effects/chorus" label="Chorus" icon={<AudioLines />} description="Wider and thicker, without louder, darker or out of tune." />
+</NavigationGrid>

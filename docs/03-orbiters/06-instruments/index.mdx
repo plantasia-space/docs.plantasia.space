@@ -1,0 +1,66 @@
+---
+title: Instruments
+sidebar_label: Overview
+description: The instruments that make an Orbiter's sound — audio players and notes instruments.
+sidebar_position: 0
+sidebar_custom_props:
+  icon: EyeIcon
+---
+
+import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
+import SignalChain from '@site/src/components/docs/SignalChain';
+import { Layers, CassetteTape, AudioWaveform } from 'lucide-react';
+
+An **instrument** makes the sound. It sits at the head of a World dimension's chain: whatever comes
+after it (audio effects, the Star's mixer, a Moon) hears it, and whatever comes before it (a
+generator, MIDI effects) tells it which notes to play.
+
+<SignalChain
+  highlight={['instrument']}
+  caption="One World dimension. The instrument turns notes, or the audio you pick, into sound."
+/>
+
+## Audio or Notes
+
+What World **I** holds decides what kind of Orbiter you are building:
+
+| | World I plays… | World II and III | Instruments |
+|---|---|---|---|
+| **Audio Orbiter** | the audio you choose, on the **Track player** or **Granular** | audio effects that shape it | one |
+| **Notes Orbiter** | a notes instrument, such as the **Sampler** or the **Subtractive synth** | one more notes instrument each, if you like | up to three |
+
+An Orbiter is one or the other, never both. See
+[Multiple MIDI instruments](/docs/orbiters/instruments/multiple-midi-instruments) for how a Notes Orbiter plays two or
+three instruments side by side.
+
+## Every instrument
+
+<NavigationGrid>
+  <NavigationCard
+    href="/docs/orbiters/instruments/multiple-midi-instruments"
+    label="Multiple MIDI instruments"
+    icon={<Layers />}
+    description="Audio or Notes, and up to three notes instruments in one Orbiter."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/track-player"
+    label="Track player"
+    icon={<CassetteTape />}
+    description="Plays the audio you choose. Speed, pitch and character, all mappable."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/sampler"
+    label="Sampler"
+    icon={<AudioWaveform />}
+    description="Real recorded instruments under the keys: piano, marimba, percussion."
+  />
+</NavigationGrid>
+
+## What every instrument shares
+
+- **It is built in the Studio.** Pick it in the **Instrument** step, or from the module picker of a
+  World dimension.
+- **Its knobs map to the Orbiter.** Any knob or switch can follow an axis (X, Y, Z) or a toggle, with
+  its own minimum, equilibrium and maximum. See [Edit](/docs/orbiters/edit).
+- **It shows its sound on a screen.** Each instrument has a small screen at the centre of its
+  panel; what it draws is described on the instrument's page.

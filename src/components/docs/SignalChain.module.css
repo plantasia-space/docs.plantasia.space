@@ -1,0 +1,187 @@
+.figure {
+  margin: 1.5rem 0;
+  container-type: inline-size;
+}
+
+/* World row on top, then the Star and its Moon, then the output. */
+.chain {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+}
+
+.world {
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+}
+
+.worldLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.6rem;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+}
+
+.stage {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-background-color);
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.stage.on {
+  border-color: var(--ifm-color-primary);
+  box-shadow: inset 0 0 0 1px var(--ifm-color-primary);
+  color: var(--ifm-font-color-base);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+
+.stage.on .title {
+  color: var(--ifm-color-primary);
+}
+
+.hint {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.arrow {
+  flex: 0 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowLine {
+  display: block;
+  width: 70%;
+  height: 0;
+  border-top: 1.5px solid var(--ifm-color-emphasis-500);
+  position: relative;
+}
+
+.arrowLine::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: -5px;
+  border: 4.5px solid transparent;
+  border-left: 6px solid var(--ifm-color-emphasis-500);
+}
+
+.arrowLabel {
+  margin-top: 0.2rem;
+  font-size: 0.6rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Downward arrow (between rows, and every arrow on narrow columns). */
+.down {
+  flex-basis: 1.8rem;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+
+.down .arrowLine {
+  width: 0;
+  height: 1rem;
+  border-top: 0;
+  border-left: 1.5px solid var(--ifm-color-emphasis-500);
+}
+
+.down .arrowLine::after {
+  right: auto;
+  top: auto;
+  left: -5.5px;
+  bottom: -4px;
+  border: 4.5px solid transparent;
+  border-top: 6px solid var(--ifm-color-emphasis-500);
+}
+
+.down .arrowLabel {
+  margin-top: 0;
+}
+
+.bus {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.send {
+  align-self: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.out {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Narrow column (phones): the World row runs top to bottom too. */
+@container (max-width: 520px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row .arrow {
+    flex-basis: 1.8rem;
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+
+  .row .arrowLine {
+    width: 0;
+    height: 1rem;
+    border-top: 0;
+    border-left: 1.5px solid var(--ifm-color-emphasis-500);
+  }
+
+  .row .arrowLine::after {
+    right: auto;
+    top: auto;
+    left: -5.5px;
+    bottom: -4px;
+    border: 4.5px solid transparent;
+    border-top: 6px solid var(--ifm-color-emphasis-500);
+  }
+
+  .row .arrowLabel {
+    margin-top: 0;
+  }
+}

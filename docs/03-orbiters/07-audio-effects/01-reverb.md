@@ -1,6 +1,6 @@
 ---
 title: Reverb
-sidebar_position: 11
+sidebar_position: 1
 sidebar_custom_props:
   icon: Waves
 ---
@@ -102,4 +102,4 @@ the sound under the craft is drawn hollow (the dry stays on the World side) and 
 ## Mapping
 
 Every Reverb control can be mapped to the Orbiter's axes, and Freeze to its toggles; the One
-Reverb's Amount maps like any knob: see [Edit](./02-edit.md).
+Reverb's Amount maps like any knob: see [Edit](/docs/orbiters/edit).

@@ -1,6 +1,6 @@
 ---
 title: Flanger
-sidebar_position: 15
+sidebar_position: 3
 sidebar_custom_props:
   icon: Wind
 ---
@@ -118,4 +118,4 @@ screen reads **Send ·** and the word.
 ## Mapping
 
 Every Flanger control can be mapped to the Orbiter's axes, and Sync and Mode to its toggles; the One
-Flanger's Amount maps like any knob: see [Edit](./02-edit.md).
+Flanger's Amount maps like any knob: see [Edit](/docs/orbiters/edit).

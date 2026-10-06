@@ -1,6 +1,6 @@
 ---
 title: Delay
-sidebar_position: 14
+sidebar_position: 2
 sidebar_custom_props:
   icon: Timer
 ---
@@ -115,4 +115,4 @@ and the knob stays.
 ## Mapping
 
 Every Delay control can be mapped to the Orbiter's axes, and Sync, Ping-pong and Freeze to its
-toggles; the One Echo's Amount maps like any knob: see [Edit](./02-edit.md).
+toggles; the One Echo's Amount maps like any knob: see [Edit](/docs/orbiters/edit).

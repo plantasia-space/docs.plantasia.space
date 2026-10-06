@@ -1,6 +1,6 @@
 ---
 title: Track player
-sidebar_position: 10
+sidebar_position: 2
 sidebar_custom_props:
   icon: CassetteTape
 ---
@@ -70,4 +70,4 @@ what plays: a streamed track always shows the cassette.
 ## Mapping
 
 Speed, Pitch, Formant, Tonality and Level can be mapped to the Orbiter's axes, and the switches to
-its toggles: see [Edit](./02-edit.md).
+its toggles: see [Edit](/docs/orbiters/edit).

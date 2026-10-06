@@ -1,6 +1,6 @@
 ---
 title: Chorus
-sidebar_position: 16
+sidebar_position: 4
 sidebar_custom_props:
   icon: AudioLines
 ---
@@ -124,4 +124,4 @@ smallest drawer the screen hides and the knob stays.
 ## Mapping
 
 Every Chorus control can be mapped to the Orbiter's axes, and Mode and Sync to its toggles; the One
-Chorus's Amount maps like any knob, resting on 0: see [Edit](./02-edit.md).
+Chorus's Amount maps like any knob, resting on 0: see [Edit](/docs/orbiters/edit).

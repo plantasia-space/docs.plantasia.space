@@ -1,6 +1,6 @@
 ---
 title: Drum Sequencer
-sidebar_position: 7
+sidebar_position: 1
 sidebar_custom_props:
   icon: Grid3x3
 ---

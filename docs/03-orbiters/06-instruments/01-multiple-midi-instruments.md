@@ -1,6 +1,6 @@
 ---
 title: Multiple MIDI instruments
-sidebar_position: 9
+sidebar_position: 1
 sidebar_custom_props:
   icon: Layers
 ---
