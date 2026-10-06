@@ -1,0 +1,78 @@
+.figure {
+  margin: 1.5rem 0;
+}
+
+/* The frame shrinks to the picture, so % positions are % of the picture. */
+.frame {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Dots and inline numbers share one look, the same on light and dark pages:
+   the pictures are always the dark Studio. */
+.dot,
+.inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #ffd400;
+  color: #000;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.dot {
+  position: absolute;
+  width: 1.35rem;
+  height: 1.35rem;
+  font-size: 0.72rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2px #000;
+  pointer-events: none;
+}
+
+.inline {
+  min-width: 1.2rem;
+  height: 1.2rem;
+  padding: 0 0.3rem;
+  margin-right: 0.35rem;
+  font-size: 0.7rem;
+  vertical-align: 0.1em;
+}
+
+/* On a phone a wide panel keeps 600px and scrolls in its own frame. */
+@media (max-width: 600px) {
+  .wide {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wide .frame {
+    width: 600px;
+    max-width: none;
+  }
+
+  .wide .image {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Smaller dots, still readable. */
+  .dot {
+    width: 1.05rem;
+    height: 1.05rem;
+    font-size: 0.6rem;
+    box-shadow: 0 0 0 1.5px #000;
+  }
+}

@@ -1,0 +1,50 @@
+.term {
+  position: relative;
+}
+
+/* A dotted underline says "defined in the glossary", not "another page". */
+.link {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--ifm-color-emphasis-500);
+  text-underline-offset: 0.2em;
+}
+
+.link:hover {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
+.tip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: min(18rem, 80vw);
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.18);
+  font-size: 0.82rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
+  display: none;
+  pointer-events: none;
+}
+
+/* Only where there is a hover: on touch the word is a plain link. */
+@media (hover: hover) {
+  .term:hover .tip {
+    display: block;
+  }
+}
+
+.term:focus-within .tip {
+  display: block;
+}
