@@ -100,7 +100,7 @@ with your system's reduced-motion setting, it is a still picture of the current 
 
 ## One Chorus
 
-![The One Chorus: its screen and the one Amount knob, at 0 %.](/img/orbiters/audio-effects/one-chorus.jpg)
+![The One Chorus playing at Amount +60 %, Sway: two voices ±26 cents apart at 0.82 Hz on the Voices screen.](/img/orbiters/audio-effects/one-chorus.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 chorus; at 0 it does nothing, and either way the level stays where it was and the bass (below

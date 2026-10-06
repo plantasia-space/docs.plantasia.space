@@ -87,7 +87,7 @@ reduced-motion setting, it is a still picture of the current values.
 
 ## One Echo
 
-![The One Echo: its screen and the one Amount knob, Off at 0 %.](/img/orbiters/audio-effects/one-echo.jpg)
+![The One Echo playing at Amount +60 %, Trail: four echoes at 1/8D (375 ms) on the Echoes screen.](/img/orbiters/audio-effects/one-echo.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different echo;
 at 0 it does nothing, and either way the level stays about where it was.

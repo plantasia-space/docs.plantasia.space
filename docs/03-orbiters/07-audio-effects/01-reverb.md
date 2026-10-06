@@ -76,7 +76,7 @@ picture of the current values.
 
 ## One Reverb
 
-![The One Reverb: its screen and the one Amount knob, at 0 %.](/img/orbiters/audio-effects/one-reverb.jpg)
+![The One Reverb playing at Amount 60 %, Hall: the Space screen shows Decay 1.7 s and Pre-delay 15 ms.](/img/orbiters/audio-effects/one-reverb.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 reverb; at 0 it does nothing, and either way the level stays about where it was.

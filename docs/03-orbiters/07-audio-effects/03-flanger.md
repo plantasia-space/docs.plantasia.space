@@ -91,7 +91,7 @@ The word on the screen is **Swirl**, **Jet** (Feedback +60 % and up), **Hollow**
 
 ## One Flanger
 
-![The One Flanger: its screen and the one Amount knob, at 0 %.](/img/orbiters/audio-effects/one-flanger.jpg)
+![The One Flanger playing at Amount +60 %, Jet: Feedback +50 % and a 6.3 s sweep on the Sweep screen.](/img/orbiters/audio-effects/one-flanger.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 flanger; at 0 it does nothing, and either way the level stays where it was and the bass (under
