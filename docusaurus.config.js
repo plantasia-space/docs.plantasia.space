@@ -43,6 +43,16 @@ const config = {
     },
   },
 
+  customFields: {
+    // Where "Try it" (TryModule) loads a module from: the Orbiters app's module embed page. One value
+    // for every page. `ORBITERS_EMBED_URL` sets it for a build; a local `docusaurus start` uses the
+    // monitor's Orbiters preview. A production build without it shows the pictures only, so nothing
+    // points at a host that can't serve (or frame) the embed yet.
+    orbitersEmbedUrl:
+      process.env.ORBITERS_EMBED_URL ||
+      (process.env.NODE_ENV === 'production' ? null : 'https://local.plantasia.space:5173/embed.html'),
+  },
+
   // Presets for Docusaurus
   presets: [
     [

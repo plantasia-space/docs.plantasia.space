@@ -85,11 +85,13 @@ picture of the current values.
 
 ## One Reverb
 
+<TryModule module="oneReverb" set="amount:60" source="piano" setting="Amount 60 %, Hall">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-reverb.jpg"
   alt="The One Reverb playing at Amount 60 %, Hall: the Space screen shows Decay 1.7 s and Pre-delay 15 ms."
   dots={[[1, 50, 78.8], [2, 50, 14.2]]}
 />
+</TryModule>
 
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 reverb; at 0 it does nothing, and either way the level stays about where it was.
