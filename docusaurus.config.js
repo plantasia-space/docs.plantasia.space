@@ -81,6 +81,7 @@ const config = {
   plugins: [
     './src/plugins/en-redirect',
     './src/plugins/raw-markdown',
+    './src/plugins/dev-feeds',
     // What's new: one post per promotion (dev → main), drafted by comms routine 02 from triaged tickets.
     // The root app's menu reads feed.json (PLA-514).
     [
