@@ -81,6 +81,23 @@ const config = {
   plugins: [
     './src/plugins/en-redirect',
     './src/plugins/raw-markdown',
+    // What's new: one short post per week, written by the weekly release review (ps-releases-review).
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'whats-new',
+        path: './whats-new',
+        routeBasePath: 'whats-new',
+        blogTitle: "What's new",
+        blogDescription: 'What you can do in Plantasia Space now, week by week.',
+        blogSidebarTitle: 'All weeks',
+        blogSidebarCount: 'ALL',
+        postsPerPage: 10,
+        showReadingTime: false,
+        // Each week is short, so the list shows it in full.
+        onUntruncatedBlogPosts: 'ignore',
+      },
+    ],
   ],
 
   // Theme configuration
@@ -115,6 +132,11 @@ const config = {
             label: 'Blog',
             position: 'left',
             className: 'nav-blog',
+          },
+          {
+            to: '/whats-new',
+            label: "What's new",
+            position: 'left',
           },
           {
             type: 'localeDropdown',
@@ -165,6 +187,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: "What's new",
+                to: '/whats-new',
               },
               {
                 label: 'GitHub',
