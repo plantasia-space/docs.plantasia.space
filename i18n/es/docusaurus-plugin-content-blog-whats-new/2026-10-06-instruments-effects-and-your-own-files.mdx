@@ -1,0 +1,95 @@
+---
+title: Instrumentos, efectos y tus propios archivos de audio
+slug: instruments-effects-and-your-own-files
+date: 2026-10-06
+description: Tres instrumentos nuevos, hasta tres de ellos en un Orbitador, efectos de audio y MIDI, presets, efectos en una Luna, tus propios archivos de audio y colecciones que suenan sin conexión.
+---
+
+import Product from '@site/src/components/whatsnew/Product';
+
+## Tres instrumentos nuevos
+
+![El Sampler en el Studio: la pantalla de sus zonas, y debajo Sample, Amp envelope, LFO y Mod wheel.](/img/orbiters/instruments/sampler.jpg)
+
+Un Orbitador ya se puede tocar como un instrumento. El **Sampler** (Rhizome) toca librerías de samples: eliges un instrumento, marcas dónde empieza, termina y repite cada sample, y le das forma con su envolvente, su LFO y la rueda de modulación. **Sheaf** es un sintetizador sustractivo con un oscilador, un filtro con su propia envolvente, un LFO y rueda de modulación. **Granular** parte un audio en granos y los vuelve a tocar.
+
+[Lee sobre el Sampler →](/docs/orbiters/instruments/sampler)
+
+## Hasta tres instrumentos en un Orbitador
+
+![Elegir un instrumento para un Mundo en un Orbitador de notas.](/img/orbiters/multiple-midi-instruments/notes-picker.jpg)
+
+Un Orbitador ahora es de Audio o de Notas, y lo decide el Mundo I. Uno de Notas toca hasta tres instrumentos a la vez, uno por Mundo, cada uno desde su propio teclado y su canal MIDI. Si a un instrumento no le llega ninguna nota, tiene un **Piano Roll** para tocarlas y dibujarlas.
+
+[Lee sobre varios instrumentos →](/docs/orbiters/instruments/multiple-midi-instruments)
+
+## Efectos de audio
+
+![La Reverb en el Studio.](/img/orbiters/audio-effects/reverb.jpg)
+
+Cada Orbitador tiene un rack de efectos de audio: **Reverb**, **Delay**, **Flanger**, **Chorus**, **Compressor**, **Saturator**, **Filters**, **Multimode Filter**, **Parametric EQ** y **Bitcrusher**. Los módulos **One** (One Reverb, One Echo, One Flanger, One Chorus, One Compressor, One Saturator) caben cada uno en una sola perilla. Como insert, un efecto se carga sin hacer nada: el sonido solo cambia cuando lo subes.
+
+[Lee sobre los efectos de audio →](/docs/orbiters/audio-effects)
+
+## Efectos MIDI
+
+![El Drum Sequencer en el Studio.](/img/orbiters/midi-effects/drum-sequencer.jpg)
+
+Las notas se pueden moldear antes de llegar a un instrumento. El **Drum Sequencer** programa ritmos en pads y los lanza a tiempo con el Orbitador. **Note Echo** repite cada nota, **Velocity** cambia la fuerza con la que suena cada una, y el **Arpeggiator**, **Ephemeris** (un secuenciador por pasos), **Scale** y **Pitch** completan el resto.
+
+[Lee sobre los efectos MIDI →](/docs/orbiters/midi-effects)
+
+## Efectos en una Luna, un mezclador en la Estrella
+
+Una Luna ya puede llevar sus propios efectos. Funciona como envío y retorno: lo que devuelve se suma al Mundo a través del mezclador de la Estrella, donde el nivel de la Luna y un crossfade deciden cuánto se oye. La Estrella también aparece como la estrella anfitriona en la vista de Entangled Worlds.
+
+## Presets
+
+Guarda un módulo, un cuerpo de Mundo o un rack entero como preset, cárgalo en otro Orbitador, y expórtalo o impórtalo como archivo.
+
+## Tus propios archivos de audio
+
+Arrastra archivos de audio de tu computadora a un Orbitador y tócalos sin subirlos. Se quedan en este dispositivo, conservan su artista y su portada, y se detecta su tempo para que se sincronicen como los audios alojados. Un explorador muestra todos los archivos que guarda el dispositivo.
+
+## Colecciones sin conexión
+
+Descarga una colección una vez y tócala sin conexión, en escritorio. Las colecciones descargadas aparecen en la página de la biblioteca sin conexión.
+
+<div className="wn-changes">
+
+<details open>
+<summary>Mejoras</summary>
+
+- <Product>Orbiters</Product> El Studio va de Instrumento a Visual y luego a Release, y primero pregunta si es Audio o Notas
+- <Product>Orbiters</Product> Un rack vacío ofrece un módulo para empezar, y los módulos nuevos entran donde eliges
+- <Product>Orbiters</Product> El rack se guarda con el Orbitador
+- <Product>Orbiters</Product> Los controles del Orbitador cambian de orden y los mapeos del Studio son más simples
+- <Product>Orbiters</Product> Los mapeos entre módulos muestran los nombres de los ejes y responden mientras tocas
+- <Product>Orbiters</Product> Interruptores de X, Y y Z para cada dimensión, que también se pueden mapear
+- <Product>Orbiters</Product> Dos offsets: un Network offset para este dispositivo y un Orbiter offset para este Orbitador
+- <Product>Orbiters</Product> Edición de notas más fina en el Piano Roll
+- <Product>Orbiters</Product> Los visuales Panel y Ring en la escena del Orbitador
+- <Product>Orbiters</Product> Un cajón y una vista de Dimensiones más compactos en el móvil
+- <Product>Orbiters</Product> Los archivos locales vuelven a sus escenarios después de recargar
+- <Product>Orbiters</Product> Importar una carpeta grande de archivos locales ya no te hace esperar
+- <Product>Orbiters</Product> El Studio recuerda el tamaño de sus paneles y qué escenario estaba enfocado
+- <Product>Collections</Product> El Studio de colecciones muestra en qué colección estás
+- <Product>Entangled Worlds</Product> Recorta y sube la miniatura de un clip en el Studio
+- <Product>Platform</Product> La animación del logo en la pantalla de inicio de sesión es más pulida
+
+</details>
+
+<details open>
+<summary>Correcciones</summary>
+
+- <Product>Orbiters</Product> La salida de Ephemeris no llegaba a los instrumentos de notas ni seguía la tonalidad
+- <Product>Orbiters</Product> El mapeo MIDI solo empezaba después de pulsar M dos veces
+- <Product>Orbiters</Product> La sala de espera se veía mal en el móvil
+- <Product>Orbiters</Product> En una sala, recargar reiniciaba los audios de la otra persona
+- <Product>Orbiters</Product> En una sala, al recargar, el audio volvía mucho después que la pantalla
+- <Product>Orbiters</Product> Un archivo local saltaba a otro escenario al terminar su análisis
+- <Product>Platform</Product> El audio en caché ahora tiene un límite de tamaño y se borra al cerrar sesión
+
+</details>
+
+</div>

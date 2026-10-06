@@ -81,7 +81,8 @@ const config = {
   plugins: [
     './src/plugins/en-redirect',
     './src/plugins/raw-markdown',
-    // What's new: one short post per week, written by the weekly release review (ps-releases-review).
+    // What's new: one post per promotion (dev → main), drafted by comms routine 02 from triaged tickets.
+    // The root app's menu reads feed.json (PLA-514).
     [
       '@docusaurus/plugin-content-blog',
       {
@@ -89,13 +90,20 @@ const config = {
         path: './whats-new',
         routeBasePath: 'whats-new',
         blogTitle: "What's new",
-        blogDescription: 'What you can do in Plantasia Space now, week by week.',
-        blogSidebarTitle: 'All weeks',
+        blogDescription: 'What you can do in Plantasia Space now, release by release.',
+        blogSidebarTitle: 'All releases',
         blogSidebarCount: 'ALL',
         postsPerPage: 10,
         showReadingTime: false,
-        // Each week is short, so the list shows it in full.
+        // The list shows each release in full, like a changelog.
         onUntruncatedBlogPosts: 'ignore',
+        feedOptions: {
+          type: 'all',
+          title: "Plantasia Space: What's new",
+          description: 'What you can do in Plantasia Space now, release by release.',
+          copyright: `Copyright © ${new Date().getFullYear()} Plantasia Space`,
+          limit: 20,
+        },
       },
     ],
   ],
@@ -137,6 +145,8 @@ const config = {
             to: '/whats-new',
             label: "What's new",
             position: 'left',
+            'aria-label': "What's new",
+            className: 'nav-whats-new',
           },
           {
             type: 'localeDropdown',

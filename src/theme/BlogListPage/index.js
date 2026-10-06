@@ -49,6 +49,11 @@ function BlogHero(props) {
             </Translate>
           )}
         </p>
+        {whatsNew && (
+          <a className="wn-rss" href={`${props.metadata.permalink}/rss.xml`}>
+            <Translate id="whatsNew.rss">Subscribe with RSS</Translate>
+          </a>
+        )}
       </div>
     </header>
   );

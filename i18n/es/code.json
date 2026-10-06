@@ -442,5 +442,8 @@
   "homepage.features.collections.description": {
     "message": "Agrupa tus pistas, mundos y orbitadores en colecciones seleccionadas.",
     "description": "Homepage feature subtitle: Collections"
+  },
+  "whatsNew.rss": {
+    "message": "Suscribirse por RSS"
   }
 }

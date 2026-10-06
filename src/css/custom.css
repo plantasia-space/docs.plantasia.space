@@ -235,7 +235,8 @@ h3 {
   -webkit-mask: url("/img/symbols-12-25/xplorer-current.svg") center / contain no-repeat;
 }
 
-.nav-blog.navbar__item {
+.nav-blog.navbar__item,
+.nav-whats-new.navbar__item {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -251,6 +252,16 @@ h3 {
   -webkit-mask: url("/img/pencil.svg") center / contain no-repeat;
 }
 
+.nav-whats-new.navbar__item::before {
+  content: '';
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: currentColor;
+  mask: url("/img/whats-new.svg") center / contain no-repeat;
+  -webkit-mask: url("/img/whats-new.svg") center / contain no-repeat;
+}
+
 @media (max-width: 1024px) {
   .navbar__brand .navbar__title {
     display: none;
@@ -261,7 +272,8 @@ h3 {
   }
 
   .nav-xplorer.navbar__item,
-  .nav-blog.navbar__item {
+  .nav-blog.navbar__item,
+  .nav-whats-new.navbar__item {
     width: 2.75rem;
     height: 2.75rem;
     padding: 0.25rem;
@@ -271,7 +283,8 @@ h3 {
   }
 
   .nav-xplorer.navbar__item::before,
-  .nav-blog.navbar__item::before {
+  .nav-blog.navbar__item::before,
+  .nav-whats-new.navbar__item::before {
     margin: 0;
   }
 }
@@ -725,4 +738,94 @@ ul li {
 .copy-markdown-btn--error {
   border-color: var(--ifm-color-danger);
   color: var(--ifm-color-danger);
+}
+
+/* What's new (COM-44): product chips and the Improvements / Fixes lists.
+   The root app's pop-up (PLA-514) reuses these class names on the feed HTML. */
+.wn-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.45rem;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: 0.05em;
+}
+
+.wn-chip::before {
+  content: '';
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--wn-chip-dot, var(--ifm-color-emphasis-500));
+}
+
+.wn-chip--orbiters { --wn-chip-dot: #4fb3d9; }
+.wn-chip--audios { --wn-chip-dot: #e8a23a; }
+.wn-chip--entangled-worlds { --wn-chip-dot: #8f7ae6; }
+.wn-chip--collections { --wn-chip-dot: #5bbf7a; }
+.wn-chip--platform { --wn-chip-dot: #d9665b; }
+
+.wn-changes > ul > li {
+  margin-bottom: 0.6rem;
+}
+
+.wn-rss {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  color: inherit;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.wn-rss:hover {
+  color: inherit;
+  opacity: 1;
+}
+
+.wn-rss::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-color: currentColor;
+  mask: url('/img/rss.svg') center / contain no-repeat;
+  -webkit-mask: url('/img/rss.svg') center / contain no-repeat;
+}
+
+/* Improvements / Fixes: a plain collapsible heading, not Docusaurus' info box. */
+.wn-changes details.alert {
+  margin: 2rem 0 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  --ifm-alert-background-color: transparent;
+  --ifm-alert-border-color: transparent;
+}
+
+.wn-changes details > summary {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.wn-changes details > summary::before {
+  border-color: transparent transparent transparent currentColor;
+}
+
+
+.wn-changes details > div > div {
+  margin-top: 0.75rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.wn-changes ul {
+  padding-left: 1.25rem;
 }
