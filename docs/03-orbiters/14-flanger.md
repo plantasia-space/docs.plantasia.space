@@ -63,7 +63,7 @@ crossing. Through-zero does that. To let the copy run early, it delays the whole
 ### On a Moon
 
 Like every effect with a Dry/wet knob, the Flanger starts at **Dry/wet 100 %** on a Moon: the Moon
-returns the swept copy, and the comb forms where it meets the dry in the mix.
+returns the swept copy, and the comb forms where it meets the dry in the mix. With **Low cut** on, the band under it stays out of the return: the World already carries it.
 
 ### The screen
 
