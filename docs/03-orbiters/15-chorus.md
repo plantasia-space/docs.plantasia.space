@@ -104,11 +104,11 @@ chorus; at 0 it does nothing, and either way the level stays where it was and th
 
 - **Turn it up** (+), **Sway**: the sound gets wider and softly moving. A little gives a slight
   stereo doubling you notice more when it's gone; all the way, a clear, slow, wide sway (0.4 up to
-  0.9 Hz), still in tune enough for chords.
-- **Turn it down** (−), **Shimmer**: the sound quivers, fast and shallow (2.5 up to 5 Hz), a glassy
+  1.1 Hz), a strong Juno-style wobble at the very end.
+- **Turn it down** (−), **Shimmer**: the sound quivers, fast and shallow (2.5 up to 6 Hz), a glassy
   shimmer on the top, like a string ensemble or a rotary speaker's horn.
 
-Both ends detune by about the same amount (±30 cents): the two sides differ in speed and size, not in
+Both ends detune by about the same amount (about ±50 cents, a clearly audible effect): the two sides differ in speed and size, not in
 how far out of tune they get. Map Amount to an axis and one gesture goes from a shimmer, through the
 dry sound, into a sway.
 
