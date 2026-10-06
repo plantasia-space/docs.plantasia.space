@@ -33,7 +33,7 @@ It loads at Pitch 0, Fine 0 and Spread 0: the sound passes untouched until you m
 | <Dot>1</Dot>**Pitch** | The big knob. Moves the sound by whole semitones, **−24 … +24 st**: 12 is an octave, 7 a fifth, 5 a fourth. Beside its name it says the interval in words: **5th up**, **octave down**. It steps from note to note, so an axis lands on intervals. |
 | <Dot>2</Dot>**Fine** | Nudges the pitch by cents, a hundredth of a semitone, **−50 … +50 ct**, on top of Pitch. |
 | <Dot>3</Dot>**Spread** | Tunes the left side down and the right side up by this much, **0 … 50 ct**. With Pitch at 0, a little (8 to 15 cents) is the classic doubler: one voice becomes two, wide, without a chorus's wobble. With Pitch moved it widens the copy. |
-| <Dot>4</Dot>**Window** | How long each slice is, **10 … 100 ms**. Short keeps attacks tight but turns grainy, almost metallic below 20 ms; long is smoother on held notes but softer, and starts to sound slightly doubled. Turning it bends the pitch for a moment (a short glide, never a jump). |
+| <Dot>4</Dot>**Window** | How long each slice is, **10 … 100 ms**. Short keeps attacks tight but turns grainy, almost metallic below 20 ms; long is smoother on held notes but softer, and slightly echoed. Turning it bends the pitch for a moment (a short glide, never a jump). |
 | <Dot>5</Dot>**Feedback** | Sends the shifted copy back through, **0 … 90 %**, so it moves another interval with each pass: a fifth becomes a stack of fifths. Short windows blur the passes into a rising (or falling) **shimmer**; long windows let you hear the steps. Turning it up doesn't make the sound louder: the level is held. |
 
 ### How late the copy is
@@ -47,7 +47,7 @@ Spread 0 there is no delay at all.
 
 What would land above the highest frequency the sound can carry is dropped instead of folding back
 as a harsh whistle. So the higher you shift, the lower the top: an octave up keeps the input up to
-about 10 kHz, two octaves up to about 5 kHz. Going down nothing is cut.
+about 10 kHz, two octaves up to about 5 kHz. Going down nothing is cut from the first copy (with Feedback, each pass loses only what lies under 30 Hz, so the passes don't pile up rumble).
 
 ## Output
 
@@ -57,8 +57,10 @@ beside the original. At 100 % the copy replaces it. <Dot>7</Dot>**Trim** sets th
 ## On a Moon
 
 On a <Term id="moon">Moon</Term> it starts at **Dry/wet 100 %**, like every effect there: the Moon
-returns only the shifted copy, a harmony or a shimmer next to the World's dry sound. At Pitch 0 it
-returns **nothing**, so an untouched Pitch shifter on a Moon is silent until you move Pitch.
+returns only the shifted copy, a harmony next to the World's dry sound (add Feedback for a shimmer).
+With Pitch, Fine and Spread all at 0 it returns **nothing**, so an untouched Pitch shifter on a Moon
+is silent until you move one of them. Turn its Dry/wet below 100 % and some of the dry comes back
+too.
 
 ## The screen
 
@@ -72,13 +74,13 @@ returns **nothing**, so an untouched Pitch shifter on a Moon is silent until you
 - **Spread** splits the stem in two, leaning apart; Spread alone grows two short sprouts.
 - **Feedback** adds side shoots, one interval further each, fading.
 - **The number, top left, is the interval** in semitones (a bar in front for down). **The dial,
-  bottom left, is Dry/wet**; the seed dims as it reaches 100 %, where the original has left the mix.
-- The seed and the copy pulse and sway together while sound plays: the shifter keeps the timing,
-  only the pitch moves.
+  bottom left, is Dry/wet**; at 100 % the seed dims: the original has left the mix.
+- The seed and the copy pulse on the same beat while sound plays (the shifter keeps the timing,
+  only the pitch moves), and a flower sways with it.
 
 The word on the screen is the interval (**Up · 5th**, **Down · octave**), **Up · cents** or
-**Down · cents** for Fine alone, **Wide** for Spread alone, **Off**, **Send · silent** on a Moon at
-Pitch 0, or **Dry · 0 %**. Below the picture: the interval, then the ratio (**×1.50**), Spread,
+**Down · cents** for Fine alone, **Wide** for Spread alone, **Off**, **Send · silent** on a Moon with
+Pitch, Fine and Spread at 0, or **Dry · 0 %**. Below the picture: the interval, then the ratio (**×1.50**), Spread,
 Window and Feedback.
 
 ## Mapping
