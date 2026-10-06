@@ -1,35 +1,12 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const escapeHtml = (value) =>
-  value
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+import { redirectHtml } from '../redirect-html.js';
 
 // The default locale's pages live at `/…`, not `/<locale>/…`. Apps still link
 // to `/en/…`, so every default-locale route needs a real file under `en/` on
 // disk: without it the host serves 404.html and the client-side route below
 // then renders the real page on top of the "Page Not Found" markup.
-function redirectHtml({ target, canonical, htmlLang }) {
-  const attr = escapeHtml(target);
-  // `<` escaped so a route can never close the inline script early.
-  const js = JSON.stringify(target).replace(/</g, '\\u003c');
-  return `<!DOCTYPE html>
-<html lang="${escapeHtml(htmlLang)}">
-<head>
-<meta charset="utf-8">
-<title>Redirecting…</title>
-<link rel="canonical" href="${escapeHtml(canonical)}">
-<meta http-equiv="refresh" content="0; url=${attr}">
-<script>location.replace(${js} + location.search + location.hash);</script>
-</head>
-<body><a href="${attr}">${attr}</a></body>
-</html>
-`;
-}
-
 export default function enRedirectPlugin(context) {
   const { i18n, baseUrl, siteConfig } = context;
   const locale = i18n.defaultLocale;

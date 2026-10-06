@@ -24,20 +24,21 @@ class RawMarkdownWebpackPlugin {
     const { docsDir } = this;
     const siteDir = path.dirname(docsDir);
 
-    compiler.hooks.emit.tapAsync('RawMarkdownPlugin', (compilation, callback) => {
-      for (const file of this.findMarkdownFiles(docsDir)) {
-        try {
-          const content = fs.readFileSync(file, 'utf8');
-          const relativePath = path.relative(siteDir, file).replace(/\\/g, '/');
-          compilation.assets[`_raw/${relativePath}`] = {
-            source: () => content,
-            size: () => Buffer.byteLength(content, 'utf8'),
-          };
-        } catch (err) {
-          console.warn('[raw-markdown-plugin] skipping', file, err.message);
+    const { RawSource } = compiler.webpack.sources;
+    const stage = compiler.webpack.Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL;
+
+    compiler.hooks.thisCompilation.tap('RawMarkdownPlugin', (compilation) => {
+      compilation.hooks.processAssets.tap({ name: 'RawMarkdownPlugin', stage }, () => {
+        for (const file of this.findMarkdownFiles(docsDir)) {
+          try {
+            const content = fs.readFileSync(file, 'utf8');
+            const relativePath = path.relative(siteDir, file).replace(/\\/g, '/');
+            compilation.emitAsset(`_raw/${relativePath}`, new RawSource(content));
+          } catch (err) {
+            console.warn('[raw-markdown-plugin] skipping', file, err.message);
+          }
         }
-      }
-      callback();
+      });
     });
   }
 }
