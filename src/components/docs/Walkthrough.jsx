@@ -4,12 +4,21 @@ import styles from './Walkthrough.module.css';
 // Steps on the left, the current step's picture pinned on the right (Stripe's
 // quickstarts, with the Studio in place of code). The pictures stay in the
 // text, so on a phone or without JavaScript each step simply shows its own.
-// Each `##` step's first picture is its preview; a step without one keeps the
-// picture before it.
+// Each `##` step's pictures are its preview; a step without any keeps the
+// pictures before it. A preview picture opens full size on click.
 export default function Walkthrough({ children }) {
   const textRef = useRef(null);
   const [shots, setShots] = useState([]);
   const [active, setActive] = useState(0);
+  const [zoomed, setZoomed] = useState(null);
+  const dialogRef = useRef(null);
+
+  // The native dialog brings focus, Esc to close and the backdrop.
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (zoomed && !dialog.open) dialog.showModal();
+    if (!zoomed && dialog.open) dialog.close();
+  }, [zoomed]);
 
   useEffect(() => {
     const text = textRef.current;
@@ -54,7 +63,7 @@ export default function Walkthrough({ children }) {
       <div ref={textRef} className={styles.text}>
         {children}
       </div>
-      <aside className={styles.preview} aria-hidden="true">
+      <aside className={styles.preview}>
         <div className={styles.sticky}>
           {shots.map(
             (s, i) =>
@@ -63,7 +72,15 @@ export default function Walkthrough({ children }) {
                   <strong className={styles.title}>{s.title}</strong>
                   {s.pictures.map((pic) => (
                     <React.Fragment key={pic.src}>
-                      <img src={pic.src} alt="" loading="lazy" />
+                      <button
+                        type="button"
+                        className={styles.zoom}
+                        onClick={() => setZoomed(pic)}
+                        aria-label={`Zoom: ${pic.alt}`}
+                        title="Zoom"
+                      >
+                        <img src={pic.src} alt="" loading="lazy" />
+                      </button>
                       <p className={styles.caption}>{pic.alt}</p>
                     </React.Fragment>
                   ))}
@@ -72,6 +89,15 @@ export default function Walkthrough({ children }) {
           )}
         </div>
       </aside>
+      <dialog
+        ref={dialogRef}
+        className={styles.lightbox}
+        onClose={() => setZoomed(null)}
+        onClick={() => setZoomed(null)}
+        aria-label={zoomed?.alt}
+      >
+        {zoomed && <img src={zoomed.src} alt={zoomed.alt} />}
+      </dialog>
     </div>
   );
 }

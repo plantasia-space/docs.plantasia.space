@@ -49,10 +49,48 @@
   visibility: visible;
 }
 
+.zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.zoom:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
 .shot img {
   display: block;
   max-width: 100%;
   border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+}
+
+/* Full size, fitted to the window; a click anywhere or Esc closes it. */
+.lightbox {
+  max-width: 96vw;
+  max-height: 94vh;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-out;
+}
+
+.lightbox::backdrop {
+  background: rgb(0 0 0 / 0.85);
+}
+
+.lightbox img {
+  display: block;
+  max-width: 96vw;
+  max-height: 94vh;
+  width: auto;
+  height: auto;
   border-radius: 8px;
 }
 
