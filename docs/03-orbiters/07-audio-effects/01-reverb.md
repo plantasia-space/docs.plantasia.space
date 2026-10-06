@@ -91,6 +91,12 @@ picture of the current values.
   dots={[[1, 50, 78.8], [2, 50, 14.2]]}
 />
 
+<HearIt
+  dry="/audio/orbiters/audio-effects/one-reverb-dry.m4a"
+  wet="/audio/orbiters/audio-effects/one-reverb-wet.m4a"
+  caption="One Reverb, Amount 60 %, Hall"
+/>
+
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 reverb; at 0 it does nothing, and either way the level stays about where it was.
 

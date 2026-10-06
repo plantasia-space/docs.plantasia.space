@@ -446,5 +446,29 @@
   "docs.walkthrough.zoom": {
     "message": "Ampliar",
     "description": "Button on a walkthrough preview picture that opens it full size"
+  },
+  "docs.hearIt.title": {
+    "message": "Escúchalo",
+    "description": "Heading of a before/after audio example on a module page"
+  },
+  "docs.hearIt.dry": {
+    "message": "Seco",
+    "description": "Audio example: the sound without the module"
+  },
+  "docs.hearIt.wet": {
+    "message": "Con efecto",
+    "description": "Audio example: the sound through the module"
+  },
+  "docs.hearIt.play": {
+    "message": "Reproducir",
+    "description": "Audio example: play button label"
+  },
+  "docs.hearIt.pause": {
+    "message": "Pausa",
+    "description": "Audio example: pause button label"
+  },
+  "docs.hearIt.choose": {
+    "message": "Qué versión escuchar",
+    "description": "Audio example: label of the Dry/Wet switch"
   }
 }
