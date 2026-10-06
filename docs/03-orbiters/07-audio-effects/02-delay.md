@@ -25,6 +25,8 @@ button) cuts its echoes at once; to keep them, use Freeze or the Moon's send.
 
 ## Delay
 
+![The Delay as an insert, at Dry/wet 0 %: the Echoes screen, then Time, Repeats and Output.](/img/orbiters/audio-effects/delay.jpg)
+
 ### Time
 
 | Control | What it does |
@@ -84,6 +86,8 @@ and the cuts. The picture moves only while sound plays; at rest, and with your s
 reduced-motion setting, it is a still picture of the current values.
 
 ## One Echo
+
+![The One Echo: its screen and the one Amount knob, Off at 0 %.](/img/orbiters/audio-effects/one-echo.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different echo;
 at 0 it does nothing, and either way the level stays about where it was.

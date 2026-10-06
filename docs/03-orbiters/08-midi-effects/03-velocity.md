@@ -12,6 +12,9 @@ It is a MIDI effect: it sits in an Orbiter's chain before the instrument, after 
 there is one. It loads as a straight line, so adding it changes nothing until you move something. A
 change applies from the next note: a note already sounding keeps its velocity.
 
+
+![Velocity as it loads, a straight line from in to out: the curve on the screen, then Curve, In and Out.](/img/orbiters/midi-effects/velocity.jpg)
+
 ## Curve
 
 - **Drive**: up, soft notes come out louder; down, loud notes come out softer.

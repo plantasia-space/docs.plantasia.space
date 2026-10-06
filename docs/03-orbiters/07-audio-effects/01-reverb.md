@@ -27,6 +27,8 @@ them.
 
 ## Reverb
 
+![The Reverb as an insert, at Dry/wet 0 %: the Space screen, then Space (Freeze, Decay, Pre-delay, Bass), Tone and Output.](/img/orbiters/audio-effects/reverb.jpg)
+
 ### Space
 
 | Control | What it does |
@@ -73,6 +75,8 @@ moves only while sound plays; at rest, and with your system's reduced-motion set
 picture of the current values.
 
 ## One Reverb
+
+![The One Reverb: its screen and the one Amount knob, at 0 %.](/img/orbiters/audio-effects/one-reverb.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 reverb; at 0 it does nothing, and either way the level stays about where it was.

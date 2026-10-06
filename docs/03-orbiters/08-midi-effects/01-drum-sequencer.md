@@ -16,6 +16,9 @@ You meet it in two places, which always show the same state:
 - **The play surface**, on the stage while the Drum Sequencer leads the chain, in the Studio and when
   the Orbiter is played. Its controls can be **mapped to MIDI hardware**.
 
+
+![The Drum Sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right.](/img/orbiters/midi-effects/drum-sequencer.jpg)
+
 ## Pad functions
 
 Pick what the pads do: **Beats** and **Mutes** work on the beat, **Steps**, **Tunings** and **Voices** on its notes. The buttons

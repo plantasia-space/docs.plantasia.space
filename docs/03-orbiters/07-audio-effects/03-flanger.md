@@ -19,6 +19,8 @@ hear them.
 
 ## Flanger
 
+![The Flanger as an insert, at Dry/wet 0 %: the Sweep screen, then Motion, Comb and Output.](/img/orbiters/audio-effects/flanger.jpg)
+
 ### Motion
 
 | Control | What it does |
@@ -88,6 +90,8 @@ The word on the screen is **Swirl**, **Jet** (Feedback +60 % and up), **Hollow**
 **Dry under** the Low cut when it is on. The picture moves only while sound plays.
 
 ## One Flanger
+
+![The One Flanger: its screen and the one Amount knob, at 0 %.](/img/orbiters/audio-effects/one-flanger.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 flanger; at 0 it does nothing, and either way the level stays where it was and the bass (under

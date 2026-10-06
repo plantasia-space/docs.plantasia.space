@@ -28,6 +28,8 @@ A **Moon** is a send and return: what it returns is added to the dry World throu
 
 ## Chorus
 
+![The Chorus as an insert, at Dry/wet 0 %: the Voices screen with two voices drifting, then Motion, Colour and Output.](/img/orbiters/audio-effects/chorus.jpg)
+
 ### Motion
 
 | Control | What it does |
@@ -97,6 +99,8 @@ detune in cents, Feedback and the Low cut. The picture moves only while sound pl
 with your system's reduced-motion setting, it is a still picture of the current values.
 
 ## One Chorus
+
+![The One Chorus: its screen and the one Amount knob, at 0 %.](/img/orbiters/audio-effects/one-chorus.jpg)
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 chorus; at 0 it does nothing, and either way the level stays where it was and the bass (below

@@ -11,6 +11,9 @@ pitch and the colour of the voice, and map any of them to the Orbiter's axes.
 
 Pick the audio with the button in the module's header.
 
+
+![The Track player as it loads: the screen with the speed readout, then Speed & Pitch, Character and Output.](/img/orbiters/instruments/track-player.jpg)
+
 ## Speed & Pitch
 
 The switch decides what Speed does to the pitch:

@@ -15,6 +15,9 @@ recording on a range of keys, sometimes in several **velocity layers** (soft and
 **round robins** (takes that alternate, so repeated notes don't sound identical). The Sampler picks
 the right zone for every note by itself.
 
+
+![The Sampler playing the Kawai grand: the sample and its zones on the screen, then Sample, Amp, and the LFO, Mod wheel and Voice tabs.](/img/orbiters/instruments/sampler.jpg)
+
 ## Picking an instrument
 
 The instrument's name is the button in the module's header. Press it to open the list of

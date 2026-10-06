@@ -12,6 +12,9 @@ It is a MIDI effect: it sits in an Orbiter's chain before the instrument, after 
 there is one, so an arpeggio or a step line can echo too. It loads silent (Level at 0 %), so adding
 it changes nothing until you turn Level up.
 
+
+![Note Echo as it loads, Level at 0 %: the Bounce screen, then Delay, Per repeat and Input.](/img/orbiters/midi-effects/note-echo.jpg)
+
 ## Delay
 
 - **Sync** on: the delay is a note value on the Orbiter's tempo, from 1/2 to 1/32, dotted and
