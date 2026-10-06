@@ -3,6 +3,7 @@ title: Tu primer Orbitador en 5 minutos
 sidebar_label: Primeros pasos
 description: Construye un Orbitador desde cero — un instrumento, un efecto, mapeado a un eje — y tócalo.
 sidebar_position: 1.5
+hide_table_of_contents: true
 sidebar_custom_props:
   icon: Rocket
 ---
@@ -10,6 +11,22 @@ sidebar_custom_props:
 En cinco minutos vas a construir un pequeño Orbitador de Audio: un reproductor para un audio que eliges, una reverb y un <Term id="axis">eje</Term> que sube la reverb al moverlo. Después lo tocas y lo publicas. Necesitas haber iniciado sesión en Plantasia Space.
 
 Algunos nombres del Studio (módulos, **Map**, **Mappings**) aparecen en inglés en la aplicación; aquí se escriben igual que en pantalla.
+
+<StepFlow
+  groups={[
+    { label: 'Menú Publicar', steps: [{ n: 1, label: 'Nuevo Orbitador', href: '#start' }] },
+    { label: 'Paso Instrumento', steps: [
+      { n: 2, label: 'Elige qué toca', href: '#instrument' },
+      { n: 3, label: 'Añade un efecto', href: '#effect' },
+      { n: 4, label: 'Mapéalo a un eje', href: '#map' },
+      { n: 5, label: 'Tócalo', href: '#play' },
+    ] },
+    { label: 'Paso Visual', steps: [{ n: 6, label: 'Elige su aspecto', href: '#visual' }] },
+    { label: 'Paso Publicar', steps: [{ n: 7, label: 'Publícalo', href: '#release' }] },
+  ]}
+/>
+
+<Walkthrough>
 
 ## 1. Empieza un Orbitador nuevo {#start}
 
@@ -60,9 +77,23 @@ Pulsa **Reproducir** arriba del escenario y arrastra el eje **X** hacia arriba. 
 
 ![Tocando: X en 50.6 ha llevado el Amount de la One Reverb a 20 %, Room.](/img/orbiters/quickstart/play-x.jpg)
 
-## 6. Publícalo {#release}
+## 6. Elige su aspecto {#visual}
+
+Abre el paso **Visual**. Todo tiene ya un aspecto diseñado, así que puedes dejarlo como está y seguir, o cambiarlo:
+
+- **Panel** (2D): los controles del Orbitador en pantalla. Elige un **Theme**, o sus propias fuentes y colores.
+- **Ring** (3D): el anillo alrededor del Orbitador, su color y su forma (**Amplitude**, **Radius**, **Tilt**).
+- **Devices**: lo que muestra cada módulo en el panel, su **Screen**, o su **Mapping** mientras un eje lo mueve.
+
+El Panel y el Ring empiezan **Tied · all bodies**: un mismo aspecto para todo el Orbitador.
+
+![El paso Visual: el tema, las fuentes y los colores del Panel, el color y la forma del Ring, y el Track player en Devices.](/img/orbiters/quickstart/visual-step.jpg)
+
+## 7. Publícalo {#release}
 
 Abre el paso **Publicar**: dale al Orbitador una portada y un **Nombre del Orbiter**, elige quién puede verlo y pulsa **Publicar Orbiter**. Hasta entonces, tu trabajo se guarda solo como borrador. Mira [Publicar](/docs/orbiters/release) y [Editar](/docs/orbiters/edit).
+
+</Walkthrough>
 
 ## Siguiente
 

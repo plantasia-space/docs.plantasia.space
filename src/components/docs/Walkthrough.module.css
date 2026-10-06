@@ -1,0 +1,75 @@
+/* Below the wide layout the walkthrough is plain text with its pictures. */
+.preview {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .ready {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .ready .preview {
+    display: block;
+    height: 100%;
+  }
+
+  /* The pinned preview shows the pictures; in the text they stay for screen
+     readers only. */
+  .ready .text img {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 1.5rem);
+  display: grid;
+}
+
+/* All pictures share one cell and cross-fade. */
+.shot {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s;
+}
+
+.shot.on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.shot img {
+  display: block;
+  max-width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+}
+
+.title {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.caption {
+  margin: 0.4rem 0 1rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shot {
+    transition: none;
+  }
+}

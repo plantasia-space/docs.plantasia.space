@@ -3,11 +3,28 @@ title: Your first Orbiter in 5 minutes
 sidebar_label: Quickstart
 description: Build an Orbiter from nothing — an instrument, one effect, mapped to an axis — and play it.
 sidebar_position: 1.5
+hide_table_of_contents: true
 sidebar_custom_props:
   icon: Rocket
 ---
 
 In five minutes you will build a small Audio Orbiter: a player for an audio you choose, one reverb, and an <Term id="axis">axis</Term> that turns the reverb up as you move it. Then you play it and release it. You need to be signed in to Plantasia Space.
+
+<StepFlow
+  groups={[
+    { label: 'Release menu', steps: [{ n: 1, label: 'New Orbiter', href: '#start' }] },
+    { label: 'Instrument step', steps: [
+      { n: 2, label: 'Choose what it plays', href: '#instrument' },
+      { n: 3, label: 'Add an effect', href: '#effect' },
+      { n: 4, label: 'Map it to an axis', href: '#map' },
+      { n: 5, label: 'Play it', href: '#play' },
+    ] },
+    { label: 'Visual step', steps: [{ n: 6, label: 'Choose its look', href: '#visual' }] },
+    { label: 'Release step', steps: [{ n: 7, label: 'Release it', href: '#release' }] },
+  ]}
+/>
+
+<Walkthrough>
 
 ## 1. Start a new Orbiter {#start}
 
@@ -58,9 +75,23 @@ Press **Play** at the top of the stage, then drag the **X** axis up. The axis no
 
 ![Playing: X at 50.6 has moved the One Reverb's Amount to 20 %, a Room.](/img/orbiters/quickstart/play-x.jpg)
 
-## 6. Release it {#release}
+## 6. Choose its look {#visual}
+
+Open the **Visual** step. Everything already has a designed look, so you can keep it and move on, or change it:
+
+- **Panel** (2D): the Orbiter's controls on screen. Pick a **Theme**, or set its own fonts and colours.
+- **Ring** (3D): the ring around the Orbiter, its colour and its shape (**Amplitude**, **Radius**, **Tilt**).
+- **Devices**: what each module shows on the panel, its **Screen**, or its **Mapping** while an axis moves it.
+
+The Panel and the Ring start **Tied · all bodies**: one look for the whole Orbiter.
+
+![The Visual step: the Panel's theme, fonts and colours, the Ring's colour and shape, and the Track player under Devices.](/img/orbiters/quickstart/visual-step.jpg)
+
+## 7. Release it {#release}
 
 Open the **Release** step: give the Orbiter a cover and an **Orbiter Name**, choose who can see it, and press **Release Orbiter**. Until then, your work is saved as a draft by itself. See [Release](/docs/orbiters/release) and [Edit](/docs/orbiters/edit).
+
+</Walkthrough>
 
 ## Next
 
