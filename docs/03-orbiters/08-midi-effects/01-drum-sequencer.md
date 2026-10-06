@@ -19,6 +19,7 @@ You meet it in two places, which always show the same state:
 
 <ModulePicture
   src="/img/orbiters/midi-effects/drum-sequencer.jpg"
+  wide
   alt="The Drum Sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right."
   dots={[[1, 15.8, 63.6], [2, 11.6, 20.7], [3, 68.6, 22], [4, 72.3, 44.6], [5, 3.4, 56.7], [6, 40.7, 27.4], [7, 54.4, 27.4], [8, 73.8, 83.7], [9, 11.6, 38.6], [10, 6, 96]]}
 />

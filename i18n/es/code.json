@@ -442,5 +442,9 @@
   "homepage.features.collections.description": {
     "message": "Agrupa tus pistas, mundos y orbitadores en colecciones seleccionadas.",
     "description": "Homepage feature subtitle: Collections"
+  },
+  "docs.walkthrough.zoom": {
+    "message": "Ampliar",
+    "description": "Button on a walkthrough preview picture that opens it full size"
   }
 }

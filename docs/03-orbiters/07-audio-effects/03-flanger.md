@@ -24,6 +24,7 @@ Both load doing nothing (the Flanger at Dry/wet 0 %, the One Flanger at Amount 0
 
 <ModulePicture
   src="/img/orbiters/audio-effects/flanger.jpg"
+  wide
   alt="The Flanger as an insert, at Dry/wet 0 %: the Sweep screen, then Motion, Comb and Output."
   dots={[[1, 62.5, 20.7], [2, 43.1, 82.1], [3, 51, 82.1], [4, 58.8, 82.1], [5, 92.2, 20.7], [6, 70.4, 78.8], [7, 80.6, 82.1], [8, 88.5, 82.1], [9, 96.5, 62.2], [10, 96.5, 85.6], [11, 19.2, 14.2]]}
 />

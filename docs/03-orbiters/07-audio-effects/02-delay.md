@@ -32,6 +32,7 @@ Both load doing nothing (the Delay at Dry/wet 0 %, the One Echo at Amount 0): tu
 
 <ModulePicture
   src="/img/orbiters/audio-effects/delay.jpg"
+  wide
   alt="The Delay as an insert, at Dry/wet 0 %: the Echoes screen, then Time, Repeats and Output."
   dots={[[1, 55.9, 20.7], [2, 51.1, 82.1], [3, 65.1, 78.8], [4, 77.1, 82.1], [5, 86.4, 82.1], [6, 81.2, 20.7], [7, 90.9, 20.7], [8, 95.9, 62.2], [9, 95.9, 85.6], [10, 22.6, 14.2]]}
 />

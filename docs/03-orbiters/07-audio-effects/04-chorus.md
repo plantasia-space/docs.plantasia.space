@@ -35,6 +35,7 @@ A **Moon** is a send and return: what it returns is added to the dry World throu
 
 <ModulePicture
   src="/img/orbiters/audio-effects/chorus.jpg"
+  wide
   alt="The Chorus as an insert, at Dry/wet 0 %: the Voices screen with two voices drifting, then Motion, Colour and Output."
   dots={[[1, 58.9, 20.7], [2, 64.4, 20.7], [3, 60.3, 82.1], [4, 49.3, 78.8], [5, 70.5, 82.1], [6, 79, 82.1], [7, 87.5, 82.1], [8, 96.2, 62.2], [9, 96.2, 85.6], [10, 20.8, 14.2]]}
 />

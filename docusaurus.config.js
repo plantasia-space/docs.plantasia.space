@@ -82,6 +82,7 @@ const config = {
     './src/plugins/en-redirect',
     './src/plugins/raw-markdown',
     './src/plugins/moved-pages',
+    './src/plugins/glossary-terms',
   ],
 
   // Theme configuration

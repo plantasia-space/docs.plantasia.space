@@ -84,5 +84,5 @@ The Orbiter body where the sound comes together: its **mixer** blends the World 
 
 
 ### World dimension {#world-dimension}
-One of an Orbiter's three World chains, **I**, **II** and **III**. Each holds its own modules and maps X, Y and Z its own way. What World I plays (an audio, or notes) decides whether the Orbiter is an Audio or a Notes Orbiter.
+One of an Orbiter's three World chains, **I**, **II** and **III**, each with its own modules and its own way of mapping X, Y and Z. What World I plays (an audio, or notes) decides whether the Orbiter is an Audio or a Notes Orbiter.
 [Instruments: Audio or Notes](/docs/orbiters/instruments)

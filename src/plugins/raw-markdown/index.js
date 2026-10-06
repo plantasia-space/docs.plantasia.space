@@ -1,6 +1,23 @@
 import path from 'path';
 import fs from 'fs';
 
+const decode = (text) => text.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+
+// The raw view is plain Markdown: the docs components go back to what they mean.
+export function plainMarkdown(content) {
+  return content
+    .replace(/<ModulePicture\b([\s\S]*?)\/>/g, (_, attrs) => {
+      const src = attrs.match(/\bsrc="([^"]*)"/)?.[1] ?? '';
+      const alt = decode(attrs.match(/\balt="([^"]*)"/)?.[1] ?? '');
+      return `![${alt}](${src})`;
+    })
+    .replace(/<Dot>(\d+)<\/Dot>/g, '($1) ')
+    .replace(/<Term id="[\w-]+">([\s\S]*?)<\/Term>/g, '$1')
+    .replace(/<StepFlow\b[\s\S]*?\n\/>\n?/g, '')
+    .replace(/^<\/?Walkthrough>\n?/gm, '')
+    .replace(/\n{3,}/g, '\n\n');
+}
+
 class RawMarkdownWebpackPlugin {
   constructor(docsDir) {
     this.docsDir = docsDir;
@@ -31,7 +48,7 @@ class RawMarkdownWebpackPlugin {
       compilation.hooks.processAssets.tap({ name: 'RawMarkdownPlugin', stage }, () => {
         for (const file of this.findMarkdownFiles(docsDir)) {
           try {
-            const content = fs.readFileSync(file, 'utf8');
+            const content = plainMarkdown(fs.readFileSync(file, 'utf8'));
             const relativePath = path.relative(siteDir, file).replace(/\\/g, '/');
             compilation.emitAsset(`_raw/${relativePath}`, new RawSource(content));
           } catch (err) {

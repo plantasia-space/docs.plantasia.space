@@ -26,11 +26,6 @@
   border-radius: 6px;
 }
 
-/* The Instrument step holds most of the work: let it take the room. */
-.group:nth-child(2) {
-  flex: 1 1 auto;
-}
-
 .group + .group::before {
   content: '→';
   position: absolute;

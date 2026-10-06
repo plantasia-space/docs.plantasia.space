@@ -30,7 +30,7 @@ Esta comunidad reúne conceptos y herramientas de ecología acústica, paisaje s
 
 
 ### Dimensión de Mundo {#world-dimension}
-Una de las tres cadenas de Mundo de un Orbiter: **I**, **II** y **III**. Cada una tiene sus propios módulos y mapea X, Y y Z a su manera. Lo que toca el Mundo I (un audio o notas) decide si el Orbiter es de Audio o de Notas.
+Una de las tres cadenas de Mundo de un Orbiter, **I**, **II** y **III**, cada una con sus propios módulos y su manera de mapear X, Y y Z. Lo que toca el Mundo I (un audio o notas) decide si el Orbiter es de Audio o de Notas.
 [Instrumentos: Audio o Notas](/docs/orbiters/instruments)
 
 

@@ -3,13 +3,13 @@ import styles from './StepFlow.module.css';
 
 // A walkthrough's steps as a diagram: numbered steps, grouped by where they
 // happen (a menu, a Studio step), each a link to its section on the page.
-// groups: [{ label, steps: [{ n, label, href }] }]
+// groups: [{ label, steps: [{ n, label, href }] }]; a group's width follows its step count.
 export default function StepFlow({ groups, caption }) {
   return (
     <figure className={styles.figure}>
       <ol className={styles.flow}>
         {groups.map((group) => (
-          <li key={group.label} className={styles.group}>
+          <li key={group.label} className={styles.group} style={{ flexGrow: group.steps.length }}>
             <div className={styles.groupLabel}>{group.label}</div>
             <ol className={styles.steps}>
               {group.steps.map((step) => (
