@@ -27,14 +27,17 @@ The rest of this page is about Notes Orbiters.
 
 Each instrument has its own chain of modules. Two instruments are as complete an Orbiter as three.
 
-In a Notes Orbiter, World II and III offer notes instruments and effects. The Track player and
-Granular are not offered there: only World I plays audio.
+:::note[Only World I plays audio]
+
+In a Notes Orbiter, World II and III offer notes instruments and effects. The Track player and Granular are not offered there.
+
+:::
 
 ![The module picker in World II of a Notes Orbiter: the Subtractive synth first, then the effects.](/img/orbiters/multiple-midi-instruments/notes-picker.jpg)
 
 ## Each instrument in its own place
 
-A World dimension that holds an instrument always runs **beside** the others, on the first stage of
+A <Term id="world-dimension">World dimension</Term> that holds an instrument always runs **beside** the others, on the first stage of
 the wiring. So the instruments play side by side, each through its own effects only: the bass in II
 is never heard through III's effects. The **Dimensions** tab shows this wiring.
 

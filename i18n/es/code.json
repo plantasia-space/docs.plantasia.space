@@ -445,5 +445,9 @@
   },
   "whatsNew.rss": {
     "message": "Suscribirse por RSS"
+  },
+  "docs.walkthrough.zoom": {
+    "message": "Ampliar",
+    "description": "Button on a walkthrough preview picture that opens it full size"
   }
 }

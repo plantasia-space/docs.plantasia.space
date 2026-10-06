@@ -7,16 +7,20 @@ sidebar_custom_props:
 
 The **Track player** plays the audio you choose for an Audio Orbiter. It sits at the head of
 World I, and everything after it in the chain (effects, the mixer) hears it. Change its speed, its
-pitch and the colour of the voice, and map any of them to the Orbiter's axes.
+pitch and the colour of the voice, and map any of them to the Orbiter's <Term id="axis">axes</Term>.
 
-Pick the audio with the button in the module's header.
+Pick the audio with the <Dot>1</Dot>button in the module's header.
 
 
-![The Track player as it loads: the screen with the speed readout, then Speed & Pitch, Character and Output.](/img/orbiters/instruments/track-player.jpg)
+<ModulePicture
+  src="/img/orbiters/instruments/track-player.jpg"
+  alt="The Track player as it loads: the screen with the speed readout, then Speed & Pitch, Character and Output."
+  dots={[[1, 39, 4.1], [2, 33.4, 54.3], [3, 17.6, 78.9], [4, 38.3, 82.1], [5, 48.3, 54.3], [6, 60.4, 82.1], [7, 83.3, 54.3], [8, 76.4, 82.1], [9, 92.9, 85.6], [10, 50, 14.2]]}
+/>
 
 ## Speed & Pitch
 
-The switch decides what Speed does to the pitch:
+The <Dot>2</Dot>switch decides what Speed does to the pitch:
 
 - **Tape**: pitch follows speed, like a turntable or a tape machine. Twice as fast is an octave up.
   Speed is one knob, **Speed & pitch**, and it reads both (150 % · +7.02 st).
@@ -24,25 +28,25 @@ The switch decides what Speed does to the pitch:
 
 | Control | What it does |
 |---|---|
-| **Speed** | 100 % plays as recorded, 0 % stops, below 0 plays backwards (down to −100 %), up to 400 %. With warp on it moves the tempo, and the word after its name says which. |
-| **Pitch** | Transposes with the tempo locked, −24 … +24 st. Stretch only. |
-| **Quantize** | Semitone steps: Pitch lands on whole semitones in Stretch; Speed & pitch lands on semitone ratios in Tape. |
+| <Dot>3</Dot>**Speed** | 100 % plays as recorded, 0 % stops, below 0 plays backwards (down to −100 %), up to 400 %. With warp on it moves the tempo, and the word after its name says which. |
+| <Dot>4</Dot>**Pitch** | Transposes with the tempo locked, −24 … +24 st. Stretch only. |
+| <Dot>5</Dot>**Quantize** | Semitone steps: Pitch lands on whole semitones in Stretch; Speed & pitch lands on semitone ratios in Tape. |
 
 ## Character
 
 | Control | What it does |
 |---|---|
-| **Formant** | Moves the vocal and body resonances without moving the pitch, −12 … +12 st. |
-| **Keep formants** | Keeps the resonances where they were while the pitch or the tape speed moves, so a voice doesn't turn into a chipmunk. |
-| **Tonality** | Above this frequency (1 … 16 kHz) the stretch treats the sound as noise rather than tones. |
+| <Dot>6</Dot>**Formant** | Moves the vocal and body resonances without moving the pitch, −12 … +12 st. |
+| <Dot>7</Dot>**Keep formants** | Keeps the resonances where they were while the pitch or the tape speed moves, so a voice doesn't turn into a chipmunk. |
+| <Dot>8</Dot>**Tonality** | Above this frequency (1 … 16 kHz) the stretch treats the sound as noise rather than tones. |
 
 ## Output
 
-**Level** sets the player's level, −60 … +6 dB, for layering it with other instruments.
+<Dot>9</Dot>**Level** sets the player's level, −60 … +6 dB, for layering it with other instruments.
 
 ## The screen
 
-The screen is a small picture of how the track is playing: a plant growing on moving ground.
+<Dot>10</Dot>The screen is a small picture of how the track is playing: a plant growing on moving ground.
 
 - **The ground runs at Speed.** Grass and seeds drift past as the track plays, the other way in
   reverse, and they stand still at a stop.

@@ -19,6 +19,11 @@ This community brings together concepts and tools from acoustic ecology, soundsc
 <a href="https://archive.org/details/comunidad-aural-independent-v-1/mode/2up" target="_blank" rel="noopener noreferrer">Comunidad Aural – Maar</a>
 
 
+### Axis {#axis}
+One of an Orbiter's three performance controls: **X**, **Y** and **Z**. Moving an axis moves every control mapped to it, each between its own minimum, equilibrium and maximum. You move them on screen, by tilting a phone (Sensors) or with the Cosmic LFO.
+[How to map a control to an axis](/docs/orbiters/quickstart#map)
+
+
 ### Certificate of Authenticity
 A document that authenticates a piece of artwork. In digital contexts, it verifies that a program or object is a genuine, legal copy.
 
@@ -36,8 +41,17 @@ A new paradigm for independent music distribution, merging physical and digital 
 A network of interconnected sonic planets and objects existing at the intersection of digital and physical worlds.
 
 
+### Equilibrium {#equilibrium}
+The value a mapped control takes while its axis rests in the middle, between its **minimum** and its **maximum**. Set it to the module's neutral value (Dry/wet 0 %, Amount 0) and a resting axis changes nothing.
+
+
 ### Landscape
 We use “Landscape” instead of “nature” because in many cultures nature is defined as everything that is not human. “Landscape” allows us to describe an environment that is not separate from people, but part of the same continuum.
+
+
+### Moon {#moon}
+An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Star's mixer adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.
+[Audio effects: three places for an effect](/docs/orbiters/audio-effects)
 
 
 ### NFC
@@ -62,3 +76,13 @@ Anything that sounds — if released with intention — can be music.
 ### Soundscape
 A soundscape is an environment of sound (or sonic environment) with emphasis on how it is perceived and understood by an individual or by a society. It depends on the relationship between the listener and the environment, and may refer to actual physical environments or abstract constructions such as musical compositions or montage.  
 <a href="https://www.sfu.ca/sonic-studio-webdav/handbook/Soundscape.html" target="_blank" rel="noopener noreferrer">Truax – Handbook for Acoustic Ecology</a>
+
+
+### Star {#star}
+The Orbiter body where the sound comes together: its **mixer** blends the World and the Moon's return, and its own effects play over everything.
+[Audio effects: three places for an effect](/docs/orbiters/audio-effects)
+
+
+### World dimension {#world-dimension}
+One of an Orbiter's three World chains, **I**, **II** and **III**, each with its own modules and its own way of mapping X, Y and Z. What World I plays (an audio, or notes) decides whether the Orbiter is an Audio or a Notes Orbiter.
+[Instruments: Audio or Notes](/docs/orbiters/instruments)

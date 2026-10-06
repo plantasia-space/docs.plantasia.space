@@ -6,18 +6,23 @@ sidebar_custom_props:
 ---
 
 The **Drum Sequencer** plays drum patterns into an Orbiter's instrument. It works like a pad
-controller: 16 pads (or 8) whose job changes with the **pad function** you pick, a small screen
-with four knobs, two **real-time FX** ribbons, and up to 32 **beats**, each 1 to 8 bars long.
+controller: <Dot>1</Dot>16 pads (or 8) whose job changes with the <Dot>2</Dot>**pad function** you pick, a
+<Dot>3</Dot>small screen with <Dot>4</Dot>four knobs, <Dot>5</Dot>two **real-time FX** ribbons, and up to 32 **beats**, each 1 to 8 bars long.
 
 You meet it in two places, which always show the same state:
 
 - **The module**, in the Studio's drawer, where you build the Orbiter. Its knobs and switches can
-  be **mapped to the Orbiter's axes and toggles**.
+  be **mapped to the Orbiter's <Term id="axis">axes</Term> and toggles**.
 - **The play surface**, on the stage while the Drum Sequencer leads the chain, in the Studio and when
   the Orbiter is played. Its controls can be **mapped to MIDI hardware**.
 
 
-![The Drum Sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right.](/img/orbiters/midi-effects/drum-sequencer.jpg)
+<ModulePicture
+  src="/img/orbiters/midi-effects/drum-sequencer.jpg"
+  wide
+  alt="The Drum Sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right."
+  dots={[[1, 15.8, 63.6], [2, 11.6, 20.7], [3, 68.6, 22], [4, 72.3, 44.6], [5, 3.4, 56.7], [6, 40.7, 27.4], [7, 54.4, 27.4], [8, 73.8, 83.7], [9, 11.6, 38.6], [10, 6, 96]]}
+/>
 
 ## Pad functions
 
@@ -34,7 +39,7 @@ around the pads follow the function: an action that would do nothing there is gr
 
 The four knobs under the screen change with the function too.
 
-**Roll** follows the function. In Beats and Mutes it is **Beat roll**: the beat repeats a short slice,
+<Dot>6</Dot>**Roll** follows the function. In Beats and Mutes it is **Beat roll**: the beat repeats a short slice,
 at the roll rate (the Roll knob in Beats), from where you switched it on. In the other functions,
 **Roll** repeats a pad while you hold it. Their names and values are shown on
 the screen.
@@ -51,7 +56,7 @@ for the grid. Tap the beat that is playing to take the switch back.
 
 ## Recording
 
-Press **Rec** to record what you play into the beat that is playing:
+Press <Dot>7</Dot>**Rec** to record what you play into the beat that is playing:
 
 1. Pick **Voices** or **Tunings**.
 2. Press **Rec**. The button lights; it records while the transport plays.
@@ -63,7 +68,7 @@ open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again
 
 ## Generate
 
-**Generate** writes rhythms for the selected voice (in Voices or Steps):
+<Dot>8</Dot>**Generate** writes rhythms for the selected voice (in Voices or Steps):
 
 - **Euclid** plays the voice's row as an even rhythm, live: **Hits** per bar, turned by **Rotate**,
   with a **Chance** per hit. **Mutate** moves hits and adds ghost notes anew every bar. Nothing is
@@ -73,7 +78,7 @@ open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again
 
 ## Edit
 
-**Copy**, **Paste** and **Erase** act on the voice's row in Voices and Steps, and on the whole beat
+<Dot>9</Dot>**Copy**, **Paste** and **Erase** act on the voice's row in Voices and Steps, and on the whole beat
 in Beats: copy a beat, pick another, paste. **Undo** takes back the last edit.
 
 ## Real-time FX
@@ -81,7 +86,7 @@ in Beats: copy a beat, pick another, paste. **Undo** takes back the last edit.
 Two ribbons bend the notes on their way out: **Beat roll**, **Stutter**, **Skip**, **Reverse**,
 **Density**, **Velocity**, **Swing** or **Transpose**. Pick the effect from the menu above each
 ribbon (the button with the arrow), then press and slide on the ribbon; let go and it falls back to
-0. With **Latch** on, the ribbon keeps its amount when you let go. Latch is the same in the module
+0. With <Dot>10</Dot>**Latch** on, the ribbon keeps its amount when you let go. Latch is the same in the module
 and on the play surface.
 
 ## Mapping
