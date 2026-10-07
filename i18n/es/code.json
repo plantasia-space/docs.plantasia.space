@@ -450,6 +450,22 @@
     "message": "Ampliar",
     "description": "Button on a walkthrough preview picture that opens it full size"
   },
+  "docs.tryModule.try": {
+    "message": "Pruébalo",
+    "description": "Button that loads a playable module in the page"
+  },
+  "docs.tryModule.close": {
+    "message": "Cerrar",
+    "description": "Button that closes the playable module and shows its picture again"
+  },
+  "docs.tryModule.frameTitle": {
+    "message": "Módulo para tocar",
+    "description": "Accessible title of the frame holding a playable module"
+  },
+  "docs.tryModule.plays": {
+    "message": "Toca el módulo real en tu navegador.",
+    "description": "Caption under a playable module with no opening setting"
+  },
   "docs.loopVideo.play": {
     "message": "Reproducir video",
     "description": "Button on a short looping docs video that starts it"

@@ -22,12 +22,14 @@ Both load doing nothing (the Flanger at Dry/wet 0 %, the One Flanger at Amount 0
 
 ## Flanger
 
+<TryModule module="flanger" set="mix:50" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/flanger.jpg"
   wide
   alt="The Flanger as an insert, at Dry/wet 0 %: the Sweep screen, then Motion, Comb and Output."
   dots={[[1, 62.5, 20.7], [2, 43.1, 82.1], [3, 51, 82.1], [4, 58.8, 82.1], [5, 92.2, 20.7], [6, 70.4, 78.8], [7, 80.6, 82.1], [8, 88.5, 82.1], [9, 96.5, 62.2], [10, 96.5, 85.6], [11, 19.2, 14.2]]}
 />
+</TryModule>
 
 ### Motion
 
@@ -99,11 +101,13 @@ The word on the screen is **Swirl**, **Jet** (Feedback +60 % and up), **Hollow**
 
 ## One Flanger
 
+<TryModule module="oneFlanger" set="amount:60" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-flanger.jpg"
   alt="The One Flanger playing at Amount +60 %, Jet: Feedback +50 % and a 6.3 s sweep on the Sweep screen."
   dots={[[1, 50, 78.8], [2, 50, 14.2]]}
 />
+</TryModule>
 
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 flanger; at 0 it does nothing, and either way the level stays where it was and the bass (under

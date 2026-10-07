@@ -31,12 +31,14 @@ Both load doing nothing (the Reverb at Dry/wet 0 %, the One Reverb at Amount 0 %
 
 ## Reverb
 
+<TryModule module="reverb" set="mix:50" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/reverb.jpg"
   wide
   alt="The Reverb as an insert, at Dry/wet 0 %: the Space screen, then Space (Freeze, Decay, Pre-delay, Bass), Tone and Output."
   dots={[[1, 42.1, 78.8], [2, 51.6, 82.1], [3, 58.8, 82.1], [4, 43.9, 26.4], [5, 67.5, 82.1], [6, 74.8, 82.1], [7, 82, 82.1], [8, 89.3, 82.1], [9, 96.8, 62.2], [10, 96.8, 85.6], [11, 17.8, 14.2]]}
 />
+</TryModule>
 
 ### Space
 
@@ -85,11 +87,13 @@ picture of the current values.
 
 ## One Reverb
 
+<TryModule module="oneReverb" set="amount:60" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-reverb.jpg"
   alt="The One Reverb playing at Amount 60 %, Hall: the Space screen shows Decay 1.7 s and Pre-delay 15 ms."
   dots={[[1, 50, 78.8], [2, 50, 14.2]]}
 />
+</TryModule>
 
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 reverb; at 0 it does nothing, and either way the level stays about where it was.

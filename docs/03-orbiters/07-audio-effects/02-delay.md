@@ -30,12 +30,14 @@ Both load doing nothing (the Delay at Dry/wet 0 %, the One Echo at Amount 0): tu
 
 ## Delay
 
+<TryModule module="delay" set="mix:50" source="drums">
 <ModulePicture
   src="/img/orbiters/audio-effects/delay.jpg"
   wide
   alt="The Delay as an insert, at Dry/wet 0 %: the Echoes screen, then Time, Repeats and Output."
   dots={[[1, 55.9, 20.7], [2, 51.1, 82.1], [3, 65.1, 78.8], [4, 77.1, 82.1], [5, 86.4, 82.1], [6, 81.2, 20.7], [7, 90.9, 20.7], [8, 95.9, 62.2], [9, 95.9, 85.6], [10, 22.6, 14.2]]}
 />
+</TryModule>
 
 ### Time
 
@@ -97,11 +99,13 @@ reduced-motion setting, it is a still picture of the current values.
 
 ## One Echo
 
+<TryModule module="oneEcho" set="amount:60" source="drums">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-echo.jpg"
   alt="The One Echo playing at Amount +60 %, Trail: four echoes at 1/8D (375 ms) on the Echoes screen."
   dots={[[1, 50, 78.8], [2, 50, 14.2]]}
 />
+</TryModule>
 
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different echo;
 at 0 it does nothing, and either way the level stays about where it was.

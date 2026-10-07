@@ -21,12 +21,14 @@ It loads at Dry/wet 0 %, already set to shift up 50 Hz: turn Dry/wet up to hear 
 
 :::
 
+<TryModule module="frequencyShifter" set="mix:100,spread:60,feedback:80" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/frequency-shifter.jpg"
   wide
   alt="The Frequency shifter at Dry/wet 100 %, Shift +50 Hz, Spread 60 Hz and Feedback 80 %: the Shift screen, then Shift, Spiral and Output."
   dots={[[1, 46.9, 78.8], [2, 57.4, 82.1], [3, 65.5, 82.1], [4, 89.3, 14.5], [5, 77.6, 78.8], [6, 88.1, 82.1], [7, 96.4, 62.2], [8, 96.4, 85.6], [9, 19.7, 14.2]]}
 />
+</TryModule>
 
 ## What a shift sounds like
 

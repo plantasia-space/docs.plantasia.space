@@ -33,12 +33,14 @@ A **Moon** is a send and return: what it returns is added to the dry World throu
 
 ## Chorus
 
+<TryModule module="chorus" set="mix:50" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/chorus.jpg"
   wide
   alt="The Chorus as an insert, at Dry/wet 0 %: the Voices screen with two voices drifting, then Motion, Colour and Output."
   dots={[[1, 58.9, 20.7], [2, 64.4, 20.7], [3, 60.3, 82.1], [4, 49.3, 78.8], [5, 70.5, 82.1], [6, 79, 82.1], [7, 87.5, 82.1], [8, 96.2, 62.2], [9, 96.2, 85.6], [10, 20.8, 14.2]]}
 />
+</TryModule>
 
 ### Motion
 
@@ -110,11 +112,13 @@ with your system's reduced-motion setting, it is a still picture of the current 
 
 ## One Chorus
 
+<TryModule module="oneChorus" set="amount:60" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-chorus.jpg"
   alt="The One Chorus playing at Amount +60 %, Sway: two voices ±26 cents apart at 0.82 Hz on the Voices screen."
   dots={[[1, 50, 78.8], [2, 50, 14.2]]}
 />
+</TryModule>
 
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 chorus; at 0 it does nothing, and either way the level stays where it was and the bass (below
