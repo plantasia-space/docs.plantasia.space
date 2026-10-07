@@ -12,11 +12,13 @@ pitch and the colour of the voice, and map any of them to the Orbiter's <Term id
 Pick the audio with the <Dot>1</Dot>button in the module's header.
 
 
+<TryModule module="trackPlayer" set="speed:75" source="track">
 <ModulePicture
   src="/img/orbiters/instruments/track-player.jpg"
   alt="The Track player as it loads: the screen with the speed readout, then Speed & Pitch, Character and Output."
   dots={[[1, 39, 4.1], [2, 33.4, 54.3], [3, 17.6, 78.9], [4, 38.3, 82.1], [5, 48.3, 54.3], [6, 60.4, 82.1], [7, 83.3, 54.3], [8, 76.4, 82.1], [9, 92.9, 85.6], [10, 50, 14.2]]}
 />
+</TryModule>
 
 ## Speed & Pitch
 
