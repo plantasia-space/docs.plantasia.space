@@ -60,7 +60,7 @@ overdriven reed. Turn Even/odd to the even side for warmth, to the odd side for 
 | **Trim** | The module's output level, dry included. |
 
 **Watch the level at high Amount.** The harmonics come in at the sound's own level. With Height and
-Even/odd where they load, even Amount 100 % moves the loudness under 1 dB, but the peaks rise: about
+Even/odd where they load, even Amount 100 % moves the loudness about 1 dB at most, but the peaks rise: about
 **+6 dB** on a pure tone, about +3 dB on a square wave or a mix. The loudest setting is Height 0 with
 the odd harmonics: up to **+9 dB** of peak on a square wave, and on a mix about **+5 dB** louder overall.
 Nothing distorts inside the module; pull **Trim** down if the next effect or the mix gets too hot.
