@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown } from 'lucide-react';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar } from 'lucide-react';
 
 An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
 it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
@@ -27,6 +27,12 @@ places.
 | **Insert on a <Term id="world-dimension">World dimension</Term>** | only that dimension's sound | colouring one part: a chorus on the pad, a flanger on the drums |
 | **Insert on the <Term id="star">Star</Term>** | everything, after the mixer | one effect over the whole Orbiter |
 | **On a <Term id="moon">Moon</Term>** | what the World sends to it; it returns only the effect | a shared reverb or delay, mixed in with the Moon level |
+
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/audio-effects/add-a-module"
+  caption="Press an empty Audio effect slot: Modules that fit here lists every effect, the One versions further down. The One Reverb goes in as an insert on World I."
+  label="The empty Audio effect slot after the Track player is pressed, the Modules that fit here list opens and scrolls down to the One versions, and Reverb One is picked; the One Reverb appears in the rack."
+/>
 
 A Moon is a **send and return**: it adds its effect next to the dry sound instead of replacing it.
 That is why the Reverb and the Delay feel most at home there.
@@ -60,10 +66,14 @@ Most effects come as a pair:
 | [Frequency shifter](/docs/orbiters/audio-effects/frequency-shifter) | Frequency shifter | — | insert, Moon too |
 | [Auto-panner](/docs/orbiters/audio-effects/auto-panner) | Auto-panner | One Auto-panner | insert |
 | [Pitch shifter](/docs/orbiters/audio-effects/pitch-shifter) | Pitch shifter | — | insert, Moon too |
+| [Waveshaper](/docs/orbiters/audio-effects/waveshaper) | Waveshaper | — | insert, Moon too |
+| [Tremolo](/docs/orbiters/audio-effects/tremolo) | Tremolo | — | insert |
+| [Phaser](/docs/orbiters/audio-effects/phaser) | Phaser | One Phaser | insert |
+| [Vibrato](/docs/orbiters/audio-effects/vibrato) | Vibrato | — | insert, Moon too |
 
 :::tip[Every effect loads doing nothing]
 
-An effect you add changes nothing until you turn it up: inserts load at Dry/wet 0 % (or Amount 0 %, or with the Pitch shifter at Pitch 0). So you can drop one in while you play and bring it in by ear, or map it to an axis that rests on its <Term id="equilibrium">equilibrium</Term>.
+An effect you add changes nothing until you turn it up: inserts load at Dry/wet 0 % (or Amount 0 %, or Depth 0 % or 0 ct, or with the Pitch shifter at Pitch 0). So you can drop one in while you play and bring it in by ear, or map it to an axis that rests on its <Term id="equilibrium">equilibrium</Term>.
 
 :::
 
@@ -77,4 +87,8 @@ An effect you add changes nothing until you turn it up: inserts load at Dry/wet 
   <NavigationCard href="/docs/orbiters/audio-effects/frequency-shifter" label="Frequency shifter" icon={<Orbit />} description="Every frequency moved by the same Hz: beating, metallic, an endless staircase." />
   <NavigationCard href="/docs/orbiters/audio-effects/auto-panner" label="Auto-panner" icon={<MoveHorizontal />} description="Move a sound from side to side at a steady level: drift, sweep or chop on the beat." />
   <NavigationCard href="/docs/orbiters/audio-effects/pitch-shifter" label="Pitch shifter" icon={<ArrowUpDown />} description="A copy moved by an interval: harmonies, sub-octaves, doubling, shimmer." />
+  <NavigationCard href="/docs/orbiters/audio-effects/waveshaper" label="Waveshaper" icon={<Sprout />} description="Add the harmonics you choose, the 2nd to the 8th: warm octaves, hollow fifths, a bright top." />
+  <NavigationCard href="/docs/orbiters/audio-effects/tremolo" label="Tremolo" icon={<Activity />} description="The level rises and falls: a slow swell, the amp tremolo, or a chop on the beat." />
+  <NavigationCard href="/docs/orbiters/audio-effects/phaser" label="Phaser" icon={<MoonStar />} description="A few notches gliding up and down together: the classic swirl, or a fast throb." />
+  <NavigationCard href="/docs/orbiters/audio-effects/vibrato" label="Vibrato" icon={<AudioWaveform />} description="The pitch wavers above and below the note: a singer's vibrato, a warble, a tape wow." />
 </NavigationGrid>

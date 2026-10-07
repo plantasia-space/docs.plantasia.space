@@ -69,6 +69,12 @@ The mapping appears in the column as **X · Amount**, with three values: **min**
 
 Press **Mapping…** to leave Map mode.
 
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/quickstart/map-to-y"
+  caption="Map, then Y on the stage: Y turns red, and the One Reverb's Amount goes to Y instead. Moving Y moves Amount."
+  label="Map mode on, the Y axis touched on the stage so it turns red, then the One Reverb's Amount touched: Y · Amount appears in the Mappings column. After leaving Map mode, Y is moved up and down and the Amount knob follows it."
+/>
+
 ## 5. Play it {#play}
 
 Press **Play** at the top of the stage, then drag the **X** axis up. The axis now carries the name of what it moves, **Amount**, and the One Reverb follows it: the sound goes from dry into a room, and further up into a hall. Drag it down for the plate.

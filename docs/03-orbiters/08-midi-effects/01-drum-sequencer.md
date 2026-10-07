@@ -66,6 +66,12 @@ Each hit lands on the step nearest to when you heard it, keeping how far off the
 velocity (Accent records at full velocity), and in Tunings its pitch. The result is ordinary steps:
 open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again to stop.
 
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/midi-effects/drum-sequencer/record-drum-pads"
+  caption="Play, Rec, then C1 four times and F♯1 a few. Rec again stops; Steps shows F♯1's hits as ordinary steps, each with how far off the grid it landed."
+  label="The transport starts, Rec is pressed in the Drum Sequencer, the C1 pad is tapped four times and the F♯1 pad several times; Rec is pressed again, then Steps, which shows the recorded F♯1 steps with their offsets."
+/>
+
 ## Generate
 
 <Dot>8</Dot>**Generate** writes rhythms for the selected voice (in Voices or Steps):

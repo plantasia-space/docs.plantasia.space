@@ -21,7 +21,14 @@ import styles from './styles.module.css';
 // A landscape image (e.g. ~1600x500) works best; square images are cropped to fit.
 const BANNER_IMAGE = '/img/regenerative.png';
 
-function BlogHero() {
+// The What's new page (a second blog instance) shares this list page; it takes its own title.
+function isWhatsNew({metadata}) {
+  return metadata.permalink.replace(/^\/es(?=\/)/, '').startsWith('/whats-new');
+}
+
+function BlogHero(props) {
+  const {blogTitle, blogDescription} = props.metadata;
+  const whatsNew = isWhatsNew(props);
   return (
     <header className={styles.blogHero}>
       <img
@@ -33,13 +40,20 @@ function BlogHero() {
       />
       <div className={styles.blogHeroInner}>
         <Heading as="h1" className={styles.blogHeroTitle}>
-          <Translate id="blog.hero.title">Plantasia Space Blog</Translate>
+          {whatsNew ? blogTitle : <Translate id="blog.hero.title">Plantasia Space Blog</Translate>}
         </Heading>
         <p className={styles.blogHeroSubtitle}>
-          <Translate id="blog.hero.subtitle">
-            News, updates, and stories from the regenerative aural community.
-          </Translate>
+          {whatsNew ? blogDescription : (
+            <Translate id="blog.hero.subtitle">
+              News, updates, and stories from the regenerative aural community.
+            </Translate>
+          )}
         </p>
+        {whatsNew && (
+          <a className="wn-rss" href={`${props.metadata.permalink}/rss.xml`}>
+            <Translate id="whatsNew.rss">Subscribe with RSS</Translate>
+          </a>
+        )}
       </div>
     </header>
   );
@@ -78,7 +92,7 @@ export default function BlogListPage(props) {
       <BlogListPageMetadata {...props} />
       <BlogListPageStructuredData {...props} />
       <Layout>
-        {isFirstBlogListPage(props) && <BlogHero />}
+        {isFirstBlogListPage(props) && <BlogHero {...props} />}
         <div className="container margin-vert--lg">
           <div className="row">
             <BlogSidebar sidebar={sidebar} />

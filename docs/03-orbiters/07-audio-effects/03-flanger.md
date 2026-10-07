@@ -130,11 +130,12 @@ It returns only the flange, with no dry, so there is nothing to set. An untouche
 
 ### The screen
 
-<Dot>2</Dot>A jellyfish drifts over the sound: at 0 a small, still bell with no tendrils. Turned either way the
-bell grows and pulses with the sweep; its tendrils are the comb, hanging as long as it rings, their
-tips lit with how loud the flange is (and the ladder on the right). Turned right (the Jet) the bell is
-wide and its tendrils long; turned left (the Hollow) it is narrower and taller, with a dashed hollow
-inside, short tendrils and hollow tips. The big number is Amount itself; below it, the inside
+<Dot>2</Dot>A jellyfish drifts over the sound, filling the screen between the number and the ladder: at 0 a
+still bell with no tendrils. Turned either way the same bell slowly changes shape and pulses with the
+sweep, and its tendrils grow out of the rim: they are the comb, hanging as long as it rings, their tips
+lit with how loud the flange is (and the ladder on the right). Turned right (the Jet) the bell widens
+and its tendrils grow long; turned left (the Hollow) it grows taller, its tendrils stay shorter and
+end in rings. Through 0 one shape turns into the other, with no jump. The big number is Amount itself; below it, the inside
 Feedback and how long one sweep takes. On a Moon the sound under the bell is drawn hollow and the
 screen reads **Send ·** and the word.
 

@@ -93,6 +93,32 @@ const config = {
     './src/plugins/raw-markdown',
     './src/plugins/moved-pages',
     './src/plugins/glossary-terms',
+    './src/plugins/dev-feeds',
+    // What's new: one post per promotion (dev → main), drafted by comms routine 02 from triaged tickets.
+    // The root app's menu reads feed.json (PLA-514).
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'whats-new',
+        path: './whats-new',
+        routeBasePath: 'whats-new',
+        blogTitle: "What's new",
+        blogDescription: 'What you can do in Plantasia Space now, release by release.',
+        blogSidebarTitle: 'All releases',
+        blogSidebarCount: 'ALL',
+        postsPerPage: 10,
+        showReadingTime: false,
+        // The list shows each release in full, like a changelog.
+        onUntruncatedBlogPosts: 'ignore',
+        feedOptions: {
+          type: 'all',
+          title: "Plantasia Space: What's new",
+          description: 'What you can do in Plantasia Space now, release by release.',
+          copyright: `Copyright © ${new Date().getFullYear()} Plantasia Space`,
+          limit: 20,
+        },
+      },
+    ],
   ],
 
   // Theme configuration
@@ -127,6 +153,13 @@ const config = {
             label: 'Blog',
             position: 'left',
             className: 'nav-blog',
+          },
+          {
+            to: '/whats-new',
+            label: "What's new",
+            position: 'left',
+            'aria-label': "What's new",
+            className: 'nav-whats-new',
           },
           {
             type: 'localeDropdown',
@@ -177,6 +210,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: "What's new",
+                to: '/whats-new',
               },
               {
                 label: 'GitHub',
