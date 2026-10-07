@@ -51,8 +51,10 @@ overdriven reed. Turn Even/odd to the even side for warmth, to the odd side for 
 
 ## Output
 
-**Trim** sets the level after the harmonics are added. There is no Dry/wet: the Waveshaper adds its
-harmonics to the untouched sound, so a Dry/wet would be a second Amount.
+| Control | What it does |
+|---|---|
+| **Dry/wet** | Balance between the dry and the shaped sound. **100 %** as it loads; lower, the harmonics come in lower (Amount still sets how loud they are at 100 %). |
+| **Trim** | The module's output level, dry included. |
 
 **Watch the peaks at high Amount.** The harmonics come in at the sound's own level, so the loudness
 barely moves at the settings it loads with, but the peaks can rise: on a pure tone, up to about
@@ -70,7 +72,7 @@ Amount low and lean to the even side.
 
 On a <Term id="moon">Moon</Term> it returns **the harmonics alone**: the World already plays the dry
 sound, so the Moon adds only what the Waveshaper makes, and the Moon level sets how much. At Amount 0 %
-it returns nothing.
+it returns nothing; Dry/wet scales what it returns.
 
 ## The screen
 
@@ -78,8 +80,8 @@ it returns nothing.
 3rd stand nearly upright, the 7th and 8th lean out widest; the even harmonics lean left, the odd ones
 right.
 
-- **How wide a trap opens** is how loud its harmonic is. **Amount** opens them all; at 0 % they are shut
-  and the picture turns grey: **Off · 0 %**. **Height** opens the outer traps, **Even/odd** one side.
+- **How wide a trap opens** is how loud its harmonic is. **Amount** (and Dry/wet) opens them all; at 0 %
+  they are shut and the picture turns grey: **Off · 0 %** (**Dry · 0 %** with Dry/wet at 0). **Height** opens the outer traps, **Even/odd** one side.
 - **The flies** come while sound plays: the higher Amount, the more often one comes. It flies to the most
   open trap, which opens wide to take it and shuts on it. The fly is eaten; after a while the trap opens
   again, empty.
