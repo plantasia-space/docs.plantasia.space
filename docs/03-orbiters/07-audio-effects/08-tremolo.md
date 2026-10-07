@@ -33,7 +33,8 @@ The Tremolo loads doing nothing (Depth 0 %): turn Depth up to set the level movi
 **Depth and loudness.** Because the loud moments stay where they were, the sound gets a little quieter
 on average as Depth goes up: at Depth 100 % about **−4.3 dB** with Sine, −4.8 dB with Triangle and
 −3.0 dB with Square; at 50 % about −2.3 dB. On an <Term id="axis">axis</Term> that takes Depth up, that
-reads as "more chop, less sound", which is what a chop is. **Trim** is there to bring it back up. The
+reads as "more chop, less sound", which is what a chop is. **Trim** is there to bring it back up, and
+**Dry/wet** under 100 % makes every dip shallower. The
 Tremolo never pushes the peaks above the sound you put in, so it is safe on a loud bus.
 
 **Shape: three ways to pulse.** One knob goes through three shapes, ordered by how long the level stays
@@ -65,8 +66,10 @@ travelling from side to side, which is the Auto-panner's job.
 
 ## Output
 
-**Trim** sets the level after the tremolo. There is no Dry/wet: blending the pulsing sound with the
-steady one is exactly the same as less Depth, so Depth is the "how much".
+| Control | What it does |
+|---|---|
+| **Dry/wet** | Balance between the steady sound and the pulsing one. **100 %** as it loads: the tremolo alone. At 50 % the dips are half as deep, so it is a second way to soften the pulse, handy on an axis that already moves Depth. |
+| **Trim** | The level after the tremolo, to bring back what the dips take away. |
 
 ## The bass pulses too
 
