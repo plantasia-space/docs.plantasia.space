@@ -41,6 +41,32 @@ When editing, always check each dimension (1, 2, and 3) and verify:
 
 Copy / paste can be used for panel styling, but engine settings must be adjusted per dimension.
 
+## Map a control to an axis
+
+Press **Map** in the **Mappings** column (or **Shift+M**): the **X** axis on the stage turns red and every control shows a **map** badge. Touch a control and its mapping appears in the column with its **min**, **<Term id="equilibrium">equil</Term>** and **max**. Press **Mapping…** to leave Map mode, then move the axis: the control follows it. The [Quickstart](./00-quickstart.md#map) goes through it step by step.
+
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/edit/map-a-knob"
+  caption="Map, then the One Reverb's Amount: X · Amount appears in the Mappings column. Moving X turns Amount towards the room one way and the plate the other."
+  label="Map mode on, the One Reverb's Amount touched, then the X axis moved up and down while the Amount knob follows it."
+/>
+
+Drag **min**, **equil** and **max** in the mapping to set how far the axis takes the control and where it rests:
+
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/edit/min-equil-max"
+  caption="Max and min drawn in, then equil moved to 20 %: with X at rest Amount now sits on 20 %, and X moves it within the new range."
+  label="In the Mappings column, the max and min handles of X · Amount are dragged towards the middle, then the equil handle to 20 %; the X axis is then moved up and down and the Amount knob follows within the narrower range."
+/>
+
+The curve buttons under each side shape the way between: **Linear**, **Exponential** or **Logarithmic**, from min to equil and from equil to max.
+
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/edit/curve"
+  caption="X held halfway up: the equil → max curve moves Amount from 20 % (Linear) to 6 % (Exponential) and 37 % (Logarithmic). Then the same below rest, with min → equil."
+  label="The X axis is moved halfway up, then the equil to max curve buttons are pressed and the Amount knob jumps to a new value for each; X is moved below rest and the min to equil curve buttons are pressed."
+/>
+
 ## Iteration workflow
 
 Orbiters are designed to be iterated.

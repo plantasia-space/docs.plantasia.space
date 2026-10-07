@@ -71,6 +71,12 @@ El mapeo aparece en la columna como **X · Amount**, con tres valores: **min** (
 
 Pulsa **Mapping…** para salir del modo Map.
 
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/quickstart/map-to-y"
+  caption="Map y después Y en el escenario: Y se pone rojo y el Amount de la One Reverb va a Y. Al mover Y se mueve Amount."
+  label="Modo Map activado, se toca el eje Y en el escenario y se pone rojo, después el Amount de la One Reverb: aparece Y · Amount en la columna Mappings. Al salir del modo Map se mueve Y arriba y abajo y el knob de Amount lo sigue."
+/>
+
 ## 5. Tócalo {#play}
 
 Pulsa **Reproducir** arriba del escenario y arrastra el eje **X** hacia arriba. El eje lleva ahora el nombre de lo que mueve, **Amount**, y la One Reverb lo sigue: el sonido pasa de seco a una habitación y, más arriba, a una sala. Arrástralo hacia abajo para la placa.

@@ -449,5 +449,13 @@
   "docs.walkthrough.zoom": {
     "message": "Ampliar",
     "description": "Button on a walkthrough preview picture that opens it full size"
+  },
+  "docs.loopVideo.play": {
+    "message": "Reproducir video",
+    "description": "Button on a short looping docs video that starts it"
+  },
+  "docs.loopVideo.pause": {
+    "message": "Pausar video",
+    "description": "Button on a short looping docs video that pauses it"
   }
 }
