@@ -18,11 +18,13 @@ Velocity loads with every note coming out as it went in, so adding it changes no
 :::
 
 
+<TryModule module="velocity" set="random:24" source="piano">
 <ModulePicture
   src="/img/orbiters/midi-effects/velocity.jpg"
   alt="Velocity as it loads, a straight line from in to out: the curve on the screen, then Curve, In and Out."
   dots={[[1, 8, 82.1], [2, 21.2, 82.1], [3, 34.3, 82.1], [4, 47.4, 93.8], [5, 59.8, 93.8], [6, 66.2, 69.9], [7, 72.8, 93.8], [8, 88.4, 81], [9, 89.4, 93.8], [10, 50, 14.2]]}
 />
+</TryModule>
 
 ## Curve
 

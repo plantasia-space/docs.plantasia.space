@@ -18,11 +18,13 @@ Note Echo loads with Level at 0 %, so adding it changes nothing until you turn L
 :::
 
 
+<TryModule module="noteEcho" set="level:70" source="piano">
 <ModulePicture
   src="/img/orbiters/midi-effects/note-echo.jpg"
   alt="Note Echo as it loads, Level at 0 %: the Bounce screen, then Delay, Per repeat and Input."
   dots={[[1, 32.5, 64.1], [2, 9.5, 82.1], [3, 25, 82.1], [4, 43.5, 82.1], [5, 59, 82.1], [6, 74.6, 82.1], [7, 98, 75.3], [8, 50, 14.2]]}
 />
+</TryModule>
 
 ## Delay
 

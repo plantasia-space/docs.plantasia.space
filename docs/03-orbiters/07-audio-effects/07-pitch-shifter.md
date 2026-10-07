@@ -19,12 +19,14 @@ It loads at Pitch 0, Fine 0 and Spread 0: the sound passes untouched until you m
 
 :::
 
+<TryModule module="pitchShifter" set="pitch:7,spread:7.8,feedback:25" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/pitch-shifter.jpg"
   wide
   alt="The Pitch shifter as an insert at +7 st, a fifth up, with a little Spread and Feedback: the Interval screen, then Pitch and Output."
   dots={[[1, 50.1, 78.8], [2, 61.3, 82.1], [3, 70, 82.1], [4, 78.6, 82.1], [5, 87.3, 82.1], [6, 96.1, 62.1], [7, 96.1, 85.6], [8, 21, 14.1]]}
 />
+</TryModule>
 
 ## Pitch
 

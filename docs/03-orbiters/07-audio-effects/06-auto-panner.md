@@ -22,6 +22,14 @@ Both load doing nothing (Amount 0): turn Amount up to set the sound moving.
 
 ## Auto-panner
 
+<TryModule module="autoPanner" set="amount:80" source="drums">
+<ModulePicture
+  src="/img/orbiters/audio-effects/auto-panner.jpg"
+  wide
+  alt="The Auto-panner playing at Amount 80 %, Glide: the Position screen draws the sound's path at 1.0 Hz, then Motion, Colour and Output."
+/>
+</TryModule>
+
 ### Motion
 
 | Control | What it does |
@@ -107,6 +115,13 @@ takes up the new rate once the knob comes to rest. It moves only while sound pla
 your system's reduced-motion setting, it is a still picture of the current values.
 
 ## One Auto-panner
+
+<TryModule module="oneAutoPanner" set="amount:60" source="drums">
+<ModulePicture
+  src="/img/orbiters/audio-effects/one-auto-panner.jpg"
+  alt="The One Auto-panner playing at Amount +60 %, Drift: one trip in 6.6 s on the Position screen."
+/>
+</TryModule>
 
 One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
 auto-pan; at 0 it does nothing. Either way the level stays where it was and the bass (below 120 Hz)

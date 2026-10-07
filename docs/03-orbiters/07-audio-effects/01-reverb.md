@@ -31,12 +31,14 @@ Both load doing nothing (the Reverb at Dry/wet 0 %, the One Reverb at Amount 0 %
 
 ## Reverb
 
+<TryModule module="reverb" set="mix:50" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/reverb.jpg"
   wide
   alt="The Reverb as an insert, at Dry/wet 0 %: the Space screen, then Space (Freeze, Decay, Pre-delay, Bass), Tone and Output."
   dots={[[1, 42.1, 78.8], [2, 51.6, 82.1], [3, 58.8, 82.1], [4, 43.9, 26.4], [5, 67.5, 82.1], [6, 74.8, 82.1], [7, 82, 82.1], [8, 89.3, 82.1], [9, 96.8, 62.2], [10, 96.8, 85.6], [11, 17.8, 14.2]]}
 />
+</TryModule>
 
 ### Space
 

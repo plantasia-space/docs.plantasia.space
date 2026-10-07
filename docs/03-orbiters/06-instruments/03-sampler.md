@@ -16,12 +16,14 @@ recording on a range of keys, sometimes in several **velocity layers** (soft and
 the right zone for every note by itself.
 
 
+<TryModule module="sampler" source="piano">
 <ModulePicture
   src="/img/orbiters/instruments/sampler.jpg"
   wide
   alt="The Sampler playing the Kawai grand: the sample and its zones on the screen, then Sample, Amp, and the LFO, Mod wheel and Voice tabs."
   dots={[[1, 79.8, 4.1], [2, 50, 14.2], [3, 5.6, 82.1], [4, 14.8, 82.1], [5, 24, 82.1], [6, 33.2, 82.1], [7, 42.4, 82.1], [8, 9.6, 61.4], [9, 15.7, 61.4], [10, 47.5, 52], [11, 88.7, 75], [12, 93.2, 75], [13, 97.6, 75]]}
 />
+</TryModule>
 
 ## Picking an instrument
 
