@@ -106,6 +106,12 @@ También puedes manipular los knobs directamente.
 
 El equilibrio suele representar un estado neutro o bypass.
 
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/interact/move-axes"
+  caption="En el Studio: X mueve el Amount de la One Reverb e Y el Speed del Track player, y la Screen de cada módulo los sigue. Un doble clic en X lo devuelve a su equilibrio."
+  label="Con el transporte en marcha, se sube el eje X y la Screen de la One Reverb pasa a una sala; se sube y baja el eje Y y la velocidad del Track player lo sigue; un doble clic en X lo devuelve a 0, y Amount con él."
+/>
+
 <video
   className="ps-doc-video"
   controls
