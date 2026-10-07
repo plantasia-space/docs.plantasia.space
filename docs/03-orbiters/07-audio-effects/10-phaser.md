@@ -40,12 +40,12 @@ the sweep catches up with the bar within about a cycle, running a little faster 
 never backwards and never with a jump. While the transport is stopped it keeps sweeping at the tempo's
 speed, so live input still phases.
 
-### Notches
+### Colour
 
 | Control | What it does |
 |---|---|
 | **Feedback** | The big knob. Feeds the phaser into itself. **Positive** sharpens the notches and makes a vowel-like peak ring between them; **negative** turns it hollow and nasal. −95 … +95 %, +40 % as it loads, the classic lightly ringing colour. Turning it up doesn't make the sound louder: the level is held. |
-| **Stages** | How many notches: half the stages. **4** is the classic pedal (two notches), **6** as it loads (three), **8**, and **12** is dense and watery (six). You can change it while it plays, and map it: it crossfades. |
+| **Notches** | How many notches sweep through the sound: **1**, **2** (as it loads, the classic pedal), **3** or **4**, dense and watery. You can change it while it plays, and map it: it crossfades. |
 | **Centre** | Where the sweep sits, 100 Hz … 4 kHz (700 Hz as it loads). Lower is darker and throatier, higher is airier. |
 | **Low cut** | Keeps everything below this frequency out of the phaser, so the bass stays solid and unphased under a phased loop. **Off** at 20 Hz. It splits the sound cleanly: a notch that happens to sit on the cut never turns into a boost. |
 
@@ -74,7 +74,7 @@ horizon marked 20 Hz … 20 kHz.
 - **Each moon shows how the phased copy meets the dry sound at its frequency:** full where they agree,
   dark (new) where they cancel. The dark moons are the notches. The moons stay where they are; their
   phases roll as the sweep moves.
-- **A tick on the horizon** marks each real notch, so you can count them (half the Stages). **Halos**
+- **A tick on the horizon** marks each real notch, so you can count them: as many as Notches. **Halos**
   ring a moon where Feedback makes a peak.
 - **The sun** riding the dotted arc is where the sweep is now. The solid stretch of the arc is how far
   it travels (Depth), and the small tick in its middle is Centre.
@@ -123,7 +123,7 @@ towards its left eye, closer as Amount grows, and **at 30 % it lands** in the ey
   grimace. The sweep is too fast to draw one by one, so its two ends show faintly.
 
 The big number is Amount itself, and the ladder on the right is how loud the phaser is. Below: the
-inside Feedback, then how long one sweep takes (Swirl) or the throb's rate and stages. On a Moon the
+inside Feedback, then how long one sweep takes (Swirl) or the throb's rate and notches. On a Moon the
 screen reads **Send ·** and the word.
 
 ## Mapping
