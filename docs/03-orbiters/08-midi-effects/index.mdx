@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Grid3x3, Repeat, Signal } from 'lucide-react';
+import { Grid3x3, Repeat, Ruler, Signal } from 'lucide-react';
 
 **MIDI effects** work on notes, not on sound. They sit **before** the instrument, so they decide what
 it plays: which notes, when, and how hard. They belong to a Notes Orbiter, whose instruments play
@@ -27,14 +27,14 @@ There are two kinds, and the order is always the same:
 1. **A generator** makes notes on its own, so it leads the chain: the **Drum Sequencer**, the
    **Arpeggiator**, **Ephemeris**. A dimension has at most one.
 2. **MIDI effects** reshape the notes that reach them, from a generator, the keys, MIDI hardware or
-   the piano roll: **Note Echo**, **Velocity**.
+   the piano roll: **Note Echo**, **Velocity**, **Note Length**.
 
 Notes travel inside the audio stream, on the same clock as the sound, so an echo or a ratchet lands
 exactly on the beat.
 
 :::tip[Every MIDI effect loads neutral]
 
-Adding one changes nothing until you move something: Note Echo loads silent (Level at 0 %), Velocity loads as a straight line. Turn them up while you play.
+Adding one changes nothing until you move something: Note Echo loads silent (Level at 0 %), Velocity loads as a straight line, Note Length loads as played. Turn them up while you play.
 
 :::
 
@@ -44,4 +44,5 @@ Adding one changes nothing until you move something: Note Echo loads silent (Lev
   <NavigationCard href="/docs/orbiters/midi-effects/drum-sequencer" label="Drum Sequencer" icon={<Grid3x3 />} description="A pad controller for drum patterns: up to 32 beats, real-time FX." />
   <NavigationCard href="/docs/orbiters/midi-effects/note-echo" label="Note Echo" icon={<Repeat />} description="Each note again after a delay, quieter or louder, climbing or falling." />
   <NavigationCard href="/docs/orbiters/midi-effects/velocity" label="Velocity" icon={<Signal />} description="Reshape how hard each note plays: curve, floor, randomness." />
+  <NavigationCard href="/docs/orbiters/midi-effects/note-length" label="Note Length" icon={<Ruler />} description="A new length for every note, notes on key release, or a chord held until the next." />
 </NavigationGrid>
