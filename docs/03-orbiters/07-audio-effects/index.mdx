@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown } from 'lucide-react';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, MoonStar } from 'lucide-react';
 
 An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
 it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
@@ -60,6 +60,7 @@ Most effects come as a pair:
 | [Frequency shifter](/docs/orbiters/audio-effects/frequency-shifter) | Frequency shifter | — | insert, Moon too |
 | [Auto-panner](/docs/orbiters/audio-effects/auto-panner) | Auto-panner | One Auto-panner | insert |
 | [Pitch shifter](/docs/orbiters/audio-effects/pitch-shifter) | Pitch shifter | — | insert, Moon too |
+| [Phaser](/docs/orbiters/audio-effects/phaser) | Phaser | One Phaser | insert |
 
 :::tip[Every effect loads doing nothing]
 
@@ -77,4 +78,5 @@ An effect you add changes nothing until you turn it up: inserts load at Dry/wet 
   <NavigationCard href="/docs/orbiters/audio-effects/frequency-shifter" label="Frequency shifter" icon={<Orbit />} description="Every frequency moved by the same Hz: beating, metallic, an endless staircase." />
   <NavigationCard href="/docs/orbiters/audio-effects/auto-panner" label="Auto-panner" icon={<MoveHorizontal />} description="Move a sound from side to side at a steady level: drift, sweep or chop on the beat." />
   <NavigationCard href="/docs/orbiters/audio-effects/pitch-shifter" label="Pitch shifter" icon={<ArrowUpDown />} description="A copy moved by an interval: harmonies, sub-octaves, doubling, shimmer." />
+  <NavigationCard href="/docs/orbiters/audio-effects/phaser" label="Phaser" icon={<MoonStar />} description="A few notches gliding up and down together: the classic swirl, or a fast throb." />
 </NavigationGrid>
