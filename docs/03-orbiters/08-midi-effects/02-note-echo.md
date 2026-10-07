@@ -31,9 +31,9 @@ Note Echo loads with Level at 0 %, so adding it changes nothing until you turn L
 - **Sync** off: the delay is in milliseconds, up to 1 s. At the very bottom of the knob it reads
   **0 ms**: every repeat sounds at once with the note, so with **Pitch** set, one key plays a chord.
 - <Dot>3</Dot>**Repeats**: how many times each note plays again, 1 to 15. Each repeat is a voice of the
-  instrument, so the knob only goes as far as the instrument's voices allow. Hover it to see why it
-  stops there (with 4 voices, 3 repeats fill the instrument's 16 voices). Lower the instrument's
-  voices to allow more repeats.
+  instrument, which plays 16 at most: when more repeats would need more, the instrument's **Voices**
+  go down to the most that fit, in the same step, and the screen says so ("Voices 8 → 5"). Undo
+  brings both back; lowering Repeats leaves the voices where they are.
 
 Echoes keep the length of the note you played. They also sound with the transport stopped.
 Changing the delay while repeats are still to come slows or speeds them like tape: each still plays
