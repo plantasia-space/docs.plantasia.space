@@ -3,6 +3,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { translate } from '@docusaurus/Translate';
 import styles from './TryModule.module.css';
 
+// The frame's border (1px each side) comes out of its height (border-box), plus
+// a little room so a rounding never shows a scrollbar.
+const FRAME_ALLOWANCE = 6;
+
 // The Orbiters app's own messages (src/embed/module/frameBridge.ts there).
 const HEIGHT_MESSAGE = 'ps-module-embed:height';
 const STOP_MESSAGE = 'ps-module-embed:stop';
@@ -17,9 +21,8 @@ const STOP_MESSAGE = 'ps-module-embed:stop';
 // is the picture alone.
 //
 // module: the module's id ("oneReverb"); set: the values it opens at
-// ("amount:60"); source: the first sound ("piano", "drums", "pad");
-// setting: the opening setting in words, for the caption ("Amount 60 %, Hall").
-export default function TryModule({ module, set, source, setting, children }) {
+// ("amount:60"); source: the first sound ("piano", "drums", "pad").
+export default function TryModule({ module, set, source, children }) {
   const { siteConfig, i18n } = useDocusaurusContext();
   const base = siteConfig.customFields?.orbitersEmbedUrl;
   const [open, setOpen] = useState(false);
@@ -32,7 +35,7 @@ export default function TryModule({ module, set, source, setting, children }) {
     const onMessage = (event) => {
       if (event.source !== frameRef.current?.contentWindow) return;
       const { type, height: next } = event.data ?? {};
-      if (type === HEIGHT_MESSAGE && Number.isFinite(next) && next > 0) setHeight(Math.min(Math.ceil(next), 1600));
+      if (type === HEIGHT_MESSAGE && Number.isFinite(next) && next > 0) setHeight(Math.min(Math.ceil(next) + FRAME_ALLOWANCE, 1600));
     };
     window.addEventListener('message', onMessage);
     return () => window.removeEventListener('message', onMessage);
@@ -59,9 +62,7 @@ export default function TryModule({ module, set, source, setting, children }) {
   const tryLabel = translate({ id: 'docs.tryModule.try', message: 'Try it', description: 'Button that loads a playable module in the page' });
   const closeLabel = translate({ id: 'docs.tryModule.close', message: 'Close', description: 'Button that closes the playable module and shows its picture again' });
   const frameTitle = translate({ id: 'docs.tryModule.frameTitle', message: 'Playable module', description: 'Accessible title of the frame holding a playable module' });
-  const opensAt = setting
-    ? translate({ id: 'docs.tryModule.opensAt', message: 'Plays the real module in your browser. Opens at {setting}.', description: 'Caption under a playable module; {setting} is its opening setting, e.g. "Amount 60 %, Hall"' }, { setting })
-    : translate({ id: 'docs.tryModule.plays', message: 'Plays the real module in your browser.', description: 'Caption under a playable module with no opening setting' });
+  const caption = translate({ id: 'docs.tryModule.plays', message: 'Plays the real module in your browser.', description: 'Caption under a playable module' });
 
   return (
     <figure className={styles.figure}>
@@ -77,10 +78,13 @@ export default function TryModule({ module, set, source, setting, children }) {
         />
       ) : children}
       <figcaption className={styles.bar}>
-        <button type="button" className={`button button--sm ${open ? 'button--secondary' : 'button--primary'}`} onClick={() => setOpen(!open)} aria-expanded={open}>
-          {open ? closeLabel : `▶ ${tryLabel}`}
+        <button type="button" className={styles.button} onClick={() => setOpen(!open)} aria-expanded={open}>
+          {!open && (
+            <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" /></svg>
+          )}
+          {open ? closeLabel : tryLabel}
         </button>
-        <span className={styles.caption}>{opensAt}</span>
+        <span className={styles.caption}>{caption}</span>
       </figcaption>
     </figure>
   );

@@ -459,10 +459,6 @@
     "message": "Módulo para tocar",
     "description": "Accessible title of the frame holding a playable module"
   },
-  "docs.tryModule.opensAt": {
-    "message": "Toca el módulo real en tu navegador. Empieza en {setting}.",
-    "description": "Caption under a playable module; {setting} is its opening setting, e.g. \"Amount 60 %, Hall\""
-  },
   "docs.tryModule.plays": {
     "message": "Toca el módulo real en tu navegador.",
     "description": "Caption under a playable module with no opening setting"

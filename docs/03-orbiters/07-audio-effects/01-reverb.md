@@ -85,7 +85,7 @@ picture of the current values.
 
 ## One Reverb
 
-<TryModule module="oneReverb" set="amount:60" source="piano" setting="Amount 60 %, Hall">
+<TryModule module="oneReverb" set="amount:60" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-reverb.jpg"
   alt="The One Reverb playing at Amount 60 %, Hall: the Space screen shows Decay 1.7 s and Pre-delay 15 ms."

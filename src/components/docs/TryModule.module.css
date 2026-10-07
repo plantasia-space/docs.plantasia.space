@@ -25,6 +25,38 @@
   margin-top: 0.5rem;
 }
 
+/* The design library's outline button: a sharp 1px line in the text colour, no fill. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  border: 1px solid var(--ifm-font-color-base);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.button:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
 .caption {
   font-size: 0.85rem;
   color: var(--ifm-color-emphasis-700);
