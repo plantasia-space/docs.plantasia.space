@@ -26,7 +26,7 @@ The Tremolo loads doing nothing (Depth 0 %): turn Depth up to set the level movi
 |---|---|
 | **Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo, and the pulse locks to the beat. |
 | **Depth** | How far the level dips on each pulse. At 50 % it dips to half (−6 dB), at 100 % to silence. **0 %** as it loads: the sound as it came in. |
-| **Rate** | How fast the level rises and falls. Free: 0.05 … 20 Hz, **4.00 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/8** as it loads. |
+| **Rate** | How fast the level rises and falls. Free: 0.05 … 20 Hz, **4.0 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/8** as it loads. |
 | **Shape** | How the level moves: **Triangle** at 0 %, **Sine** at 50 % (as it loads), **Square** at 100 %, and every step between. |
 | **Spread** | How far the right side's pulse trails the left's: **0°** as it loads (both sides together) up to **90°**, a quarter of a pulse later. |
 
@@ -34,8 +34,7 @@ The Tremolo loads doing nothing (Depth 0 %): turn Depth up to set the level movi
 on average as Depth goes up: at Depth 100 % about **−4.3 dB** with Sine, −4.8 dB with Triangle and
 −3.0 dB with Square; at 50 % about −2.3 dB. On an <Term id="axis">axis</Term> that takes Depth up, that
 reads as "more chop, less sound", which is what a chop is. **Trim** is there to bring it back up, and
-**Dry/wet** under 100 % makes every dip shallower. The
-Tremolo never pushes the peaks above the sound you put in, so it is safe on a loud bus.
+**Dry/wet** under 100 % makes every dip shallower. The Tremolo never pushes the peaks above the sound you put in, so it is safe on a loud bus.
 
 **Shape: three ways to pulse.** One knob goes through three shapes, ordered by how long the level stays
 fully up and fully down:
@@ -50,9 +49,10 @@ Between Sine and Square the switches get shorter step by step, so mapping Shape 
 from a swell to a chop. It is the same Shape knob as the Auto-panner's, so the two feel alike.
 
 **Sync on the beat.** With Sync on, the pulse is locked to the Orbiter's beat, not only to its speed:
-every pulse starts **fully open on the beat**. At **1/8** and Shape 100 % the sound is on for the first
-half of every eighth note and off for the second, each switch finishing just before its beat, so a hit on
-the beat passes whole. Every peer in a room pulses together.
+every pulse starts on the beat. At **Square** that means **fully open on the beat**: at **1/8** the sound
+is on for the first half of every eighth note and off for the second, each switch finishing just before
+its beat, so a hit on the beat passes whole. At Sine and Triangle the level is nearly at the top on the
+beat (about 92 %) and reaches it a moment later (about a tenth of a pulse). Every peer in a room pulses together.
 
 When you start, stop or move the transport, the pulse doesn't jump to the new place: it speeds up or
 slows down (never more than half again as fast, never backwards) until it is back on the beat, so it
@@ -86,14 +86,17 @@ With Spread the two sides dip at different moments, so the mono sum dips less th
 level on one line. Between them runs the pulse the two send each other.
 
 - **Each head** glows as loud as its side is now. The outer dashed ring is the sound's own level; the
-  inner one is how far it dips (Depth). Only the heads breathe.
-- **Each band** runs from a head to the middle: its side's level over the last half second, as wide as
-  the level. **Shape** is the band's form (ramps, waves or blocks), **Rate** how many pulses it holds,
-  **Depth** how far it narrows.
+  inner one is how far it dips: Depth, made shallower by Dry/wet. Only the heads breathe.
+- **Each band** runs from a head to the middle: its side's recent level, as wide as the level. It holds
+  from half a pulse (at slow rates) up to six (at fast ones), so **Rate** is how many pulses it holds;
+  **Shape** is the band's form (ramps, waves or blocks), and the dip (Depth with Dry/wet) how far it
+  narrows.
 - **Spread** is the gap where the two bands would meet (the right head answers later), and the two hands
   above it: one line at 0°, a right angle at 90°.
-- **Sync on:** a tick under each band for every beat.
-- **Depth** is also the small number in the bottom-left corner. At 0 % the picture turns grey: **Still · 0 %**.
+- **Sync on:** a tick under each band for every beat, when each pulse is a whole number of beats long (1/4,
+  1/2, bars) and the band holds no more than 12 of them.
+- **Depth** is also the small number in the bottom-left corner. At 0 % the picture turns grey: **Still · 0 %**;
+  with Depth up but Dry/wet at 0 %, **Still · dry**.
 
 The word above the picture follows Shape: **Ramp**, **Swell**, **Throb** or **Chop**. Below it, the rate
 (with the length of one pulse) and how far it dips, with the Spread when it is on. The heads pulse at the
