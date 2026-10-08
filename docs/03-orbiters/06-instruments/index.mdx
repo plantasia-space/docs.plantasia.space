@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Layers, CassetteTape, AudioWaveform, Drum } from 'lucide-react';
+import { Layers, CassetteTape, AudioWaveform, Drum, Bell } from 'lucide-react';
 
 An **instrument** makes the sound. It sits at the head of a <Term id="world-dimension">World dimension</Term>'s chain: whatever comes
 after it (audio effects, the <Term id="star">Star</Term>'s mixer, a <Term id="moon">Moon</Term>) hears it, and whatever comes before it (a
@@ -67,6 +67,12 @@ An Orbiter is one or the other. Replacing World I's instrument with one of the o
     label="Hybrid Drum Synth"
     icon={<Drum />}
     description="A synthesized drum kit: sixteen pads of eleven types, swap pads on its kit screen."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/pitched-percussion"
+    label="Pitched Percussion"
+    icon={<Bell />}
+    description="A mallet striking a body: marimba, vibraphone, glockenspiel, kalimba, tubular bells, bowl."
   />
 </NavigationGrid>
 
