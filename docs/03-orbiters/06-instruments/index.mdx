@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Layers, CassetteTape, AudioWaveform, Cable } from 'lucide-react';
+import { Layers, CassetteTape, AudioWaveform, Atom, Cable } from 'lucide-react';
 
 An **instrument** makes the sound. It sits at the head of a <Term id="world-dimension">World dimension</Term>'s chain: whatever comes
 after it (audio effects, the <Term id="star">Star</Term>'s mixer, a <Term id="moon">Moon</Term>) hears it, and whatever comes before it (a
@@ -27,7 +27,7 @@ What World **I** holds decides what kind of Orbiter you are building:
 | | World I plays… | World II and III | Instruments |
 |---|---|---|---|
 | **Audio Orbiter** | the audio you choose, on the **Track player** or **Granular** | audio effects that shape it | one |
-| **Notes Orbiter** | a notes instrument, such as the **Sampler** or the **Subtractive synth** | one more notes instrument each, if you like | up to three |
+| **Notes Orbiter** | a notes instrument, such as the **Sampler**, the **Subtractive synth** or the **FM synth** | one more notes instrument each, if you like | up to three |
 
 :::note[Audio or Notes, never both]
 
@@ -61,6 +61,12 @@ An Orbiter is one or the other. Replacing World I's instrument with one of the o
     label="Sampler"
     icon={<AudioWaveform />}
     description="Real recorded instruments under the keys: piano, marimba, percussion."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/fm-synth"
+    label="FM synth"
+    icon={<Atom />}
+    description="Four operators and eight algorithms: e-pianos, bells, basses, organs."
   />
   <NavigationCard
     href="/docs/orbiters/instruments/analog-synth"
