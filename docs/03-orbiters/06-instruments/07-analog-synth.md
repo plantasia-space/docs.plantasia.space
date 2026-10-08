@@ -1,6 +1,6 @@
 ---
 title: Analog synth
-sidebar_position: 5
+sidebar_position: 7
 sidebar_custom_props:
   icon: Cable
 ---

@@ -1,6 +1,6 @@
 ---
 title: FM synth
-sidebar_position: 4
+sidebar_position: 6
 sidebar_custom_props:
   icon: Atom
 ---
