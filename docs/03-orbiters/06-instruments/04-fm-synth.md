@@ -13,6 +13,15 @@ the notes you play (the keys, MIDI, the piano roll, a sequencer) sound through i
 It loads as the plainest sound there is, a pure sine at the key. Everything else is yours to bring
 in, one Level at a time.
 
+<TryModule module="fm" set="algorithm:5,cRatio:1,dRatio:14,bLevel:45,cLevel:60,dLevel:25,tDecay:500,tSustain:10,velTimbre:80,decay:2500,sustain:0" source="piano">
+<ModulePicture
+  src="/img/orbiters/instruments/fm-synth.jpg"
+  wide
+  alt="The FM synth set as an electric piano: algorithm 5's wiring and the spectrum on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the LFO, Mod wheel and Voice columns."
+  dots={[[1, 23, 24], [2, 74, 24], [3, 31.6, 57], [4, 3.2, 76], [5, 11.3, 79], [6, 17.9, 84], [7, 24.6, 84], [8, 31.3, 84], [9, 38, 92], [10, 48, 50], [11, 71, 84], [12, 93, 54]]}
+/>
+</TryModule>
+
 ## How it makes a sound
 
 Four **operators**, **A**, **B**, **C** and **D**, each a small oscillator. An operator can be
@@ -26,7 +35,7 @@ modulators' Levels are what a cutoff is on a filter synth, so they are the first
 
 ## Operators
 
-**Algorithm.** The eight buttons in the group's title are the eight classic four-operator layouts,
+<Dot>3</Dot>**Algorithm.** The eight buttons in the group's title are the eight classic four-operator layouts,
 each drawn as a small wiring diagram, the heard operators on the right. Hover one to read its routes
 and who is heard.
 
@@ -47,12 +56,12 @@ Changing the algorithm while notes play glides between the two in a few millisec
 
 | Column | What it does |
 |---|---|
-| **On** (the hexagon) | Switches B, C or D off and on. Off, the row dims and the operator is silent (D's feedback too); its settings are kept. A's hexagon is fixed: A is always on. |
-| **Wave** | The operator's wave, from a drop-down: **Sine**, **Half** (the top half of a sine: brighter, a nasal edge), **Abs** (both halves up: an octave higher, buzzy) or **Alt** (a double-speed half: hollow, vocal). A change crossfades. |
-| **Ratio** | The operator's pitch against the key: **×½**, **×1** … **×16**. Whole numbers sound harmonic. |
-| **Fine** | Raises the ratio by a percentage for inharmonic, bell-like tones: ×3 at 17 % is 3.51. |
-| **Level** | Modulating: how bright it makes what it modulates. Heard (in algorithms 5 to 8): its loudness against A. |
-| **Feedback** | D's only: D modulates itself, from a reedy edge to something close to a saw. |
+| <Dot>4</Dot>**On** (the hexagon) | Switches B, C or D off and on. Off, the row dims and the operator is silent (D's feedback too); its settings are kept. A's hexagon is fixed: A is always on. |
+| <Dot>5</Dot>**Wave** | The operator's wave, from a drop-down: **Sine**, **Half** (the top half of a sine: brighter, a nasal edge), **Abs** (both halves up: an octave higher, buzzy) or **Alt** (a double-speed half: hollow, vocal). A change crossfades. |
+| <Dot>6</Dot>**Ratio** | The operator's pitch against the key: **×½**, **×1** … **×16**. Whole numbers sound harmonic. |
+| <Dot>7</Dot>**Fine** | Raises the ratio by a percentage for inharmonic, bell-like tones: ×3 at 17 % is 3.51. |
+| <Dot>8</Dot>**Level** | Modulating: how bright it makes what it modulates. Heard (in algorithms 5 to 8): its loudness against A. |
+| <Dot>9</Dot>**Feedback** | D's only: D modulates itself, from a reedy edge to something close to a saw. |
 
 Every cell is a number box: drag it up and down, click to type, double-click to go back to the
 default. A has no Fine or Level: it stays in tune and at full level (the module's **Level** is in the
@@ -60,23 +69,23 @@ Amp tab).
 
 ## The screen
 
-The screen has two halves. On the left, the algorithm drawn in the same style as the connections in
+The screen has two halves. <Dot>1</Dot>On the left, the algorithm drawn in the same style as the connections in
 the Dimensions panel: the key comes in on the left, each route is a curve from a modulator into what
 it modulates, and the heard operators merge into **Out**. A route lights up and thickens as its
 modulator works harder, and is dashed while it is silent; an operator switched off or at Level 0 is
 drawn faint. A loop over D is its feedback.
 
-On the right, what the sound is made of right now: its spectrum, with the key's harmonics ×1, ×2,
+<Dot>2</Dot>On the right, what the sound is made of right now: its spectrum, with the key's harmonics ×1, ×2,
 ×4, ×8 and ×16 marked underneath. Harmonic ratios stand on the marks; Fine moves partials between
 them. While a note plays, the spectrum follows the Timbre envelope. The readouts say who is
 **Heard** and how many **Partials** stand within 40 dB of the loudest.
 
 ## Envelopes
 
-Two tabs, **Amp** first, each an envelope drawn beside its knobs with its four values under it:
+<Dot>10</Dot>Two tabs, **Amp** first, each an envelope drawn beside its knobs with its four values under it:
 **Attack**, **Decay**, **Sustain** and **Release**.
 
-- **Amp**: the envelope every note goes through, with **Velocity** (how much a note's velocity moves
+- **Amp**: the envelope every note goes through, with <Dot>11</Dot>**Velocity** (how much a note's velocity moves
   its level; at 0 every note is full) and **Level**.
 - **Timbre**: one envelope for every modulator at once. It is what makes an FM sound bloom and fade:
   a short Decay with a low Sustain is the bark of an electric piano, a long Decay a slow bell.
@@ -89,7 +98,7 @@ Double-click a handle to straighten it.
 
 ## LFO, Mod wheel, Voice
 
-These three groups start folded; open them from their column.
+<Dot>12</Dot>These three groups start folded; open them from their column.
 
 - **LFO**: one LFO for the whole instrument, **synced** to the transport (a note value or bars) or
   free (in Hz), with six shapes. **Pitch** is its vibrato depth (in semitones); **Timbre** makes the
