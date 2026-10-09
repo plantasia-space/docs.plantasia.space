@@ -20,8 +20,9 @@ const STOP_MESSAGE = 'ps-module-embed:stop';
 // an embed URL for this build (siteConfig.customFields.orbitersEmbedUrl) it
 // is the picture alone.
 //
-// module: the module's id ("oneReverb"); set: the values it opens at
-// ("amount:60"); source: the first sound ("piano", "drums", "pad").
+// module: one id or a signal-order list ("delay,reverb"); set: opening values,
+// prefixed with the 1-based position ("1.mix:50,2.mix:40"). An unprefixed key
+// still addresses the first module. Root hosts the shared Orbiters module frame.
 export default function TryModule({ module, set, source, children }) {
   const { siteConfig, i18n } = useDocusaurusContext();
   const base = siteConfig.customFields?.orbitersEmbedUrl;
@@ -34,23 +35,24 @@ export default function TryModule({ module, set, source, children }) {
     if (!open) return undefined;
     const onMessage = (event) => {
       if (event.source !== frameRef.current?.contentWindow) return;
+      if (event.origin !== new URL(base, window.location.href).origin) return;
       const { type, height: next } = event.data ?? {};
       if (type === HEIGHT_MESSAGE && Number.isFinite(next) && next > 0) setHeight(Math.min(Math.ceil(next) + FRAME_ALLOWANCE, 1600));
     };
     window.addEventListener('message', onMessage);
     return () => window.removeEventListener('message', onMessage);
-  }, [open]);
+  }, [open, base]);
 
   // Out of sight, it stops playing.
   useEffect(() => {
     const frame = frameRef.current;
     if (!open || !frame || typeof IntersectionObserver === 'undefined') return undefined;
     const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) frame.contentWindow?.postMessage({ type: STOP_MESSAGE }, '*');
+      if (!entry.isIntersecting) frame.contentWindow?.postMessage({ type: STOP_MESSAGE }, new URL(base, window.location.href).origin);
     });
     observer.observe(frame);
     return () => observer.disconnect();
-  }, [open]);
+  }, [open, base]);
 
   if (!base) return <>{children}</>;
 
