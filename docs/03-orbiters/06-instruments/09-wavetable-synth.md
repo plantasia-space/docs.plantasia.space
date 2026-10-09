@@ -1,6 +1,6 @@
 ---
 title: Wavetable synth
-sidebar_position: 8
+sidebar_position: 9
 sidebar_custom_props:
   icon: AudioWaveform
 ---
@@ -14,7 +14,12 @@ sound through it.
 It loads as the plainest sound there is, a pure sine at the key: Osc 2 and the sub are off, the
 filter is open and nothing in the matrix moves anything. Everything else is yours to bring in.
 
-<TryModule module="wavetable" set="table1:resonant,pos1:10,m_modEnv_pos1:70,mDecay:1500" source="piano">
+<TryModule module="wavetable" set="osc2On:on,table1:vowels,table2:choir,pos2:40,detune2:7,gain2:70,cutoff:6000,m_lfo1_pos1:60,l1Rate:3,attack:600" source="chords">
+<ModulePicture
+  src="/img/orbiters/instruments/wavetable-synth.jpg"
+  wide
+  alt="The Wavetable synth set as a vowel pad: Rings on the screen, Osc 1 on Vowels and Osc 2 on Choir with their rows of numbers, the low-pass filter at 6 kHz, the Amp envelope, and the folded Matrix and Voice columns."
+/>
 </TryModule>
 
 ## How it makes a sound
