@@ -50,7 +50,7 @@ const config = {
     // points at a host that can't serve (or frame) the embed yet.
     orbitersEmbedUrl:
       process.env.ORBITERS_EMBED_URL ||
-      (process.env.NODE_ENV === 'production' ? null : 'https://local.plantasia.space:5173/embed.html'),
+      (process.env.NODE_ENV === 'production' ? null : 'https://local.plantasia.space:3000/embed/module'),
   },
 
   // Presets for Docusaurus
