@@ -47,13 +47,13 @@ Levels decide the balance.
 
 ## The Main mix
 
-The Star's mixer, first in the Star's rack, where the World and the Moon meet:
+The Star's inputs, at the head of Star I: where the World and the Moon meet, before the Star's own
+effects (whatever its dimensions and their wiring).
 
 | Control | What it does |
 |---|---|
 | **World** | The level of all the World's dimensions together, **−∞ … +6 dB**, 0 dB as it loads. |
 | **Moon** | The level of all the Moon's dimensions together (its return), **−∞ … +6 dB**, −3 dB as it loads. |
-| **Pan** | Where the whole mix sits, **L 50 … C … R 50**, before the Star's own effects. |
 
 ## The screen
 
@@ -66,5 +66,5 @@ as long as its level. On a World dimension the sends branch off at **Pre** (abov
 
 Level, Pan and every send can be mapped to the Orbiter's axes, and Solo and Pre/Post to its toggles:
 see [Edit](/docs/orbiters/edit). Level rests on 0 dB (−24 dB one way, +6 dB the other), a send on
-−24 dB (Off / 0 dB), Pan on centre (L 50 / R 50). The Main mix's levels and pan can be mapped to the
+−24 dB (Off / 0 dB), Pan on centre (L 50 / R 50). The Main mix's two levels can be mapped to the
 Star's axes.
