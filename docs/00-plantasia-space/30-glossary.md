@@ -50,7 +50,7 @@ We use “Landscape” instead of “nature” because in many cultures nature i
 
 
 ### Moon {#moon}
-An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Star's mixer adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.
+An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Star's Main mix adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.
 [Audio effects: three places for an effect](/docs/orbiters/audio-effects)
 
 

@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal } from 'lucide-react';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal, SlidersVertical } from 'lucide-react';
 
 An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
 it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
@@ -39,7 +39,7 @@ That is why the Reverb and the Delay feel most at home there.
 
 :::note[On a Moon, Dry/wet starts at 100 %]
 
-An effect added to a Moon returns only the effect: it starts at **Dry/wet 100 %**, and how much you hear is the mixer's: the Moon level and the crossfade on the Star.
+An effect added to a Moon returns only the effect: it starts at **Dry/wet 100 %**, and how much you hear is set by the [Channels](/docs/orbiters/audio-effects/channel): the World channels' sends, each Moon dimension's Level, and the Moon level of the Star's Main mix.
 
 :::
 
@@ -72,6 +72,7 @@ Most effects come as a pair:
 | [Vibrato](/docs/orbiters/audio-effects/vibrato) | Vibrato | — | insert, Moon too |
 | [Stereo widener](/docs/orbiters/audio-effects/stereo-widener) | Stereo widener | — | insert, Moon too |
 | [Utility](/docs/orbiters/audio-effects/utility) | Utility | — | insert |
+| [Channel](/docs/orbiters/audio-effects/channel) | World channel, Moon channel | — | always last on each World and Moon dimension |
 
 :::tip[Every effect loads doing nothing]
 
@@ -95,4 +96,5 @@ An effect you add changes nothing until you turn it up: inserts load at Dry/wet 
   <NavigationCard href="/docs/orbiters/audio-effects/vibrato" label="Vibrato" icon={<AudioWaveform />} description="The pitch wavers above and below the note: a singer's vibrato, a warble, a tape wow." />
   <NavigationCard href="/docs/orbiters/audio-effects/stereo-widener" label="Stereo widener" icon={<UnfoldHorizontal />} description="Wider or narrower at the same loudness, a mono sound opened into stereo, the bass kept in the middle." />
   <NavigationCard href="/docs/orbiters/audio-effects/utility" label="Utility" icon={<SlidersHorizontal />} description="Polarity, one channel or swapped, width, mono and Mid/Side, bass kept in the middle, balance, gain, mute and DC: plain arithmetic, nothing coloured." />
+  <NavigationCard href="/docs/orbiters/audio-effects/channel" label="Channel" icon={<SlidersVertical />} description="Each dimension's level, solo and sends to the Moon (World channel), or level, pan and solo (Moon channel), and the Star's Main mix." />
 </NavigationGrid>

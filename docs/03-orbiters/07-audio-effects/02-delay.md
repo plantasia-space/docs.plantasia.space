@@ -11,11 +11,11 @@ home is a **<Term id="moon">Moon</Term>**; the One Echo is mostly an insert on a
 
 ## On a Moon, or as an insert
 
-A **Moon** is a send and return: what it returns is added to the dry World through the Star's mixer,
+A **Moon** is a send and return: what it returns is added to the dry World through the Star's Main mix,
 so a delay there should return only its echoes.
 
 - **An effect added to a Moon starts at Dry/wet 100 %**, the Delay included. How loud the echoes are
-  is the mixer's: the Moon level and the crossfade on the Star.
+  is the mixer's: the Moon channel's Level and the Moon level of the Star's Main mix ([Channel](/docs/orbiters/audio-effects/channel)).
 - **The echoes outlive the sound.** When the send is closed, nothing more goes in and the echoes
   already in flight ring out.
 

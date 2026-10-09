@@ -27,7 +27,7 @@ Both load doing nothing (the Chorus at Dry/wet 0 %, the One Chorus at Amount 0):
 A **Moon** is a send and return: what it returns is added to the dry World through the <Term id="star">Star</Term>'s mixer.
 
 - **An effect added to a Moon starts at Dry/wet 100 %**, the Chorus included, so the Moon returns
-  only the copies. How loud they are is the mixer's: the Moon level and the crossfade on the Star.
+  only the copies. How loud they are is the [Channels'](/docs/orbiters/audio-effects/channel): the Moon channel's Level and the Moon level of the Star's Main mix.
 - **The One Chorus turns into a send by itself on a Moon:** it returns only its copies, with no dry,
   and there is nothing to set. An untouched One Chorus on a Moon (Amount 0) returns silence.
 

@@ -12,12 +12,12 @@ Reverb's home is a **<Term id="moon">Moon</Term>**; the One Reverb is mostly an 
 ## On a Moon, or as an insert
 
 A **Moon** is a send and return: the World is sent to it, and what it returns is added to the dry
-World through the Star's mixer. So a reverb on a Moon should return only the reverb, never the dry
+World through the Star's Main mix. So a reverb on a Moon should return only the reverb, never the dry
 sound again, or the dry is heard twice.
 
 - **An effect added to a Moon starts at Dry/wet 100 %.** This goes for every effect with a Dry/wet
   knob, the Reverb included. You can still turn it down for a deliberate dry leak.
-- **How much reverb you hear** is the mixer's: the Moon level and the crossfade on the Star.
+- **How much reverb you hear** is the [Channels'](/docs/orbiters/audio-effects/channel): the sends into the Moon, the Moon channel's Level, and the Moon level of the Star's Main mix.
 - **The tail outlives the sound.** The Moon runs after the World, so a World dimension going quiet
   doesn't stop the tail. When the send is closed, nothing more goes in and what is ringing rings out.
 
