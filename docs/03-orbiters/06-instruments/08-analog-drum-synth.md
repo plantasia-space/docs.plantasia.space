@@ -53,7 +53,7 @@ others keeps its distance: turn the kit's Tone down and every pad gets darker by
 | **Attack** | Every pad's attack, as a factor: sharper down, softer up. |
 | **Velocity** | How much a strike's velocity changes its level. At 0 % every strike is full. |
 | **Level** | The kit's output level. |
-| **Voices** | How many strikes can ring at once, 1 to 16 (8 by default), shared by all sixteen pads. |
+| **Voices** | How many strikes can ring at once, 1 to 16 (6 by default), shared by all sixteen pads. |
 
 At their defaults (0, or 100 % for the factors) the kit's controls change nothing: each pad sounds as
 you set it.
