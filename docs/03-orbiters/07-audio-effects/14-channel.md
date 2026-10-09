@@ -55,6 +55,10 @@ effects (whatever its dimensions and their wiring).
 | **World** | The level of all the World's dimensions together, **−∞ … +6 dB**, 0 dB as it loads. |
 | **Moon** | The level of all the Moon's dimensions together (its return), **−∞ … +6 dB**, −3 dB as it loads. |
 
+Its screen draws the World and the Moon coming in side by side, each through its level, meeting at Σ
+and going on to the Star. For a balance on the whole mix, add a
+[Utility](/docs/orbiters/audio-effects/utility) to the Star: its Balance leans the sound to one side.
+
 ## The screen
 
 **The signal flow, top to bottom**, each circle level with its control: **In → Level → Solo → Out**,
