@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal } from 'lucide-react';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal } from 'lucide-react';
 
 An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
 it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
@@ -71,10 +71,11 @@ Most effects come as a pair:
 | [Phaser](/docs/orbiters/audio-effects/phaser) | Phaser | One Phaser | insert |
 | [Vibrato](/docs/orbiters/audio-effects/vibrato) | Vibrato | — | insert, Moon too |
 | [Stereo widener](/docs/orbiters/audio-effects/stereo-widener) | Stereo widener | — | insert, Moon too |
+| [Utility](/docs/orbiters/audio-effects/utility) | Utility | — | insert |
 
 :::tip[Every effect loads doing nothing]
 
-An effect you add changes nothing until you turn it up: inserts load at Dry/wet 0 % (or Amount 0 %, or Depth 0 % or 0 ct, or with the Pitch shifter at Pitch 0, the Stereo widener at Width 100 %). So you can drop one in while you play and bring it in by ear, or map it to an axis that rests on its <Term id="equilibrium">equilibrium</Term>.
+An effect you add changes nothing until you turn it up: inserts load at Dry/wet 0 % (or Amount 0 %, or Depth 0 % or 0 ct, or with the Pitch shifter at Pitch 0, the Stereo widener at Width 100 %, the Utility with everything off). So you can drop one in while you play and bring it in by ear, or map it to an axis that rests on its <Term id="equilibrium">equilibrium</Term>.
 
 :::
 
@@ -93,4 +94,5 @@ An effect you add changes nothing until you turn it up: inserts load at Dry/wet 
   <NavigationCard href="/docs/orbiters/audio-effects/phaser" label="Phaser" icon={<MoonStar />} description="A few notches gliding up and down together: the classic swirl, or a fast throb." />
   <NavigationCard href="/docs/orbiters/audio-effects/vibrato" label="Vibrato" icon={<AudioWaveform />} description="The pitch wavers above and below the note: a singer's vibrato, a warble, a tape wow." />
   <NavigationCard href="/docs/orbiters/audio-effects/stereo-widener" label="Stereo widener" icon={<UnfoldHorizontal />} description="Wider or narrower at the same loudness, a mono sound opened into stereo, the bass kept in the middle." />
+  <NavigationCard href="/docs/orbiters/audio-effects/utility" label="Utility" icon={<SlidersHorizontal />} description="Polarity, one channel or swapped, width, mono and Mid/Side, bass kept in the middle, balance, gain, mute and DC: plain arithmetic, nothing coloured." />
 </NavigationGrid>
