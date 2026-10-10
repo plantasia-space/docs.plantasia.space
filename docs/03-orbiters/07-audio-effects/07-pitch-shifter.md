@@ -60,9 +60,9 @@ beside the original. At 100 % the copy replaces it. <Dot>7</Dot>**Trim** sets th
 
 On a <Term id="moon">Moon</Term> it starts at **Dry/wet 100 %**, like every effect there: the Moon
 returns only the shifted copy, a harmony next to the World's dry sound (add Feedback for a shimmer).
-With Pitch, Fine and Spread all at 0 it returns **nothing**, so an untouched Pitch shifter on a Moon
-is silent until you move one of them. Turn its Dry/wet below 100 % and some of the dry comes back
-too.
+With Pitch, Fine and Spread all at 0 it passes the sound through unchanged, so an effect after an
+untouched Pitch shifter on the same Moon still hears it; move one of them and the Moon returns only
+the copy. Turn its Dry/wet below 100 % and some of the dry comes back too.
 
 ## The screen
 
@@ -81,7 +81,7 @@ too.
   only the pitch moves), and a flower sways with it.
 
 The word on the screen is the interval (**Up · 5th**, **Down · octave**), **Up · cents** or
-**Down · cents** for Fine alone, **Wide** for Spread alone, **Off**, **Send · silent** on a Moon with
+**Down · cents** for Fine alone, **Wide** for Spread alone, **Off**, **Send · Off** on a Moon with
 Pitch, Fine and Spread at 0, or **Dry · 0 %**. Below the picture: the interval, then the ratio (**×1.50**), Spread,
 Window and Feedback.
 

@@ -76,7 +76,7 @@ there is no delay at all.
 
 On a <Term id="moon">Moon</Term> the Vibrato returns only its wavering copy, at Dry/wet 100 %, next to
 the World's dry sound: the two together sound like a chorus, a good use for a Moon. At Depth 0 a Moon
-Vibrato is silent, so it never returns the dry sound a second time.
+Vibrato passes the sound through unchanged, so an effect after it on the same Moon still hears it.
 
 ## The screen
 

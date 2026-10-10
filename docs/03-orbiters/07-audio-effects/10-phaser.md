@@ -107,7 +107,7 @@ Map Amount to an <Term id="axis">axis</Term> and one gesture goes from the throb
 
 :::note[On a Moon it turns into a send by itself]
 
-It returns only the phased copy, with no dry, so there is nothing to set. An untouched One Phaser on a Moon (Amount 0) returns silence.
+It returns only the phased copy, with no dry, so there is nothing to set. An untouched One Phaser on a Moon (Amount 0) passes the sound through unchanged, so an effect after it on the same Moon still hears it; the dry leaves as you turn Amount up, over its first 5 %.
 
 :::
 

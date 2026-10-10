@@ -75,8 +75,10 @@ Amount low and lean to the even side.
 ## On a Moon
 
 On a <Term id="moon">Moon</Term> it returns **the harmonics alone**: the World already plays the dry
-sound, so the Moon adds only what the Waveshaper makes, and the Moon level sets how much. At Amount 0 %
-it returns nothing; Dry/wet scales what it returns.
+sound, so the Moon adds only what the Waveshaper makes, and the Moon level sets how much. Dry/wet
+scales what it returns. At Amount 0 % (or Dry/wet 0 %) it passes the sound through unchanged, so an
+effect after it on the same Moon still hears it; the dry leaves as the harmonics come in, over the
+first 5 % of Amount.
 
 ## The screen
 

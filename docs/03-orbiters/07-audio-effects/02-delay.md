@@ -123,7 +123,7 @@ slap, through dry, into a dub trail.
 
 :::note[On a Moon it turns into a send by itself]
 
-It returns only its echoes, with no dry, so there is nothing to set. An untouched One Echo on a Moon (Amount 0) returns silence.
+It returns only its echoes, with no dry, so there is nothing to set. An untouched One Echo on a Moon (Amount 0) passes the sound through unchanged, so an effect after it on the same Moon still hears it; the dry leaves as you turn Amount up, over its first 5 %.
 
 :::
 
