@@ -56,7 +56,7 @@ Press the **Audio effect** slot after the Track player. Under **One — one-knob
 
 ![The rack of World I: Mappings, the Track player, then the One Reverb.](/img/orbiters/quickstart/rack-with-effect.jpg)
 
-It loads at Amount 0 %, so you hear no change yet: see [Every effect loads doing nothing](/docs/orbiters/audio-effects).
+It loads at Amount 0 %, so you hear no change yet: see [How effects load](/docs/orbiters/audio-effects).
 
 ## 4. Map it to an axis {#map}
 

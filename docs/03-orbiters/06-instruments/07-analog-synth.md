@@ -106,8 +106,8 @@ a pulse or a trill; letting the key go always ends the note.
 
 **Mod.** Each oscillator's **pitch envelope** (where its pitch starts on a strike, and how long it
 takes to reach the key: a zap on Osc 2 under a steady Osc 1 is the classic use), and the **mod
-wheel**: **Vibrato** (both oscillators), **Cutoff** (both filters) or **LFO** (both LFOs held back
-until the wheel moves), with **Wheel** for how far.
+wheel**, three amounts that act at once: **Vibrato** (both oscillators), **Cutoff** (both filters)
+and **LFO** (how much of both LFOs is held back until the wheel moves).
 
 **LFO 1** and **LFO 2.** Each moves its own path: **Pitch** (vibrato), **Width** (pulse-width
 modulation), **Cutoff** and **Tremolo**. Synced to the transport (a note value or bars) or free in

@@ -88,7 +88,7 @@ hi-hat in group 1, so the closed hat cuts the open one as on a real kit.
 
 ## Voices
 
-The **Voices** group (folded) sets how many pads can ring at once, 1 to 16 (8 by default), shared by
+The **Voices** group (folded) sets how many pads can ring at once, 1 to 16 (6 by default), shared by
 all sixteen pads. A pad struck again rings on its own voice, struck again from where it is, so a roll
 never clicks. When every voice is busy, the oldest ring makes way.
 

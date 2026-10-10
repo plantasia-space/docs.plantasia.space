@@ -22,9 +22,9 @@ so a delay there should return only its echoes.
 As an **insert**, a delay blends with the sound it is on. Turning an effect off (its power button)
 cuts its echoes at once; to keep them, use Freeze or the Moon's send.
 
-:::tip[Loads doing nothing]
+:::tip[How they load]
 
-Both load doing nothing (the Delay at Dry/wet 0 %, the One Echo at Amount 0): turn them up to hear them.
+On a World the Delay loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Echo loads doing nothing (Amount 0): turn it up to hear it.
 
 :::
 

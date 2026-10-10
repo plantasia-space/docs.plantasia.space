@@ -23,9 +23,9 @@ sound again, or the dry is heard twice.
 
 As an **insert** on a World dimension or the Star, a reverb blends with the sound it is on.
 
-:::tip[Loads doing nothing]
+:::tip[How they load]
 
-Both load doing nothing (the Reverb at Dry/wet 0 %, the One Reverb at Amount 0 %): turn them up to hear them.
+On a World the Reverb loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Reverb loads doing nothing (Amount 0 %): turn it up to hear it.
 
 :::
 

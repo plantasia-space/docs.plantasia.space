@@ -15,9 +15,9 @@ tune with itself. A frequency shifter **adds**: shifted up 50 Hz, 100 Hz becomes
 1 000 Hz becomes 1 050 Hz. The harmonics stop lining up, so the sound turns metallic, bell-like,
 like a broken radio. The further you go, the stranger it gets.
 
-:::tip[Loads doing nothing]
+:::tip[How it loads]
 
-It loads at Dry/wet 0 %, already set to shift up 50 Hz: turn Dry/wet up to hear it.
+It loads set to shift up 50 Hz. On a World it loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %.
 
 :::
 

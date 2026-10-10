@@ -18,9 +18,9 @@ A phaser is not a [Flanger](/docs/orbiters/audio-effects/flanger): a flanger del
 carves many evenly spaced notches that ring with a pitch (the jet). A phaser's notches are few and
 spread out, so it sounds like a moving filter, never a pitch.
 
-:::tip[Loads doing nothing]
+:::tip[How they load]
 
-Both load doing nothing (the Phaser at Dry/wet 0 %, the One Phaser at Amount 0 %): turn them up to hear them.
+On a World the Phaser loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Phaser loads doing nothing (Amount 0 %): turn it up to hear it.
 
 :::
 

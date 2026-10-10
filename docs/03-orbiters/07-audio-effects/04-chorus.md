@@ -18,9 +18,9 @@ you hear as width and movement.
 
 As an **insert**, a chorus blends with the sound it is on.
 
-:::tip[Loads doing nothing]
+:::tip[How they load]
 
-Both load doing nothing (the Chorus at Dry/wet 0 %, the One Chorus at Amount 0): turn them up to hear them.
+On a World the Chorus loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Chorus loads doing nothing (Amount 0): turn it up to hear it.
 
 :::
 

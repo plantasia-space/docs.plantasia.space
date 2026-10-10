@@ -14,9 +14,9 @@ A flanger plays the sound together with a copy of itself a few milliseconds late
 that delay back and forth. Where the two meet, some frequencies add up and others cancel: a comb of
 peaks and notches that sweeps up and down the spectrum. That moving comb is the jet sound.
 
-:::tip[Loads doing nothing]
+:::tip[How they load]
 
-Both load doing nothing (the Flanger at Dry/wet 0 %, the One Flanger at Amount 0 %): turn them up to hear them.
+On a World the Flanger loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Flanger loads doing nothing (Amount 0 %): turn it up to hear it.
 
 :::
 

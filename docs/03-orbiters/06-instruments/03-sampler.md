@@ -94,9 +94,9 @@ These three groups start folded; open them from their column.
 - <Dot>11</Dot>**LFO**: one LFO for the whole instrument, **synced** to the transport (a note value or bars) or
   free (in Hz), with six shapes. **Pitch** is its vibrato depth (in semitones), **Level** its
   tremolo depth.
-- <Dot>12</Dot>**Mod wheel**: what the wheel moves — **LFO** (extra vibrato on top of the LFO's), **Level** (a
-  swell: at Amount 100 % the instrument is silent until you move the wheel) or **Pitch** (up to
-  +2 semitones) — and how far (**Amount**).
+- <Dot>12</Dot>**Mod wheel**: three amounts, all acting at once. **Vibrato** (extra vibrato on top of the
+  LFO's), **Level** (a swell: at 100 % the instrument is silent until you move the wheel) and
+  **Pitch** (up to +2 semitones).
 - <Dot>13</Dot>**Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time),
   **Legato** (with Mono, a note played over a held one keeps the sample playing and only bends its
   pitch, with **Glide** for how long the slide takes).
