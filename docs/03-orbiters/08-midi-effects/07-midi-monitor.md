@@ -32,8 +32,10 @@ It has no sound and no setting that touches a note: adding it changes nothing yo
 
 **Source** says where a message came from: the MIDI keyboard **by name**, **Keys** (the instrument's
 own keys, touch or computer keyboard), **Capability** (voice control or a script), or **Room · name**
-(a note another player is playing in the same room). A note made by another module, such as a chord
-from Chord, has no message of its own: it shows "—".
+(a note another player is playing in the same room). A note that no message started was made by a
+module before the Monitor, so it shows that module's name ("Chord", "Scale", "Arpeggiator"): the nearest
+one that is on. Notes from the piano roll show "Clip". With several modules before it, the Monitor names
+the nearest one, so put a Monitor right after the module you want to watch.
 
 ## Freeze
 
