@@ -1,0 +1,11 @@
+{
+  "label": "Visual modules",
+  "position": 10,
+  "link": {
+    "type": "doc",
+    "id": "index"
+  },
+  "customProps": {
+    "icon": "Sparkles"
+  }
+}

@@ -1,0 +1,47 @@
+---
+title: Visual modules
+sidebar_label: Overview
+description: The modules that change what an Orbiter looks like in 3D, added and mapped like sound modules.
+sidebar_position: 0
+sidebar_custom_props:
+  icon: EyeIcon
+---
+
+import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
+import { Aperture, Wind } from 'lucide-react';
+
+**Visual modules** change what the Orbiter looks like in its 3D scene. They live in the Studio's
+**Visual** step, one rack per <Term id="world-dimension">dimension</Term>, beside the sound rack. You add
+them, remove them and map them like sound modules, and none of them is tied to a sound module.
+
+## Add one
+
+In the **Visual** step, pick a body and a dimension, press **Visual module +** and choose a module.
+A dimension holds up to three. A new Orbiter starts with none.
+
+## The controls every visual module has
+
+| Control | What it does |
+|---|---|
+| **Power** | Off, the module is not drawn and costs nothing. |
+| **Sound input** | The sound it listens to: **None**, **World**, **Moon** or **Star**. |
+| **Sensitivity** | How much that sound's level moves what shows. At 0 % it shows at its Amount whatever plays; at 100 % it shows only as loud as the sound. |
+| **While stopped** | **Playing only**: it shows while the Orbiter plays. **Always**: it shows while stopped too. |
+| **Amount** | How much of the effect. At 0 % it shows nothing. |
+
+Below these, each module has its own knobs. Every knob can be mapped to the dimension's
+<Term id="axis">axes</Term>, the same way as a sound module's: see [Edit](/docs/orbiters/edit).
+
+## Auto visuals
+
+Each dimension has an **Auto visuals** switch in the Visual step, on by default. With it on, adding a
+sound module that has a matching visual also adds that visual module to the same dimension: a
+**Reverb** or a **One Reverb** brings a **Blur**. It is only a suggestion made at that moment: the
+visual module is yours afterwards, and removing either one leaves the other in place.
+
+## Visual modules
+
+<NavigationGrid>
+  <NavigationCard href="/docs/orbiters/visual-modules/blur" label="Blur" icon={<Wind />} description="The sky around the body blurs with the sound; the body stays sharp." />
+  <NavigationCard href="/docs/orbiters/visual-modules/lens" label="Lens" icon={<Aperture />} description="The view opens, closes and slides to one side." />
+</NavigationGrid>

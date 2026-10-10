@@ -123,6 +123,11 @@ seconds; the word says **Room** or **Hall** turned up, **Plate** or **Bloom** tu
 the sound under the craft is drawn hollow (the dry stays on the World side) and the screen reads
 **Send ·** and the word.
 
+## In the scene
+
+Both reverbs suggest the [Blur](/docs/orbiters/visual-modules/blur), a visual module: with **Auto visuals**
+on, adding one adds a Blur to the same dimension, and the sky around the body blurs with the sound.
+
 ## Mapping
 
 Every Reverb control can be mapped to the Orbiter's axes, and Freeze to its toggles; the One
