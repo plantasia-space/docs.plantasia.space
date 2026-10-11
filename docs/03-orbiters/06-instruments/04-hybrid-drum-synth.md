@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 The **Hybrid Drum Synth** is a drum kit made by synthesis: sixteen pads, each one a drum built from
 three layers that are played, not sampled. It is a notes instrument: it sits at the head of a
-<Term id="world-dimension">World dimension</Term>, usually after a **Drum Sequencer**, and every pad
+<Term id="world-dimension">World dimension</Term>, usually after a **Drum sequencer**, and every pad
 sits on the key that sequencer's voice plays, so a new sequencer in front plays the kit with no setup.
 
 ## Pads and types
@@ -94,7 +94,7 @@ never clicks. When every voice is busy, the oldest ring makes way.
 
 ## Playing it
 
-- **From a Drum Sequencer:** each of its voices plays the pad on its note. Its **Gate** does nothing on
+- **From a Drum sequencer:** each of its voices plays the pad on its note. Its **Gate** does nothing on
   this kit: every strike rings to its end.
 - **From the keys, MIDI or the piano roll:** the pads sit on General MIDI's drum keys (the kick on C1),
   and every surface names them (Kick, Snare, … or the type's name once you change a pad's type). A key

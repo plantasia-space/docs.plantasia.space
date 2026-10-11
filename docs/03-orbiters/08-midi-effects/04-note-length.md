@@ -1,11 +1,11 @@
 ---
-title: Note Length
+title: Note length
 sidebar_position: 4
 sidebar_custom_props:
   icon: Ruler
 ---
 
-**Note Length** gives each note a new length: as you played it and stretched, a fixed time, or a
+**Note length** gives each note a new length: as you played it and stretched, a fixed time, or a
 note value on the tempo. It can make low keys last longer than high ones, strike notes when you
 **release** the keys, or hold a chord until you play the next one. It never changes which key plays.
 
@@ -14,7 +14,7 @@ there is one, so an arpeggio can be clipped short or stretched into a pad.
 
 :::tip[Loads neutral]
 
-Note Length loads as played, Gate at 100 %: every note passes exactly as it came, so adding it changes
+Note length loads as played, Gate at 100 %: every note passes exactly as it came, so adding it changes
 nothing until you move something.
 
 :::
@@ -22,7 +22,7 @@ nothing until you move something.
 <TryModule module="noteLength" set="length:time,timeMs:60" source="piano">
 <ModulePicture
   src="/img/orbiters/midi-effects/note-length.jpg"
-  alt="Note Length: the Lengths screen, then Length, Shape and Trigger."
+  alt="Note length: the Lengths screen, then Length, Shape and Trigger."
 />
 </TryModule>
 
@@ -37,7 +37,7 @@ nothing until you move something.
 - **Gate**: a share of that length. 50 % halves it, 200 % doubles it.
 
 Each note keeps the rules it started with: turning a knob, or changing the tempo, acts from the next
-note. Note Length works with the transport stopped too. No note lasts more than 60 s.
+note. Note length works with the transport stopped too. No note lasts more than 60 s.
 
 ## Shape
 

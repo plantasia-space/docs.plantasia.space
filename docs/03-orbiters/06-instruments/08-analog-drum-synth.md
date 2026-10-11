@@ -11,7 +11,7 @@ clashing square waves, toms and blocks ring through a resonant filter. Nothing i
 every pad is built from the same voice, any pad can become any drum.
 
 It is a notes instrument: it sits at the head of a <Term id="world-dimension">World dimension</Term>,
-usually after a **Drum Sequencer**. Every pad sits on the key that sequencer's voice plays, so a new
+usually after a **Drum sequencer**. Every pad sits on the key that sequencer's voice plays, so a new
 sequencer in front plays the kit with no setup.
 
 ## The panel
@@ -33,7 +33,7 @@ Every pad has a **name**, and the name is yours: **double-click** a pad (on a to
 hold** it) and type. **Enter** keeps the new name, **Esc** leaves it as it was. A name holds up to 12
 characters; clear it and the pad goes back to its default name.
 
-The name goes wherever the pad's key is named: the Drum Sequencer's voices, the piano roll's rows, the
+The name goes wherever the pad's key is named: the Drum sequencer's voices, the piano roll's rows, the
 keys. Short labels use its first six characters.
 
 ## Kit
@@ -123,7 +123,7 @@ long as it rings, so a crash's tail isn't cut short by the beat around it.
 
 ## Playing it
 
-- **From a Drum Sequencer:** each voice plays the pad on its **Note**, so moving a voice's Note moves it
+- **From a Drum sequencer:** each voice plays the pad on its **Note**, so moving a voice's Note moves it
   to another pad. The sequencer's **Gate** does nothing on this kit: every strike rings to its end.
 - **From the keys, MIDI or the piano roll:** the pads sit on General MIDI's drum keys (the kick on C1),
   named by your pad names. A key with no pad plays nothing.

@@ -1,11 +1,11 @@
 ---
-title: Drum Sequencer
+title: Drum sequencer
 sidebar_position: 1
 sidebar_custom_props:
   icon: Grid3x3
 ---
 
-The **Drum Sequencer** plays drum patterns into an Orbiter's instrument. It works like a pad
+The **Drum sequencer** plays drum patterns into an Orbiter's instrument. It works like a pad
 controller: <Dot>1</Dot>16 pads (or 8) whose job changes with the <Dot>2</Dot>**pad function** you pick, a
 <Dot>3</Dot>small screen with <Dot>4</Dot>four knobs, <Dot>5</Dot>two **real-time FX** ribbons, and up to 32 **beats**, each 1 to 8 bars long.
 
@@ -13,14 +13,14 @@ You meet it in two places, which always show the same state:
 
 - **The module**, in the Studio's drawer, where you build the Orbiter. Its knobs and switches can
   be **mapped to the Orbiter's <Term id="axis">axes</Term> and toggles**.
-- **The play surface**, on the stage while the Drum Sequencer leads the chain, in the Studio and when
+- **The play surface**, on the stage while the Drum sequencer leads the chain, in the Studio and when
   the Orbiter is played. Its controls can be **mapped to MIDI hardware**.
 
 
 <ModulePicture
   src="/img/orbiters/midi-effects/drum-sequencer.jpg"
   wide
-  alt="The Drum Sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right."
+  alt="The Drum sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right."
   dots={[[1, 15.8, 63.6], [2, 11.6, 20.7], [3, 68.6, 22], [4, 72.3, 44.6], [5, 3.4, 56.7], [6, 40.7, 27.4], [7, 54.4, 27.4], [8, 73.8, 83.7], [9, 11.6, 38.6], [10, 6, 96]]}
 />
 
@@ -69,7 +69,7 @@ open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again
 <LoopVideo
   src="https://herbarium.plantasia.space/docs/en/media/orbiters/midi-effects/drum-sequencer/record-drum-pads"
   caption="Play, Rec, then C1 four times and F♯1 a few. Rec again stops; Steps shows F♯1's hits as ordinary steps, each with how far off the grid it landed."
-  label="The transport starts, Rec is pressed in the Drum Sequencer, the C1 pad is tapped four times and the F♯1 pad several times; Rec is pressed again, then Steps, which shows the recorded F♯1 steps with their offsets."
+  label="The transport starts, Rec is pressed in the Drum sequencer, the C1 pad is tapped four times and the F♯1 pad several times; Rec is pressed again, then Steps, which shows the recorded F♯1 steps with their offsets."
 />
 
 ## Generate

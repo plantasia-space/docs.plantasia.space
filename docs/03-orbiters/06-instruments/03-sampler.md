@@ -101,7 +101,7 @@ These three groups start folded; open them from their column.
   **Legato** (with Mono, a note played over a held one keeps the sample playing and only bends its
   pitch, with **Glide** for how long the slide takes).
 
-There is no filter in the Sampler: add a **Filters** or **Multimode Filter** module after it to shape
+There is no filter in the Sampler: add a **Filters** or **Multimode filter** module after it to shape
 every voice at once.
 
 ## Mapping

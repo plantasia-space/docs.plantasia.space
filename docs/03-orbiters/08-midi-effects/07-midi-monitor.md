@@ -1,11 +1,11 @@
 ---
-title: MIDI Monitor
+title: MIDI monitor
 sidebar_position: 7
 sidebar_custom_props:
   icon: Activity
 ---
 
-**MIDI Monitor** shows what reaches its place in a chain, and changes nothing. Notes, controllers,
+**MIDI monitor** shows what reaches its place in a chain, and changes nothing. Notes, controllers,
 pitch bend and pressure pass through it exactly as they came; the screen tells you which keys are held,
 what chord they make, where the bend and mod wheel stand, or lists every message with where it came from.
 

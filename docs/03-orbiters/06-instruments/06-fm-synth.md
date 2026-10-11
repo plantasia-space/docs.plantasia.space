@@ -110,7 +110,7 @@ Double-click a handle to straighten it.
   **Legato** (with Mono, a note played over a held one slides there without a new strike, with
   **Glide** for how long the slide takes).
 
-There is no filter in the FM synth: add a **Filters** or **Multimode Filter** module after it to shape
+There is no filter in the FM synth: add a **Filters** or **Multimode filter** module after it to shape
 every voice at once.
 
 ## Starting points
