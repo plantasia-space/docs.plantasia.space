@@ -64,7 +64,7 @@ wide.
 | Control | What it does |
 |---|---|
 | **Dry/wet** | Balance between the sound as it came in and the widened one. **100 %** as it loads: Width 100 % already does nothing. At 50 % the image sits about halfway between the two. |
-| **Trim** | The level after the widener. |
+| **Level** | The level after the widener. |
 
 ## Heard in mono
 

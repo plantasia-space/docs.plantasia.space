@@ -51,7 +51,7 @@ speed, so live input still phases.
 
 ### Output
 
-**Dry/wet** blends the dry sound with the phased copy, and **Trim** sets the level after it.
+**Dry/wet** blends the dry sound with the phased copy, and **Level** sets the level after it.
 
 - **50 % is the sweet spot:** the dry and the copy at equal level cancel completely at the notches, so
   the sweep is deepest. Use it as the normal setting.

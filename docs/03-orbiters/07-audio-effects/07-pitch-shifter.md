@@ -54,7 +54,7 @@ about 10 kHz, two octaves up to about 5 kHz. Going down nothing is cut from the 
 ## Output
 
 <Dot>6</Dot>**Dry/wet** loads at **50 %**: the first move of Pitch is a harmony, the shifted copy
-beside the original. At 100 % the copy replaces it. <Dot>7</Dot>**Trim** sets the level after it.
+beside the original. At 100 % the copy replaces it. <Dot>7</Dot>**Level** sets the level after it.
 
 ## On a Moon
 

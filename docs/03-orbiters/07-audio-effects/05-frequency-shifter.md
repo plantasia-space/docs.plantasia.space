@@ -70,7 +70,7 @@ it is one narrow line; pull Feedback down a little if it stands out.
 
 ## Output
 
-<Dot>7</Dot>**Dry/wet** blends the dry sound with the shifted one, and <Dot>8</Dot>**Trim** sets the level after it.
+<Dot>7</Dot>**Dry/wet** blends the dry sound with the shifted one, and <Dot>8</Dot>**Level** sets the level after it.
 **At 50 %, small shifts beat like a phaser**: the dry and the shifted sound at equal level. At
 100 % you hear the shifted sound alone (with Low cut on, the bass under it stays dry).
 

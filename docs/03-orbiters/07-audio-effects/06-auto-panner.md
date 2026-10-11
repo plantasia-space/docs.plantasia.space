@@ -75,7 +75,7 @@ pads while the kick and the bass stay in the middle: set the Low cut around 150â
 
 ### Output
 
-**Trim** sets the level after the panner. There is no Dry/wet: blending a panned copy with the
+**Level** sets the level after the panner. There is no Dry/wet: blending a panned copy with the
 unpanned sound is the same as less Amount, so Amount is the "how much".
 
 ### Mono and stereo sounds
@@ -90,7 +90,7 @@ unpanned sound is the same as less Amount, so Amount is the "how much".
   a little at the sides: about 3 dB at Amount 100 %, under 1 dB at 50 %. That is the price of the
   steady level in stereo, and the same pan law a mixer uses.
 - **Headroom:** at a hard side that speaker plays the sound 3 dB louder than in the middle (the other
-  one is silent). On a very loud sound, pull **Trim** down a little.
+  one is silent). On a very loud sound, pull **Level** down a little.
 
 ### The screen
 

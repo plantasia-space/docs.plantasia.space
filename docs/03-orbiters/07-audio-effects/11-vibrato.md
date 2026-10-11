@@ -48,7 +48,7 @@ down a little until it is back on the beat, so it never clicks.
 | Control | What it does |
 |---|---|
 | **Dry/wet** | How much of the wavering sound you hear. **100 %** as it loads: a vibrato. Lower, the dry note blends back in. 0 %: the sound as it came in. |
-| **Trim** | The level after the effect. |
+| **Level** | The level after the effect. |
 
 **Dry/wet below 100 % is a chorus-like blend.** The wavering copy plays a few milliseconds behind the
 dry note, so at 50 % the two beat against each other: a shimmer, slightly hollow, the sound of a

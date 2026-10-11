@@ -56,7 +56,7 @@ speed, so live input still flanges.
 
 ### Output
 
-<Dot>9</Dot>**Dry/wet** blends the dry sound with the swept copy, and <Dot>10</Dot>**Trim** sets the level after it.
+<Dot>9</Dot>**Dry/wet** blends the dry sound with the swept copy, and <Dot>10</Dot>**Level** sets the level after it.
 **Around 50 % the sweep is clearest:** the dry and the copy at equal level carve the deepest
 notches. With more Feedback the peaks ring and the notches get shallower, so the strongest sweep
 moves a little above 50 %. At 100 % you hear the swept copy alone: a vibrato-like wobble, no comb.

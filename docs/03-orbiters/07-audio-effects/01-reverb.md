@@ -62,7 +62,7 @@ These shape the reverb only; the dry sound is never filtered.
 
 ### Output
 
-<Dot>9</Dot>**Dry/wet** blends the dry sound with the reverb (0 % as it loads, 100 % on a Moon), and <Dot>10</Dot>**Trim**
+<Dot>9</Dot>**Dry/wet** blends the dry sound with the reverb (50 % as it loads on a World, 100 % on a Moon, 0 % on a Star), and <Dot>10</Dot>**Level**
 sets the level after it.
 
 ### The screen

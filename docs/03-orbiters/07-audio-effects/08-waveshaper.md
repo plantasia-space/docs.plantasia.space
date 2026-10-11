@@ -57,13 +57,13 @@ overdriven reed. Turn Even/odd to the even side for warmth, to the odd side for 
 | Control | What it does |
 |---|---|
 | **Dry/wet** | Balance between the dry and the shaped sound. **100 %** as it loads; lower, the harmonics come in lower (Amount still sets how loud they are at 100 %). |
-| **Trim** | The module's output level, dry included. |
+| **Level** | The module's output level, dry included. |
 
 **Watch the level at high Amount.** The harmonics come in at the sound's own level. With Height and
 Even/odd where they load, even Amount 100 % moves the loudness about 1 dB at most, but the peaks rise: about
 **+6 dB** on a pure tone, about +3 dB on a square wave or a mix. The loudest setting is Height 0 with
 the odd harmonics: up to **+9 dB** of peak on a square wave, and on a mix about **+5 dB** louder overall.
-Nothing distorts inside the module; pull **Trim** down if the next effect or the mix gets too hot.
+Nothing distorts inside the module; pull **Level** down if the next effect or the mix gets too hot.
 
 ## Best on one voice
 

@@ -76,7 +76,7 @@ Ping-pong and Freeze can be mapped to the Orbiter's toggles.
 
 ### Output
 
-<Dot>8</Dot>**Dry/wet** blends the dry sound with the echoes (0 % as it loads, 100 % on a Moon), and <Dot>9</Dot>**Trim**
+<Dot>8</Dot>**Dry/wet** blends the dry sound with the echoes (50 % as it loads on a World, 100 % on a Moon, 0 % on a Star), and <Dot>9</Dot>**Level**
 sets the level after it.
 
 ### The screen
