@@ -80,7 +80,7 @@ end stays solid: set the Low cut around 150–250 Hz.
 
 ### Output
 
-<Dot>8</Dot>**Dry/wet** blends the dry sound with the copies (0 % as it loads, 100 % on a Moon); 50 % is the
+<Dot>8</Dot>**Dry/wet** blends the dry sound with the copies (50 % as it loads on a World, 100 % on a Moon, 0 % on a Star); 50 % is the
 classic chorus blend. <Dot>9</Dot>**Level** sets the level after it.
 
 ### Mono and stereo sounds
