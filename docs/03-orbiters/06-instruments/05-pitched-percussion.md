@@ -57,7 +57,9 @@ ring shorter, as on a real instrument (half the time two octaves up).
 | Control | What it does |
 |---|---|
 | <Dot>7</Dot>**Hardness** | How hard the mallet is: from yarn (soft, round, only the low overtones) to brass (hard, bright, every overtone). The fundamental stays as loud either way. |
-| <Dot>8</Dot>**Touch** | How much a note's velocity hardens the strike: with Touch up, a harder hit is also a brighter one, as on a real bar. At 0 velocity moves only the level. |
+
+A harder hit can also be a brighter one, as on a real bar: that is **Vel → Hardness** in the
+[Matrix](#amp-matrix-and-voice). At 0, velocity moves only the level.
 
 ## FM
 
@@ -71,9 +73,9 @@ as the body's fundamental, so Ring and Damping act on both together.
 | <Dot>11</Dot>**Index** | How bright the FM strike is. |
 | <Dot>12</Dot>**Sweep** | How fast that brightness falls after the strike: short is a clang that settles into a pure tone, long stays bright. |
 
-## Amp and Voice
+## Amp, Matrix and Voice
 
-These two groups start folded; open them from their column.
+These three groups start folded; open them from their column.
 
 - <Dot>13</Dot>**Amp**: the envelope every note goes through, drawn above its knobs: **Attack**, **Decay**,
   **Sustain**, **Release**, then **Velocity** (how much a note's velocity moves its level) and **Level**.
@@ -82,6 +84,11 @@ These two groups start folded; open them from their column.
   default, so even a short note rings out; turn it down for a damper, like a vibraphone's pedal up.
   Attack, Decay and Release can each be bent with the small hollow handle on their segment, as on every
   envelope.
+- **Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares, here with the **MIDI** tab only (there is no LFO
+  or free envelope to route). It opens with **Pitch** (with the pitch bend, two semitones),
+  **Hardness** and **Vibrato** (the mod wheel's); **Level**, **Index**, **Position**, **Damping** and
+  **Mix** come in when you turn their knob. Rand → Position makes every strike land a little
+  elsewhere, as a player's does.
 - <Dot>14</Dot>**Voice**: **Voices** (how many notes can ring at once, 1 … 16), **Mono** (one note at a time),
   **Legato** (with Mono, a note played over a held one re-tunes the ringing body without a new strike,
   a singing bowl's bend) and **Glide** (how long that slide takes).
@@ -92,7 +99,7 @@ These two groups start folded; open them from their column.
 the vibraphone), the kalimba's tines, the tubular bells in two rows like a piano's keys, or the bowl on an
 open palm. The controls draw on it:
 
-- **Position** is where the striker lands; **Hardness** the size of the mallet head (big is soft); **Touch**
+- **Position** is where the striker lands; **Hardness** the size of the mallet head (big is soft); **Vel → Hardness**
   two dashed rings round the head, its size at the softest and hardest hit.
 - **Stretch** is the arch cut under a bar, the tines' taper, the tubes' thickness or the bowl's depth;
   **Damping** the felt: pads on the cords, a strip under the tines, the damper bar, the fingers on the bowl.
@@ -120,7 +127,8 @@ bottom left is the body's ring time; the line below it counts the overtones stil
 In the Studio's **Map** mode, every number control can follow an axis. Some pairings that work well:
 **Ring** (and Release) for muted ↔ ringing; **Stretch** with **Damping** going down for wood ↔ metal;
 **Hardness** with **Position** for a soft ↔ hard mallet; **Mix** with **Index** for bar ↔ bell; **Sweep**
-for a clang that settles. Toggles can flip **Mono** and **Legato**. The body itself is never on an axis.
+for a clang that settles; a Matrix cell, such as Vel → Hardness, for how much the touch counts.
+Toggles can flip **Mono** and **Legato**. The body itself is never on an axis.
 
 ## In a room
 

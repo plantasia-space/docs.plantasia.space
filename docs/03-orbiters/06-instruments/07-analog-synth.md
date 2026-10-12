@@ -94,7 +94,7 @@ resonances at a vowel's formants, with **Vowel** (A, E, I, O, U) in Resonance's 
 moves the vowel. **Slope**: 12 or 24 dB an octave. Filter 2's **Follow** puts its cutoff on Filter
 1's, plus an **Offset**. <Dot>12</Dot>The envelope on top is the filter's own, and **Envelope** is how far it
 moves the cutoff, up or down. <Dot>13</Dot>The knobs: **Cutoff**, **Resonance**, **Envelope**, **Drive**
-(saturation into the filter), **Key** (the cutoff following the key), and on Filter 1 **F1 → F2**
+(saturation into the filter), and on Filter 1 **F1 → F2**
 (how much of Filter 1 also feeds Filter 2).
 
 **Amp 1** and **Amp 2.** Each path's envelope, its **Level** and its **Pan**. Amp 1's envelope is the
@@ -105,20 +105,31 @@ sustain level back up; **ADR-R** repeats attack, decay and release down to silen
 a pulse or a trill; letting the key go always ends the note.
 
 **Mod.** Each oscillator's **pitch envelope** (where its pitch starts on a strike, and how long it
-takes to reach the key: a zap on Osc 2 under a steady Osc 1 is the classic use), and the **mod
-wheel**, three amounts that act at once: **Vibrato** (both oscillators), **Cutoff** (both filters)
-and **LFO** (how much of both LFOs is held back until the wheel moves).
+takes to reach the key: a zap on Osc 2 under a steady Osc 1 is the classic use).
 
-**LFO 1** and **LFO 2.** Each moves its own path: **Pitch** (vibrato), **Width** (pulse-width
-modulation), **Cutoff** and **Tremolo**. Synced to the transport (a note value or bars) or free in
-Hz, six shapes. While Filter 2 follows Filter 1, it follows LFO 1 too.
+**LFO 1** and **LFO 2.** Synced to the transport (a note value or bars) or free in Hz, six shapes,
+and **Amount** (how much of the LFO gets through). What each one moves is set in the Matrix. While
+Filter 2 follows Filter 1, it follows what moves Filter 1's cutoff too.
 
 **Voice.** **Unison** stacks 2 or 4 oscillator sets per note, detuned by **Spread**: thick, but each
 set costs about an oscillator pair more per voice, and the tab says how much while it is on (use
 fewer **Voices** or **Mono** with it). **Drift** puts each oscillator a little off on every strike
 and lets it wander, so the two beat like an analog pair. **Glide**, **Velocity** (how much a note's
-velocity moves both amps), **Env < Vel** (harder notes open the filters further), **Level**, and
-**Poly · Mono**, **Retrig · Legato**.
+velocity moves both amps), **Level**, and **Poly · Mono**, **Retrig · Legato**.
+
+## Matrix
+
+After the tabs, the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. Its rows follow the two paths: **Pitch**
+(both oscillators) and **Pitch 2** (Osc 2 on top), then **Tone** (the pulse width), **Cut**,
+**Res**, **Env** (how far a filter's envelope moves its cutoff) and **Amp**, each for path 1 and
+path 2, and **Noise**. A tab opens with Pitch, Tone 1 and Cut 1; the others come in when you turn
+their knob.
+
+- **Modulation** has **LFO 1** and **LFO 2** across: either LFO can move either path. LFO → Pitch is
+  vibrato, LFO → Tone pulse-width modulation, LFO → Amp tremolo.
+- **MIDI** adds **Level**, **Vibrato** and a row for each LFO. **Key → Cut** at 100 % is the cutoff
+  following the keyboard exactly; **Vel → Env** makes harder notes open a filter further; **Mod →
+  Cut** opens it with the wheel.
 
 ## Starting points
 
@@ -128,17 +139,17 @@ Set these from the defaults to hear what the instrument can do:
 |---|---|---|---|
 | **Sync lead** | Osc 2 on, Saw, Sync, Sync 1.4 oct, Level 80 % | Filter 1 at 3 kHz, Envelope +2 oct | Mono and Legato, Glide 50 ms |
 | **Ring bell** | Osc 1 Sine at Level 0; Osc 2 on, Sine, Ring, Semi +6, Fine +14 ct | open | Amp 1 Decay 1.8 s, Sustain 0 %, Release 2 s |
-| **Two-path pad** | Osc 2 on, Pulse at 30 %, Fine +7 ct; Routing Parallel | Filter 1 at 1.2 kHz; Filter 2 BP at 900 Hz, LFO 2 Cutoff 1 oct | Amp 1 Attack 400 ms, Amp 2 Attack 900 ms, pans L 40 and R 40 |
+| **Two-path pad** | Osc 2 on, Pulse at 30 %, Fine +7 ct; Routing Parallel | Filter 1 at 1.2 kHz; Filter 2 BP at 900 Hz, Matrix: LFO 2 → Cut 2 20 % | Amp 1 Attack 400 ms, Amp 2 Attack 900 ms, pans L 40 and R 40 |
 | **Serial acid** | Routing Serial | Filter 1 12 dB at 600 Hz, Resonance 60 %, Envelope +3 oct; Filter 2 HP at 150 Hz | Mono and Legato, Glide 60 ms |
 | **Supersaw** | Osc 2 on, Fine +7 ct; Unison 4, Spread 25 ct | Filter 1 at 6 kHz | Voices 4, Amp 1 Release 600 ms |
-| **Choir** | Osc 2 on, Pulse at 40 %, Level 80 % | Filter 1 Vowel at E, LFO 1 Cutoff 0.3 oct | Attack 300 ms, Drift 10 ct |
+| **Choir** | Osc 2 on, Pulse at 40 %, Level 80 % | Filter 1 Vowel at E, Matrix: LFO 1 → Cut 1 6 % | Attack 300 ms, Drift 10 ct |
 | **Loop pluck** | — | Filter 1 at 800 Hz, Envelope +3 oct, Loop AD-R (Attack 5 ms, Decay 180 ms) | a held note pulses |
 
 ## Mapping
 
 In the Studio's **Map** mode, every number can be driven by an axis: a cutoff with its resonance (the
 classic sweep), **Sync** under Sync (the sync scream), Osc 2's **Semi** or **Fine** under Ring (bell ↔
-clang), Osc 2's **To filter** with **F1 → F2** (thin ↔ two paths), the envelopes' Decays (pluck ↔ pad),
+clang), Osc 2's **To filter** with **F1 → F2** (thin ↔ two paths), the envelopes' Decays (pluck ↔ pad), a Matrix cell (how much an LFO breathes),
 **Vowel** under Vowel (talking). Toggles can switch each source **On** and off, flip **Follow**,
 **Slope**, an LFO's **Sync**, **Mono** and **Legato**. Waves, modes, filter types, loops and Unison are
 never on an axis: a preset carries them.

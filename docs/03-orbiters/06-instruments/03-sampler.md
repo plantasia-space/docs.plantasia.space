@@ -87,16 +87,17 @@ that holds before it goes). Double-click a handle to straighten it. A bent segme
 filled in. What the graph draws is what you hear, and a curve can be mapped to an <Term id="axis">axis</Term> like any
 other control.
 
-## LFO, Mod wheel, Voice
+## LFO, Matrix, Voice
 
 These three groups start folded; open them from their column.
 
 - <Dot>11</Dot>**LFO**: one LFO for the whole instrument, **synced** to the transport (a note value or bars) or
-  free (in Hz), with six shapes. **Pitch** is its vibrato depth (in semitones), **Level** its
-  tremolo depth.
-- <Dot>12</Dot>**Mod wheel**: three amounts, all acting at once. **Vibrato** (extra vibrato on top of the
-  LFO's), **Level** (a swell: at 100 % the instrument is silent until you move the wheel) and
-  **Pitch** (up to +2 semitones).
+  free (in Hz), with six shapes, and **Amount** (how much of it gets through). What it moves is set
+  in the Matrix.
+- <Dot>12</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. **Modulation** has the LFO's column over
+  **Pitch** (vibrato) and **Level** (tremolo). **MIDI** has **Pitch** (with the pitch bend, two
+  semitones), **Level**, **Vibrato** (the mod wheel's, on top of the LFO's) and **LFO**. A swell is
+  **Mod → Level**: the wheel brings the level up from where the Level knob stands.
 - <Dot>13</Dot>**Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time),
   **Legato** (with Mono, a note played over a held one keeps the sample playing and only bends its
   pitch, with **Glide** for how long the slide takes).
@@ -108,7 +109,7 @@ every voice at once.
 
 In the Studio's **Map** mode, every number control can be driven by an axis — Start (attack ↔
 body), End and Release (stab ↔ ring), Loop start (on a drone), Transpose (stepped, in semitones),
-the LFO depths — and toggles can flip **One-shot**, **Loop**, **Sync**, **Mono** and **Legato**. The
+the Matrix's cells — and toggles can flip **One-shot**, **Loop**, **Sync**, **Mono** and **Legato**. The
 instrument itself is never on an axis: a preset carries it.
 
 ## In a room

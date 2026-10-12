@@ -89,23 +89,26 @@ them. While a note plays, the spectrum follows the Timbre envelope. The readouts
   its level; at 0 every note is full) and **Level**.
 - **Timbre**: one envelope for every modulator at once. It is what makes an FM sound bloom and fade:
   a short Decay with a low Sustain is the bark of an electric piano, a long Decay a slow bell.
-  **Vel → Timbre** makes soft notes darker. At the defaults (Sustain 100 %) it holds and changes
-  nothing.
+  At the defaults (Sustain 100 %) it holds and changes nothing. **Vel → Timbre**, in the Matrix,
+  makes harder notes brighter.
 
 Attack, Decay and Release can each be **bent**: drag the small hollow handle in the middle of a
 sloped segment across it, from **−100 %** to **+100 %**. **+** is fast at the start, **−** slow.
 Double-click a handle to straighten it.
 
-## LFO, Mod wheel, Voice
+## LFO, Matrix, Voice
 
 <Dot>12</Dot>These three groups start folded; open them from their column.
 
 - **LFO**: one LFO for the whole instrument, **synced** to the transport (a note value or bars) or
-  free (in Hz), with six shapes. **Pitch** is its vibrato depth (in semitones); **Timbre** makes the
-  modulators' brightness wobble, FM's wah.
-- **Mod wheel**: three amounts, all acting at once. **Vibrato** (how much vibrato the wheel brings
-  in), **Timbre** (how far the wheel brightens every modulator) and **LFO** (how much of the LFO the
-  wheel holds back at rest and brings in as you move it).
+  free (in Hz), with six shapes, and **Amount** (how much of it gets through). What it moves is set
+  in the Matrix.
+- **Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. **Modulation** has the LFO's column over
+  **Pitch** (vibrato), **Timbre** (the modulators' brightness wobbling, FM's wah) and **Feedback**.
+  **MIDI** has **Pitch** (with the pitch bend, two semitones), **Timbre** (every modulator's
+  brightness: Vel → Timbre for a harder, brighter strike, Mod → Timbre for the wheel), **Level**,
+  **Feedback**, **Vibrato** and **LFO**. For a wheel that brings the LFO in, set the LFO's Amount to
+  0 % and **Mod → LFO** to 100 %.
 - **Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time),
   **Legato** (with Mono, a note played over a held one slides there without a new strike, with
   **Glide** for how long the slide takes).
@@ -119,7 +122,7 @@ Set these from the defaults to hear what the instrument can do:
 
 | Sound | Algorithm | Ratios A / B / C / D | Levels B / C / D | Timbre envelope | Also |
 |---|---|---|---|---|---|
-| **E-piano** | 5 | ×1 / ×1 / ×1 / ×14 | 45 / 60 / 25 | Decay 500 ms, Sustain 10 % | Vel → Timbre 80 %; Amp Decay 2.5 s, Sustain 0 % |
+| **E-piano** | 5 | ×1 / ×1 / ×1 / ×14 | 45 / 60 / 25 | Decay 500 ms, Sustain 10 % | Matrix: Vel → Timbre 80 %; Amp Decay 2.5 s, Sustain 0 % |
 | **Tubular bell** | 2 | ×1 / ×3 (Fine 17 %) / ×1 / ×5 | 55 / 30 / 20 | Decay 3 s, Sustain 0 % | Amp Release 3 s |
 | **DX bass** | 1 | ×1 / ×1 / ×1 / ×2 | 70 / 40 / 30 | Decay 250 ms, Sustain 20 % | Feedback 30 %, Mono and Legato, Glide 40 ms |
 | **Organ** | 8 | ×½ / ×1 / ×2 / ×3 | 70 / 50 / 30 | — | D on Abs |
@@ -128,7 +131,7 @@ Set these from the defaults to hear what the instrument can do:
 
 In the Studio's **Map** mode, every number can be driven by an axis: the Levels (dark ↔ bright),
 Fine or Ratio (harmonic ↔ metallic; Ratio moves in whole steps), Feedback (smooth ↔ gritty), the
-Timbre envelope's Decay with Vel → Timbre (the bark on the strike), the LFO's Timbre (a wobble).
+Timbre envelope's Decay with Vel → Timbre (the bark on the strike), the Matrix's LFO → Timbre (a wobble).
 Toggles can switch **B**, **C** and **D** on and off, and flip **Sync**, **Mono** and **Legato**.
 The algorithm and the waves are never on an axis: a preset carries them.
 

@@ -89,30 +89,36 @@ Five tabs, one graph size on every tab, so nothing jumps when you switch:
 - **Amp**: the envelope every note goes through, with **Velocity** (how much a note's velocity moves
   its level; at 0 every note is full) and **Level**.
 - **Filter**: the filter's own envelope, with **Envelope** (how far it moves the cutoff, in octaves,
-  up or down) and **Key** (how much the cutoff follows the key).
+  up or down).
 - **Mod**: a third envelope with nothing of its own: it moves things through the matrix (its **Env**
   column).
 - **LFO 1** and **LFO 2**: the six shapes as buttons, the wave drawn at its rate, then **Sync**
-  (**Sync** keeps the transport's beat, **Free** runs in Hz) and **Rate**. An LFO has no depth of its
-  own either: that is the matrix's.
+  (**Sync** keeps the transport's beat, **Free** runs in Hz), **Rate** and **Amount** (how much of the
+  LFO gets through). What it moves is the matrix's.
 
 Drag an envelope's points, or type a value under it. Attack, Decay and Release can each be **bent**:
 drag the hollow handle in the middle of a sloped segment across it; double-click to straighten it.
 
 ## Matrix
 
-The **Matrix** starts folded; open it from its column. It is a grid: what can move down the side,
-what moves it across the top, an amount in each cell.
+The **Matrix** starts folded; open it from its column. It is the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares:
+what can move down the side, what moves it across the top, an amount in each cell, in two tabs.
 
-| Sources (columns) | Targets (rows) |
-|---|---|
-| **Env** (the Mod envelope), **LFO 1**, **LFO 2**, **Vel** (velocity), **Key** (around C3), **Wheel** (the mod wheel), **Rand** (a value drawn for each note) | **Pos 1**, **Pos 2**, **Pitch** (both oscillators and the sub, up to ±12 semitones), **Pitch 2** (Osc 2 only), **Fx 1**, **Fx 2** (the effects' amounts), **Gain 2**, **Cutoff** (up to ±5 octaves), **Res**, **Unison** (its Amount) |
+| Tab | Sources (columns) | Targets (rows) |
+|---|---|---|
+| **Modulation** | **Env** (the Mod envelope), **LFO 1**, **LFO 2** | **Pitch** (both oscillators and the sub, up to ±12 semitones), **Pos 1**, **Cutoff** (up to ±5 octaves), **Pos 2**, **Pitch 2** (Osc 2 only), **Fx 1**, **Fx 2** (the effects' amounts), **Gain 2**, **Res**, **Unison** (its Amount) |
+| **MIDI** | **Vel** (velocity), **Key** (around C3), **PB** (pitch bend), **Press** (pressure), **Mod** (the mod wheel), **Rand** (a value drawn for each note) | the same rows, then **LFO 1** and **LFO 2** (each LFO's Amount) |
 
-A cell is blank at 0. Drag it up or down to set an amount from **−100 %** to **+100 %** (hold Shift
-for finer steps), double-click it to clear it, or use the arrow keys. Every cell that reaches the same
-target adds up, and the target never leaves its range. Hover a cell to read its route
-("LFO 1 › Cutoff"). Like any number, a cell can go on an axis: the axis then sets *how much* the
-source moves its target.
+A tab opens with **Pitch**, **Pos 1** and **Cutoff** and every row that has an amount; the others
+come in when you turn their knob. A cell is a dot at 0. Drag it left or right to set an amount from
+**−100 %** to **+100 %** (hold Shift for finer steps), double-click it to put it back, or use the
+arrow keys. Every cell that reaches the same target adds up, and the target never leaves its range.
+Hover a cell to read its route ("LFO 1 › Cutoff").
+
+**Key → Cutoff** at 100 % is the cutoff following the keyboard exactly, and **PB → Pitch** is the
+pitch bend, two semitones until you change it. The Wavetable has no Vibrato or Level row: its two
+LFOs and its Gain rows do that work. Like any number, a cell can go on an axis: the axis then sets
+*how much* the source moves its target.
 
 ## Voice
 
@@ -132,7 +138,7 @@ Set these from the defaults to hear what the instrument can do:
 |---|---|---|---|---|
 | **PPG sweep** | Resonant, Position 10 | off | open | Env › Pos 1 +70; Mod envelope Decay 1.5 s |
 | **Vowel pad** | Vowels | on: Choir, Position 40, Detune +7, Gain 70 | low-pass 6 kHz | LFO 1 › Pos 1 +60, LFO 1 at 1 bar; Unison 2, Position; Amp Attack 600 ms |
-| **Growl bass** | Saw → Square, Position 30, Warp 40 | on: Sine → Saw, Semi −12, Gain 60 | low-pass 400 Hz, Envelope +3, Resonance 40 | Wheel › Fx 1 +60; Mono, Legato, Glide 40 ms |
+| **Growl bass** | Saw → Square, Position 30, Warp 40 | on: Sine → Saw, Semi −12, Gain 60 | low-pass 400 Hz, Envelope +3, Resonance 40 | Mod › Fx 1 +60; Mono, Legato, Glide 40 ms |
 | **Glass keys** | Glass, FM 25 | off (still the FM source): Metal, Semi +12 | open | Vel › Fx 1 +50; Amp Decay 1.2 s, Sustain 0 % |
 | **Supersaw lead** | Sine → Saw, Position 100 | on: Sine → Saw, Position 100, Detune +12, Gain 80 | low-pass 8 kHz | Sub on, Gain 50; Unison 4, Classic, Amount 40 |
 | **Clav pluck** | Clav, Position 30, Sync 20 | off | band-pass 1.5 kHz, Envelope +2, Decay 200 ms | Rand › Pos 1 +20 |
