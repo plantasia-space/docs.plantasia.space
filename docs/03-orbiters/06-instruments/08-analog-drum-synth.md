@@ -138,6 +138,12 @@ long as it rings, so a crash's tail isn't cut short by the beat around it.
 | **Default** | High tom | Ride | Crash | Shaker | Tambourine | Block | Soft snare | Splash |
 | **Key** | D2 | D♯2 | C♯2 | A♯3 | F♯2 | E4 | E1 | G2 |
 
+## Its screen while you play
+
+Set the Analog drum synth's Panel to **Screen** (the Visuals step in the Studio) and the play monitor
+shows the kit while an axis moves it: the sixteen pads by name, each lighting when it is struck and
+fading as it rings out.
+
 ## Mapping
 
 In the Studio's **Map** mode every knob can follow an <Term id="axis">axis</Term>, the kit's and every

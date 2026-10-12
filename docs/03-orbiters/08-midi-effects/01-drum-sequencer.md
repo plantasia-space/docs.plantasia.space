@@ -54,6 +54,38 @@ way.
 While a switch waits, its pad blinks and counts down the beats left, like Play does when it waits
 for the grid. Tap the beat that is playing to take the switch back.
 
+## Naming beats
+
+Every beat can have a **name**, up to 12 characters, so you remember what each one is. In **Beats**:
+
+- on a touch screen, **press and hold** a pad;
+- with a mouse, **double-click** it;
+- from the keyboard, **Ctrl + R** (or **F2**) names the beat you are on.
+
+Type the name and press **Enter** (**Esc** leaves it as it was). The pad shows the name with the beat's
+number under it, and the status line names the beat that plays and the one that waits. A beat without
+a name reads "Beat 7". Names are saved with the Drum sequencer: in its preset, in the Orbiter, and for
+everyone in a room. Copy and Paste carry a beat's name; Erase keeps it.
+
+## Shift
+
+**Shift** flips what a tap does. Hold the **Shift** key, or use the **Shift** button: hold it for one
+tap, or tap it to keep it on (it stays lit) until you tap it again. It is the same Shift on every
+play surface of the Orbiter.
+
+| Function | A tap… | With Shift |
+|---|---|---|
+| **Beats** | switches on the launch grid | switches at once |
+| **Mutes** | mutes or unmutes on the launch grid | mutes or unmutes at once |
+| **Voices** | plays the voice and selects it (Audition on) | selects it without sounding it |
+
+With the launch grid off, a tap acts at once and Shift waits for the next bar instead. With Audition
+off in Voices, Shift does the opposite too: the tap sounds the voice. In Steps and Tunings, Shift
+rests.
+
+The right end of the status line always says what a tap does now, for example "Tap launches in 1 bar",
+and turns to the accent colour while Shift is on.
+
 ## Recording
 
 Press <Dot>7</Dot>**Rec** to record what you play into the beat that is playing:
@@ -95,6 +127,16 @@ ribbon (the button with the arrow), then press and slide on the ribbon; let go a
 0. With <Dot>10</Dot>**Latch** on, the ribbon keeps its amount when you let go. Latch is the same in the module
 and on the play surface.
 
+## Its screen while you play
+
+With the Drum sequencer's Panel set to **Screen** (the Visuals step in the Studio), its screen shows
+in the play monitor while it leads the chain: the playing beat's voices across the bar, the playhead,
+and the beat that plays and the one that waits, by name.
+
+You can edit there too: **tap a cell** to set a hit, tap it again to clear it. It writes into the beat
+that is playing, and the screen always offers a few rows to write in, even on an empty beat. For
+velocity, chance, ratchet and offset, use **Steps**.
+
 ## Mapping
 
 There are two kinds of mapping, one per place.
@@ -110,7 +152,7 @@ badges like any module's:
 A control an axis or toggle drives is locked in the editor and follows it.
 
 **MIDI hardware (the play surface).** In MIDI learn mode, every control of the play surface can be
-learned: the pads, the pad functions, Roll, Bank B, Rec, Page, the four knobs and their key, Swing,
+learned: the pads, the pad functions, Roll, Bank B, Rec, Shift, Page, the four knobs and their key, Swing,
 the FX menus, ribbons and Latch, and the Generate controls. A mapped pad plays at the note's
 velocity and lets go with its note-off, so recording from MIDI pads keeps your dynamics. Buttons act
 when pressed, knobs and ribbons follow the controller across their range, and an FX menu steps
