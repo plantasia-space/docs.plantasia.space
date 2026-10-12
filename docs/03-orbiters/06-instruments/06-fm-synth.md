@@ -13,12 +13,12 @@ the notes you play (the keys, MIDI, the piano roll, a sequencer) sound through i
 It loads as the plainest sound there is, a pure sine at the key. Everything else is yours to bring
 in, one Level at a time.
 
-<TryModule module="fm" set="algorithm:5,cRatio:1,dRatio:14,bLevel:45,cLevel:60,dLevel:25,tDecay:500,tSustain:10,velTimbre:80,decay:2500,sustain:0" source="piano">
+<TryModule module="fm" set="algorithm:5,cRatio:1,dRatio:14,bLevel:45,cLevel:60,dLevel:25,tDecay:500,tSustain:10,m_velocity_timbre:80,decay:2500,sustain:0" source="piano">
 <ModulePicture
   src="/img/orbiters/instruments/fm-synth.jpg"
   wide
-  alt="The FM synth set as an electric piano: algorithm 5's wiring and the spectrum on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the LFO, Mod wheel and Voice columns."
-  dots={[[1, 23, 24], [2, 74, 24], [3, 31.6, 57], [4, 3.2, 76], [5, 11.3, 79], [6, 17.9, 84], [7, 24.6, 84], [8, 31.3, 84], [9, 38, 92], [10, 48, 50], [11, 71, 84], [12, 93, 54]]}
+  alt="The FM synth set as an electric piano: algorithm 5's wiring and the spectrum on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the folded LFO, Matrix and Voice columns."
+  dots={[[1, 23, 27], [2, 74, 27], [3, 30.6, 55.2], [4, 3.1, 78.5], [5, 10.9, 65.2], [6, 17.4, 65.2], [7, 24, 65.2], [8, 30.5, 65.2], [9, 37, 93.8], [10, 48.5, 51.6], [11, 69.8, 77.8], [12, 92.8, 62]]}
 />
 </TryModule>
 

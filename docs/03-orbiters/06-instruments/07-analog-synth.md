@@ -14,12 +14,12 @@ and MIDI effects, and the notes you play (the keys, MIDI, the piano roll, a sequ
 It loads as the plainest sound there is: one saw through a wide-open filter. Osc 2 and the noise
 are switched off, ready at their levels, so switching one on is heard at once.
 
-<TryModule module="analog" set="o2On:on,o2Shape:pulse,o2Width:30,o2Detune:7,o2Level:90,o2Balance:100,noiseBalance:50,f1Cutoff:1200,f2Type:bp,f2Cutoff:900,lfo2Cutoff:1,attack:400,a2Attack:900,amp1Pan:-40,amp2Pan:40" source="chords">
+<TryModule module="analog" set="o2On:on,o2Shape:pulse,o2Width:30,o2Detune:7,o2Level:90,o2Balance:100,noiseBalance:50,f1Cutoff:1200,f2Type:bp,f2Cutoff:900,m_lfo2_cutoff2:20,attack:400,a2Attack:900,amp1Pan:-40,amp2Pan:40" source="chords">
 <ModulePicture
   src="/img/orbiters/instruments/analog-synth.jpg"
   wide
-  alt="The Analog synth set as a two-path pad: the Patch on the screen with both paths lit, Routing on Parallel, the four sources as a table, and the Filter 2 tab with its band-pass, its envelope and its knobs."
-  dots={[[1, 9, 45], [2, 19.5, 14], [3, 27, 14], [4, 18.6, 38], [5, 23, 38], [6, 42, 38], [7, 46.5, 64], [8, 51, 64], [9, 56, 64], [10, 66, 14], [11, 62, 23], [12, 77, 45], [13, 66, 82]]}
+  alt="The Analog synth set as a two-path pad: the Patch on the screen with both paths lit, Routing on Parallel, the four sources as a table, the Filter 1 tab with its envelope and its knobs, and the folded Matrix."
+  dots={[[1, 8.5, 54], [2, 19.6, 14.7], [3, 26.6, 14.7], [4, 18.4, 43.1], [5, 22.6, 31.7], [6, 41, 31.7], [7, 45.6, 31.7], [8, 50.2, 31.7], [9, 54.9, 31.7], [10, 69, 14.7], [11, 62.3, 23.1], [12, 77.8, 44.3], [13, 65.3, 80.4], [14, 98.9, 40]]}
 />
 </TryModule>
 
@@ -119,7 +119,7 @@ velocity moves both amps), **Level**, and **Poly · Mono**, **Retrig · Legato**
 
 ## Matrix
 
-After the tabs, the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. Its rows follow the two paths: **Pitch**
+<Dot>14</Dot>After the tabs, the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. Its rows follow the two paths: **Pitch**
 (both oscillators) and **Pitch 2** (Osc 2 on top), then **Tone** (the pulse width), **Cut**,
 **Res**, **Env** (how far a filter's envelope moves its cutoff) and **Amp**, each for path 1 and
 path 2, and **Noise**. A tab opens with Pitch, Tone 1 and Cut 1; the others come in when you turn

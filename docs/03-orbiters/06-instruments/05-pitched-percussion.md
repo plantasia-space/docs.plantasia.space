@@ -18,8 +18,8 @@ bell does (they are not in tune with each other, which is why a bell sounds like
 <ModulePicture
   src="/img/orbiters/instruments/pitched-percussion.jpg"
   wide
-  alt="Pitched Percussion on the Vibraphone: the Struck screen on the left, then Body, Mallet and FM, with Amp and Voice folded."
-  dots={[[1, 50.4, 15.2], [2, 14.7, 50], [3, 33.2, 82], [4, 39.4, 82], [5, 45.5, 82], [6, 51.6, 82], [7, 58.8, 82], [8, 64.9, 82], [9, 71.9, 82], [10, 78.2, 82], [11, 84, 82], [12, 90, 82], [13, 95.4, 15], [14, 98.3, 15]]}
+  alt="Pitched percussion on the Marimba: the Struck screen on the left, then Body, Mallet and FM, with Amp, Matrix and Voice folded."
+  dots={[[1, 52.1, 14.7], [2, 15, 54.3], [3, 33.8, 58.3], [4, 40.3, 58.3], [5, 46.8, 58.3], [6, 53.2, 58.3], [7, 60.5, 57.1], [8, 67.9, 57.1], [9, 74.3, 57.1], [10, 80.8, 57.1], [11, 87.3, 57.1], [12, 92.4, 32], [13, 95.4, 32], [14, 98.4, 32]]}
 />
 </TryModule>
 
@@ -68,23 +68,23 @@ as the body's fundamental, so Ring and Damping act on both together.
 
 | Control | What it does |
 |---|---|
-| <Dot>9</Dot>**Mix** | Body to FM, keeping the same loudness all the way. At 0 only the body sounds. |
-| <Dot>10</Dot>**Ratio** | The modulator against the carrier. Whole numbers sound harmonic; the marks on the rim are the classic bells: **1.40**, **2.00**, **3.50** and **7.11**. |
-| <Dot>11</Dot>**Index** | How bright the FM strike is. |
-| <Dot>12</Dot>**Sweep** | How fast that brightness falls after the strike: short is a clang that settles into a pure tone, long stays bright. |
+| <Dot>8</Dot>**Mix** | Body to FM, keeping the same loudness all the way. At 0 only the body sounds. |
+| <Dot>9</Dot>**Ratio** | The modulator against the carrier. Whole numbers sound harmonic; the marks on the rim are the classic bells: **1.40**, **2.00**, **3.50** and **7.11**. |
+| <Dot>10</Dot>**Index** | How bright the FM strike is. |
+| <Dot>11</Dot>**Sweep** | How fast that brightness falls after the strike: short is a clang that settles into a pure tone, long stays bright. |
 
 ## Amp, Matrix and Voice
 
 These three groups start folded; open them from their column.
 
-- <Dot>13</Dot>**Amp**: the envelope every note goes through, drawn above its knobs: **Attack**, **Decay**,
+- <Dot>12</Dot>**Amp**: the envelope every note goes through, drawn above its knobs: **Attack**, **Decay**,
   **Sustain**, **Release**, then **Velocity** (how much a note's velocity moves its level) and **Level**.
   At the defaults the strike is the mallet's own and the envelope adds nothing.
   **Release is what letting a key go does**: the body rings on that long, then is damped. It is 4 s by
   default, so even a short note rings out; turn it down for a damper, like a vibraphone's pedal up.
   Attack, Decay and Release can each be bent with the small hollow handle on their segment, as on every
   envelope.
-- **Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares, here with the **MIDI** tab only (there is no LFO
+- <Dot>13</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares, here with the **MIDI** tab only (there is no LFO
   or free envelope to route). It opens with **Pitch** (with the pitch bend, two semitones),
   **Hardness** and **Vibrato** (the mod wheel's); **Level**, **Index**, **Position**, **Damping** and
   **Mix** come in when you turn their knob. Rand → Position makes every strike land a little

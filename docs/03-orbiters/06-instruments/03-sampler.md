@@ -20,14 +20,15 @@ the right zone for every note by itself.
 <ModulePicture
   src="/img/orbiters/instruments/sampler.jpg"
   wide
-  alt="The Sampler playing the Kawai grand: the sample and its zones on the screen, then Sample, Amp, and the LFO, Mod wheel and Voice tabs."
-  dots={[[1, 79.8, 4.1], [2, 50, 14.2], [3, 5.6, 82.1], [4, 14.8, 82.1], [5, 24, 82.1], [6, 33.2, 82.1], [7, 42.4, 82.1], [8, 9.6, 61.4], [9, 15.7, 61.4], [10, 47.5, 52], [11, 88.7, 75], [12, 93.2, 75], [13, 97.6, 75]]}
+  alt="The Sampler playing the Kawai grand: the sample and its zones on the screen, then Sample, Amp, and the folded LFO, Matrix and Voice columns."
+  dots={[[1, 8, 12.2], [2, 50, 23.5], [3, 5.5, 75.6], [4, 15, 75.6], [5, 24.5, 75.6], [6, 34, 75.6], [7, 43.5, 75.6], [8, 5.6, 49.4], [9, 13.4, 49.4], [10, 67.8, 54.3], [11, 88.9, 62], [12, 93.3, 62], [13, 97.7, 62]]}
 />
 </TryModule>
 
 ## Picking an instrument
 
-The instrument's name is the <Dot>1</Dot>button in the module's header. Press it to open the list of
+The instrument's name is on the screen<Dot>1</Dot>, and in the Studio it is the button in the module's header.
+Press that button to open the list of
 **libraries** and their instruments. Each row shows the instrument's tags, how many zones (and
 layers or round robins) it has, its size, and where it comes from with its licence.
 
