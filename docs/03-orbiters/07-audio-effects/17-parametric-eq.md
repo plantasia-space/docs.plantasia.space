@@ -61,9 +61,10 @@ The three knobs are the selected band's:
 
 <Dot>1</Dot>**Response.** The white line is the whole EQ: above the middle line it boosts, below it
 cuts, lows on the left and highs on the right. Each band is a numbered point on it, filled when the band
-is on; the selected one has an upright line through it. Behind the line, the sound's own spectrum moves
-while it plays, so you can see where to cut. Above, the selected band, its shape and whether it is on;
-below, its frequency and its Q.
+is on; the selected one has an upright line through it. Drag a point to move its frequency and its gain
+(or its Q, for a cut or a notch). In the Studio, the sound's own spectrum moves behind the line while it
+plays, so you can see where to cut. Above, the selected band, its shape and whether it is on; below, its
+frequency, then its gain and Q.
 
 ## Try it
 

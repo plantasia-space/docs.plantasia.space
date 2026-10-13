@@ -49,11 +49,12 @@ The Saturator loads at Drive 0 dB and the One Saturator at Amount 0: the sound p
 
 <Dot>6</Dot>**Curve.** The white line is what the Saturator does to the wave: the thin diagonal is the
 sound untouched, and the more the white line flattens at the top and the bottom, the more the peaks are
-rounded off. Above, the Character; below, the Drive.
+rounded off. It is drawn at its full height whatever the Drive: the picture is the shape, not the
+loudness. Above, the Character (**Off** at Drive 0); below, the Drive.
 
-<Dot>7</Dot>**Harmonics.** One bar for each harmonic the curve adds, the lowest on the left. The word
-above says which kind lead (**Odd** with Soft and Warm), and the bars shorten towards the right as Tone
-comes down.
+<Dot>7</Dot>**Harmonics.** One bar for each harmonic the curve adds, the lowest on the left, with a
+marker where **Tone** starts taking them away. The word above says **Odd** with Soft and Warm, and
+**Odd + even** with Tube.
 
 ## One Saturator
 
@@ -77,8 +78,13 @@ to the crunch.
 
 ### The screen
 
-<Dot>2</Dot>**Harmonics.** The harmonics the knob adds, with the drive and the top end it has set
-under them.
+<Dot>2</Dot>**The Bloom.** A plant whose petals are the harmonics the knob adds. At 0 it is a closed
+bud; turned up, the stem grows and it flowers: one pair of petals for each harmonic loud enough to hear,
+each as long as it is loud, the outer ones shortening as the top end closes. Past half way to the right
+the petals grow teeth and sparks drift off: the crunch. The big number is the drive the knob has set
+inside, and the ladder counts the harmonics you can hear. The word above says **Warmth**, **Crunch** or
+**Tube**; below, the drive and the top end. While sound plays the plant breathes and leans with its
+level; at rest it is a still picture.
 
 ## Try it
 

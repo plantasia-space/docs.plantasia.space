@@ -49,10 +49,12 @@ came in.
 
 ## The screen
 
-<Dot>8</Dot>**Output.** One cycle of a wave as the Bitcrusher would return it: the thin line is the wave
-going in, the white one what comes out. The steps up and down are the **Resolution**, the flat stretches
-between the points the **Downsampling**, and the two dotted lines the **Clip level**, with a marker at
-the left. Below, the clip level, then the bits and the downsampling.
+<Dot>8</Dot>**Output.** One cycle of a sine wave as the Bitcrusher would return it: the thin line is the
+wave going in, the white one what comes out. The steps up and down are the **Resolution**, the flat
+stretches between the points the **Downsampling**, and the two dotted lines the **Clip level**, with a
+marker at the left you can drag. The word above says what is at work: the mode (**Fold**, **Clip** or
+**Wrap**) once the sound reaches the clip level, **Crushed** when Resolution or Downsampling are on,
+**Neutral** when nothing is. Below, the clip level, then the bits and the downsampling.
 
 ## Try it
 

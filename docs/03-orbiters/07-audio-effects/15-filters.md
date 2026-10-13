@@ -43,8 +43,9 @@ is.
 
 <Dot>6</Dot>**Response.** The line is what the filter does to each frequency, lows on the left and highs
 on the right: flat where the sound passes, falling where it is taken away, with a bump at the cutoff when
-Resonance is up. The dot and the upright line mark the **cutoff**. The word above says **Low-pass** or
-**High-pass**; below, the cutoff, then the slope and the character.
+Resonance is up. The dot and the upright line mark the **cutoff**; you can drag the dot. The word above
+says **Low-pass**, **High-pass**, or **Neutral** in the centre; below, the cutoff, then the slope and the
+character.
 
 ## Try it
 

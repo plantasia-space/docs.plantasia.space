@@ -57,11 +57,12 @@ came in.
 
 <Dot>10</Dot>**Transfer.** The white line is the level out against the level in: it follows the thin
 diagonal up to the threshold, then bends flatter, as flat as the Ratio says. The upright line is the
-**Threshold**, the band around it the **Knee**, and the dot on the line is the sound's level now. Above,
-the ratio and the knee; below, the threshold and the knee's width.
+**Threshold** and the band around it the **Knee**. While sound plays, the dot on the line is the level
+the compressor hears (after SC high-pass). Above, the ratio and the knee; below, the threshold and the
+knee's width.
 
 <Dot>11</Dot>**Reduction.** How much the compressor is turning the sound down at this moment: the bar
-drops from the top as it works, and the number below is the reduction in dB.
+drops from the top as it works, up to 40 dB, and the number below is the reduction in dB.
 
 ## One Compressor
 
@@ -86,8 +87,12 @@ to the glue.
 
 ### The screen
 
-<Dot>2</Dot>**Reduction.** How much the One Compressor is turning the sound down now, in dB, with the
-ratio and the threshold the knob has set under it.
+<Dot>2</Dot>**The Press.** The mix is a block on a plate, and a press comes down on it by as much as
+the sound is being turned down: clear of the block at 0 dB, touching it as the glue starts, flattening it
+and squeezing drops out past 6 dB. The block breathes with the sound's level while it plays. The big
+number is the reduction in dB, the ladder beside it lights from 0.3 to 24 dB, and a small dial shows
+which way Amount is turned. The word above says **Lift**, **Glue** or **Dense** (**None** while nothing
+is turned down); below, the reduction, then the ratio and the threshold the knob has set.
 
 ## Try it
 

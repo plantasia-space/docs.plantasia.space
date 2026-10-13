@@ -22,8 +22,8 @@ you play sounds.
 
 <ModulePicture
   src="/img/orbiters/midi-effects/chord.jpg"
-  alt="Chord with Level up, an F♯ just played: the Keys screen over the set's twelve chords, then Chord, Voicing and Strum."
-  dots={[[1, 50, 10], [2, 14, 59], [3, 26, 59], [4, 10, 82], [5, 24, 82], [6, 43, 82], [7, 57, 82], [8, 71, 82], [9, 94, 58], [10, 90, 82]]}
+  alt="Chord as it loads, on the Triads set with the chord on C shown: the Keys screen under the set's twelve chords, then Chord (Set, Capture, the set and Notes), Voicing (Level, Tilt, Invert) and Strum."
+  dots={[[1, 50, 12.5], [2, 14.1, 65], [3, 26, 65], [4, 9.6, 83], [5, 24.4, 83], [6, 42.7, 83], [7, 57.5, 83], [8, 72.4, 83], [9, 94, 65], [10, 90.5, 83]]}
 />
 
 ## Chord

@@ -76,10 +76,14 @@ Three groups start folded; open one from its column.
 
 ## The screen
 
-<Dot>1</Dot>**Sheaf.** The sound is a sheaf of stalks running from left to right, lows at one edge and
-highs at the other. Where the filter is, a band ties the sheaf: the stalks pull together around it, and
-the band moves as the envelope and the LFO move the cutoff. Top right, the filter; below, the **Cutoff**
-you set and where the filter is **Now**.
+<Dot>1</Dot>**Sheaf.** Twelve lines lie across the screen, lows on the left and highs on the right, tied
+where the cutoff is. Left of the tie the lines are bright: what passes. Right of it they fade: what the
+filter takes away, faster as Resonance rises, which also pulls the knot tighter and lights the lines at
+it. A note swells the bundle from the middle with the amp envelope, and while it sounds the lines move
+with the oscillator: smooth for a saw, stepped towards the pulse, grainy with Noise, a slow swell on the
+lower lines with Sub. The filter envelope moves the tie; the LFO lets the knot breathe. Top right, the
+filter (**Open · nothing taken away** at 20 kHz); below, the **Cutoff** you set and where the filter is
+**Now**.
 
 ## Starting points
 

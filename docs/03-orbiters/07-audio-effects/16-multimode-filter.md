@@ -63,12 +63,16 @@ filter (or close it). Its hexagon switches it on and off.
 
 ## The screens
 
-<Dot>10</Dot>**Response.** The white line is what the filter does to each frequency right now, lows on
-the left; the thin line behind it is the filter where the Cutoff knob stands. The upright line and the
-dot mark the two, and the shaded band is how far the LFO sweeps. Below, the **Cutoff** you set and where
-the filter is **Now**.
+<Dot>10</Dot>**Response.** The white line is what the filter does to each frequency, lows on the left,
+with Dry/wet counted in. The upright line and the dot mark the **Cutoff** you set; you can drag the dot
+for cutoff and resonance. The shaded bands, tagged **LFO** and **Env**, are how far each one can move
+the cutoff. While sound plays, the screen also draws where the cutoff is now, one line for each side.
+Below, the **Cutoff** and where the filter is **Now**.
 
-<Dot>11</Dot>**LFO.** The wave the LFO draws, with its rate below.
+<Dot>11</Dot>**The second screen follows the tab that is open.** On **LFO**: two cycles of its wave,
+with the rate below and how the two sides relate (**Mono**, **L / R** and the Phase, or the Spin). On
+**Envelope**: its rise and fall, with a handle for Attack and one for Release; the word above says
+whether loud moments **Open** the filter or **Close** it.
 
 ## Try it
 

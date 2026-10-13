@@ -89,10 +89,15 @@ pattern is kept for when you switch it on again.
 
 ## The screen
 
-<Dot>1</Dot>**Vine on the staff.** The held notes sit on a staff at the left, and the line grows out of
-them to the right like a vine: one leaf for every step of the figure, at its pitch, with the step that
-is playing lit. Top right, the note sounding now; below, the order, the rate and the gate, then the
-shift and the octaves the line covers.
+<Dot>1</Dot>**Vine on the staff.** The line is a vine climbing through a five-line staff. Each note is
+a leaf that is also its notehead, on its line or space: as long as the note sounds (Gate) and as wide as
+it is loud. The leaf of the step playing is lit; the leaves behind it are filled, and the vine ahead is
+dashed. The notes you hold are seeds before the first bar line, a held (latched) one dashed, with a
+root. A rest is a bare node, a Chord step several leaves on one stalk, and over 100 % Gate a tendril
+curls from each leaf to the next. Ticks under the staff mark the beats; with the Grid on, the bar ends on
+a repeat sign at its Length. The big number is how many notes are held. Top right, the note sounding
+now (**No notes held** when there are none; while the transport is stopped the keys play plain and it
+says so); below, the order, the rate and the gate, then the shift.
 
 ## Try it
 

@@ -46,10 +46,14 @@ Pitch loads at Transpose 0 with the full range: every note passes as it came.
 
 ## The screen
 
-<Dot>6</Dot>A staircase, one step a semitone (or a degree). The hollow dot is the note that came in, the
-filled one where it went, with an arc between them. The ladder at the right is the range, with a marker
-where the note landed, and the word above says whether it was **In range**. The number is the Transpose;
-below, the range mode and the range's two ends.
+<Dot>6</Dot>**The Stairs.** One octave as a staircase. In **st** it has twelve even steps from C; in
+**deg** it is the Orbiter's scale from its root, each step as tall as its interval. The ring is the note
+that came in, the bright ball where it lands, and the arc the move between them. The ladder at the right
+is the whole keyboard, C-2 at the bottom to C8 at the top: lit where the range lets notes out, with a
+ring for the octave the note came in on and a dot for the one it left on. The big number is the
+Transpose. The word above says what happened to the last note: **In range**, **Folded**, **Limited** or
+**Blocked** (**Neutral** while Pitch changes nothing), and the light after **Range** flashes when a note
+is blocked. Below, the Transpose, then the range mode and the range's two ends.
 
 ## Try it
 

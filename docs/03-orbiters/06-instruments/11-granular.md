@@ -59,9 +59,14 @@ player's, and they move the track the grains are cut from: **Speed**, **Tape** o
 
 ## The screen
 
-<Dot>2</Dot>**Track.** The whole track's waveform, start to end, with the place the grains read marked
-on it. The word at the left says **Follow** or **Hold**; top right, how wet the sound is. Below, the
-density, and where in the track the grains are reading.
+<Dot>2</Dot>**Track.** The whole track's waveform, still. Only three things move on it: the grey line
+is the **playhead**, where the track is playing; the bright line is the **reading point**, where the
+grains are cut, tagged **Follow** or **Hold**; and the small squares are the grains sounding now, higher
+or lower as they land left or right, hollow when they play backwards. The box around the reading point
+is as wide as **Spray** and as tall as **Spread**. In Hold, the reading point is a handle: drag it along
+the track to set **Position**. Scroll over the screen to zoom in around the pointer. Top right, how wet
+the sound is (and the Seek, when it is on); below, the density, and where in the track the grains are
+reading.
 
 ## Try it
 

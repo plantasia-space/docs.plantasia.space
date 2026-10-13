@@ -58,10 +58,13 @@ free while the top is held to the scale.
 
 ## The screen: Notes
 
-<Dot>9</Dot>A row of squares is one octave from the root, the root at both ends. The squares with a
-bright outline are the scale's notes, and one fills in while its note sounds. The dot above the row is
-the note that came in, dropping onto the square it was moved to. Top right, the last note out; below,
-the Transpose and the tonality.
+<Dot>9</Dot>**The Strip.** One octave as thirteen cells, from the root on the left to the root on the
+right; the roots have a short bar over them. The cells with a bright outline are the scale's notes. A
+note comes in as a dot above its own column, drops, slides sideways to the cell it lands on and fills it;
+the last three landings stay lit and fade. With **Block**, a note that isn't played leaves a cross, and a
+note outside **Acts on** stays grey above the row. The big number is how far the last note moved. With
+the User scale you can tap a cell to put that note in or take it out (never the root). Top right, the
+last note out; below, the Transpose and the tonality.
 
 ## Try it
 
