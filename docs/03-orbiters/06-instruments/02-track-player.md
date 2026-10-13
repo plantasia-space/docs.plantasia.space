@@ -30,7 +30,7 @@ The <Dot>2</Dot>switch decides what Speed does to the pitch:
 
 | Control | What it does |
 |---|---|
-| <Dot>3</Dot>**Speed** | 100 % plays as recorded, 0 % stops, below 0 plays backwards (down to −100 %), up to 400 %. With warp on it moves the tempo, and the word after its name says which. |
+| <Dot>3</Dot>**Speed** | 100 % plays as recorded, 0 % stops, below 0 plays backwards (down to −100 %), up to 400 %. With Stretch on it moves the tempo, and the word after its name says which. |
 | <Dot>4</Dot>**Pitch** | Transposes with the tempo locked, −24 … +24 st. Stretch only. |
 | <Dot>5</Dot>**Quantize** | Semitone steps: Pitch lands on whole semitones in Stretch; Speed & pitch lands on semitone ratios in Tape. |
 
@@ -40,7 +40,7 @@ The <Dot>2</Dot>switch decides what Speed does to the pitch:
 |---|---|
 | <Dot>6</Dot>**Formant** | Moves the vocal and body resonances without moving the pitch, −12 … +12 st. |
 | <Dot>7</Dot>**Keep formants** | Keeps the resonances where they were while the pitch or the tape speed moves, so a voice doesn't turn into a chipmunk. |
-| <Dot>8</Dot>**Tonality** | Above this frequency (1 … 16 kHz) the stretch treats the sound as noise rather than tones. |
+| <Dot>8</Dot>**Tonality** | Above this frequency (1 … 16 kHz) the sound is treated as hiss, not notes. Lower it if a stretched voice sounds watery. |
 
 ## Output
 
@@ -65,13 +65,13 @@ The <Dot>2</Dot>switch decides what Speed does to the pitch:
   rises; with it on they hold their size.
 
 The big number top left is Speed. Below the picture, Speed and the pitch you hear (or the tempo,
-with warp on) in words. The picture moves only while sound plays; at rest, and with your system's
+with Stretch on) in words. The picture moves only while sound plays; at rest, and with your system's
 reduced-motion setting, it is a still picture of the current values. Speed is set by its knob or a
 mapping, not by dragging the screen.
 
 ## Streamed tracks
 
-A track that is **streamed** rather than loaded plays as tape only: Pitch, Quantize, the Character
+A track that is **streamed** (played as it downloads, not loaded whole) plays as tape only: Pitch, Quantize, the Character
 controls and Stretch are locked (their stored values are kept), and Speed plays forward only. On a
 phone Speed stays at 100 %. **Load full track** in the module unlocks everything. The screen follows
 what plays: a streamed track always shows the cassette.

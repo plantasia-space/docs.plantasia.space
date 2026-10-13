@@ -5,15 +5,9 @@ sidebar_custom_props:
   icon: Layers
 ---
 
-What World **I** plays decides what the Orbiter is:
-
-- **Audio:** World I plays the audio you choose, on the **Track player** or **Granular**. II and
-  III shape that sound with effects. An Audio Orbiter has one instrument.
-- **Notes:** World I holds a notes instrument, such as the **Subtractive synth**. II and III
-  can each hold one more, so the Orbiter plays **up to three** notes instruments, like a small band:
-  a bass and a lead, or a bass, a pad and a lead.
-
-The rest of this page is about Notes Orbiters.
+A Notes Orbiter can play up to three notes instruments side by side, one per World dimension: a bass
+and a lead, or a bass, a pad and a lead. Here is how. (For Audio or Notes, see
+[Instruments](/docs/orbiters/instruments#audio-or-notes).)
 
 ![An Audio Orbiter plays its audio in World I and shapes it in II and III, one after another. A Notes Orbiter plays up to three MIDI instruments side by side.](/img/orbiters/multiple-midi-instruments/audio-or-notes.svg)
 
@@ -37,9 +31,8 @@ In a Notes Orbiter, World II and III offer notes instruments and effects. The Tr
 
 ## Each instrument in its own place
 
-A <Term id="world-dimension">World dimension</Term> that holds an instrument always runs **beside** the others, on the first stage of
-the wiring. So the instruments play side by side, each through its own effects only: the bass in II
-is never heard through III's effects. The **Dimensions** tab shows this wiring.
+Each <Term id="world-dimension">World dimension</Term> that holds an instrument plays beside the others, through its
+own effects: the bass in II is never heard through III's effects. The **Dimensions** tab shows this wiring.
 
 ![The Dimensions tab with three Subtractive synths side by side, one in each of World I, II and III.](/img/orbiters/multiple-midi-instruments/notes-wiring.jpg)
 
@@ -66,9 +59,6 @@ front of them. Their effects stay. **Undo** brings everything back.
 ![The Switch to Audio dialog, naming the synths that leave World I, II and III.](/img/orbiters/multiple-midi-instruments/switch-to-audio.jpg)
 
 ## Keep them together as one preset
-
-Presets work at three levels: a **module** preset keeps one module, a **body** preset keeps a whole
-body with its dimensions, and a **rack** preset keeps every body.
 
 To keep your instruments together, save a **World** body preset: in the Studio header, open
 **More** (⋯) → **Body presets…**, name it, and press **Save current**. Loading it brings back every

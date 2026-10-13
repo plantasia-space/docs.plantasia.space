@@ -7,9 +7,8 @@ sidebar_custom_props:
 
 The **Subtractive synth** is the plainest synth and the quickest to a sound: one oscillator, a
 sub and noise, into a low-pass filter and an amp, each with its own envelope. Basses, leads, pads and
-plucks all start here. It is a notes instrument: it sits at the head of a
-<Term id="world-dimension">World dimension</Term>, after any generator and MIDI effects, and the notes
-you play (the keys, MIDI, the piano roll, a sequencer) sound through it.
+plucks all start here. It is a notes instrument: it plays whatever notes reach it, from the keys, MIDI, the piano roll or a
+sequencer.
 
 <TryModule module="subtractive" set="wave:30,sub:40,cutoff:1200,resonance:35,envAmount:2.5,fSustain:20">
 <ModulePicture
@@ -54,9 +53,7 @@ the note ends). Drag a point, or type a value under it.
 **Release**. Then <Dot>9</Dot>**Velocity** (how much a note's velocity moves its level; at 0 every note
 is full) and <Dot>10</Dot>**Level**.
 
-Attack, Decay and Release of both envelopes can each be **bent**: the small hollow handle in the middle
-of a sloped segment is its curve. Drag it across the segment: **+** is fast at the start (a quick rise,
-a quick drop and a long tail), **−** slow. Double-click a handle to straighten it.
+Attack, Decay and Release of both envelopes can be bent: see [Envelopes](/docs/orbiters/instruments#envelopes).
 
 ## LFO, Matrix, Voice
 
@@ -76,14 +73,15 @@ Three groups start folded; open one from its column.
 
 ## The screen
 
-<Dot>14</Dot>**Sheaf.** Twelve lines lie across the screen, lows on the left and highs on the right, tied
-where the cutoff is. Left of the tie the lines are bright: what passes. Right of it they fade: what the
-filter takes away, faster as Resonance rises, which also pulls the knot tighter and lights the lines at
-it. A note swells the bundle from the middle with the amp envelope, and while it sounds the lines move
-with the oscillator: smooth for a saw, stepped towards the pulse, grainy with Noise, a slow swell on the
-lower lines with Sub. The filter envelope moves the tie; the LFO lets the knot breathe. Top right, the
-filter (**Open · nothing taken away** at 20 kHz); below, the **Cutoff** you set and the Resonance; while a note moves the filter (the envelope, or the
-wheel on Cutoff), the second one reads where the filter is **Now**.
+<Dot>14</Dot>**Sheaf.** Twelve lines lie across the screen, lows on the left and highs on the right,
+tied where the cutoff is.
+
+- **The lines** are the sound: smooth for a saw, stepped towards the pulse, grainy with Noise.
+- **The tie** is the Cutoff: left of it the lines are bright (what passes), right of it they fade
+  (what the filter takes away). Resonance pulls the knot tighter.
+- **The swell** is the Amp envelope: a note swells the bundle from the middle.
+- **The readouts**: top right, the filter (**Open · nothing taken away** at 20 kHz); below, the
+  **Cutoff** you set and the Resonance, and where the filter is **Now** while a note moves it.
 
 ## Starting points
 

@@ -41,53 +41,42 @@ An Orbiter is one or the other. Replacing World I's instrument with one of the o
   label="The Track player's module menu opens, Replace with and then Sampler are picked, a Switch to Notes? dialog appears and Switch to Notes is pressed; the Sampler loads in World I in place of the Track player."
 />
 
-## The Matrix
+## What every instrument shares
 
-The Sampler, the Subtractive synth, the FM synth, the Analog synth, the Wavetable synth and Pitched
-percussion share one way to make a sound move: the **Matrix**, a group in the panel that starts
-folded. It is a grid: what moves things across the top, what is moved down the side, an amount in
-each cell. There are no source or destination menus: a route is a cell.
+- **It is built in the Studio.** Pick it in the **Instrument** step, or from the module picker of a
+  World dimension.
+- **Its knobs map to the Orbiter.** Any knob or switch can follow an <Term id="axis">axis</Term> (X, Y, Z) or a toggle, with
+  its own minimum, <Term id="equilibrium">equilibrium</Term> and maximum. See [Edit](/docs/orbiters/edit).
+- **It shows its sound on a screen.** Each instrument has a small screen in its panel; what it draws
+  is described on the instrument's page.
+- **A notes instrument plays whatever notes reach it**, from the keys, MIDI, the piano roll or a
+  sequencer. In the chain it sits after any generator and MIDI effects, and before the audio effects.
 
-It has two tabs:
+### Envelopes
 
-- **Modulation**: the instrument's own LFOs and envelopes across the top. An instrument with none
-  (Pitched percussion) has no such tab.
-- **MIDI**: what you play, the same six columns in every instrument.
+An envelope is drawn above its knobs: **Attack**, **Decay**, **Sustain** and **Release**. Drag a
+point, or type a value under it. Attack, Decay and Release can each be **bent**: the small hollow
+handle in the middle of a sloped segment is its curve. Drag it across the segment, from **−100 %** to
+**+100 %**: **+** is fast at the start (a quick rise, a quick drop and a long tail), **−** slow (a
+swell, a fall that holds before it goes). Double-click a handle to straighten it. A curve can be
+mapped to an axis like any other control.
 
-| Column | What it reads |
-|---|---|
-| **Vel** | The note's velocity. |
-| **Key** | Where the note is on the keyboard, around C3. |
-| **PB** | The pitch bend wheel. |
-| **Press** | The keyboard's pressure (channel aftertouch). |
-| **Mod** | The mod wheel. |
-| **Rand** | A value drawn once for each note. |
+### LFO and Voice
 
-**A cell.** A dot means nothing is routed. Drag a cell left or right to set an amount from
-**−100 %** to **+100 %** (hold Shift for finer steps), or use the arrow keys; double-click puts it
-back. The arrow in the cell points the way the amount goes. **100 %** means the same in every
-instrument: **12 semitones** on a pitch row, **5 octaves** on a cutoff row (so Key → Cutoff at
-100 % follows the keyboard exactly), **1 semitone** on Vibrato, and the knob's whole travel on any
-other row. Every cell of a row adds to its knob, and the result never leaves the knob's range.
+Most notes instruments have these two groups, folded at first:
 
-**The rows.** A tab opens short: the instrument's few main rows, and every row that has an amount.
-Turn one of the instrument's knobs while the Matrix is open and its row comes in, if it has one. A
-row you leave empty is gone the next time you open the Orbiter. A row's label fills up to where its
-knob stands, so you can read the starting point beside the amounts.
+- **LFO**: a slow wave that moves things by itself. **Sync** keeps it on the Orbiter's beat (a note
+  value or bars); off, **Rate** is in Hz. Six shapes, and **Amount**: how much of it gets through.
+  What it moves is set in the [Matrix](#the-matrix).
+- **Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time) and
+  **Legato** (with Mono, a note played over a held one slides there without a new strike, over
+  **Glide**).
 
-Three kinds of row are in the MIDI tab only (the Wavetable synth has no Vibrato or Level row: its LFOs and Gain rows do that work):
+### In a room
 
-- **Pitch** holds the pitch bend: **PB → Pitch** rests at **16.7 %**, two semitones. Set it to 0 and
-  the wheel stops bending the pitch; another PB cell makes it move something else.
-- **Vibrato** is the instrument's own vibrato, a fixed 5.5 Hz. **Mod → Vibrato** rests at 50 %, so
-  the mod wheel does something on a fresh instrument. **Level** is the note's level.
-- **LFO** (or **LFO 1** and **LFO 2**) is that LFO's **Amount** knob, which scales everything the LFO
-  moves. Amount at 0 % with **Mod → LFO** at 100 % is the wheel bringing the LFO in. Only PB, Press
-  and Mod reach an LFO row.
-
-Like any number, a cell can go on an <Term id="axis">axis</Term> in the Studio's **Map** mode: the axis then sets *how
-much* the source moves its row. In a room, the pitch bend, the pressure and the mod wheel stay on
-the device that plays them.
+Everyone in a room hears the same notes and the same sound. Only what has no fixed start can differ a
+little between players: noise, and a free (unsynced) LFO over a long take. The pitch bend, the
+pressure and the mod wheel stay on the device that plays them.
 
 ## Every instrument
 
@@ -154,11 +143,47 @@ the device that plays them.
   />
 </NavigationGrid>
 
-## What every instrument shares
+## The Matrix
 
-- **It is built in the Studio.** Pick it in the **Instrument** step, or from the module picker of a
-  World dimension.
-- **Its knobs map to the Orbiter.** Any knob or switch can follow an <Term id="axis">axis</Term> (X, Y, Z) or a toggle, with
-  its own minimum, <Term id="equilibrium">equilibrium</Term> and maximum. See [Edit](/docs/orbiters/edit).
-- **It shows its sound on a screen.** Each instrument has a small screen at the centre of its
-  panel; what it draws is described on the instrument's page.
+The **Matrix** is where you say what moves a knob: velocity, the mod wheel, an LFO. The Sampler, the
+Subtractive synth, the FM synth, the Analog synth, the Wavetable synth and Pitched percussion share
+it: a group in the panel that starts folded. It is a grid: what moves things across the top, what is
+moved down the side, an amount in each cell.
+
+It has two tabs:
+
+- **Modulation**: the instrument's own LFOs and envelopes across the top. An instrument with none
+  (Pitched percussion) has no such tab.
+- **MIDI**: what you play, the same six columns in every instrument.
+
+| Column | What it reads |
+|---|---|
+| **Vel** | The note's velocity. |
+| **Key** | Where the note is on the keyboard, around C3. |
+| **PB** | The pitch bend wheel. |
+| **Press** | The keyboard's pressure (channel aftertouch). |
+| **Mod** | The mod wheel. |
+| **Rand** | A value drawn once for each note. |
+
+**A cell.** A dot means nothing is routed. Drag a cell left or right to set an amount from
+**−100 %** to **+100 %** (hold Shift for finer steps), or use the arrow keys; double-click puts it
+back. The arrow in the cell points the way the amount goes. **Key › Cutoff** at 100 % follows the
+keyboard exactly. Every cell of a row adds to its knob, and the result never leaves the knob's range.
+
+**The rows.** A tab opens short: the instrument's few main rows, and every row that has an amount.
+Turn one of the instrument's knobs while the Matrix is open and its row comes in, if it has one. A
+row you leave empty is gone the next time you open the Orbiter. A row's label fills up to where its
+knob stands, so you can read the starting point beside the amounts.
+
+Three kinds of row are in the MIDI tab only (the Wavetable synth has no Vibrato or Level row: its LFOs and Gain rows do that work):
+
+- **Pitch** holds the pitch bend: **PB › Pitch** rests at **16.7 %**, two semitones. Set it to 0 and
+  the wheel stops bending the pitch; another PB cell makes it move something else.
+- **Vibrato** is the instrument's own vibrato, a fixed 5.5 Hz. **Mod › Vibrato** rests at 50 %, so
+  the mod wheel does something on a fresh instrument. **Level** is the note's level.
+- **LFO** (or **LFO 1** and **LFO 2**) is that LFO's **Amount** knob, which scales everything the LFO
+  moves. Amount at 0 % with **Mod › LFO** at 100 % is the wheel bringing the LFO in. Only PB, Press
+  and Mod reach an LFO row.
+
+Like any number, a cell can go on an <Term id="axis">axis</Term> in the Studio's **Map** mode: the axis then sets *how
+much* the source moves its row.

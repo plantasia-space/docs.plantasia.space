@@ -6,9 +6,8 @@ sidebar_custom_props:
 ---
 
 The **Hybrid drum synth** is a drum kit made by synthesis: sixteen pads, each one a drum built from
-three layers that are played, not sampled. It is a notes instrument: it sits at the head of a
-<Term id="world-dimension">World dimension</Term>, usually after a **Drum sequencer**, and every pad
-sits on the key that sequencer's voice plays, so a new sequencer in front plays the kit with no setup.
+three layers that are played, not sampled. It is a notes instrument, usually played by a
+**Drum sequencer**: every pad sits on the key that sequencer's voice plays, so a new sequencer in front plays the kit with no setup.
 
 <TryModule module="hybridDrumSynth">
 <ModulePicture
@@ -23,16 +22,16 @@ sits on the key that sequencer's voice plays, so a new sequencer in front plays 
 
 Each pad has a **type**: what kind of drum it is.
 
-| Type | What it is made of |
+| Type | What it sounds like |
 |---|---|
-| **Kick** | a sine that drops from high to low as it strikes, over a short membrane, and a click |
-| **Snare** | two tones, a ringing membrane and the wires' hiss |
-| **Tom** | a sine with a short pitch drop over a ringing membrane |
-| **Rim** | a high, short tone, a small wooden body and a click: a side stick |
-| **Clap** | bursts of filtered air, four of them close together, then a short tail |
-| **Hat** | six square waves at metallic ratios through a band-pass, with a high hiss |
-| **Cymbal** | the hat's metal a semitone lower, with a shimmer of jingles and a long ring |
-| **Shaker** | jingles and a swelling hiss: a tambourine, or maracas with the Body off |
+| **Kick** | a low thump with a click on top |
+| **Snare** | a tuned drum with the hiss of its wires |
+| **Tom** | a ringing drum with a short pitch drop |
+| **Rim** | a high, short, woody tick: a side stick |
+| **Clap** | hand claps close together, then a short tail |
+| **Hat** | a closed or open hi-hat: metallic hiss, short or long with Decay |
+| **Cymbal** | a lower, shimmering metal with a long ring |
+| **Shaker** | a tambourine, or maracas with the Body off |
 | **Wood** | a wooden block's ring |
 | **Bell** | a bell's ring, with its hum below the note |
 | **Empty** | nothing: the pad is silent and its key plays nothing |
@@ -98,14 +97,14 @@ hi-hat in group 1, so the closed hat cuts the open one as on a real kit.
 ## Voices
 
 The <Dot>16</Dot>**Voices** group (folded) sets how many pads can ring at once, 1 to 16 (6 by default), shared by
-all sixteen pads. A pad struck again rings on its own voice, struck again from where it is, so a roll
-never clicks. When every voice is busy, the oldest ring makes way.
+all sixteen pads. A pad hit again restarts without a click, so a roll
+stays clean. When every voice is busy, the oldest ring makes way.
 
 ## Playing it
 
 - **From a Drum sequencer:** each of its voices plays the pad on its note. Its **Gate** does nothing on
   this kit: every strike rings to its end.
-- **From the keys, MIDI or the piano roll:** the pads sit on General MIDI's drum keys (the kick on C1),
+- **From the keys, MIDI or the piano roll:** the pads sit on the usual drum keys (the kick on C1),
   and every surface names them (Kick, Snare, … or the type's name once you change a pad's type). A key
   with no pad plays nothing.
 
@@ -118,13 +117,14 @@ never clicks. When every voice is busy, the oldest ring makes way.
 
 ## Mapping
 
-In the Studio's **Map** mode every knob can follow an <Term id="axis">axis</Term>: the kit's Decay for a
-tight-to-roomy kit, the kit's Tune, a kick's Snap and Decay for its punch, a snare's Body down and
-Noise up on one axis (shell to wires), the hats' Decay to open them, the cymbals' Tone. A pad's type and
-its choke group are choices, never on an axis.
+In the Studio's **Map** mode every knob can follow an <Term id="axis">axis</Term>. Two to try first:
+
+- the kit's **Decay**: from a tight kit to a roomy one
+- the hats' **Decay**: to open them
+
+A pad's type and its choke group are choices, never on an axis.
 
 ## In a room
 
-Every player hears the same pads struck on the same steps, and the same sound, except for the noise:
-each player's noise is its own, so the hiss of a snare or a hat is never sample-identical between
-players.
+Everyone in a room hears the same pads on the same steps and the same sound; only the noise (a
+snare's or a hat's hiss) can differ a little.

@@ -10,8 +10,7 @@ small synthesizer of its own. Kicks are falling sines, snares are tone and noise
 clashing square waves, toms and blocks ring through a resonant filter. Nothing is sampled, and because
 every pad is built from the same voice, any pad can become any drum.
 
-It is a notes instrument: it sits at the head of a <Term id="world-dimension">World dimension</Term>,
-usually after a **Drum sequencer**. Every pad sits on the key that sequencer's voice plays, so a new
+It is a notes instrument, usually played by a **Drum sequencer**. Every pad sits on the key that sequencer's voice plays, so a new
 sequencer in front plays the kit with no setup.
 
 ## The panel
@@ -32,8 +31,6 @@ The panel has two parts: the <Dot>1</Dot>**pads** on the left, and one block wit
 - The selected pad has an outline. Which pad is selected is only what you are editing: it is not saved
   and other players in a room don't see it.
 
-The knobs grow with the Studio's drawer: the larger knobs are the ones that change the sound most.
-
 ## Naming pads
 
 Every pad has a **name**, and the name is yours: **double-click** a pad (on a touch screen, **press and
@@ -53,9 +50,9 @@ others keeps its distance: turn the kit's Tone down and every pad gets darker by
 | **Tune** | Every pad's pitch, in semitones. |
 | **Tone** | Every pad's filter cutoff, in octaves: darker down, brighter up. |
 | **Decay** | Every pad's decays (the sound, its pitch drop and its filter sweep), as a factor: below 100 % tighter, above roomier. |
-| **Drive** | Added to every pad's Drive: cleaner down, dirtier up. |
-| **Resonance** | Added to every pad's Resonance. |
-| **Audio mod** | Added to every pad's Audio mod: cleaner down, more metallic up. |
+| **Drive** | Cleaner down, dirtier up, on every pad. |
+| **Resonance** | Sharper peaks on every pad. |
+| **Audio mod** | Cleaner down, more metallic up, on every pad. |
 | **High-pass** | Every pad's high-pass, in octaves: up thins the whole kit. |
 | **Attack** | Every pad's attack, as a factor: sharper down, softer up. |
 | **Velocity** | How much a strike's velocity changes its level. At 0 % every strike is full. |
@@ -101,7 +98,7 @@ blends on the way (the readout says "Triangle→saw").
 |---|---|
 | **Cutoff** | Where the low-pass starts taking away. Fully open at 20 kHz. |
 | **Resonance** | A peak at the cutoff. Near 100 % the filter rings: a tuned ping for blocks and toms. |
-| **Audio mod** | Osc 1 moves the cutoff at audio rate, up to four octaves each way: bells, cowbells, cymbals. It works even with the 1/2 mix all on Osc 2. |
+| **Audio mod** | Osc 1 shakes the filter so fast it turns metallic: bells, cowbells, cymbals. It works even with the 1/2 mix all on Osc 2. |
 | **Filter env** | How far a strike opens (or closes) the cutoff, in octaves. |
 | **Filter decay** | How long the filter takes to come back. |
 | **High-pass** | Takes away the lows. 10 Hz is its lowest. |
@@ -123,7 +120,7 @@ blends on the way (the readout says "Triangle→saw").
 ## One-shot pads and choke
 
 Every strike is a **one-shot**: it plays to its end, whatever the length of the note that struck it. A
-pad struck again while it rings starts again from where it is, so a roll or a ratchet never clicks.
+pad struck again while it rings starts again from where it is, so a roll never clicks.
 
 Pads in the same **choke group** cut each other: a strike silences every other pad of its group that is
 still ringing. The default kit puts the closed and the open hi-hat in group 1, so the closed hat cuts the
@@ -136,20 +133,11 @@ long as it rings, so a crash's tail isn't cut short by the beat around it.
 
 - **From a Drum sequencer:** each voice plays the pad on its **Note**, so moving a voice's Note moves it
   to another pad. The sequencer's **Gate** does nothing on this kit: every strike rings to its end.
-- **From the keys, MIDI or the piano roll:** the pads sit on General MIDI's drum keys (the kick on C1),
-  named by your pad names. A key with no pad plays nothing.
+- **From the keys, MIDI or the piano roll:** the pads sit on the usual drum keys (the kick on C1),
+  named by your pad names. A key with no pad plays nothing. The list of keys is at
+  [the end of the page](#the-pads-keys).
 
-| Pad | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
-|---|---|---|---|---|---|---|---|---|
-| **Default** | Kick | Snare | Rim | Clap | Closed hat | Open hat | Low tom | Mid tom |
-| **Key** | C1 | D1 | C♯1 | D♯1 | F♯1 | A♯1 | A1 | B1 |
-
-| Pad | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
-|---|---|---|---|---|---|---|---|---|
-| **Default** | High tom | Ride | Crash | Shaker | Tambourine | Block | Soft snare | Splash |
-| **Key** | D2 | D♯2 | C♯2 | A♯3 | F♯2 | E4 | E1 | G2 |
-
-## Its screen while you play
+## On the play monitor
 
 Set the Analog drum synth's Panel to **Screen** (the Visuals step in the Studio) and the play monitor
 shows the kit while an axis moves it: the sixteen pads by name, each lighting when it is struck and
@@ -177,5 +165,17 @@ names and the choke groups are never on an axis.
 
 ## In a room
 
-Every player hears the same pads struck on the same steps, with the same sound, except for the noise:
-each player's noise is its own, so a snare's or a hat's hiss is never sample-identical between players.
+Everyone in a room hears the same pads on the same steps and the same sound; only the noise (a
+snare's or a hat's hiss) can differ a little.
+
+## The pads' keys
+
+| Pad | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 |
+|---|---|---|---|---|---|---|---|---|
+| **Default** | Kick | Snare | Rim | Clap | Closed hat | Open hat | Low tom | Mid tom |
+| **Key** | C1 | D1 | C♯1 | D♯1 | F♯1 | A♯1 | A1 | B1 |
+
+| Pad | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
+|---|---|---|---|---|---|---|---|---|
+| **Default** | High tom | Ride | Crash | Shaker | Tambourine | Block | Soft snare | Splash |
+| **Key** | D2 | D♯2 | C♯2 | A♯3 | F♯2 | E4 | E1 | G2 |
