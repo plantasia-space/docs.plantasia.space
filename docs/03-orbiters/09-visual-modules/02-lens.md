@@ -9,6 +9,33 @@ The **Lens** changes the lens the Orbiter is seen through. It draws nothing: it 
 field of view, and slides the picture to one side. Add it with **Visual module +** on any body; no
 sound module brings it.
 
+<figure className="ps-doc-themed-figure">
+  <iframe
+    className="ps-doc-themed-image ps-doc-themed-image--light"
+    src="/figures/orbiters/lens-light.html"
+    title="The Orbiter's camera: the lens barrel is Width, the cross-slide is Shift, the knob on the console is Amount"
+    loading="lazy"
+    style={{ width: '100%', height: 710, border: 0 }}
+  />
+  <iframe
+    className="ps-doc-themed-image ps-doc-themed-image--dark"
+    src="/figures/orbiters/lens.html"
+    title="The Orbiter's camera: the lens barrel is Width, the cross-slide is Shift, the knob on the console is Amount"
+    loading="lazy"
+    style={{ width: '100%', height: 710, border: 0 }}
+  />
+</figure>
+
+Think of the Lens as the Orbiter's own camera, bolted to its hull. Move over the picture to work it:
+
+| On the camera | In the Lens module |
+|---|---|
+| **The lens barrel** slides in and out | **Width**: in, the lens opens and the World pulls back; out, it closes and the World looms |
+| **The two lines on the deck** | the field of view, as wide as the lens is open |
+| **The cross-slide** under the camera | **Shift**: the camera moves one way and the picture slides the other |
+| **The knob on the console** | **Amount**: how far Width and Shift move the lens |
+| **The viewfinder** on the console | what you see: the World, larger or smaller, to one side or the other |
+
 :::note[It loads doing nothing]
 
 With **Width** and **Shift** at 0 % the view is the Orbiter's own. Turn one of them, or map it to an
