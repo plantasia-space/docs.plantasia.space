@@ -9,20 +9,6 @@ Two reverbs put a sound in a space, from a small room to a long hall: the **Reve
 control in reach, and the **One Reverb**, one knob that does it all. Both go in any effects rack. The
 Reverb's home is a **<Term id="moon">Moon</Term>**; the One Reverb is mostly an insert on a <Term id="world-dimension">World dimension</Term> or the <Term id="star">Star</Term>.
 
-## On a Moon, or as an insert
-
-A **Moon** is a send and return: the World is sent to it, and what it returns is added to the dry
-World through the Star's Main mix. So a reverb on a Moon should return only the reverb, never the dry
-sound again, or the dry is heard twice.
-
-- **An effect added to a Moon starts at Dry/wet 100 %.** This goes for every effect with a Dry/wet
-  knob, the Reverb included. You can still turn it down for a deliberate dry leak.
-- **How much reverb you hear** is the [Channels'](/docs/orbiters/audio-effects/channel): the sends into the Moon, the Moon channel's Level, and the Moon level of the Star's Main mix.
-- **The tail outlives the sound.** The Moon runs after the World, so a World dimension going quiet
-  doesn't stop the tail. When the send is closed, nothing more goes in and what is ringing rings out.
-
-As an **insert** on a World dimension or the Star, a reverb blends with the sound it is on.
-
 :::tip[How they load]
 
 On a World the Reverb loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Reverb loads doing nothing (Amount 0 %): turn it up to hear it.
@@ -44,7 +30,7 @@ On a World the Reverb loads at Dry/wet 50 %, so you hear it as soon as you add i
 
 | Control | What it does |
 |---|---|
-| <Dot>1</Dot>**Decay** | How long the tail rings, in seconds, before it fades by 60 dB: about 0.5 s is a small room, 2–4 s a hall, 10 s and more an ambient wash. 0.2 … 20 s. |
+| <Dot>1</Dot>**Decay** | How long the tail rings: about 0.5 s is a small room, 2 to 4 s a hall, 10 s and more a wash. 0.2 … 20 s. |
 | <Dot>2</Dot>**Pre-delay** | A gap before the reverb starts, 0 … 200 ms: keeps the sound in front of its room. |
 | <Dot>3</Dot>**Bass** | How long the low end rings, compared to Decay (×0.5 … ×2). Below ×1 keeps long tails clean. |
 | <Dot>4</Dot>**Freeze** | Holds the tail forever and stops new sound from getting in: play a chord, freeze it, and play over the pad it leaves. Turn it off and the tail fades at Decay again. Freeze can be mapped to the Orbiter's toggles. |
@@ -62,28 +48,20 @@ These shape the reverb only; the dry sound is never filtered.
 
 ### Output
 
-<Dot>9</Dot>**Dry/wet** blends the dry sound with the reverb (50 % as it loads on a World, 100 % on a Moon, 0 % on a Star), and <Dot>10</Dot>**Level**
-sets the level after it.
+<Dot>9</Dot>**Dry/wet** blends the dry sound with the reverb, and <Dot>10</Dot>**Level** sets the level after it.
+
+On a Moon it starts at Dry/wet 100 % and returns only the effect; the Moon level sets how much you
+hear (see [Audio effects](/docs/orbiters/audio-effects)).
 
 ### The screen
 
 <Dot>11</Dot>A wireframe cube hangs in a starry sky above the sound, with rings spreading out from it.
 
-- **The big number, top left, is Dry/wet** (0 … 100): how much of the reverb you hear. At 0 % it
-  turns grey and the whole picture is muted (**Dry · 0 %**).
-- **The cube's size is Decay.** It turns slowly while sound plays.
-- **Rings** leave the sound at one fixed speed; each ring's brightness is how loud the tail still is
-  at that age, so a short decay fades near the centre and a long one reaches the edge. The empty
-  dotted disc in the middle is the **pre-delay**.
-- **Damping** is the sparks rising up the beam, up to a dotted line: lower damping, lower line.
-- **Low and High cut** are bars closing the beam from its edges, low down and high up.
-- **Width** is how wide the beam and the rings spread.
-- **Freeze** stops everything where it is and turns the beam solid: **Frozen**.
-
-The word on the screen names the space by its Decay: **Room**, **Hall** or **Wash**. Below the
-picture, Dry/wet, then Decay, the pre-delay and how long the lows and the highs ring. The picture
-moves only while sound plays; at rest, and with your system's reduced-motion setting, it is a still
-picture of the current values.
+- **The big number, top left, is Dry/wet**: how much of the reverb you hear. At 0 % the whole
+  picture is muted (**Dry · 0 %**).
+- **The cube's size is Decay**, and the rings reach further the longer the tail rings.
+- **The word** names the space by its Decay: **Room**, **Hall** or **Wash**.
+- **Freeze** stops everything where it is: **Frozen**.
 
 ## One Reverb
 
@@ -98,30 +76,21 @@ picture of the current values.
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 reverb; at 0 it does nothing, and either way the level stays about where it was.
 
-- **Turn it up** (+): the sound moves from a dry booth into a close room, then a long, darker hall.
-  The first half gives a sound air without sounding "reverbed"; past +50 it opens into a hall.
-- **Turn it down** (−): a bright, airy plate with a thin low end. Further down it waits longer
-  before it starts (up to 100 ms) and rings longer, so it **blooms** after the note.
+- **Turn it right: Room, then Hall.** The sound moves from a dry booth into a close room, then a
+  long, darker hall. The first half gives a sound air without sounding "reverbed"; past +50 it opens
+  into a hall.
+- **Turn it left: Plate, then Bloom.** A bright, airy plate with a thin low end. Further left it
+  waits longer before it starts and rings longer, so it blooms after the note.
 
 Everything else is set for you: the decay, how the lows and highs fade, the pre-delay and the cuts.
 Map Amount to an <Term id="axis">axis</Term> and one gesture sweeps from the bloom, through dry, to the hall.
 
-:::note[On a Moon it turns into a send by itself]
-
-It returns only the reverb, with no dry, so there is nothing to set. An untouched One Reverb on a Moon (Amount 0) passes the sound through unchanged, so an effect after it on the same Moon still hears it; the dry leaves as you turn Amount up, over its first 5 %.
-
-:::
-
 ### The screen
 
-<Dot>2</Dot>A craft hovers over the sound: hidden at 0, a small, tall dome that widens into a flat saucer as
-you turn further either way. Turned up it flies dome up (a room, a hall); turned down it flies upside
-down, shining on the sound (a plate), and its echoes start past a dotted ring: the gap before the
-bloom. Its echoes ring out on the ground beneath it, more of them as the space grows, and the lights
-on its rim and the ladder on the right follow how loud the reverb is. The big number is the decay in
-seconds; the word says **Room** or **Hall** turned up, **Plate** or **Bloom** turned down. On a Moon
-the sound under the craft is drawn hollow (the dry stays on the World side) and the screen reads
-**Send ·** and the word.
+<Dot>2</Dot>A craft hovers over the sound: hidden at 0, a small dome that widens into a flat saucer as you
+turn further either way. Turned right it flies dome up; turned left it flies upside down, shining on
+the sound. The big number is the decay in seconds; the word says **Room** or **Hall** turned right,
+**Plate** or **Bloom** turned left.
 
 ## Try it
 
