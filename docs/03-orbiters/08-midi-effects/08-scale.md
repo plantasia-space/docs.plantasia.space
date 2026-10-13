@@ -64,7 +64,7 @@ note comes in as a dot above its own column, drops, slides sideways to the cell 
 the last three landings stay lit and fade. With **Block**, a note that isn't played leaves a cross, and a
 note outside **Acts on** stays grey above the row. The big number is how far the last note moved. With
 the User scale you can tap a cell to put that note in or take it out (never the root). Top right, the
-last note out; below, the Transpose and the tonality.
+last note out; below, how far that note moved, in semitones, and the tonality.
 
 ## Try it
 

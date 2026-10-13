@@ -59,7 +59,7 @@ came in.
 diagonal up to the threshold, then bends flatter, as flat as the Ratio says. The upright line is the
 **Threshold** and the band around it the **Knee**. While sound plays, the dot on the line is the level
 the compressor hears (after SC high-pass). Above, the ratio and the knee; below, the threshold and the
-knee's width.
+knee's width, or, with SC high-pass on, the frequency the detector listens above.
 
 <Dot>11</Dot>**Reduction.** How much the compressor is turning the sound down at this moment: the bar
 drops from the top as it works, up to 40 dB, and the number below is the reduction in dB.

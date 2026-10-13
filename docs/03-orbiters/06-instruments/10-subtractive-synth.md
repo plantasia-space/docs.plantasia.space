@@ -82,8 +82,8 @@ filter takes away, faster as Resonance rises, which also pulls the knot tighter 
 it. A note swells the bundle from the middle with the amp envelope, and while it sounds the lines move
 with the oscillator: smooth for a saw, stepped towards the pulse, grainy with Noise, a slow swell on the
 lower lines with Sub. The filter envelope moves the tie; the LFO lets the knot breathe. Top right, the
-filter (**Open · nothing taken away** at 20 kHz); below, the **Cutoff** you set and where the filter is
-**Now**.
+filter (**Open · nothing taken away** at 20 kHz); below, the **Cutoff** you set and the Resonance; while a note moves the filter (the envelope, or the
+wheel on Cutoff), the second one reads where the filter is **Now**.
 
 ## Starting points
 

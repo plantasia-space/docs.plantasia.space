@@ -153,7 +153,7 @@ and still: **Centred**. In the smallest drawer the screen hides and the knob sta
 ## Try it
 
 - **Hi-hats that travel.** On a hat or a shaker line: Amount **70 %**, **Sync** on, Rate **1/2**, Shape **Sine**. The hats cross the image once every half bar.
-- **A ping-pong chop.** On a synth stab: Sync on, Rate **1/8**, Shape **Square**, Amount **100 %**. Each eighth lands on the other side.
+- **A ping-pong chop.** On a synth stab: Sync on, Rate **1/4**, Shape **Square**, Amount **100 %**. One trip there and back takes a quarter note, so each eighth lands on the other side.
 - **A loop that moves with a steady kick.** Amount **60 %**, Rate **0.25 Hz**, Low cut **150 Hz**: the top of the loop drifts and the lows stay in the centre.
 - **One gesture.** The One Auto-panner with Amount on an axis: the Chop one way, the still sound in the middle, the Drift the other.
 

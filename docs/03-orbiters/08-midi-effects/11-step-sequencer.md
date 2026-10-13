@@ -34,7 +34,7 @@ You meet it in two places, which always show the same state:
 | Control | What it does |
 |---|---|
 | <Dot>3</Dot>**Direction** | Which way the steps run: **Forward**, **Backward**, **Ping-pong** (there and back, the ends played once) or **Random**. |
-| <Dot>4</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, straight or triplet. **1/16** as it loads. |
+| <Dot>4</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, from 8 bars down to short notes, with dotted values and triplets. **1/16** as it loads. |
 | <Dot>5</Dot>**Gate** | Every step's length, times this, 10 … 200 %: short for staccato, over 100 % for notes that run into each other. |
 | <Dot>6</Dot>**Swing** | Delays every second step, by up to half a step. |
 
@@ -122,7 +122,8 @@ steps with its number and its name; an unused one reads **Empty**.
 />
 
 - **Tap a pad** to switch. While the transport plays, the switch waits for the Orbiter's **launch grid**,
-  so it lands on a bar line; tap the waiting pad again to take it back. Stopped, it switches at once. The
+  so it lands on the grid's next line (a bar, at the 1 Bar setting); tap the waiting pad again to take it
+  back. Stopped, or with the launch grid off, it switches at once. The
   line beside **Shift** says what a tap does now ("Tap launches now"), and **Shift** flips it.
 - **Store** keeps what is playing in its pattern; Store, then a pad, keeps it in that pad.
 - **Copy**, **Paste** and **Clear** work on whole patterns, and **Undo** takes back the last of them.
@@ -150,7 +151,7 @@ screen is drawn large in the play monitor.
 - **Play it in other keys with one finger.** With **Keys** on, hold **F3** while it runs: the line moves up a fourth, in the scale. Let go and it comes back.
 - **A figure that never repeats the same way.** Set a few steps' **Chance** to 50 %, and the Velocity lane to **3** steps.
 - **A shorter loop on an axis.** Map **Length** from 16 down to 4: the pattern closes in on its first steps as the Planet moves away.
-- **A second pattern for the change.** In Patterns, tap **Store**, then pad 2: the pattern is kept there too. Tap pad 2, change its notes in Notes, and Store. While it plays, a tap on either pad switches on the next bar.
+- **A second pattern for the change.** In Patterns, tap **Store**, then pad 2: the pattern is kept there too. Tap pad 2, change its notes in Notes, and Store. While it plays, a tap on either pad switches on the launch grid's next line.
 
 ## Mapping
 
@@ -161,4 +162,4 @@ drawn, not mapped.
 ## In a room
 
 Everyone hears the same notes on the same steps: what a step plays depends only on the beat, and the
-chance draws are shared. A pattern switch reaches every player on the same bar line.
+chance draws are shared. A pattern switch reaches every player on the same beat.

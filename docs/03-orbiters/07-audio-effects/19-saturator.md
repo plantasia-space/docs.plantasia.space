@@ -79,9 +79,11 @@ to the crunch.
 ### The screen
 
 <Dot>2</Dot>**The Bloom.** A plant whose petals are the harmonics the knob adds. At 0 it is a closed
-bud; turned up, the stem grows and it flowers: one pair of petals for each harmonic loud enough to hear,
-each as long as it is loud, the outer ones shortening as the top end closes. Past half way to the right
-the petals grow teeth and sparks drift off: the crunch. The big number is the drive the knob has set
+bud; turned either way, the stem grows and it flowers. To the right (Warm) it is a star of pointed
+petals: one pair for each odd harmonic loud enough to hear, each as long as it is loud, the outer ones
+shortening as the top end closes; past half way the petals grow teeth and sparks drift off: the crunch.
+To the left (Tube) it is a tulip: a cup of three broad petals, with a stamen inside for each even
+harmonic, and a soft glow around it past half way. The big number is the drive the knob has set
 inside, and the ladder counts the harmonics you can hear. The word above says **Warmth**, **Crunch** or
 **Tube**; below, the drive and the top end. While sound plays the plant breathes and leans with its
 level; at rest it is a still picture.

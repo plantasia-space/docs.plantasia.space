@@ -19,7 +19,7 @@ dimension has at most one. It plays on the Orbiter's tempo, and everyone in a ro
 />
 </TryModule>
 
-<Dot>2</Dot>Its knobs are on four tabs: **Play**, **Shift**, **Velocity** and **Restart**.
+<Dot>2</Dot>Its knobs are on four tabs: **Play**, **Shift**, **Velocity** and **Cycle**.
 
 ## Play
 
@@ -68,7 +68,7 @@ a step.
 | **Fixed** | The velocity every note leans to when Played is under 100 %. |
 | **Random** | Moves each note's velocity up or down by chance, the same for everyone in a room. |
 
-## Restart
+## Cycle
 
 | Control | What it does |
 |---|---|
