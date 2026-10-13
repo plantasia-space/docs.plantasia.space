@@ -18,14 +18,14 @@ want the phone to move; the others stay under manual control.
 
 <img className="ps-doc-themed-image" src="https://herbarium.plantasia.space/docs/en/media/orbiters/orbiter-sensor-panel_mid.webp" alt="The Sensors panel with the X, Y and Z toggles" />
 
-The toggles are **per dimension**. Enabling X in dimension 1 does not enable it in dimension 2 —
+The toggles are **per dimension**. Enabling X in dimension 1 does not enable it in dimension 2:
 switch dimension and set the toggles you want there. Switching back restores what you had.
 
 The first time you turn a sensor on, the phone asks for permission to use motion. Accept it once.
 
 ### Calibrating
 
-Hold the phone the way you want to play and press **Calibrate**. That position becomes the centre —
+Hold the phone the way you want to play and press **Calibrate**. That position becomes the centre:
 the equilibrium of X, Y and Z. Tilt away from it to move the controls, tilt back to return.
 
 ## Where the phone comes from
@@ -53,8 +53,8 @@ again.
 
 ## Several Orbiters at once
 
-When more than one Orbiter is open on the desktop — a collection in the multi-orbiter view, or the
-home feed — each Orbiter has its **own** sensor toggles, per dimension, exactly as above. Turning X
+When more than one Orbiter is open on the desktop (a collection in the multi-orbiter view, or the
+home feed), each Orbiter has its **own** sensor toggles, per dimension, exactly as above. Turning X
 on for one Orbiter does not turn it on for the others.
 
 ### From the desktop
@@ -64,7 +64,7 @@ moves the selected ones that have that axis turned on.
 
 ### From the phone
 
-The paired phone shows the open Orbiters as **A, B, C, D**. Tap the ones you want to play — one or
+The paired phone shows the open Orbiters as **A, B, C, D**. Tap the ones you want to play: one or
 several. The phone drives only those:
 
 <img className="ps-doc-themed-image" src="https://herbarium.plantasia.space/docs/en/media/orbiters/mobile-client_mid.webp" alt="The phone controller: Orbiters A to D, dimension tabs and the X, Y, Z toggles" />
@@ -77,12 +77,12 @@ several. The phone drives only those:
 Selecting Orbiters on the phone does not change what is selected on the desktop, and selecting on
 the desktop does not change the phone. They are two hands on the same instrument.
 
-With no Orbiter tapped, the phone drives nothing — tilt and toggles do nothing until you pick one.
+With no Orbiter tapped, the phone drives nothing: tilt and toggles do nothing until you pick one.
 
 The phone's toggles and dimension tabs describe the **first Orbiter you tapped**. Turning an axis off
 on the desktop for that Orbiter turns it off on the phone too; it is the same toggle.
 
 ## Sensors only
 
-On the phone you can **hide the controls** — the Orbiter buttons, the dimension tabs and the toggles —
+On the phone you can **hide the controls** (the Orbiter buttons, the dimension tabs and the toggles)
 to leave a clean surface for tilting. The phone remembers this choice. Show them again the same way.

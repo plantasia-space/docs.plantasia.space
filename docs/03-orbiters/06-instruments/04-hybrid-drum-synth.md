@@ -47,7 +47,7 @@ instrument. The drawing follows the pad: a hi-hat opens once its Decay is long, 
 smaller as you tune them up, a Shaker is a tambourine with its jingles on and a pair of maracas with
 them off.
 
-- **Tap** a pad to select it (its controls fill the **Pad** group) and hear it.
+- **Tap** a pad to select it (its controls fill the **Pad** group) and hear it. (On the Analog drum synth a tap only selects.)
 - A pad **lights up** while it sounds, as long as it rings: a crash glows for a while, a closed hat
   blinks.
 - **Swap two pads:** press and hold a pad for a moment until it lifts, drag it onto another and let
@@ -113,7 +113,7 @@ never clicks. When every voice is busy, the oldest ring makes way.
 
 - **A beat with no setup.** Put a Drum sequencer in front of it and draw a kick on 1 and 3, a snare on 2 and 4 and closed hats on the eighths: every voice already plays its pad.
 - **A deeper, longer kick.** Select the kick: Tune **−4 st**, Decay **×2**, Snap up a little for the click.
-- **Open and close the hats with one move.** Map the closed hat's **Decay** to an axis: short at rest, ringing as the Planet moves away.
+- **Open and close the hats with one move.** Map the closed hat's **Decay** to an axis: short at rest, ringing as the axis moves away from rest.
 - **A tighter kit for a fast beat.** The kit's Decay at **60 %**: every pad rings shorter and keeps its own character.
 
 ## Mapping

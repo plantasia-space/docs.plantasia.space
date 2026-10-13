@@ -20,7 +20,7 @@ The Parametric EQ loads with three bands on (a low shelf, a bell and a high shel
 <ModulePicture
   src="/img/orbiters/audio-effects/parametric-eq.jpg"
   alt="The Parametric EQ with a low shelf up, a bell cut at 750 Hz and a high shelf up: the Response screen, then the eight bands with their shape and switch, the selected band's Freq, Gain and Q, and Output."
-  dots={[[1, 50, 12.5], [2, 2.6, 52.1], [3, 2.6, 58.6], [4, 2.6, 64.6], [5, 19.5, 83.3], [6, 42.9, 83.3], [7, 66.3, 83.3], [8, 92.7, 61.2], [9, 92.7, 84.6]]}
+  dots={[[1, 2.6, 52.1], [2, 2.6, 58.6], [3, 2.6, 64.6], [4, 19.5, 83.3], [5, 42.9, 83.3], [6, 66.3, 83.3], [7, 92.7, 61.2], [8, 92.7, 84.6], [9, 50, 12.5]]}
 />
 </TryModule>
 
@@ -28,10 +28,10 @@ The Parametric EQ loads with three bands on (a low shelf, a bell and a high shel
 
 Eight bands in a row, numbered 1 to 8 from low to high. Each has:
 
-- <Dot>2</Dot>a **shape** menu, the small curve above it;
-- <Dot>3</Dot>a **switch**, the hexagon: lit, the band is in the sound. Switching glides, so you can
+- <Dot>1</Dot>a **shape** menu, the small curve above it;
+- <Dot>2</Dot>a **switch**, the hexagon: lit, the band is in the sound. Switching glides, so you can
   flip a band while the sound plays, and map it to a toggle;
-- <Dot>4</Dot>its **number**: tap it to show that band's knobs below.
+- <Dot>3</Dot>its **number**: tap it to show that band's knobs below.
 
 | Shape | What it does |
 |---|---|
@@ -46,20 +46,20 @@ The three knobs are the selected band's:
 
 | Control | What it does |
 |---|---|
-| <Dot>5</Dot>**Freq** | The band's frequency, 20 Hz … 20 kHz: the centre of a bell or a notch, the corner of a shelf or a cut. |
-| <Dot>6</Dot>**Gain** | The boost or the cut, −15 … +15 dB, for a bell or a shelf. A cut or a notch has no gain: it reads n/a. |
-| <Dot>7</Dot>**Q** | How narrow a bell or a notch is, how steep a shelf, or how much a cut peaks at its corner. 0.1 … 18. |
+| <Dot>4</Dot>**Freq** | The band's frequency, 20 Hz … 20 kHz: the centre of a bell or a notch, the corner of a shelf or a cut. |
+| <Dot>5</Dot>**Gain** | The boost or the cut, −15 … +15 dB, for a bell or a shelf. A cut or a notch has no gain: it reads n/a. |
+| <Dot>6</Dot>**Q** | How narrow a bell or a notch is, how steep a shelf, or how much a cut peaks at its corner. 0.1 … 18. |
 
 ## Output
 
 | Control | What it does |
 |---|---|
-| <Dot>8</Dot>**Scale** | Scales every bell's and shelf's gain at once: **0 %** is flat, **100 %** as you set them, **200 %** doubles the curve. Map it to an axis to fade the whole EQ in. |
-| <Dot>9</Dot>**Level** | Makes up the level the EQ adds or takes away. |
+| <Dot>7</Dot>**Scale** | Scales every bell's and shelf's gain at once: **0 %** is flat, **100 %** as you set them, **200 %** doubles the curve. Map it to an axis to fade the whole EQ in. |
+| <Dot>8</Dot>**Level** | Makes up the level the EQ adds or takes away. |
 
 ## The screen
 
-<Dot>1</Dot>**Response.** The white line is the whole EQ: above the middle line it boosts, below it
+<Dot>9</Dot>**Response.** The white line is the whole EQ: above the middle line it boosts, below it
 cuts, lows on the left and highs on the right. Each band is a numbered point on it, filled when the band
 is on; the selected one has an upright line through it. Drag a point to move its frequency and its gain
 (or its Q, for a cut or a notch). In the Studio, the sound's own spectrum moves behind the line while it

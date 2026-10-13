@@ -14,7 +14,7 @@ is one. A change applies from the next note.
 
 :::tip[How it loads]
 
-Scale loads following the Orbiter's tonality, snapping to the nearest note. With no scale set on the
+Scale loads following the Orbiter's tonality (its key and scale), moving outside notes to the nearest note of it. With no scale set on the
 Orbiter every note is in it, so nothing changes; once the Orbiter has a key, Scale holds the notes to it.
 
 :::
@@ -77,3 +77,7 @@ last note out; below, how far that note moved, in semitones, and the tonality.
 
 <Term id="axis">Axes</Term> can drive **Transpose**, **Lowest** and **Range**; toggles can flip
 **Follow**. The root and the scale are choices, never on an axis.
+
+## In a room
+
+Every player hears the same notes moved the same way: the snap depends only on the note and the scale.

@@ -61,7 +61,7 @@ marker at the left you can drag. The word above says what is at work: the mode (
 - **An old sampler on drums.** Resolution **12 bit**, Downsampling **3×**: a light grain and a darker top.
 - **A game console lead.** On a plain synth line: Resolution **6 bit**, Downsampling **8×**.
 - **A broken radio.** Mode **Wrap**, Drive **18 dB**, Clip level **−12 dB**, Dry/wet **60 %**, then Level up about 12 dB.
-- **Decay on an axis.** Map **Downsampling** from 1× to 30×: the sound falls apart as the Planet moves away and comes back whole at rest.
+- **Decay on an axis.** Map **Downsampling** from 1× to 30×: the sound falls apart as the axis moves away from rest and comes back whole when it returns.
 
 ## Mapping
 

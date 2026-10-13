@@ -61,12 +61,12 @@ Looping remains available across all panels.
 Set a loop three ways: **drag** a region on the waveform, pick a **loop size** (1 bar, 4 bars, …),
 or mark **IN** and **OUT** points at the playhead.
 
-- The size presets loop forward from the loop you're inside — or **from the playhead** when the
+- The size presets loop forward from the loop you're inside, or **from the playhead** when the
   loop is off or you're outside it.
 - **IN and OUT are independent.** With a loop already set, marking a new IN moves the loop right
-  away, keeping the old OUT. An IN past the current OUT clears the OUT — mark a new one when you're
+  away, keeping the old OUT. An IN past the current OUT clears the OUT: mark a new one when you're
   ready. An OUT before the IN is ignored.
-- A loop can be **switched off while keeping its markers** — they sit inert until you enable it
+- A loop can be **switched off while keeping its markers**: they sit inert until you enable it
   again.
 
 
@@ -95,7 +95,7 @@ Jamming mode is the primary interaction mode.
 - X and Y are controlled by movement across the screen
 - Z is controlled via zoom gestures or dedicated controls
 
-You can also use the knobs directly, or tilt a phone — see [Sensors](./sensors).
+You can also use the knobs directly, or tilt a phone: see [Sensors](./sensors).
 
 ### Reset to equilibrium
 

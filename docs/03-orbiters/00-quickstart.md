@@ -1,7 +1,7 @@
 ---
 title: Your first Orbiter in 5 minutes
 sidebar_label: Quickstart
-description: Build an Orbiter from nothing — an instrument, one effect, mapped to an axis — and play it.
+description: Build an Orbiter from nothing (an instrument, one effect, mapped to an axis) and play it.
 sidebar_position: 1.5
 hide_table_of_contents: true
 sidebar_custom_props:
@@ -103,4 +103,6 @@ Open the **Release** step: give the Orbiter a cover and an **Orbiter Name**, cho
 
 - **More instruments**: the [Sampler](/docs/orbiters/instruments/sampler), or a Notes Orbiter with [up to three instruments](/docs/orbiters/instruments/multiple-midi-instruments).
 - **More effects**: where an effect can go, a World dimension, the Star or a Moon, in [Audio effects](/docs/orbiters/audio-effects).
+- **Play it**: how to open and play a released Orbiter, in [Interact](/docs/orbiters/interact).
+- **Make it play notes**: sequencers, arpeggios and chords before the instrument, in [MIDI effects](/docs/orbiters/midi-effects).
 - **More ways to play**: [Sync](/docs/orbiters/sync) several Orbiters on one tempo, or tilt a phone with [Sensors](/docs/orbiters/sensors).

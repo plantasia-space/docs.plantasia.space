@@ -15,20 +15,20 @@ dimension has at most one. It plays on the Orbiter's tempo, and everyone in a ro
 <ModulePicture
   src="/img/orbiters/midi-effects/arpeggiator.jpg"
   alt="The Arpeggiator on a held chord, Up at 1/16 over two octaves: the Vine on the staff screen, then the Play tab (Order, Rate, Gate, Swing) and the Hold and Grid pads."
-  dots={[[1, 50, 12.5], [2, 56, 55.9], [3, 62, 64.3], [4, 14, 84.9], [5, 38.2, 84.9], [6, 62.4, 84.9], [7, 81.2, 58.6], [8, 81.2, 71.6]]}
+  dots={[[1, 56, 55.9], [2, 62, 64.3], [3, 14, 84.9], [4, 38.2, 84.9], [5, 62.4, 84.9], [6, 81.2, 58.6], [7, 81.2, 71.6], [8, 50, 12.5]]}
 />
 </TryModule>
 
-<Dot>2</Dot>Its knobs are on four tabs: **Play**, **Shift**, **Velocity** and **Cycle**.
+<Dot>1</Dot>Its knobs are on four tabs: **Play**, **Shift**, **Velocity** and **Cycle**.
 
 ## Play
 
 | Control | What it does |
 |---|---|
-| <Dot>3</Dot>**Order** | The order the held notes play in, from the next step. See the table below. |
-| <Dot>4</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, straight, dotted or triplet. **1/16** as it loads. |
-| <Dot>5</Dot>**Gate** | How long each note sounds, as a share of its step, 1 … 150 % (50 % as it loads). Over 100 % a note overlaps the next: legato. |
-| <Dot>6</Dot>**Swing** | Delays every second step, by up to half a step. |
+| <Dot>2</Dot>**Order** | The order the held notes play in, from the next step. See the table below. |
+| <Dot>3</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, straight, dotted or triplet. **1/16** as it loads. |
+| <Dot>4</Dot>**Gate** | How long each note sounds, as a share of its step, 1 … 150 % (50 % as it loads). Over 100 % a note overlaps the next: legato. |
+| <Dot>5</Dot>**Swing** | Delays every second step, by up to half a step. |
 
 With four notes held, numbered from the lowest:
 
@@ -48,7 +48,7 @@ With four notes held, numbered from the lowest:
 
 ## Shift
 
-After the notes you hold, the line can play them again, moved: that is how an arpeggio climbs through
+The **Shift** tab (not the Shift button of the sequencers). After the notes you hold, the line can play them again, moved: that is how an arpeggio climbs through
 octaves.
 
 | Control | What it does |
@@ -78,18 +78,18 @@ a step.
 
 ## Hold and Grid
 
-<Dot>7</Dot>**Hold** keeps the line playing after you let go of the keys. The held notes are every key
+<Dot>6</Dot>**Hold** keeps the line playing after you let go of the keys. The held notes are every key
 pressed since the last moment no key was down: add keys while one is held and they join; the first key
 after you let go of them all starts a new chord. Stop clears it, and so does switching Hold off.
 
-<Dot>8</Dot>**Grid** lets a 16-step pattern shape the rhythm. Each step can **rest** (the note waits
+<Dot>7</Dot>**Grid** lets a 16-step pattern shape the rhythm. Each step can **rest** (the note waits
 for the next step that plays), have its own **Level** and **Length**, or play the whole **Chord** at
 once; **Length** sets how many of the sixteen steps loop. With Grid off every step plays, and the
 pattern is kept for when you switch it on again.
 
 ## The screen
 
-<Dot>1</Dot>**Vine on the staff.** The line is a vine climbing through a five-line staff. Each note is
+<Dot>8</Dot>**Vine on the staff.** The line is a vine climbing through a five-line staff. Each note is
 a leaf that is also its notehead, on its line or space: as long as the note sounds (Gate) and as wide as
 it is loud. The leaf of the step playing is lit; the leaves behind it are filled, and the vine ahead is
 dashed. The notes you hold are seeds before the first bar line, a held (latched) one dashed, with a

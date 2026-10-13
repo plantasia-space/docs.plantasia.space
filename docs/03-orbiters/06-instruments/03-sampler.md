@@ -5,7 +5,7 @@ sidebar_custom_props:
   icon: AudioWaveform
 ---
 
-The **Sampler** (Rhizome) plays real recorded instruments under the keys: pick a piano, a marimba
+The **Sampler** plays real recorded instruments under the keys: pick a piano, a marimba
 or a small percussion kit and it plays, in tune, across the keyboard. It is a notes instrument: it
 sits at the head of a <Term id="world-dimension">World dimension</Term>, after any generator and MIDI effects, and the notes you play
 (the keys, MIDI, the piano roll, a sequencer) sound through it.
@@ -115,9 +115,9 @@ every voice at once.
 
 ## Mapping
 
-In the Studio's **Map** mode, every number control can be driven by an axis — Start (attack ↔
+In the Studio's **Map** mode, every number control can be driven by an axis: Start (attack ↔
 body), End and Release (stab ↔ ring), Loop start (on a drone), Transpose (stepped, in semitones),
-the Matrix's cells — and toggles can flip **One-shot**, **Loop**, **Sync**, **Mono** and **Legato**. The
+the Matrix's cells. Toggles can flip **One-shot**, **Loop**, **Sync**, **Mono** and **Legato**. The
 instrument itself is never on an axis: a preset carries it.
 
 ## In a room

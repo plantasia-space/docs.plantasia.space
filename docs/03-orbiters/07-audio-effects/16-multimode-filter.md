@@ -6,9 +6,15 @@ sidebar_custom_props:
 ---
 
 The **Multimode filter** is a synth's filter for any sound: low-pass, high-pass, band-pass or notch,
-clean or with a ladder's growl, and it can move by itself, with an LFO or with the sound's own level.
+clean or with a ladder's growl, and it can move by itself, with an LFO (a slow, steady cycle) or with the sound's own level.
 It goes in any effects rack, most often as an **insert** on a pad, a loop, a bass or a drum bus. For one
 knob that sweeps a whole mix, see [Filters](/docs/orbiters/audio-effects/filters).
+
+:::tip[It works as soon as you add it]
+
+The Multimode filter loads as a clean low-pass at 350 Hz, with the LFO and the Envelope off: the sound gets darker at once. Turn **Cutoff** up to open it.
+
+:::
 
 <TryModule module="multimodeFilter" set="lfoEnabled:on,resonance:45" source="pad">
 <ModulePicture
@@ -24,7 +30,7 @@ knob that sweeps a whole mix, see [Filters](/docs/orbiters/audio-effects/filters
 | Control | What it does |
 |---|---|
 | <Dot>1</Dot>**Type** | What the filter lets through: **Low-pass** (as it loads) keeps what is below the cutoff, **High-pass** what is above, **Band-pass** only what is around it, **Notch** everything but that. **Morph** adds a knob that sweeps from one to the next. |
-| <Dot>2</Dot>**Model** | **Clean** (as it loads) never rings on its own, however high the resonance. **Ladder** is a transistor ladder: it has a **Drive** knob, and near full resonance it sings a note of its own. The ladder is a low-pass or a high-pass. |
+| <Dot>2</Dot>**Model** | **Clean** (as it loads) never rings on its own, however high the resonance. **Ladder** is the classic synth filter, with more growl: it has a **Drive** knob, and near full resonance it sings a note of its own. The ladder is a low-pass or a high-pass. |
 | <Dot>3</Dot>**Slope** | **12 dB/oct** (as it loads) or **24 dB/oct**, the steeper. |
 | <Dot>4</Dot>**Cutoff** | The big knob: where the filter works, 20 Hz … 20 kHz (350 Hz as it loads). The LFO and the envelope move it from here. |
 | <Dot>5</Dot>**Resonance** | A peak at the cutoff, 0 … 100 % (20 % as it loads). |

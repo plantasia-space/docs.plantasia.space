@@ -22,13 +22,13 @@ It has no sound and no setting that touches a note: adding it changes nothing yo
 <ModulePicture
   src="/img/orbiters/midi-effects/midi-monitor.jpg"
   alt="MIDI monitor in the Keys view while a piano phrase plays: the keyboard with the held keys lit, the note and chord readouts, then the View and Freeze pads."
-  dots={[[1, 92.5, 23.1], [2, 92.5, 36.1], [3, 42.5, 14]]}
+  dots={[[1, 92.5, 23.1], [2, 42.5, 14], [3, 92.5, 36.1]]}
 />
 </TryModule>
 
 ## View
 
-The <Dot>1</Dot>**View** pad switches what the screen (<Dot>3</Dot>) shows.
+The <Dot>1</Dot>**View** pad switches what the screen (<Dot>2</Dot>) shows.
 
 - **Keys** (the default): a keyboard over three to six octaves that follows the notes you play. Held
   keys light in the accent, brighter the harder you struck them; octave Cs are named. Two readouts
@@ -49,7 +49,7 @@ the nearest one, so put a Monitor right after the module you want to watch.
 
 ## Freeze
 
-<Dot>2</Dot>**Freeze** stops the screen where it is, in both views: the state line says "Frozen" and nothing moves.
+<Dot>3</Dot>**Freeze** stops the screen where it is, in both views: the state line says "Frozen" and nothing moves.
 Notes keep passing; turning Freeze off catches the screen up.
 
 With nothing played yet, Keys shows an example C maj7 ("Example · C maj7"), and Log says nothing has

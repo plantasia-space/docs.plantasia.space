@@ -26,7 +26,7 @@ sequencer in front plays the kit with no setup.
 The panel has two parts: the <Dot>1</Dot>**pads** on the left, and one block with two tabs, <Dot>2</Dot>**Kit** and
 <Dot>3</Dot>**Sound**.
 
-- **Tap** a pad to select it: the **Sound** tab then shows that pad's controls. A tap never plays.
+- **Tap** a pad to select it: the **Sound** tab then shows that pad's controls. A tap never plays. (On the Hybrid drum synth it does.)
 - A pad **lights up** while it rings, fading with its own sound: a crash glows for a while, a closed
   hat blinks.
 - The selected pad has an outline. Which pad is selected is only what you are editing: it is not saved

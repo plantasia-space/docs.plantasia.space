@@ -18,7 +18,7 @@ in, one Level at a time.
   src="/img/orbiters/instruments/fm-synth.jpg"
   wide
   alt="The FM synth set as an electric piano: algorithm 5's wiring and the spectrum on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the folded LFO, Matrix and Voice columns."
-  dots={[[1, 23, 27], [2, 74, 27], [3, 30.6, 55.2], [4, 3.1, 78.5], [5, 10.9, 65.2], [6, 17.4, 65.2], [7, 24, 65.2], [8, 30.5, 65.2], [9, 37, 93.8], [10, 48.5, 51.6], [11, 69.8, 77.8], [12, 92.8, 62]]}
+  dots={[[1, 30.6, 55.2], [2, 3.1, 78.5], [3, 10.9, 65.2], [4, 17.4, 65.2], [5, 24, 65.2], [6, 30.5, 65.2], [7, 37, 93.8], [8, 23, 27], [9, 74, 27], [10, 48.5, 51.6], [11, 69.8, 77.8], [12, 92.8, 62]]}
 />
 </TryModule>
 
@@ -35,7 +35,7 @@ modulators' Levels are what a cutoff is on a filter synth, so they are the first
 
 ## Operators
 
-<Dot>3</Dot>**Algorithm.** The eight buttons in the group's title are the eight classic four-operator layouts,
+<Dot>1</Dot>**Algorithm.** The eight buttons in the group's title are the eight classic four-operator layouts,
 each drawn as a small wiring diagram, the heard operators on the right. Hover one to read its routes
 and who is heard.
 
@@ -56,12 +56,12 @@ Changing the algorithm while notes play glides between the two in a few millisec
 
 | Column | What it does |
 |---|---|
-| <Dot>4</Dot>**On** (the hexagon) | Switches B, C or D off and on. Off, the row dims and the operator is silent (D's feedback too); its settings are kept. A's hexagon is fixed: A is always on. |
-| <Dot>5</Dot>**Wave** | The operator's wave, from a drop-down: **Sine**, **Half** (the top half of a sine: brighter, a nasal edge), **Abs** (both halves up: an octave higher, buzzy) or **Alt** (a double-speed half: hollow, vocal). A change crossfades. |
-| <Dot>6</Dot>**Ratio** | The operator's pitch against the key: **×½**, **×1** … **×16**. Whole numbers sound harmonic. |
-| <Dot>7</Dot>**Fine** | Raises the ratio by a percentage for inharmonic, bell-like tones: ×3 at 17 % is 3.51. |
-| <Dot>8</Dot>**Level** | Modulating: how bright it makes what it modulates. Heard (in algorithms 5 to 8): its loudness against A. |
-| <Dot>9</Dot>**Feedback** | D's only: D modulates itself, from a reedy edge to something close to a saw. |
+| <Dot>2</Dot>**On** (the hexagon) | Switches B, C or D off and on. Off, the row dims and the operator is silent (D's feedback too); its settings are kept. A's hexagon is fixed: A is always on. |
+| <Dot>3</Dot>**Wave** | The operator's wave, from a drop-down: **Sine**, **Half** (the top half of a sine: brighter, a nasal edge), **Abs** (both halves up: an octave higher, buzzy) or **Alt** (a double-speed half: hollow, vocal). A change crossfades. |
+| <Dot>4</Dot>**Ratio** | The operator's pitch against the key: **×½**, **×1** … **×16**. Whole numbers sound harmonic. |
+| <Dot>5</Dot>**Fine** | Raises the ratio by a percentage for inharmonic, bell-like tones: ×3 at 17 % is 3.51. |
+| <Dot>6</Dot>**Level** | Modulating: how bright it makes what it modulates. Heard (in algorithms 5 to 8): its loudness against A. |
+| <Dot>7</Dot>**Feedback** | D's only: D modulates itself, from a reedy edge to something close to a saw. |
 
 Every cell is a number box: drag it up and down, click to type, double-click to go back to the
 default. A has no Fine or Level: it stays in tune and at full level (the module's **Level** is in the
@@ -69,13 +69,13 @@ Amp tab).
 
 ## The screen
 
-The screen has two halves. <Dot>1</Dot>On the left, the algorithm drawn in the same style as the connections in
+The screen has two halves. <Dot>8</Dot>On the left, the algorithm drawn in the same style as the connections in
 the Dimensions panel: the key comes in on the left, each route is a curve from a modulator into what
 it modulates, and the heard operators merge into **Out**. A route lights up and thickens as its
 modulator works harder, and is dashed while it is silent; an operator switched off or at Level 0 is
 drawn faint. A loop over D is its feedback.
 
-<Dot>2</Dot>On the right, what the sound is made of right now: its spectrum, with the key's harmonics ×1, ×2,
+<Dot>9</Dot>On the right, what the sound is made of right now: its spectrum, with the key's harmonics ×1, ×2,
 ×4, ×8 and ×16 marked underneath. Harmonic ratios stand on the marks; Fine moves partials between
 them. While a note plays, the spectrum follows the Timbre envelope. The readouts say who is
 **Heard** and how many **Partials** stand within 40 dB of the loudest.
@@ -120,7 +120,7 @@ every voice at once.
 
 - **An electric piano under your hands.** Set the **E-piano** row of the table below and play it from the keys: soft notes are round, hard ones bark, because velocity opens the timbre.
 - **A bass for a sequencer.** Set the **DX bass** row and put a Step sequencer in front of it: Mono and Legato make the notes slide into each other.
-- **One knob that changes everything.** Map operator B's **Level** to an axis: the sound goes from a plain sine to a bright, metallic one as the Planet moves.
+- **One knob that changes everything.** Map operator B's **Level** to an axis: the sound goes from a plain sine to a bright, metallic one as the axis moves.
 
 ## Starting points
 

@@ -60,9 +60,13 @@ is blocked. Below, the Transpose, then the range mode and the range's two ends.
 - **A fifth up.** Transpose **+7 st** in front of a second instrument on another dimension that gets the same notes: the two play in fifths.
 - **Thirds in the key.** **deg**, Transpose **+2**, with the Orbiter's key set.
 - **A bass that stays a bass.** Lowest **C1**, Range **24 st**, **Fold**: whatever you play comes out in those two octaves.
-- **A key change on an axis.** Map **Transpose** in **st** from 0 to +5: the whole part moves up a fourth as the Planet moves away.
+- **A key change on an axis.** Map **Transpose** in **st** from 0 to +5: the whole part moves up a fourth as the axis moves away from rest.
 
 ## Mapping
 
 <Term id="axis">Axes</Term> can drive **Transpose** (each unit's own), **Lowest** and **Range**. Toggles
 can flip the unit.
+
+## In a room
+
+Every player hears the same notes moved the same way.

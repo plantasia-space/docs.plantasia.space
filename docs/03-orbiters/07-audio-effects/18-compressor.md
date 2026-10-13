@@ -43,7 +43,7 @@ came in.
 |---|---|
 | <Dot>4</Dot>**Attack** | How fast it clamps down once the sound goes over, 0.1 … 200 ms (12 ms as it loads). Slower lets the start of each hit through, so drums keep their punch. |
 | <Dot>5</Dot>**Release** | How fast it lets go once the sound falls back, 5 ms … 2 s (180 ms as it loads). Fast pumps with the beat; slow recovers smoothly. |
-| <Dot>6</Dot>**SC high-pass** | Below this frequency the compressor doesn't listen, so a kick doesn't duck the whole mix. It never filters the sound itself. **Off** at 20 Hz, up to 500 Hz. |
+| <Dot>6</Dot>**SC high-pass** | A high-pass on what the compressor listens to (its side-chain), not on what you hear. Below this frequency the compressor doesn't listen, so a kick doesn't duck the whole mix. It never filters the sound itself. **Off** at 20 Hz, up to 500 Hz. |
 
 ### Output
 

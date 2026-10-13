@@ -28,14 +28,14 @@ There are two kinds, and the order is always the same:
    **Arpeggiator**, **Step sequencer**. A dimension has at most one.
 2. **MIDI effects** reshape the notes that reach them, from a generator, the keys, MIDI hardware or
    the piano roll: **Note echo**, **Velocity**, **Note length**, **Random**, **Chord**, **Scale**, **Pitch**. The **MIDI
-   Monitor** changes nothing: it shows what reaches it.
+   monitor** changes nothing: it shows what reaches it.
 
 Notes travel inside the audio stream, on the same clock as the sound, so an echo or a ratchet lands
 exactly on the beat.
 
-:::tip[Every MIDI effect loads neutral]
+:::tip[MIDI effects load neutral]
 
-Adding one changes nothing until you move something: Note echo and Chord load silent (Level at 0 %), Velocity loads as a straight line, Note length loads as played, Random loads at Chance 0 %, Pitch loads at Transpose 0. Scale holds the notes to the Orbiter's key as soon as it has one. Turn them up while you play.
+Adding one changes nothing until you move something: Note echo and Chord load silent (Level at 0 %), Velocity loads as a straight line, Note length loads as played, Random loads at Chance 0 %, Pitch loads at Transpose 0. Scale holds the notes to the Orbiter's key as soon as it has one. Turn them up while you play. The generators are the exception: the Step sequencer plays as soon as you add it, and the Arpeggiator as soon as you hold a key.
 
 :::
 

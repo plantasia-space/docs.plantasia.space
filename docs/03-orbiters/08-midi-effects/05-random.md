@@ -88,7 +88,7 @@ hides and the Draw light stays.
 - **An arpeggio that leaps.** After an Arpeggiator, before the instrument: Chance **30 %**, **±**, Interval **12 st**. Now and then a note jumps an octave.
 - **A line that wanders in the key.** With the Orbiter's key set: **Follow** on, Interval **1 deg**, Choices **2**, Chance **50 %**.
 - **A bass between root and fifth.** On a one-note bass line: **+**, Interval **7 st**, Choices **1**, Chance **40 %**.
-- **More, the further you move.** Map Chance to an axis: at rest the line plays as written, and it loosens as the Planet moves away.
+- **More, the further you move.** Map Chance to an axis: at rest the line plays as written, and it loosens as the axis moves away from rest.
 
 ## Mapping
 

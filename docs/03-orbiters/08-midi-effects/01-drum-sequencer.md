@@ -187,3 +187,7 @@ the FX menus, ribbons and Latch, and the Generate controls. A mapped pad plays a
 velocity and lets go with its note-off, so recording from MIDI pads keeps your dynamics. Buttons act
 when pressed, knobs and ribbons follow the controller across their range, and an FX menu steps
 through the effects as you turn.
+
+## In a room
+
+Everyone in a room hears the same beat on the same steps. The beats and their names are shared by all the players.

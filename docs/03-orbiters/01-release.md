@@ -32,9 +32,9 @@ Orbiter images are displayed in a **hexagonal frame**. If needed, open the guide
   Your browser does not support the video tag.
 </video>
 
-## 2) Orbital Name
+## 2) Orbiter Name
 
-Set the **Orbital Name** — a unique name that identifies your Orbiter on the platform.
+Set the **Orbiter Name**: a unique name that identifies your Orbiter on the platform.
 
 You can regenerate the name if you need a starting point.
 
@@ -116,7 +116,7 @@ By default, Orbiters are visible and searchable.
 
 ## 7) Draft vs release
 
-- **Save draft** if you want to continue later.
+- Your work is **saved as a draft by itself** while you build: come back to it whenever you like.
 - **Release** when you are ready to publish.
 
 After release, you can reuse the Orbiter across different Audios and Entangled Worlds.

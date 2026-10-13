@@ -79,7 +79,7 @@ You can:
 
 ## Saving and publishing changes
 
-Your edits save themselves. A couple of seconds after you stop changing something, the Orbiter's draft is saved for you — there is no save button to remember.
+Your edits save themselves. A couple of seconds after you stop changing something, the Orbiter's draft is saved for you: there is no save button to remember.
 
 The small disk icon at the top of the page shows where that has got to, and its dot changes colour as it goes: unsaved changes, saving, saved, or couldn't save. Hover it to read the current state. You can also click it to save straight away instead of waiting.
 

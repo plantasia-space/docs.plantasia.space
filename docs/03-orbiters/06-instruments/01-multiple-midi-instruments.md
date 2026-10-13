@@ -9,7 +9,7 @@ What World **I** plays decides what the Orbiter is:
 
 - **Audio:** World I plays the audio you choose, on the **Track player** or **Granular**. II and
   III shape that sound with effects. An Audio Orbiter has one instrument.
-- **Notes:** World I holds a notes instrument, such as the **Subtractive synth (Sheaf)**. II and III
+- **Notes:** World I holds a notes instrument, such as the **Subtractive synth**. II and III
   can each hold one more, so the Orbiter plays **up to three** notes instruments, like a small band:
   a bass and a lead, or a bass, a pad and a lead.
 

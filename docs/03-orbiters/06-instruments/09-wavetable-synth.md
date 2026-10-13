@@ -135,7 +135,7 @@ at most 16: at Unison 4 the synth plays up to 4 notes, and the Voice group says 
 
 - **A pad that speaks.** Set the **Vowel pad** row of the table below and hold a chord: LFO 1 moves Position 1 through the vowels.
 - **The classic sweep.** Set the **PPG sweep** row and play single notes: every note runs through the table as its envelope falls.
-- **Position under your hand.** From the defaults, map **Position 1** to an axis and hold a note: the wave morphs as the Planet moves. It is the first thing to map on this instrument.
+- **Position under your hand.** From the defaults, map **Position 1** to an axis and hold a note: the wave morphs as the axis moves. It is the first thing to map on this instrument.
 
 ## Starting points
 

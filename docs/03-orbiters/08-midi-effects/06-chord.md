@@ -23,23 +23,23 @@ you play sounds.
 <ModulePicture
   src="/img/orbiters/midi-effects/chord.jpg"
   alt="Chord as it loads, on the Triads set with the chord on C shown: the Keys screen under the set's twelve chords, then Chord (Set, Capture, the set and Notes), Voicing (Level, Tilt, Invert) and Strum."
-  dots={[[1, 50, 12.5], [2, 14.1, 65], [3, 26, 65], [4, 9.6, 83], [5, 24.4, 83], [6, 42.7, 83], [7, 57.5, 83], [8, 72.4, 83], [9, 94, 65], [10, 90.5, 83]]}
+  dots={[[1, 14.1, 65], [2, 9.6, 83], [3, 24.4, 83], [4, 26, 65], [5, 42.7, 83], [6, 57.5, 83], [7, 72.4, 83], [8, 90.5, 83], [9, 94, 65], [10, 50, 12.5]]}
 />
 
 ## Chord
 
-- <Dot>2</Dot>**Source: Set** plays a **chord set**: one chord for each of the twelve notes of the
+- <Dot>1</Dot>**Source: Set** plays a **chord set**: one chord for each of the twelve notes of the
   octave, counted from the Orbiter's root. Playing up the white keys walks a progression. When the
   Orbiter changes key, the whole set moves with it: a set written in C plays in E when the Orbiter is
   in E.
 - **Source: In key** builds a chord live on the Orbiter's scale instead (a triad, a seventh, a ninth…),
   so a melody in C major plays C major, D minor, E minor… and switches to minor chords the moment the
   scale does. With no scale, the chord is built on the major scale of each note you play.
-- <Dot>4</Dot>**Set** picks the chord set (with Set), or **Shape** the chord (with In key), in the same
+- <Dot>2</Dot>**Set** picks the chord set (with Set), or **Shape** the chord (with In key), in the same
   place.
-- <Dot>5</Dot>**Notes**: how many notes each chord plays, 2 to 6. A chord with more notes than that
+- <Dot>3</Dot>**Notes**: how many notes each chord plays, 2 to 6. A chord with more notes than that
   drops its top ones.
-- <Dot>3</Dot>**Capture** (with Set): turn it on and hold a chord, on the keys or a MIDI keyboard. When
+- <Dot>4</Dot>**Capture** (with Set): turn it on and hold a chord, on the keys or a MIDI keyboard. When
   you let go, it is stored in the chord being edited, counted from its lowest note, and Capture turns
   off.
 
@@ -69,15 +69,15 @@ Notes leaves the voices where they are.
 
 ## Voicing
 
-- <Dot>6</Dot>**Level**: how loud the added notes are, as a share of the note you played.
-- <Dot>7</Dot>**Tilt**: balances the chord. Up brightens the top notes and softens the bottom; down the
+- <Dot>5</Dot>**Level**: how loud the added notes are, as a share of the note you played.
+- <Dot>6</Dot>**Tilt**: balances the chord. Up brightens the top notes and softens the bottom; down the
   other way.
-- <Dot>8</Dot>**Invert**: inversions. +1 moves the lowest note up an octave (C E G → E G C), +2 the two
+- <Dot>7</Dot>**Invert**: inversions. +1 moves the lowest note up an octave (C E G → E G C), +2 the two
   lowest; −1 moves the highest down. Past the chord's size, the whole chord moves an octave.
 
 ## Strum
 
-- <Dot>10</Dot>**Strum**: the time between two chord notes, up to 500 ms. At the very bottom it reads
+- <Dot>8</Dot>**Strum**: the time between two chord notes, up to 500 ms. At the very bottom it reads
   **0 ms**: the whole chord at once.
 - <Dot>9</Dot>**Order**: up (the lowest note first) or down.
 
@@ -86,7 +86,7 @@ guitar. A change to any control plays from the next chord: a chord already sound
 
 ## The screen: Keys
 
-<Dot>1</Dot>Three octaves of keys (two on a phone) under a row of the set's twelve chords, one per
+<Dot>10</Dot>Three octaves of keys (two on a phone) under a row of the set's twelve chords, one per
 note of the octave from the root (a line marks the root's).
 
 - The key you play has a ring and a tick. The notes that come out are dots, larger when louder (Tilt
