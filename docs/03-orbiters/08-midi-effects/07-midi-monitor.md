@@ -22,7 +22,7 @@ It has no sound and no setting that touches a note: adding it changes nothing yo
 <ModulePicture
   src="/img/orbiters/midi-effects/midi-monitor.jpg"
   alt="MIDI monitor in the Keys view while a piano phrase plays: the keyboard with the held keys lit, the note and chord readouts, then the View and Freeze pads."
-  dots={[[1, 92.5, 23.1], [2, 42.5, 14], [3, 92.5, 36.1]]}
+  dots={[[1, 92.5, 23.1], [2, 92.5, 36.1], [3, 42.5, 14]]}
 />
 </TryModule>
 
@@ -31,11 +31,11 @@ It has no sound and no setting that touches a note: adding it changes nothing yo
 | Control | What it does |
 |---|---|
 | <Dot>1</Dot>**View** | Switches what the screen shows: **Keys** or **Log**. |
-| <Dot>3</Dot>**Freeze** | Stops the screen where it is, in both views: the state line says "Frozen" and nothing moves. Notes keep passing; turning Freeze off catches the screen up. |
+| <Dot>2</Dot>**Freeze** | Stops the screen where it is, in both views: the state line says "Frozen" and nothing moves. Notes keep passing; turning Freeze off catches the screen up. |
 
 ## The screen
 
-<Dot>2</Dot>The screen has two views.
+<Dot>3</Dot>The screen has two views.
 
 - **Keys** (the default): a keyboard over three to six octaves that follows the notes you play. Held
   keys light in the accent, brighter the harder you struck them; octave Cs are named. Two readouts
