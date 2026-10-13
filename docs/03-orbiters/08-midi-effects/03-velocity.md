@@ -28,20 +28,22 @@ Velocity loads with every note coming out as it went in, so adding it changes no
 
 ## Curve
 
-- <Dot>1</Dot>**Drive**: up, soft notes come out louder; down, loud notes come out softer.
-- <Dot>2</Dot>**Compand**: up, quiet notes get quieter and loud ones louder; down, every note moves towards the
-  middle (even hands).
-- <Dot>3</Dot>**Random**: moves each note up or down by up to this much, after the curve.
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**Drive** | Up, soft notes come out louder; down, loud notes come out softer. |
+| <Dot>2</Dot>**Compand** | Up, quiet notes get quieter and loud ones louder; down, every note moves towards the middle (even hands). |
+| <Dot>3</Dot>**Random** | Moves each note up or down by up to this much, after the curve. |
 
 ## In
 
 The **window** is the range of velocities the curve reads: from <Dot>4</Dot>**Lowest** to Lowest + <Dot>5</Dot>**Range**.
-<Dot>6</Dot>What happens to a note outside it:
+<Dot>6</Dot>**Mode** is what happens to a note outside it:
 
-- **Clip**: it plays at the window's nearest edge.
-- **Gate**: it isn't played at all (a velocity filter).
-- **Fixed**: every note plays at <Dot>7</Dot>**Fixed**, whatever its velocity (a drum machine's feel). Fixed is
-  only used in this mode; elsewhere it reads n/a.
+| Mode | A note outside the window |
+|---|---|
+| **Clip** | plays at the window's nearest edge |
+| **Gate** | isn't played at all (a velocity filter) |
+| **Fixed** | every note plays at <Dot>7</Dot>**Fixed**, whatever its velocity (a drum machine's feel). Fixed is only used in this mode; elsewhere it reads n/a |
 
 ## Out
 
@@ -68,11 +70,9 @@ number boxes do the same job.
 
 ## Mapping
 
-<Term id="axis">Axes</Term> can drive every knob and number: a Planet that leans in plays louder (Drive), or a line gets
+<Term id="axis">Axes</Term> can drive every knob and number: a World that leans in plays louder (Drive), or a line gets
 more uneven the further it goes (Random). The mode is a choice of three, so it isn't mappable.
 
 ## In a room
 
-Every player hears the same velocities, Random included. Random reads one shared list of numbers, a
-note at a time per pitch class, so a note that reaches someone late still gets the same velocity.
-Someone joining takes over where the room is.
+Every player in a <Term id="room">room</Term> hears the same velocities, Random included.

@@ -14,7 +14,7 @@ is one. A change applies from the next note.
 
 :::tip[How it loads]
 
-Scale loads following the Orbiter's tonality (its key and scale), moving outside notes to the nearest note of it. With no scale set on the
+Scale loads playing in the Orbiter's key: it moves outside notes to the nearest note of it. With no scale set on the
 Orbiter every note is in it, so nothing changes; once the Orbiter has a key, Scale holds the notes to it.
 
 :::
@@ -29,23 +29,23 @@ Orbiter every note is in it, so nothing changes; once the Orbiter has a key, Sca
 
 ## Tonality
 
-- <Dot>1</Dot>**Follow** (the Orbiter's tonality): on, as it loads, Scale plays in the Orbiter's key
-  and scale and follows them when they change. Off, it has a root and a scale of its own, and the next
-  three controls appear.
-- <Dot>2</Dot>**Scale**: its own scale, from a menu of 35 (Major, Minor, the modes, pentatonics, blues
-  and more), or **User**.
-- <Dot>3</Dot>**Root**: its own root, C to B.
-- <Dot>4</Dot>**The keys**: one octave from the root, with the scale's notes lit. Tap a key to put it
-  in or take it out: the scale becomes **User**. The root is always in.
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**Follow** | On (as it loads), Scale plays in the Orbiter's key and scale and follows them when they change. Off, it has a root and a scale of its own, and the next three controls appear. |
+| <Dot>2</Dot>**Scale** | Its own scale, from a menu of 35 (Major, Minor, the modes, pentatonics, blues and more), or **User**. |
+| <Dot>3</Dot>**Root** | Its own root, C to B. |
+| <Dot>4</Dot>**The keys** | One octave from the root, with the scale's notes lit. Tap a key to put it in or take it out: the scale becomes **User**. The root is always in. |
 
 ## Snap
 
-<Dot>5</Dot>Where a note outside the scale goes:
+<Dot>5</Dot>**Snap** is where a note outside the scale goes:
 
-- **Nearest** (as it loads): the closest scale note. A note exactly between two goes down.
-- **Down**: the scale note below it.
-- **Up**: the scale note above it.
-- **Block**: it isn't played.
+| Snap | A note outside the scale |
+|---|---|
+| **Nearest** (as it loads) | goes to the closest scale note; exactly between two, it goes down |
+| **Down** | goes to the scale note below it |
+| **Up** | goes to the scale note above it |
+| **Block** | isn't played |
 
 <Dot>6</Dot>**Transpose** moves every note Scale acts on before the snap, −36 … +36 st, so the result
 is still in the scale.
@@ -56,15 +56,15 @@ is still in the scale.
 up to Range semitones above it. Notes outside pass untouched, so a bass line on the low keys can stay
 free while the top is held to the scale.
 
-## The screen: Notes
+## The screen
 
 <Dot>9</Dot>**The Strip.** One octave as thirteen cells, from the root on the left to the root on the
-right; the roots have a short bar over them. The cells with a bright outline are the scale's notes. A
-note comes in as a dot above its own column, drops, slides sideways to the cell it lands on and fills it;
-the last three landings stay lit and fade. With **Block**, a note that isn't played leaves a cross, and a
-note outside **Acts on** stays grey above the row. The big number is how far the last note moved. With
-the User scale you can tap a cell to put that note in or take it out (never the root). Top right, the
-last note out; below, how far that note moved, in semitones, and the tonality.
+right; the cells with a bright outline are the scale's notes. A note comes in as a dot above its own
+column, drops, and slides sideways to the cell it lands on. The big number is how far the last note
+moved; top right, the last note out.
+
+With **Block**, a note that isn't played leaves a cross. With the User scale you can tap a cell to put
+that note in or take it out (never the root).
 
 ## Try it
 
@@ -80,4 +80,4 @@ last note out; below, how far that note moved, in semitones, and the tonality.
 
 ## In a room
 
-Every player hears the same notes moved the same way: the snap depends only on the note and the scale.
+Every player in a <Term id="room">room</Term> hears the same notes moved the same way: the snap depends only on the note and the scale.

@@ -19,9 +19,9 @@ dimension has at most one. It plays on the Orbiter's tempo, and everyone in a ro
 />
 </TryModule>
 
-<Dot>1</Dot>Its knobs are on four tabs: **Play**, **Shift**, **Velocity** and **Cycle**.
-
 ## Play
+
+<Dot>1</Dot>Its knobs are on four tabs: **Play**, **Shift**, **Velocity** and **Cycle**. Play comes first:
 
 | Control | What it does |
 |---|---|
@@ -89,15 +89,9 @@ pattern is kept for when you switch it on again.
 
 ## The screen
 
-<Dot>8</Dot>**Vine on the staff.** The line is a vine climbing through a five-line staff. Each note is
-a leaf that is also its notehead, on its line or space: as long as the note sounds (Gate) and as wide as
-it is loud. The leaf of the step playing is lit; the leaves behind it are filled, and the vine ahead is
-dashed. The notes you hold are seeds before the first bar line, a held (latched) one dashed, with a
-root. A rest is a bare node, a Chord step several leaves on one stalk, and over 100 % Gate a tendril
-curls from each leaf to the next. Ticks under the staff mark the beats; with the Grid on, the bar ends on
-a repeat sign at its Length. The big number is how many notes are held. Top right, the note sounding
-now (**No notes held** when there are none; while the transport is stopped the keys play plain and it
-says so); below, the order, the rate and the gate, then the shift.
+<Dot>8</Dot>**Vine on the staff.** The line is a vine on a staff: one leaf per note, as long as its
+Gate and as wide as it is loud; the leaf playing is lit. Top right, the note sounding; below, the
+order, the rate, the gate and the shift.
 
 ## Try it
 
@@ -115,5 +109,5 @@ Velocity knobs, **Repeats**, **Crescendo** and the Grid's **Length**. Toggles ca
 
 ## In a room
 
-Every player hears the same line on the same steps: what a step plays depends only on the beat and the
+Every player in a <Term id="room">room</Term> hears the same line on the same steps: what a step plays depends only on the beat and the
 notes held, and the chance draws are shared.

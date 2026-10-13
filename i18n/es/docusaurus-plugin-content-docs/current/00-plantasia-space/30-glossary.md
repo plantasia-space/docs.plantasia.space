@@ -29,6 +29,19 @@ Esta comunidad reúne conceptos y herramientas de ecología acústica, paisaje s
 <a href="https://archive.org/details/comunidad-aural-independent-v-1/mode/2up" target="_blank">Comunidad Aural – Maar</a>
 
 
+### Cajón {#drawer}
+El panel del Studio que muestra los controles de un módulo y su pantalla. Tiene varios tamaños; en el más pequeño algunas pantallas se ocultan y las perillas se quedan.
+
+
+### Cuadrícula de lanzamiento {#launch-grid}
+La cuadrícula que esperan los inicios, saltos y cambios de un Orbiter para caer en una línea de compás. Se elige junto a SYNC: **None**, 1 compás, 4 compases, etc.
+[Sync](/docs/orbiters/sync)
+
+
+### Cuerpo {#body}
+Una de las tres partes de un Orbiter: el **Mundo**, la **Estrella** y la **Luna**. Cada una tiene su propio rack de módulos, en hasta tres dimensiones.
+
+
 ### Dimensión de Mundo {#world-dimension}
 Una de las tres cadenas de Mundo de un Orbiter, **I**, **II** y **III**, cada una con sus propios módulos y su manera de mapear X, Y y Z. Lo que toca el Mundo I (un audio o notas) decide si el Orbiter es de Audio o de Notas.
 [Instrumentos: Audio o Notas](/docs/orbiters/instruments)
@@ -92,3 +105,12 @@ Depende de la relación entre quien escucha y el ambiente, y puede referirse tan
 
 ### Plantasia Space
 Plantasia Space es una plataforma diseñada para música regenerativa — sonidos publicados con la intención de que el público pueda escucharlos, recrearlos y transformarlos en nuevas formas. Dentro de Plantasia Space podés publicar sonidos, colocarlos dentro de **mundos entrelazados** — representaciones artísticas de mundos físicos — y usar **orbiters** — naves que transforman el sonido de diferentes maneras — para explorar y regenerar esos sonidos, fomentando la interacción lúdica y la exploración sensorial saludable.
+
+
+### Sala {#room}
+Una sesión a la que varias personas se unen para tocar juntas los mismos Orbiters, cada una en su dispositivo. Todas comparten un tempo y escuchan las mismas notas.
+[Sync](/docs/orbiters/sync)
+
+
+### Superficie de juego {#play-surface}
+El lugar donde se toca a mano un Orbiter de notas, en el panel Playback: el piano roll y una pestaña por cada generador de la cadena (las teclas del Arpegiador, los pasos del Secuenciador de pasos, los pads del Secuenciador de batería). Sigue la dimensión en foco.

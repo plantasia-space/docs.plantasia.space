@@ -139,5 +139,5 @@ carries them.
 
 ## In a room
 
-Everyone in a room hears the same notes and the same sound; only the noise, Drift's slow wander and a
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound; only the noise, Drift's slow wander and a
 free (unsynced) LFO can differ a little.

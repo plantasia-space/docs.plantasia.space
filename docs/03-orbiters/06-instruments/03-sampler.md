@@ -109,5 +109,5 @@ never on an axis: a preset carries it.
 
 ## In a room
 
-Everyone in a room hears the same notes and the same sound. A player whose device is still loading
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound. A player whose device is still loading
 the instrument hears nothing from it until it is ready; the room doesn't wait.

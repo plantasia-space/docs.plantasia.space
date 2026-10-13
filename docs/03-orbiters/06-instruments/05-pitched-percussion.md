@@ -133,4 +133,4 @@ Toggles can flip **Mono** and **Legato**. The body itself is never on an axis.
 
 ## In a room
 
-Everyone in a room hears the same notes and the same sound.
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound.

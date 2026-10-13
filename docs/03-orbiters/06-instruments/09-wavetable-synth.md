@@ -154,5 +154,5 @@ an axis: a preset carries them.
 
 ## In a room
 
-Everyone in a room hears the same notes and the same sound; only a free (unsynced) LFO can drift a
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound; only a free (unsynced) LFO can drift a
 little, and the mod wheel is your own.

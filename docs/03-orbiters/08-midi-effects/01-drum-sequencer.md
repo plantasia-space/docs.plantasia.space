@@ -9,13 +9,8 @@ The **Drum sequencer** plays drum patterns into an Orbiter's instrument. It work
 controller: <Dot>1</Dot>16 pads (or 8) whose job changes with the <Dot>2</Dot>**pad function** you pick, a
 <Dot>3</Dot>small screen with <Dot>4</Dot>four knobs, <Dot>5</Dot>two **real-time FX** ribbons, and up to 32 **beats**, each 1 to 8 bars long.
 
-You meet it in two places, which always show the same state:
-
-- **The module**, in the Studio's drawer, where you build the Orbiter. Its knobs and switches can
-  be **mapped to the Orbiter's <Term id="axis">axes</Term> and toggles**.
-- **The play surface**, on the stage while the Drum sequencer leads the chain, in the Studio and when
-  the Orbiter is played. Its controls can be **mapped to MIDI hardware**.
-
+Its controls appear in the Studio's <Term id="drawer">drawer</Term> and, while you play, on the
+<Term id="play-surface">play surface</Term>; both show the same state.
 
 <ModulePicture
   src="/img/orbiters/midi-effects/drum-sequencer.jpg"
@@ -23,6 +18,13 @@ You meet it in two places, which always show the same state:
   alt="The Drum sequencer in Sound, on an Analog drum synth: the real-time FX ribbons on the left, the pad function, pad options and Edit rows above the 16 pads, then the screen, its knobs and Generate on the right."
   dots={[[1, 66.6, 74.7], [2, 11.6, 20.7], [3, 83.6, 14.8], [4, 69.5, 44.6], [5, 3.4, 56.7], [6, 38.7, 28.5], [7, 52, 28.5], [8, 78, 76.5], [9, 11.6, 38.6], [10, 5.9, 97]]}
 />
+
+## Your first beat
+
+1. Put the Drum sequencer in front of a drum instrument.
+2. In **Sound**, tap the kick; in **Steps**, tap pads 1, 5, 9 and 13.
+3. Back in Sound, tap the snare; in Steps, set steps 5 and 13.
+4. Press Play.
 
 ## Pad functions
 
@@ -47,7 +49,7 @@ the screen.
 ## Switching beats
 
 In **Beats**, tap a pad to pick a beat. While the transport is stopped it switches at once. While it
-plays, the new beat starts on the Orbiter's **launch grid** (the grid picker in the header, also the
+plays, the new beat starts on the Orbiter's <Term id="launch-grid">launch grid</Term> (the grid picker in the header, also the
 first knob in Beats), so the switch always lands on a bar line. A mute waits for the grid the same
 way.
 
@@ -56,16 +58,8 @@ for the grid. Tap the beat that is playing to take the switch back.
 
 ## Naming beats
 
-Every beat can have a **name**, up to 12 characters, so you remember what each one is. In **Beats**:
-
-- on a touch screen, **press and hold** a pad;
-- with a mouse, **double-click** it;
-- from the keyboard, **Ctrl + R** (or **F2**) names the beat you are on.
-
-Type the name and press **Enter** (**Esc** leaves it as it was). The pad shows the name with the beat's
-number under it, and the status line names the beat that plays and the one that waits. A beat without
-a name reads "Beat 7". Names are saved with the Drum sequencer: in its preset, in the Orbiter, and for
-everyone in a room. Copy and Paste carry a beat's name; Erase keeps it.
+In **Beats**, hold a pad (or double-click it) to name its beat, up to 12 characters. Names are saved
+with the Drum sequencer and shared with everyone in a room.
 
 ## Tunings
 
@@ -102,12 +96,8 @@ play surface of the Orbiter.
 | **Mutes** | mutes or unmutes on the launch grid | mutes or unmutes at once |
 | **Sound** | plays the voice and selects it (Audition on) | selects it without sounding it |
 
-With the launch grid off, a tap acts at once and Shift waits for the next bar instead. With Audition
-off in Sound, Shift does the opposite too: the tap sounds the voice. In Steps and Tunings, Shift
-rests.
-
-The right end of the status line always says what a tap does now, for example "Tap launches in 1 bar",
-and turns to the accent colour while Shift is on.
+With the launch grid off, Shift waits for the bar instead. The right end of the status line always says
+what a tap does now, for example "Tap launches in 1 bar".
 
 ## Recording
 
@@ -150,7 +140,7 @@ ribbon (the button with the arrow), then press and slide on the ribbon; let go a
 0. With <Dot>10</Dot>**Latch** on, the ribbon keeps its amount when you let go. Latch is the same in the module
 and on the play surface.
 
-## Its screen while you play
+## The screen
 
 With the Drum sequencer's Panel set to **Screen** (the Visuals step in the Studio), its screen shows
 in the play monitor while it leads the chain: the playing beat's voices across the bar, the playhead,
@@ -162,7 +152,6 @@ velocity, chance, ratchet and offset, use **Steps**.
 
 ## Try it
 
-- **A first beat.** Put the Drum sequencer in front of a drum instrument. In **Sound**, tap the kick; in **Steps**, tap pads 1, 5, 9 and 13. Go back to Sound, tap the snare, and set steps 5 and 13. Press Play.
 - **Hats without drawing them.** Select the closed hat, open **Generate**, turn **Euclid** on and set **Hits** to 11: an even pattern plays at once. **Apply** writes it into the row.
 - **A snare across the pads.** Tap the snare in **Sound**, then open **Tunings**: the sixteen pads play the same snare at sixteen pitches, in the Orbiter's key. Press **Rec** and play a fill.
 - **A second beat for the chorus.** In **Beats**, **Copy** beat 1, tap pad 2 and **Paste**, then change it. While it plays, a tap on either pad switches on the next bar.
@@ -181,13 +170,9 @@ badges like any module's:
 
 A control an axis or toggle drives is locked in the editor and follows it.
 
-**MIDI hardware (the play surface).** In MIDI learn mode, every control of the play surface can be
-learned: the pads, the pad functions, Roll, Bank B, Rec, Shift, Page, the four knobs and their key, Swing,
-the FX menus, ribbons and Latch, and the Generate controls. A mapped pad plays at the note's
-velocity and lets go with its note-off, so recording from MIDI pads keeps your dynamics. Buttons act
-when pressed, knobs and ribbons follow the controller across their range, and an FX menu steps
-through the effects as you turn.
+**MIDI hardware (the play surface).** In MIDI learn mode every control of the play surface can be
+learned; pads keep your velocity.
 
 ## In a room
 
-Everyone in a room hears the same beat on the same steps. The beats and their names are shared by all the players.
+Everyone in a <Term id="room">room</Term> hears the same beat on the same steps. The beats and their names are shared by all the players.

@@ -26,9 +26,16 @@ It has no sound and no setting that touches a note: adding it changes nothing yo
 />
 </TryModule>
 
-## View
+## Controls
 
-The <Dot>1</Dot>**View** pad switches what the screen (<Dot>2</Dot>) shows.
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**View** | Switches what the screen shows: **Keys** or **Log**. |
+| <Dot>3</Dot>**Freeze** | Stops the screen where it is, in both views: the state line says "Frozen" and nothing moves. Notes keep passing; turning Freeze off catches the screen up. |
+
+## The screen
+
+<Dot>2</Dot>The screen has two views.
 
 - **Keys** (the default): a keyboard over three to six octaves that follows the notes you play. Held
   keys light in the accent, brighter the harder you struck them; octave Cs are named. Two readouts
@@ -41,16 +48,9 @@ The <Dot>1</Dot>**View** pad switches what the screen (<Dot>2</Dot>) shows.
   "CC 23") and value; bend a percentage; pressure the channel or the key.
 
 **Source** says where a message came from: the MIDI keyboard **by name**, **Keys** (the instrument's
-own keys, touch or computer keyboard), **Capability** (voice control or a script), or **Room · name**
-(a note another player is playing in the same room). A note that no message started was made by a
-module before the Monitor, so it shows that module's name ("Chord", "Scale", "Arpeggiator"): the nearest
-one that is on. Notes from the piano roll show "Clip". With several modules before it, the Monitor names
-the nearest one, so put a Monitor right after the module you want to watch.
-
-## Freeze
-
-<Dot>3</Dot>**Freeze** stops the screen where it is, in both views: the state line says "Frozen" and nothing moves.
-Notes keep passing; turning Freeze off catches the screen up.
+own keys), **Room · name** (another player in the same room), or the name of the module before the
+Monitor that made the note ("Chord", "Arpeggiator"). Put a Monitor right after the module you want to
+watch.
 
 With nothing played yet, Keys shows an example C maj7 ("Example · C maj7"), and Log says nothing has
 arrived.
@@ -67,5 +67,5 @@ Toggles can flip **View** and **Freeze**. It has nothing for an axis to drive.
 
 ## In a room
 
-Each player sees the messages that reach their own device: the notes other players play show as
-"Room · name". Nothing extra travels.
+Each player in a <Term id="room">room</Term> sees the messages that reach their own device: the notes other players play show as
+"Room · name".

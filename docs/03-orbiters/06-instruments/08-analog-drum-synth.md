@@ -165,7 +165,7 @@ names and the choke groups are never on an axis.
 
 ## In a room
 
-Everyone in a room hears the same pads on the same steps and the same sound; only the noise (a
+Everyone in a <Term id="room">room</Term> hears the same pads on the same steps and the same sound; only the noise (a
 snare's or a hat's hiss) can differ a little.
 
 ## The pads' keys

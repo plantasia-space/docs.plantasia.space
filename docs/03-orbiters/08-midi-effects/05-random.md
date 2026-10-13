@@ -30,41 +30,29 @@ to jump an octave up or down.
 
 ## Draw
 
-- <Dot>1</Dot>**Chance**: how likely a note is moved. At 0 % no note moves; at 100 % every note does.
-- <Dot>2</Dot>**Choices**: how many intervals a moved note can land on, each way. With Choices 3 and an interval
-  of 12 st, a note can move one, two or three octaves.
-- <Dot>3</Dot>**Random** or **Alternate**: how a moved note picks its move.
-  - **Random** draws one of the moves for each note.
-  - **Alternate** takes the moves in turn, one place per note: up, down, further up, further down…
-    Every note moves the walk on, moved or not, so with Chance below 100 % the line keeps its shape:
-    Alternate says *which* move comes next, Chance says *whether* it plays. A chord's notes take
-    successive places, so a chord spreads out.
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**Chance** | How likely a note is moved. At 0 % no note moves; at 100 % every note does. |
+| <Dot>2</Dot>**Choices** | How many intervals a moved note can land on, each way. With Choices 3 and an interval of 12 st, a note can move one, two or three octaves. |
+| <Dot>3</Dot>**Random** or **Alternate** | How a moved note picks its move. **Random** draws one of the moves for each note. **Alternate** takes the moves in turn: up, down, further up, further down… A chord's notes take successive places, so a chord spreads out. |
 
 The light after **Draw** flashes when a note was just moved.
 
 ## Interval
 
-- <Dot>4</Dot>**+**, **−** or **±**: which way a note moves. **±** (the default) moves it either way, so a line
-  drawn around itself keeps its register.
-- <Dot>5</Dot>**Interval**: one step of a move. In semitones (1 … 24 st, 12 st by default: an octave), or, with
-  Follow on, in degrees of the scale (1 … 14 deg, 7 deg by default).
-- <Dot>6</Dot>**Follow** (the Orbiter's tonality): on, the interval counts degrees of the scale the Orbiter
-  plays in, so a moved note stays in the key. Off, it counts semitones.
+| Control | What it does |
+|---|---|
+| <Dot>4</Dot>**+**, **−** or **±** | Which way a note moves. **±** (as it loads) moves it either way, so a line drawn around itself keeps its register. |
+| <Dot>5</Dot>**Interval** | One step of a move. In semitones (1 … 24 st, 12 st as it loads: an octave), or, with Follow on, in degrees of the scale (1 … 14 deg, 7 deg as it loads). |
+| <Dot>6</Dot>**Follow** | On, the interval counts degrees of the Orbiter's scale, so a moved note stays in the Orbiter's key. Off (as it loads), it counts semitones. Turn Follow on once the Orbiter has a key: with no scale set, a degree is just a semitone. |
 
-### Why Follow is off by default
-
-Off, raising Chance always gives octaves, whatever the tonality. On, the interval counts degrees
-of the Orbiter's scale, and what that means depends on the scale: 7 degrees is an octave in a
-seven-note scale, but an octave and two notes in a pentatonic, and only a fifth with no scale set,
-where every degree is a semitone. Turn Follow on once the Orbiter has a key.
-
-A note outside the scale keeps its distance from the scale note under it: Random moves the line in
-the key, it doesn't correct it. For a strictly in-key result, put **Scale** after it.
+Random moves the line in the key, it doesn't correct it: for a strictly in-key result, put **Scale**
+after it.
 
 ## The edges
 
 A move past the lowest or the highest MIDI note folds back by whole octaves, so the note keeps its
-pitch class. There is no range of its own: put **Pitch** after Random to keep a register.
+note name. There is no range of its own: put **Pitch** after Random to keep a register.
 
 ## The screen
 
@@ -80,9 +68,6 @@ moves it could take.
 - The number is **Chance**; the three lights on the right say whether the last note went up (+),
   stayed (0) or went down (−).
 
-The moon rocks and the big star twinkles only while notes play. On the smallest drawer the screen
-hides and the Draw light stays.
-
 ## Try it
 
 - **An arpeggio that leaps.** After an Arpeggiator, before the instrument: Chance **30 %**, **±**, Interval **12 st**. Now and then a note jumps an octave.
@@ -92,25 +77,11 @@ hides and the Draw light stays.
 
 ## Mapping
 
-<Term id="axis">Axes</Term> can drive Chance, Choices and the interval: a Planet that moves away from the
+<Term id="axis">Axes</Term> can drive Chance, Choices and the interval: a World that moves away from the
 centre plays a looser line (Chance), or a wider one (Choices). Random · Alternate and Follow can be
 toggled. The two intervals map separately, so switching Follow never changes what a stored number
 means.
 
 ## In a room
 
-Every player hears the same notes moved the same way. Random reads one shared list of numbers, a
-note at a time per pitch class, so a note that reaches someone late still moves the same way, and
-someone joining takes over where the room is. Alternate's walk counts the same notes, so it walks
-alike everywhere, as long as the notes reach everyone in the same order (two players striking at the
-same instant may differ by one step).
-
-## Presets
-
-| Preset | Settings | What it does |
-| -- | -- | -- |
-| **Octave jumps** | Chance 30 %, ± 12 st, Choices 1 | A line that now and then leaps an octave. |
-| **Wander in key** | Chance 50 %, Follow on, ± 1 deg, Choices 2 | Steps a degree or two around the line, in the key. |
-| **Octave flip** | Chance 100 %, Alternate, ± 12 st, Choices 1 | Up an octave, down an octave, up… |
-| **Zig-zag** | Chance 100 %, Alternate, Follow on, ± 2 deg, Choices 2 | Up a third, down a third, further up, further down. |
-| **Sparkle** | Chance 20 %, + 12 st, Choices 2 | The odd note one or two octaves higher. |
+Every player in a <Term id="room">room</Term> hears the same notes moved the same way.

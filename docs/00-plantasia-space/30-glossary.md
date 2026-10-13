@@ -24,8 +24,16 @@ One of an Orbiter's three performance controls: **X**, **Y** and **Z**. Moving a
 [How to map a control to an axis](/docs/orbiters/quickstart#map)
 
 
+### Body {#body}
+One of the three parts of an Orbiter: the **World**, the **Star** and the **Moon**. Each has its own rack of modules, in up to three dimensions.
+
+
 ### Certificate of Authenticity
 A document that authenticates a piece of artwork. In digital contexts, it verifies that a program or object is a genuine, legal copy.
+
+
+### Drawer {#drawer}
+The panel in the Studio that shows a module's controls and its screen. It comes in several sizes; in the smallest, some screens hide and the knobs stay.
 
 
 ### ENT (Entangled Token)
@@ -49,6 +57,11 @@ The value a mapped control takes while its axis rests in the middle, between its
 We use “Landscape” instead of “nature” because in many cultures nature is defined as everything that is not human. “Landscape” allows us to describe an environment that is not separate from people, but part of the same continuum.
 
 
+### Launch grid {#launch-grid}
+The grid an Orbiter's starts, jumps and switches wait for, so that they land on a bar line. You pick it next to SYNC: **None**, 1 bar, 4 bars and so on.
+[Sync](/docs/orbiters/sync)
+
+
 ### Moon {#moon}
 An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Star's Main mix adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.
 [Audio effects: three places for an effect](/docs/orbiters/audio-effects)
@@ -63,6 +76,10 @@ An initiative exploring the intersection of digital and physical worlds through 
 Orbiters form a global network of intelligent music tools that use algorithmic approaches to support listening and creation, allowing users to shape their sound in new ways. These tools are designed to be accessible regardless of musical training and aim to reactivate auditory awareness while expanding the possibilities of musical exploration.
 
 
+### Play surface {#play-surface}
+The place where you play a Notes Orbiter by hand, in the Playback panel: the piano roll, and a tab for each generator in the chain (the Arpeggiator's keys, the Step sequencer's steps, the Drum sequencer's pads). It follows the dimension in focus.
+
+
 ### Plantasia Space
 Plantasia Space is a platform designed for regenerative music — sounds published with the intention that audiences can listen to, recreate, and transform them into new forms. Inside Plantasia Space, you can publish sounds, place them inside entangled worlds — artistic representations of physical worlds — and use orbiters — spaceships that transform sound in different ways — to explore and regenerate those sounds, encouraging playful interaction and healthy sensory exploration.
 
@@ -71,6 +88,11 @@ Plantasia Space is a platform designed for regenerative music — sounds publish
 Regenerative music is music conceived and published with the intention that it can be listened to or recreated by the audience into new forms and aesthetics.  
 It promotes the use of cycles and frequencies found in the landscape, creating harmonies with the cycles of the multiverse.  
 Anything that sounds — if released with intention — can be music.
+
+
+### Room {#room}
+A session that several people join to play the same Orbiters together, each on their own device. Everyone in a room shares one tempo and hears the same notes.
+[Sync](/docs/orbiters/sync)
 
 
 ### Soundscape

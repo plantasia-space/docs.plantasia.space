@@ -13,62 +13,8 @@ It is a **generator**: it leads an Orbiter's chain, before the MIDI effects and 
 dimension has at most one. Unlike the other modules it makes sound as soon as you add it: it loads with
 a plain pattern (a note on steps 1, 5, 9 and 13), and its power button is how you silence it.
 
-You meet it in two places, which always show the same state:
-
-- **The module**, in the Studio's drawer: the controls around the pattern, which can be mapped to the
-  Orbiter's <Term id="axis">axes</Term> and toggles.
-- **The play surface**, in the **Playback** panel on the stage, on the **Step sequencer** tab beside the
-  Piano roll: where you draw the steps and switch patterns.
-
-<TryModule module="stepSequencer" source="piano">
-<ModulePicture
-  src="/img/orbiters/midi-effects/step-sequencer.jpg"
-  wide
-  alt="The Step sequencer's module in the Studio: the Orbit screen, the Patterns tile, then Play (Direction, Rate, Gate, Swing), Loop (Start, Length) with its Lanes tab, Pitch (Follow, Keys, Scale, Octave, Root) and Euclid (Hits, Rotate)."
-  dots={[[1, 34.9, 19.8], [2, 38.1, 60.9], [3, 43.8, 60.9], [4, 49.5, 60.9], [5, 53, 14.1], [6, 56, 58.2], [7, 61.7, 58.2], [8, 68.3, 27.8], [9, 73.8, 27.8], [10, 81.1, 27.8], [11, 72.5, 60.9], [12, 80.2, 60.9], [13, 90.3, 27.8], [14, 91, 60.9], [15, 96.7, 60.9], [16, 33.6, 39.5], [17, 10.9, 12.5]]}
-/>
-</TryModule>
-
-## Play
-
-| Control | What it does |
-|---|---|
-| <Dot>1</Dot>**Direction** | Which way the steps run: **Forward**, **Backward**, **Ping-pong** (there and back, the ends played once) or **Random**. |
-| <Dot>2</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, from 8 bars down to short notes, with dotted values and triplets. **1/16** as it loads. |
-| <Dot>3</Dot>**Gate** | Every step's length, times this, 10 … 200 %: short for staccato, over 100 % for notes that run into each other. |
-| <Dot>4</Dot>**Swing** | Delays every second step, by up to half a step. |
-
-## Loop
-
-<Dot>5</Dot>Two tabs: **Loop** for the whole pattern, **Lanes** for each lane's own length.
-
-| Control | What it does |
-|---|---|
-| <Dot>6</Dot>**Start** | The first step of the loop, 1 … 32. The loop wraps round the 32 steps, so sliding Start moves a window along the pattern. |
-| <Dot>7</Dot>**Length** | How many steps the loop has, 1 … 32 (16 as it loads). 14 steps at 1/16 is a bar of 7/8. |
-| **Lanes** | The Octave, Length, Velocity and Chance lanes can each loop over a length of their own. A velocity lane of 3 steps under a pattern of 16 puts the accent somewhere new on every pass. At 0 a lane follows Length. |
-
-Steps outside the loop are kept: slide the loop back and they play again.
-
-## Pitch
-
-| Control | What it does |
-|---|---|
-| <Dot>8</Dot>**Follow** | On (as it loads), the pattern plays in the Orbiter's key and scale, and follows them when they change. Off, it has a **Root** and a **Scale** of its own. |
-| <Dot>9</Dot>**Keys** | On (as it loads), the keys you hold transpose the pattern while it runs: **C3 plays it as drawn**, E3 a third higher, counted in the scale so it stays in the key. The lowest held key counts; let go and the pattern returns to its own pitches. The keys make no sound of their own while the transport runs. Off, the keys are silent. |
-| <Dot>10</Dot>**Scale** | Its own scale, while not following. |
-| <Dot>11</Dot>**Octave** | Moves the whole pattern by octaves, −3 … +3. |
-| <Dot>12</Dot>**Root** | Its own root, while not following. |
-
-Each step's pitch is a number of semitones above the root. With a scale, a pitch outside it moves to the
-scale note below, so changing from major to minor turns the thirds with it.
-
-## Euclid
-
-<Dot>13</Dot>**Euclid** plays an even rhythm in place of the steps you switched on, live, over the loop:
-<Dot>14</Dot>**Hits** is how many notes fall in the loop, spread as evenly as they go, and
-<Dot>15</Dot>**Rotate** turns them later, step by step. Your own steps stay stored, drawn dimmed, and
-come back when you switch Euclid off.
+Its knobs are in the Studio; you draw the steps on the <Term id="play-surface">play surface</Term>: the
+**Step sequencer** tab of the **Playback** panel, beside the Piano roll. Both show the same state.
 
 ## Drawing the pattern
 
@@ -101,7 +47,9 @@ one down, one up), the **dice** for a random row, **Euclid** to write an even rh
 press writes another shape: rising, falling, an arch, flat), the **loop** switch (the lane follows the
 loop, or has a length of its own), and its number of **steps**.
 
-<Dot>7</Dot>**Euclid**, with **Hits** and **Rotate**, is the same as the module's. <Dot>8</Dot>**Mutate**
+<Dot>7</Dot>**Euclid** plays an even rhythm in place of the steps you switched on, live, over the loop:
+**Hits** is how many notes fall in the loop, spread as evenly as they go, and **Rotate** turns them
+later, step by step. Your own steps stay stored, drawn dimmed, and come back when you switch Euclid off. <Dot>8</Dot>**Mutate**
 nudges the rhythm written in the On row a little each time you press it, by the amount beside it;
 **Undo** takes the last write back.
 
@@ -111,7 +59,7 @@ nudges the rhythm written in the On row a little each time you press it, by the 
 ## Patterns
 
 The Step sequencer holds **16 patterns**. Switch to **Patterns**, on the surface or on the module's
-<Dot>16</Dot>**Patterns** tile in the first picture, and sixteen round pads show them, each a ring of its
+**Patterns** tile (<Dot>16</Dot> in the module's picture, below), and sixteen round pads show them, each a ring of its
 steps with its number and its name; an unused one reads **Empty**.
 
 <ModulePicture
@@ -121,7 +69,7 @@ steps with its number and its name; an unused one reads **Empty**.
   dots={[]}
 />
 
-- **Tap a pad** to switch. While the transport plays, the switch waits for the Orbiter's **launch grid**,
+- **Tap a pad** to switch. While the transport plays, the switch waits for the Orbiter's <Term id="launch-grid">launch grid</Term>,
   so it lands on the grid's next line (a bar, at the 1 Bar setting); tap the waiting pad again to take it
   back. Stopped, or with the launch grid off, it switches at once. The
   line beside **Shift** says what a tap does now ("Tap launches now"), and **Shift** flips it.
@@ -133,17 +81,68 @@ steps with its number and its name; an unused one reads **Empty**.
 The rate, direction, gate, swing, pitch settings and Euclid belong to the module and are shared by all
 sixteen.
 
+## The module
+
+The knobs around the pattern, in the Studio.
+
+<TryModule module="stepSequencer" source="piano">
+<ModulePicture
+  src="/img/orbiters/midi-effects/step-sequencer.jpg"
+  wide
+  alt="The Step sequencer's module in the Studio: the Orbit screen, the Patterns tile, then Play (Direction, Rate, Gate, Swing), Loop (Start, Length) with its Lanes tab, Pitch (Follow, Keys, Scale, Octave, Root) and Euclid (Hits, Rotate)."
+  dots={[[1, 34.9, 19.8], [2, 38.1, 60.9], [3, 43.8, 60.9], [4, 49.5, 60.9], [5, 53, 14.1], [6, 56, 58.2], [7, 61.7, 58.2], [8, 68.3, 27.8], [9, 73.8, 27.8], [10, 81.1, 27.8], [11, 72.5, 60.9], [12, 80.2, 60.9], [13, 90.3, 27.8], [14, 91, 60.9], [15, 96.7, 60.9], [16, 33.6, 39.5], [17, 10.9, 12.5]]}
+/>
+</TryModule>
+
+## Play
+
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**Direction** | Which way the steps run: **Forward**, **Backward**, **Ping-pong** (there and back, the ends played once) or **Random**. |
+| <Dot>2</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, from 8 bars down to short notes, with dotted values and triplets. **1/16** as it loads. |
+| <Dot>3</Dot>**Gate** | Every step's length, times this, 10 … 200 %: short for staccato, over 100 % for notes that run into each other. |
+| <Dot>4</Dot>**Swing** | Delays every second step, by up to half a step. |
+
+## Loop
+
+<Dot>5</Dot>Two tabs: **Loop** for the whole pattern, **Lanes** for each lane's own length (see [More: lanes](#more-lanes)).
+
+| Control | What it does |
+|---|---|
+| <Dot>6</Dot>**Start** | The first step of the loop, 1 … 32. The loop wraps round the 32 steps, so sliding Start moves a window along the pattern. |
+| <Dot>7</Dot>**Length** | How many steps the loop has, 1 … 32 (16 as it loads). 14 steps at 1/16 is a bar of 7/8. |
+
+Steps outside the loop are kept: slide the loop back and they play again.
+
+## Pitch
+
+| Control | What it does |
+|---|---|
+| <Dot>8</Dot>**Follow** | On (as it loads), the pattern plays in the Orbiter's key and scale, and follows them when they change. Off, it has a **Root** and a **Scale** of its own. |
+| <Dot>9</Dot>**Keys** | On (as it loads), hold a key while it runs and the pattern moves to that key, in the scale; **C3 plays it as drawn**. Let go and it returns. Off, the keys are silent. |
+| <Dot>10</Dot>**Scale** | Its own scale, while not following. |
+| <Dot>11</Dot>**Octave** | Moves the whole pattern by octaves, −3 … +3. |
+| <Dot>12</Dot>**Root** | Its own root, while not following. |
+
+Each step's pitch is a number of semitones above the root. With a scale, a pitch outside it moves to the
+scale note below, so changing from major to minor turns the thirds with it.
+
+## Euclid
+
+<Dot>13</Dot>**Euclid**, with <Dot>14</Dot>**Hits** and <Dot>15</Dot>**Rotate**, is the same as on the play
+surface: see [Drawing the pattern](#drawing-the-pattern).
+
+## More: lanes
+
+The Octave, Length, Velocity and Chance lanes can each loop over a length of their own: on the module's
+**Lanes** tab, or with the loop switch at the end of a lane. A velocity lane of 3 steps under a pattern
+of 16 puts the accent somewhere new on every pass. At 0 a lane follows Length.
+
 ## The screen
 
-<Dot>17</Dot>**Orbit.** The loop is one orbit of a World round its Sun, the root: one tick for every
-step, clockwise from the top, longer on the beats. Each step that plays is a Moon on its tick's ray:
-further out the higher its note, its lit part its velocity, its rim dashed when its chance is under
-100 %, with a tail for its length. A rest leaves its place empty. The World goes round with the
-transport, and the Moon it lines up with lights up. A lane with its own length is a smaller ring inside,
-with its own marker. **Tap a tick** to rest that step, or to play it again. Top right, the note playing
-(**Rest**, or **Stopped**); below, the rate and the direction, and the root. In Patterns, the sixteen
-patterns' rings take the Orbit's place: tap one to pick it, as on the pads. On the stage, the same
-screen is drawn large in the play monitor.
+<Dot>17</Dot>**Orbit.** The loop is a ring, one tick per step, clockwise from the top. A Moon on a
+tick is a note: further out is higher, its lit part its velocity, a tail its length. **Tap a tick** to
+rest or play that step. Top right, the note playing; below, the rate, the direction and the root.
 
 ## Try it
 
@@ -161,5 +160,5 @@ drawn, not mapped.
 
 ## In a room
 
-Everyone hears the same notes on the same steps: what a step plays depends only on the beat, and the
+Everyone in a <Term id="room">room</Term> hears the same notes on the same steps: what a step plays depends only on the beat, and the
 chance draws are shared. A pattern switch reaches every player on the same beat.

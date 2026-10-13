@@ -29,44 +29,34 @@ nothing until you move something.
 
 ## Length
 
-The <Dot>1</Dot>**Length** switch picks Played, Time or Sync; <Dot>2</Dot>**Time** sets the time or the note value, and <Dot>3</Dot>**Gate** scales it.
-
-- **Played**: each note keeps the length you played. **Gate** over 100 % lengthens it past the
-  key-up: at 200 %, a note held 300 ms rings 300 ms more. Under 100 % changes nothing here, because
-  the note can't know when you'll let go.
-- **Time**: every note lasts the same time, 1 ms to 4 s, however long you hold the key.
-- **Sync**: every note lasts a note value on the Orbiter's tempo, from 1/2 to 1/32, dotted and
-  triplet ones included ("1/16" at 120 BPM is 125 ms).
-- **Gate**: a share of that length. 50 % halves it, 200 % doubles it.
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**Length** | **Played**: each note keeps the length you played. **Time**: every note lasts the same time, 1 ms to 4 s, however long you hold the key. **Sync**: every note lasts a note value on the Orbiter's tempo, from 1/2 to 1/32, dotted and triplet ones included. |
+| <Dot>2</Dot>**Time** | The time, or the note value. |
+| <Dot>3</Dot>**Gate** | A share of that length: 50 % halves it, 200 % doubles it. With Played, Gate over 100 % lets the note ring on after the key-up. |
 
 Each note keeps the rules it started with: turning a knob, or changing the tempo, acts from the next
 note. Note length works with the transport stopped too. No note lasts more than 60 s.
 
 ## Shape
 
-- <Dot>4</Dot>**Key scale** (Time and Sync): low keys longer (+) or shorter (−). At +100 %, a note two octaves
-  under C3 lasts twice as long, two octaves over it half as long.
-- <Dot>5</Dot>**Decay** (Key up only): the longer you held a key, the quieter its note. Held for Decay or longer,
-  it stays silent. At the top, **∞**, every note keeps the velocity you played.
+| Control | What it does |
+|---|---|
+| <Dot>4</Dot>**Key scale** | Time and Sync: low keys longer (+) or shorter (−). At +100 %, a note two octaves under C3 lasts twice as long, two octaves over it half as long. |
+| <Dot>5</Dot>**Decay** | Key up only: the longer you held a key, the quieter its note. Held for Decay or longer, it stays silent. At the top, **∞**, every note keeps the velocity you played. |
 
 ## Trigger
 
-The <Dot>6</Dot>**Trigger** pad switches between Down and Up, and <Dot>7</Dot>**Latch** holds the notes.
+| Control | What it does |
+|---|---|
+| <Dot>6</Dot>**Trigger** | **Down** (as it loads): a note sounds as its key goes down. **Up**: a note sounds when you **release** its key, an organ's release click or a pluck on the way up; its length is the time or note value you set, or with Played, the time you held it × Gate. |
+| <Dot>7</Dot>**Latch** | Down only: notes keep sounding after you let go, until you start a **new chord**. Keys you add while one is held join the chord. Turning Latch off, switching to Up, bypassing the module, stopping or seeking the transport, or the panic button releases them. |
 
-- **Down** (the default): a note sounds as its key goes down.
-- **Up**: a note sounds when you **release** its key, an organ's release click or a pluck on the way
-  up. Its length is the time or note value you set; with **Played**, the time you held it × Gate.
-- **Latch** (Down only): notes keep sounding after you let go, until you start a **new chord**: the
-  first key you press with no key down replaces them. Keys you add while one is held join the chord.
-  Turning Latch off, switching to Up, bypassing the module, stopping or seeking the transport, or
-  the panic button releases them.
+Controls a setting does not use are dimmed.
 
-What a setting doesn't use dims, with a note saying why: Time and Key scale with Played, Decay
-unless Up, Latch with Up, and Time, Gate and Key scale while Latch holds the notes.
+## The screen
 
-## The screen: Lengths
-
-<Dot>8</Dot>One row per note. The dashed outline is the note as you played it; the solid bar inside it is the
+<Dot>8</Dot>**Lengths.** One row per note. The dashed outline is the note as you played it; the solid bar inside it is the
 note that comes out, lit while it sounds. With nothing playing, three example notes held a sixteenth,
 one beat and two beats show how the settings treat each. While you play, the four newest notes scroll
 past, newest on top, with now three quarters of the way across.
@@ -90,7 +80,5 @@ scale** and **Decay**: from clipped to sustained in one move. Toggles can flip *
 
 ## In a room
 
-Every player hears the lengths made on their own device from the notes they hear, so nothing extra
-travels. A player who hears a note late hears its new length late by the same amount. Latch's "no key
-down" counts every player's keys: while one player holds a key, another's notes join the chord.
-Someone joining starts with nothing latched; the next chord lines everyone up.
+Every player's device in a <Term id="room">room</Term> makes the lengths from the notes it hears. Latch counts every player's keys:
+while one player holds a key, another's notes join the chord.
