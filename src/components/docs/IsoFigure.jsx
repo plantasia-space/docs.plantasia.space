@@ -13,21 +13,28 @@ const loadFigure = new Function('url', 'return import(url)');
 // ps-docs-figures skill: it exports the drawing (`svg`) and `mount(root, say)`.
 // The drawing carries no words and no background: the page explains it, and
 // what the figure says as it moves (`say`) is written under it, as page text.
-// `label` is read out in place of the drawing; children are the caption.
+// The figure brings its own accessible name; `label` describes the drawing and
+// is shown in its place if the figure cannot load. Children are the caption.
 export default function IsoFigure({ name, label, children }) {
   const { colorMode } = useColorMode();
   const url = useBaseUrl(`/figures/${name}.js`);
   const stageRef = useRef(null);
   const [readout, setReadout] = useState('');
+  const [missing, setMissing] = useState(false);
 
   useEffect(() => {
     let unmount = null;
     let gone = false;
-    loadFigure(url).then((figure) => {
-      if (gone || !stageRef.current) return;
-      stageRef.current.innerHTML = figure.svg;
-      unmount = figure.mount(stageRef.current, setReadout);
-    });
+    loadFigure(url)
+      .then((figure) => {
+        if (gone || !stageRef.current) return;
+        stageRef.current.innerHTML = figure.svg;
+        unmount = figure.mount(stageRef.current, setReadout);
+      })
+      .catch(() => {
+        // Without its figure the page still reads: the label stands in for the drawing.
+        if (!gone) setMissing(true);
+      });
     return () => {
       gone = true;
       unmount?.();
@@ -36,11 +43,13 @@ export default function IsoFigure({ name, label, children }) {
 
   return (
     <figure className={styles.figure}>
-      <div ref={stageRef} className={`iso ${styles.stage}`} data-theme={colorMode} role="img" aria-label={label} />
-      <figcaption className={styles.caption}>
-        <span className={styles.readout}>{readout}</span>
-        {children}
-      </figcaption>
+      {missing ? <p className={styles.caption}>{label}</p> : <div ref={stageRef} className={`iso ${styles.stage}`} data-theme={colorMode} />}
+      {!missing && (
+        <figcaption className={styles.caption}>
+          <span className={styles.readout}>{readout}</span>
+          {children}
+        </figcaption>
+      )}
     </figure>
   );
 }

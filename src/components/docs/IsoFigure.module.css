@@ -6,14 +6,16 @@
 .stage {
   max-width: 640px;
   margin: 0 auto;
-  min-height: 200px;
+  /* The drawing's own shape, so the page does not jump when it arrives. */
+  aspect-ratio: 640 / 400;
 }
 
 .stage :global(.iso-stage) {
   outline-offset: 6px;
   border-radius: 6px;
   cursor: crosshair;
-  touch-action: none;
+  /* A finger can still scroll the page past the figure. */
+  touch-action: pan-y;
 }
 
 .caption {

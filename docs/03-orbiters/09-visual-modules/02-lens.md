@@ -23,8 +23,8 @@ Think of the Lens as the Orbiter's own camera, bolted to its hull:
 | **The knob on the console** | **Amount**: how far Width and Shift move the lens |
 | **The viewfinder** on the console | what you see: the World, larger or smaller, to one side or the other |
 
-At a full turn, Width opens the lens by 20° or closes it by 14°, and Shift slides the picture by 12 % of
-the frame. The line under the picture reads what the lens is doing now.
+At a full turn, Width opens the lens by up to 20° or closes it by up to 14°, and Shift slides the
+picture by up to 12 % of the frame. The line under the picture reads what the lens is doing now.
 
 :::note[It loads doing nothing]
 

@@ -56,5 +56,11 @@ The checks need Node 20.10+ and Chrome. Previews and shots are not committed (`f
   greys, not yet Plantasia Space's colours.
 - The Lens figure's Amount knob is drawn but does not turn.
 - No still picture is shown before the script loads, or without JavaScript.
+- A figure's `say` passes finished English text. For a Spanish page it should pass values and let the
+  page word them.
+- `IsoFigure` imports the figure through `new Function` to keep it out of the bundle: fine today (the
+  site sets no Content-Security-Policy), to revisit if one is added.
+- The Lens figure shows the mid and high graphics presets' swing (20°, 14°, 12 %); the low preset's is
+  smaller (14°, 10°, 8 %), which is why the page says "up to".
 - Upstream's 4x close-up pass and its geometry audit have not been run on our figures.
 - `kit/` still carries upstream's React and 3D parts, which we do not use yet.

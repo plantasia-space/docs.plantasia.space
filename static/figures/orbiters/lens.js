@@ -695,9 +695,9 @@ function poseOf(w, s) {
 const sign = (n, digits) => (n > 0 ? "+" : n < 0 ? "−" : "") + Math.abs(n).toFixed(digits);
 function readoutOf(w, s) {
   const turn = fovOf(w) - REST_FOV;
-  const view = Math.abs(turn) < 0.05 ? "own view" : (turn > 0 ? "opens " : "closes ") + Math.abs(turn).toFixed(0) + "°";
+  const view = Math.round(Math.abs(turn)) === 0 ? "own view" : (turn > 0 ? "opens " : "closes ") + Math.abs(turn).toFixed(0) + "°";
   const slide = s * SHIFT_FRAC * 100;
-  const side = Math.abs(slide) < 0.05 ? "centred" : Math.abs(slide).toFixed(0) + " % " + (slide > 0 ? "right" : "left");
+  const side = Math.round(Math.abs(slide)) === 0 ? "centred" : Math.abs(slide).toFixed(0) + " % " + (slide > 0 ? "right" : "left");
   return "Width " + sign(w * 100, 0) + " % · " + view + " · Shift " + sign(s * 100, 0) + " % · " + side;
 }
 
@@ -721,7 +721,7 @@ function draw() {
   stars.innerHTML = pose.stars.map(([x, y]) => '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="0.55"/>').join("");
   const text = readoutOf(Math.round(w * 100) / 100, Math.round(s * 100) / 100);
   if (said !== text) { said = text; say(text); }
-  stage.setAttribute("aria-valuetext", text);
+  if (!touring && stage.getAttribute("aria-valuetext") !== text) { stage.setAttribute("aria-valuenow", String(Math.round(w * 100))); stage.setAttribute("aria-valuetext", text); }
 }
 function tick(now) {
   const dt = last ? Math.min((now - last) / 1000, 1 / 30) : 1 / 60;
@@ -735,7 +735,15 @@ function tick(now) {
   frame = visible && (touring || w !== tw || s !== ts) ? requestAnimationFrame(tick) : 0;
 }
 const run = () => { if (!frame && visible) { last = 0; frame = requestAnimationFrame(tick); } };
-const steer = (nw, ns) => { touring = false; tw = clamp(nw, -1, 1); ts = clamp(ns, -1, 1); clearTimeout(idle); idle = setTimeout(() => { touring = !still.matches; clock = 0; run(); }, 4200); run(); };
+// The reader's setting stays for as long as they are on the figure (pointer over it, or keyboard focus):
+// the tour only comes back a while after they have left.
+let over = false;
+const rest = () => { clearTimeout(idle); if (over || document.activeElement === stage) return; idle = setTimeout(() => { touring = !still.matches; clock = 0; run(); }, 4200); };
+const steer = (nw, ns) => { touring = false; tw = clamp(nw, -1, 1); ts = clamp(ns, -1, 1); rest(); run(); };
+stage.addEventListener("pointerenter", () => { over = true; clearTimeout(idle); });
+stage.addEventListener("pointerleave", () => { over = false; rest(); });
+stage.addEventListener("pointercancel", () => { over = false; rest(); });
+stage.addEventListener("blur", rest);
 const seen = new IntersectionObserver((entries) => { visible = entries[entries.length - 1].isIntersecting; if (visible) run(); }, { rootMargin: "120px 0px" });
 seen.observe(stage);
 stage.addEventListener("pointermove", (event) => {

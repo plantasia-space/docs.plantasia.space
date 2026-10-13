@@ -30,7 +30,7 @@ The <Dot>2</Dot>switch decides what Speed does to the pitch:
 
 | Control | What it does |
 |---|---|
-| <Dot>3</Dot>**Speed** | 100 % plays as recorded, 0 % stops, below 0 plays backwards (down to −100 %), up to 400 %. With Stretch on it moves the tempo, and the word after its name says which. |
+| <Dot>3</Dot>**Speed** | 100 % plays as recorded, 0 % stops, below 0 plays backwards (down to −100 %), up to 400 %. With the Orbiter's [Warp](/docs/orbiters/sync) on it moves the tempo, and the word after its name says which. |
 | <Dot>4</Dot>**Pitch** | Transposes with the tempo locked, −24 … +24 st. Stretch only. |
 | <Dot>5</Dot>**Quantize** | Semitone steps: Pitch lands on whole semitones in Stretch; Speed & pitch lands on semitone ratios in Tape. |
 
@@ -65,7 +65,7 @@ The <Dot>2</Dot>switch decides what Speed does to the pitch:
   rises; with it on they hold their size.
 
 The big number top left is Speed. Below the picture, Speed and the pitch you hear (or the tempo,
-with Stretch on) in words. The picture moves only while sound plays; at rest, and with your system's
+with Warp on) in words. The picture moves only while sound plays; at rest, and with your system's
 reduced-motion setting, it is a still picture of the current values. Speed is set by its knob or a
 mapping, not by dragging the screen.
 

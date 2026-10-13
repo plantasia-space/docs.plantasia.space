@@ -78,10 +78,13 @@ default.
 |---|---|
 | **Filter 1**, **Filter 2** | <Dot>10</Dot>**Type**: low-pass, band-pass, high-pass, notch, or **Vowel** (A, E, I, O, U; the cutoff moves the vowel). **Slope**: 12 or 24 dB an octave. <Dot>11</Dot>The envelope on top is the filter's own. <Dot>12</Dot>The knobs: **Cutoff**, **Resonance**, **Envelope** (how far the envelope moves the cutoff), **Drive**, and on Filter 1 **F1 → F2** (how much of Filter 1 also feeds Filter 2). Filter 2's **Follow** puts its cutoff on Filter 1's, plus an **Offset**. |
 | **Amp 1**, **Amp 2** | Each path's envelope, its **Level** and its **Pan**. |
-| **Loop** | Every envelope can loop while a key is held: **AD-R** repeats the attack and decay, **ADR-R** the attack, decay and release. Short times make a pulse or a trill; letting the key go always ends the note. |
 | **Mod** | Each oscillator's **pitch envelope**: where its pitch starts on a strike, and how long it takes to reach the key. |
 | **LFO 1**, **LFO 2** | Synced or free, six shapes, and **Amount**. What each one moves is set in the Matrix. |
 | **Voice** | **Unison** is thick but costs voices; the tab says how many. **Drift** lets the oscillators wander a little, like an analog pair. Then **Glide**, **Velocity**, **Level**, **Poly · Mono** and **Retrig · Legato**. |
+
+Every envelope, on the Filter and Amp tabs, has a **Loop** menu: it can loop while a key is held. **AD-R** repeats the attack and
+decay, **ADR-R** the attack, decay and release. Short times make a pulse or a trill; letting the key go
+always ends the note.
 
 ## Matrix
 
