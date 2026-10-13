@@ -6,7 +6,7 @@ import styles from './IsoFigure.module.css';
 
 // The figure is a static file, not part of the bundle: the browser imports it
 // by URL, out of the bundler's sight.
-const loadFigure = new Function('url', 'return import(url)');
+export const loadFigure = new Function('url', 'return import(url)');
 
 // A live figure: one object drawn in isometric line, moved by the reader.
 // `name` is a module under static/figures/ ("orbiters/lens"), built by the

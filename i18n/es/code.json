@@ -403,6 +403,30 @@
     "message": "Documentación oficial de Plantasia Space — guías de Audios, Mundos Entrelazados, Orbitadores y Colecciones.",
     "description": "The description of the site"
   },
+  "homepage.figure.orrery": {
+    "message": "Una máquina que representa Plantasia Space. Un planeta con anillo, un Mundo Entrelazado, gira en el centro, y una pequeña nave, un Orbitador, da vueltas a su alrededor y le envía un haz. En torno a ellos, unas bolas verdes, los Audios, recorren una pista circular. Al pasar, cada bola pone en marcha por turno las piezas del borde: un mueble de cajones, la Colección; una consola con auriculares, el xPlorer; una fila de láminas afinadas, un instrumento; un brote, un Lanzamiento; y una orquídea, la propia Plantasia Space.",
+    "description": "What the home page figure shows, wide arrangement (read by screen readers)"
+  },
+  "homepage.figure.tower": {
+    "message": "Una máquina que representa Plantasia Space, construida como una torre. Arriba, un mueble de cajones, la Colección, suelta una bola verde, un Audio. La bola baja por una rampa, salta por una fila de láminas afinadas, un instrumento, y rueda junto a una consola con auriculares, el xPlorer. Al pie, una pequeña nave, un Orbitador, da vueltas a un planeta con anillo, un Mundo Entrelazado, y le envía un haz. La bola cae en una maceta donde crece un brote, un Lanzamiento. A su lado hay una orquídea, la propia Plantasia Space.",
+    "description": "What the home page figure shows, narrow arrangement (read by screen readers)"
+  },
+  "homepage.figure.soundOn": {
+    "message": "Activar el sonido",
+    "description": "Button on the home page figure that lets the machine make sound"
+  },
+  "homepage.figure.soundOff": {
+    "message": "Desactivar el sonido",
+    "description": "Button on the home page figure that silences the machine"
+  },
+  "homepage.figure.pause": {
+    "message": "Pausar la máquina",
+    "description": "Button on the home page figure that stops its motion"
+  },
+  "homepage.figure.play": {
+    "message": "Poner en marcha la máquina",
+    "description": "Button on the home page figure that starts its motion again"
+  },
   "homepage.features.plantasia_space": {
     "message": "Plantasia Space",
     "description": "Homepage feature: Plantasia Space"

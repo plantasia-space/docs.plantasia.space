@@ -1,76 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomeFigure from '@site/src/components/HomeFigure';
 import Translate, {translate} from '@docusaurus/Translate';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-
-const HERO_VIDEO_SOURCES = {
-  en: {
-    horizontal: 'https://herbarium.plantasia.space/docs/en/media/ps-trailer-01-horizontal-small.mp4',
-    vertical: 'https://herbarium.plantasia.space/docs/en/media/ps-trailer-01-vertical-small.mp4',
-  },
-  es: {
-    horizontal: 'https://herbarium.plantasia.space/docs/es/media/ps-trailer-01-horizontal-small.mp4',
-    vertical: 'https://herbarium.plantasia.space/docs/es/media/ps-trailer-01-vertical-small.mp4',
-  },
-};
-
-function useViewportOrientation() {
-  const [orientation, setOrientation] = useState('horizontal');
-
-  useEffect(() => {
-    function updateOrientation() {
-      if (typeof window === 'undefined') {
-        return;
-      }
-      const ratio = window.innerWidth / window.innerHeight;
-      setOrientation(ratio < 1 ? 'vertical' : 'horizontal');
-    }
-
-    updateOrientation();
-    window.addEventListener('resize', updateOrientation);
-    return () => window.removeEventListener('resize', updateOrientation);
-  }, []);
-
-  return orientation;
-}
-
-function HeroVideo() {
-  const {i18n} = useDocusaurusContext();
-  const currentLocale = i18n.currentLocale;
-  const orientation = useViewportOrientation();
-  
-  const videoSources = HERO_VIDEO_SOURCES[currentLocale] || HERO_VIDEO_SOURCES.en;
-  const videoSrc = videoSources[orientation];
-  
-  const label = translate({message: 'Plantasia trailer', id: 'homepage.hero.videoLabel'});
-
-  return (
-    <div className={styles.heroVideoWrapper}>
-      <video
-        key={videoSrc}
-        className={clsx(styles.heroVideo, orientation === 'vertical' ? styles.heroVideoVertical : styles.heroVideoHorizontal)}
-        autoPlay
-        loop
-        muted
-        playsInline
-        controls
-        poster="/img/video-placeholder.svg"
-        aria-label={label}
-      >
-        <source src={videoSrc} type="video/mp4" />
-        <Translate id="homepage.hero.videoUnsupported">
-          Your browser does not support the video tag.
-        </Translate>
-      </video>
-    </div>
-  );
-}
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -103,7 +41,7 @@ export default function Home() {
       title={translate({message: 'Plantasia Space — Documentation & Guides', id: 'homepage.metaTitle'})}
       description={translate({message: 'Official documentation for Plantasia Space — guides for Audios, Entangled Worlds, Orbiters, and Collections.', id: 'homepage.description'})}>
       <HomepageHeader />
-              <HeroVideo />
+      <HomeFigure />
       <main>
         <HomepageFeatures />
       </main>

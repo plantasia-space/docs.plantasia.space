@@ -21,26 +21,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.heroVideoWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.heroVideo {
-  display: block;
-  width: 100%;
-  max-width: 960px;
-  height: auto;
-  max-height: 80vh;
-}
-
-.heroVideoVertical {
-  max-width: 480px;
-}
-
-.heroVideoHorizontal {
-  /* Inherit base dimensions; kept for future overrides if needed */
-}

@@ -53,6 +53,7 @@ The checks need Node 20.10+ and Chrome. Previews and shots are not committed (`f
 | `orbiter-console` | Interact | the three knobs (X, Y, Z), the World on the screen, and the marker on the effect each knob is mapped to |
 | `module-families` (three figures) | Instruments, Audio effects, MIDI effects overviews | a place along the rack: which instrument plays, the sound passing three effects, a note going from generator to effect to instrument |
 | `orbiter-sensors` | Sensors | the phone on its ball joint (turn, tip, roll) and the three knobs it turns |
+| `home-machine` | Home page (`src/components/HomeFigure`) | runs by itself: Audios (balls) on their track, the Orbiter round the World, each part answering as a ball passes. Two arrangements of the same parts (`parts.mjs`): `orrery` for wide screens, `tower` for a narrow column |
 
 ## Shared marks
 
@@ -66,6 +67,16 @@ The checks need Node 20.10+ and Chrome. Previews and shots are not committed (`f
   keys for notes).
 - **A part that turns in space** (the Sensors phone) is rebuilt by the page each frame: the build script's
   `prism()` draws a box on any plane with the kit's own tones. Copy it from `orbiter-sensors`.
+
+## A figure with several objects (the home machine)
+
+- One drawing of each entity lives in `src/home-machine/parts.mjs`: reuse them so every figure shares one World and one Orbiter.
+- Each item sits in its own `<g data-k>` (its depth). The page only moves what the build drew: a mover follows a sampled track and is put back at its place in the back-to-front order as it goes.
+- Its one accent is a ramp in `build.mjs` (`ACCENT`) round the Orbiters app's default Color C, `#33ff41` (`--orb-default-color3`).
+- It writes a picture per arrangement and theme (`<name>-dark.svg`, `<name>-light.svg`) and a small `<name>.js` that only moves it. The page shows the picture first, then puts the same file on its stage and mounts the script: the drawing is downloaded once. Both files carry the build's id and the script refuses a picture from another build, so rebuild and commit them together.
+- The page gives the description (translated) and sets it on the drawing after it mounts. It also owns the two buttons (`mount` returns its cleanup, with `.pause(on)` and `.sound(on)`).
+- Sound is part of the figure's script: an event in `build.mjs` may carry a `voice`, played once as the part starts to answer. The notes are not written down: four chords in D major move on with each lap of the Orbiter, and each voice draws from the chord of the moment with some chance in it. It is off until the reader turns it on, and silent while paused.
+- Build: `cd figures/src/home-machine && node build.mjs --preview` (writes into `static/figures/home`), then the line check and captures on `preview-orrery-*.html` and `preview-tower-*.html`.
 
 ## To polish next
 
