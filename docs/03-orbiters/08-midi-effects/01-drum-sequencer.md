@@ -26,16 +26,16 @@ You meet it in two places, which always show the same state:
 
 ## Pad functions
 
-Pick what the pads do: **Beats** and **Mutes** work on the beat, **Steps**, **Tunings** and **Voices** on its notes. The buttons
+Pick what the pads do: **Beats** and **Mutes** work on the beat, **Sound**, **Steps** and **Tunings** on its notes. The buttons
 around the pads follow the function: an action that would do nothing there is greyed out.
 
 | Function | The pads… | Also available |
 |---|---|---|
-| **Voices** | play each drum voice (bank A, or bank B with **Bank B**) and select it | Roll, Accent, Rec, Generate, Copy/Paste/Erase |
 | **Beats** | pick the beat that plays | Beat roll, Bank B, Copy/Paste/Erase of the whole beat, Length |
-| **Steps** | set the selected voice's steps; hold a pad to edit that step on the knobs | Roll, Accent, Page, Generate, Copy/Paste/Erase of the voice's row |
-| **Tunings** | play the selected voice across the pads, a semitone (or more, with **Spread**) apart | Roll, Accent, Rec |
 | **Mutes** | mute or unmute each voice | Beat roll, Bank B, Unmute all |
+| **Sound** | play each drum voice (bank A, or bank B with **Bank B**) and select it | Roll, Accent, Rec, Generate, Copy/Paste/Erase |
+| **Steps** | set the selected voice's steps; hold a pad to edit that step on the knobs | Roll, Accent, Page, Generate, Copy/Paste/Erase of the voice's row |
+| **Tunings** | play the selected voice higher or lower: the same sound at a different pitch on every pad | Roll, Accent, Rec |
 
 The four knobs under the screen change with the function too.
 
@@ -67,6 +67,22 @@ number under it, and the status line names the beat that plays and the one that 
 a name reads "Beat 7". Names are saved with the Drum sequencer: in its preset, in the Orbiter, and for
 everyone in a room. Copy and Paste carry a beat's name; Erase keeps it.
 
+## Tunings
+
+Pick a sound in **Sound**, then open **Tunings**: every pad plays that same sound at another pitch. A
+snare stays a snare, higher or lower. On a drum instrument (the Analog drum synth, the Hybrid drum
+synth, a Sampler kit) the pad keeps its drum and only its pitch moves; on a synth the pads play
+different notes.
+
+The pads follow the Orbiter's **key and scale**: each pad is one step of the scale away from the next.
+With no scale set, a step is a semitone.
+
+- **Base** sets which step the middle pad plays. At 0 it is the sound's own pitch.
+- **Spread** sets how many steps lie between one pad and the next (1 to 3).
+
+Each pad shows its step and the note it plays. A Sampler kit's sounds are pitched two octaves at most,
+up or down. A sound that is only noise, like a clap, has no pitch to move and plays as it is.
+
 ## Shift
 
 **Shift** flips what a tap does. Hold the **Shift** key, or use the **Shift** button: hold it for one
@@ -77,10 +93,10 @@ play surface of the Orbiter.
 |---|---|---|
 | **Beats** | switches on the launch grid | switches at once |
 | **Mutes** | mutes or unmutes on the launch grid | mutes or unmutes at once |
-| **Voices** | plays the voice and selects it (Audition on) | selects it without sounding it |
+| **Sound** | plays the voice and selects it (Audition on) | selects it without sounding it |
 
 With the launch grid off, a tap acts at once and Shift waits for the next bar instead. With Audition
-off in Voices, Shift does the opposite too: the tap sounds the voice. In Steps and Tunings, Shift
+off in Sound, Shift does the opposite too: the tap sounds the voice. In Steps and Tunings, Shift
 rests.
 
 The right end of the status line always says what a tap does now, for example "Tap launches in 1 bar",
@@ -90,12 +106,12 @@ and turns to the accent colour while Shift is on.
 
 Press <Dot>7</Dot>**Rec** to record what you play into the beat that is playing:
 
-1. Pick **Voices** or **Tunings**.
+1. Pick **Sound** or **Tunings**.
 2. Press **Rec**. The button lights; it records while the transport plays.
 3. Play the pads, by tapping or from MIDI pads mapped to them.
 
 Each hit lands on the step nearest to when you heard it, keeping how far off the grid it was, its
-velocity (Accent records at full velocity), and in Tunings its pitch. The result is ordinary steps:
+velocity (Accent records at full velocity), and in Tunings its pitch (it keeps that pitch if the key or scale changes later). The result is ordinary steps:
 open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again to stop.
 
 <LoopVideo
@@ -106,7 +122,7 @@ open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again
 
 ## Generate
 
-<Dot>8</Dot>**Generate** writes rhythms for the selected voice (in Voices or Steps):
+<Dot>8</Dot>**Generate** writes rhythms for the selected voice (in Sound or Steps):
 
 - **Euclid** plays the voice's row as an even rhythm, live: **Hits** per bar, turned by **Rotate**,
   with a **Chance** per hit. **Mutate** moves hits and adds ghost notes anew every bar. Nothing is
@@ -116,7 +132,7 @@ open **Steps** to edit them, or **Undo** to take a hit back. Press **Rec** again
 
 ## Edit
 
-<Dot>9</Dot>**Copy**, **Paste** and **Erase** act on the voice's row in Voices and Steps, and on the whole beat
+<Dot>9</Dot>**Copy**, **Paste** and **Erase** act on the voice's row in Sound and Steps, and on the whole beat
 in Beats: copy a beat, pick another, paste. **Undo** takes back the last edit.
 
 ## Real-time FX
