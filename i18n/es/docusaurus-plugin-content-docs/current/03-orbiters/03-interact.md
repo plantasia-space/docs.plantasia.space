@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 ## Abrir un Orbitador
 
-Los Orbitadores se abren desde un **audio**: el Orbitador se abre sobre él, incrustado en la página o en una pestaña independiente.
+Los Orbitadores se abren desde un **audio**: pulsa el botón **On/Off** del Orbitador en el audio y el Orbitador se abre sobre él, incrustado en la página o en una pestaña independiente. Púlsalo otra vez para cerrarlo.
 
 <video
   className="ps-doc-video"

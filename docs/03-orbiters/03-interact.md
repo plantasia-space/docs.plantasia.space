@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 ## Opening an Orbiter
 
-Orbiters open from an **audio**: the Orbiter opens over it, embedded in the page or in a separate tab.
+Orbiters open from an **audio**: press the Orbiter's **On/Off** button on the audio, and the Orbiter opens over it, embedded in the page or in a separate tab. Press it again to close it.
 
 <video
   className="ps-doc-video"
