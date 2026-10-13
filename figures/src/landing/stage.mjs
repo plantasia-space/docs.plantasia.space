@@ -97,10 +97,18 @@ export function stage(width, height, extremes, fit = {}) {
       put(o, svg, 0.3 + j * 0.01, { part: name + j });
       T.part(name + j, "nod", { pivot: at(o).map(fix), amp: j % 2 ? 5 : -5 });
     }
-    const top = [x, y, z + h], fh = h * 0.2;
-    const petals = [-0.56, -0.28, 0, 0.28, 0.56].map((d) => T.leaf(top, d, fh * (1 - Math.abs(d) * 0.2), fh * 0.19, RIGHT)).join("");
-    const heart = [top[0] + 0.5, top[1] + 0.5, top[2] + fh * 0.2];
-    put(top, `${petals}${acc(S(G.sphereOf(heart, h * 0.028, P, { steps: 28 })))}`, 0.6, { part: bloom });
+    // the head: a cup, a fan of seven long petals behind five short ones, and three stamens that end
+    // in a bead each, in the three colours the garden plays in
+    const top = [x, y, z + h], fh = h * 0.24;
+    const cup = S(G.solidOf([[-fh * 0.16, h * 0.012], [-fh * 0.04, h * 0.03, 1], [fh * 0.1, h * 0.034]], UP(top), P, { steps: 24 }), { tone: "hi", crease: "lo" });
+    const outer = [-0.96, -0.64, -0.32, 0, 0.32, 0.64, 0.96].map((d) => T.leaf(top, d, fh * (1 - Math.abs(d) * 0.16), fh * 0.13, RIGHT)).join("");
+    const inner = [-0.5, -0.25, 0, 0.25, 0.5].map((d) => T.leaf(top, d, fh * 0.6, fh * 0.1, RIGHT)).join("");
+    const beads = [[-0.42, "trk"], [0, "orb"], [0.42, "wld"]].map(([d, entity]) => {
+      const tip = [top[0] + RIGHT[0] * Math.sin(d) * fh * 1.14, top[1] + RIGHT[1] * Math.sin(d) * fh * 1.14, top[2] + Math.cos(d) * fh * 1.14];
+      return `${T.tubeStr([top, tip], 0.4, { tone: "hi" })}<g class="lf-${entity}">${acc(S(G.sphereOf([tip[0] + 0.4, tip[1] + 0.4, tip[2]], h * 0.02, P, { steps: 24 })))}</g>`;
+    }).join("");
+    const heart = [top[0], top[1], top[2] + fh * 0.62];
+    put(top, `${outer}${inner}${beads}${cup}`, 0.6, { part: bloom });
     T.part(bloom, "grow", { pivot: at(top).map(fix), amp: 0.16 });
     return { top, heart, fh };
   };

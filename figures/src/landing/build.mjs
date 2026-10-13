@@ -10,13 +10,14 @@ import { hero, heroNarrow } from "./hero.mjs";
 import { playground, playgroundNarrow } from "./playground.mjs";
 import { small } from "./small.mjs";
 import { closing, closingNarrow } from "./closing.mjs";
+import { scenes } from "./scenes.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = process.argv.find((a) => a.startsWith("--out="))?.slice(6);
 const ONLY = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",");
 if (!OUT) { console.error("give --out=<plantasia.space-root>/public/figures/landing"); process.exit(1); }
 
-const FIGURES = [hero, heroNarrow, playground, playgroundNarrow, small, closing, closingNarrow];
+const FIGURES = [hero, heroNarrow, playground, playgroundNarrow, small, closing, closingNarrow, scenes];
 for (const make of FIGURES.flat()) {
   const fig = make();
   if (ONLY && !ONLY.includes(fig.name)) continue;

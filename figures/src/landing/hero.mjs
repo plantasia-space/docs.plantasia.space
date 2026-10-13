@@ -20,9 +20,9 @@ function garden(T, { treeAt, treeH }) {
   flower.svg = flower.svg.replace('data-tap="strum"', 'data-tap="bloom"').replace(/data-kick="[^"]*"/, 'data-kick="bloom,invite"');
   // the invitation: a ring round the flower that lights as a ball passes
   const F = G.frameOf(tree.top, [0, 0, 1], [1, 0, 0], [0, 1, 0]);
-  T.put(tree.top, `<path data-part="invite" class="hm-beam" d="${G.circleOf(F, treeH * 0.07, treeH * 0.2, T.P)}"/>`, 0.5);
+  T.put(tree.top, `<path data-part="invite" class="hm-beam" d="${G.circleOf(F, treeH * 0.13, treeH * 0.25, T.P)}"/>`, 0.5);
   T.part("invite", "glow", { base: 0.3 });
-  T.tag(T.items.length, { tap: "bloom", kick: "bloom,invite", pad: [[tree.top[0], tree.top[1], tree.top[2] + treeH * 0.1], treeH * 0.2] });
+  T.tag(T.items.length, { tap: "bloom", kick: "bloom,invite", pad: [[tree.top[0], tree.top[1], tree.top[2] + treeH * 0.13], treeH * 0.24] });
   return tree;
 }
 
@@ -30,7 +30,7 @@ export function hero() {
   const WIDTH = 1040, HEIGHT = 372, TREE = 112;
   const SIDE = 170, R0 = 96, R1 = 66;
   const edge = (a, r) => Array.from({ length: 16 }, (_, i) => { const t = (i / 16) * TAU; return [...uv(a, 0).map((c, j) => c + r * (j ? Math.sin(t) : Math.cos(t))), -11]; });
-  const T = stage(WIDTH, HEIGHT, [...edge(-SIDE, R1), ...edge(0, R0), ...edge(SIDE, R1), [0, 0, TREE * 1.24], uv(-SIDE, 0, 92)], { pad: 14 });
+  const T = stage(WIDTH, HEIGHT, [...edge(-SIDE, R1), ...edge(0, R0), ...edge(SIDE, R1), [0, 0, TREE * 1.32], uv(-SIDE, 0, 92)], { pad: 14 });
   T.island(...uv(-SIDE, 0), R1);
   T.island(...uv(0, 0), R0);
   T.island(...uv(SIDE, 0), R1);
@@ -110,7 +110,7 @@ export function hero() {
 // The same garden on one deck, for a phone: every object of the wide arrangement, closer together.
 export function heroNarrow() {
   const WIDTH = 390, HEIGHT = 372, TREE = 112, R = 106;
-  const T = stage(WIDTH, HEIGHT, [...Array.from({ length: 24 }, (_, i) => [R * Math.cos((i / 24) * TAU), R * Math.sin((i / 24) * TAU), -11]), [0, 0, TREE * 1.24]], { pad: 12 });
+  const T = stage(WIDTH, HEIGHT, [...Array.from({ length: 24 }, (_, i) => [R * Math.cos((i / 24) * TAU), R * Math.sin((i / 24) * TAU), -11]), [0, 0, TREE * 1.32]], { pad: 12 });
   T.island(0, 0, R);
   const REST = 2.4;
   const tree = garden(T, { treeAt: [0, 0], treeH: TREE });
