@@ -9,24 +9,11 @@ The **Lens** changes the lens the Orbiter is seen through. It draws nothing: it 
 field of view, and slides the picture to one side. Add it with **Visual module +** on any body; no
 sound module brings it.
 
-<figure className="ps-doc-themed-figure">
-  <iframe
-    className="ps-doc-themed-image ps-doc-themed-image--light"
-    src="/figures/orbiters/lens-light.html"
-    title="The Orbiter's camera: the lens barrel is Width, the cross-slide is Shift, the knob on the console is Amount"
-    loading="lazy"
-    style={{ width: '100%', height: 710, border: 0 }}
-  />
-  <iframe
-    className="ps-doc-themed-image ps-doc-themed-image--dark"
-    src="/figures/orbiters/lens.html"
-    title="The Orbiter's camera: the lens barrel is Width, the cross-slide is Shift, the knob on the console is Amount"
-    loading="lazy"
-    style={{ width: '100%', height: 710, border: 0 }}
-  />
-</figure>
+<IsoFigure name="orbiters/lens" label="The Orbiter's camera on its hull deck: a lens barrel that slides in and out, two lines across the deck for the field of view, a cross-slide under the camera, and a console with a knob and a viewfinder.">
+  Move over the camera: across for Width, up and down for Shift.
+</IsoFigure>
 
-Think of the Lens as the Orbiter's own camera, bolted to its hull. Move over the picture to work it:
+Think of the Lens as the Orbiter's own camera, bolted to its hull:
 
 | On the camera | In the Lens module |
 |---|---|
@@ -35,6 +22,9 @@ Think of the Lens as the Orbiter's own camera, bolted to its hull. Move over the
 | **The cross-slide** under the camera | **Shift**: the camera moves one way and the picture slides the other |
 | **The knob on the console** | **Amount**: how far Width and Shift move the lens |
 | **The viewfinder** on the console | what you see: the World, larger or smaller, to one side or the other |
+
+At a full turn, Width opens the lens by 20° or closes it by 14°, and Shift slides the picture by 12 % of
+the frame. The line under the picture reads what the lens is doing now.
 
 :::note[It loads doing nothing]
 
