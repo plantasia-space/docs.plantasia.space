@@ -11,7 +11,10 @@ function world({ name, WIDTH, HEIGHT, R, WR }) {
   const REST = 2.6;
   T.gear(0, 0, 0, WR * 0.62, 14, "gearA");
   T.gear(...uv(-WR * 0.62 - 9.4, 0), 0, 10, 7, "gearB", { turn: -1 });
-  T.tapped({ tap: "tone", kick: "beam" }, () => T.world(C, WR, { stand: 26.6 }));
+  // the stand is put first and is not part of the World that plays
+  const before = T.items.length;
+  T.world(C, WR, { stand: 26.6 });
+  T.tag(before + 2, { tap: "tone", kick: "beam", whole: "world" });
 
   const tracks = {}, movers = [], links = [];
   const orbit = (r, z, period, back) => { const pts = T.orbit(C, r, z).slice(0, -1); return { pts: flat(back ? pts.reverse() : pts), period, closed: true }; };

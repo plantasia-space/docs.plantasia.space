@@ -22,7 +22,7 @@ function room({ name, WIDTH, HEIGHT, R, seats, players, pad }) {
 
   // the hub: what everyone in the room hears
   T.put([0, 0, 0], T.S(k.cylinder(0, 0, 15, 0, 5, T.P, 40, 0.6), { tone: "mid", inner: T.L(k.sideArc(0, 0, 15, 2.5, T.P, 40), { tone: "faint" }) }) + T.L(k.ring(0, 0, 10.5, 5, T.P, 40), { tone: "lo" }) + T.D(Array.from({ length: 8 }, (_, i) => T.at([12.6 * Math.cos((i / 8) * TAU), 12.6 * Math.sin((i / 8) * TAU), 5])), { size: 0.45, tone: "mid" }), -0.2);
-  T.put([0, 0, 5], T.acc(T.S(G.sphereOf([0, 0, 10], 5, T.P, { steps: 36 }))), 0.3, { part: "hub" });
+  T.put([0, 0, 5], `<g class="lf-trk">${T.acc(T.S(G.sphereOf([0, 0, 10], 5, T.P, { steps: 36 })))}</g>`, 0.3, { part: "hub" });
   T.part("hub", "dip", { amp: -2.4 });
 
   // the ring the Audios run, between the hub and the players

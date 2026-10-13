@@ -14,17 +14,22 @@ export { k, G, polar, UP, TAU };
 const HERE = dirname(fileURLToPath(import.meta.url));
 const fix = (n) => Number(n.toFixed(1));
 
-// The one accent: the Orbiters app's default Color C (orbiters/src/ui/react/orbitersUI.css,
-// --orb-default-color3: #33ff41), with the same ramp as the home machine (home-machine/build.mjs, ACCENT).
-const ACCENT = {
-  dark: { paper: "#149c1f", face: "#25d434", top: "#33ff41", shades: ["#149c1f", "#1cb82a", "#25d434", "#2dea3b"], hi: "#b8ffbd", mid: "#33ff41", line: "#33ff41" },
-  light: { paper: "#22c930", face: "#2adf39", top: "#33ff41", shades: ["#1ba827", "#22c930", "#2adf39", "#30f03e"], hi: "#0b5a12", mid: "#149c1f", line: "#17a823" },
-};
-const ramp = (a) => `--anatomy-paper:${a.paper};--anatomy-face:${a.face};--anatomy-top:${a.top};${a.shades.map((c, i) => `--anatomy-shade-${i}:${c}`).join(";")};--anatomy-hi:${a.hi};--anatomy-mid:${a.mid}`;
-export const CSS = `.hm-acc{${ramp(ACCENT.dark)}}[data-theme="light"] .hm-acc{${ramp(ACCENT.light)}}`
-  + `.hm-beam{fill:none;stroke:${ACCENT.dark.line};stroke-width:1.1;stroke-dasharray:1 3.2;stroke-linecap:round;opacity:.45}[data-theme="light"] .hm-beam{stroke:${ACCENT.light.line}}`
+// The colours are the page's own, the ones its line drawings use (plantasia.space-root, draw/kit.ts,
+// readPalette): white lines, and the four entity colours. Inside the page the figure reads the
+// page's tokens; as a picture alone it falls back to the same defaults the canvases had.
+//   Orbiter = green · Audio (a track) = pink · Entangled World = blue · a Release (a clip) = amber
+// `.hm-acc` (the parts' lit solids) is a ramp round one of them (`--lf`), green unless a part says
+// otherwise; `.lf-ink` only colours a part's lines.
+const ENTITY = { orb: "var(--ps-entity-orbiter,oklch(0.78 0.12 165))", trk: "var(--ps-entity-track,oklch(0.78 0.12 350))", wld: "var(--ps-entity-world,oklch(0.78 0.1 230))", clip: "var(--ps-entity-clip,oklch(0.78 0.1 70))" };
+const mix = (pct, with_) => `color-mix(in oklab,var(--lf) ${pct}%,${with_})`;
+const ramp = (dark) => `--anatomy-paper:${mix(dark ? 50 : 78, "#000")};--anatomy-face:${mix(dark ? 78 : 90, "#000")};--anatomy-top:var(--lf);${[dark ? 50 : 70, dark ? 64 : 80, dark ? 78 : 90, dark ? 90 : 96].map((p, i) => `--anatomy-shade-${i}:${mix(p, "#000")}`).join(";")};--anatomy-hi:${dark ? mix(45, "#fff") : mix(38, "#000")};--anatomy-mid:${dark ? "var(--lf)" : mix(70, "#000")}`;
+export const CSS = `.iso-svg{--lf:${ENTITY.orb}}.iso-svg.iso[data-theme="dark"]{--anatomy-hi:#f2f2f2}`
+  + Object.entries(ENTITY).map(([name, colour]) => `.lf-${name}{--lf:${colour}}`).join("")
+  + `.hm-acc{${ramp(true)}}[data-theme="light"] .hm-acc{${ramp(false)}}`
+  + `.lf-ink{--anatomy-hi:var(--lf)}[data-theme="light"] .lf-ink{--anatomy-hi:${mix(62, "#000")}}`
+  + `.hm-beam{fill:none;stroke:var(--lf);stroke-width:1.1;stroke-dasharray:1 3.2;stroke-linecap:round;opacity:.55}[data-theme="light"] .hm-beam{stroke:${mix(70, "#000")}}`
   + `[data-tap]{cursor:pointer}.lf-pad{fill:transparent;stroke:none}`
-  + `.lf-ping{fill:none;stroke:${ACCENT.dark.line};stroke-width:1;transform-box:fill-box;transform-origin:center;pointer-events:none}[data-theme="light"] .lf-ping{stroke:${ACCENT.light.line}}`;
+  + `.lf-ping{fill:none;stroke:var(--lf);stroke-width:1;transform-box:fill-box;transform-origin:center;pointer-events:none}[data-theme="light"] .lf-ping{stroke:${mix(70, "#000")}}`;
 
 // Screen directions on the floor, for the default camera (azimuth 45°): `a` runs to the right of
 // the screen, `b` toward the viewer (down the screen at half the rate).
@@ -39,12 +44,26 @@ export function stage(width, height, extremes, fit = {}) {
   // Mark what was put since `from` as one tap target: `tap` is what the page plays, `count` goes
   // with it, `kick` names the parts it sets off ("bloom,sprout0@0.2": a part, and one 0.2 s later).
   // `pad` ([point, radius]) adds an unseen disc so a small thing is easy to hit with a finger.
-  T.tag = (from, { tap, count, kick, pad }) => {
-    const attrs = `data-tap="${tap}"${count === undefined ? "" : ` data-count="${count}"`}${kick ? ` data-kick="${kick}"` : ""}`;
+  // `whole` names an object put in several pieces, so the page can measure a tap against all of it.
+  T.tag = (from, { tap, count, kick, pad, whole }) => {
+    const attrs = `data-tap="${tap}"${count === undefined ? "" : ` data-count="${count}"`}${kick ? ` data-kick="${kick}"` : ""}${whole ? ` data-whole="${whole}"` : ""}`;
     for (let i = from; i < T.items.length; i++) T.items[i].svg = `<g ${attrs}>${T.items[i].svg}</g>`;
     if (pad) { const [x, y] = at(pad[0]); put(pad[0], `<g ${attrs}><circle class="lf-pad" cx="${fix(x)}" cy="${fix(y)}" r="${fix(pad[1] * G.scaleOf(P))}"/></g>`, pad[2] ?? 0.9); }
   };
   T.tapped = (attrs, make) => { const from = T.items.length; const made = make(); T.tag(from, attrs); return made; };
+
+  // ---- colour: each shared part takes its entity's colour. `ink` colours its lines, `lit` its lit solids.
+  const coloured = (name, how) => { const make = T[name]; T[name] = (...args) => { const from = T.items.length; const made = make(...args); for (let i = from; i < T.items.length; i++) T.items[i].svg = how(T.items[i].svg, i - from); return made; }; };
+  const ink = (entity) => (svg) => `<g class="lf-ink lf-${entity}">${svg}</g>`;
+  const lit = (entity) => (svg) => svg.replaceAll('class="hm-acc"', `class="hm-acc lf-${entity}"`);
+  coloured("ball", lit("trk"));
+  coloured("bars", ink("trk"));
+  coloured("world", ink("wld"));
+  coloured("saucer", ink("orb"));
+  // the sprouts take the four colours in turn, as the garden's plants did (draw/garden.ts)
+  let sprouts = 0;
+  const sprout = T.sprout;
+  T.sprout = (...args) => { const from = T.items.length, entity = ["clip", "trk", "wld", "orb"][sprouts++ % 4]; const made = sprout(...args); for (let i = from; i < T.items.length; i++) T.items[i].svg = lit(entity)(T.items[i].svg); return made; };
 
   // ---- a round deck anywhere on the floor (the scene's own `round` only stands at the centre)
   T.island = (cx, cy, r, h = 8) => {

@@ -97,7 +97,10 @@ export function mount(root, SCENE, hooks = {}) {
     }
   }
   let t = SCENE.rest, frame = 0, last = 0, visible = false, paused = false;
+  // The motion is slow: 30 frames a second look the same as 60 and halve the work on a phone.
+  const FRAME_MS = 1000 / 30;
   function tick(now) {
+    if (last && now - last < FRAME_MS - 3) { frame = requestAnimationFrame(tick); return; }
     t += last ? Math.min((now - last) / 1000, 1 / 20) : 0;
     last = now;
     draw(t);
@@ -118,7 +121,10 @@ export function mount(root, SCENE, hooks = {}) {
   function play(e) {
     const el = tapOf(e.target);
     if (!el) return;
-    const box = svg.getBoundingClientRect(), own = el === svg ? box : el.getBoundingClientRect();
+    // an object drawn in several pieces (data-whole) is measured as one
+    const whole = el !== svg && el.dataset.whole ? Array.from(svg.querySelectorAll('[data-whole="' + el.dataset.whole + '"]')).map((piece) => piece.getBoundingClientRect()) : null;
+    const box = svg.getBoundingClientRect();
+    const own = el === svg ? box : whole ? (() => { const left = Math.min(...whole.map((r) => r.left)), top = Math.min(...whole.map((r) => r.top)); return { left, top, width: Math.max(...whole.map((r) => r.right)) - left, height: Math.max(...whole.map((r) => r.bottom)) - top }; })() : el.getBoundingClientRect();
     const kind = el === svg ? SCENE.elseTap : el.dataset.tap;
     const cx = own.left + own.width / 2, cy = own.top + own.height / 2, reach = Math.max(1, Math.min(own.width, own.height) / 2);
     hooks.tap?.({
