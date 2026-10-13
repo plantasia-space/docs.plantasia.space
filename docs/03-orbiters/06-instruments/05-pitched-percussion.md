@@ -1,11 +1,11 @@
 ---
-title: Pitched Percussion
+title: Pitched percussion
 sidebar_position: 5
 sidebar_custom_props:
   icon: Bell
 ---
 
-**Pitched Percussion** is a mallet striking a body: marimba and vibes lines, glockenspiel and kalimba
+**Pitched percussion** is a mallet striking a body: marimba and vibes lines, glockenspiel and kalimba
 patterns, tubular bells and singing-bowl drones, all played from the keys. It is a notes instrument:
 it sits at the head of a <Term id="world-dimension">World dimension</Term>, after any generator and MIDI effects, and the notes you play (the
 keys, MIDI, the piano roll, the Arpeggiator) strike it.
@@ -110,6 +110,13 @@ colour as it rings, a struck tube lights, and the bowl's rim glows with rings sp
 tubular bells and the kalimba, every ringing note lights its own tube or tine, the newest brightest. A
 column of dots up the left edge is the voices: one per voice, lit while a note rings on it. The number
 bottom left is the body's ring time; the line below it counts the overtones still sounding.
+
+## Try it
+
+- **A marimba line.** The defaults, played from an Arpeggiator: short, warm notes.
+- **Vibes.** Body **Vibraphone**, Hardness **35 %**, and a [Tremolo](/docs/orbiters/audio-effects/tremolo) after it at 5 Hz for the motor.
+- **A bell with a glassy edge.** Body **Tubular bells**, then FM **Mix** up to **40 %**.
+- **Softer the further you move.** Map **Hardness** to an axis: a felt mallet at rest, a hard one as the Planet moves away.
 
 ## Presets to start from
 

@@ -131,6 +131,12 @@ their knob.
   following the keyboard exactly; **Vel → Env** makes harder notes open a filter further; **Mod →
   Cut** opens it with the wheel.
 
+## Try it
+
+- **A lead that tears.** Set the **Sync lead** row of the table below, then map **Sync** to an axis: the timbre sweeps while the pitch stays on the key.
+- **An acid line.** Set the **Serial acid** row and put a Step sequencer in front of it. Map Filter 1's cutoff to an axis and play the filter while the line runs.
+- **A pad that needs nothing after it.** Set the **Two-path pad** row and hold a chord: the two filters sit left and right and move apart.
+
 ## Starting points
 
 Set these from the defaults to hear what the instrument can do:

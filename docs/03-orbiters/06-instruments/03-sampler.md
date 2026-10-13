@@ -106,6 +106,13 @@ These three groups start folded; open them from their column.
 There is no filter in the Sampler: add a **Filters** or **Multimode filter** module after it to shape
 every voice at once.
 
+## Try it
+
+- **A piano that swells.** Pick a piano, then Attack **400 ms** in Amp: every note fades in, and the piano turns into a pad.
+- **A reversed-sounding start.** Start **30 %**: notes skip their attack and begin in the body of the sound.
+- **A sustained marimba.** Pick a marimba, **Loop** on, Loop start **60 %**, Release **1.5 s**: held notes ring for as long as you hold them.
+- **A kit that plays to the end.** Pick a percussion kit and turn **One-shot** on: every hit rings out whatever the note's length.
+
 ## Mapping
 
 In the Studio's **Map** mode, every number control can be driven by an axis — Start (attack ↔

@@ -24,7 +24,7 @@ It loads at Pitch 0, Fine 0 and Spread 0: the sound passes untouched until you m
   src="/img/orbiters/audio-effects/pitch-shifter.jpg"
   wide
   alt="The Pitch shifter as an insert at +7 st, a fifth up, with a little Spread and Feedback: the Interval screen, then Pitch and Output."
-  dots={[[1, 50.1, 78.8], [2, 61.3, 82.1], [3, 70, 82.1], [4, 78.6, 82.1], [5, 87.3, 82.1], [6, 96.1, 62.1], [7, 96.1, 85.6], [8, 21, 14.1]]}
+  dots={[[1, 49.2, 57.1], [2, 60.7, 57.1], [3, 69.6, 57.1], [4, 78.6, 57.1], [5, 87.5, 57.1], [6, 96.2, 45.3], [7, 96.2, 68.8], [8, 20.8, 14.2]]}
 />
 </TryModule>
 
@@ -84,6 +84,13 @@ The word on the screen is the interval (**Up · 5th**, **Down · octave**), **Up
 **Down · cents** for Fine alone, **Wide** for Spread alone, **Off**, **Send · Off** on a Moon with
 Pitch, Fine and Spread at 0, or **Dry · 0 %**. Below the picture: the interval, then the ratio (**×1.50**), Spread,
 Window and Feedback.
+
+## Try it
+
+- **A fifth above a lead.** Pitch **+7 st**, Dry/wet **50 %**: every note plays with its fifth.
+- **A doubler.** Pitch **0**, Spread **12 ct**, Dry/wet **50 %**: one voice becomes two, wide, without a chorus's wobble.
+- **An octave under a thin sound.** Pitch **−12 st**, Dry/wet **40 %**, Window **60 ms**.
+- **A shimmer.** Pitch **+12 st**, Feedback **60 %**, Window **30 ms**, on a Moon with a Reverb after it: each pass climbs an octave into the reverb.
 
 ## Mapping
 

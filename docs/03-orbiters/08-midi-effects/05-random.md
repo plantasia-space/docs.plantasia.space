@@ -20,12 +20,20 @@ to jump an octave up or down.
 
 :::
 
+<TryModule module="random" set="chance:50" source="piano">
+<ModulePicture
+  src="/img/orbiters/midi-effects/random.jpg"
+  alt="Random at Chance 50 %, ± 12 st: the dream screen, then Draw (Random or Alternate, Chance, Choices) and Interval (+, − or ±, Follow, Interval)."
+  dots={[[1, 12.1, 82.9], [2, 33, 82.9], [3, 4.5, 63.9], [4, 48.5, 63.9], [5, 72.2, 82.9], [6, 78.5, 63.9], [7, 50, 14.2]]}
+/>
+</TryModule>
+
 ## Draw
 
-- **Chance**: how likely a note is moved. At 0 % no note moves; at 100 % every note does.
-- **Choices**: how many intervals a moved note can land on, each way. With Choices 3 and an interval
+- <Dot>1</Dot>**Chance**: how likely a note is moved. At 0 % no note moves; at 100 % every note does.
+- <Dot>2</Dot>**Choices**: how many intervals a moved note can land on, each way. With Choices 3 and an interval
   of 12 st, a note can move one, two or three octaves.
-- **Random** or **Alternate**: how a moved note picks its move.
+- <Dot>3</Dot>**Random** or **Alternate**: how a moved note picks its move.
   - **Random** draws one of the moves for each note.
   - **Alternate** takes the moves in turn, one place per note: up, down, further up, further down…
     Every note moves the walk on, moved or not, so with Chance below 100 % the line keeps its shape:
@@ -36,11 +44,11 @@ The light after **Draw** flashes when a note was just moved.
 
 ## Interval
 
-- **+**, **−** or **±**: which way a note moves. **±** (the default) moves it either way, so a line
+- <Dot>4</Dot>**+**, **−** or **±**: which way a note moves. **±** (the default) moves it either way, so a line
   drawn around itself keeps its register.
-- **Interval**: one step of a move. In semitones (1 … 24 st, 12 st by default: an octave), or, with
+- <Dot>5</Dot>**Interval**: one step of a move. In semitones (1 … 24 st, 12 st by default: an octave), or, with
   Follow on, in degrees of the scale (1 … 14 deg, 7 deg by default).
-- **Follow** (the Orbiter's tonality): on, the interval counts degrees of the scale the Orbiter
+- <Dot>6</Dot>**Follow** (the Orbiter's tonality): on, the interval counts degrees of the scale the Orbiter
   plays in, so a moved note stays in the key. Off, it counts semitones.
 
 ### Why Follow is off by default
@@ -60,7 +68,7 @@ pitch class. There is no range of its own: put **Pitch** after Random to keep a 
 
 ## The screen
 
-The screen shows a dream from Méliès' *A Trip to the Moon* (1902): where the last note went among the
+<Dot>7</Dot>The screen shows a dream from Méliès' *A Trip to the Moon* (1902): where the last note went among the
 moves it could take.
 
 - The **crescent moon** with its dreamer is the note coming in.
@@ -74,6 +82,13 @@ moves it could take.
 
 The moon rocks and the big star twinkles only while notes play. On the smallest drawer the screen
 hides and the Draw light stays.
+
+## Try it
+
+- **An arpeggio that leaps.** After an Arpeggiator, before the instrument: Chance **30 %**, **±**, Interval **12 st**. Now and then a note jumps an octave.
+- **A line that wanders in the key.** With the Orbiter's key set: **Follow** on, Interval **1 deg**, Choices **2**, Chance **50 %**.
+- **A bass between root and fifth.** On a one-note bass line: **+**, Interval **7 st**, Choices **1**, Chance **40 %**.
+- **More, the further you move.** Map Chance to an axis: at rest the line plays as written, and it loosens as the Planet moves away.
 
 ## Mapping
 

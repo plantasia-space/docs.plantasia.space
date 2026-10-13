@@ -37,8 +37,8 @@ A **Moon** is a send and return: what it returns is added to the dry World throu
 <ModulePicture
   src="/img/orbiters/audio-effects/chorus.jpg"
   wide
-  alt="The Chorus as an insert, at Dry/wet 0 %: the Voices screen with two voices drifting, then Motion, Colour and Output."
-  dots={[[1, 58.9, 20.7], [2, 64.4, 20.7], [3, 60.3, 82.1], [4, 49.3, 78.8], [5, 70.5, 82.1], [6, 79, 82.1], [7, 87.5, 82.1], [8, 96.2, 62.2], [9, 96.2, 85.6], [10, 20.8, 14.2]]}
+  alt="The Chorus playing at Dry/wet 50 %: the Voices screen with two voices drifting, then Motion, Colour and Output."
+  dots={[[1, 49.0, 14.7], [2, 57.7, 14.7], [3, 60, 58.3], [4, 48.6, 58.3], [5, 70, 57.1], [6, 78.8, 57.1], [7, 87.6, 57.1], [8, 96.3, 45.3], [9, 96.3, 68.8], [10, 20.5, 14.2]]}
 />
 </TryModule>
 
@@ -116,7 +116,7 @@ with your system's reduced-motion setting, it is a still picture of the current 
 <ModulePicture
   src="/img/orbiters/audio-effects/one-chorus.jpg"
   alt="The One Chorus playing at Amount +60 %, Sway: two voices ±26 cents apart at 0.82 Hz on the Voices screen."
-  dots={[[1, 50, 78.8], [2, 50, 14.2]]}
+  dots={[[1, 50, 76], [2, 50, 14.2]]}
 />
 </TryModule>
 
@@ -142,6 +142,13 @@ Shimmer. How far apart they hang is how far the copies swing. The big number is 
 the ladder on the right follows how loud the copies are, and the word says **Sway**, **Off** or
 **Shimmer**. On a Moon the sound is drawn hollow and the screen reads **Send ·** and the word. In the
 smallest drawer the screen hides and the knob stays.
+
+## Try it
+
+- **The synth chorus on a pad or a plain saw.** As it loads on a World: **Classic**, Rate **0.8 Hz**, Depth **50 %**, Dry/wet **50 %**. One voice becomes a wide pair.
+- **A string machine.** Mode **Ensemble**, Depth **60 %**, Rate **0.5 Hz**: three copies and a shimmer on top.
+- **A wide bass that stays in tune.** Low cut **200 Hz**, Depth **40 %**: the lows pass straight through and only the top widens.
+- **One gesture.** The One Chorus with Amount on an axis.
 
 ## Mapping
 

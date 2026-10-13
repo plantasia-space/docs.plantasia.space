@@ -26,8 +26,8 @@ On a World the Flanger loads at Dry/wet 50 %, so you hear it as soon as you add 
 <ModulePicture
   src="/img/orbiters/audio-effects/flanger.jpg"
   wide
-  alt="The Flanger as an insert, at Dry/wet 0 %: the Sweep screen, then Motion, Comb and Output."
-  dots={[[1, 62.5, 20.7], [2, 43.1, 82.1], [3, 51, 82.1], [4, 58.8, 82.1], [5, 92.2, 20.7], [6, 70.4, 78.8], [7, 80.6, 82.1], [8, 88.5, 82.1], [9, 96.5, 62.2], [10, 96.5, 85.6], [11, 19.2, 14.2]]}
+  alt="The Flanger playing at Dry/wet 50 %: the Sweep screen, then Motion, Comb and Output."
+  dots={[[1, 56.4, 14.7], [2, 42.4, 58.3], [3, 50.5, 58.3], [4, 58.6, 58.3], [5, 81.5, 14.7], [6, 70.1, 58.3], [7, 80.5, 58.3], [8, 88.6, 58.3], [9, 96.6, 45.3], [10, 96.6, 68.8], [11, 18.9, 14.2]]}
 />
 </TryModule>
 
@@ -105,7 +105,7 @@ The word on the screen is **Swirl**, **Jet** (Feedback +60 % and up), **Hollow**
 <ModulePicture
   src="/img/orbiters/audio-effects/one-flanger.jpg"
   alt="The One Flanger playing at Amount +60 %, Jet: Feedback +50 % and a 6.3 s sweep on the Sweep screen."
-  dots={[[1, 50, 78.8], [2, 50, 14.2]]}
+  dots={[[1, 50, 76], [2, 50, 14.2]]}
 />
 </TryModule>
 
@@ -138,6 +138,13 @@ and its tendrils grow long; turned left (the Hollow) it grows taller, its tendri
 end in rings. Through 0 one shape turns into the other, with no jump. The big number is Amount itself; below it, the inside
 Feedback and how long one sweep takes. On a Moon the sound under the bell is drawn hollow and the
 screen reads **Send ·** and the word.
+
+## Try it
+
+- **A slow whoosh on a pad.** Sync on, Rate **4 bars**, Depth **70 %**, Feedback **+40 %**, Dry/wet **50 %**.
+- **The jet on a drum loop.** Mode **Through-zero**, Feedback **+70 %**, Rate **2 bars**, Low cut **150 Hz**: the sweep passes through the sound and the kick stays solid.
+- **A hollow, nasal colour.** Feedback **−60 %**, Depth **0 %**, then turn **Time** by hand, or map it to an axis: the colour moves only when you do.
+- **One gesture.** The One Flanger with Amount on an axis.
 
 ## Mapping
 

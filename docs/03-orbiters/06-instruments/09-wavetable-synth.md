@@ -19,6 +19,7 @@ filter is open and nothing in the matrix moves anything. Everything else is your
   src="/img/orbiters/instruments/wavetable-synth.jpg"
   wide
   alt="The Wavetable synth set as a vowel pad: Rings on the screen, Osc 1 on Vowels and Osc 2 on Choir with their rows of numbers, the low-pass filter at 6 kHz, the Amp envelope, and the folded Matrix and Voice columns."
+  dots={[[1, 11.9, 14.2], [2, 31.5, 14.7], [3, 43.5, 23.1], [4, 23.8, 50.4], [5, 24.3, 82.1], [6, 51.6, 14.7], [7, 68, 14.7], [8, 95.6, 30], [9, 98.5, 42]]}
 />
 </TryModule>
 
@@ -35,7 +36,7 @@ random value per note can move almost anything through the **matrix**.
 
 ## The screen
 
-The screen is a square at the left of the panel, the drawer's full height. The glyphs in its top-right
+<Dot>1</Dot>The screen is a square at the left of the panel, the drawer's full height. The glyphs in its top-right
 corner pick one of two pictures:
 
 - **Rings** (the first): each table as growth rings, its first wave innermost. Osc 1 is the left
@@ -50,7 +51,7 @@ it. The readouts name each oscillator's table and Position, or say it is off.
 
 ## Oscillators
 
-- **Tables.** The two menus in the title are Osc 1's and Osc 2's tables, sixteen in four kinds:
+- <Dot>2</Dot>**Tables.** The two menus in the title are Osc 1's and Osc 2's tables, sixteen in four kinds:
 
 | Kind | Tables |
 |---|---|
@@ -59,7 +60,7 @@ it. The readouts name each oscillator's table and Position, or say it is off.
 | **Vocal** | **Vowels** (ah → oo), **Choir**, **Throat**, **Whistle** |
 | **Keys** | **Drawbars** (organ registrations), **E-piano**, **Clav**, **Glass** |
 
-- **Effects.** The line under the title holds each oscillator's effect. Its amount is the knob
+- <Dot>3</Dot>**Effects.** The line under the title holds each oscillator's effect. Its amount is the knob
   captioned with the effect's name (**FM 1**, **Warp 2** …); at 0 it does nothing.
   - **FM**: the other oscillator modulates this one. Osc 2's **Semi** is the FM ratio. Osc 2 keeps
     feeding Osc 1's FM even while it is switched off, so it can be a pure modulator.
@@ -70,21 +71,21 @@ it. The readouts name each oscillator's table and Position, or say it is off.
 
   A new table or effect lands on the next note, so a held note never jumps.
 
-- **The table of numbers.** One row each for **1**, **2** and **Sub**: the hexagon switches it on
+- <Dot>4</Dot>**The table of numbers.** One row each for **1**, **2** and **Sub**: the hexagon switches it on
   and off (its settings are kept), then **Detune** (cents), **Semi** (semitones against the key) and
   **Gain**. The sub's **Octave** (one or two under the key) sits in the Semi column. Switching Osc 2
   or the sub on is heard at once: their gains start at 100 % and 60 %.
-- **The knobs** on the bottom line: **Position 1**, Osc 1's effect, **Position 2**, Osc 2's effect.
+- <Dot>5</Dot>**The knobs** on the bottom line: **Position 1**, Osc 1's effect, **Position 2**, Osc 2's effect.
 
 ## Filter
 
-One filter with four types, the glyphs in its title: **low-pass**, **band-pass**, **high-pass** and
+<Dot>6</Dot>One filter with four types, the glyphs in its title: **low-pass**, **band-pass**, **high-pass** and
 **notch**, 12 dB an octave. Changing the type glides, without a click. **Cutoff** is over
 **Resonance**; resonance rings at the cutoff but never whistles on its own.
 
 ## Mod sources
 
-Five tabs, one graph size on every tab, so nothing jumps when you switch:
+<Dot>7</Dot>Five tabs, one graph size on every tab, so nothing jumps when you switch:
 
 - **Amp**: the envelope every note goes through, with **Velocity** (how much a note's velocity moves
   its level; at 0 every note is full) and **Level**.
@@ -101,7 +102,7 @@ drag the hollow handle in the middle of a sloped segment across it; double-click
 
 ## Matrix
 
-The **Matrix** starts folded; open it from its column. It is the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares:
+The <Dot>8</Dot>**Matrix** starts folded; open it from its column. It is the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares:
 what can move down the side, what moves it across the top, an amount in each cell, in two tabs.
 
 | Tab | Sources (columns) | Targets (rows) |
@@ -122,13 +123,19 @@ LFOs and its Gain rows do that work. Like any number, a cell can go on an axis: 
 
 ## Voice
 
-Folded at first. **Mono** and **Legato** (with Mono, a note played over a held one slides there
+<Dot>9</Dot>Folded at first. **Mono** and **Legato** (with Mono, a note played over a held one slides there
 without a new strike, over **Glide**), **Voices** (how many notes sound at once), and **Unison**:
 copies of each oscillator per note, **1** (off) to **4**, spread by **Amount**. **Classic** detunes
 the copies (up to ±50 cents); **Position** spreads them across the table instead.
 
 Each unison copy costs about one more pair of oscillators for every voice, so **Voices × Unison** is
 at most 16: at Unison 4 the synth plays up to 4 notes, and the Voice group says so.
+
+## Try it
+
+- **A pad that speaks.** Set the **Vowel pad** row of the table below and hold a chord: LFO 1 moves Position 1 through the vowels.
+- **The classic sweep.** Set the **PPG sweep** row and play single notes: every note runs through the table as its envelope falls.
+- **Position under your hand.** From the defaults, map **Position 1** to an axis and hold a note: the wave morphs as the Planet moves. It is the first thing to map on this instrument.
 
 ## Starting points
 

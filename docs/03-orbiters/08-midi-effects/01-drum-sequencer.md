@@ -20,8 +20,8 @@ You meet it in two places, which always show the same state:
 <ModulePicture
   src="/img/orbiters/midi-effects/drum-sequencer.jpg"
   wide
-  alt="The Drum sequencer: real-time FX ribbons on the left, pad function and pad options above the 16 pads, the screen, knobs and Generate on the right."
-  dots={[[1, 15.8, 63.6], [2, 11.6, 20.7], [3, 68.6, 22], [4, 72.3, 44.6], [5, 3.4, 56.7], [6, 40.7, 27.4], [7, 54.4, 27.4], [8, 73.8, 83.7], [9, 11.6, 38.6], [10, 6, 96]]}
+  alt="The Drum sequencer in Sound, on an Analog drum synth: the real-time FX ribbons on the left, the pad function, pad options and Edit rows above the 16 pads, then the screen, its knobs and Generate on the right."
+  dots={[[1, 39.5, 74.7], [2, 11.6, 20.7], [3, 83.6, 14.8], [4, 69.5, 44.6], [5, 3.4, 56.7], [6, 38.7, 28.5], [7, 52, 28.5], [8, 78, 76.5], [9, 11.6, 38.6], [10, 5.9, 97]]}
 />
 
 ## Pad functions
@@ -74,11 +74,18 @@ snare stays a snare, higher or lower. On a drum instrument (the Analog drum synt
 synth, a Sampler kit) the pad keeps its drum and only its pitch moves; on a synth the pads play
 different notes.
 
+<ModulePicture
+  src="/img/orbiters/midi-effects/drum-sequencer-tunings.jpg"
+  wide
+  alt="Tunings with the snare selected and no scale set: the sixteen pads play the snare from F♯0 to A1, a semitone apart, with Base and Spread on the first two knobs."
+  dots={[[1, 72.3, 44.6], [2, 79.8, 44.6]]}
+/>
+
 The pads follow the Orbiter's **key and scale**: each pad is one step of the scale away from the next.
 With no scale set, a step is a semitone.
 
-- **Base** sets which step the middle pad plays. At 0 it is the sound's own pitch.
-- **Spread** sets how many steps lie between one pad and the next (1 to 3).
+- <Dot>1</Dot>**Base** sets which step the middle pad plays. At 0 it is the sound's own pitch.
+- <Dot>2</Dot>**Spread** sets how many steps lie between one pad and the next (1 to 3).
 
 Each pad shows its step and the note it plays. A Sampler kit's sounds are pitched two octaves at most,
 up or down. A sound that is only noise, like a clap, has no pitch to move and plays as it is.
@@ -152,6 +159,13 @@ and the beat that plays and the one that waits, by name.
 You can edit there too: **tap a cell** to set a hit, tap it again to clear it. It writes into the beat
 that is playing, and the screen always offers a few rows to write in, even on an empty beat. For
 velocity, chance, ratchet and offset, use **Steps**.
+
+## Try it
+
+- **A first beat.** Put the Drum sequencer in front of a drum instrument. In **Sound**, tap the kick; in **Steps**, tap pads 1, 5, 9 and 13. Go back to Sound, tap the snare, and set steps 5 and 13. Press Play.
+- **Hats without drawing them.** Select the closed hat, open **Generate**, turn **Euclid** on and set **Hits** to 11: an even pattern plays at once. **Apply** writes it into the row.
+- **A snare across the pads.** Tap the snare in **Sound**, then open **Tunings**: the sixteen pads play the same snare at sixteen pitches, in the Orbiter's key. Press **Rec** and play a fill.
+- **A second beat for the chorus.** In **Beats**, **Copy** beat 1, tap pad 2 and **Paste**, then change it. While it plays, a tap on either pad switches on the next bar.
 
 ## Mapping
 

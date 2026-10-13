@@ -76,6 +76,13 @@ controls and Stretch are locked (their stored values are kept), and Speed plays 
 phone Speed stays at 100 %. **Load full track** in the module unlocks everything. The screen follows
 what plays: a streamed track always shows the cassette.
 
+## Try it
+
+- **Half speed, same key.** **Stretch**, Speed **50 %**: the track plays at half the tempo and the pitch stays where it was.
+- **A tape stop on an axis.** **Tape**, then map **Speed & pitch** to an axis from 100 % down to 0 %: the track slows and drops like a turntable switched off.
+- **A song in another key.** **Stretch**, **Quantize** on, Pitch **+2 st**, **Keep formants** on: the voice goes up a tone and still sounds like itself.
+- **Backwards.** Speed below 0: at **−100 %** the track plays in reverse at its own tempo.
+
 ## Mapping
 
 Speed, Pitch, Formant, Tonality and Level can be mapped to the Orbiter's axes, and the switches to

@@ -22,7 +22,7 @@ Velocity loads with every note coming out as it went in, so adding it changes no
 <ModulePicture
   src="/img/orbiters/midi-effects/velocity.jpg"
   alt="Velocity as it loads, a straight line from in to out: the curve on the screen, then Curve, In and Out."
-  dots={[[1, 8, 82.1], [2, 21.2, 82.1], [3, 34.3, 82.1], [4, 47.4, 93.8], [5, 59.8, 93.8], [6, 66.2, 69.9], [7, 72.8, 93.8], [8, 88.4, 81], [9, 89.4, 93.8], [10, 50, 14.2]]}
+  dots={[[1, 7.8, 78.8], [2, 21.3, 78.8], [3, 34.8, 78.8], [4, 50, 82.9], [5, 63.5, 82.9], [6, 43.3, 63.9], [7, 77, 82.9], [8, 92.2, 72.4], [9, 92.2, 85.2], [10, 50, 14.2]]}
 />
 </TryModule>
 
@@ -58,6 +58,13 @@ just played, and the readout says what it came in and went out at ("90 → 104")
 Drag the handles to shape it: under the plot, **Lowest** and the window's top; on the left, **Out
 low** and **Out high** (double-click one to reset it). On the smallest drawer the screen hides; the
 number boxes do the same job.
+
+## Try it
+
+- **A drum machine's even hits.** In front of a drum kit: Mode **Fixed**, Fixed **100**. Every strike plays at the same level, however you hit the pads.
+- **A human touch on a sequence.** After a Step sequencer or an Arpeggiator: Random **±24**. No two notes land at quite the same velocity.
+- **A gentler keyboard.** Drive up until soft playing comes out at the level you want: quiet notes come up, loud ones stay where they are.
+- **Only the hard hits.** Mode **Gate**, Lowest **90**: notes under that velocity aren't played. Put an instrument behind it that answers only to accents.
 
 ## Mapping
 

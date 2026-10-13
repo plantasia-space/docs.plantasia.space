@@ -26,14 +26,23 @@ On a World the Phaser loads at Dry/wet 50 %, so you hear it as soon as you add i
 
 ## Phaser
 
+<TryModule module="phaser" set="mix:50" source="pad">
+<ModulePicture
+  src="/img/orbiters/audio-effects/phaser.jpg"
+  wide
+  alt="The Phaser at Dry/wet 50 %, synced at 1 bar: the Sweep screen, then Motion (Sync, Rate, Depth, Phase), Colour (Feedback, Notches, Centre, Low cut) and Output."
+  dots={[[1, 52.3, 14.7], [2, 39.2, 58.3], [3, 46.7, 58.3], [4, 54.2, 58.3], [5, 64.8, 57.1], [6, 74.5, 57.1], [7, 82, 57.1], [8, 89.5, 57.1], [9, 96.8, 45.3], [10, 96.8, 68.8], [11, 17.4, 14.2]]}
+/>
+</TryModule>
+
 ### Motion
 
 | Control | What it does |
 |---|---|
-| **Sync** | On (as it loads), one sweep takes a length of the Orbiter's tempo, from **8 bars** to **1/16**, and lands on the bar: every player in a room sweeps together. Off, you set the **Rate** in Hz. Switching never makes the sweep jump. |
-| **Rate** | How long one sweep, up and back, takes. Slow (1 bar, as it loads, or 0.5 Hz) is a long swirl; fast (1/16, or a few Hz) turns into a throb. Synced, it reads a note length; free, 0.02 … 10 Hz. A synced sweep faster than 10 Hz (1/16 above 150 BPM) is halved until it fits. |
-| **Depth** | How far the notches travel. At 100 % they move three octaves either way; at 50 % (as it loads) one and a half; at 0 % they stand still on one colour. |
-| **Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) makes the sweep turn across the stereo image; 180° sweeps them against each other, the widest. |
+| <Dot>1</Dot>**Sync** | On (as it loads), one sweep takes a length of the Orbiter's tempo, from **8 bars** to **1/16**, and lands on the bar: every player in a room sweeps together. Off, you set the **Rate** in Hz. Switching never makes the sweep jump. |
+| <Dot>2</Dot>**Rate** | How long one sweep, up and back, takes. Slow (1 bar, as it loads, or 0.5 Hz) is a long swirl; fast (1/16, or a few Hz) turns into a throb. Synced, it reads a note length; free, 0.02 … 10 Hz. A synced sweep faster than 10 Hz (1/16 above 150 BPM) is halved until it fits. |
+| <Dot>3</Dot>**Depth** | How far the notches travel. At 100 % they move three octaves either way; at 50 % (as it loads) one and a half; at 0 % they stand still on one colour. |
+| <Dot>4</Dot>**Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) makes the sweep turn across the stereo image; 180° sweeps them against each other, the widest. |
 
 While the transport plays, a synced sweep follows it: after you jump to another place, start or loop,
 the sweep catches up with the bar within about a cycle, running a little faster or slower for a moment,
@@ -44,14 +53,14 @@ speed, so live input still phases.
 
 | Control | What it does |
 |---|---|
-| **Feedback** | The big knob. Feeds the phaser into itself. **Positive** sharpens the notches and makes a vowel-like peak ring between them; **negative** turns it hollow and nasal. −95 … +95 %, +40 % as it loads, the classic lightly ringing colour. Turning it up doesn't make the sound louder: the level is held. |
-| **Notches** | How many notches sweep through the sound: **1**, **2** (as it loads, the classic pedal), **3** or **4**, dense and watery. You can change it while it plays, and map it: it crossfades. |
-| **Centre** | Where the sweep sits, 100 Hz … 4 kHz (700 Hz as it loads). Lower is darker and throatier, higher is airier. |
-| **Low cut** | Keeps everything below this frequency out of the phaser, so the bass stays solid and unphased under a phased loop. **Off** at 20 Hz. It splits the sound cleanly: a notch that happens to sit on the cut never turns into a boost. |
+| <Dot>5</Dot>**Feedback** | The big knob. Feeds the phaser into itself. **Positive** sharpens the notches and makes a vowel-like peak ring between them; **negative** turns it hollow and nasal. −95 … +95 %, +40 % as it loads, the classic lightly ringing colour. Turning it up doesn't make the sound louder: the level is held. |
+| <Dot>6</Dot>**Notches** | How many notches sweep through the sound: **1**, **2** (as it loads, the classic pedal), **3** or **4**, dense and watery. You can change it while it plays, and map it: it crossfades. |
+| <Dot>7</Dot>**Centre** | Where the sweep sits, 100 Hz … 4 kHz (700 Hz as it loads). Lower is darker and throatier, higher is airier. |
+| <Dot>8</Dot>**Low cut** | Keeps everything below this frequency out of the phaser, so the bass stays solid and unphased under a phased loop. **Off** at 20 Hz. It splits the sound cleanly: a notch that happens to sit on the cut never turns into a boost. |
 
 ### Output
 
-**Dry/wet** blends the dry sound with the phased copy, and **Level** sets the level after it.
+<Dot>9</Dot>**Dry/wet** blends the dry sound with the phased copy, and <Dot>10</Dot>**Level** sets the level after it.
 
 - **50 % is the sweet spot:** the dry and the copy at equal level cancel completely at the notches, so
   the sweep is deepest. Use it as the normal setting.
@@ -68,7 +77,7 @@ already carries it.
 
 ### The screen
 
-A row of moons stands along the spectrum, low frequencies on the left, high on the right, over a
+<Dot>11</Dot>A row of moons stands along the spectrum, low frequencies on the left, high on the right, over a
 horizon marked 20 Hz … 20 kHz.
 
 - **Each moon shows how the phased copy meets the dry sound at its frequency:** full where they agree,
@@ -92,7 +101,15 @@ travel, and the readout names the real rate. The picture moves only while sound 
 
 ## One Phaser
 
-One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different phaser;
+<TryModule module="onePhaser" set="amount:60" source="pad">
+<ModulePicture
+  src="/img/orbiters/audio-effects/one-phaser.jpg"
+  alt="The One Phaser at Amount +60 %, Swirl: the Sweep screen above the Amount knob."
+  dots={[[1, 50, 76], [2, 50, 14.2]]}
+/>
+</TryModule>
+
+One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different phaser;
 at 0 it does nothing, and either way the level stays where it was and the bass (under 120 Hz) stays
 clean, so it is safe on a loop or a full mix.
 
@@ -113,7 +130,7 @@ It returns only the phased copy, with no dry, so there is nothing to set. An unt
 
 ### The screen
 
-A Trip to the Moon, after Méliès' 1902 film: the moon's face between two cloud banks. At 0 it is the
+<Dot>2</Dot>A Trip to the Moon, after Méliès' 1902 film: the moon's face between two cloud banks. At 0 it is the
 moon before the landing, still and muted. Turned either way, the capsule flies in from the top left
 towards its left eye, closer as Amount grows, and **at 30 % it lands** in the eye and stays there.
 
@@ -125,6 +142,13 @@ towards its left eye, closer as Amount grows, and **at 30 % it lands** in the ey
 The big number is Amount itself, and the ladder on the right is how loud the phaser is. Below: the
 inside Feedback, then how long one sweep takes (Swirl) or the throb's rate and notches. On a Moon the
 screen reads **Send ·** and the word.
+
+## Try it
+
+- **The classic swirl on an electric piano or a pad.** The Phaser as it loads on a World: Dry/wet **50 %**, **1 bar**, **2** notches, Feedback **+40 %**. For a slower turn set Rate to **4 bars**.
+- **A phased drum loop with a solid kick.** Low cut at **150 Hz**, Notches **4**, Rate **1/2**, Depth **70 %**. The hats and the snare swirl; the kick stays where it was.
+- **A hollow, talking lead.** Feedback **−70 %**, Centre **1.2 kHz**, Depth **100 %**, Phase **0°**.
+- **One gesture.** The One Phaser with Amount on an axis: the Throb one way, the dry sound in the middle, the Swirl the other way.
 
 ## Mapping
 

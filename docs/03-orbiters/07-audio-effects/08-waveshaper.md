@@ -22,13 +22,22 @@ harmonics come in.
 
 :::
 
+<TryModule module="waveshaper" set="amount:60" source="piano">
+<ModulePicture
+  src="/img/orbiters/audio-effects/waveshaper.jpg"
+  wide
+  alt="The Waveshaper at Amount 60 %, Height 50 %, Both: the flytrap screen, then Harmonics (Amount, Height, Even/odd) and Output."
+  dots={[[1, 59.9, 57.1], [2, 73.9, 57.1], [3, 84.8, 57.1], [4, 95.4, 45.3], [5, 95.4, 68.8], [6, 25.3, 14.2]]}
+/>
+</TryModule>
+
 ## Harmonics
 
 | Control | What it does |
 |---|---|
-| **Amount** | How loud the added harmonics are, against the sound. **0 %** as it loads: the sound as it came in. |
-| **Height** | How far up the harmonics reach, from the 2nd to the 8th. **50 %** as it loads. |
-| **Even/odd** | Which harmonics: **Even** (+100 %), **Odd** (−100 %) or **Both** (0, as it loads, a click-stop on the knob), and every blend between. |
+| <Dot>1</Dot>**Amount** | How loud the added harmonics are, against the sound. **0 %** as it loads: the sound as it came in. |
+| <Dot>2</Dot>**Height** | How far up the harmonics reach, from the 2nd to the 8th. **50 %** as it loads. |
+| <Dot>3</Dot>**Even/odd** | Which harmonics: **Even** (+100 %), **Odd** (−100 %) or **Both** (0, as it loads, a click-stop on the knob), and every blend between. |
 
 **Height: darker to brighter.** At 0 % the sound gains only the lowest harmonic of each kind, the 2nd
 and the 3rd. Turning it up adds the higher ones in pairs (the 4th and 5th, then the 6th and 7th, then
@@ -56,8 +65,8 @@ overdriven reed. Turn Even/odd to the even side for warmth, to the odd side for 
 
 | Control | What it does |
 |---|---|
-| **Dry/wet** | Balance between the dry and the shaped sound. **100 %** as it loads; lower, the harmonics come in lower (Amount still sets how loud they are at 100 %). |
-| **Level** | The module's output level, dry included. |
+| <Dot>4</Dot>**Dry/wet** | Balance between the dry and the shaped sound. **100 %** as it loads; lower, the harmonics come in lower (Amount still sets how loud they are at 100 %). |
+| <Dot>5</Dot>**Level** | The module's output level, dry included. |
 
 **Watch the level at high Amount.** The harmonics come in at the sound's own level. With Height and
 Even/odd where they load, even Amount 100 % moves the loudness about 1 dB at most, but the peaks rise: about
@@ -82,7 +91,7 @@ first 5 % of Amount.
 
 ## The screen
 
-**A flytrap.** Seven leaves fan out from the ground, one per harmonic, each ending in a trap: the 2nd and
+<Dot>6</Dot>**A flytrap.** Seven leaves fan out from the ground, one per harmonic, each ending in a trap: the 2nd and
 3rd stand nearly upright, the 7th and 8th lean out widest; the even harmonics lean left, the odd ones
 right.
 
@@ -98,6 +107,12 @@ The word above the picture says what the harmonics sound like: **Warm** (Even/od
 **Hollow** (towards odd); near Both, **Bright** (Height high), **Round** (Height low) or **Rich**. Below it, which harmonics
 are heard (**2nd – 8th**) and how much of them are even and odd. The traps breathe with the sound while
 it plays; at rest, and with your system's reduced-motion setting, it is a still picture.
+
+## Try it
+
+- **A warmer bass.** On a bass with one note at a time: Amount **40 %**, Height **0 %**, Even/odd all the way to **Even**. It gains the octave above and is easier to hear on small speakers.
+- **A hollow, reedy lead.** Amount **60 %**, Height **50 %**, Even/odd all the way to **Odd**: the clarinet colour.
+- **Air on a pad.** Amount **25 %**, Height **100 %**, **Both**. Keep Amount low on chords, so the notes' harmonics don't turn rough.
 
 ## Mapping
 

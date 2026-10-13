@@ -116,6 +116,12 @@ Double-click a handle to straighten it.
 There is no filter in the FM synth: add a **Filters** or **Multimode filter** module after it to shape
 every voice at once.
 
+## Try it
+
+- **An electric piano under your hands.** Set the **E-piano** row of the table below and play it from the keys: soft notes are round, hard ones bark, because velocity opens the timbre.
+- **A bass for a sequencer.** Set the **DX bass** row and put a Step sequencer in front of it: Mono and Legato make the notes slide into each other.
+- **One knob that changes everything.** Map operator B's **Level** to an axis: the sound goes from a plain sine to a bright, metallic one as the Planet moves.
+
 ## Starting points
 
 Set these from the defaults to hear what the instrument can do:

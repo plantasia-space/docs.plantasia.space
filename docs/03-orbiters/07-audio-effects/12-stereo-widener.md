@@ -22,13 +22,22 @@ came in. Turn Width either way to start.
 
 :::
 
+<TryModule module="stereoWidener" set="width:150,spread:30" source="pad">
+<ModulePicture
+  src="/img/orbiters/audio-effects/stereo-widener.jpg"
+  wide
+  alt="The Stereo widener at Width 150 %, Spread 30 %: the Dandelion screen, then Image (Width, Spread, Bass mono) and Output."
+  dots={[[1, 59.9, 57.1], [2, 73.9, 57.1], [3, 84.8, 57.1], [4, 95.4, 45.3], [5, 95.4, 68.8], [6, 25.3, 14.2]]}
+/>
+</TryModule>
+
 ## Image
 
 | Control | What it does |
 |---|---|
-| **Width** | How wide the stereo image is. **100 %** as it loads: the sound as it is. Below 100 % the sound gathers to the middle; **0 %** is mono. Above 100 % the sides spread out, up to **200 %**. The knob clicks into place at 100 %. |
-| **Spread** | Opens a mono sound into stereo. **0 %** as it loads, up to **100 %**. |
-| **Bass mono** | Keeps everything below this frequency in the middle. **Off** as it loads (the knob at the bottom), up to **500 Hz**. |
+| <Dot>1</Dot>**Width** | How wide the stereo image is. **100 %** as it loads: the sound as it is. Below 100 % the sound gathers to the middle; **0 %** is mono. Above 100 % the sides spread out, up to **200 %**. The knob clicks into place at 100 %. |
+| <Dot>2</Dot>**Spread** | Opens a mono sound into stereo. **0 %** as it loads, up to **100 %**. |
+| <Dot>3</Dot>**Bass mono** | Keeps everything below this frequency in the middle. **Off** as it loads (the knob at the bottom), up to **500 Hz**. |
 
 **Width and the level held.** Making a stereo sound wider makes its sides louder, and how much louder
 depends on the sound: nothing for a mono sound, about +2.4 dB for a typical mix at 200 %, up to +4 dB
@@ -63,8 +72,8 @@ wide.
 
 | Control | What it does |
 |---|---|
-| **Dry/wet** | Balance between the sound as it came in and the widened one. **100 %** as it loads: Width 100 % already does nothing. At 50 % the image sits about halfway between the two. |
-| **Level** | The level after the widener. |
+| <Dot>4</Dot>**Dry/wet** | Balance between the sound as it came in and the widened one. **100 %** as it loads: Width 100 % already does nothing. At 50 % the image sits about halfway between the two. |
+| <Dot>5</Dot>**Level** | The level after the widener. |
 
 ## Heard in mono
 
@@ -76,7 +85,7 @@ leave the mono sum alone.
 
 ## The screen
 
-**Dandelion.** A seed head on a stem: every seed is one part of the sound, from the lows (the short
+<Dot>6</Dot>**Dandelion.** A seed head on a stem: every seed is one part of the sound, from the lows (the short
 seeds near the centre) to the highs (the long ones at the edge). **A seed's angle is where that part
 sits**: straight up is the middle, level with the dotted line through the head is a speaker, and a
 seed that droops below the line (dashed) is out of phase, its two sides pulling against each other.
@@ -96,6 +105,12 @@ The picture follows the sound that comes in: a mono input shows every seed strai
 and how alike the two sides come out: **in phase +0.50** for a typical mix, towards **+1.00** for
 mono, below zero **out of phase**; with Bass mono on, the cut. It moves only while sound plays; at rest,
 and with your system's reduced-motion setting, it is a still picture of the current values.
+
+## Try it
+
+- **A wider pad.** On a stereo pad: Width **150 %**, Bass mono **120 Hz**. The shimmer opens and the low end stays in the middle.
+- **A mono sample made stereo.** On a mono synth line or sample: Spread **60 %**, Width **100 %**. On a phone speaker it sounds as it did before.
+- **Room for a lead.** On a loop that crowds the middle: Width **60 %**. The loop pulls in and the lead on another dimension stands clear.
 
 ## Mapping
 

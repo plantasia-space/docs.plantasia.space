@@ -102,6 +102,13 @@ note of the octave from the root (a line marks the root's).
 With nothing playing, the keys show the chord being edited at full level, so you see its shape even
 at Level 0 %. On the smallest drawer the screen hides: the set keeps what you set.
 
+## Try it
+
+- **Chords from one finger.** Source **In key**, with the Orbiter's key set: Notes **3**, Level **80 %**. Every key plays the triad of its degree, so nothing lands outside the key.
+- **A strummed chord.** Strum **40 ms**, Order **up**, Notes **4**: the notes arrive one after the other, like a hand across strings.
+- **Your own chord.** Source **Set**, **Capture** on, then hold a chord: it becomes the chord for that note of the set.
+- **A wider voicing.** Invert **+1** or **+2** to lift the lowest notes an octave, and Tilt up to bring out the top.
+
 ## Mapping
 
 <Term id="axis">Axes</Term> can drive **Level**, **Tilt**, **Invert**, **Strum** and **Shape**: fade

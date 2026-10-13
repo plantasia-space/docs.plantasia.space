@@ -20,15 +20,24 @@ The Tremolo loads doing nothing (Depth 0 %): turn Depth up to set the level movi
 
 :::
 
+<TryModule module="tremolo" set="depth:60" source="drums">
+<ModulePicture
+  src="/img/orbiters/audio-effects/tremolo.jpg"
+  wide
+  alt="The Tremolo at Depth 60 %, Sine, 4 Hz: the Conversation screen, then Motion (Sync, Depth, Rate, Shape, Spread) and Output."
+  dots={[[1, 83.9, 14.7], [2, 54, 58.3], [3, 66.6, 58.3], [4, 76.4, 58.3], [5, 86.3, 58.3], [6, 95.8, 45.3], [7, 95.8, 68.8], [8, 22.8, 14.2]]}
+/>
+</TryModule>
+
 ## Motion
 
 | Control | What it does |
 |---|---|
-| **Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo, and the pulse locks to the beat. |
-| **Depth** | How far the level dips on each pulse. At 50 % it dips to half (−6 dB), at 100 % to silence. **0 %** as it loads: the sound as it came in. |
-| **Rate** | How fast the level rises and falls. Free: 0.05 … 20 Hz, **4.0 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/8** as it loads. |
-| **Shape** | How the level moves: **Triangle** at 0 %, **Sine** at 50 % (as it loads), **Square** at 100 %, and every step between. |
-| **Spread** | How far the right side's pulse trails the left's: **0°** as it loads (both sides together) up to **90°**, a quarter of a pulse later. |
+| <Dot>1</Dot>**Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo, and the pulse locks to the beat. |
+| <Dot>2</Dot>**Depth** | How far the level dips on each pulse. At 50 % it dips to half (−6 dB), at 100 % to silence. **0 %** as it loads: the sound as it came in. |
+| <Dot>3</Dot>**Rate** | How fast the level rises and falls. Free: 0.05 … 20 Hz, **4.0 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/8** as it loads. |
+| <Dot>4</Dot>**Shape** | How the level moves: **Triangle** at 0 %, **Sine** at 50 % (as it loads), **Square** at 100 %, and every step between. |
+| <Dot>5</Dot>**Spread** | How far the right side's pulse trails the left's: **0°** as it loads (both sides together) up to **90°**, a quarter of a pulse later. |
 
 **Depth and loudness.** Because the loud moments stay where they were, the sound gets a little quieter
 on average as Depth goes up: at Depth 100 % about **−4.3 dB** with Sine, −4.8 dB with Triangle and
@@ -68,8 +77,8 @@ travelling from side to side, which is the Auto-panner's job.
 
 | Control | What it does |
 |---|---|
-| **Dry/wet** | Balance between the steady sound and the pulsing one. **100 %** as it loads: the tremolo alone. At 50 % the dips are half as deep, so it is a second way to soften the pulse, handy on an axis that already moves Depth. |
-| **Level** | The level after the tremolo, to bring back what the dips take away. |
+| <Dot>6</Dot>**Dry/wet** | Balance between the steady sound and the pulsing one. **100 %** as it loads: the tremolo alone. At 50 % the dips are half as deep, so it is a second way to soften the pulse, handy on an axis that already moves Depth. |
+| <Dot>7</Dot>**Level** | The level after the tremolo, to bring back what the dips take away. |
 
 ## The bass pulses too
 
@@ -82,7 +91,7 @@ With Spread the two sides dip at different moments, so the mono sum dips less th
 
 ## The screen
 
-**Conversation.** Two plants stand at the sides, the left and the right of the sound, and their heads are
+<Dot>8</Dot>**Conversation.** Two plants stand at the sides, the left and the right of the sound, and their heads are
 level on one line. Between them runs the pulse the two send each other.
 
 - **Each head** glows as loud as its side is now. The outer dashed ring is the sound's own level; the
@@ -104,6 +113,12 @@ real rate up to about once a second and calmly above that; the rate itself is in
 bands. When you turn Rate, the picture takes up the new rate once the knob comes to rest. It moves only
 while sound plays; at rest, and with your system's reduced-motion setting, it is a still picture of the
 current values.
+
+## Try it
+
+- **An amp tremolo on a held sound.** On a pad or a long synth note: Depth **40 %**, Rate **5 Hz**, Shape **Sine**. The sound throbs gently and stays whole.
+- **A pad chopped into a rhythm.** On the pad's own rack: **Sync** on, Rate **1/8**, Shape **Square**, Depth **100 %**. The pad plays on the first half of every eighth note. Bring **Level** up about 3 dB to make up for the gaps.
+- **A shimmer across the sides.** On a wide pad: Depth **30 %**, Rate **0.5 Hz**, Spread **90°**. The pulse starts on the left and lands on the right.
 
 ## Mapping
 

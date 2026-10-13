@@ -22,6 +22,16 @@ the sound passes exactly as it came in.
 
 :::
 
+<TryModule module="utility" source="drums">
+<ModulePicture
+  src="/img/orbiters/audio-effects/utility.jpg"
+  alt="The Utility as it loads, in Stereo mode: the signal-flow screen, then Utility (Mode, Ø L and Ø R, Channel, Mono, Bass mono, Width) and Output (Mute, DC, Gain, Balance)."
+  dots={[[1, 46.8, 20.4], [2, 46.8, 27.7], [3, 46.8, 35.1], [4, 59.9, 35.1], [5, 59.5, 72.1], [6, 46.8, 42.4], [7, 76.3, 20.4], [8, 87.4, 20.4], [9, 81.1, 61.1], [10, 93, 61.1], [11, 22.3, 14.2]]}
+/>
+</TryModule>
+
+The picture shows Stereo mode. Solo M, Solo S, Mid and Side take the place of the Stereo controls in Mid/Side mode, and Audition appears next to Bass mono when it is on.
+
 ## Two modes
 
 **Mode** picks one world at a time, and the panel shows only what works in it:
@@ -38,14 +48,14 @@ Width and Bass mono step out of the panel. Their values are kept for when they a
 
 | Control | What it does |
 |---|---|
-| **Mode** | **Stereo** (as it loads) or **Mid/Side**. Switching crossfades, so it never clicks. |
-| **Ø L · Ø R** | Flip that channel's polarity. Stereo mode. With only one side flipped, a centred sound vanishes when the two are summed to mono: that is what the switch is for, fixing a recording that came in that way. Both on flips the whole sound. |
-| **Channel** | **Stereo** plays both channels as they are; **Left** or **Right** plays that one channel in both speakers; **Swap** exchanges them. Stereo mode. |
-| **Mono** | Both speakers play the middle. Stereo mode, with two channels. Width and Bass mono step aside while it is on. |
-| **Width** | How wide the image is: **0 %** is mono, **100 %** as it came in, **200 %** twice the sides. The knob clicks into place at 100 %. No level hold: on a typical mix 200 % is about +2.4 dB, and up to +4 dB when the two sides have nothing in common; a mono sound never moves. |
+| <Dot>1</Dot>**Mode** | **Stereo** (as it loads) or **Mid/Side**. Switching crossfades, so it never clicks. |
+| <Dot>2</Dot>**Ø L · Ø R** | Flip that channel's polarity. Stereo mode. With only one side flipped, a centred sound vanishes when the two are summed to mono: that is what the switch is for, fixing a recording that came in that way. Both on flips the whole sound. |
+| <Dot>3</Dot>**Channel** | **Stereo** plays both channels as they are; **Left** or **Right** plays that one channel in both speakers; **Swap** exchanges them. Stereo mode. |
+| <Dot>4</Dot>**Mono** | Both speakers play the middle. Stereo mode, with two channels. Width and Bass mono step aside while it is on. |
+| <Dot>5</Dot>**Width** | How wide the image is: **0 %** is mono, **100 %** as it came in, **200 %** twice the sides. The knob clicks into place at 100 %. No level hold: on a typical mix 200 % is about +2.4 dB, and up to +4 dB when the two sides have nothing in common; a mono sound never moves. |
 | **Solo M · Solo S** | Listen to only the middle, or only the sides. Mid/Side mode. **Not saved.** |
 | **Mid · Side** | The level of the middle (−∞ … +6 dB) and of the sides (−∞ … +12 dB). Mid/Side mode. Side at the bottom leaves the sound mono; Mid at the bottom leaves only what differs between the speakers. |
-| **Bass mono** | On: everything below the frequency is kept in the middle, so the low end stays solid and centred. The knob sets the frequency, **50 … 500 Hz**, **120 Hz** as it loads. |
+| <Dot>6</Dot>**Bass mono** | On: everything below the frequency is kept in the middle, so the low end stays solid and centred. The knob sets the frequency, **50 … 500 Hz**, **120 Hz** as it loads. |
 | **Audition** | Bass mono's listen: hear only the lows it keeps in the middle, to set the frequency by ear. Shown while Bass mono is on. **Not saved.** |
 
 **Bass mono** is the same filter as the Stereo widener's: it takes the sides' lows out steeply (an
@@ -60,10 +70,10 @@ whole sound the next time it loads.
 
 | Control | What it does |
 |---|---|
-| **Mute** | Silences the sound, with a short fade either way. |
-| **DC** | Removes a constant offset (DC) that pushes the waveform off centre, without touching the bass: a gentle 5 Hz filter, −0.26 dB at 20 Hz. |
-| **Gain** | Turns the sound up or down, **−∞ … +24 dB**. At the bottom it is silent. |
-| **Balance** | Leans the sound to one side by turning the other side down: **L 50 … C … R 50**. At R 25 the left is 6 dB down, at R 50 silent. Nothing moves across, so a stereo image keeps its shape. Stereo mode. |
+| <Dot>7</Dot>**Mute** | Silences the sound, with a short fade either way. |
+| <Dot>8</Dot>**DC** | Removes a constant offset (DC) that pushes the waveform off centre, without touching the bass: a gentle 5 Hz filter, −0.26 dB at 20 Hz. |
+| <Dot>9</Dot>**Gain** | Turns the sound up or down, **−∞ … +24 dB**. At the bottom it is silent. |
+| <Dot>10</Dot>**Balance** | Leans the sound to one side by turning the other side down: **L 50 … C … R 50**. At R 25 the left is 6 dB down, at R 50 silent. Nothing moves across, so a stereo image keeps its shape. Stereo mode. |
 
 The Utility has **no Dry/wet**: half a polarity flip cancels a channel, and half a Mute is only
 −6 dB, so a blend would make its controls lie. Gain is its level.
@@ -77,7 +87,7 @@ lows in the middle, turn it down.
 
 ## The screen
 
-**The signal flow, top to bottom.** The left channel runs down the left lane and the right channel
+<Dot>11</Dot>**The signal flow, top to bottom.** The left channel runs down the left lane and the right channel
 down the right one, through a box for every control in the order the sound meets them. A row's name
 lights up while that control does something, and its value sits at the right.
 
@@ -95,6 +105,13 @@ The word above the diagram says what the Utility does now: **As is**, **Muted**,
 the Balance), and how alike the two sides come out: **in phase +0.50** for a typical mix, towards
 **+1.00** for mono, below zero **out of phase**. The diagram keeps every word apart on the smallest
 drawer.
+
+## Try it
+
+- **Check a mix in mono.** On the Star, last in the rack: press **Mono**, listen for what disappears, press it again. Map Mono to a toggle to flip it while you play.
+- **A recording with one good side.** Channel on **Left** (or **Right**): that side plays in both speakers.
+- **Lows in the middle.** **Bass mono** on at **120 Hz**, with **Audition** to hear what it keeps in the middle while you set the frequency.
+- **A level trim before a loud effect.** Gain **−6 dB**, first in the rack: the effects after it get half the level.
 
 ## Mapping
 

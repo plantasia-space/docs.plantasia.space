@@ -27,20 +27,32 @@ did, and a new Moon is silent until a send is turned up.
 
 ## World channel
 
+<ModulePicture
+  src="/img/orbiters/audio-effects/world-channel.jpg"
+  alt="The World channel of World dimension I as it loads: its signal-flow screen, then Level, Pre · Post, Solo and the send to Moon I."
+  dots={[[1, 59.9, 35.5], [2, 53.6, 69.7], [3, 53.1, 61.5], [4, 85.8, 35.5], [5, 22.8, 14]]}
+/>
+
 | Control | What it does |
 |---|---|
-| **Level** | The dimension's output, **−∞ … +6 dB**: into the next World dimension when they run in series, into the World when it is the last. At the bottom it is silent. |
-| **S** (Solo) | Plays only this dimension, and the dimensions that feed it, with their sends. Several solos add up; every dimension soloed sounds as none soloed. The Moon keeps returning. Saved with the Orbiter, and a toggle can flip it. |
-| **Pre · Post** | Where the sends are taken: **Post** (as it loads) after Level, so Level turns the sends down too; **Pre** before Level, so you can turn the dimension down and the Moon keeps ringing. Shown when there is a Moon. |
-| **Send Moon I · II · III** | How much of this dimension goes to each Moon dimension that is on, **Off … +6 dB**. A send goes straight into its Moon dimension, wherever it sits in the Moon's chain. Turned to Off, nothing more goes in and what the Moon holds rings out. |
+| <Dot>1</Dot>**Level** | The dimension's output, **−∞ … +6 dB**: into the next World dimension when they run in series, into the World when it is the last. At the bottom it is silent. |
+| <Dot>2</Dot>**S** (Solo) | Plays only this dimension, and the dimensions that feed it, with their sends. Several solos add up; every dimension soloed sounds as none soloed. The Moon keeps returning. Saved with the Orbiter, and a toggle can flip it. |
+| <Dot>3</Dot>**Pre · Post** | Where the sends are taken: **Post** (as it loads) after Level, so Level turns the sends down too; **Pre** before Level, so you can turn the dimension down and the Moon keeps ringing. Shown when there is a Moon. |
+| <Dot>4</Dot>**Send Moon I · II · III** | How much of this dimension goes to each Moon dimension that is on, **Off … +6 dB**. A send goes straight into its Moon dimension, wherever it sits in the Moon's chain. Turned to Off, nothing more goes in and what the Moon holds rings out. |
 
 ## Moon channel
 
+<ModulePicture
+  src="/img/orbiters/audio-effects/moon-channel.jpg"
+  alt="The Moon channel of Moon dimension I as it loads: its signal-flow screen, then Level, Pan and Solo."
+  dots={[[1, 82.5, 33.1], [2, 82.5, 72.1], [3, 74.8, 95.7], [4, 32.5, 14]]}
+/>
+
 | Control | What it does |
 |---|---|
-| **Level** | The Moon dimension's return, **−∞ … +6 dB**: into the next Moon dimension in series, into the Moon's return when it is the last. Use it to balance a reverb against a delay on two Moon dimensions side by side. |
-| **Pan** | Where the return sits, **L 50 … C … R 50**: an echo on the left, a reverb in the middle. In series, the Moon dimensions after it hear it panned. |
-| **S** (Solo) | Returns only this Moon dimension, and the ones that feed it. The dry World keeps playing: a Moon solo never mutes the World, and a World solo never mutes the Moon. |
+| <Dot>1</Dot>**Level** | The Moon dimension's return, **−∞ … +6 dB**: into the next Moon dimension in series, into the Moon's return when it is the last. Use it to balance a reverb against a delay on two Moon dimensions side by side. |
+| <Dot>2</Dot>**Pan** | Where the return sits, **L 50 … C … R 50**: an echo on the left, a reverb in the middle. In series, the Moon dimensions after it hear it panned. |
+| <Dot>3</Dot>**S** (Solo) | Returns only this Moon dimension, and the ones that feed it. The dry World keeps playing: a Moon solo never mutes the World, and a World solo never mutes the Moon. |
 
 Each Moon dimension hears **its own sends whole**: dimensions side by side don't share them, so their
 Levels decide the balance.
@@ -61,10 +73,17 @@ and going on to the Star. For a balance on the whole mix, add a
 
 ## The screen
 
-**The signal flow, top to bottom**, each circle level with its control: **In → Level → Solo → Out**,
+The screen (<Dot>5</Dot> on the World channel, <Dot>4</Dot> on the Moon channel) draws **the signal flow, top to bottom**, each circle level with its control: **In → Level → Solo → Out**,
 with **Pan** after Level on a Moon. A circle lights up like a small sun while it passes sound, its rays
 as long as its level. On a World dimension the sends branch off at **Pre** (above Level) or **Post**
 (under it), one circle per Moon dimension that is on.
+
+## Try it
+
+- **Balance two dimensions.** Leave the louder one at **0 dB** and bring the other's **Level** down until they sit together. Do it on the cards of the Dimensions tab, without opening a rack.
+- **Send one dimension to a reverb.** Put a Reverb on Moon I, then turn **Send Moon I** up on the World dimension you want in the space: start at **−12 dB**. The other dimensions stay dry.
+- **A tail that outlives the sound.** Set the sends to **Pre** and map the World channel's **Level** to an axis: the dimension fades out and the Moon keeps ringing.
+- **An echo on the left, a reverb in the middle.** Two Moon dimensions side by side: **Pan** the delay's channel to **L 30** and leave the reverb's on **C**.
 
 ## Mapping
 

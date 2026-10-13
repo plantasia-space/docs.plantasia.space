@@ -1,14 +1,23 @@
 ---
-title: Hybrid Drum Synth
+title: Hybrid drum synth
 sidebar_position: 4
 sidebar_custom_props:
   icon: Drum
 ---
 
-The **Hybrid Drum Synth** is a drum kit made by synthesis: sixteen pads, each one a drum built from
+The **Hybrid drum synth** is a drum kit made by synthesis: sixteen pads, each one a drum built from
 three layers that are played, not sampled. It is a notes instrument: it sits at the head of a
 <Term id="world-dimension">World dimension</Term>, usually after a **Drum sequencer**, and every pad
 sits on the key that sequencer's voice plays, so a new sequencer in front plays the kit with no setup.
+
+<TryModule module="hybridDrumSynth">
+<ModulePicture
+  src="/img/orbiters/instruments/hybrid-drum-synth.jpg"
+  wide
+  alt="The Hybrid drum synth with the kick selected: the kit screen with its sixteen pads, then Kit (Tune, Decay, Velocity, Level), Pad 01 with its type and choke menus and eight knobs, and Voices folded."
+  dots={[[1, 18.3, 14], [2, 42.2, 42.2], [3, 51.4, 42.2], [4, 42.2, 71.9], [5, 51.4, 71.9], [6, 74.2, 14.7], [7, 94.6, 14.7], [8, 62.4, 43.4], [9, 71.6, 43.4], [10, 80.7, 43.4], [11, 89.9, 43.4], [12, 62.4, 73.1], [13, 71.6, 73.1], [14, 80.7, 73.1], [15, 89.9, 73.1], [16, 97.6, 26]]}
+/>
+</TryModule>
 
 ## Pads and types
 
@@ -33,7 +42,7 @@ it glides to its new sound with no click and no reload.
 
 ## The kit screen
 
-The screen at the left of the panel is the kit: sixteen hexagons, each a line drawing of its pad's
+<Dot>1</Dot>The screen at the left of the panel is the kit: sixteen hexagons, each a line drawing of its pad's
 instrument. The drawing follows the pad: a hi-hat opens once its Decay is long, toms and cymbals draw
 smaller as you tune them up, a Shaker is a tambourine with its jingles on and a pair of maracas with
 them off.
@@ -52,14 +61,14 @@ Four knobs for the whole kit.
 
 | Control | What it does |
 |---|---|
-| **Tune** | Tunes every pad together, in semitones. |
-| **Decay** | Makes every pad ring shorter or longer: 100 % is each pad as set, below is tighter, above roomier. |
-| **Velocity** | How much a strike's velocity changes its level. At 0 % every strike is full. |
-| **Level** | The kit's output level. |
+| <Dot>2</Dot>**Tune** | Tunes every pad together, in semitones. |
+| <Dot>3</Dot>**Decay** | Makes every pad ring shorter or longer: 100 % is each pad as set, below is tighter, above roomier. |
+| <Dot>4</Dot>**Velocity** | How much a strike's velocity changes its level. At 0 % every strike is full. |
+| <Dot>5</Dot>**Level** | The kit's output level. |
 
 ## Pad
 
-The selected pad's controls. Its **type** and its **choke group** are the two menus beside the pad's
+The selected pad's controls. Its <Dot>6</Dot>**type** and its <Dot>7</Dot>**choke group** are the two menus beside the pad's
 name.
 
 **The middle of every knob is the type as designed.** A new pad, or one whose type you just changed,
@@ -68,14 +77,14 @@ a knob away from the middle to move the sound one way or the other.
 
 | Control | What it does |
 |---|---|
-| **Tune** | The pad's pitch, oscillator and body together, in semitones. |
-| **Decay** | How long the pad rings, as a multiple of its type's length (×0.125 … ×8). A longer ring is never louder. |
-| **Tone** | Darker or brighter: the strike, the body's high ring, the metal and the noise, all at once. It never changes the pitch. |
-| **Snap** | Softer or harder: how far the pitch falls at the strike and how loud the click is. Kick, Snare, Tom and Rim only. |
-| **Body** | The struck body (skin, wood, bell or jingles) against its type as designed; all the way down is off. |
-| **Noise** | The noise (a click, the wires, the air, the hiss) the same way. |
-| **Level** | The pad's level in the kit. |
-| **Pan** | Where the pad sits left to right. |
+| <Dot>8</Dot>**Tune** | The pad's pitch, oscillator and body together, in semitones. |
+| <Dot>9</Dot>**Decay** | How long the pad rings, as a multiple of its type's length (×0.125 … ×8). A longer ring is never louder. |
+| <Dot>10</Dot>**Tone** | Darker or brighter: the strike, the body's high ring, the metal and the noise, all at once. It never changes the pitch. |
+| <Dot>11</Dot>**Snap** | Softer or harder: how far the pitch falls at the strike and how loud the click is. Kick, Snare, Tom and Rim only. |
+| <Dot>12</Dot>**Body** | The struck body (skin, wood, bell or jingles) against its type as designed; all the way down is off. |
+| <Dot>13</Dot>**Noise** | The noise (a click, the wires, the air, the hiss) the same way. |
+| <Dot>14</Dot>**Level** | The pad's level in the kit. |
+| <Dot>15</Dot>**Pan** | Where the pad sits left to right. |
 
 A knob that does nothing for the pad's type stays in its place, dimmed, and its tooltip says why
 (a Clap has no body, a Tom no noise).
@@ -88,7 +97,7 @@ hi-hat in group 1, so the closed hat cuts the open one as on a real kit.
 
 ## Voices
 
-The **Voices** group (folded) sets how many pads can ring at once, 1 to 16 (6 by default), shared by
+The <Dot>16</Dot>**Voices** group (folded) sets how many pads can ring at once, 1 to 16 (6 by default), shared by
 all sixteen pads. A pad struck again rings on its own voice, struck again from where it is, so a roll
 never clicks. When every voice is busy, the oldest ring makes way.
 
@@ -99,6 +108,13 @@ never clicks. When every voice is busy, the oldest ring makes way.
 - **From the keys, MIDI or the piano roll:** the pads sit on General MIDI's drum keys (the kick on C1),
   and every surface names them (Kick, Snare, … or the type's name once you change a pad's type). A key
   with no pad plays nothing.
+
+## Try it
+
+- **A beat with no setup.** Put a Drum sequencer in front of it and draw a kick on 1 and 3, a snare on 2 and 4 and closed hats on the eighths: every voice already plays its pad.
+- **A deeper, longer kick.** Select the kick: Tune **−4 st**, Decay **×2**, Snap up a little for the click.
+- **Open and close the hats with one move.** Map the closed hat's **Decay** to an axis: short at rest, ringing as the Planet moves away.
+- **A tighter kit for a fast beat.** The kit's Decay at **60 %**: every pad rings shorter and keeps its own character.
 
 ## Mapping
 

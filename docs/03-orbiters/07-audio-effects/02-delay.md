@@ -34,8 +34,8 @@ On a World the Delay loads at Dry/wet 50 %, so you hear it as soon as you add it
 <ModulePicture
   src="/img/orbiters/audio-effects/delay.jpg"
   wide
-  alt="The Delay as an insert, at Dry/wet 0 %: the Echoes screen, then Time, Repeats and Output."
-  dots={[[1, 55.9, 20.7], [2, 51.1, 82.1], [3, 65.1, 78.8], [4, 77.1, 82.1], [5, 86.4, 82.1], [6, 81.2, 20.7], [7, 90.9, 20.7], [8, 95.9, 62.2], [9, 95.9, 85.6], [10, 22.6, 14.2]]}
+  alt="The Delay playing at Dry/wet 50 %: the Echoes screen, then Time, Repeats and Output."
+  dots={[[1, 48.8, 14.7], [2, 50.6, 58.3], [3, 64.7, 58.3], [4, 77, 58.3], [5, 86.6, 58.3], [6, 67.9, 14.7], [7, 80.7, 14.7], [8, 95.9, 45.3], [9, 95.9, 68.8], [10, 22.3, 14.2]]}
 />
 </TryModule>
 
@@ -103,7 +103,7 @@ reduced-motion setting, it is a still picture of the current values.
 <ModulePicture
   src="/img/orbiters/audio-effects/one-echo.jpg"
   alt="The One Echo playing at Amount +60 %, Trail: four echoes at 1/8D (375 ms) on the Echoes screen."
-  dots={[[1, 50, 78.8], [2, 50, 14.2]]}
+  dots={[[1, 50, 76], [2, 50, 14.2]]}
 />
 </TryModule>
 
@@ -136,6 +136,13 @@ the slap. The big number counts the echoes you hear, the ladder on the right fol
 are, and the word says **Soft** or **Trail** turned up, **Slap** turned down. On a Moon the sound is
 drawn hollow and the screen reads **Send ·** and the word. In the smallest drawer the screen hides
 and the knob stays.
+
+## Try it
+
+- **A dotted-eighth echo on a melody.** As it loads on a World (Sync on, **1/8D**, Dry/wet 50 %), then Feedback **35 %** and High cut **4 kHz**: the echoes fall between the notes and get darker as they fade.
+- **Echoes that bounce.** **Ping-pong** on, Time **1/8**, Feedback **50 %**, on a short sound: a hi-hat, a pluck, a rim.
+- **A slapback.** Sync off, Time **90 ms**, Feedback **0 %**, Dry/wet **30 %**: one quick repeat right behind the sound.
+- **A loop out of a phrase.** Time **1/2**, Feedback **60 %**: play a short phrase, press **Freeze**, and play over the loop it leaves.
 
 ## Mapping
 

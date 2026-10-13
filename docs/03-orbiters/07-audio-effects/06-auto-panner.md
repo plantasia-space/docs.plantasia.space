@@ -27,6 +27,7 @@ Both load doing nothing (Amount 0): turn Amount up to set the sound moving.
   src="/img/orbiters/audio-effects/auto-panner.jpg"
   wide
   alt="The Auto-panner playing at Amount 80 %, Glide: the Position screen draws the sound's path at 1.0 Hz, then Motion, Colour and Output."
+  dots={[[1, 73.1, 14.7], [2, 53.4, 58.3], [3, 65.8, 58.3], [4, 75.5, 58.3], [5, 86.4, 57.1], [6, 95.9, 57.1], [7, 22.5, 14.2]]}
 />
 </TryModule>
 
@@ -34,10 +35,10 @@ Both load doing nothing (Amount 0): turn Amount up to set the sound moving.
 
 | Control | What it does |
 |---|---|
-| **Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo, and the movement locks to the beat. |
-| **Amount** | How far the sound travels: at 100 % it goes all the way left and all the way right, at 50 % halfway out each way. **0 %** as it loads: the sound as it came in. |
-| **Rate** | How long one trip from side to side and back takes. Free: 0.05 … 10 Hz, **1.00 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/2** as it loads. |
-| **Shape** | How the sound travels: **Triangle** at 0 %, **Sine** at 50 % (as it loads), **Square** at 100 %, and every step between. |
+| <Dot>1</Dot>**Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo, and the movement locks to the beat. |
+| <Dot>2</Dot>**Amount** | How far the sound travels: at 100 % it goes all the way left and all the way right, at 50 % halfway out each way. **0 %** as it loads: the sound as it came in. |
+| <Dot>3</Dot>**Rate** | How long one trip from side to side and back takes. Free: 0.05 … 10 Hz, **1.00 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/2** as it loads. |
+| <Dot>4</Dot>**Shape** | How the sound travels: **Triangle** at 0 %, **Sine** at 50 % (as it loads), **Square** at 100 %, and every step between. |
 
 **Shape: three ways to travel.** One knob goes through three shapes, ordered by how long the sound
 rests at the sides:
@@ -67,7 +68,7 @@ jump. Stopped, it keeps moving at the tempo's speed.
 
 | Control | What it does |
 |---|---|
-| **Low cut** | Keeps everything below this frequency **in the centre**, so the bass and the kick don't swing from ear to ear. **Off** at 20 Hz (as it loads), up to 1 kHz. |
+| <Dot>5</Dot>**Low cut** | Keeps everything below this frequency **in the centre**, so the bass and the kick don't swing from ear to ear. **Off** at 20 Hz (as it loads), up to 1 kHz. |
 
 **The low cut keeps the bass centred, it doesn't remove it.** Below the cut the sound stays where it
 was at every Amount; above it, it travels. So an auto-panner on a full loop can move the hats and the
@@ -75,7 +76,7 @@ pads while the kick and the bass stay in the middle: set the Low cut around 150�
 
 ### Output
 
-**Level** sets the level after the panner. There is no Dry/wet: blending a panned copy with the
+<Dot>6</Dot>**Level** sets the level after the panner. There is no Dry/wet: blending a panned copy with the
 unpanned sound is the same as less Amount, so Amount is the "how much".
 
 ### Mono and stereo sounds
@@ -94,7 +95,7 @@ unpanned sound is the same as less Amount, so Amount is the "how much".
 
 ### The screen
 
-**Flight.** A wire runs across the top, and the sound is the dot on it, where it is now. Under the
+<Dot>7</Dot>**Flight.** A wire runs across the top, and the sound is the dot on it, where it is now. Under the
 wire its path scrolls down, like a pen on a moving roll of paper: four seconds of it, so a slow rate
 draws a trip or two and a fast one many.
 
@@ -120,10 +121,11 @@ your system's reduced-motion setting, it is a still picture of the current value
 <ModulePicture
   src="/img/orbiters/audio-effects/one-auto-panner.jpg"
   alt="The One Auto-panner playing at Amount +60 %, Drift: one trip in 6.6 s on the Position screen."
+  dots={[[1, 50, 76], [2, 50, 14.2]]}
 />
 </TryModule>
 
-One knob, **Amount**, with the One badge. It goes both ways from 0, and each way is a different
+One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different
 auto-pan; at 0 it does nothing. Either way the level stays where it was and the bass (below 120 Hz)
 stays in the centre, so it is safe on a loop or a full mix.
 
@@ -140,13 +142,20 @@ centre instead of stepping.
 
 ### The screen
 
-**A metronome.** An arm stands on a small base over the sound, and its angle is where the sound is:
+<Dot>2</Dot>**A metronome.** An arm stands on a small base over the sound, and its angle is where the sound is:
 the Chop ticks it from side to side on the beat and rests it there, the Drift sways it slowly. The
 dotted arc is how far it may swing; on the Chop's side a tick at each end marks where it rests. A
 bird sits on the tip with a life of its own, and now and then flies up out of the picture and comes
 back. The big number is Amount, signed; the word says **Chop**, **Off** or **Drift**; below it, **One
 side per beat** with the length of its edges, or how long one trip takes. At 0 the arm stands upright
 and still: **Centred**. In the smallest drawer the screen hides and the knob stays.
+
+## Try it
+
+- **Hi-hats that travel.** On a hat or a shaker line: Amount **70 %**, **Sync** on, Rate **1/2**, Shape **Sine**. The hats cross the image once every half bar.
+- **A ping-pong chop.** On a synth stab: Sync on, Rate **1/8**, Shape **Square**, Amount **100 %**. Each eighth lands on the other side.
+- **A loop that moves with a steady kick.** Amount **60 %**, Rate **0.25 Hz**, Low cut **150 Hz**: the top of the loop drifts and the lows stay in the centre.
+- **One gesture.** The One Auto-panner with Amount on an axis: the Chop one way, the still sound in the middle, the Drift the other.
 
 ## Mapping
 

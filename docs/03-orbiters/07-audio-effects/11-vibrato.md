@@ -19,14 +19,23 @@ to start the waver.
 
 :::
 
+<TryModule module="vibrato" set="depth:40" source="pad">
+<ModulePicture
+  src="/img/orbiters/audio-effects/vibrato.jpg"
+  wide
+  alt="The Vibrato at Depth 40 ct, 5 Hz: the runner bean screen, then Motion (Sync, Depth, Rate, Spread) and Output."
+  dots={[[1, 82.2, 14.7], [2, 59.9, 58.3], [3, 73.9, 58.3], [4, 84.8, 58.3], [5, 95.4, 45.3], [6, 95.4, 68.8], [7, 25.3, 14.2]]}
+/>
+</TryModule>
+
 ## Motion
 
 | Control | What it does |
 |---|---|
-| **Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a bar of the Orbiter's tempo, and the waver locks to the beat. |
-| **Depth** | How far the pitch swings above and below the note, in **cents**: 100 ct is a semitone, up to 300 ct (three semitones). **0 ct** as it loads: the sound as it came in. |
-| **Rate** | How fast the pitch wavers. Free: 0.5 … 24 Hz, **5.00 Hz** as it loads. Synced: 1 bar down to 1/32, with dotted values and triplets; **1/8** as it loads. |
-| **Spread** | Swings the two sides apart: **0 %** as it loads (both sides together), 100 % one side up while the other is down. |
+| <Dot>1</Dot>**Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a bar of the Orbiter's tempo, and the waver locks to the beat. |
+| <Dot>2</Dot>**Depth** | How far the pitch swings above and below the note, in **cents**: 100 ct is a semitone, up to 300 ct (three semitones). **0 ct** as it loads: the sound as it came in. |
+| <Dot>3</Dot>**Rate** | How fast the pitch wavers. Free: 0.5 … 24 Hz, **5.00 Hz** as it loads. Synced: 1 bar down to 1/32, with dotted values and triplets; **1/8** as it loads. |
+| <Dot>4</Dot>**Spread** | Swings the two sides apart: **0 %** as it loads (both sides together), 100 % one side up while the other is down. |
 
 **Depth in cents.** Depth means the same thing at every Rate: 25 ct is a quarter of a semitone each
 way, whether the waver is slow or fast. A singer's vibrato is about 10 … 50 ct at 5 … 7 Hz; a gentle
@@ -47,8 +56,8 @@ down a little until it is back on the beat, so it never clicks.
 
 | Control | What it does |
 |---|---|
-| **Dry/wet** | How much of the wavering sound you hear. **100 %** as it loads: a vibrato. Lower, the dry note blends back in. 0 %: the sound as it came in. |
-| **Level** | The level after the effect. |
+| <Dot>5</Dot>**Dry/wet** | How much of the wavering sound you hear. **100 %** as it loads: a vibrato. Lower, the dry note blends back in. 0 %: the sound as it came in. |
+| <Dot>6</Dot>**Level** | The level after the effect. |
 
 **Dry/wet below 100 % is a chorus-like blend.** The wavering copy plays a few milliseconds behind the
 dry note, so at 50 % the two beat against each other: a shimmer, slightly hollow, the sound of a
@@ -80,7 +89,7 @@ Vibrato passes the sound through unchanged, so an effect after it on the same Mo
 
 ## The screen
 
-**A runner bean.** A runner bean twines round a string, and the string is the note. The bean is one
+<Dot>7</Dot>**A runner bean.** A runner bean twines round a string, and the string is the note. The bean is one
 finished drawing that slides slowly down the screen, a full screen in about six seconds; nothing in
 the picture is ever redrawn while it slides.
 
@@ -99,6 +108,12 @@ and slides down into view. The word above the picture says **Shimmer**, **Sing**
 or **Flutter**; below it, the rate (with the length of one waver) and the depth with its delay. The
 picture moves only while sound plays; at rest, and with your system's reduced-motion setting, it is a
 still picture of the current values.
+
+## Try it
+
+- **A singer's vibrato on a lead.** Depth **25 ct**, Rate **5.5 Hz**. Map Depth to an axis and bring it in on the long notes only.
+- **A warped tape on a pad or a piano.** Depth **60 ct**, Rate **0.8 Hz**: the pitch sways slowly, like a record off centre.
+- **A wide shimmer.** Depth **10 ct**, Rate **6 Hz**, Spread **100 %**: the two sides waver apart and the sound opens up.
 
 ## Mapping
 

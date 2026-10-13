@@ -26,7 +26,7 @@ It loads set to shift up 50 Hz. On a World it loads at Dry/wet 50 %, so you hear
   src="/img/orbiters/audio-effects/frequency-shifter.jpg"
   wide
   alt="The Frequency shifter at Dry/wet 100 %, Shift +50 Hz, Spread 60 Hz and Feedback 80 %: the Shift screen, then Shift, Spiral and Output."
-  dots={[[1, 46.9, 78.8], [2, 57.4, 82.1], [3, 65.5, 82.1], [4, 89.3, 14.5], [5, 77.6, 78.8], [6, 88.1, 82.1], [7, 96.4, 62.2], [8, 96.4, 85.6], [9, 19.7, 14.2]]}
+  dots={[[1, 46.3, 57.1], [2, 57.1, 57.1], [3, 65.6, 57.1], [4, 86.0, 14.7], [5, 77.4, 58.3], [6, 88.2, 58.3], [7, 96.4, 45.3], [8, 96.4, 68.8], [9, 19.5, 14.2]]}
 />
 </TryModule>
 
@@ -100,6 +100,13 @@ The word on the screen is **Up ·** or **Down ·** and **Beating** (under 10 Hz)
 200 Hz) or **Clang**; **Wide** at Shift 0 with Spread, **Still** at 0 without; **Dry · 0 %**.
 Below the picture: Dry/wet, then what the shift does to an A (**220 → 270 Hz**, both sides with
 Spread), or **Dry under** the Low cut when it is on. The picture moves only while sound plays.
+
+## Try it
+
+- **A slow swirl on a pad.** Shift **0 Hz**, Spread **1 Hz**, Dry/wet **100 %**: the two sides beat against each other once a second, and the pad turns.
+- **A bell out of a piano.** Shift **+120 Hz**, Dry/wet **50 %**: the shifted copy is no longer in tune with the note, and the two ring together like metal.
+- **A rising spiral.** Shift **+30 Hz**, Feedback **70 %**, Time **1/8** with Sync on: each repeat steps a little higher than the last.
+- **A shifted top over a clean bass.** Low cut **200 Hz** with any of the above.
 
 ## Mapping
 

@@ -1,11 +1,11 @@
 ---
-title: Analog Drum Synth
+title: Analog drum synth
 sidebar_position: 8
 sidebar_custom_props:
   icon: AudioLines
 ---
 
-The **Analog Drum Synth** is a drum machine in the analog tradition: sixteen pads, and every pad is a
+The **Analog drum synth** is a drum machine in the analog tradition: sixteen pads, and every pad is a
 small synthesizer of its own. Kicks are falling sines, snares are tone and noise, hats and cymbals are
 clashing square waves, toms and blocks ring through a resonant filter. Nothing is sampled, and because
 every pad is built from the same voice, any pad can become any drum.
@@ -16,8 +16,15 @@ sequencer in front plays the kit with no setup.
 
 ## The panel
 
-The panel has two parts: the **pads** on the left, and one block with two tabs, **Kit** and
-**Sound**.
+<ModulePicture
+  src="/img/orbiters/instruments/analog-drum-synth.jpg"
+  wide
+  alt="The Analog drum synth with the kick selected and the Sound tab open: the sixteen pads on the left, the Kit and Sound tabs, then Osc, Noise · pitch, Filter and Amp, with Choke at the end."
+  dots={[[1, 11.5, 54.1], [2, 23.2, 13.7], [3, 28.3, 13.7], [4, 28, 22.8], [5, 49.5, 22.8], [6, 58, 22.8], [7, 81.5, 22.8], [8, 96.8, 72.5]]}
+/>
+
+The panel has two parts: the <Dot>1</Dot>**pads** on the left, and one block with two tabs, <Dot>2</Dot>**Kit** and
+<Dot>3</Dot>**Sound**.
 
 - **Tap** a pad to select it: the **Sound** tab then shows that pad's controls. A tap never plays.
 - A pad **lights up** while it rings, fading with its own sound: a crash glows for a while, a closed
@@ -65,7 +72,7 @@ one you will turn most.
 
 ### Osc
 
-Two oscillators. Each one's shape **morphs** from a sine through a triangle and a saw to a square, and
+<Dot>4</Dot>Two oscillators. Each one's shape **morphs** from a sine through a triangle and a saw to a square, and
 blends on the way (the readout says "Triangle→saw").
 
 | Control | What it does |
@@ -77,6 +84,8 @@ blends on the way (the readout says "Triangle→saw").
 
 ### Noise · pitch
 
+<Dot>5</Dot>The noise beside the oscillators, and the pitch sweep at the strike.
+
 | Control | What it does |
 |---|---|
 | **Noise** | Tone against noise: the oscillators only on the left ("Tone"), noise only on the right. The clap and the shaker are pure noise. |
@@ -86,7 +95,7 @@ blends on the way (the readout says "Triangle→saw").
 
 ### Filter
 
-A 24 dB low-pass, then a 12 dB high-pass.
+<Dot>6</Dot>A 24 dB low-pass, then a 12 dB high-pass.
 
 | Control | What it does |
 |---|---|
@@ -99,6 +108,8 @@ A 24 dB low-pass, then a 12 dB high-pass.
 
 ### Amp
 
+<Dot>7</Dot>The pad's envelope, level and place in the kit.
+
 | Control | What it does |
 |---|---|
 | **Decay** | How long the strike takes to die away. |
@@ -107,7 +118,7 @@ A 24 dB low-pass, then a 12 dB high-pass.
 | **Level** | The pad's level in the kit. |
 | **Drive** | The pad's own output fed back into its filter: grit, then howl. |
 | **Pan** | Where the pad sits left to right. |
-| **Choke** | The pad's choke group: tap to step through Off, 1, 2, 3, 4. |
+| <Dot>8</Dot>**Choke** | The pad's choke group: tap to step through Off, 1, 2, 3, 4. |
 
 ## One-shot pads and choke
 
@@ -143,6 +154,13 @@ long as it rings, so a crash's tail isn't cut short by the beat around it.
 Set the Analog drum synth's Panel to **Screen** (the Visuals step in the Studio) and the play monitor
 shows the kit while an axis moves it: the sixteen pads by name, each lighting when it is struck and
 fading as it rings out.
+
+## Try it
+
+- **A beat with no setup.** Put a Drum sequencer in front of it and set a few steps: every voice already plays its pad.
+- **A longer, deeper kick.** Tap the kick, open **Sound**: Tune down to **45 Hz**, Amp **Decay** up, **Pitch decay** up a little for a longer sweep.
+- **A metallic bell out of a tom.** Tap a tom: **Audio mod** up to about half, Resonance **80 %**, Interval **+6.4 st**.
+- **The whole kit, darker and tighter.** In **Kit**: Tone **−1 oct**, Decay **70 %**. Every pad moves by the same amount and keeps its own character.
 
 ## Mapping
 

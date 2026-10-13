@@ -22,7 +22,7 @@ Note echo loads with Level at 0 %, so adding it changes nothing until you turn L
 <ModulePicture
   src="/img/orbiters/midi-effects/note-echo.jpg"
   alt="Note echo as it loads, Level at 0 %: the Bounce screen, then Delay, Per repeat and Input."
-  dots={[[1, 32.5, 64.1], [2, 9.5, 82.1], [3, 25, 82.1], [4, 43.5, 82.1], [5, 59, 82.1], [6, 74.6, 82.1], [7, 98, 75.3], [8, 50, 14.2]]}
+  dots={[[1, 22.0, 58.2], [2, 9.2, 80], [3, 25.2, 80], [4, 43.2, 78.8], [5, 59.2, 78.8], [6, 75.2, 78.8], [7, 92, 66.6], [8, 50, 14.2]]}
 />
 </TryModule>
 
@@ -64,6 +64,13 @@ too quiet, off the keyboard, or past the echo's longest reach (the dashed line, 
 **Tap a landing to mute that repeat**, for rhythmic echoes; tap the first one to mute the note you
 played. The number on the left counts the repeats that sound. On the smallest drawer the screen
 hides, and so do the taps: the mutes keep what you set.
+
+## Try it
+
+- **A dotted echo on single notes.** Sync on, Delay **1/8D**, Repeats **3**, Level **70 %**, Feedback **70 %**: each note comes back three times, softer every time.
+- **An echo that climbs.** Pitch **+7 st**, Repeats **2**: the repeats play a fifth, then a ninth above the note.
+- **A swell.** Feedback **120 %**, Level **40 %**, Repeats **4**: the echoes get louder instead of fading.
+- **Only the echoes.** **Mute** the input and put the instrument's dry part on another dimension.
 
 ## Mapping
 

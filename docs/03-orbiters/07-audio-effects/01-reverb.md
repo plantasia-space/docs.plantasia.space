@@ -35,8 +35,8 @@ On a World the Reverb loads at Dry/wet 50 %, so you hear it as soon as you add i
 <ModulePicture
   src="/img/orbiters/audio-effects/reverb.jpg"
   wide
-  alt="The Reverb as an insert, at Dry/wet 0 %: the Space screen, then Space (Freeze, Decay, Pre-delay, Bass), Tone and Output."
-  dots={[[1, 42.1, 78.8], [2, 51.6, 82.1], [3, 58.8, 82.1], [4, 43.9, 26.4], [5, 67.5, 82.1], [6, 74.8, 82.1], [7, 82, 82.1], [8, 89.3, 82.1], [9, 96.8, 62.2], [10, 96.8, 85.6], [11, 17.8, 14.2]]}
+  alt="The Reverb playing at Dry/wet 50 %: the Space screen, then Space (Freeze, Decay, Pre-delay, Bass), Tone and Output."
+  dots={[[1, 41.3, 61.1], [2, 51, 61.1], [3, 58.5, 61.1], [4, 34.9, 20.4], [5, 67, 57.1], [6, 74.5, 57.1], [7, 82, 57.1], [8, 89.5, 57.1], [9, 96.8, 45.3], [10, 96.8, 68.8], [11, 17.4, 14.2]]}
 />
 </TryModule>
 
@@ -91,7 +91,7 @@ picture of the current values.
 <ModulePicture
   src="/img/orbiters/audio-effects/one-reverb.jpg"
   alt="The One Reverb playing at Amount 60 %, Hall: the Space screen shows Decay 1.7 s and Pre-delay 15 ms."
-  dots={[[1, 50, 78.8], [2, 50, 14.2]]}
+  dots={[[1, 50, 76], [2, 50, 14.2]]}
 />
 </TryModule>
 
@@ -122,6 +122,13 @@ on its rim and the ladder on the right follow how loud the reverb is. The big nu
 seconds; the word says **Room** or **Hall** turned up, **Plate** or **Bloom** turned down. On a Moon
 the sound under the craft is drawn hollow (the dry stays on the World side) and the screen reads
 **Send ·** and the word.
+
+## Try it
+
+- **A room around a dry piano.** As an insert: Decay **0.8 s**, Pre-delay **10 ms**, Dry/wet **20 %**. The piano stays in front and stops sounding boxed in.
+- **One hall for the whole World.** A Reverb on Moon I at Decay **3 s**, Low cut **200 Hz**, then turn **Send Moon I** up on each dimension that should be in the hall. The low cut keeps the tail from getting muddy.
+- **A frozen chord to play over.** Play a chord, press **Freeze**, and play a melody over the pad it leaves. Map Freeze to a toggle to do it while you move.
+- **One gesture.** The One Reverb with Amount on an axis: the bloom one way, dry in the middle, the hall the other.
 
 ## In the scene
 
