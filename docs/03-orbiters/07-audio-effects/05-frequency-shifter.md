@@ -56,15 +56,13 @@ more**: up a step, and up again, an endless staircase (or down, on a downshift).
 
 | Control | What it does |
 |---|---|
-| <Dot>4</Dot>**Sync** | Off (as it loads), you set **Time** in milliseconds. On, Time is a note length of the Orbiter's tempo, from **1/2** to **1/32T**; **1/8** as it loads. A synced time longer than 1 s is halved until it fits. |
+| <Dot>4</Dot>**Sync** | Off (as it loads), you set **Time** in milliseconds. On, Time is a note length of the Orbiter's tempo, from **1/2** to **1/32T**; **1/8** as it loads. |
 | <Dot>5</Dot>**Feedback** | The big knob: how much goes round again, **0 … 95 %**. At 0 there is no Spiral and Time does nothing. Turning it up doesn't make the sound louder: the level is held, the trail just gets longer. |
 | <Dot>6</Dot>**Time** | The time between one repeat and the next, **1 ms … 1 s**, **120 ms** as it loads. Short (under about 30 ms) the repeats blur into a rising or falling shimmer; long, you hear each step of the staircase. Moving it bends the repeats like tape. |
 
 :::note[One frequency can ring]
 
-On a downshift, a frequency at exactly half the shift folds back onto itself (150 Hz shifted down
-300 Hz is 150 Hz again), so with a lot of Feedback it rings louder than the rest. On real material
-it is one narrow line; pull Feedback down a little if it stands out.
+With a lot of Feedback one note can ring louder than the rest; pull Feedback down a little.
 
 :::
 
@@ -74,12 +72,8 @@ it is one narrow line; pull Feedback down a little if it stands out.
 **At 50 %, small shifts beat like a phaser**: the dry and the shifted sound at equal level. At
 100 % you hear the shifted sound alone (with Low cut on, the bass under it stays dry).
 
-## On a Moon
-
-Like every effect with a Dry/wet knob, it starts at **Dry/wet 100 %** on a Moon: the Moon returns
-the shifted sound, beside the dry World. Small shifts beat against the dry in the mix (the
-barber-pole phaser); large ones sit beside it as a metallic shadow. With **Low cut** on, the band
-under it stays out of the return: the World already carries it.
+On a Moon it starts at Dry/wet 100 % and returns only the effect; the Moon level sets how much you
+hear (see [Audio effects](/docs/orbiters/audio-effects)).
 
 ## The screen
 
@@ -87,19 +81,10 @@ under it stays out of the return: the World already carries it.
 
 - **The inner solid turns** one way on an upshift and the other way on a downshift, faster the
   further the knob is from 0. At Shift 0 it stands still.
-- **The orbit leans with the shift**: an upshift lifts its right end, a downshift its left; level at 0.
-- **Spread** splits the orbit into two rings: the left side outside (dashed, a filled dot), the
-  right side inside (solid, a hollow dot). The wider the Spread, the further apart.
-- **The Spiral** is a few dots climbing (or falling) round the pair, one for each repeat still
-  heard; the turns open with Time.
-- **Low cut** is the bar on the line feeding the shell: the sound below it stays dry.
 - **The big number, bottom left, is Dry/wet**; the dial, bottom right, **Feedback**. At Dry/wet 0 %
   the picture is muted.
-
-The word on the screen is **Up ·** or **Down ·** and **Beating** (under 10 Hz), **Metallic** (to
-200 Hz) or **Clang**; **Wide** at Shift 0 with Spread, **Still** at 0 without; **Dry · 0 %**.
-Below the picture: Dry/wet, then what the shift does to an A (**220 → 270 Hz**, both sides with
-Spread), or **Dry under** the Low cut when it is on. The picture moves only while sound plays.
+- **The word** is **Up ·** or **Down ·** and **Beating** (under 10 Hz), **Metallic** (to 200 Hz) or
+  **Clang**; **Wide** at Shift 0 with Spread, **Still** at 0 without.
 
 ## Try it
 
@@ -111,5 +96,4 @@ Spread), or **Dry under** the Low cut when it is on. The picture moves only whil
 ## Mapping
 
 Every control can be mapped to the Orbiter's axes, and Sync to its toggles: see
-[Edit](/docs/orbiters/edit). A Shift mapping rests on +50 Hz and sweeps down through 0 into a small
-downshift one way, up into the metallic range the other.
+[Edit](/docs/orbiters/edit).

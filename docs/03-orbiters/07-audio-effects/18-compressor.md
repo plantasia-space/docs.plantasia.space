@@ -35,7 +35,7 @@ came in.
 |---|---|
 | <Dot>1</Dot>**Threshold** | The level above which the compressor turns the sound down, −60 … 0 dB (−18 dB as it loads). Lower catches more of the sound. |
 | <Dot>2</Dot>**Ratio** | How hard it turns down what goes over the threshold, 1:1 … 20:1. At **1:1** (as it loads) it is off; 2:1 to 4:1 is gentle; 10:1 and up holds the level almost flat. |
-| <Dot>3</Dot>**Knee** | How wide the soft region around the threshold is, 0 … 24 dB (6 dB as it loads). At 0 the compressor starts at a hard corner; wider, it eases in. |
+| <Dot>3</Dot>**Knee** | How gently it starts, 0 … 24 dB (6 dB as it loads). At 0 it kicks in at a hard corner; wider, it eases in. |
 
 ### Envelope
 

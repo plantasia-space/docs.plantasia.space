@@ -14,22 +14,11 @@ A chorus plays a few copies of the sound, each one a few milliseconds late, and 
 they are. The moving copies drift a little out of tune against the original, and that drift is what
 you hear as width and movement.
 
-## On a Moon, or as an insert
-
-As an **insert**, a chorus blends with the sound it is on.
-
 :::tip[How they load]
 
 On a World the Chorus loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Chorus loads doing nothing (Amount 0): turn it up to hear it.
 
 :::
-
-A **Moon** is a send and return: what it returns is added to the dry World through the <Term id="star">Star</Term>'s mixer.
-
-- **An effect added to a Moon starts at Dry/wet 100 %**, the Chorus included, so the Moon returns
-  only the copies. How loud they are is the [Channels'](/docs/orbiters/audio-effects/channel): the Moon channel's Level and the Moon level of the Star's Main mix.
-- **The One Chorus turns into a send by itself on a Moon:** it returns only its copies, with no dry,
-  and there is nothing to set. An untouched One Chorus on a Moon (Amount 0) passes the sound through unchanged, so an effect after it on the same Moon still hears it; the dry leaves as you turn Amount up, over its first 5 %.
 
 ## Chorus
 
@@ -51,19 +40,12 @@ A **Moon** is a send and return: what it returns is added to the dry World throu
 | <Dot>3</Dot>**Rate** | How fast the copies sway. Free: 0.05 … 8 Hz, **0.80 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/2** as it loads. Slow sways drift; fast ones shimmer. |
 | <Dot>4</Dot>**Depth** | How far the copies drift from the sound: more depth, more movement and more detune. At 0 % the copies don't move at all (a still doubling). |
 
-**Classic and Ensemble.** Classic is the chorus of the classic synths: two copies, one in each
-speaker, swaying in opposite directions, so a mono voice opens up into stereo. Ensemble adds a third
-copy in the middle and a fast, shallow shimmer, for pads and strings. Switching between them while
-sound plays is smooth: the two modes cross-fade, nothing bends.
-
 **Rate and Depth together set how out of tune it gets.** At the defaults (0.80 Hz, 50 %) Classic
 detunes by about ±13 cents, a gentle thickening. A fast rate with full depth (3 Hz, 100 %) reaches
 about a semitone: a wobble more than a chorus. The screen shows the detune in cents as you turn.
 
 **Synced.** A synced chorus sways once per note value or per so many bars, so a 1-bar or 2-bar sway
-breathes with the music. It follows the speed of the tempo, not the beat itself: the sway's peaks
-don't jump to the downbeat when you start, stop or move the transport, so it never clicks. Changing
-the tempo, the rate or Sync only changes the speed of the sway.
+breathes with the music. Start, stop or jump the transport and it never clicks.
 
 ### Colour
 
@@ -74,22 +56,17 @@ the tempo, the rate or Sync only changes the speed of the sway.
 | <Dot>7</Dot>**Low cut** | Keeps everything below this frequency **out of the chorus**, so the bass stays clean, centred and in tune. **Off** at 20 Hz (as it loads). |
 
 **The low cut keeps the bass dry, it doesn't remove it.** Below the cut the sound passes as it came
-in, at any Dry/wet: two octaves under the cut it is within 0.1 dB of the dry sound. Above it, the
-sound is chorused. So a chorus on a bass line, or on a whole mix, can thicken the top while the low
-end stays solid: set the Low cut around 150–250 Hz.
+in; above it, the sound is chorused. So a chorus on a bass line, or on a whole mix, can thicken the
+top while the low end stays solid: set the Low cut around 150 to 250 Hz.
 
 ### Output
 
-<Dot>8</Dot>**Dry/wet** blends the dry sound with the copies (50 % as it loads on a World, 100 % on a Moon, 0 % on a Star); 50 % is the
-classic chorus blend. <Dot>9</Dot>**Level** sets the level after it.
+<Dot>8</Dot>**Dry/wet** blends the dry sound with the copies; 50 % is the classic chorus blend.
+<Dot>9</Dot>**Level** sets the level after it. A mono sound opens into stereo; a stereo sound keeps its
+image.
 
-### Mono and stereo sounds
-
-- **A mono sound** (most synth voices, a mono track) opens into stereo: the two sides drift in
-  opposite directions. Ensemble adds a third copy in the centre.
-- **A stereo sound** keeps its image: each side is chorused on its own side.
-- **Heard in mono** (a phone speaker, a club's mono sum), the chorus stays a chorus: thinner, but
-  nothing cancels, and the dry sound is untouched.
+On a Moon it starts at Dry/wet 100 % and returns only the effect; the Moon level sets how much you
+hear (see [Audio effects](/docs/orbiters/audio-effects)).
 
 ### The screen
 
@@ -97,18 +74,11 @@ classic chorus blend. <Dot>9</Dot>**Level** sets the level after it.
 three in Ensemble (the middle one in the accent colour). After the split they drift apart, a braid:
 that drift is the detune.
 
-- **The big number, top left, is Dry/wet** (0 … 100), with a dial under it from dry to wet. At 0 %
-  the picture turns grey: **Dry · 0 %**.
-- **Depth** is how far the voices drift apart; at 0 % they stay one line. **Width** is how far apart
-  they stand; at 0 % one line.
-- **Low cut** is a short bar on the line: the sound stays a single line up to the bar (the bass
-  stays dry) and splits after it. The bar moves right as the cut rises.
-- **Feedback** is a faint dotted copy of the wave above the braid, stronger with more Feedback.
-- **Rate** is how fast the wave flows along the braid, while sound plays.
-
-Below the picture: the rate (with its speed in Hz when synced), then the number of voices, the
-detune in cents, Feedback and the Low cut. The picture moves only while sound plays; at rest, and
-with your system's reduced-motion setting, it is a still picture of the current values.
+- **The big number, top left, is Dry/wet.** At 0 % the picture turns grey: **Dry · 0 %**.
+- **Depth** is how far the voices drift apart, and **Width** how far apart they stand; at 0 % they
+  stay one line.
+- **Low cut** is a short bar on the line: the sound stays a single line up to the bar and splits
+  after it.
 
 ## One Chorus
 
@@ -124,15 +94,13 @@ One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, 
 chorus; at 0 it does nothing, and either way the level stays where it was and the bass (below
 120 Hz) is never chorused, so it is safe on anything, a bass line included.
 
-- **Turn it up** (+), **Sway**: the sound gets wider and softly moving. A little gives a slight
-  stereo doubling you notice more when it's gone; all the way, a clear, slow, wide sway (0.4 up to
-  1.1 Hz), a strong Juno-style wobble at the very end.
-- **Turn it down** (−), **Shimmer**: the sound quivers, fast and shallow (2.5 up to 6 Hz), a glassy
-  shimmer on the top, like a string ensemble or a rotary speaker's horn.
+- **Turn it right: Sway.** The sound gets wider and softly moving. A little gives a slight stereo
+  doubling you notice more when it's gone; all the way, a clear, slow, wide sway, a strong wobble at
+  the very end.
+- **Turn it left: Shimmer.** The sound quivers, fast and shallow, a glassy shimmer on the top, like
+  a string ensemble or a rotary speaker's horn.
 
-Both ends detune by about the same amount (about ±50 cents, a clearly audible effect): the two sides differ in speed and size, not in
-how far out of tune they get. Map Amount to an <Term id="axis">axis</Term> and one gesture goes from a shimmer, through the
-dry sound, into a sway.
+Map Amount to an <Term id="axis">axis</Term> and one gesture goes from a shimmer, through the dry sound, into a sway.
 
 ### The screen
 
@@ -140,8 +108,7 @@ dry sound, into a sway.
 out, an icosahedron and a dodecahedron. They turn in place, one each way: slowly for Sway, fast for
 Shimmer. How far apart they hang is how far the copies swing. The big number is the detune in cents,
 the ladder on the right follows how loud the copies are, and the word says **Sway**, **Off** or
-**Shimmer**. On a Moon the sound is drawn hollow and the screen reads **Send ·** and the word. In the
-smallest drawer the screen hides and the knob stays.
+**Shimmer**.
 
 ## Try it
 

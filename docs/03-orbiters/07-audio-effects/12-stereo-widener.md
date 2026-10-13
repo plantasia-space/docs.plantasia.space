@@ -39,16 +39,9 @@ came in. Turn Width either way to start.
 | <Dot>2</Dot>**Spread** | Opens a mono sound into stereo. **0 %** as it loads, up to **100 %**. |
 | <Dot>3</Dot>**Bass mono** | Keeps everything below this frequency in the middle. **Off** as it loads (the knob at the bottom), up to **500 Hz**. |
 
-**Width and the level held.** Making a stereo sound wider makes its sides louder, and how much louder
-depends on the sound: nothing for a mono sound, about +2.4 dB for a typical mix at 200 %, up to +4 dB
-when the two sides have nothing in common. The Stereo widener measures the sound and evens that out, so
-the level stays put at every Width. It follows the music within about a tenth of a second; a knob move
-lands at once. A mono sound is never touched: Width has no sides to work on, so at any Width it comes
-out exactly as it went in (that is what **Spread** is for).
-
-Two sides that pull against each other (a sound that is partly out of phase) cancel as you narrow
-them: at Width 0 % what is left is honestly quieter, and the widener raises it by at most 6 dB rather
-than chase it.
+**Width and the level held.** A wider sound would normally get louder; the Stereo widener holds the
+level, so you can judge width by ear. A mono sound has no sides to widen: that is what **Spread** is
+for.
 
 **Spread for mono sounds.** Spread makes stereo out of a mono sound: it adds a copy of the sound,
 12 ms late, to the left side and takes it from the right. Each side then leans a little differently
@@ -63,7 +56,7 @@ Spread 100 % is about as wide as the module goes.
 
 **Bass mono.** Widening a sound drags its bass away from the middle, which makes a low end sound weak
 and unsteady, especially on big speakers. Bass mono takes the sides' lows out below the frequency you
-set (steeply: an octave under it the sides' bass is down 24 dB) and leaves them in the middle, where
+set and leaves them in the middle, where
 the bass belongs. Nothing else changes: the bass stays as loud, it just sits in the centre. Around
 **100 … 150 Hz** is a good start for a full mix; higher for a pad that should keep only its shimmer
 wide.
@@ -75,13 +68,8 @@ wide.
 | <Dot>4</Dot>**Dry/wet** | Balance between the sound as it came in and the widened one. **100 %** as it loads: Width 100 % already does nothing. At 50 % the image sits about halfway between the two. |
 | <Dot>5</Dot>**Level** | The level after the widener. |
 
-## Heard in mono
-
-On a phone speaker or a club's mono sum, the left and right are added together. Without the widener,
-that sum is simply the middle of the sound. With it, the middle moves by the same amount the level hold
-does: at Width 200 % on a typical mix the mono sum is about **2.4 dB quieter**, and at Width 0 % on a
-sound whose sides have nothing in common it is about **3 dB louder**. A mono sound, and Spread's copy,
-leave the mono sum alone.
+On a phone speaker the sound comes through at about the same level, and Spread's copy disappears
+cleanly.
 
 ## The screen
 
@@ -95,16 +83,8 @@ seed that droops below the line (dashed) is out of phase, its two sides pulling 
 - **Spread**, on a mono sound, parts the seeds a little left and a little right.
 - **Bass mono** is the leaf on the left of the stem: at the ground when Off, sliding up towards the
   head as the cut rises. The low seeds under the cut stand up into the middle.
-- **Waves**: while sound plays, a half-circle rises from the head every moment. Its span is how wide
-  the sound comes out, Spread tilts it left and right, and with Bass mono it starts a little further
-  out. No waves at rest, and none while the widener does nothing.
-
-The picture follows the sound that comes in: a mono input shows every seed straight up and says
-**Mono in · try Spread**. The word above the picture says **As is · 100 %** (nothing to do), **Mono**,
-**Narrow**, **Wide** or **Phasey** (more out of phase than in). Below it, the Width (and the Spread),
-and how alike the two sides come out: **in phase +0.50** for a typical mix, towards **+1.00** for
-mono, below zero **out of phase**; with Bass mono on, the cut. It moves only while sound plays; at rest,
-and with your system's reduced-motion setting, it is a still picture of the current values.
+- **The word** above the picture says **As is · 100 %**, **Mono**, **Narrow**, **Wide** or **Phasey**;
+  below it, how alike the two sides are. A mono input says **Mono in · try Spread**.
 
 ## Try it
 
@@ -115,5 +95,3 @@ and with your system's reduced-motion setting, it is a still picture of the curr
 ## Mapping
 
 Every Stereo widener control can be mapped to the Orbiter's axes: see [Edit](/docs/orbiters/edit).
-Width rests on 100 % and goes to 40 % one way (narrower) and 180 % the other (wider); Spread rests on
-0 % (30 % one way, 70 % the other); Bass mono rests on Off (80 Hz one way, a firm 250 Hz the other).

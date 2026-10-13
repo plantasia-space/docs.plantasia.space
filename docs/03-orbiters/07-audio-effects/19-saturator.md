@@ -69,9 +69,9 @@ marker where **Tone** starts taking them away. The word above says **Odd** with 
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a
 different saturator; at 0 it does nothing, and either way the level is kept.
 
-- **Turn it right: Warm.** Odd harmonics, from warmth to a little crunch, with the top end closing as
+- **Turn it right: Warm.** From warmth to a little crunch, with the top end closing as
   you turn.
-- **Turn it left: Tube.** Even harmonics, body and sweetness, with the top end left open.
+- **Turn it left: Tube.** Body and sweetness, with the top end left open.
 
 Map Amount to an <Term id="axis">axis</Term> and one gesture goes from the tube, through the clean sound,
 to the crunch.

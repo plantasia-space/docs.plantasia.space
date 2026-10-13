@@ -36,7 +36,7 @@ On a World the Flanger loads at Dry/wet 50 %, so you hear it as soon as you add 
 | Control | What it does |
 |---|---|
 | <Dot>1</Dot>**Sync** | On (as it loads), one sweep takes a length of the Orbiter's tempo, from **8 bars** to **1/16**, and lands on the bar: every player in a room sweeps together. Off, you set the **Rate** in Hz. Switching never makes the sweep jump. |
-| <Dot>2</Dot>**Rate** | How long one sweep, down and back, takes. Slow (2 bars, or 0.25 Hz) is a long whoosh; fast (1/16, or a few Hz) turns into a warble. Synced, it reads a note length; free, 0.02 … 10 Hz. A synced sweep faster than 10 Hz (1/16 above 150 BPM) is halved until it fits. |
+| <Dot>2</Dot>**Rate** | How long one sweep, down and back, takes. Slow (2 bars, or 0.25 Hz) is a long whoosh; fast (1/16, or a few Hz) turns into a warble. Synced, it reads a note length; free, 0.02 … 10 Hz. |
 | <Dot>3</Dot>**Depth** | How far the sweep travels. At 100 % the whoosh moves two octaves either way; at 0 % it stands still on one colour. |
 | <Dot>4</Dot>**Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) moves the sweep across the stereo image; 180° sweeps them against each other, the widest. In mono it stays a flange, never cancelled. |
 

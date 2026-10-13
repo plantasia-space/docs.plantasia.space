@@ -9,19 +9,6 @@ Two delays repeat a sound in time: the **Delay**, with every control in reach, a
 one knob with a dub echo one way and a slapback the other. Both go in any effects rack. The Delay's
 home is a **<Term id="moon">Moon</Term>**; the One Echo is mostly an insert on a <Term id="world-dimension">World dimension</Term> or the <Term id="star">Star</Term>.
 
-## On a Moon, or as an insert
-
-A **Moon** is a send and return: what it returns is added to the dry World through the Star's Main mix,
-so a delay there should return only its echoes.
-
-- **An effect added to a Moon starts at Dry/wet 100 %**, the Delay included. How loud the echoes are
-  is the mixer's: the Moon channel's Level and the Moon level of the Star's Main mix ([Channel](/docs/orbiters/audio-effects/channel)).
-- **The echoes outlive the sound.** When the send is closed, nothing more goes in and the echoes
-  already in flight ring out.
-
-As an **insert**, a delay blends with the sound it is on. Turning an effect off (its power button)
-cuts its echoes at once; to keep them, use Freeze or the Moon's send.
-
 :::tip[How they load]
 
 On a World the Delay loads at Dry/wet 50 %, so you hear it as soon as you add it; on a Star it loads at 0 %, and on a Moon at 100 %. The One Echo loads doing nothing (Amount 0): turn it up to hear it.
@@ -44,15 +31,7 @@ On a World the Delay loads at Dry/wet 50 %, so you hear it as soon as you add it
 | Control | What it does |
 |---|---|
 | <Dot>1</Dot>**Sync** | On (as it loads): the time is a note value of the Orbiter's tempo, so the echoes stay on the beat when the tempo changes. Off: the time is in milliseconds. |
-| <Dot>2</Dot>**Time** | Synced: 1/2 down to 1/32 triplets, with dotted values; **1/8D** (a dotted eighth) as it loads. Free: 1 ms … 2 s, 250 ms as it loads. |
-
-A synced time longer than 2.5 s (a 1/2 note below 48 BPM) plays at half its length, so it stays on
-the beat; the screen says **halved to fit**.
-
-**Why the echoes bend.** Moving the time while sound plays bends the echoes' pitch, like a tape
-delay: the repeats speed up or slow down until they reach the new time, then sit on it. This is what
-makes Time worth mapping to an <Term id="axis">axis</Term>: sweep it and the echoes swoop. A tempo change bends them the
-same way.
+| <Dot>2</Dot>**Time** | Synced: 1/2 down to 1/32 triplets, with dotted values; **1/8D** (a dotted eighth) as it loads. Free: 1 ms … 2 s, 250 ms as it loads. Move it while sound plays and the echoes swoop like a tape delay; map it to an <Term id="axis">axis</Term> for that. |
 
 ### Repeats
 
@@ -67,35 +46,26 @@ same way.
 The cuts sit inside the loop, so every echo goes through them again: each one is a little thinner or
 darker than the last.
 
-**Ping-pong with mono and stereo sounds.** A mono sound (most synth voices, a mono track) bounces:
-the first echo lands left, the next right, then left. A stereo sound is folded to mono on its way in
-and then bounces too, so it trades its own width for the bounce's. Heard on a phone speaker, the
-echoes keep their level: the two sides land at different times, so nothing cancels.
+With Ping-pong on, a stereo sound is folded to mono before it bounces.
 
 Ping-pong and Freeze can be mapped to the Orbiter's toggles.
 
 ### Output
 
-<Dot>8</Dot>**Dry/wet** blends the dry sound with the echoes (50 % as it loads on a World, 100 % on a Moon, 0 % on a Star), and <Dot>9</Dot>**Level**
-sets the level after it.
+<Dot>8</Dot>**Dry/wet** blends the dry sound with the echoes, and <Dot>9</Dot>**Level** sets the level after it.
+
+On a Moon it starts at Dry/wet 100 % and returns only the effect; the Moon level sets how much you
+hear (see [Audio effects](/docs/orbiters/audio-effects)).
 
 ### The screen
 
 <Dot>10</Dot>Two tetrahedra fly through each other over the sound, a star.
 
-- **The big number, bottom left, is Dry/wet** (0 … 100): how much of the echoes you hear. At 0 % it
-  turns grey and the picture is muted (**Dry · 0 %**). The star's six front points light up with it.
+- **The big number, bottom left, is Dry/wet**: how much of the echoes you hear. At 0 % the picture
+  is muted (**Dry · 0 %**).
 - **The triangles on the ground are the echoes**, outward from the sound: the further one is, the
-  later it comes. They fade with Feedback, darken with the High cut and shrink with the Low cut. The
-  nearest ones light up on the side that is ringing.
-- **Ping-pong** pulls the two tetrahedra apart on a strut; the sound feeds the left one, the echoes
-  land left, right, left, and a dot on the strut follows the bounce.
-- **Time** sets how fast the star turns: shorter times turn it a little faster.
-- **Freeze** stops the star, lights every echo and turns the strut solid: **Frozen**.
-
-Below the picture: the time (with its length in ms when synced), then the number of echoes, Feedback
-and the cuts. The picture moves only while sound plays; at rest, and with your system's
-reduced-motion setting, it is a still picture of the current values.
+  later it comes. They fade with Feedback.
+- **Freeze** stops the star and lights every echo: **Frozen**.
 
 ## One Echo
 
@@ -110,32 +80,21 @@ reduced-motion setting, it is a still picture of the current values.
 One knob, <Dot>1</Dot>**Amount**, with the One badge. It goes both ways from 0, and each way is a different echo;
 at 0 it does nothing, and either way the level stays about where it was.
 
-- **Turn it up** (+): a dub echo in time with the Orbiter, a dotted eighth bouncing left and right.
-  A little gives one soft repeat behind the sound; further up, a long trail of repeats, each one
-  darker than the last, so it never clutters the top of a mix. It follows the tempo.
-- **Turn it down** (−): a slapback, one quick repeat right behind the sound, in the centre: the
-  doubled vocal, the rockabilly guitar. Further down it stretches a little (80 to 140 ms) and gets a
-  second, fainter repeat.
+- **Turn it right: Trail.** A dub echo in time with the Orbiter, a dotted eighth bouncing left and
+  right. A little gives one soft repeat behind the sound; further, a long trail of repeats, each one
+  darker than the last, so it never clutters the top of a mix.
+- **Turn it left: Slap.** A slapback, one quick repeat right behind the sound, in the centre: the
+  doubled vocal, the rockabilly guitar. Further left it stretches a little and gets a second,
+  fainter repeat.
 
-The two sides run on their own lines, so sweeping Amount across 0 never bends or cuts the other
-side's echoes: they fade out with their own level. Map Amount to an axis and one gesture goes from a
-slap, through dry, into a dub trail.
-
-:::note[On a Moon it turns into a send by itself]
-
-It returns only its echoes, with no dry, so there is nothing to set. An untouched One Echo on a Moon (Amount 0) passes the sound through unchanged, so an effect after it on the same Moon still hears it; the dry leaves as you turn Amount up, over its first 5 %.
-
-:::
+Map Amount to an <Term id="axis">axis</Term> and one gesture goes from a slap, through dry, into a dub trail.
 
 ### The screen
 
-<Dot>2</Dot>A corridor runs up into the sky from the sound, with an octahedron hovering over it. Turned up, the
-echoes are diamonds climbing the corridor, left, right, left; more of them, and a bigger craft, as
-you turn further. Turned down, one or two diamonds sit straight above the sound, close to the craft:
-the slap. The big number counts the echoes you hear, the ladder on the right follows how loud they
-are, and the word says **Soft** or **Trail** turned up, **Slap** turned down. On a Moon the sound is
-drawn hollow and the screen reads **Send ·** and the word. In the smallest drawer the screen hides
-and the knob stays.
+<Dot>2</Dot>A corridor runs up into the sky from the sound, with an octahedron hovering over it. Turned right,
+the echoes are diamonds climbing the corridor, left, right, left; turned left, one or two diamonds
+sit straight above the sound: the slap. The big number counts the echoes you hear; the word says
+**Soft** or **Trail** turned right, **Slap** turned left.
 
 ## Try it
 

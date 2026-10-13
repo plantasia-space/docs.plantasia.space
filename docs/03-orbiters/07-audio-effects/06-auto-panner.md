@@ -58,7 +58,7 @@ beat without a click.
 
 **The low cut keeps the bass centred, it doesn't remove it.** Below the cut the sound stays where it
 was at every Amount; above it, it travels. So an auto-panner on a full loop can move the hats and the
-pads while the kick and the bass stay in the middle: set the Low cut around 150–250 Hz.
+pads while the kick and the bass stay in the middle: set the Low cut around 150 to 250 Hz.
 
 ### Output
 
