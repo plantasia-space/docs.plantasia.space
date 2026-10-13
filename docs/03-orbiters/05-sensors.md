@@ -53,8 +53,7 @@ again.
 
 ## Several Orbiters at once
 
-When more than one Orbiter is open on the desktop (a collection in the multi-orbiter view, or the
-home feed), each Orbiter has its **own** sensor toggles, per dimension, exactly as above. Turning X
+When more than one Orbiter is open on the desktop, each Orbiter has its **own** sensor toggles, per dimension, exactly as above. Turning X
 on for one Orbiter does not turn it on for the others.
 
 ### From the desktop

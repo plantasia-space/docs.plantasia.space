@@ -33,11 +33,6 @@ Esta comunidad reúne conceptos y herramientas de ecología acústica, paisaje s
 El panel del Studio que muestra los controles de un módulo y su pantalla. Tiene varios tamaños; en el más pequeño algunas pantallas se ocultan y las perillas se quedan.
 
 
-### Cuadrícula de lanzamiento {#launch-grid}
-La cuadrícula que esperan los inicios, saltos y cambios de un Orbiter para caer en una línea de compás. Se elige junto a SYNC: **None**, 1 compás, 4 compases, etc.
-[Sync](/docs/orbiters/sync)
-
-
 ### Cuerpo {#body}
 Una de las tres partes de un Orbiter: el **Mundo**, la **Estrella** y la **Luna**. Cada una tiene su propio rack de módulos, en hasta tres dimensiones.
 
@@ -105,6 +100,11 @@ Depende de la relación entre quien escucha y el ambiente, y puede referirse tan
 
 ### Plantasia Space
 Plantasia Space es una plataforma diseñada para música regenerativa — sonidos publicados con la intención de que el público pueda escucharlos, recrearlos y transformarlos en nuevas formas. Dentro de Plantasia Space podés publicar sonidos, colocarlos dentro de **mundos entrelazados** — representaciones artísticas de mundos físicos — y usar **orbiters** — naves que transforman el sonido de diferentes maneras — para explorar y regenerar esos sonidos, fomentando la interacción lúdica y la exploración sensorial saludable.
+
+
+### Rejilla de lanzamiento {#launch-grid}
+La rejilla que esperan los inicios, saltos y cambios de un Orbiter para caer en una línea de compás. Se elige junto a SYNC: **Ninguna**, 1 compás, 4 compases, etc.
+[Sync](/docs/orbiters/sync)
 
 
 ### Sala {#room}

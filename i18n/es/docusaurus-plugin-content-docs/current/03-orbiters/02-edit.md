@@ -8,8 +8,6 @@ sidebar_custom_props:
 
 Editar un Orbitador te permite perfeccionar un instrumento existente sin crear uno nuevo.
 
-### Video: Editar un Orbitador
-
 <video
   className="ps-doc-video"
   controls
@@ -18,28 +16,6 @@ Editar un Orbitador te permite perfeccionar un instrumento existente sin crear u
   <source src="https://herbarium.plantasia.space/docs/es/media/orbiters/05-edit-orbiter.mp4" type="video/mp4" />
   Tu navegador no soporta la etiqueta de video.
 </video>
-
-## Qué se puede editar
-
-Puedes actualizar un Orbitador incluso después de haberlo publicado. Es posible modificar:
-
-- Imagen del Orbitador
-- Nombre orbital (cuando las reglas lo permiten)
-- Audio y Mundo Entrelazado usados para la vista previa
-- Diseño del panel en cada dimensión
-- Mapeos del motor por dimensión
-- Configuración de colaboración y visibilidad
-
-## Tener en cuenta las dimensiones
-
-La mayoría de los parámetros del Orbitador son **específicos por dimensión**.
-
-Al editar, revisa siempre cada dimensión (1, 2 y 3) y asegúrate de que:
-
-- El estilo del panel sea correcto
-- Los mapeos del motor respondan como esperas
-
-Puedes usar copiar / pegar para replicar el estilo del panel, pero los ajustes del motor deben refinarse manualmente en cada dimensión.
 
 ## Mapear un control a un eje
 
@@ -67,18 +43,14 @@ Los botones de curva bajo cada lado dan forma al camino entre medias: **Linear**
   label="Se sube el eje X a media altura y se pulsan los botones de curva de equil a max: el knob de Amount salta a un valor nuevo con cada uno; luego X baja por debajo del reposo y se pulsan los de min a equil."
 />
 
-## Flujo de iteración
-
-Los Orbitadores están diseñados para iterarse.
-
-Puedes:
-
-- Probar cambios con diferentes Audios
-- Previsualizar el comportamiento en varios Mundos Entrelazados
-- Ajustar los mapeos de manera gradual
-
 ## Guardar y publicar cambios
 
-Guarda borradores mientras experimentas.
+Tus cambios se guardan solos. Un par de segundos después de que dejes de cambiar algo, el borrador del Orbitador se guarda por ti: no hay ningún botón de guardar que recordar.
 
-Publica los cambios cuando estés listo para que se apliquen al Orbitador público.
+El pequeño icono de disco en la parte superior de la página muestra por dónde va, y su punto cambia de color: cambios sin guardar, guardando, guardado o no se pudo guardar. Pasa el cursor por encima para leer el estado. También puedes pulsarlo para guardar al momento en vez de esperar.
+
+Guardar solo actualiza tu borrador. Quien escuche tu Orbitador sigue oyendo la versión que publicaste por última vez, así que puedes experimentar con libertad.
+
+Cuando quieras que tus cambios lleguen a todo el mundo, pulsa **Release Orbiter**. Ese paso siempre es tuyo.
+
+Las imágenes son la excepción: una portada que subes se aplica cuando la eliges, no con el guardado automático.

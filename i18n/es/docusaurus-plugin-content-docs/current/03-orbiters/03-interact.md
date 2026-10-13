@@ -8,9 +8,7 @@ sidebar_custom_props:
 
 ## Abrir un Orbitador
 
-Accede a los Orbitadores desde el **Audio** que estás escuchando.
-
-Dependiendo del contexto, el Orbitador puede abrirse incrustado en la página o en una pestaña independiente.
+Los Orbitadores se abren desde un **audio**: el Orbitador se abre sobre él, incrustado en la página o en una pestaña independiente.
 
 <video
   className="ps-doc-video"
@@ -21,15 +19,14 @@ Dependiendo del contexto, el Orbitador puede abrirse incrustado en la página o 
   Tu navegador no soporta la etiqueta de video.
 </video>
 
-## Comenzar por las dimensiones
+## Dimensiones
 
-Cada Orbitador incluye **tres dimensiones**.
+Cada Orbitador tiene hasta tres dimensiones, **I**, **II** y **III**. Cada una tiene sus propios módulos y
+su propio mapeo de X, Y y Z, así que los mismos ejes hacen cosas distintas en cada una. En un ordenador,
+las teclas **1**, **2** y **3** cambian entre ellas.
 
-Cada dimensión contiene un conjunto distinto de transformaciones diseñadas por la persona creadora del Orbitador.
-
-Los mismos controles **X, Y, Z** activan procesos diferentes en cada dimensión.
-
-En escritorio puedes cambiar de dimensión con las teclas **1 / 2 / 3**.
+El transporte, el loop y el volumen son comunes a las tres. Los ejes, el Cosmic LFO y los sensores
+pertenecen a la dimensión en la que estás.
 
 <video
   className="ps-doc-video"
@@ -62,23 +59,13 @@ Los loops se mantienen disponibles en todos los paneles.
 Define un loop de tres maneras: **arrastra** una región sobre la forma de onda, elige un **tamaño de
 loop** (1 compás, 4 compases…), o marca puntos de **IN** y **OUT** en el cabezal.
 
-- Los tamaños predefinidos crean el loop hacia delante desde el loop en el que estás — o **desde el
-  cabezal** cuando el loop está apagado o estás fuera de él.
-- **IN y OUT son independientes.** Con un loop ya definido, marcar un nuevo IN mueve el loop al
-  momento, conservando el OUT anterior. Un IN más allá del OUT actual borra el OUT: marca uno nuevo
-  cuando quieras. Un OUT antes del IN se ignora.
-- Un loop puede **apagarse conservando sus marcadores**: quedan inertes hasta que lo vuelvas a
-  activar.
+Un loop puede **apagarse y conserva sus marcadores**.
 
 
 ## Monitoreo
 
-Usa los monitores para saber qué está ocurriendo en tiempo real:
-
-- Monitor del motor (parámetros activos)
-- Información del Audio
-- Contexto del Mundo Entrelazado
-- Identidad del Orbiter
+Los monitores muestran lo que ocurre mientras tocas: qué controles mueve cada eje ahora mismo, el audio
+que suena, el Mundo Entrelazado en el que estás y el propio Orbitador.
 
 <video
   className="ps-doc-video"
@@ -121,6 +108,20 @@ El equilibrio suele representar un estado neutro o bypass.
   Tu navegador no soporta la etiqueta de video.
 </video>
 
+## Tocar notas
+
+Un Orbitador de notas se toca desde la <Term id="play-surface">superficie de juego</Term>, en el panel
+**Playback**:
+
+- **El piano roll** va primero: toca el instrumento de la dimensión en foco.
+- **Una pestaña por cada generador** de la cadena de esa dimensión: las teclas del Arpeggiator, los pasos
+  del Step sequencer, los pads del Drum sequencer.
+- **El selector de <Term id="launch-grid">rejilla de lanzamiento</Term>**, junto a SYNC, hace que los
+  arranques y los cambios caigan en una línea de compás.
+
+Mira [Efectos MIDI](/docs/orbiters/midi-effects) para los generadores y
+[Sincronización](/docs/orbiters/sync) para la rejilla de lanzamiento.
+
 ## Cosmic LFO
 
 Cada eje (X, Y, Z) tiene un Cosmic LFO independiente.
@@ -141,13 +142,3 @@ Algunas fuentes son manuales; otras dependen del Mundo Entrelazado y de los dato
   <source src="https://herbarium.plantasia.space/docs/en/media/orbiters/08-use-cosmic-lfo.mp4" type="video/mp4" />
   Tu navegador no soporta la etiqueta de video.
 </video>
-
-## Controles globales vs específicos
-
-Algunos controles son globales y se mantienen al cambiar de dimensión, como:
-
-- Transporte
-- Loop
-- Volumen
-
-La mayoría de los controles de interpretación son específicos por dimensión y cambian al cambiar de dimensión.

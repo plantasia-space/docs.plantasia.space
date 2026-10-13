@@ -56,13 +56,8 @@ The **BPM number on each Orbiter is that player's tempo**. What it means depends
 
 Each Orbiter has a **Warp** switch (on by default), in the Playback panel.
 
-Warp means **follow the tempo**: whichever tempo the player is on:
-
-- **Warp on**: the Orbiter **stretches to its tempo**: the shared one when synced, its **own BPM
-  number** when not. So even unsynced, the BPM number is a real speed control: turn it and the
-  audio follows.
-- **Warp off**: the Orbiter **plays at its natural recorded speed**, ignoring any tempo. Use this
-  when you want one sound to run free.
+Warp means **follow the tempo**: the shared one when synced, the Orbiter's own BPM number when not.
+With Warp off, the Orbiter plays at its natural recorded speed.
 
 | Your Orbiter | What you hear |
 |---|---|
@@ -93,24 +88,18 @@ Next to SYNC, each Orbiter has a **launch grid** picker (**None** by default). P
   countdown), an **unsynced** player (Warp on) starts right on its own nearest bar line.
 - **Moving the playhead while playing** doesn't jump immediately: it waits and lands on the next
   bar, so the groove never stumbles. The countdown shows when.
-- The grid is **per player**: each Orbiter keeps its own. To set several at once, **focus them
+- The grid is **per player**: each Orbiter keeps its own. To set several at once, **select them
   together** and pick a grid: every focused player adopts it.
 - Set it to **None** and everything is immediate again.
 
 ## Speed vs pitch
 
-The Orbiter's speed control can work in two ways, and the **monitor** shows which unit is active:
-
-- **Speed (%)**: changes the tempo as a straight percentage. +10% means 10% faster.
-- **Pitch (semitones, st)**: changes speed in **musical steps**, like transposing a note. Semitones move
-  the speed *more steeply* than a percentage, so a small move can change the BPM a lot (one octave up is
-  twice the speed).
-
-If a speed change feels bigger than you expected, check the monitor: you're likely in a **pitch**
-(semitone) mode rather than a **speed** (%) mode.
+The Orbiter's speed control works in **Speed (%)** or in **Pitch (semitones)**. Semitones move the
+speed more steeply than a percentage, so a small move can change the BPM a lot (one octave up is twice
+the speed). If a speed change feels bigger than you expected, you are likely in pitch mode.
 
 ## Same screen vs different people
 
 - **Same screen**: several Orbiters open together lock with no setup; just turn SYNC on.
-- **Different people / windows**: joining the same **room** lets everyone share one tempo across
+- **Different people / windows**: joining the same <Term id="room">room</Term> lets everyone share one tempo across
   devices. Turn SYNC on after joining and you adopt the room's tempo.

@@ -9,7 +9,7 @@ The **Lens** changes the lens the Orbiter is seen through. It draws nothing: it 
 field of view, and slides the picture to one side. Add it with **Visual module +** on any body; no
 sound module brings it.
 
-:::note[It arrives doing nothing]
+:::note[It loads doing nothing]
 
 With **Width** and **Shift** at 0 % the view is the Orbiter's own. Turn one of them, or map it to an
 <Term id="axis">axis</Term>, to see it.
@@ -22,7 +22,7 @@ With **Width** and **Shift** at 0 % the view is the Orbiter's own. Turn one of t
 |---|---|
 | **Width** | The field of view. Above 0 % the lens opens and the world pulls back into space; below 0 % it closes and the world looms. −100 … 100 %. |
 | **Shift** | Slides the picture to one side: above 0 % to the right, below 0 % to the left. −100 … 100 %. |
-| **Amount** | How far Width and Shift move the lens. 100 % as it arrives; at 0 % the view is the Orbiter's own. |
+| **Amount** | How far Width and Shift move the lens. 100 % as it loads; at 0 % the view is the Orbiter's own. |
 
 Sound input, Sensitivity and While stopped are the same as on every
 [visual module](/docs/orbiters/visual-modules). With Sensitivity up, the lens moves only as far as the

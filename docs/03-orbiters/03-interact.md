@@ -8,9 +8,7 @@ sidebar_custom_props:
 
 ## Opening an Orbiter
 
-Orbiters are accessed through **Audios**.
-
-An Orbiter can open embedded in the page or in a separate tab, depending on context.
+Orbiters open from an **audio**: the Orbiter opens over it, embedded in the page or in a separate tab.
 
 <video
   className="ps-doc-video"
@@ -21,15 +19,14 @@ An Orbiter can open embedded in the page or in a separate tab, depending on cont
   Your browser does not support the video tag.
 </video>
 
-## Start with dimensions
+## Dimensions
 
-Each Orbiter contains **three dimensions**.
+Each Orbiter has up to three dimensions, **I**, **II** and **III**. Each one has its own modules and its
+own mapping of X, Y and Z, so the same axes do different things in each. On a computer, the keys **1**,
+**2** and **3** switch between them.
 
-Dimensions are different sound-transformation setups designed by the Orbiter creator.
-
-The same **X, Y, Z** controls affect different processes in each dimension.
-
-On desktop, dimensions can usually be switched using **1 / 2 / 3**.
+Transport, loop and volume are shared by the three. The axes, the Cosmic LFO and the sensors belong to
+the dimension you are in.
 
 <video
   className="ps-doc-video"
@@ -61,23 +58,13 @@ Looping remains available across all panels.
 Set a loop three ways: **drag** a region on the waveform, pick a **loop size** (1 bar, 4 bars, …),
 or mark **IN** and **OUT** points at the playhead.
 
-- The size presets loop forward from the loop you're inside, or **from the playhead** when the
-  loop is off or you're outside it.
-- **IN and OUT are independent.** With a loop already set, marking a new IN moves the loop right
-  away, keeping the old OUT. An IN past the current OUT clears the OUT: mark a new one when you're
-  ready. An OUT before the IN is ignored.
-- A loop can be **switched off while keeping its markers**: they sit inert until you enable it
-  again.
+A loop can be **switched off and keeps its markers**.
 
 
 ## Monitoring
 
-Use the monitors to understand what is happening in real time:
-
-- Engine monitor (active parameters)
-- Audio information
-- Entangled World context
-- Orbiter identity
+The monitors show what is happening as you play: which controls each axis moves right now, the audio
+that plays, the Entangled World you are in and the Orbiter itself.
 
 <video
   className="ps-doc-video"
@@ -119,6 +106,19 @@ Equilibrium usually represents a bypass or neutral state.
   Your browser does not support the video tag.
 </video>
 
+## Playing notes
+
+A Notes Orbiter is played from the <Term id="play-surface">play surface</Term>, in the **Playback** panel:
+
+- **The piano roll** comes first: it plays the instrument of the dimension in focus.
+- **A tab for each generator** in that dimension's chain: the Arpeggiator's keys, the Step sequencer's
+  steps, the Drum sequencer's pads.
+- **The <Term id="launch-grid">launch grid</Term>** picker, next to SYNC, makes starts and switches land
+  on a bar line.
+
+See [MIDI effects](/docs/orbiters/midi-effects) for the generators and [Sync](/docs/orbiters/sync) for
+the launch grid.
+
 ## Cosmic LFO
 
 Each axis (X, Y, Z) has an independent Cosmic LFO.
@@ -140,14 +140,3 @@ Some sources are manual, others depend on the Entangled World and its exoplanet 
   Your browser does not support the video tag.
 </video>
 
-
-
-## Global vs dimension-specific controls
-
-Some controls are global across dimensions, such as:
-
-- Transport
-- Loop
-- Volume
-
-Most performance controls are dimension-specific and change when switching dimensions.

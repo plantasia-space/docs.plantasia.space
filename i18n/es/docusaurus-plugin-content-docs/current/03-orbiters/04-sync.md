@@ -39,7 +39,7 @@ Quién define el tempo sigue una regla simple:
 
 El **número de BPM de cada Orbitador es el tempo de ese reproductor**. Lo que significa depende de SYNC:
 
-- **Sincronizado**: el número **es el tempo compartido**, un único reloj maestro para todos. Cámbialo **de cualquier forma** — escribe un nuevo BPM, usa el control de velocidad en un Orbitador sincronizado o envía MIDI — y **todos los Orbitadores sincronizados lo siguen**.
+- **Sincronizado**: el número **es el tempo compartido**, un único reloj compartido para todos. Cámbialo **de cualquier forma** (escribe un nuevo BPM, usa el control de velocidad en un Orbitador sincronizado o envía MIDI) y **todos los Orbitadores sincronizados lo siguen**.
 - **No sincronizado**: el número es **el tempo propio de ese reproductor**. Cámbialo y solo ese Orbitador cambia de velocidad (con Warp activado lo oyes estirarse, como un fader de pitch); nunca mueve el tempo compartido ni a ningún otro reproductor.
 - El cambio **se mantiene**: un tempo solo se mueve cuando lo cambias deliberadamente. Cargar otro Orbitador en la sesión nunca cambia un tempo que ya está sonando.
 
@@ -47,10 +47,8 @@ El **número de BPM de cada Orbitador es el tempo de ese reproductor**. Lo que s
 
 Cada Orbitador tiene un interruptor **Warp** (activado por defecto) en el panel Playback.
 
-Warp significa **seguir el tempo**, sea cual sea el tempo en el que está el reproductor:
-
-- **Warp activado**: el Orbitador **se estira hasta su tempo**: el compartido cuando está sincronizado, su **propio número de BPM** cuando no. Así que incluso sin sincronizar, el número de BPM es un control de velocidad real: muévelo y el audio lo sigue.
-- **Warp desactivado**: el Orbitador **suena a su velocidad natural de grabación**, ignorando cualquier tempo. Úsalo cuando quieras que un sonido vaya libre.
+Warp significa **seguir el tempo**: el compartido cuando está sincronizado, el número de BPM propio del
+Orbitador cuando no. Con Warp desactivado, el Orbitador suena a su velocidad natural de grabación.
 
 | Tu Orbitador | Qué escuchas |
 |---|---|
@@ -74,23 +72,21 @@ Warp significa **seguir el tempo**, sea cual sea el tempo en el que está el rep
 
 ## Rejilla de lanzamiento: arranca y salta en el compás
 
-Junto a SYNC, cada Orbitador tiene un selector de **rejilla de lanzamiento** (**Ninguna** por defecto). Elige una rejilla — 1 compás, 4 compases… — y los arranques y saltos de ese reproductor caen **en el pulso**:
+Junto a SYNC, cada Orbitador tiene un selector de **rejilla de lanzamiento** (**Ninguna** por defecto). Elige una rejilla (1 compás, 4 compases…) y los arranques y saltos de ese reproductor caen **en el pulso**:
 
 - **Play** entra en una línea de compás: un reproductor **sincronizado** espera al siguiente compás compartido (ves la cuenta atrás); uno **sin sincronizar** (con Warp activado) arranca justo en la línea de compás propia más cercana.
 - **Mover el cabezal mientras suena** no salta de inmediato: espera y aterriza en el siguiente compás, para que el groove nunca tropiece. La cuenta atrás muestra cuándo.
-- La rejilla es **por reproductor**: cada Orbitador conserva la suya. Para ajustar varias a la vez, **enfócalos juntos** y elige una rejilla: todos los reproductores enfocados la adoptan.
+- La rejilla es **por reproductor**: cada Orbitador conserva la suya. Para ajustar varias a la vez, **selecciónalos juntos** y elige una rejilla: todos los reproductores enfocados la adoptan.
 - Ponla en **Ninguna** y todo vuelve a ser inmediato.
 
 ## Velocidad vs tono
 
-El control de velocidad del Orbitador puede funcionar de dos maneras, y el **monitor** muestra qué unidad está activa:
-
-- **Velocidad (%)**: cambia el tempo como un porcentaje directo. +10% significa 10% más rápido.
-- **Tono (semitonos, st)**: cambia la velocidad en **pasos musicales**, como transportar una nota. Los semitonos mueven la velocidad *más intensamente* que un porcentaje, así que un pequeño movimiento puede cambiar mucho el BPM (una octava arriba es el doble de velocidad).
-
-Si un cambio de velocidad se siente mayor de lo esperado, revisa el monitor: probablemente estás en modo **tono** (semitonos) en vez de modo **velocidad** (%).
+El control de velocidad del Orbitador funciona en **Velocidad (%)** o en **Tono (semitonos)**. Los
+semitonos mueven la velocidad más que un porcentaje, así que un pequeño movimiento puede cambiar mucho
+el BPM (una octava arriba es el doble de velocidad). Si un cambio de velocidad se siente mayor de lo
+esperado, probablemente estás en modo tono.
 
 ## Misma pantalla vs distintas personas
 
 - **Misma pantalla**: varios Orbitadores abiertos juntos se fijan sin configuración; solo activa SYNC.
-- **Distintas personas / ventanas**: unirse a la misma **sala** permite que todos compartan un tempo entre dispositivos. Activa SYNC después de unirte y adoptas el tempo de la sala.
+- **Distintas personas / ventanas**: unirse a la misma <Term id="room">sala</Term> permite que todos compartan un tempo entre dispositivos. Activa SYNC después de unirte y adoptas el tempo de la sala.

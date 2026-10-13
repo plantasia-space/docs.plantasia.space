@@ -8,8 +8,6 @@ sidebar_custom_props:
 
 Editing an Orbiter allows you to refine an existing instrument without creating a new one.
 
-### Video: Editing an Orbiter
-
 <video
   className="ps-doc-video"
   controls
@@ -18,28 +16,6 @@ Editing an Orbiter allows you to refine an existing instrument without creating 
   <source src="https://herbarium.plantasia.space/docs/en/media/orbiters/05-edit-orbiter.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-
-## What can be edited
-
-An Orbiter can be updated after release. You can edit:
-
-- Orbiter image
-- Orbital name (where allowed)
-- Preview Audio and Entangled World (for testing)
-- Panel design per dimension
-- Engine mappings per dimension
-- Collaboration and visibility settings
-
-## Dimension awareness
-
-Most Orbiter parameters are **dimension-specific**.
-
-When editing, always check each dimension (1, 2, and 3) and verify:
-
-- Panel styling is correct
-- Engine mappings behave as expected
-
-Copy / paste can be used for panel styling, but engine settings must be adjusted per dimension.
 
 ## Map a control to an axis
 
@@ -66,16 +42,6 @@ The curve buttons under each side shape the way between: **Linear**, **Exponenti
   caption="X held halfway up: the equil → max curve moves Amount from 20 % (Linear) to 6 % (Exponential) and 37 % (Logarithmic). Then the same below rest, with min → equil."
   label="The X axis is moved halfway up, then the equil to max curve buttons are pressed and the Amount knob jumps to a new value for each; X is moved below rest and the min to equil curve buttons are pressed."
 />
-
-## Iteration workflow
-
-Orbiters are designed to be iterated.
-
-You can:
-
-- Test changes with different Audios
-- Preview behavior in different Entangled Worlds
-- Refine mappings gradually
 
 ## Saving and publishing changes
 
