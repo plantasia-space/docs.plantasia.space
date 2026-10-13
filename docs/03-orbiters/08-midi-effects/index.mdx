@@ -15,6 +15,16 @@ import { Activity, Dices, Grid3x3, Piano, Repeat, Ruler, Signal, KeyboardMusic, 
 it plays: which notes, when, and how hard. They belong to a Notes Orbiter (an Orbiter that plays notes with a synth or the Sampler, not an
 audio).
 
+<IsoFigure name="orbiters/midi-effects" label="A length of the Orbiter's rack with a pin drum, a box with a grid of notes and a box with a keyboard. A note leaves the drum, moves to another row on the grid, and a key plays it.">
+  Move over the rack to follow one note.
+</IsoFigure>
+
+| On the rack | In an Orbiter |
+|---|---|
+| **The pin drum**, turning by itself | a generator: it makes notes on its own, so it leads the chain |
+| **The box with the grid** | a MIDI effect: the note comes in on one row and leaves on another |
+| **The box with a keyboard** | the instrument, which plays what reaches it |
+
 <SignalChain
   highlight={['generator', 'midi']}
   caption="Generators make notes; MIDI effects reshape them; the instrument plays the result."

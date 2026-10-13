@@ -11,6 +11,22 @@ would otherwise move on screen, so everything you know about dimensions, Cosmic 
 still applies. This page covers what is the same everywhere first, then the cases where you play
 several Orbiters at once.
 
+<IsoFigure name="orbiters/sensors" label="A phone held on a stand over a hull deck, beside three knobs for X, Y and Z. Each way of tilting the phone turns its own knob.">
+  Move over the phone to tip it and roll it.
+</IsoFigure>
+
+| On the deck | In Sensors |
+|---|---|
+| **The phone** on its stand | your phone, held the way you play |
+| **Turning it**, like a wheel | turns **X**, the first knob |
+| **Tipping it** front to back | turns **Y**, the second knob |
+| **Rolling it** to one side | turns **Z**, the third knob |
+| **A needle straight up**, at 0° | the equilibrium: where the phone was when you calibrated |
+| **The button** on the deck | **Calibrate** |
+
+A knob reaches its end, −180° or 180°, when the phone is tilted about 90° away from that centre. Tilt two
+ways at once and the knobs lean on each other a little: tipping and rolling together also moves X.
+
 ## Turning a sensor on
 
 Open the **Sensors** panel. It has one toggle per axis: **X**, **Y** and **Z**. Turn on the axes you

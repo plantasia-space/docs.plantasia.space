@@ -49,6 +49,23 @@ The checks need Node 20.10+ and Chrome. Previews and shots are not committed (`f
 | Figure | Page | What moves |
 |---|---|---|
 | `orbiter-lens` | Visual modules, Lens | the lens barrel (Width), the cross-slide (Shift); the viewfinder shows the World |
+| `orbiter-saucer` | Orbiters overview | a light on each of the ring's three tracks (X, Y, Z), one lap for the axis's full turn |
+| `orbiter-console` | Interact | the three knobs (X, Y, Z), the World on the screen, and the marker on the effect each knob is mapped to |
+| `module-families` (three figures) | Instruments, Audio effects, MIDI effects overviews | a place along the rack: which instrument plays, the sound passing three effects, a note going from generator to effect to instrument |
+| `orbiter-sensors` | Sensors | the phone on its ball joint (turn, tip, roll) and the three knobs it turns |
+
+## Shared marks
+
+- **X, Y and Z are three knobs in a row, drawn as the app draws them** (`src/shared/knob.mjs`): a disc that
+  fills from 6 o'clock to the needle, under a fixed rose of eight points, −180° to 180°, resting at 0°.
+  Bruna, 13 Oct 2026: knobs, not sliders. Read them out in degrees with the module's `axesReadout`.
+- **The screen matters**: an Orbiter is drawn as a part of its craft with a screen on it (the console),
+  after the Orbiter controller Bruna is designing.
+- **A hexagon is an axis's toggle**, never the axis.
+- **A module is a box standing in the rack**, with what it does drawn on its lid (reels for an audio,
+  keys for notes).
+- **A part that turns in space** (the Sensors phone) is rebuilt by the page each frame: the build script's
+  `prism()` draws a box on any plane with the kit's own tones. Copy it from `orbiter-sensors`.
 
 ## To polish next
 
@@ -62,5 +79,10 @@ The checks need Node 20.10+ and Chrome. Previews and shots are not committed (`f
   site sets no Content-Security-Policy), to revisit if one is added.
 - The Lens figure shows the mid and high graphics presets' swing (20°, 14°, 12 %); the low preset's is
   smaller (14°, 10°, 8 %), which is why the page says "up to".
+- The figures' page code (`mount`: the tour, the pointer, the keys, the cleanup) is written out in each
+  build script. One shared source in `src/shared/` would cover them all, the Lens included.
+- While a figure's tour runs, its `aria-valuenow` and `aria-valuetext` are not kept up to date.
+- The Sensors figure rests the phone upright and reads turn, tip and roll from there. The app's own
+  reading away from a flat calibration has not been checked on a phone.
 - Upstream's 4x close-up pass and its geometry audit have not been run on our figures.
 - `kit/` still carries upstream's React and 3D parts, which we do not use yet.

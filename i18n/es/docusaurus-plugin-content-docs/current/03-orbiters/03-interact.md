@@ -6,6 +6,21 @@ sidebar_custom_props:
   icon: Power
 ---
 
+<IsoFigure name="orbiters/console" label="La consola de un Orbitador: una pantalla con el Mundo, su anillo y su Luna, tres perillas en fila para X, Y y Z con un interruptor delante de cada una, un rack con el instrumento y tres efectos, y tres teclas para las dimensiones.">
+  Pasa por encima de la consola: a lo ancho gira X, arriba y abajo gira Y.
+</IsoFigure>
+
+Piensa en lo que tocas como la consola de la nave del Orbitador:
+
+| En la consola | En un Orbitador |
+|---|---|
+| **La pantalla** | lo que ves mientras tocas: el Mundo gira cuando giras los ejes |
+| **Las tres perillas** en fila | los ejes X, Y y Z, de izquierda a derecha. Cada una gira de −180° a 180° y descansa en 0° |
+| **El hexágono** delante de cada perilla | el interruptor de ese eje |
+| **La caja alta con dos carretes**, la primera del rack | el instrumento |
+| **Las tres cajas que la siguen** | los efectos, en el orden en que el sonido pasa por ellos. El marcador de cada una sigue a la perilla a la que está mapeada |
+| **Las tres teclas** | las dimensiones I, II y III |
+
 ## Abrir un Orbitador
 
 Los Orbitadores se abren desde un **audio**: pulsa el botón **On/Off** del Orbitador en el audio y el Orbitador se abre sobre él, incrustado en la página o en una pestaña independiente. Púlsalo otra vez para cerrarlo.

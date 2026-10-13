@@ -6,6 +6,21 @@ sidebar_custom_props:
   icon: Power
 ---
 
+<IsoFigure name="orbiters/console" label="An Orbiter's console: a screen with the World, its ring and its Moon, three knobs in a row for X, Y and Z with a toggle in front of each, a rack with the instrument and three effects, and three keys for the dimensions.">
+  Move over the console: across turns X, up and down turns Y.
+</IsoFigure>
+
+Think of what you play as the console of the Orbiter's craft:
+
+| On the console | In an Orbiter |
+|---|---|
+| **The screen** | what you see while you play: the World turns as you turn the axes |
+| **The three knobs** in a row | the axes X, Y and Z, from left to right. Each turns from −180° to 180° and rests at 0° |
+| **The hexagon** in front of each knob | that axis's toggle |
+| **The tall box with two reels**, first in the rack | the instrument |
+| **The three boxes after it** | the effects, in the order the sound passes through them. The marker on each one follows the knob it is mapped to |
+| **The three keys** | the dimensions I, II and III |
+
 ## Opening an Orbiter
 
 Orbiters open from an **audio**: press the Orbiter's **On/Off** button on the audio, and the Orbiter opens over it, embedded in the page or in a separate tab. Press it again to close it.
