@@ -126,9 +126,9 @@ export function stage(width, height, extremes, fit = {}) {
 
   // ---- a listener: headphones on a stand, one part so it can come and go
   T.listener = (x, y, z = 0, name = "listener", { h = 22 } = {}) => {
-    const hang = z + h, half = 6.5;
-    const band = Array.from({ length: 13 }, (_, i) => [x + RIGHT[0] * half * Math.cos((i / 12) * Math.PI), y + RIGHT[1] * half * Math.cos((i / 12) * Math.PI), hang - 6 + 6.5 * Math.sin((i / 12) * Math.PI)]);
-    const cup = (s) => { const F = G.frameAlong([x + RIGHT[0] * s * half, y + RIGHT[1] * s * half, hang - 8], [RIGHT[0] * s, RIGHT[1] * s, 0]); return S(G.disc(-1, 2, 3.8, F, P), { tone: "hi", crease: "lo", inner: L(G.arcOf(F, 0.4, 3.8, P), { tone: "faint" }) }); };
+    const hang = z + h, half = 6.5, AX = [1, 0, 0];
+    const band = Array.from({ length: 13 }, (_, i) => [x + AX[0] * half * Math.cos((i / 12) * Math.PI), y + AX[1] * half * Math.cos((i / 12) * Math.PI), hang - 6 + 6.5 * Math.sin((i / 12) * Math.PI)]);
+    const cup = (s) => { const F = G.frameAlong([x + AX[0] * s * half, y + AX[1] * s * half, hang - 8], [AX[0] * s, AX[1] * s, 0]); return S(G.disc(-1, 2, 3.8, F, P), { tone: "hi", crease: "lo", inner: L(G.arcOf(F, 0.4, 3.8, P), { tone: "faint" }) }); };
     const stand = S(k.cylinder(x, y, 2.6, z, 1.2, P, 14), { tone: "lo" }) + S(k.cylinder(x, y, 0.8, z + 1.2, h - 1, P, 8), { tone: "mid", crease: "none" });
     put([x, y, z], `${stand}${cup(-1)}${T.tubeStr(band, 0.75, { tone: "hi" })}${cup(1)}`, 0.2, { part: name });
   };
