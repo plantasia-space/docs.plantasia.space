@@ -21,7 +21,7 @@ You meet it in two places, which always show the same state:
   src="/img/orbiters/midi-effects/drum-sequencer.jpg"
   wide
   alt="The Drum sequencer in Sound, on an Analog drum synth: the real-time FX ribbons on the left, the pad function, pad options and Edit rows above the 16 pads, then the screen, its knobs and Generate on the right."
-  dots={[[1, 39.5, 74.7], [2, 11.6, 20.7], [3, 83.6, 14.8], [4, 69.5, 44.6], [5, 3.4, 56.7], [6, 38.7, 28.5], [7, 52, 28.5], [8, 78, 76.5], [9, 11.6, 38.6], [10, 5.9, 97]]}
+  dots={[[1, 66.6, 74.7], [2, 11.6, 20.7], [3, 83.6, 14.8], [4, 69.5, 44.6], [5, 3.4, 56.7], [6, 38.7, 28.5], [7, 52, 28.5], [8, 78, 76.5], [9, 11.6, 38.6], [10, 5.9, 97]]}
 />
 
 ## Pad functions

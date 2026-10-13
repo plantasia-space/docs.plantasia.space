@@ -1,6 +1,6 @@
 ---
 title: Channel
-sidebar_position: 14
+sidebar_position: 30
 sidebar_custom_props:
   icon: SlidersVertical
 ---

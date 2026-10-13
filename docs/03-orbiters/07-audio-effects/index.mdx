@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal, SlidersVertical } from 'lucide-react';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal, SlidersVertical, Funnel, Blend, ChartSpline, Gauge, Flame, Binary } from 'lucide-react';
 
 An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
 it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
@@ -72,6 +72,12 @@ Most effects come as a pair:
 | [Vibrato](/docs/orbiters/audio-effects/vibrato) | Vibrato | — | insert, Moon too |
 | [Stereo widener](/docs/orbiters/audio-effects/stereo-widener) | Stereo widener | — | insert, Moon too |
 | [Utility](/docs/orbiters/audio-effects/utility) | Utility | — | insert |
+| [Filters](/docs/orbiters/audio-effects/filters) | Filters | — | insert |
+| [Multimode filter](/docs/orbiters/audio-effects/multimode-filter) | Multimode filter | — | insert |
+| [Parametric EQ](/docs/orbiters/audio-effects/parametric-eq) | Parametric EQ | — | insert |
+| [Compressor](/docs/orbiters/audio-effects/compressor) | Compressor | One Compressor | insert |
+| [Saturator](/docs/orbiters/audio-effects/saturator) | Saturator | One Saturator | insert |
+| [Bitcrusher](/docs/orbiters/audio-effects/bitcrusher) | Bitcrusher | — | insert |
 | [Channel](/docs/orbiters/audio-effects/channel) | World channel, Moon channel | — | always last on each World and Moon dimension |
 
 :::tip[How effects load]
@@ -96,5 +102,11 @@ On a World, the Reverb, the Delay, the Chorus, the Flanger, the Phaser and the F
   <NavigationCard href="/docs/orbiters/audio-effects/vibrato" label="Vibrato" icon={<AudioWaveform />} description="The pitch wavers above and below the note: a singer's vibrato, a warble, a tape wow." />
   <NavigationCard href="/docs/orbiters/audio-effects/stereo-widener" label="Stereo widener" icon={<UnfoldHorizontal />} description="Wider or narrower at the same loudness, a mono sound opened into stereo, the bass kept in the middle." />
   <NavigationCard href="/docs/orbiters/audio-effects/utility" label="Utility" icon={<SlidersHorizontal />} description="Polarity, one channel or swapped, width, mono and Mid/Side, bass kept in the middle, balance, gain, mute and DC: plain arithmetic, nothing coloured." />
+  <NavigationCard href="/docs/orbiters/audio-effects/filters" label="Filters" icon={<Funnel />} description="One knob: a low-pass one way, a high-pass the other, the dry sound in the middle." />
+  <NavigationCard href="/docs/orbiters/audio-effects/multimode-filter" label="Multimode filter" icon={<Blend />} description="A synth's filter for any sound: four types, a ladder model, moved by an LFO or by the sound's own level." />
+  <NavigationCard href="/docs/orbiters/audio-effects/parametric-eq" label="Parametric EQ" icon={<ChartSpline />} description="Eight bands to shape the tone: cuts, shelves, bells and notches." />
+  <NavigationCard href="/docs/orbiters/audio-effects/compressor" label="Compressor" icon={<Gauge />} description="Even out the level: punch on drums, glue on a mix, parallel compression." />
+  <NavigationCard href="/docs/orbiters/audio-effects/saturator" label="Saturator" icon={<Flame />} description="Warmth, then grit: three curves, with the level held." />
+  <NavigationCard href="/docs/orbiters/audio-effects/bitcrusher" label="Bitcrusher" icon={<Binary />} description="Fewer bits and fewer samples, with a ceiling that clips, folds or wraps." />
   <NavigationCard href="/docs/orbiters/audio-effects/channel" label="Channel" icon={<SlidersVertical />} description="Each dimension's level, solo and sends to the Moon (World channel), or level, pan and solo (Moon channel), and the Star's Main mix." />
 </NavigationGrid>

@@ -20,7 +20,7 @@ sequencer in front plays the kit with no setup.
   src="/img/orbiters/instruments/analog-drum-synth.jpg"
   wide
   alt="The Analog drum synth with the kick selected and the Sound tab open: the sixteen pads on the left, the Kit and Sound tabs, then Osc, Noise · pitch, Filter and Amp, with Choke at the end."
-  dots={[[1, 11.5, 54.1], [2, 23.2, 13.7], [3, 28.3, 13.7], [4, 28, 22.8], [5, 49.5, 22.8], [6, 58, 22.8], [7, 81.5, 22.8], [8, 96.8, 72.5]]}
+  dots={[[1, 11.5, 54.1], [2, 23.2, 13.7], [3, 28.3, 13.7], [4, 29.8, 22.8], [5, 49.5, 22.8], [6, 58, 22.8], [7, 81.5, 22.8], [8, 93.4, 81]]}
 />
 
 The panel has two parts: the <Dot>1</Dot>**pads** on the left, and one block with two tabs, <Dot>2</Dot>**Kit** and
