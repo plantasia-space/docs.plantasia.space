@@ -51,7 +51,7 @@ function room({ name, WIDTH, HEIGHT, R, seats, players, pad }) {
     });
     T.part("link" + i, "glow", { base: 0.35 });
     T.cable([x * 0.74, y * 0.74], [x * 0.2, y * 0.2]);
-    events.push({ track: "ring", at: when([x, y]), part: "lever" + i, dur: 1 }, { track: "ring", at: when([x, y]), part: "link" + i, dur: 1.6 }, { track: "ring", at: when([x, y]) + 0.2, part: "hub", dur: 0.7 });
+    events.push({ track: "ring", at: when([x, y]), part: "lever" + i, dur: 1, voice: "lever" }, { track: "ring", at: when([x, y]), part: "link" + i, dur: 1.6 }, { track: "ring", at: when([x, y]) + 0.2, part: "hub", dur: 0.7, voice: "pulse" });
     // the name goes under a player at the front, and over the Orbiter of the one at the back
     anchors["player" + i] = b < 0 ? T.anchor([x + 12, y + 12, 54 + ORBITERS[i] * 17 - 4]) : T.anchor([x + 14, y + 14, -8]);
   });
@@ -68,7 +68,7 @@ function room({ name, WIDTH, HEIGHT, R, seats, players, pad }) {
     // the pad is part of the listener, so it comes and goes with it
     const item = T.items[T.items.length - 1], [sx, sy] = T.at([x, y, 12]);
     item.svg = `${item.svg.slice(0, item.svg.lastIndexOf("</g>"))}<circle class="lf-pad" cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="${(13 * G.scaleOf(T.P)).toFixed(1)}"/></g>`;
-    T.part("listener" + i, "visit", { period: Number(LISTENERS[i].period.toFixed(2)), phase: Number(LISTENERS[i].phase.toFixed(3)), stay: STAY });
+    T.part("listener" + i, "visit", { period: Number(LISTENERS[i].period.toFixed(2)), phase: Number(LISTENERS[i].phase.toFixed(3)), stay: STAY, voice: "breath" });
   });
 
   return { name, width: WIDTH, height: HEIGHT, T, data: { rest: REST, tracks, movers, links: [], events, spin: [], anchors } };

@@ -1,7 +1,8 @@
-// The page's side of a landing figure (PLA-523): it only moves what the build drew, and reports taps.
+// The page's side of a landing figure (PLA-523): it only moves what the build drew, and reports taps and events.
 // One copy serves every figure: `mount(root, scene, hooks)`, with `scene` the figure's own <name>.json.
 // It is the home machine's script (figures/src/home-machine/build.mjs) without its sound: the page
-// that shows the figure owns the sound, and plays it from `hooks.tap`.
+// that shows the figure owns the sound. It plays taps from `hooks.tap`, and the machines' answers
+// from `hooks.event` (an event that carries a `voice`, reported once as it starts).
 function linkEnds(link, p) {
   const from = [p[0] + link.off[0], p[1] + link.off[1], p[2] + link.off[2]];
   const c = link.ball, d = [from[0] - c[0], from[1] - c[1], from[2] - c[2]], n = Math.hypot(d[0], d[1], d[2]) || 1;
@@ -46,6 +47,13 @@ export function mount(root, SCENE, hooks = {}) {
     while (lo < hi) { const mid = (lo + hi) >> 1; if (fixed[mid].k <= key) lo = mid + 1; else hi = mid; }
     if (lo !== m.slot) { m.slot = lo; layer.insertBefore(m.el, lo < fixed.length ? fixed[lo].el : null); }
   }
+  // ---- events: a part that answers a ball reports its voice; the page decides whether it sounds
+  const ringing = new Set();
+  let primed = false;
+  const view = svg.viewBox.baseVal;
+  // where across the figure (0..1), for the sound's place between the ears
+  const report = (voice, step, x) => hooks.event?.({ voice, ...(step === undefined ? null : { step }), x: Math.max(0, Math.min(1, (x - view.x) / Math.max(1, view.width))) });
+  const middleOf = (el) => { const b = el.getBBox(); return b.x + b.width / 2; };
   // a tap sets its part off once more: name -> the second it was tapped
   const kicks = {};
   let present = -1;
@@ -60,15 +68,19 @@ export function mount(root, SCENE, hooks = {}) {
       write(l.el, "d", "M" + n1(a[0] - m.shift[0]) + " " + n1(a[1] - m.shift[1]) + "L" + n1(b[0] - m.shift[0]) + " " + n1(b[1] - m.shift[1]));
     }
     for (const p of parts) p.level = 0;
-    for (const e of SCENE.events) {
+    SCENE.events.forEach((e, index) => {
       const track = SCENE.tracks[e.track], p = levelOf[e.part];
-      if (!p) continue;
+      // an event with no part only sounds (the seed rolling down the shell)
+      if (!p && !e.voice) return;
       for (const m of movers) {
         if (m.track !== e.track) continue;
-        const since = ((((t + m.offset - e.at) % track.period) + track.period) % track.period) / e.dur;
-        if (since < 1) p.level = Math.max(p.level, Math.sin(Math.PI * since) * (1 - 0.5 * since));
+        const since = ((((t + m.offset - e.at) % track.period) + track.period) % track.period) / e.dur, id = index + m.name;
+        if (since >= 1) { ringing.delete(id); continue; }
+        if (p) p.level = Math.max(p.level, Math.sin(Math.PI * since) * (1 - 0.5 * since));
+        // it is reported once, as it starts (and not for what was already under way on the first frame)
+        if (!ringing.has(id)) { ringing.add(id); if (e.voice && primed) report(e.voice, e.step, iso(m.at)[0]); }
       }
-    }
+    });
     for (const name in kicks) {
       const p = levelOf[name], since = (t - kicks[name]) / KICK_SECONDS;
       if (since >= 1) { delete kicks[name]; continue; }
@@ -88,8 +100,12 @@ export function mount(root, SCENE, hooks = {}) {
         write(p.el, "opacity", there.toFixed(2));
         write(p.el, "pointer-events", there > 0.3 ? "auto" : "none");
         if (there > 0.5) here += 1;
+        // someone arriving is an event too, when the part has a voice
+        if (p.voice && there > 0.5 && !p.there && primed) report(p.voice, undefined, p.cx ??= middleOf(p.el));
+        p.there = there > 0.5;
       }
     }
+    primed = true;
     if (here !== present) { present = here; hooks.count?.(here); }
     for (const s of spin) {
       const show = Math.floor((((t / s.period) % 1) + 1) % 1 * s.frames.length);

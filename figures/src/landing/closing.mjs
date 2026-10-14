@@ -40,7 +40,7 @@ function world({ name, WIDTH, HEIGHT, R, WR }) {
   // a perch on the left, for the hawk that watches (the page lays it there)
   const h = uv(-R * 0.74, -R * 0.12);
   const anchors = { sticker: T.anchor(T.perch(h[0], h[1], 0, { h: WR * 1.05, half: WR * 0.42 })) };
-  const events = [{ track: "near", at: 0, part: "bloom", dur: 2.2 }, { track: "far", at: 0, part: "beam", dur: 2 }];
+  const events = [{ track: "near", at: 0, part: "bloom", dur: 2.2, voice: "bloom" }, { track: "far", at: 0, part: "beam", dur: 2, voice: "swell" }];
   const spin = [{ part: "gearA", period: 1.6 }, { part: "gearB", period: 1.6 }];
   return { name, width: WIDTH, height: HEIGHT, T, data: { rest: REST, tracks, movers, links, events, spin, anchors, elseTap: "gong" } };
 }

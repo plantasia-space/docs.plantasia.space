@@ -43,7 +43,7 @@ function rowOrbiter() {
   T.rails([...ring, ring[0]], { max: 12 });
   ring.forEach((p, i) => { if (i % 12 === 0) T.post(p[0], p[1], 0, 11.4, 0.9, "lo"); });
   lap(T, ring.map(([x, y, z]) => [x, y, z + 3.6]), "ball", 7, 2, data.rest, data);
-  data.events.push({ track: "ball", at: 0, part: "beam", dur: 1.6 });
+  data.events.push({ track: "ball", at: 0, part: "beam", dur: 1.6, voice: "swell" });
   return { name: "row-i", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[0] } };
 }
 
@@ -63,7 +63,7 @@ function rowTrack() {
   for (let i = 0; i < Math.round((1 / HOP) * 12); i++) pts.push(to);
   lap(T, pts, "ball", period, 1, data.rest, data, { fade: [0.25, period - 1.1, period - 0.8] });
   const unit = period / pts.length;
-  tops.forEach((_, i) => data.events.push({ track: "ball", at: (i + 1) * 12 * unit, part: "bar" + i, dur: 0.6 }));
+  tops.forEach((_, i) => data.events.push({ track: "ball", at: (i + 1) * 12 * unit, part: "bar" + i, dur: 0.6, voice: "bar", step: i }));
   return { name: "row-ii", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[1] } };
 }
 
@@ -81,7 +81,7 @@ function rowRelease() {
   const way = [...chute.map(([x, y, z]) => [x, y, z + 3.6]), [soil[0] - 2, soil[1], soil[2] + 2]];
   const pts = [...way, ...Array.from({ length: 10 }, () => way[way.length - 1])];
   lap(T, pts, "ball", 4.2, 1, data.rest, data, { fade: [0.3, 3.1, 3.5] });
-  data.events.push({ track: "ball", at: 2.6, part: "sprout", dur: 1.4 });
+  data.events.push({ track: "ball", at: 2.6, part: "sprout", dur: 1.4, voice: "grow" });
   return { name: "row-iii", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[2] } };
 }
 
@@ -127,7 +127,7 @@ function rowInstrument() {
   // an unseen mover carries the round's clock
   T.put([0, 0, 0], "<g></g>", -4000, { mover: "clock" });
   data.movers.push({ name: "clock", track: "round", offset: 0, rest: ring[0], bias: -4000 });
-  data.events.push({ track: "round", at: 0.4, part: "lever", dur: 1 }, { track: "round", at: 4.9, part: "lever", dur: 1 });
+  data.events.push({ track: "round", at: 0.4, part: "lever", dur: 1, voice: "lever" }, { track: "round", at: 4.9, part: "lever", dur: 1, voice: "lever" });
   return { name: "row-v", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[4] } };
 }
 
@@ -143,7 +143,7 @@ function stepMeet() {
   T.rails([...ring, ring[0]], { max: 12 });
   ring.forEach((p, i) => { if (i % 15 === 0) T.post(p[0], p[1], 0, 10.4, 0.9, "lo"); });
   lap(T, ring.map(([x, y, z]) => [x, y, z + 3.6]), "ball", 6, 3, data.rest, data);
-  data.events.push({ track: "ball", at: 0, part: "bloom", dur: 1.4 });
+  data.events.push({ track: "ball", at: 0, part: "bloom", dur: 1.4, voice: "bloom" });
   return { name: "step-meet", width: SW, height: SH, T, data: { ...data, elseTap: "bloom" } };
 }
 // Jam: three sprouts, an Audio passed from one to the next
@@ -157,7 +157,7 @@ function stepJam() {
   const pts = [];
   [0, 1, 2].forEach((i) => { const a = tips[i], b = tips[(i + 1) % 3]; for (let j = 0; j < 20; j++) { const u = j / 20; pts.push([a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u + 28 * u * (1 - u)]); } });
   lap(T, pts, "ball", 4.5, 1, data.rest, data);
-  [0, 1, 2].forEach((i) => data.events.push({ track: "ball", at: i * 1.5, part: "sprout" + i, dur: 1.1 }));
+  [0, 1, 2].forEach((i) => data.events.push({ track: "ball", at: i * 1.5, part: "sprout" + i, dur: 1.1, voice: "grow" }));
   return { name: "step-jam", width: SW, height: SH, T, data: { ...data, elseTap: "root" } };
 }
 // Play live: the Orbiter on its stage, and the listeners in front of it
@@ -173,7 +173,7 @@ function stepLive() {
   data.tracks.beat = { pts: flat([[0, 0, 0], [0, 0, 0]]), period: 3, closed: true };
   T.put([0, 0, 0], "<g></g>", -4000, { mover: "clock" });
   data.movers.push({ name: "clock", track: "beat", offset: 0, rest: [0, 0, 0], bias: -4000 });
-  data.events.push({ track: "beat", at: 0, part: "beam", dur: 1.4 });
+  data.events.push({ track: "beat", at: 0, part: "beam", dur: 1.4, voice: "swell" });
   return { name: "step-live", width: SW, height: SH, T, data: { ...data, elseTap: "glass" } };
 }
 
@@ -198,7 +198,8 @@ function bed({ name, WIDTH, HEIGHT, half, n }) {
     if (i === Math.floor(n / 2)) T.tapped({ tap: SPROUT_TAPS[(i + 1) % 4], kick: "bloom", pad: [[x, y, 60], 14] }, () => T.orchid(x, y, 0, { size: 1.7 }));
     else T.tapped({ tap: SPROUT_TAPS[(i + 1) % 4], kick: "sprout" + i, pad: [[x, y, 18 * size], 11] }, () => T.sprout(x, y, 0, { size, name: "sprout" + i }));
     const part = i === Math.floor(n / 2) ? "bloom" : "sprout" + i;
-    data.events.push({ track: "ball", at: u * period, part, dur: 1.2 }, { track: "ball", at: (2 - u) * period, part, dur: 1.2 });
+    const voice = part === "bloom" ? "bloom" : "grow";
+    data.events.push({ track: "ball", at: u * period, part, dur: 1.2, voice }, { track: "ball", at: (2 - u) * period, part, dur: 1.2, voice });
   }
   return { name, width: WIDTH, height: HEIGHT, T, data };
 }

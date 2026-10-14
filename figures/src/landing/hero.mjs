@@ -53,7 +53,8 @@ export function hero() {
   }
   const events = [];
   const when = (p) => nearest(loop, p) * LAP;
-  const sets = (p, part, dur = 1.2, delay = 0) => events.push({ track: "loop", at: when(p) + delay, part, dur });
+  // `sound`: the voice the part answers the ball with (and a bar's place in its row), for the page to play
+  const sets = (p, part, dur = 1.2, delay = 0, sound) => events.push({ track: "loop", at: when(p) + delay, part, dur, ...sound });
 
   // ---- the centre deck: the sprouts round the tree, each with the flag a ball flicks
   const SPROUTS = [[-64, 70, 0.95], [-24, 79, 0.8], [26, 79, 1.05], [66, 70, 0.85], [-46, -72, 1], [44, -73, 0.9]];
@@ -62,9 +63,9 @@ export function hero() {
     T.tapped({ tap: SPROUT_TAPS[i % 4], kick: "sprout" + i, pad: [[p[0], p[1], 20 * size], 13] }, () => T.sprout(p[0], p[1], 0, { size, name: "sprout" + i }));
     const over = loop[Math.round(nearest(loop, p) * N) % N];
     trigger(T, uv(a * 0.93, b * 0.82), [over[0], over[1]], TZ, "flag" + i);
-    events.push({ track: "loop", at: when(p), part: "flag" + i, dur: 0.9 }, { track: "loop", at: when(p) + 0.12, part: "sprout" + i, dur: 1.3 });
+    events.push({ track: "loop", at: when(p), part: "flag" + i, dur: 0.9, voice: "tick" }, { track: "loop", at: when(p) + 0.12, part: "sprout" + i, dur: 1.3, voice: "grow" });
   });
-  sets(uv(0, B), "bloom", 1.6);
+  sets(uv(0, B), "bloom", 1.6, 0, { voice: "bloom" });
   sets(uv(0, B), "invite", 2.2);
   [0, 1, 2, 3, 4].forEach((j) => sets(uv(0, -B), "tree" + j, 1.4, j * 0.09));
 
@@ -82,11 +83,11 @@ export function hero() {
   T.part("beam", "glow", { base: 0.45 });
   const barAt = uv(-SIDE - 14, 47);
   const tops = T.tapped({ tap: "stars", count: 5, kick: [0, 1, 2, 3, 4].map((i) => `bar${i}@${(i * 0.12).toFixed(2)}`).join(",") }, () => T.bars(barAt[0] - 14, barAt[1], 8, 5, { step: 9 }));
-  tops.forEach((_, i) => sets(barAt, "bar" + i, 0.6, i * 0.14));
+  tops.forEach((_, i) => sets(barAt, "bar" + i, 0.6, i * 0.14, { voice: "bar", step: i }));
   sets(barAt, "beam", 1.8);
   const bellA = uv(-SIDE - 54, -6);
   T.tapped({ tap: "bell", kick: "bellA", pad: [[bellA[0], bellA[1], 30], 10] }, () => T.bell(bellA[0], bellA[1], 0, { name: "bellA", shape: "gem" }));
-  sets(bellA, "bellA");
+  sets(bellA, "bellA", 1.2, 0, { voice: "bell" });
 
   // ---- the right deck: the shell, the gong, the other bell
   const shellAt = uv(SIDE - 10, 0);
@@ -96,12 +97,14 @@ export function hero() {
   const shellRest = trackAt(tracks.shell, REST);
   T.ball(shellRest, "seed", 2, 2.6);
   movers.push({ name: "seed", track: "shell", offset: 0, rest: shellRest, bias: 2 });
+  // the seed sets off down the shell: a falling run (no part moves for it)
+  events.push({ track: "shell", at: 0.6, dur: 1, voice: "spiral" });
   const gongAt = uv(SIDE + 50, 2);
   T.tapped({ tap: "gong", kick: "gong" }, () => T.gong(gongAt[0], gongAt[1], 0, { r: 10 }));
-  sets(gongAt, "gong", 2);
+  sets(gongAt, "gong", 2, 0, { voice: "gong" });
   const bellB = uv(SIDE + 6, 52);
   T.tapped({ tap: "bell", kick: "bellB", pad: [[bellB[0], bellB[1], 30], 10] }, () => T.bell(bellB[0], bellB[1], 0, { name: "bellB", h: 20 }));
-  sets(bellB, "bellB");
+  sets(bellB, "bellB", 1.2, 0, { voice: "bell" });
 
   const spin = [{ part: "gearA", period: ORBIT.period / 9 }, { part: "gearB", period: ORBIT.period / 9 }];
   return { name: "hero", width: WIDTH, height: HEIGHT, T, data: { rest: REST, tracks, movers, links, events, spin, anchors: { flower: T.anchor(tree.heart) } } };
@@ -128,20 +131,21 @@ export function heroNarrow() {
   }
   const events = [];
   const when = (p) => nearest(loop, p) * LAP;
-  const sets = (p, part, dur = 1.2, delay = 0) => events.push({ track: "loop", at: when(p) + delay, part, dur });
+  // `sound`: the voice the part answers the ball with (and a bar's place in its row), for the page to play
+  const sets = (p, part, dur = 1.2, delay = 0, sound) => events.push({ track: "loop", at: when(p) + delay, part, dur, ...sound });
 
   [[-62, 56, 0.85], [62, 56, 0.9], [-88, 6, 0.75], [92, 16, 0.8]].forEach(([a, b, size], i) => {
     const p = uv(a, b);
     T.tapped({ tap: SPROUT_TAPS[i % 4], kick: "sprout" + i, pad: [[p[0], p[1], 20 * size], 13] }, () => T.sprout(p[0], p[1], 0, { size, name: "sprout" + i }));
-    sets(p, "sprout" + i, 1.3);
+    sets(p, "sprout" + i, 1.3, 0, { voice: "grow" });
   });
-  sets(uv(0, TR), "bloom", 1.6);
+  sets(uv(0, TR), "bloom", 1.6, 0, { voice: "bloom" });
   sets(uv(0, TR), "invite", 2.2);
   [0, 1, 2, 3, 4].forEach((j) => sets(uv(0, -TR), "tree" + j, 1.4, j * 0.09));
 
   const barAt = uv(0, 80);
   const tops = T.tapped({ tap: "stars", count: 5, kick: [0, 1, 2, 3, 4].map((i) => `bar${i}@${(i * 0.12).toFixed(2)}`).join(",") }, () => T.bars(barAt[0] - 18, barAt[1], 7, 5, { step: 9 }));
-  tops.forEach((_, i) => sets(barAt, "bar" + i, 0.6, i * 0.14));
+  tops.forEach((_, i) => sets(barAt, "bar" + i, 0.6, i * 0.14, { voice: "bar", step: i }));
 
   const W = uv(-52, -62, 34), WR = 11;
   T.tapped({ tap: "stars", count: 9, kick: "beam" }, () => T.world(W, WR, { stand: 23 }));
@@ -156,18 +160,20 @@ export function heroNarrow() {
 
   const gongAt = uv(34, -80);
   T.tapped({ tap: "gong", kick: "gong" }, () => T.gong(gongAt[0], gongAt[1], 0, { r: 8 }));
-  sets(gongAt, "gong", 2);
+  sets(gongAt, "gong", 2, 0, { voice: "gong" });
   const shellAt = uv(80, -40);
   const way = T.tapped({ tap: "spiral" }, () => T.shell(shellAt[0], shellAt[1], 0, { h: 30, r1: 13, turns: 2.1 }));
   tracks.shell = { pts: flat(way.map(([x, y, z]) => [x, y, z + 3.2])), period: 8, closed: false, fade: [0.5, 6.8, 7.5] };
   const shellRest = trackAt(tracks.shell, REST);
   T.ball(shellRest, "seed", 2, 2.4);
   movers.push({ name: "seed", track: "shell", offset: 0, rest: shellRest, bias: 2 });
+  // the seed sets off down the shell: a falling run (no part moves for it)
+  events.push({ track: "shell", at: 0.6, dur: 1, voice: "spiral" });
   const bellA = uv(-86, -24), bellB = uv(-30, -88);
   T.tapped({ tap: "bell", kick: "bellA", pad: [[bellA[0], bellA[1], 24], 10] }, () => T.bell(bellA[0], bellA[1], 0, { name: "bellA", shape: "gem", h: 18, size: 4 }));
   T.tapped({ tap: "bell", kick: "bellB", pad: [[bellB[0], bellB[1], 22], 10] }, () => T.bell(bellB[0], bellB[1], 0, { name: "bellB", h: 14, size: 4 }));
-  sets(bellA, "bellA");
-  sets(bellB, "bellB");
+  sets(bellA, "bellA", 1.2, 0, { voice: "bell" });
+  sets(bellB, "bellB", 1.2, 0, { voice: "bell" });
 
   return { name: "hero-narrow", width: WIDTH, height: HEIGHT, T, data: { rest: REST, tracks, movers, links, events, spin: [], anchors: { flower: T.anchor(tree.heart) } } };
 }

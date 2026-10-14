@@ -46,7 +46,7 @@ function perch(name, side, kinds) {
   const rest = trackAt(data.tracks.vine, data.rest);
   T.ball(rest, "ball", BALL_BIAS);
   data.movers.push({ name: "ball", track: "vine", offset: 0, rest, bias: BALL_BIAS });
-  spots.forEach((_, i) => data.events.push({ track: "vine", at: ((down + 14 * (i + 1)) / pts.length) * period, part: "sprout" + i, dur: 1.2 }));
+  spots.forEach((_, i) => data.events.push({ track: "vine", at: ((down + 14 * (i + 1)) / pts.length) * period, part: "sprout" + i, dur: 1.2, voice: "grow" }));
   return { name, width: WIDTH, height: HEIGHT, T, data: { ...data, anchors: { sticker: T.anchor([P0[0], P0[1], TOP]) } } };
 }
 
@@ -75,12 +75,12 @@ function converge() {
     T.ball(rest, "ball" + i, BALL_BIAS);
     T.items[T.items.length - 1].svg = T.items[T.items.length - 1].svg.replace("lf-trk", "lf-" + entity);
     data.movers.push({ name: "ball" + i, track: "in" + i, offset, rest, bias: BALL_BIAS });
-    data.events.push({ track: "in" + i, at: period - 1, part: "beam", dur: 1.2 });
+    data.events.push({ track: "in" + i, at: period - 1, part: "beam", dur: 1.2, voice: "swell" });
   });
   [[-58, 44, 0.9, 3], [58, 46, 1, 1]].forEach(([a, b, size, kind], i) => {
     const [x, y] = uv(a, b);
     T.tapped({ tap: SPROUT_TAPS[kind], kick: "sprout" + i, pad: [[x, y, 18 * size], 12] }, () => T.sprout(x, y, 0, { size, name: "sprout" + i }));
-    data.events.push({ track: "in" + i, at: 5, part: "sprout" + i, dur: 1.2 });
+    data.events.push({ track: "in" + i, at: 5, part: "sprout" + i, dur: 1.2, voice: "grow" });
   });
   return { name: "converge", width: WIDTH, height: HEIGHT, T, data: { ...data, anchors: { stickerLeft: T.anchor([L[0], L[1], 5]), stickerRight: T.anchor([R[0], R[1], 5]) } } };
 }
