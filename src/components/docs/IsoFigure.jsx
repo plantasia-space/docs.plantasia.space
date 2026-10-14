@@ -1,16 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useColorMode } from '@docusaurus/theme-common';
-import './IsoFigure.kit.css';
+import { useAnatomyModule } from 'plantasia.space-design/react/anatomy';
+import 'plantasia.space-design/anatomy/iso.css';
 import styles from './IsoFigure.module.css';
-
-// The figure is a static file, not part of the bundle: the browser imports it
-// by URL, out of the bundler's sight.
-export const loadFigure = new Function('url', 'return import(url)');
 
 // A live figure: one object drawn in isometric line, moved by the reader.
 // `name` is a module under static/figures/ ("orbiters/lens"), built by the
-// ps-docs-figures skill: it exports the drawing (`svg`) and `mount(root, say)`.
+// ps-docs-figures skill on the design library's anatomy kit (ps-anatomy): it
+// exports the drawing (`svg`) and `mount(root, say)`.
 // The drawing carries no words and no background: the page explains it, and
 // what the figure says as it moves (`say`) is written under it, as page text.
 // The figure brings its own accessible name; `label` describes the drawing and
@@ -19,27 +17,8 @@ export default function IsoFigure({ name, label, children }) {
   const { colorMode } = useColorMode();
   const url = useBaseUrl(`/figures/${name}.js`);
   const stageRef = useRef(null);
-  const [readout, setReadout] = useState('');
-  const [missing, setMissing] = useState(false);
-
-  useEffect(() => {
-    let unmount = null;
-    let gone = false;
-    loadFigure(url)
-      .then((figure) => {
-        if (gone || !stageRef.current) return;
-        stageRef.current.innerHTML = figure.svg;
-        unmount = figure.mount(stageRef.current, setReadout);
-      })
-      .catch(() => {
-        // Without its figure the page still reads: the label stands in for the drawing.
-        if (!gone) setMissing(true);
-      });
-    return () => {
-      gone = true;
-      unmount?.();
-    };
-  }, [url]);
+  // Without its figure the page still reads: the label stands in for the drawing.
+  const { readout, missing } = useAnatomyModule(url, stageRef);
 
   return (
     <figure className={styles.figure}>

@@ -9,9 +9,7 @@
 import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import * as k from "../../kit/iso-kit.mjs";
-import * as G from "../../kit/lathe.mjs";
-import { kitScript } from "../../scripts/inline-kit.mjs";
+import { k, G, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
 import { KNOB_SOURCE, knobFace, knobWedge, knobNeedle } from "../shared/knob.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));

@@ -10,9 +10,7 @@
 import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import * as k from "../../kit/iso-kit.mjs";
-import * as G from "../../kit/lathe.mjs";
-import { kitScript } from "../../scripts/inline-kit.mjs";
+import { k, G, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes three ES modules into <slot>/static/figures/orbiters/, which the docs' <IsoFigure> loads: each

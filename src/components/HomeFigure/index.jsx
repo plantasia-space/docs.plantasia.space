@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useColorMode } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
-import { loadFigure } from '@site/src/components/docs/IsoFigure';
+import { loadAnatomyModule as loadFigure } from 'plantasia.space-design/react/anatomy';
+import 'plantasia.space-design/anatomy/iso.css';
 import styles from './styles.module.css';
 
 // Below this width the page is a narrow column and the tower replaces the orrery.

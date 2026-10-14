@@ -8,9 +8,7 @@ import { createHash } from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import * as k from "../../kit/iso-kit.mjs";
-import * as G from "../../kit/lathe.mjs";
-import { scene, polar, UP, TAU } from "./parts.mjs";
+import { k, G, scene, polar, UP, TAU } from "plantasia.space-design/anatomy/build";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes into static/figures/home, per arrangement: a picture for each theme (<name>-dark.svg, <name>-light.svg),
