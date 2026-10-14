@@ -49,6 +49,7 @@ The checks need Node 20.10+ and Chrome. Previews and shots are not committed (`f
 | Figure | Page | What moves |
 |---|---|---|
 | `orbiter-lens` | Visual modules, Lens | the lens barrel (Width), the cross-slide (Shift); the viewfinder shows the World |
+| `landing` | The guest home page of plantasia.space-root (`src/components/guest/landing`), not a docs page | each runs by itself and answers taps. One `build.mjs` writes every figure of that page into root's `public/figures/landing` (`--out`): a picture per theme, `<name>.json`, and one `runtime.js` for all. It is built on the home machine's parts (`src/home-machine/parts.mjs`, ORB-633) |
 | `orbiter-saucer` | Orbiters overview | a light on each of the ring's three tracks (X, Y, Z), one lap for the axis's full turn |
 | `orbiter-console` | Interact | the three knobs (X, Y, Z), the World on the screen, and the marker on the effect each knob is mapped to |
 | `module-families` (three figures) | Instruments, Audio effects, MIDI effects overviews | a place along the rack: which instrument plays, the sound passing three effects, a note going from generator to effect to instrument |
