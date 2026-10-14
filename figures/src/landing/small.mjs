@@ -189,17 +189,32 @@ function bed({ name, WIDTH, HEIGHT, half, n }) {
   const rail = Array.from({ length: 61 }, (_, i) => uv(-half + 8 + ((half - 8) * 2 * i) / 60, deep - 7, 9));
   T.rails(rail, { max: 14 });
   rail.forEach((p, i) => { if (i % 10 === 5) T.post(p[0], p[1], 0, 8.4, 0.9, "lo"); });
-  const there = rail.map(([x, y, z]) => [x, y, z + 3.6]), period = n * 1.3;
-  lap(T, [...there, ...there.slice().reverse()], "ball", period * 2, 2, data.rest, data);
+  // Two balls, one from each end: they meet in the middle, touch, and bounce back (Bruna, 14 Oct 2026).
+  // Each runs its half of the rail out and back in `period`; they touch at period / 2.
+  const BALL_R = 3.6, M = 30, period = n * 1.3;
+  const half_ = (side) => Array.from({ length: M + 1 }, (_, i) => uv(side * (half - 8 - ((half - 8 - BALL_R) * i) / M), deep - 7, 9 + 3.6));
+  const ways = { left: half_(-1), right: half_(1) };
+  for (const [side, way] of Object.entries(ways)) {
+    data.tracks[side] = { pts: flat([...way, ...way.slice().reverse()]), period, closed: true };
+    const at = trackAt(data.tracks[side], data.rest);
+    T.ball(at, side, BALL_BIAS);
+    data.movers.push({ name: side, track: side, offset: 0, rest: at, bias: BALL_BIAS });
+  }
+  // when a ball is at a point of its way, going out and coming back
+  const passes = (way, x) => { let best = 0, bd = Infinity; way.forEach((p, i) => { const d = Math.abs(p[0] - x); if (d < bd) { bd = d; best = i; } }); const n2 = way.length * 2; return [(best / n2) * period, ((n2 - 1 - best) / n2) * period]; };
   for (let i = 0; i < n; i++) {
     const u = (i + 0.5) / n, a = -half + 14 + (half - 14) * 2 * u, near = 1 - Math.abs(u - 0.5) * 2;
     const size = 0.8 + 1.25 * near * (0.6 + 0.4 * Math.sin(i * 2.1)) + (i % 3 ? 0 : 0.15);
     const [x, y] = uv(a, -5 + (i % 2 ? -8 : 4));
     if (i === Math.floor(n / 2)) T.tapped({ tap: SPROUT_TAPS[(i + 1) % 4], kick: "bloom", pad: [[x, y, 60], 14] }, () => T.orchid(x, y, 0, { size: 1.7 }));
     else T.tapped({ tap: SPROUT_TAPS[(i + 1) % 4], kick: "sprout" + i, pad: [[x, y, 18 * size], 11] }, () => T.sprout(x, y, 0, { size, name: "sprout" + i }));
-    const part = i === Math.floor(n / 2) ? "bloom" : "sprout" + i;
-    const voice = part === "bloom" ? "bloom" : "grow";
-    data.events.push({ track: "ball", at: u * period, part, dur: 1.2, voice }, { track: "ball", at: (2 - u) * period, part, dur: 1.2, voice });
+    if (i === Math.floor(n / 2)) {
+      // the orchid opens as the two balls touch beside it
+      data.events.push({ track: "left", at: (M / ((M + 1) * 2)) * period, part: "bloom", dur: 1.4, voice: "bloom" });
+      continue;
+    }
+    const side = u < 0.5 ? "left" : "right";
+    for (const at of passes(ways[side], x)) data.events.push({ track: side, at, part: "sprout" + i, dur: 1.2, voice: "grow" });
   }
   return { name, width: WIDTH, height: HEIGHT, T, data };
 }

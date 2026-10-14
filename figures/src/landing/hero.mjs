@@ -39,7 +39,7 @@ export function hero() {
   const tree = garden(T, { treeAt: [0, 0], treeH: TREE });
 
   // ---- the track: one long loop over the three decks, bridging the gaps between them
-  const A = 205, B = 45, TZ = 13, N = 180, LAP = 30, BALLS = 5;
+  const A = 205, B = 45, TZ = 13, N = 180, LAP = 30, BALLS = 3;
   const loop = Array.from({ length: N }, (_, i) => { const t = (i / N) * TAU, c = Math.cos(t), s = Math.sin(t); return uv(A * Math.sign(c) * Math.abs(c) ** 0.72, B * Math.sign(s) * Math.abs(s) ** 0.72, TZ); });
   T.rails([...loop, loop[0]], { max: 14 });
   const onDeck = ([x, y]) => [[-SIDE, R1], [0, R0], [SIDE, R1]].some(([a, r]) => Math.hypot(x - uv(a, 0)[0], y - uv(a, 0)[1]) < r - 8);

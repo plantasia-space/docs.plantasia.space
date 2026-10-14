@@ -6,7 +6,8 @@ import { stage, beamSvg, flat, trackAt, uv, k, G, TAU } from "./stage.mjs";
 
 function world({ name, WIDTH, HEIGHT, R, WR }) {
   const C = [0, 0, WR + 30];
-  const T = stage(WIDTH, HEIGHT, [...Array.from({ length: 24 }, (_, i) => [R * Math.cos((i / 24) * TAU), R * Math.sin((i / 24) * TAU), -11]), [0, 0, C[2] + WR * 1.5], ...[-1, 1].map((s) => uv(s * WR * 2.5, 0, C[2] + 20))], { pad: 14 });
+  // the frame takes in the near ring's highest point too, so the moon never leaves the drawing
+  const T = stage(WIDTH, HEIGHT, [...Array.from({ length: 24 }, (_, i) => [R * Math.cos((i / 24) * TAU), R * Math.sin((i / 24) * TAU), -11]), [0, 0, C[2] + WR * 1.5], [0, 0, C[2] + WR * 2.3 + 16], ...[-1, 1].map((s) => uv(s * WR * 2.5, 0, C[2] + 20))], { pad: 14 });
   T.island(0, 0, R);
   const REST = 2.6;
   T.gear(0, 0, 0, WR * 0.62, 14, "gearA");

@@ -10,8 +10,9 @@ import { stage, beamSvg, flat, trackAt, uv, k, G, TAU } from "./stage.mjs";
 const BALL_BIAS = 6;
 // Orbiters per player (draw/playground.ts, PLAY)
 const ORBITERS = [1, 1, 2];
-// Each listener's own cycle, as in draw/playground.ts (LIS, STAY): seconds per visit and where it starts.
-const LISTENERS = Array.from({ length: 7 }, (_, i) => ({ period: 8 + ((i * 0.618) % 1) * 7, phase: (i * 0.377) % 1 }));
+// Each listener's own cycle: seconds per visit and where it starts. Three times draw/playground.ts's
+// (LIS), so they come and go slowly (Bruna, 14 Oct 2026).
+const LISTENERS = Array.from({ length: 7 }, (_, i) => ({ period: 24 + ((i * 0.618) % 1) * 21, phase: (i * 0.377) % 1 }));
 const STAY = 0.62;
 
 function room({ name, WIDTH, HEIGHT, R, seats, players, pad }) {
