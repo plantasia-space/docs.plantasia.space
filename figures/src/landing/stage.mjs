@@ -160,6 +160,15 @@ export function stage(width, height, extremes, fit = {}) {
     put([x, y, z], `${stand}${cup(-1)}${T.tubeStr(band, 0.75, { tone: "hi" })}${cup(1)}`, 0.2, { part: name });
   };
 
+  // ---- a perch: a post with a bar across its top, for an illustration's branch to lie on.
+  // Returns the middle of the bar, where the page stands the illustration.
+  T.perch = (x, y, z = 0, { h = 60, half = 18 } = {}) => {
+    put([x, y, z], S(k.cylinder(x, y, 5, z, 1.6, P, 20, 0.4), { tone: "mid" }), -0.2);
+    T.post(x, y, z + 1.6, z + h, 1.4, "hi");
+    put([x, y, z + h], T.tubeStr([-1, 1].map((s) => [x + RIGHT[0] * s * half, y + RIGHT[1] * s * half, z + h]), 1, { tone: "hi" }), 0.3);
+    return [x, y, z + h];
+  };
+
   // ---- a thin rail between two floor points (a cable on the deck), ending in terminal dots
   T.cable = (a, b, { via = [], tone = "lo" } = {}) => put([a[0], a[1], 0], k.wireSvg(at([a[0], a[1], 0]), at([b[0], b[1], 0]), { via: via.map(([x, y]) => at([x, y, 0])), tone, size: 1 }), -900);
 

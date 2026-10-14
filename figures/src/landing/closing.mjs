@@ -37,9 +37,12 @@ function world({ name, WIDTH, HEIGHT, R, WR }) {
 
   const o = uv(-R * 0.66, R * 0.36);
   T.tapped({ tap: "root", kick: "bloom", pad: [[o[0], o[1], 34], 16] }, () => T.orchid(o[0], o[1], 0, { size: 1.15 }));
+  // a perch on the left, for the hawk that watches (the page lays it there)
+  const h = uv(-R * 0.74, -R * 0.12);
+  const anchors = { sticker: T.anchor(T.perch(h[0], h[1], 0, { h: WR * 1.05, half: WR * 0.42 })) };
   const events = [{ track: "near", at: 0, part: "bloom", dur: 2.2 }, { track: "far", at: 0, part: "beam", dur: 2 }];
   const spin = [{ part: "gearA", period: 1.6 }, { part: "gearB", period: 1.6 }];
-  return { name, width: WIDTH, height: HEIGHT, T, data: { rest: REST, tracks, movers, links, events, spin, elseTap: "gong" } };
+  return { name, width: WIDTH, height: HEIGHT, T, data: { rest: REST, tracks, movers, links, events, spin, anchors, elseTap: "gong" } };
 }
 export const closing = () => world({ name: "closing", WIDTH: 900, HEIGHT: 470, R: 150, WR: 52 });
 export const closingNarrow = () => world({ name: "closing-narrow", WIDTH: 390, HEIGHT: 330, R: 96, WR: 34 });

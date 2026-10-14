@@ -18,11 +18,22 @@ const blank = (rest) => ({ rest, tracks: {}, movers: [], links: [], events: [], 
 // the gesture each row plays (plantasia.space-root draw/rows.ts, ROW_TAPS)
 const ROW_TAPS = ["glass", "strum", "stars", "breath", "spiral"];
 const W = 340, H = 230;
+// Beside each row's object, a small deck for its fungus (the page lays the illustration on it), the two
+// joined by a cable: the thread of mycelium. `side`: -1 left, 1 right (draw/rows.ts alternates them).
+const seat = (side) => { const [x, y] = uv(side * 92, 10); return ringOf(24, 12, -8).map(([a, b, z]) => [x + a, y + b, z]).concat([[x, y, 44]]); };
+function fungus(T, side) {
+  const [x, y] = uv(side * 92, 10);
+  T.island(x, y, 24, 5);
+  T.put([x, y, 0], T.L(k.ring(x, y, 13, 0, T.P, 30), { tone: "lo" }), -1990);
+  T.cable(uv(side * 40, 6), uv(side * 80, 9));
+  return T.anchor([x, y, 0]);
+}
 
 // I Orbiter: the craft over its pad, an Audio circling under its beam
 function rowOrbiter() {
-  const T = stage(W, H, pad(58, 86), { pad: 10 });
+  const T = stage(W, H, [...pad(58, 86), ...seat(-1)], { pad: 10 });
   T.island(0, 0, 58);
+  const sticker = fungus(T, -1);
   const data = blank(1.2);
   T.put([0, 0, 0], T.S(k.cylinder(0, 0, 14, 0, 3, T.P, 36, 0.5), { tone: "mid" }) + T.L(k.ring(0, 0, 9, 3, T.P, 32), { tone: "lo" }), -0.2);
   const at = [0, 0, 62];
@@ -33,13 +44,14 @@ function rowOrbiter() {
   ring.forEach((p, i) => { if (i % 12 === 0) T.post(p[0], p[1], 0, 11.4, 0.9, "lo"); });
   lap(T, ring.map(([x, y, z]) => [x, y, z + 3.6]), "ball", 7, 2, data.rest, data);
   data.events.push({ track: "ball", at: 0, part: "beam", dur: 1.6 });
-  return { name: "row-i", width: W, height: H, T, data: { ...data, elseTap: ROW_TAPS[0] } };
+  return { name: "row-i", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[0] } };
 }
 
 // II Audio (a track): a ball hops down the tuned bars
 function rowTrack() {
-  const T = stage(W, H, [...pad(58), [-44, 0, 52], [-22, -16, 30]], { pad: 10 });
+  const T = stage(W, H, [...pad(58), [-44, 0, 52], [-22, -16, 30], ...seat(1)], { pad: 10 });
   T.island(0, 0, 58);
+  const sticker = fungus(T, 1);
   const data = blank(0.9);
   const tops = T.bars(-22, 0, 26, 5, { step: 11, drop: 3.4 });
   const landed = tops.map(([x, y, z]) => [x, y, z + 3.6]);
@@ -52,13 +64,14 @@ function rowTrack() {
   lap(T, pts, "ball", period, 1, data.rest, data, { fade: [0.25, period - 1.1, period - 0.8] });
   const unit = period / pts.length;
   tops.forEach((_, i) => data.events.push({ track: "ball", at: (i + 1) * 12 * unit, part: "bar" + i, dur: 0.6 }));
-  return { name: "row-ii", width: W, height: H, T, data: { ...data, elseTap: ROW_TAPS[1] } };
+  return { name: "row-ii", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[1] } };
 }
 
 // III a Release: a sprout, growing each time an Audio lands in its pot
 function rowRelease() {
-  const T = stage(W, H, [...pad(58, 50), [-46, 0, 60]], { pad: 10 });
+  const T = stage(W, H, [...pad(58, 50), [-46, 0, 60], ...seat(-1)], { pad: 10 });
   T.island(0, 0, 58);
+  const sticker = fungus(T, -1);
   const data = blank(1.5);
   const soil = T.sprout(0, 0, 0, { size: 1.5 });
   const chute = G.fillet([[-44, 0, 50], [-30, 0, 44], [-16, 0, 26], [-9, 0, 22]], 8);
@@ -69,13 +82,14 @@ function rowRelease() {
   const pts = [...way, ...Array.from({ length: 10 }, () => way[way.length - 1])];
   lap(T, pts, "ball", 4.2, 1, data.rest, data, { fade: [0.3, 3.1, 3.5] });
   data.events.push({ track: "ball", at: 2.6, part: "sprout", dur: 1.4 });
-  return { name: "row-iii", width: W, height: H, T, data: { ...data, elseTap: ROW_TAPS[2] } };
+  return { name: "row-iii", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[2] } };
 }
 
 // IV an Entangled World, and the Orbiter that circles it
 function rowWorld() {
-  const T = stage(W, H, [...pad(58), [0, 0, 84], [-52, 0, 70], [52, 0, 70]], { pad: 10 });
+  const T = stage(W, H, [...pad(58), [0, 0, 84], [-52, 0, 70], [52, 0, 70], ...seat(1)], { pad: 10 });
   T.island(0, 0, 58);
+  const sticker = fungus(T, 1);
   const data = blank(2.2);
   const C = [0, 0, 46], R = 19;
   T.gear(0, 0, 0, 16, 10, "gearA");
@@ -89,13 +103,14 @@ function rowWorld() {
   data.movers.push({ name: "saucer", track: "orbit", offset: 0, rest, bias: 6 });
   T.part("beam", "glow", { base: 0.5 });
   data.spin.push({ part: "gearA", period: ORBIT.period / 10 }, { part: "gearB", period: ORBIT.period / 10 });
-  return { name: "row-iv", width: W, height: H, T, data: { ...data, elseTap: ROW_TAPS[3] } };
+  return { name: "row-iv", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[3] } };
 }
 
 // V the instrument: the xPlorer's console, and six effects round it that light one after another
 function rowInstrument() {
-  const T = stage(W, H, pad(60, 44), { pad: 10 });
+  const T = stage(W, H, [...pad(60, 44), ...seat(-1)], { pad: 10 });
   T.island(0, 0, 60);
+  const sticker = fungus(T, -1);
   const data = blank(0.6);
   T.console(4, 8, 0);
   const ring = ringOf(47, 72, 9);
@@ -113,7 +128,7 @@ function rowInstrument() {
   T.put([0, 0, 0], "<g></g>", -4000, { mover: "clock" });
   data.movers.push({ name: "clock", track: "round", offset: 0, rest: ring[0], bias: -4000 });
   data.events.push({ track: "round", at: 0.4, part: "lever", dur: 1 }, { track: "round", at: 4.9, part: "lever", dur: 1 });
-  return { name: "row-v", width: W, height: H, T, data: { ...data, elseTap: ROW_TAPS[4] } };
+  return { name: "row-v", width: W, height: H, T, data: { ...data, anchors: { sticker }, elseTap: ROW_TAPS[4] } };
 }
 
 // ---- the Playground's three steps (draw/capitals.ts, drawStep): meet = bloom, jam = root, live = glass

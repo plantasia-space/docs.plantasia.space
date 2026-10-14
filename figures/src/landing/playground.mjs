@@ -3,7 +3,7 @@
 // plantasia.space-root draw/playground.ts). Audios run the ring between them and each console answers
 // as one passes; cables join every player to the hub. Round the room, on their own small decks,
 // listeners (headphones on a stand) come and go, wherever they are.
-// Taps: a player = talk (its voice) · a listener = crowd (its voice) · the bell = bell (the old drawing's birds).
+// Taps: a player = talk (its voice) · a listener = crowd (its voice). The birds on the perch are the page's (bell).
 // The names, the clocks and the count of listeners are the page's own text, placed at `anchors`.
 import { stage, beamSvg, flat, trackAt, uv, k, G, TAU } from "./stage.mjs";
 
@@ -56,10 +56,9 @@ function room({ name, WIDTH, HEIGHT, R, seats, players, pad }) {
     anchors["player" + i] = b < 0 ? T.anchor([x + 12, y + 12, 54 + ORBITERS[i] * 17 - 4]) : T.anchor([x + 14, y + 14, -8]);
   });
 
-  // the bell, at the back of the room
-  const bellAt = uv(R * 0.62, -R * 0.5);
-  T.tapped({ tap: "bell", kick: "bell", pad: [[bellAt[0], bellAt[1], 28], 10] }, () => T.bell(bellAt[0], bellAt[1], 0, { h: 22 }));
-  events.push({ track: "ring", at: when(bellAt), part: "bell", dur: 1.1 });
+  // a perch at the back of the room, for the blue flycatchers that keep it company (the page lays them on it)
+  const perchAt = uv(R * 0.66, -R * 0.52);
+  anchors.sticker = T.anchor(T.perch(perchAt[0], perchAt[1], 0, { h: 34, half: 14 }));
 
   // the listeners, each on a small deck of their own
   seats.forEach(([a, b], i) => {
