@@ -190,16 +190,12 @@ function bed({ name, WIDTH, HEIGHT, half, n }) {
   T.rails(rail, { max: 14 });
   rail.forEach((p, i) => { if (i % 10 === 5) T.post(p[0], p[1], 0, 8.4, 0.9, "lo"); });
   // Two balls, one from each end: they meet in the middle, touch, and bounce back (Bruna, 14 Oct 2026).
-  // Each runs its half of the rail out and back in `period`; they touch at period / 2.
+  // Each runs its half of the rail out and back in `period`, and reaches the middle at
+  // M / (2 (M + 1)) of it (just before period / 2: its way's last point, then the turn).
   const BALL_R = 3.6, M = 30, period = n * 1.3;
   const half_ = (side) => Array.from({ length: M + 1 }, (_, i) => uv(side * (half - 8 - ((half - 8 - BALL_R) * i) / M), deep - 7, 9 + 3.6));
   const ways = { left: half_(-1), right: half_(1) };
-  for (const [side, way] of Object.entries(ways)) {
-    data.tracks[side] = { pts: flat([...way, ...way.slice().reverse()]), period, closed: true };
-    const at = trackAt(data.tracks[side], data.rest);
-    T.ball(at, side, BALL_BIAS);
-    data.movers.push({ name: side, track: side, offset: 0, rest: at, bias: BALL_BIAS });
-  }
+  for (const [side, way] of Object.entries(ways)) lap(T, [...way, ...way.slice().reverse()], side, period, 1, data.rest, data);
   // when a ball is at a point of its way, going out and coming back
   const passes = (way, x) => { let best = 0, bd = Infinity; way.forEach((p, i) => { const d = Math.abs(p[0] - x); if (d < bd) { bd = d; best = i; } }); const n2 = way.length * 2; return [(best / n2) * period, ((n2 - 1 - best) / n2) * period]; };
   for (let i = 0; i < n; i++) {
@@ -209,7 +205,7 @@ function bed({ name, WIDTH, HEIGHT, half, n }) {
     if (i === Math.floor(n / 2)) T.tapped({ tap: SPROUT_TAPS[(i + 1) % 4], kick: "bloom", pad: [[x, y, 60], 14] }, () => T.orchid(x, y, 0, { size: 1.7 }));
     else T.tapped({ tap: SPROUT_TAPS[(i + 1) % 4], kick: "sprout" + i, pad: [[x, y, 18 * size], 11] }, () => T.sprout(x, y, 0, { size, name: "sprout" + i }));
     if (i === Math.floor(n / 2)) {
-      // the orchid opens as the two balls touch beside it
+      // the orchid opens as the two balls touch beside it (each at the end of its way)
       data.events.push({ track: "left", at: (M / ((M + 1) * 2)) * period, part: "bloom", dur: 1.4, voice: "bloom" });
       continue;
     }
