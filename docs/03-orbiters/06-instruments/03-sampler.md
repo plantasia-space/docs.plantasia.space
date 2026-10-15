@@ -27,6 +27,10 @@ The instrument's name is on the screen<Dot>1</Dot>, and in the Studio it is the 
 Press that button to open the list of
 **libraries** and their instruments. Each row shows what it is and its size.
 
+While you play, the same list is the Sampler's own surface: open the playback panel and pick the
+**Sampler** tab beside **Piano roll**. A pick there changes the instrument for this session only; in the
+Studio it is saved with the Orbiter.
+
 Pick one and it loads, then swaps in. The module keeps every value you set. While it loads, the
 header shows a progress line and the screen says the Sampler is silent until it is ready. If a load
 fails, the header says **Failed** and offers **Retry**.
@@ -111,3 +115,7 @@ never on an axis: a preset carries it.
 
 Everyone in a <Term id="room">room</Term> hears the same notes and the same sound. A player whose device is still loading
 the instrument hears nothing from it until it is ready; the room doesn't wait.
+
+The player who holds the Orbiter can pick a new instrument from the **Sampler** tab while the room
+plays, and every player hears it once their device has loaded it. Players who join later get the
+instrument in use.
