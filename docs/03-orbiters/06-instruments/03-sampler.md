@@ -28,8 +28,15 @@ Press that button to open the list of
 **libraries** and their instruments. Each row shows what it is and its size.
 
 While you play, the same list is the Sampler's own surface: open the playback panel and pick the
-**Sampler** tab beside **Piano roll**. A pick there changes the instrument for this session only; in the
-Studio it is saved with the Orbiter.
+**Sampler** tab beside **Piano roll**. The instrument playing carries the mark; press another to load
+it. A pick there changes the instrument for this session only; in the Studio it is saved with the
+Orbiter.
+
+<ModulePicture
+  src="/img/orbiters/instruments/sampler-surface.jpg"
+  wide
+  alt="The playback panel on the Sampler tab, beside Piano roll: the VCSL library open, with Kalimba, Kawai grand (marked, in use) and Marimba, each with its tags, zones and size."
+/>
 
 Pick one and it loads, then swaps in. The module keeps every value you set. While it loads, the
 header shows a progress line and the screen says the Sampler is silent until it is ready. If a load
