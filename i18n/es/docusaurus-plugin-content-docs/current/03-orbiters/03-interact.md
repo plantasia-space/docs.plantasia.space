@@ -143,11 +143,19 @@ Cada eje (X, Y, Z) tiene un Cosmic LFO independiente.
 
 Puedes controlar:
 
-- Profundidad (intensidad de la modulación)
-- Forma de onda
-- Fuente de frecuencia
+- **Profundidad**: cuánto mueve el eje.
+- **Desplazamiento**: el valor alrededor del cual oscila. En el centro mueve el eje por igual arriba y
+  abajo; bájalo para mover los valores bajos, súbelo para los altos. Los extremos del eje recortan la
+  oscilación.
+- **Forma**: una sola perilla que va de senoidal a triangular, rampa ascendente, cuadrada, rampa
+  descendente y aleatoria, fundiendo cada forma con la siguiente; su etiqueta nombra la forma cuando
+  está en una. La cuadrada y las rampas tienen bordes suaves de 4 ms, así que ninguna forma produce
+  clics. La pantalla de arriba dibuja la onda que estás creando.
+- **Fuente de frecuencia**: una frecuencia que eliges (Hz), el tempo (una figura musical) o un valor del
+  exoplaneta del Mundo Entrelazado (Cosmic LFO, Luminosidad estelar, Frecuencia, Masa).
 
-Algunas fuentes son manuales; otras dependen del Mundo Entrelazado y de los datos de su exoplaneta.
+Una fuente del mundo solo aparece si el mundo tiene ese valor. Con una elegida, las dos flechas bajan o
+suben su ritmo una octava (×½, ×2): sigue siendo una nota del mismo valor del planeta.
 
 <video
   className="ps-doc-video"

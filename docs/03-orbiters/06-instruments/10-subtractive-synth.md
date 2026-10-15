@@ -61,7 +61,7 @@ Three groups start folded; open one from its column.
 
 - <Dot>11</Dot>**LFO**: one slow wave for vibrato, wah or a moving pulse. **Sync** (on as it loads) keeps
   it on the Orbiter's beat, so every player in a room is on one phase; off, **Rate** is in Hz. **Shape**:
-  sine, triangle, ramp up, ramp down, square or random. **Amount** is how much of it gets through to
+  sine, triangle, ramp up, square, ramp down or random. **Amount** is how much of it gets through to
   everything it moves.
 - <Dot>12</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument
   shares. Here the LFO, velocity, the key, pitch bend, pressure, the mod wheel and a random value per

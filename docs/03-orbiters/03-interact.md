@@ -140,11 +140,17 @@ Each axis (X, Y, Z) has an independent Cosmic LFO.
 
 You can control:
 
-- Depth (modulation amount)
-- Waveform
-- Frequency source
+- **Depth**: how far it moves the axis.
+- **Offset**: the value it swings around. At the middle it moves the axis up and down evenly; turn it
+  down to move the lower values, up to move the upper ones. The ends of the axis clip the swing.
+- **Shape**: one knob that runs from sine through triangle, ramp up, square and ramp down to random,
+  blending each shape into the next; its label names the shape when it sits on one. Square and the
+  ramps have soft 4 ms edges, so no shape clicks. The screen above it draws the wave you are making.
+- **Frequency source**: a frequency you set (Hz), the tempo (a note value), or a value of the Entangled
+  World's exoplanet (Cosmic LFO, Stellar Luminosity, Frequency, Mass).
 
-Some sources are manual, others depend on the Entangled World and its exoplanet data.
+A world source only appears when the world carries that value. With one selected, the two arrows
+move its rate down or up an octave (×½, ×2); it stays a note of the same planet value.
 
 <video
   className="ps-doc-video"
