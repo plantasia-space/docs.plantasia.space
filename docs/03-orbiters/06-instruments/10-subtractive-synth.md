@@ -108,5 +108,5 @@ the ones to try first.
 
 ## In a room
 
-Every player in a <Term id="room">room</Term> hears the same notes with the same sound. A synced LFO is on the same phase for everyone;
+Every player in a <Term id="room">room</Term> hears the same notes with the same sound. Its LFO is on the same phase for everyone, synced or free (a free one counts the room's time);
 pitch bend, pressure and the mod wheel stay your own.

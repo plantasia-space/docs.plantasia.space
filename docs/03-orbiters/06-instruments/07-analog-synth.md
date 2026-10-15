@@ -142,5 +142,5 @@ carries them.
 
 ## In a room
 
-Everyone in a <Term id="room">room</Term> hears the same notes and the same sound; only the noise, Drift's slow wander and a
-free (unsynced) LFO can differ a little.
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound; only the noise and Drift's slow wander
+can differ a little. A free LFO counts the room's time, so it is on the same phase for everyone, someone who joins late too.
