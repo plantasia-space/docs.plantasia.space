@@ -22,6 +22,12 @@ with the <Dot>1</Dot>button in the module's header, or with the audio button nex
 />
 </TryModule>
 
+## Which audio an Orbiter opens with
+
+Opened on its own (its card, a link to it), an Audio Orbiter plays the audio its creator picked in
+the Studio. If that audio is private or no longer there, it plays the Plantasia default instead.
+Anyone playing it can pick another audio while it plays; that pick lasts for the visit.
+
 ## Speed & Pitch
 
 The <Dot>2</Dot>switch decides what Speed does to the pitch:
