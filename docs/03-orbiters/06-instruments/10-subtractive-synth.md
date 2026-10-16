@@ -81,8 +81,15 @@ tied where the cutoff is.
 - **The tie** is the Cutoff: left of it the lines are bright (what passes), right of it they fade
   (what the filter takes away). Resonance pulls the knot tighter.
 - **The swell** is the Amp envelope: a note swells the bundle from the middle.
-- **The readouts**: top right, the filter (**Open · nothing taken away** at 20 kHz); below, the
-  **Cutoff** you set and the Resonance, and where the filter is **Now** while a note moves it.
+
+### The corners and the crosshair
+
+The four captions above and below the lines are controls: **Wave** and **Envelope** (how far the
+filter envelope moves the cutoff) above, **Release** and **Level** below. Drag one up or down; the
+thin bar under each shows where it stands, and a double-click puts it back to its default.
+
+The tie is a crosshair: drag it **sideways** for **Cutoff** and **up or down** for **Resonance**. The
+triangles on the edges move one of the two alone.
 
 ## Starting points
 

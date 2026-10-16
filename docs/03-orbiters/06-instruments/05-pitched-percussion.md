@@ -103,7 +103,20 @@ open palm. The controls draw on it:
   **Damping** the felt: pads on the cords, a strip under the tines, the damper bar, the fingers on the bowl.
 - **Mix** draws rings above the body, one for each quarter; **Ratio** sets their spacing, **Index** their weight.
 
-When a note plays the striker swings and the body lights; the number bottom left is how long it rings.
+When a note plays the striker swings and the body lights. **Tap the body** to strike it (at C3),
+through the chain.
+
+### The corners and the crosshair
+
+- **Ring** is the number at the top left (it reads the body's ring time, in seconds): drag it up or
+  down.
+- **Level** is the meter at the bottom left: drag it up or down.
+- **Body** (top right) is a row of dots: tap for the next body.
+- **Stretch** is the ladder at the bottom right: drag it up or down.
+- The crosshair over the body moves where the mallet lands, **Position** (sideways), and how hard it
+  is, **Hardness** (up or down). The triangles on the edges move one of the two alone.
+
+Double-click a number to put it back to its default.
 
 ## Starting points
 

@@ -120,8 +120,17 @@ corner pick one of two pictures:
   being played riding through it. The rail on each stack's left shows its Position: tap a step of the
   rail to jump to that wave.
 
-The big number is Position 1, in %. A faint bar beside a Position shows how far the matrix can move
-it. The readouts name each oscillator's table and Position, or say it is off.
+A faint bar beside a Position shows how far the matrix can move it.
+
+### The corners and the crosshair
+
+- **Position 1** is the number at the top left, in %: drag it up or down.
+- **Level** is the meter at the bottom left.
+- **Position 2** is the ladder at the bottom right, under the view glyphs.
+- The crosshair moves the filter: **Cutoff** sideways, **Resonance** up or down; the triangles on the
+  edges move one alone.
+
+Drag a corner up or down; double-click it to put it back to its default.
 
 ## Starting points
 

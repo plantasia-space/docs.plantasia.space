@@ -97,9 +97,16 @@ every voice at once.
   can drag; with **Loop** on, a bar marks the part that repeats.
 - **Below, the whole instrument**: a small square for each zone at its pitch, octaves labelled (a kit
   names its sounds). Each note sounding sends a thread up from its square.
-- **The bottom line** names the zone and how long it plays.
+**Tap a zone's square** to hear it: it plays that zone at its own pitch, through the chain.
 
-While a new instrument loads, the screen shows a thin progress line and stays silent until it is ready.
+### The corners
+
+The four captions above and below the picture are controls: **Transpose** and **Fine** above,
+**Level** and **Loop** below. Drag one up or down (Loop: tap it, on or off); the thin bar under each
+shows where it stands, and a double-click puts a number back to its default.
+
+While a new instrument loads, the screen shows a thin progress line and stays silent until it is
+ready; the captions say how far it is, or why it couldn't load.
 
 ## Try it
 

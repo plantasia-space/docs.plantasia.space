@@ -68,8 +68,17 @@ player's, and they move the track the grains are cut from: **Speed**, **Tape** o
 - **The small squares** are the grains sounding now, higher or lower as they land left or right,
   hollow when they play backwards.
 
-Scroll over the screen to zoom in around the pointer. Top right, how wet the sound is; below, the
-density, and where in the track the grains are reading.
+Scroll over the screen to zoom in around the pointer.
+
+### The corners and the crosshair
+
+The four captions above and below the track are controls: **Density** and **Size** above, **Pitch**
+and **Dry/wet** below. Drag one up or down; the thin bar under each shows where it stands, and a
+double-click puts it back to its default. On a track that streams, Dry/wet says it needs the full
+track.
+
+The crosshair moves the grains' box: **Spray** sideways, **Spread** up or down; the triangles on
+the edges move one alone.
 
 ## Try it
 

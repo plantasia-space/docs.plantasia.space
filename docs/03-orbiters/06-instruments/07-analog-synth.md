@@ -110,7 +110,16 @@ Under the bench, the two LFO dials, with dashed wires to what each moves.
 
 The open tab's block is outlined, and **tapping a block opens its tab**: a filter opens its Filter tab,
 an amp its Amp tab, the oscillators the Mod tab, an LFO dial its LFO tab, the output the Voice tab.
-The big number is Filter 1's cutoff in kHz; the ladder at the right edge is the level now.
+### The corners and the crosshair
+
+- **Cutoff** is the number at the top left: Filter 1's cutoff in kHz as it sounds (its envelope and
+  LFOs move it). Drag it up or down to set it.
+- **Resonance** is the meter at the bottom left, Filter 1's peak.
+- **Glide** (top) and **Level** (bottom) are the ladders at the right.
+- The crosshair over the bench moves the same two, **Cutoff** (sideways) and **Resonance** (up or
+  down), at once: a filter sweep in one drag. The triangles on the edges move one alone.
+
+Drag a corner up or down; double-click it to put it back to its default.
 
 ## Starting points
 
