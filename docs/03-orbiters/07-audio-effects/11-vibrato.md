@@ -32,7 +32,7 @@ to start the waver.
 
 | Control | What it does |
 |---|---|
-| **LFO** | The waver is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the waver on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. |
+| **LFO** | The waver is one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the waver on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. |
 | <Dot>2</Dot>**Depth** | How far the pitch swings above and below the note, in **cents**: 100 ct is a semitone, up to 300 ct (three semitones). **0 ct** as it loads: the sound as it came in. |
 | <Dot>4</Dot>**Spread** | Swings the two sides apart: **0 %** as it loads (both sides together), 100 % one side up while the other is down. |
 

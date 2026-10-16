@@ -40,7 +40,7 @@ The Multimode filter loads as a clean low-pass at 350 Hz, with the LFO and the E
 ## LFO
 
 <Dot>6</Dot>The **LFO** tab moves the cutoff in a steady cycle: one of
-[the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module), picked in the menu on the tab (the
+[the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module), picked in the menu on the tab (the
 dimension's X as it loads). The hexagon on the tab switches it on and off, without a click; the LFO
 keeps running for whatever else reads it.
 

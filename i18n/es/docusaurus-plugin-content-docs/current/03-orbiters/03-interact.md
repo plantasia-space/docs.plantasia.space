@@ -41,8 +41,8 @@ su propio mapeo de X, Y y Z, así que los mismos ejes hacen cosas distintas en c
 las teclas **1**, **2** y **3** cambian entre ellas.
 
 El transporte, el loop y el volumen son comunes a las tres. Los ejes, el panel Cosmic LFO y los
-sensores pertenecen a la dimensión en la que estás; el panel puede mostrar cualquiera de los nueve LFO
-del Orbitador.
+sensores pertenecen a la dimensión en la que estás; el panel puede mostrar cualquier LFO de las
+dimensiones del Orbitador.
 
 <video
   className="ps-doc-video"
@@ -140,9 +140,11 @@ Mira [Efectos MIDI](/docs/orbiters/midi-effects) para los generadores y
 
 ## Cosmic LFO
 
-Un Orbitador tiene **nueve LFO**, ondas lentas que mueven cosas por sí solas: **LFO 1 X, 1 Y, 1 Z**
-viven en la dimensión I, **2 X … 2 Z** en la II, **3 X … 3 Z** en la III. Los ejes y todos los módulos
-del Orbitador los comparten: un LFO ajustado una vez mueve, a la vez, todo lo que lo lee.
+Un Orbitador tiene **tres LFO por dimensión**, ondas lentas que mueven cosas por sí solas: **LFO 1 X,
+1 Y, 1 Z** viven en la dimensión I, **2 X … 2 Z** en la II, **3 X … 3 Z** en la III. Así, un Orbitador con
+una dimensión tiene LFO 1 X, 1 Y y 1 Z, uno con dos tiene seis, y uno con tres tiene los nueve: cada menú
+de LFO muestra solo esos. Los ejes y todos los módulos del Orbitador los comparten: un LFO ajustado una
+vez mueve, a la vez, todo lo que lo lee.
 
 El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
 
@@ -150,9 +152,10 @@ El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
 - **Desplazamiento**: el valor alrededor del cual oscila este eje. En el centro mueve el eje por igual
   arriba y abajo; bájalo para mover los valores bajos, súbelo para los altos. Los extremos del eje
   recortan la oscilación. El desplazamiento es del eje.
-- **LFO**: cuál de los nueve lee este eje. Cada eje lee el suyo al cargar (X en la dimensión II lee el
-  LFO 2 X); elige otro y la columna muestra los controles de ese LFO, así que girarlos lo cambia para
-  todo lo que lo lee.
+- **LFO**: qué LFO lee este eje. Cada eje lee el suyo al cargar (X en la dimensión II lee el LFO 2 X);
+  elige otro y la columna muestra los controles de ese LFO, así que girarlos lo cambia para todo lo que
+  lo lee. Un eje puesto en el LFO de una dimensión que el Orbitador ya no tiene lee el suyo hasta que esa
+  dimensión vuelve, y entonces otra vez el que elegiste; la ayuda del menú lo dice.
 - **Forma**: una sola perilla que va de senoidal a triangular, rampa ascendente, cuadrada, rampa
   descendente y aleatoria, fundiendo cada forma con la siguiente; su etiqueta nombra la forma cuando
   está en una. La cuadrada y las rampas tienen bordes suaves de 4 ms, así que ninguna forma produce
@@ -172,10 +175,12 @@ a cualquier ritmo.
 ### Un LFO en un módulo {#an-lfo-in-a-module}
 
 Un módulo nunca tiene un LFO propio: la pestaña LFO de un instrumento, el movimiento de un Tremolo o de
-un Chorus, **leen uno de los nueve**. Su pestaña muestra:
+un Chorus, **leen uno de los LFO del Orbitador**. Su pestaña muestra:
 
-- **El menú LFO**: cuál de los nueve lee. Un módulo lee el LFO X de su dimensión al cargar (el segundo
-  LFO de un instrumento, el Y). Elige el que lee un eje y el eje y el sonido se mueven juntos.
+- **El menú LFO**: cuál lee, de las dimensiones del Orbitador. Un módulo lee el LFO X de su dimensión al
+  cargar (el segundo LFO de un instrumento, el Y). Elige el que lee un eje y el eje y el sonido se mueven
+  juntos. Un módulo puesto en el LFO de una dimensión que el Orbitador no tiene (una que quitaste, o un
+  módulo de un Orbitador más grande) lee el de su propia dimensión hasta que esa dimensión esté.
 - **El hexágono de la pestaña**: enciende y apaga la conexión de este módulo. El LFO sigue corriendo
   para lo demás que lo lea.
 - **Ritmo desde, Ritmo, Forma y Profundidad**: los del LFO, mostrados ahí mismo. Girarlos cambia ese LFO
@@ -184,7 +189,7 @@ un Chorus, **leen uno de los nueve**. Su pestaña muestra:
   módulo. La Cantidad va después de la Profundidad del LFO.
 
 Los LFO y cuál lee cada eje y cada módulo se guardan con el Orbitador. Todos en una
-<Term id="room">sala</Term> ven y oyen los mismos nueve en la misma fase, y el LFO de un efecto nunca
+<Term id="room">sala</Term> ven y oyen los mismos LFO en la misma fase, y el LFO de un efecto nunca
 hace saltar un sonido al dar Play o al saltar: vuelve al pulso doblándose.
 
 <video

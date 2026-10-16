@@ -35,7 +35,7 @@ On a World the Flanger loads at Dry/wet 50 %, so you hear it as soon as you add 
 
 | Control | What it does |
 |---|---|
-| **LFO** | The sweep is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sweep on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. One sweep, down and back, takes one cycle: slow (2 bars, or 0.25 Hz) is a long whoosh; fast (1/16, or a few Hz) turns into a warble. |
+| **LFO** | The sweep is one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sweep on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. One sweep, down and back, takes one cycle: slow (2 bars, or 0.25 Hz) is a long whoosh; fast (1/16, or a few Hz) turns into a warble. |
 | <Dot>3</Dot>**Depth** | How far the sweep travels. At 100 % the whoosh moves two octaves either way; at 0 % it stands still on one colour. |
 | <Dot>4</Dot>**Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) moves the sweep across the stereo image; 180° sweeps them against each other, the widest. In mono it stays a flange, never cancelled. |
 

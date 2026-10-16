@@ -35,7 +35,7 @@ On a World the Chorus loads at Dry/wet 50 %, so you hear it as soon as you add i
 
 | Control | What it does |
 |---|---|
-| **LFO** | The sway is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sway on and off (the copies stand still). Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. Slow sways drift; fast ones shimmer. |
+| **LFO** | The sway is one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sway on and off (the copies stand still). Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. Slow sways drift; fast ones shimmer. |
 | <Dot>4</Dot>**Depth** | How far the copies drift from the sound: more depth, more movement and more detune. At 0 % the copies don't move at all (a still doubling). |
 
 **Rate and Depth together set how out of tune it gets.** At 0.8 Hz and Depth 50 % Classic

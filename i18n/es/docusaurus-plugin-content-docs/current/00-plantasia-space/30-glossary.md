@@ -63,8 +63,8 @@ El cuerpo del Orbiter donde se junta el sonido: su **mezclador** combina el Mund
 
 
 ### LFO {#lfo}
-Una de las nueve ondas lentas de un Orbiter (LFO 1 X … 3 Z, tres por dimensión) que mueven cosas por sí solas. Los ejes y todos los módulos del Orbiter las comparten: un módulo o un eje elige cuál lee, y un LFO ajustado una vez mueve todo lo que lo lee.
-[El Cosmic LFO y los nueve LFO](/docs/orbiters/interact#cosmic-lfo)
+Una de las ondas lentas de un Orbiter, tres por dimensión (LFO 1 X … 3 Z con tres dimensiones), que mueven cosas por sí solas. Los ejes y todos los módulos del Orbiter las comparten: un módulo o un eje elige cuál lee, y un LFO ajustado una vez mueve todo lo que lo lee.
+[El Cosmic LFO y los LFO](/docs/orbiters/interact#cosmic-lfo)
 
 ### Luna {#moon}
 Un cuerpo del Orbiter que funciona como **envío y retorno**: el Mundo se envía a ella y solo devuelve su efecto, que el mezclador de la Estrella suma al sonido seco. Aquí vive una reverb o un delay compartido por todo el Orbiter.

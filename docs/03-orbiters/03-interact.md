@@ -41,7 +41,7 @@ own mapping of X, Y and Z, so the same axes do different things in each. On a co
 **2** and **3** switch between them.
 
 Transport, loop and volume are shared by the three. The axes, the Cosmic LFO panel and the sensors
-belong to the dimension you are in; the panel can show any of the Orbiter's nine LFOs.
+belong to the dimension you are in; the panel can show any LFO of the Orbiter's dimensions.
 
 <video
   className="ps-doc-video"
@@ -136,9 +136,11 @@ the launch grid.
 
 ## Cosmic LFO
 
-An Orbiter has **nine LFOs**, slow waves that move things by themselves: **LFO 1 X, 1 Y, 1 Z** live in
-dimension I, **2 X … 2 Z** in dimension II, **3 X … 3 Z** in dimension III. The axes and every module of
-the Orbiter share them: an LFO set once moves everything that reads it, in step.
+An Orbiter has **three LFOs per dimension**, slow waves that move things by themselves: **LFO 1 X, 1 Y,
+1 Z** live in dimension I, **2 X … 2 Z** in dimension II, **3 X … 3 Z** in dimension III. So an Orbiter
+with one dimension has LFO 1 X, 1 Y and 1 Z, one with two has six, and one with three has all nine:
+every LFO menu lists only these. The axes and every module of the Orbiter share them: an LFO set once
+moves everything that reads it, in step.
 
 The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
 
@@ -147,9 +149,10 @@ The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
 - **Offset**: the value it swings this axis around. At the middle it moves the axis up and down
   evenly; turn it down to move the lower values, up to move the upper ones. The ends of the axis clip
   the swing. Offset is the axis's own.
-- **LFO**: which of the nine this axis reads. Each axis reads its own as it loads (X in dimension II
-  reads LFO 2 X); pick another and the column shows that LFO's controls, so turning them turns it for
-  everything that reads it.
+- **LFO**: which LFO this axis reads. Each axis reads its own as it loads (X in dimension II reads
+  LFO 2 X); pick another and the column shows that LFO's controls, so turning them turns it for
+  everything that reads it. An axis set to the LFO of a dimension the Orbiter no longer has reads its
+  own until that dimension is back, then the one you picked again; the menu's hint says so.
 - **Shape**: one knob that runs from sine through triangle, ramp up, square and ramp down to random,
   blending each shape into the next; its label names the shape when it sits on one. Square and the
   ramps have soft 4 ms edges, so no shape clicks. The screen above it draws the wave you are making.
@@ -168,11 +171,12 @@ LFO in the module's own LFO input (below): there it runs inside the sound, smoot
 ### An LFO in a module {#an-lfo-in-a-module}
 
 A module never has an LFO of its own: an instrument's LFO tab, a Tremolo's or a Chorus's motion,
-each **reads one of the nine**. Its tab shows:
+each **reads one of the Orbiter's LFOs**. Its tab shows:
 
-- **The LFO menu**: which of the nine it reads. A module reads its dimension's X LFO as it loads (an
-  instrument's second LFO, the Y one). Pick the LFO an axis reads and the axis and the sound move
-  together.
+- **The LFO menu**: which one it reads, of the Orbiter's dimensions. A module reads its dimension's X LFO
+  as it loads (an instrument's second LFO, the Y one). Pick the LFO an axis reads and the axis and the
+  sound move together. A module set to the LFO of a dimension the Orbiter doesn't have (one taken out,
+  or a module from a bigger Orbiter) reads its own dimension's until that dimension is there.
 - **The hexagon on the tab**: switches this module's connection on and off. The LFO keeps running for
   whatever else reads it.
 - **Rate in, Rate, Shape and Depth**: the LFO's own, shown in place. Turning them turns that LFO
@@ -181,7 +185,7 @@ each **reads one of the nine**. Its tab shows:
   module's own. Amount comes after the LFO's Depth.
 
 The LFOs and which one each axis and module reads are saved with the Orbiter. Everyone in a
-<Term id="room">room</Term> sees and hears the same nine on the same phase, and an effect's LFO never
+<Term id="room">room</Term> sees and hears the same LFOs on the same phase, and an effect's LFO never
 jumps a sound at Play or a seek: it bends back onto the beat.
 
 <video

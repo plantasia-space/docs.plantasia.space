@@ -38,7 +38,7 @@ On a World the Phaser loads at Dry/wet 50 %, so you hear it as soon as you add i
 
 | Control | What it does |
 |---|---|
-| **LFO** | The sweep is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sweep on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. One sweep, up and back, takes one cycle: slow (1 bar, or 0.5 Hz) is a long swirl; fast (1/16, or a few Hz) turns into a throb. |
+| **LFO** | The sweep is one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sweep on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. One sweep, up and back, takes one cycle: slow (1 bar, or 0.5 Hz) is a long swirl; fast (1/16, or a few Hz) turns into a throb. |
 | <Dot>3</Dot>**Depth** | How far the notches travel. At 100 % they move three octaves either way; at 50 % (as it loads) one and a half; at 0 % they stand still on one colour. |
 | <Dot>4</Dot>**Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) makes the sweep turn across the stereo image; 180° sweeps them against each other, the widest. |
 

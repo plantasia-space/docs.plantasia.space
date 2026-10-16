@@ -33,7 +33,7 @@ The Tremolo loads doing nothing (Depth 0 %): turn Depth up to set the level movi
 
 | Control | What it does |
 |---|---|
-| **LFO** | The pulse is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the pulse on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it: an axis on the same LFO moves with the pulse. |
+| **LFO** | The pulse is one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the pulse on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it: an axis on the same LFO moves with the pulse. |
 | <Dot>2</Dot>**Depth** | How far the level dips on each pulse. At 50 % it dips to half, at 100 % to silence. **0 %** as it loads: the sound as it came in. |
 | <Dot>5</Dot>**Spread** | How far the right side's pulse trails the left's: **0°** as it loads (both sides together) up to **90°**, a quarter of a pulse later. |
 

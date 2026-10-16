@@ -35,7 +35,7 @@ Both load doing nothing (Amount 0): turn Amount up to set the sound moving.
 
 | Control | What it does |
 |---|---|
-| **LFO** | The movement is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the movement on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate** (one trip from side to side and back), **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. |
+| **LFO** | The movement is one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the movement on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate** (one trip from side to side and back), **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. |
 | <Dot>2</Dot>**Amount** | How far the sound travels: at 100 % it goes all the way left and all the way right, at 50 % halfway out each way. **0 %** as it loads: the sound as it came in. |
 
 **Shape: ways to travel.** The LFO's Shape: Sine lingers at each side; Triangle sweeps evenly; Square
