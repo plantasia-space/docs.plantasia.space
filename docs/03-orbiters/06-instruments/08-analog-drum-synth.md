@@ -18,23 +18,40 @@ sequencer in front plays the kit with no setup.
 <ModulePicture
   src="/img/orbiters/instruments/analog-drum-synth.jpg"
   wide
-  alt="The Analog drum synth with the kick selected and the Sound tab open: the sixteen pads on the left, the Kit and Sound tabs, then Osc, Noise · pitch, Filter and Amp, with Choke at the end."
-  dots={[[1, 11.5, 54.1], [2, 23.2, 13.7], [3, 28.3, 13.7], [4, 29.8, 22.8], [5, 49.5, 22.8], [6, 58, 22.8], [7, 81.5, 22.8], [8, 93.4, 81]]}
+  alt="The Analog drum synth with the kick selected and the Sound tab open: the kit screen with its sixteen rings between Tune and Decay on the left and Tone and Drive on the right, the Kit and Sound tabs, then Osc, Noise · pitch, Filter and Amp, with Choke at the end."
+  dots={[[1, 15.4, 52], [2, 31.8, 14.3], [3, 35.3, 14.3], [4, 31.5, 23.5], [5, 48.3, 23.5], [6, 58, 23.5], [7, 79.6, 23.5], [8, 93.9, 81]]}
 />
 
-The panel has two parts: the <Dot>1</Dot>**pads** on the left, and one block with two tabs, <Dot>2</Dot>**Kit** and
-<Dot>3</Dot>**Sound**.
+The panel has two parts: the <Dot>1</Dot>**kit screen** on the left, and one block with two tabs,
+<Dot>2</Dot>**Kit** and <Dot>3</Dot>**Sound**.
 
-- **Tap** a pad to select it: the **Sound** tab then shows that pad's controls. A tap never plays. (On the Hybrid drum synth it does.)
+On the screen each pad is a **ring drawn from its own sound**: the shape of its wave, from its
+oscillators, noise and pitch, with the kit's controls folded in. A kick is a slow, smooth wave, hats
+are fast and metallic, a clap is all noise. Turn the kit's Tune up and more waves run round every
+ring; turn Tone down and the edges go smooth.
+
+- **Tap** a pad to hear it and select it: the **Sound** tab then shows that pad's controls.
+- **Mute a pad:** **Shift-click** it (on a touch screen, **press and hold** it). It goes dashed and
+  stays silent when the beat reaches it; do it again to bring it back.
 - A pad **lights up** while it rings, fading with its own sound: a crash glows for a while, a closed
   hat blinks.
 - The selected pad has an outline. Which pad is selected is only what you are editing: it is not saved
   and other players in a room don't see it.
 
+### The corners
+
+The screen's corners are the kit's four that play best live: **Tune** (the number, top left),
+**Decay** (the meter, bottom left), **Tone** and **Drive** (the strips on the right). Drag one up or
+down: it **stays** where you let go. Double-click one to put it back to its default.
+
+**Tone** and **Drive** can also be played **for a moment**: hold **Shift** as you let go and the strip
+glides back to where it was. On a touch screen, **tap the strip, then drag it** right away: it glides
+back when you let go.
+
 ## Naming pads
 
-Every pad has a **name**, and the name is yours: **double-click** a pad (on a touch screen, **press and
-hold** it) and type. **Enter** keeps the new name, **Esc** leaves it as it was. A name holds up to 12
+Every pad has a **name**, and the name is yours: select the pad, then **double-click** its name under
+the screen (on a touch screen, **press and hold** the name) and type. **Enter** keeps the new name, **Esc** leaves it as it was. A name holds up to 12
 characters; clear it and the pad goes back to its default name.
 
 The name goes wherever the pad's key is named: the Drum sequencer's voices, the piano roll's rows, the
