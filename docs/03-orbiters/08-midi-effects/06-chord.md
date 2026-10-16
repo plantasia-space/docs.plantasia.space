@@ -74,7 +74,7 @@ guitar. A change to any control plays from the next chord: a chord already sound
 
 ## The screen
 
-<Dot>10</Dot>**Keys.** Three octaves of keys (two on a phone) under a row of the set's twelve chords, one per
+<Dot>10</Dot>**Keys.** Two octaves of keys, following the chord, under a row of the set's twelve chords, one per
 note of the octave from the root (a line marks the root's).
 
 - The key you play has a ring and a tick. The notes that come out are dots, larger when louder (Tilt
@@ -83,6 +83,9 @@ note of the octave from the root (a line marks the root's).
   its size.
 - **Edit a set** (with Set): tap a cell to pick its chord, then tap keys to add or take away notes, up
   to six. Each edit is one undo step.
+- **Octave arrows** (with Set): the two arrows under the keys move them an octave down or up, with
+  the range between them, to add a note beyond the keys (as far as two octaves from the key). Picking
+  another chord brings the keys back to it; while a note plays they follow it.
 
 With nothing playing, the keys show the chord being edited at full level, so you see its shape even
 at Level 0 %. On the smallest drawer the screen hides: the set keeps what you set.
