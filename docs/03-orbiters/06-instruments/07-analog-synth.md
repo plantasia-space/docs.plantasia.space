@@ -114,10 +114,10 @@ an amp its Amp tab, the oscillators the Mod tab, an LFO dial its LFO tab, the ou
 
 - **Cutoff** is the number at the top left: Filter 1's cutoff in kHz as it sounds (its envelope and
   LFOs move it). Drag it up or down to set it.
-- **Resonance** is the meter at the bottom left, Filter 1's peak.
+- **Resonance** is the meter at the bottom left, Filter 1's peak (with the Vowel type, its **Vowel**).
 - **Glide** (top) and **Level** (bottom) are the ladders at the right.
-- The crosshair over the bench moves the same two, **Cutoff** (sideways) and **Resonance** (up or
-  down), at once: a filter sweep in one drag. The triangles on the edges move one alone.
+- The crosshair over the bench moves the same two, **Cutoff** (sideways) and **Resonance** or **Vowel**
+  (up or down), at once: a filter sweep in one drag. The triangles on the edges move one alone.
 
 Drag a corner up or down; double-click it to put it back to its default.
 

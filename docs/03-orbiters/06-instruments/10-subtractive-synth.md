@@ -88,8 +88,8 @@ The four captions above and below the lines are controls: **Wave** and **Envelop
 filter envelope moves the cutoff) above, **Release** and **Level** below. Drag one up or down; the
 thin bar under each shows where it stands, and a double-click puts it back to its default.
 
-The tie is a crosshair: drag it **sideways** for **Cutoff** and **up or down** for **Resonance**. The
-triangles on the edges move one of the two alone.
+A crosshair over the lines moves the filter: drag it **sideways** for **Cutoff** and **up or down**
+for **Resonance**, and the tie follows. The triangles on the edges move one of the two alone.
 
 ## Starting points
 
