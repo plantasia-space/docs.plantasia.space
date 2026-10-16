@@ -140,11 +140,14 @@ Mira [Efectos MIDI](/docs/orbiters/midi-effects) para los generadores y
 
 ## Cosmic LFO
 
-Un Orbitador tiene **tres LFO por dimensión**, ondas lentas que mueven cosas por sí solas: **LFO 1 X,
-1 Y, 1 Z** viven en la dimensión I, **2 X … 2 Z** en la II, **3 X … 3 Z** en la III. Así, un Orbitador con
-una dimensión tiene LFO 1 X, 1 Y y 1 Z, uno con dos tiene seis, y uno con tres tiene los nueve: cada menú
-de LFO muestra solo esos. Los ejes y todos los módulos del Orbitador los comparten: un LFO ajustado una
-vez mueve, a la vez, todo lo que lo lee.
+Un Orbitador tiene **tres LFO por dimensión**, ondas lentas que mueven cosas por sí solas: **1X, 1Y,
+1Z** viven en la dimensión I, **2X … 2Z** en la II, **3X … 3Z** en la III. Ese nombre es la etiqueta del
+LFO en todas partes: en cada menú, en los hexágonos y en la pestaña de un módulo.
+
+Qué LFO existen lo decide el cuerpo con más dimensiones: el Mundo, la Luna o la Estrella. Si todos tienen
+una dimensión, el Orbitador tiene 1X, 1Y y 1Z; si la Luna tiene tres y el Mundo una, tiene los nueve.
+Cada menú de LFO muestra solo esos. Los ejes y todos los módulos del Orbitador los comparten: un LFO
+ajustado una vez mueve, a la vez, todo lo que lo lee.
 
 El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
 
@@ -152,7 +155,7 @@ El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
 - **Desplazamiento**: el valor alrededor del cual oscila este eje. En el centro mueve el eje por igual
   arriba y abajo; bájalo para mover los valores bajos, súbelo para los altos. Los extremos del eje
   recortan la oscilación. El desplazamiento es del eje.
-- **LFO**: qué LFO lee este eje. Cada eje lee el suyo al cargar (X en la dimensión II lee el LFO 2 X);
+- **LFO**: qué LFO lee este eje. Cada eje lee el suyo al cargar (X en la dimensión II lee 2X);
   elige otro y la columna muestra los controles de ese LFO, así que girarlos lo cambia para todo lo que
   lo lee. Un eje puesto en el LFO de una dimensión que el Orbitador ya no tiene lee el suyo hasta que esa
   dimensión vuelve, y entonces otra vez el que elegiste; la ayuda del menú lo dice.
@@ -165,8 +168,14 @@ El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
   LFO, Luminosidad estelar, Frecuencia, Masa). Un valor del mundo solo aparece si el mundo lo tiene; con
   uno elegido, las dos flechas bajan o suben su ritmo una octava (×½, ×2). **ƒ** muestra el ritmo al
   que va.
-- **El hexágono**: enciende y apaga el LFO de este eje. Dice **cX** cuando el eje lee su propio LFO, y el
-  nombre del LFO (**2Y**) cuando lee otro. Un LFO solo corre mientras algo que lo lee está encendido.
+- **El hexágono**: enciende y apaga el LFO de este eje. Dice el nombre del LFO que lee el eje: **1X** para
+  X en la dimensión I con su propio LFO, **2Y** cuando lee 2Y. Un LFO solo corre mientras algo que lo lee
+  está encendido.
+
+El panel muestra las dimensiones del Mundo. Una dimensión que solo tiene la Luna o la Estrella (la
+dimensión III de una Luna de tres, sobre un Mundo de una) no tiene columnas propias en el Cosmic LFO:
+ajusta sus LFO (3X, 3Y, 3Z) en la pestaña LFO de un módulo que los lea, o elige uno en el menú **LFO** de
+un eje aquí y sus controles aparecen en esa columna.
 
 Un eje mueve sus sonidos mapeados con suavidad hasta unos 2 Hz. Para una oscilación más rápida en un
 sonido, elige el LFO en la entrada de LFO del propio módulo (abajo): allí corre dentro del sonido, suave
@@ -178,11 +187,13 @@ Un módulo nunca tiene un LFO propio: la pestaña LFO de un instrumento, el movi
 un Chorus, **leen uno de los LFO del Orbitador**. Su pestaña muestra:
 
 - **El menú LFO**: cuál lee, de las dimensiones del Orbitador. Un módulo lee el LFO X de su dimensión al
-  cargar (el segundo LFO de un instrumento, el Y). Elige el que lee un eje y el eje y el sonido se mueven
-  juntos. Un módulo puesto en el LFO de una dimensión que el Orbitador no tiene (una que quitaste, o un
-  módulo de un Orbitador más grande) lee el de su propia dimensión hasta que esa dimensión esté.
-- **El hexágono de la pestaña**: enciende y apaga la conexión de este módulo. El LFO sigue corriendo
-  para lo demás que lo lea.
+  cargar (el segundo LFO de un instrumento, el Y): un módulo en la dimensión III de la Luna lee 3X, aunque
+  el Mundo tenga una sola dimensión. Elige el que lee un eje y el eje y el sonido se mueven juntos. Un
+  módulo puesto en el LFO de una dimensión que el Orbitador no tiene (una que quitaste, o un módulo de un
+  Orbitador más grande) lee el de su propia dimensión hasta que esa dimensión esté; el menú lo muestra
+  como **1X (3Y off)**.
+- **La pestaña y su hexágono**: la pestaña lleva el nombre del LFO que lee (**1X**, **2Y**); el hexágono
+  enciende y apaga la conexión de este módulo. El LFO sigue corriendo para lo demás que lo lea.
 - **Ritmo desde, Ritmo, Forma y Profundidad**: los del LFO, mostrados ahí mismo. Girarlos cambia ese LFO
   en todas partes, también en el panel Cosmic LFO.
 - **Cantidad** (o la Profundidad propia del módulo) y sus extras (**Spread**, **Fase**, **Spin**): del
