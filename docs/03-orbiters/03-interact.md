@@ -108,8 +108,8 @@ Equilibrium usually represents a bypass or neutral state.
 
 <LoopVideo
   src="https://herbarium.plantasia.space/docs/en/media/orbiters/interact/move-axes"
-  caption="In the Studio: X moves the One Reverb's Amount and Y the Track player's Speed, and each module's Screen follows. A double-click on X takes it back to its equilibrium."
-  label="With the transport playing, the X axis is dragged up and the One Reverb's Screen turns to a room; the Y axis is dragged up and down and the Track player's speed display follows; a double-click on X brings it and Amount back to 0."
+  caption="In the Studio: X moves the One Reverb's Amount and Y the Audio player's Speed, and each module's Screen follows. A double-click on X takes it back to its equilibrium."
+  label="With the transport playing, the X axis is dragged up and the One Reverb's Screen turns to a room; the Y axis is dragged up and down and the Audio player's speed display follows; a double-click on X brings it and Amount back to 0."
 />
 
 <video

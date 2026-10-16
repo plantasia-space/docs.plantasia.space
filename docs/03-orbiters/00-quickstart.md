@@ -38,11 +38,11 @@ The empty rack asks **What does this Orbiter play?** Pick **Audio**: the Orbiter
 
 ![What does this Orbiter play? Audio or Notes.](/img/orbiters/quickstart/choose-audio-or-notes.jpg)
 
-Press the empty **Instrument** slot and pick the **Track player**.
+Press the empty **Instrument** slot and pick the **Audio player**.
 
-![The empty Instrument slot of World I, with the Track player and Granular in Modules that fit here.](/img/orbiters/quickstart/instrument-picker.jpg)
+![The empty Instrument slot of World I, with the Audio player and Granular in Modules that fit here.](/img/orbiters/quickstart/instrument-picker.jpg)
 
-Press **Choose preview audio** in the Track player's header and pick an audio. It is only what you listen to while you build: the Orbiter can later play any audio.
+The Audio player starts with the audio the Studio already plays. To build with another, press **Preview audio** in the Audio player's header (or the audio button next to the Orbiter's **More**) and pick one. It is only what you listen to while you build: the Orbiter can later play any audio.
 
 :::note
 
@@ -52,9 +52,9 @@ Press **Choose preview audio** in the Track player's header and pick an audio. I
 
 ## 3. Add one effect {#effect}
 
-Press the **Audio effect** slot after the Track player. Under **One — one-knob modules**, pick **Reverb**: the One Reverb, a whole reverb on a single **Amount** knob. It goes in World I, after the player.
+Press the **Audio effect** slot after the Audio player. Under **One — one-knob modules**, pick **Reverb**: the One Reverb, a whole reverb on a single **Amount** knob. It goes in World I, after the player.
 
-![The rack of World I: Mappings, the Track player, then the One Reverb.](/img/orbiters/quickstart/rack-with-effect.jpg)
+![The rack of World I: Mappings, the Audio player, then the One Reverb.](/img/orbiters/quickstart/rack-with-effect.jpg)
 
 It loads at Amount 0 %, so you hear no change yet: see [How effects load](/docs/orbiters/audio-effects).
 
@@ -91,7 +91,7 @@ Open the **Visual** step. Everything already has a designed look, so you can kee
 
 The Panel and the Ring start **Tied · all bodies**: one look for the whole Orbiter.
 
-![The Visual step: the Panel's theme, fonts and colours, the Ring's colour and shape, and the Track player under Devices.](/img/orbiters/quickstart/visual-step.jpg)
+![The Visual step: the Panel's theme, fonts and colours, the Ring's colour and shape, and the Audio player under Devices.](/img/orbiters/quickstart/visual-step.jpg)
 
 ## 7. Release it {#release}
 

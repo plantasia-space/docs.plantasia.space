@@ -23,7 +23,7 @@ Each instrument has its own chain of modules. Two instruments are as complete an
 
 :::note[Only World I plays audio]
 
-In a Notes Orbiter, World II and III offer notes instruments and effects. The Track player and Granular are not offered there.
+In a Notes Orbiter, World II and III offer notes instruments and effects. The Audio player and Granular are not offered there.
 
 :::
 
@@ -50,11 +50,11 @@ A dimension you switch off costs nothing: its instrument is not even loaded.
 
 ## Switching an Orbiter to Audio
 
-If you replace World I's notes instrument with the Track player or Granular, the Orbiter becomes
+If you replace World I's notes instrument with the Audio player or Granular, the Orbiter becomes
 Audio. The Studio asks first and names what goes: the instruments of II and III and the modules in
 front of them. Their effects stay. **Undo** brings everything back.
 
-![The Replace menu of World I's synth: the Track player and Granular each make the Orbiter Audio and remove the instruments in II and III.](/img/orbiters/multiple-midi-instruments/replace-to-audio.jpg)
+![The Replace menu of World I's synth: the Audio player and Granular each make the Orbiter Audio and remove the instruments in II and III.](/img/orbiters/multiple-midi-instruments/replace-to-audio.jpg)
 
 ![The Switch to Audio dialog, naming the synths that leave World I, II and III.](/img/orbiters/multiple-midi-instruments/switch-to-audio.jpg)
 

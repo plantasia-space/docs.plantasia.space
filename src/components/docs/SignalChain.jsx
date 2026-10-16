@@ -12,7 +12,7 @@ const DEFAULT_LABELS = {
   midi: 'MIDI effects',
   midiHint: 'Note Echo, Velocity, Scale, Pitch',
   instrument: 'Instrument',
-  instrumentHint: 'Track player, Sampler, Subtractive synth',
+  instrumentHint: 'Audio player, Sampler, Subtractive synth',
   audio: 'Audio effects',
   audioHint: 'Reverb, Delay, Chorus, Flanger',
   notes: 'notes',

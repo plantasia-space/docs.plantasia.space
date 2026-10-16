@@ -8,10 +8,10 @@ sidebar_custom_props:
 **Granular** plays the audio you choose for an Audio Orbiter as a cloud of **grains**: short slices of
 the track, a few to dozens a second, each with its own pitch, place and direction. A voice becomes a
 shimmer, a chord a frozen texture, a drum loop a scatter of hits. Like the
-[Track player](/docs/orbiters/instruments/track-player), it sits at the head of World I, and everything
+[Audio player](/docs/orbiters/instruments/audio-player), it sits at the head of World I, and everything
 after it in the chain hears it.
 
-It is a Track player with grains on top: the **Player** group is the same player (speed, pitch, stretch,
+It is a Audio player with grains on top: the **Player** group is the same player (speed, pitch, stretch,
 formants), and **Dry/wet** blends the track as the player plays it with the grains.
 
 Pick the audio with the <Dot>1</Dot>button in the module's header.
@@ -28,7 +28,7 @@ Pick the audio with the <Dot>1</Dot>button in the module's header.
 <Dot>2</Dot>The **Player** group starts folded; open it from its column. Its controls are the Track
 player's, and they move the track the grains are cut from: **Speed**, **Tape** or **Stretch**,
 **Quantize**, **Pitch**, **Formant**, **Keep formants** and **Tonality**. See the
-[Track player](/docs/orbiters/instruments/track-player) for each.
+[Audio player](/docs/orbiters/instruments/audio-player) for each.
 
 ## Grain
 

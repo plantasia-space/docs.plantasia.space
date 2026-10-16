@@ -40,11 +40,11 @@ El rack vacío pregunta **¿Qué toca este Orbiter?** Elige **Audio**: el Orbita
 
 ![¿Qué toca este Orbiter? Audio o Notas.](/img/orbiters/quickstart/choose-audio-or-notes.jpg)
 
-Pulsa el hueco vacío **Instrument** y elige el **Track player**.
+Pulsa el hueco vacío **Instrument** y elige el **Audio player**.
 
-![El hueco Instrument vacío del Mundo I, con Track player y Granular en Modules that fit here.](/img/orbiters/quickstart/instrument-picker.jpg)
+![El hueco Instrument vacío del Mundo I, con Audio player y Granular en Modules that fit here.](/img/orbiters/quickstart/instrument-picker.jpg)
 
-Pulsa **Elegir audio de vista previa** en la cabecera del Track player y elige un audio. Es solo lo que escuchas mientras construyes: más adelante el Orbitador puede tocar cualquier audio.
+El Audio player empieza con el audio que el Studio ya está tocando. Para construir con otro, pulsa **Audio de vista previa** en la cabecera del Audio player (o el botón de audio junto a **Más** del Orbitador) y elige uno. Es solo lo que escuchas mientras construyes: más adelante el Orbitador puede tocar cualquier audio.
 
 :::note
 
@@ -54,9 +54,9 @@ Pulsa **Elegir audio de vista previa** en la cabecera del Track player y elige u
 
 ## 3. Añade un efecto {#effect}
 
-Pulsa el hueco **Audio effect** después del Track player. En **One — one-knob modules**, elige **Reverb**: la One Reverb, una reverb entera en una sola perilla, **Amount**. Va en el Mundo I, después del reproductor.
+Pulsa el hueco **Audio effect** después del Audio player. En **One — one-knob modules**, elige **Reverb**: la One Reverb, una reverb entera en una sola perilla, **Amount**. Va en el Mundo I, después del reproductor.
 
-![El rack del Mundo I: Mappings, el Track player y después la One Reverb.](/img/orbiters/quickstart/rack-with-effect.jpg)
+![El rack del Mundo I: Mappings, el Audio player y después la One Reverb.](/img/orbiters/quickstart/rack-with-effect.jpg)
 
 Se carga con Amount en 0 %, así que todavía no oyes ningún cambio: mira [Efectos de audio](/docs/orbiters/audio-effects).
 
@@ -93,7 +93,7 @@ Abre el paso **Visual**. Todo tiene ya un aspecto diseñado, así que puedes dej
 
 El Panel y el Ring empiezan **Tied · all bodies**: un mismo aspecto para todo el Orbitador.
 
-![El paso Visual: el tema, las fuentes y los colores del Panel, el color y la forma del Ring, y el Track player en Devices.](/img/orbiters/quickstart/visual-step.jpg)
+![El paso Visual: el tema, las fuentes y los colores del Panel, el color y la forma del Ring, y el Audio player en Devices.](/img/orbiters/quickstart/visual-step.jpg)
 
 ## 7. Publícalo {#release}
 
