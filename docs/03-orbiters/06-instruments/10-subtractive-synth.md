@@ -59,10 +59,11 @@ Attack, Decay and Release of both envelopes can be bent: see [Envelopes](/docs/o
 
 Three groups start folded; open one from its column.
 
-- <Dot>11</Dot>**LFO**: one slow wave for vibrato, wah or a moving pulse. **Sync** (on as it loads) keeps
-  it on the Orbiter's beat, so every player in a room is on one phase; off, **Rate** is in Hz. **Shape**:
-  sine, triangle, ramp up, square, ramp down or random. **Amount** is how much of it gets through to
-  everything it moves.
+- <Dot>11</Dot>**LFO**: one slow wave for vibrato, wah or a moving pulse: one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu
+  picks which (the dimension's X as it loads), the hexagon switches it on and off. **Rate in** (Hz,
+  Beats or a value of the World), **Rate**, **Shape** (sine, triangle, ramp up, square, ramp down or
+  random) and **Depth** are that LFO's, shared with whatever else reads it. **Amount** is how much of
+  it gets through to everything it moves.
 - <Dot>12</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument
   shares. Here the LFO, velocity, the key, pitch bend, pressure, the mod wheel and a random value per
   note can each move **Pitch**, **Wave**, **Cutoff**, **Resonance**, **Sub**, **Noise**, **Level** and
@@ -103,10 +104,10 @@ Set these from the defaults to hear what the instrument can do:
 ## Mapping
 
 In the Studio's **Map** mode every knob can follow an <Term id="axis">axis</Term>, and Mono, Legato and
-the LFO's Sync a toggle: see [Edit](/docs/orbiters/edit). Cutoff, Wave and the filter's Envelope are
+the LFO's on/off a toggle: see [Edit](/docs/orbiters/edit). Cutoff, Wave and the filter's Envelope are
 the ones to try first.
 
 ## In a room
 
-Every player in a <Term id="room">room</Term> hears the same notes with the same sound. Its LFO is on the same phase for everyone, synced or free (a free one counts the room's time);
+Every player in a <Term id="room">room</Term> hears the same notes with the same sound. Its LFO is the Orbiter's, on the same phase for everyone;
 pitch bend, pressure and the mod wheel stay your own.

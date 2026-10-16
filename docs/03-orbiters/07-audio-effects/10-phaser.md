@@ -29,7 +29,7 @@ On a World the Phaser loads at Dry/wet 50 %, so you hear it as soon as you add i
 <ModulePicture
   src="/img/orbiters/audio-effects/phaser.jpg"
   wide
-  alt="The Phaser at Dry/wet 50 %, synced at 1 bar: the Sweep screen, then Motion (Sync, Rate, Depth, Phase), Colour (Feedback, Notches, Centre, Low cut) and Output."
+  alt="The Phaser at Dry/wet 50 %, synced at 1 bar: the Sweep screen, then Motion, Colour (Feedback, Notches, Centre, Low cut) and Output."
   dots={[[1, 52.3, 14.7], [2, 39.2, 58.3], [3, 46.7, 58.3], [4, 54.2, 58.3], [5, 64.8, 57.1], [6, 74.5, 57.1], [7, 82, 57.1], [8, 89.5, 57.1], [9, 96.8, 45.3], [10, 96.8, 68.8], [11, 17.4, 14.2]]}
 />
 </TryModule>
@@ -38,12 +38,11 @@ On a World the Phaser loads at Dry/wet 50 %, so you hear it as soon as you add i
 
 | Control | What it does |
 |---|---|
-| <Dot>1</Dot>**Sync** | On (as it loads), one sweep takes a length of the Orbiter's tempo, from **8 bars** to **1/16**, and lands on the bar: every player in a room sweeps together. Off, you set the **Rate** in Hz. Switching never makes the sweep jump. |
-| <Dot>2</Dot>**Rate** | How long one sweep, up and back, takes. Slow (1 bar, as it loads, or 0.5 Hz) is a long swirl; fast (1/16, or a few Hz) turns into a throb. Synced, it reads a note length; free, 0.02 … 10 Hz. |
+| **LFO** | The sweep is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sweep on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. One sweep, up and back, takes one cycle: slow (1 bar, or 0.5 Hz) is a long swirl; fast (1/16, or a few Hz) turns into a throb. |
 | <Dot>3</Dot>**Depth** | How far the notches travel. At 100 % they move three octaves either way; at 50 % (as it loads) one and a half; at 0 % they stand still on one colour. |
 | <Dot>4</Dot>**Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) makes the sweep turn across the stereo image; 180° sweeps them against each other, the widest. |
 
-Start, stop or jump the transport and a synced sweep slides back onto the bar without a click.
+Start, stop or jump the transport and a sweep on **Beats** slides back onto the bar without a click.
 
 ### Colour
 
@@ -117,12 +116,12 @@ The big number is Amount; the word says **Swirl** or **Throb**.
 
 ## Try it
 
-- **The classic swirl on an electric piano or a pad.** The Phaser as it loads on a World: Dry/wet **50 %**, **1 bar**, **2** notches, Feedback **+40 %**. For a slower turn set Rate to **4 bars**.
-- **A phased drum loop with a solid kick.** Low cut at **150 Hz**, Notches **4**, Rate **1/2**, Depth **70 %**. The hats and the snare swirl; the kick stays where it was.
+- **The classic swirl on an electric piano or a pad.** The Phaser on a World: Dry/wet **50 %**, its LFO on **Beats** at **1 bar**, **2** notches, Feedback **+40 %**. For a slower turn set the Rate to **4 bars**.
+- **A phased drum loop with a solid kick.** Low cut at **150 Hz**, Notches **4**, the LFO's Rate **1/2**, Depth **70 %**. The hats and the snare swirl; the kick stays where it was.
 - **A hollow, talking lead.** Feedback **−70 %**, Centre **1.2 kHz**, Depth **100 %**, Phase **0°**.
 - **One gesture.** The One Phaser with Amount on an axis: the Throb one way, the dry sound in the middle, the Swirl the other way.
 
 ## Mapping
 
-Every Phaser control can be mapped to the Orbiter's axes, and Sync to its toggles; the One Phaser's
+Every Phaser control can be mapped to the Orbiter's axes, and the LFO's on/off to its toggles; the One Phaser's
 Amount maps like any knob: see [Edit](/docs/orbiters/edit).

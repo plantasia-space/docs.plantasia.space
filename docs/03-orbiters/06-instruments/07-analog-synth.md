@@ -79,7 +79,7 @@ default.
 | **Filter 1**, **Filter 2** | <Dot>10</Dot>**Type**: low-pass, band-pass, high-pass, notch, or **Vowel** (A, E, I, O, U; the cutoff moves the vowel). **Slope**: 12 or 24 dB an octave. <Dot>11</Dot>The envelope on top is the filter's own. <Dot>12</Dot>The knobs: **Cutoff**, **Resonance**, **Envelope** (how far the envelope moves the cutoff), **Drive**, and on Filter 1 **F1 → F2** (how much of Filter 1 also feeds Filter 2). Filter 2's **Follow** puts its cutoff on Filter 1's, plus an **Offset**. |
 | **Amp 1**, **Amp 2** | Each path's envelope, its **Level** and its **Pan**. |
 | **Mod** | Each oscillator's **pitch envelope**: where its pitch starts on a strike, and how long it takes to reach the key. |
-| **LFO 1**, **LFO 2** | Synced or free, six shapes, and **Amount**. What each one moves is set in the Matrix. |
+| **LFO 1**, **LFO 2** | Each reads one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module) (the dimension's X and Y as it loads): its menu, its hexagon (on/off), the LFO's **Rate in**, **Rate**, **Shape** and **Depth**, shared with whatever else reads it, and the synth's own **Amount**. What each one moves is set in the Matrix. |
 | **Voice** | **Unison** is thick but costs voices; the tab says how many. **Drift** lets the oscillators wander a little, like an analog pair. Then **Glide**, **Velocity**, **Level**, **Poly · Mono** and **Retrig · Legato**. |
 
 Every envelope, on the Filter and Amp tabs, has a **Loop** menu: it can loop while a key is held. **AD-R** repeats the attack and
@@ -136,11 +136,11 @@ In the Studio's **Map** mode, every number can be driven by an <Term id="axis">a
 - a **Cutoff** with its **Resonance**: the classic sweep
 - **Sync** under Sync: the sync scream
 
-Toggles can switch each source **On** and off, and flip **Follow**, **Slope**, an LFO's **Sync**,
+Toggles can switch each source **On** and off, and flip **Follow**, **Slope**, an LFO on and off,
 **Mono** and **Legato**. Waves, modes, filter types, loops and Unison are never on an axis: a preset
 carries them.
 
 ## In a room
 
 Everyone in a <Term id="room">room</Term> hears the same notes and the same sound; only the noise and Drift's slow wander
-can differ a little. A free LFO counts the room's time, so it is on the same phase for everyone, someone who joins late too.
+can differ a little. Its LFOs are the Orbiter's, on the same phase for everyone, someone who joins late too.

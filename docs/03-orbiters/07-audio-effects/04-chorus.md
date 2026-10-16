@@ -35,22 +35,23 @@ On a World the Chorus loads at Dry/wet 50 %, so you hear it as soon as you add i
 
 | Control | What it does |
 |---|---|
-| <Dot>1</Dot>**Mode** | **Classic** (as it loads): two copies, one per side, drifting against each other, the synth chorus. **Ensemble**: three copies and a quick shimmer on top, lusher and more liquid, like a string machine. |
-| <Dot>2</Dot>**Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo. |
-| <Dot>3</Dot>**Rate** | How fast the copies sway. Free: 0.05 … 8 Hz, **0.80 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/2** as it loads. Slow sways drift; fast ones shimmer. |
+| **LFO** | The sway is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sway on and off (the copies stand still). Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. Slow sways drift; fast ones shimmer. |
 | <Dot>4</Dot>**Depth** | How far the copies drift from the sound: more depth, more movement and more detune. At 0 % the copies don't move at all (a still doubling). |
 
-**Rate and Depth together set how out of tune it gets.** At the defaults (0.80 Hz, 50 %) Classic
+**Rate and Depth together set how out of tune it gets.** At 0.8 Hz and Depth 50 % Classic
 detunes by about ±13 cents, a gentle thickening. A fast rate with full depth (3 Hz, 100 %) reaches
 about a semitone: a wobble more than a chorus. The screen shows the detune in cents as you turn.
 
-**Synced.** A synced chorus sways once per note value or per so many bars, so a 1-bar or 2-bar sway
-breathes with the music. Start, stop or jump the transport and it never clicks.
+**On the beat.** With the LFO's Rate in on **Beats**, the chorus sways once per note value or per so
+many bars, so a 1-bar or 2-bar sway breathes with the music. Start, stop or jump the transport and it
+never clicks: the sway bends back onto the beat. A square or a ramp at full depth never turns the
+copies backwards either: they slide there.
 
 ### Colour
 
 | Control | What it does |
 |---|---|
+| <Dot>1</Dot>**Mode** | On the Colour title: **Classic** (as it loads), two copies, one per side, drifting against each other, the synth chorus. **Ensemble**: three copies and a quick shimmer on top, lusher and more liquid, like a string machine. |
 | <Dot>5</Dot>**Feedback** | Sends the copies back through the chorus: sharper and a little metallic. Up to 50 %; beyond that is a flanger's sound. |
 | <Dot>6</Dot>**Width** | How wide the copies spread: at 100 % (as it loads) they are as wide as the mode makes them, at 0 % the chorus sits in the centre. The dry sound is never touched. |
 | <Dot>7</Dot>**Low cut** | Keeps everything below this frequency **out of the chorus**, so the bass stays clean, centred and in tune. **Off** at 20 Hz (as it loads). |
@@ -112,12 +113,12 @@ the ladder on the right follows how loud the copies are, and the word says **Swa
 
 ## Try it
 
-- **The synth chorus on a pad or a plain saw.** As it loads on a World: **Classic**, Rate **0.8 Hz**, Depth **50 %**, Dry/wet **50 %**. One voice becomes a wide pair.
-- **A string machine.** Mode **Ensemble**, Depth **60 %**, Rate **0.5 Hz**: three copies and a shimmer on top.
+- **The synth chorus on a pad or a plain saw.** On a World: **Classic**, the LFO's Rate **0.8 Hz**, Depth **50 %**, Dry/wet **50 %**. One voice becomes a wide pair.
+- **A string machine.** Mode **Ensemble**, Depth **60 %**, the LFO's Rate **0.5 Hz**: three copies and a shimmer on top.
 - **A wide bass that stays in tune.** Low cut **200 Hz**, Depth **40 %**: the lows pass straight through and only the top widens.
 - **One gesture.** The One Chorus with Amount on an axis.
 
 ## Mapping
 
-Every Chorus control can be mapped to the Orbiter's axes, and Mode and Sync to its toggles; the One
+Every Chorus control can be mapped to the Orbiter's axes, and Mode and the LFO's on/off to its toggles; the One
 Chorus's Amount maps like any knob, resting on 0: see [Edit](/docs/orbiters/edit).

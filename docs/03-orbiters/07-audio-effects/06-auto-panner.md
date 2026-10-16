@@ -35,18 +35,17 @@ Both load doing nothing (Amount 0): turn Amount up to set the sound moving.
 
 | Control | What it does |
 |---|---|
-| <Dot>1</Dot>**Sync** | Off (as it loads): Rate is in Hz. On: Rate is a note value or a number of bars of the Orbiter's tempo, and the movement locks to the beat. |
+| **LFO** | The movement is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the movement on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate** (one trip from side to side and back), **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. |
 | <Dot>2</Dot>**Amount** | How far the sound travels: at 100 % it goes all the way left and all the way right, at 50 % halfway out each way. **0 %** as it loads: the sound as it came in. |
-| <Dot>3</Dot>**Rate** | How long one trip from side to side and back takes. Free: 0.05 … 10 Hz, **1.00 Hz** as it loads. Synced: 8 bars down to 1/32, with dotted values and triplets; **1/2** as it loads. |
-| <Dot>4</Dot>**Shape** | How the sound travels: **Triangle** at 0 %, **Sine** at 50 % (as it loads), **Square** at 100 %, and every step between. |
 
-**Shape: three ways to travel.** Triangle sweeps evenly; Sine lingers at each side; Square jumps and
-stays, the chopped pan of a hi-hat or a pad. Map Shape to an <Term id="axis">axis</Term> and it goes
+**Shape: ways to travel.** The LFO's Shape: Sine lingers at each side; Triangle sweeps evenly; Square
+jumps and stays, the chopped pan of a hi-hat or a pad; the ramps sweep one way and jump back; Random
+lands somewhere new each trip. Map Shape to an <Term id="axis">axis</Term> and it goes
 smoothly from gliding to chopping.
 
-**Sync on the beat.** With Sync on, the movement is locked to the Orbiter's beat, not only to its
-speed: one trip starts on the beat, heading left. At **1/2** and Shape 100 % the sound is hard left on
-beats 1 and 3 and hard right on 2 and 4, so a hit on the beat lands whole on its side. Every player
+**On the beat.** With the LFO's Rate in on **Beats**, the movement is locked to the Orbiter's beat,
+not only to its speed: one trip starts on the beat. At **1/2** and **Square** the sound switches side on
+every beat. Every player
 in a room pans together. Start, stop or jump the transport and the movement slides back onto the
 beat without a click.
 
@@ -114,12 +113,12 @@ arm stands upright and still: **Centred**.
 
 ## Try it
 
-- **Hi-hats that travel.** On a hat or a shaker line: Amount **70 %**, **Sync** on, Rate **1/2**, Shape **Sine**. The hats cross the image once every half bar.
-- **A ping-pong chop.** On a synth stab: Sync on, Rate **1/4**, Shape **Square**, Amount **100 %**. One trip there and back takes a quarter note, so each eighth lands on the other side.
-- **A loop that moves with a steady kick.** Amount **60 %**, Rate **0.25 Hz**, Low cut **150 Hz**: the top of the loop drifts and the lows stay in the centre.
+- **Hi-hats that travel.** On a hat or a shaker line: Amount **70 %**, the LFO's Rate in **Beats**, Rate **1/2**, Shape **Sine**. The hats cross the image once every half bar.
+- **A ping-pong chop.** On a synth stab: the LFO on **Beats**, Rate **1/4**, Shape **Square**, Amount **100 %**. One trip there and back takes a quarter note, so each eighth lands on the other side.
+- **A loop that moves with a steady kick.** Amount **60 %**, the LFO's Rate **0.25 Hz**, Low cut **150 Hz**: the top of the loop drifts and the lows stay in the centre.
 - **One gesture.** The One Auto-panner with Amount on an axis: the Chop one way, the still sound in the middle, the Drift the other.
 
 ## Mapping
 
-Every Auto-panner control can be mapped to the Orbiter's axes, and Sync to its toggles; the One
+Every Auto-panner control can be mapped to the Orbiter's axes, and the LFO's on/off to its toggles; the One
 Auto-panner's Amount maps like any knob, resting on 0: see [Edit](/docs/orbiters/edit).

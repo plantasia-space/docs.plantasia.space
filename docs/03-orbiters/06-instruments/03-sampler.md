@@ -78,7 +78,7 @@ Attack, Decay and Release can be bent: see [Envelopes](/docs/orbiters/instrument
 
 These three groups start folded; open them from their column.
 
-- <Dot>10</Dot>**LFO**: one [LFO](/docs/orbiters/instruments#lfo-and-voice) for the whole instrument.
+- <Dot>10</Dot>**LFO**: one [LFO](/docs/orbiters/instruments#lfo-and-voice) for the whole instrument: one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module), picked on its tab.
 - <Dot>11</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. **Modulation** has the LFO's column over
   **Pitch** (vibrato) and **Level** (tremolo). **MIDI** has **Pitch** (with the pitch bend, two
   semitones), **Level**, **Vibrato** (the mod wheel's, on top of the LFO's) and **LFO**. A swell is
@@ -115,7 +115,7 @@ In the Studio's **Map** mode, every number can be driven by an <Term id="axis">a
 - **Start**: from the attack to the body of the sound
 - **End** with **Release**: from a stab to a ring
 
-Toggles can flip **One-shot**, **Loop**, **Sync**, **Mono** and **Legato**. The instrument itself is
+Toggles can flip **One-shot**, **Loop**, the **LFO** on and off, **Mono** and **Legato**. The instrument itself is
 never on an axis: a preset carries it.
 
 ## In a room

@@ -16,7 +16,7 @@ The Multimode filter loads as a clean low-pass at 350 Hz, with the LFO and the E
 
 :::
 
-<TryModule module="multimodeFilter" set="lfoEnabled:on,resonance:45" source="pad">
+<TryModule module="multimodeFilter" set="lfoOn:on,resonance:45" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/multimode-filter.jpg"
   wide
@@ -39,15 +39,16 @@ The Multimode filter loads as a clean low-pass at 350 Hz, with the LFO and the E
 
 ## LFO
 
-<Dot>6</Dot>The **LFO** tab moves the cutoff in a steady cycle. The hexagon on the tab switches it on and
-off, without a click.
+<Dot>6</Dot>The **LFO** tab moves the cutoff in a steady cycle: one of
+[the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module), picked in the menu on the tab (the
+dimension's X as it loads). The hexagon on the tab switches it on and off, without a click; the LFO
+keeps running for whatever else reads it.
 
 | Control | What it does |
 |---|---|
-| **Shape** | The wave: **Sine**, **Triangle**, **Saw up**, **Saw down**, **Square**, or **S&H**, a new random value every cycle (**stereo**: one for each side; **mono**: one for both). |
+| **Rate in**, **Rate**, **Shape**, **LFO depth** | The LFO's own, shared with whatever else reads it: where its rate comes from (Hz, Beats or a value of the World), how fast, its wave (sine through triangle, ramp up, square and ramp down to **random**, a new value every cycle) and how deep. |
 | **Amount** | How far the cutoff sweeps, 0 … 8 octaves, centred on Cutoff (2 octaves as it loads). |
-| **Rate** | How fast, 0.01 … 20 Hz (1.2 Hz as it loads). |
-| **Phase** | Offsets the right side's sweep from the left's: at 180° they move in opposite directions. |
+| **Phase** | Offsets the right side's sweep from the left's: at 180° they move in opposite directions. On **random**, a Phase above 0 gives each side its own value (stereo steps); at 0 both share one. |
 | **Spin** | Runs the right side's LFO this much faster than the left's, up to 50 %, so the two drift apart and meet again. While it is above 0, Phase rests. |
 
 ## Envelope
@@ -83,9 +84,9 @@ whether loud moments **Open** the filter or **Close** it.
 ## Try it
 
 - **An auto-wah on a guitar-like line or an electric piano.** Envelope on, Amount **+3 oct**, Cutoff **300 Hz**, Resonance **50 %**: every note opens the filter and it closes behind it.
-- **A slow sweep on a pad.** LFO on, **Sine**, Rate **0.1 Hz**, Amount **3 oct**, Phase **90°**: the pad opens and closes, a little apart on each side.
+- **A slow sweep on a pad.** LFO on, its Shape **Sine** and Rate **0.1 Hz**, Amount **3 oct**, Phase **90°**: the pad opens and closes, a little apart on each side.
 - **An acid bass.** Model **Ladder**, **24 dB/oct**, Cutoff **400 Hz**, Resonance **80 %**, Drive **12 dB**, with Cutoff on an axis.
-- **Random steps on a loop.** LFO on, **S&H stereo**, Rate **4 Hz**, Type **Band-pass**.
+- **Random steps on a loop.** LFO on, its Shape **Random** and Rate **4 Hz**, Phase **90°**, Type **Band-pass**.
 
 ## Mapping
 

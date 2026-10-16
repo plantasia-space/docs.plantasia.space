@@ -20,7 +20,7 @@ This community brings together concepts and tools from acoustic ecology, soundsc
 
 
 ### Axis {#axis}
-One of an Orbiter's three performance controls: **X**, **Y** and **Z**. Moving an axis moves every control mapped to it, each between its own minimum, equilibrium and maximum. You move them on screen, by tilting a phone (Sensors) or with the Cosmic LFO.
+One of an Orbiter's three performance controls: **X**, **Y** and **Z**. Moving an axis moves every control mapped to it, each between its own minimum, equilibrium and maximum. You move them on screen, by tilting a phone (Sensors) or with an LFO (the Cosmic LFO panel).
 [How to map a control to an axis](/docs/orbiters/quickstart#map)
 
 
@@ -61,6 +61,10 @@ We use “Landscape” instead of “nature” because in many cultures nature i
 The grid an Orbiter's starts, jumps and switches wait for, so that they land on a bar line. You pick it next to SYNC: **None**, 1 bar, 4 bars and so on.
 [Sync](/docs/orbiters/sync)
 
+
+### LFO {#lfo}
+One of an Orbiter's nine slow waves (LFO 1 X … 3 Z, three per dimension) that move things by themselves. The axes and every module of the Orbiter share them: a module or an axis picks which one it reads, and an LFO set once moves everything that reads it.
+[The Cosmic LFO and the nine LFOs](/docs/orbiters/interact#cosmic-lfo)
 
 ### Moon {#moon}
 An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Star's Main mix adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.

@@ -35,12 +35,11 @@ On a World the Flanger loads at Dry/wet 50 %, so you hear it as soon as you add 
 
 | Control | What it does |
 |---|---|
-| <Dot>1</Dot>**Sync** | On (as it loads), one sweep takes a length of the Orbiter's tempo, from **8 bars** to **1/16**, and lands on the bar: every player in a room sweeps together. Off, you set the **Rate** in Hz. Switching never makes the sweep jump. |
-| <Dot>2</Dot>**Rate** | How long one sweep, down and back, takes. Slow (2 bars, or 0.25 Hz) is a long whoosh; fast (1/16, or a few Hz) turns into a warble. Synced, it reads a note length; free, 0.02 … 10 Hz. |
+| **LFO** | The sweep is one of [the Orbiter's nine LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which (the dimension's X as it loads), the hexagon switches the sweep on and off. Its **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **LFO depth** are that LFO's own, shared with whatever else reads it. One sweep, down and back, takes one cycle: slow (2 bars, or 0.25 Hz) is a long whoosh; fast (1/16, or a few Hz) turns into a warble. |
 | <Dot>3</Dot>**Depth** | How far the sweep travels. At 100 % the whoosh moves two octaves either way; at 0 % it stands still on one colour. |
 | <Dot>4</Dot>**Phase** | Offsets the right side's sweep from the left's. At 0° both sides move together; 90° (as it loads) moves the sweep across the stereo image; 180° sweeps them against each other, the widest. In mono it stays a flange, never cancelled. |
 
-Start, stop or jump the transport and a synced sweep slides back onto the bar without a click.
+Start, stop or jump the transport and a sweep on **Beats** slides back onto the bar without a click. A square or a very fast deep sweep never runs the sound backwards: the sweep lags a little instead.
 
 ### Comb
 
@@ -108,12 +107,12 @@ one sweep takes.
 
 ## Try it
 
-- **A slow whoosh on a pad.** Sync on, Rate **4 bars**, Depth **70 %**, Feedback **+40 %**, Dry/wet **50 %**.
-- **The jet on a drum loop.** Mode **Through-zero**, Feedback **+70 %**, Rate **2 bars**, Low cut **150 Hz**: the sweep passes through the sound and the kick stays solid.
+- **A slow whoosh on a pad.** the LFO on **Beats**, Rate **4 bars**, Depth **70 %**, Feedback **+40 %**, Dry/wet **50 %**.
+- **The jet on a drum loop.** Mode **Through-zero**, Feedback **+70 %**, the LFO's Rate **2 bars**, Low cut **150 Hz**: the sweep passes through the sound and the kick stays solid.
 - **A hollow, nasal colour.** Feedback **−60 %**, Depth **0 %**, then turn **Time** by hand, or map it to an axis: the colour moves only when you do.
 - **One gesture.** The One Flanger with Amount on an axis.
 
 ## Mapping
 
-Every Flanger control can be mapped to the Orbiter's axes, and Sync and Mode to its toggles; the One
+Every Flanger control can be mapped to the Orbiter's axes, and the LFO's on/off and Mode to its toggles; the One
 Flanger's Amount maps like any knob: see [Edit](/docs/orbiters/edit).

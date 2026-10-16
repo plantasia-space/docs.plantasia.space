@@ -43,7 +43,7 @@ You can change the selected exoplanet later.
 
 By expanding the information panel, you can see astronomical and physical measurements from the current exoplanet database.
 
-At the moment, this data mainly affects Cosmic LFO behavior inside Orbiters. Choosing a planet is primarily an artistic and symbolic decision.
+At the moment, this data mainly gives the rates an Orbiter's LFOs can take (the Cosmic LFO's rate in). Choosing a planet is primarily an artistic and symbolic decision.
 
 ### 2) Name your world
 

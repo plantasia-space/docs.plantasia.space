@@ -83,7 +83,7 @@ Attack, Decay and Release can be bent: see [Envelopes](/docs/orbiters/instrument
 
 <Dot>10</Dot>These three groups start folded; open them from their column.
 
-- **LFO**: one [LFO](/docs/orbiters/instruments#lfo-and-voice) for the whole instrument.
+- **LFO**: one [LFO](/docs/orbiters/instruments#lfo-and-voice) for the whole instrument: one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module), picked on its tab.
 - **Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. **Modulation** has the LFO's column over
   **Pitch** (vibrato), **Timbre** (the modulators' brightness wobbling, FM's wah) and **Feedback**.
   **MIDI** has **Pitch** (with the pitch bend, two semitones), **Timbre** (every modulator's
@@ -130,10 +130,10 @@ In the Studio's **Map** mode, every number can be driven by an <Term id="axis">a
 - the **Levels**: from dark to bright
 - **Feedback**: from smooth to gritty
 
-Toggles can switch **B**, **C** and **D** on and off, and flip **Sync**, **Mono** and **Legato**.
+Toggles can switch **B**, **C** and **D** on and off, and flip the **LFO** on and off, **Mono** and **Legato**.
 The algorithm and the waves are never on an axis: a preset carries them.
 
 ## In a room
 
-Everyone in a <Term id="room">room</Term> hears the same notes and the same sound, LFOs included: a free LFO counts the
-room's time, so it is on the same phase for everyone, someone who joins late too.
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound, LFOs included: they are the
+Orbiter's, on the same phase for everyone, someone who joins late too.

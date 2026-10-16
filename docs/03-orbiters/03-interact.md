@@ -40,8 +40,8 @@ Each Orbiter has up to three dimensions, **I**, **II** and **III**. Each one has
 own mapping of X, Y and Z, so the same axes do different things in each. On a computer, the keys **1**,
 **2** and **3** switch between them.
 
-Transport, loop and volume are shared by the three. The axes, the Cosmic LFO and the sensors belong to
-the dimension you are in.
+Transport, loop and volume are shared by the three. The axes, the Cosmic LFO panel and the sensors
+belong to the dimension you are in; the panel can show any of the Orbiter's nine LFOs.
 
 <video
   className="ps-doc-video"
@@ -136,21 +136,53 @@ the launch grid.
 
 ## Cosmic LFO
 
-Each axis (X, Y, Z) has an independent Cosmic LFO.
+An Orbiter has **nine LFOs**, slow waves that move things by themselves: **LFO 1 X, 1 Y, 1 Z** live in
+dimension I, **2 X … 2 Z** in dimension II, **3 X … 3 Z** in dimension III. The axes and every module of
+the Orbiter share them: an LFO set once moves everything that reads it, in step.
 
-You can control:
+The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
 
-- **Depth**: how far it moves the axis.
-- **Offset**: the value it swings around. At the middle it moves the axis up and down evenly; turn it
-  down to move the lower values, up to move the upper ones. The ends of the axis clip the swing.
+- **Depth**: how far the LFO swings. It belongs to the LFO, so it is the same for everything that
+  reads it.
+- **Offset**: the value it swings this axis around. At the middle it moves the axis up and down
+  evenly; turn it down to move the lower values, up to move the upper ones. The ends of the axis clip
+  the swing. Offset is the axis's own.
+- **LFO**: which of the nine this axis reads. Each axis reads its own as it loads (X in dimension II
+  reads LFO 2 X); pick another and the column shows that LFO's controls, so turning them turns it for
+  everything that reads it.
 - **Shape**: one knob that runs from sine through triangle, ramp up, square and ramp down to random,
   blending each shape into the next; its label names the shape when it sits on one. Square and the
   ramps have soft 4 ms edges, so no shape clicks. The screen above it draws the wave you are making.
-- **Frequency source**: a frequency you set (Hz), the tempo (a note value), or a value of the Entangled
-  World's exoplanet (Cosmic LFO, Stellar Luminosity, Frequency, Mass).
+- **Rate in**: where the rate comes from: a frequency you set (**Hz**), the tempo (**Beats**: 8 bars
+  down to 1/32, with dotted notes and triplets), or a value of the Entangled World's exoplanet (Cosmic
+  LFO, Stellar Luminosity, Frequency, Mass). A world value only appears when the world carries it;
+  with one selected, the two arrows move its rate down or up an octave (×½, ×2). **ƒ** reads the rate
+  it runs at.
+- **The hexagon**: switches this axis's LFO on and off. It reads **cX** when the axis reads its own
+  LFO, and the LFO's name (**2Y**) when it reads another. An LFO only runs while something reading it
+  is on.
 
-A world source only appears when the world carries that value. With one selected, the two arrows
-move its rate down or up an octave (×½, ×2); it stays a note of the same planet value.
+An axis moves its mapped sounds smoothly up to about 2 Hz. For a faster wobble on a sound, pick the
+LFO in the module's own LFO input (below): there it runs inside the sound, smooth at any rate.
+
+### An LFO in a module
+
+A module never has an LFO of its own: an instrument's LFO tab, a Tremolo's or a Chorus's motion,
+each **reads one of the nine**. Its tab shows:
+
+- **The LFO menu**: which of the nine it reads. A module reads its dimension's X LFO as it loads (an
+  instrument's second LFO, the Y one). Pick the LFO an axis reads and the axis and the sound move
+  together.
+- **The hexagon on the tab**: switches this module's connection on and off. The LFO keeps running for
+  whatever else reads it.
+- **Rate in, Rate, Shape and Depth**: the LFO's own, shown in place. Turning them turns that LFO
+  everywhere: in the Cosmic LFO panel too.
+- **Amount** (or the module's own Depth) and its extras (**Spread**, **Phase**, **Spin**): the
+  module's own. Amount comes after the LFO's Depth.
+
+The LFOs and which one each axis and module reads are saved with the Orbiter. Everyone in a
+<Term id="room">room</Term> sees and hears the same nine on the same phase, and an effect's LFO never
+jumps a sound at Play or a seek: it bends back onto the beat.
 
 <video
   className="ps-doc-video"

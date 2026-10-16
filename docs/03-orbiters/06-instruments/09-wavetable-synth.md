@@ -12,7 +12,7 @@ sequencer.
 It loads as the plainest sound there is, a pure sine at the key: Osc 2 and the sub are off, the
 filter is open and nothing in the matrix moves anything. Everything else is yours to bring in.
 
-<TryModule module="wavetable" set="osc2On:on,table1:vowels,table2:choir,pos2:40,detune2:7,gain2:70,cutoff:6000,m_lfo1_pos1:60,l1Rate:3,attack:600" source="chords">
+<TryModule module="wavetable" set="osc2On:on,table1:vowels,table2:choir,pos2:40,detune2:7,gain2:70,cutoff:6000,m_lfo1_pos1:60,bank:l1.rate-in:beats,bank:l1.beats:3,attack:600" source="chords">
 <ModulePicture
   src="/img/orbiters/instruments/wavetable-synth.jpg"
   wide
@@ -76,9 +76,10 @@ random value per note can move almost anything through the **matrix**.
   up or down).
 - **Mod**: a third envelope with nothing of its own: it moves things through the matrix (its **Env**
   column).
-- **LFO 1** and **LFO 2**: the six shapes as buttons, the wave drawn at its rate, then **Sync**
-  (**Sync** keeps the Orbiter's beat, **Free** runs in Hz), **Rate** and **Amount** (how much of the
-  LFO gets through). What it moves is the matrix's.
+- **LFO 1** and **LFO 2**: each reads one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module) (the dimension's X and Y as it loads): its
+  menu, its hexagon (on/off), the LFO's **Rate in**, **Rate**, **Shape** and **Depth**, shared with
+  whatever else reads it, then **Amount** (how much of the LFO gets through). What it moves is the
+  matrix's.
 
 Drag an envelope's points, or type a value under it. Attack, Decay and Release can be bent: see [Envelopes](/docs/orbiters/instruments#envelopes).
 
@@ -149,10 +150,10 @@ In the Studio's **Map** mode, every number can be driven by an <Term id="axis">a
 - **Cutoff**, or an effect's amount for a growl
 
 Toggles can switch **1**, **2** and the **Sub** on and off, and flip the sub's Octave, Unison's mode,
-the LFOs' Sync, **Mono** and **Legato**. The tables, effects, filter type and LFO shapes are never on
+the LFOs' on/off, **Mono** and **Legato**. The tables, effects, filter type and LFO inputs are never on
 an axis: a preset carries them.
 
 ## In a room
 
-Everyone in a <Term id="room">room</Term> hears the same notes and the same sound, LFOs included (a free LFO counts the
-room's time, so someone who joins late is on the same phase); only the mod wheel is your own.
+Everyone in a <Term id="room">room</Term> hears the same notes and the same sound, LFOs included (they are the
+Orbiter's, on the same phase for everyone, someone who joins late too); only the mod wheel is your own.

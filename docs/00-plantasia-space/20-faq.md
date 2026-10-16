@@ -51,7 +51,7 @@ sidebar_custom_props:
 
 <details>
   <summary>How can listeners interact with a release?</summary>
-  <div>Inside orbiters through motion sensors, MIDI controllers, on-screen controls, and even exoplanet data in the cosmic LFOs.</div>
+  <div>Inside orbiters through motion sensors, MIDI controllers, on-screen controls, and even exoplanet data, which can set the rate of the Orbiter's LFOs.</div>
 </details>
 
 <details>
