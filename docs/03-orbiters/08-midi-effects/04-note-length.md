@@ -62,8 +62,14 @@ one beat and two beats show how the settings treat each. While you play, the fou
 past, newest on top, with now three quarters of the way across.
 
 With **Up**, the bar starts where the outline ends. A note too quiet after Decay is a ring with a
-slash. A latched or still-open note fades out at the right edge. Under the picture: the setting, then
-the last note in and how long it came out ("C3 · 500 ms → 250 ms").
+slash. A latched or still-open note fades out at the right edge.
+
+### The corners
+
+The four captions above and below the picture are controls: **Length** (top left), **Time** (top
+right: a note value or milliseconds, whichever Length uses; just a reading while Length is As
+played), **Gate** (bottom left) and **Decay** (bottom right). Drag one up or down; the thin bar under
+each caption shows where it stands, and a double-click puts a number back to its default.
 
 ## Try it
 

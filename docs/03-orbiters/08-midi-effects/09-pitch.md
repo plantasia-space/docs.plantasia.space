@@ -44,10 +44,19 @@ Pitch loads at Transpose 0 with the full range: every note passes as it came.
 ## The screen
 
 <Dot>6</Dot>**The Stairs.** One octave as a staircase: the ring is the note that came in, the
-bright ball where it lands, and the arc the move between them. The ladder at the right is the whole
-keyboard, lit where notes may come out. The big number is the Transpose; the word above says what
-happened to the last note: **In range**, **Folded**, **Limited** or **Blocked** (**Neutral** while
-Pitch changes nothing).
+bright ball where it lands, and the arc the move between them. The ladders at the right are the
+whole keyboard, lit where notes may come out. The word above says what happened to the last note:
+**In range**, **Folded**, **Limited** or **Blocked** (**Neutral** while Pitch changes nothing).
+
+### The corners
+
+- **Transpose** is the number at the top left: drag it up or down (in semitones or degrees, whichever
+  Unit says).
+- **Range mode** (bottom left) is a row of dots: tap for the next (Block, Fold or Limit).
+- **Top** (the upper ladder on the right) is the highest note let out, and **Lowest** (the lower one)
+  the lowest: drag them up or down. Top sets Range for you, as Lowest plus Range.
+
+Double-click one to put it back to its default.
 
 ## Try it
 

@@ -81,11 +81,21 @@ note of the octave from the root (a line marks the root's).
   shows as dot size). An open ring is a note the strum hasn't reached yet.
 - In the row, the chord playing is filled, the one being edited outlined; a bar at each foot shows
   its size.
-- **Edit a set** (with Set): tap a cell to pick its chord, then tap keys to add or take away notes, up
-  to six. Each edit is one undo step.
-- **Octave arrows** (with Set): the two arrows under the keys move them an octave down or up, with
-  the range between them, to add a note beyond the keys (as far as two octaves from the key). Picking
-  another chord brings the keys back to it; while a note plays they follow it.
+- The number on the left says how many notes sound: a reading.
+
+### Play it
+
+The screen is playable. **Tap a chord** in the row to hear it and pick it for editing; **tap a key**
+to hear that note through the chord. To edit a set (with Set), **Shift-tap or hold a key** to add it
+to the chord being edited or take it away, up to six notes; each edit is one undo step. The two
+**octave arrows** under the keys move them an octave down or up, to reach a note beyond them (as far
+as two octaves from the key). Picking another chord brings the keys back to it; while a note plays
+they follow it.
+
+### The corners
+
+**Level** is the meter at the bottom left; **Strum** (top) and **Tilt** (bottom) are the ladders on
+the right. Drag one up or down; double-click to put it back to its default.
 
 With nothing playing, the keys show the chord being edited at full level, so you see its shape even
 at Level 0 %. On the smallest drawer the screen hides: the set keeps what you set.

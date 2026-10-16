@@ -59,8 +59,16 @@ landing sits higher or lower by its pitch. A repeat that won't sound stays as a 
 too quiet, off the keyboard, or past the echo's longest reach (the dashed line, about 2.7 s).
 
 **Tap a landing to mute that repeat**, for rhythmic echoes; tap the first one to mute the note you
-played. The number on the left counts the repeats that sound. On the smallest drawer the screen
-hides, and so do the taps: the mutes keep what you set.
+played. The number on the left counts the repeats that sound.
+
+### The corners and the crosshair
+
+**Level** is the meter at the bottom left; **Repeats** (top) and **Pitch** (bottom) are the ladders
+on the right. Drag one up or down; double-click to put it back to its default. The crosshair moves
+**Delay** (sideways: a note value with Sync, else milliseconds) and **Feedback** (up or down); the
+triangle on the bottom edge moves Delay alone, the one on the right edge Feedback alone.
+
+On the smallest drawer the screen hides, and so do the taps: the mutes keep what you set.
 
 ## Try it
 

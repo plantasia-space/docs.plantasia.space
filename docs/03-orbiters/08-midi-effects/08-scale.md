@@ -60,11 +60,24 @@ free while the top is held to the scale.
 
 <Dot>9</Dot>**The Strip.** One octave as thirteen cells, from the root on the left to the root on the
 right; the cells with a bright outline are the scale's notes. A note comes in as a dot above its own
-column, drops, and slides sideways to the cell it lands on. The big number is how far the last note
-moved; top right, the last note out.
+column, drops, and slides sideways to the cell it lands on. With **Block**, a note that isn't played
+leaves a cross.
 
-With **Block**, a note that isn't played leaves a cross. With the User scale you can tap a cell to put
-that note in or take it out (never the root).
+### Play it
+
+**Tap a cell** to hear that note through the Scale. With the User scale, **Shift-tap or hold a cell**
+to put that note in or take it out (never the root; not while following the Orbiter).
+
+### The corners
+
+- **Transpose** is the number at the top left: drag it up or down.
+- **Scale** is the ladder at the top right: drag through the scales. Its first step, **Orbiter**,
+  plays in the Orbiter's tonality and follows it; any other is the Scale's own.
+- **Root** (bottom left) is a row of twelve dots: tap for the next. While following the Orbiter it is
+  only a reading, the Orbiter's root.
+- **Snap** (bottom right) is a row of dots: tap for the next (nearest, down, up, or not played).
+
+Double-click a number to put it back to its default.
 
 ## Try it
 

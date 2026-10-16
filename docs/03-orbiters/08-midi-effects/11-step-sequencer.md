@@ -140,9 +140,25 @@ of 16 puts the accent somewhere new on every pass. At 0 a lane follows Length.
 
 ## The screen
 
-<Dot>17</Dot>**Orbit.** The loop is a ring, one tick per step, clockwise from the top. A Moon on a
-tick is a note: further out is higher, its lit part its velocity, a tail its length. **Tap a tick** to
-rest or play that step. Top right, the note playing; below, the rate, the direction and the root.
+<Dot>17</Dot>**Orbit.** The loop is a ring, one ray per step, clockwise from the top. A Moon on a
+ray is a note: further out is higher, its lit part its velocity, a tail its length.
+
+### Edit the notes on the Orbit
+
+- **Tap an empty ray** to add a note there, at the ring you tapped (one ring per octave).
+- **Tap a Moon** to take it away (a rest).
+- **Drag a Moon in or out** to change its note; **drag it around** to move it to another step (it keeps
+  its note; onto another Moon, the two swap). A drag keeps the way it set out.
+
+### The corners
+
+**Length** is the number at the top left and **Rate** the ladder at the top right: drag one up or
+down. **Direction** (bottom left) is a row of dots: tap for the next. At the bottom right, the **patterns**: eight tiles
+at a time (bank A or B under them); tap one to play it (while playing, it waits for the launch grid,
+as on the pads). **Ctrl or ⌘ + click** a tile keeps what plays now in that pattern.
+
+The grid glyph beside the banks shows all 16 patterns on the screen, as rings you can tap; the orbit
+glyph there takes you back to the Orbit.
 
 ## Try it
 

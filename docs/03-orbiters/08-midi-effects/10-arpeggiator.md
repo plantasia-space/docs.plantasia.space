@@ -90,8 +90,20 @@ pattern is kept for when you switch it on again.
 ## The screen
 
 <Dot>8</Dot>**Vine on the staff.** The line is a vine on a staff: one leaf per note, as long as its
-Gate and as wide as it is loud; the leaf playing is lit. Top right, the note sounding; below, the
-order, the rate, the gate and the shift.
+Gate and as wide as it is loud; the leaf playing is lit. The number is how many notes are held.
+
+### The corners and the crosshair
+
+The four captions in the rows above and below the picture are controls: **Order** (top left),
+**Rate** (top right), **Gate** (bottom left) and **Cycles** (bottom right, the Steps setting: how
+many shifted cycles follow). Drag one up or down; a choice such as Order steps through its options,
+and the thin bar under each caption shows where it stands. Double-click a number to put it back to
+its default.
+
+The crosshair over the staff moves two more: drag the point **sideways** for **Swing** and **up or
+down** for **Distance** (how far each shifted cycle moves, in semitones or degrees, whichever Shift
+by uses). The triangle on the bottom edge moves Swing alone, the one on the right edge Distance
+alone.
 
 ## Try it
 

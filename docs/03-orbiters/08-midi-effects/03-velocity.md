@@ -55,11 +55,18 @@ above Out high and the curve turns over: loud in, soft out.
 <Dot>10</Dot>The plot reads the velocity in (across) against the velocity out (up). The faint diagonal is
 "unchanged"; the solid line is the curve. Grey zones are outside the window; with Gate, the curve
 drops through the floor there. With Random, two faint lines show its spread. A dot marks each note
-just played, and the readout says what it came in and went out at ("90 → 104").
+just played, and the readouts under the plot say what it came in and went out at ("90 → 104").
 
 Drag the handles to shape it: under the plot, **Lowest** and the window's top; on the left, **Out
-low** and **Out high** (double-click one to reset it). On the smallest drawer the screen hides; the
-number boxes do the same job.
+low** and **Out high** (double-click one to reset it).
+
+### The corners and the crosshair
+
+The two captions above the plot are controls: **Mode** (left) and **Random** (right; with Fixed, the
+**Fixed** velocity stands there instead). Drag one up or down. The crosshair moves **Compand**
+(sideways) and **Drive** (up or down); the triangle on the bottom edge moves Compand alone, the one
+on the right edge Drive alone. On the smallest drawer the screen hides; the number boxes do the same
+job.
 
 ## Try it
 

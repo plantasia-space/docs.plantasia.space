@@ -65,8 +65,14 @@ moves it could take.
   the moon.
 - **Saturn** lights when the note stayed where it was.
 - With **Alternate**, a dotted line joins the stars in the order the walk takes them.
-- The number is **Chance**; the three lights on the right say whether the last note went up (+),
-  stayed (0) or went down (−).
+
+### The corners and the crosshair
+
+The number at the top left is **Chance**: drag it up or down (double-click resets it). At the top
+right, **Direction** (up, both ways or down) and at the bottom right, **Mode** (Random or Alternate)
+are rows of dots: tap to take the next. The crosshair is the sky: drag it **sideways** for
+**Choices** (how many stars) and **up or down** for **Interval** (how high they reach, in semitones or
+degrees); the triangles on the edges move one of the two alone.
 
 ## Try it
 
