@@ -25,7 +25,9 @@ Publicar un Nuevo Audio abre un formulario guiado que te lleva por la carga, met
 
 ## 1) Subir el archivo de audio
 
-Selecciona un archivo en formato **WAV** o **MP3**.
+Selecciona un archivo en formato **WAV**, **AIFF**, **FLAC**, **OGG** o **MP3**.
+
+Cada archivo se convierte en un WAV (16 bits, 44,1 kHz) y un MP3, y eso es lo que se reproduce. Un AIFF se puede escuchar cuando termina esa conversión, porque la mayoría de los navegadores no reproducen AIFF directamente.
 
 Este archivo se sube al servidor y se convierte en distintos formatos de Audio.
 
@@ -80,6 +82,8 @@ Es necesario tener al menos un Artista asociadx al lanzamiento.
 Cada Audio se asigna a un mundo entrelazado y a un orbitador predeterminados.
 
 Puedes cambiarlos para prever cómo se comporta el Audio en distintos contextos.
+
+Solo se ofrecen Orbitadores de Audio: los que en el Mundo I reproducen el audio, con el **Audio player** o **Granular**. Un Orbitador de Notas toca sus propios instrumentos, así que no puede reproducir un Audio. Consulta [Audio o Notas](/docs/orbiters/instruments).
 
 Estas selecciones serán las predeterminadas, pero no limitan usos futuros.
 

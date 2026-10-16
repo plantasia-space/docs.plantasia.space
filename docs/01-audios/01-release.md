@@ -25,7 +25,9 @@ Releasing an Audio opens a guided form that takes you through upload, metadata, 
 
 ## 1) Upload the Audio file
 
-Select an audio file in **WAV** or **MP3** format.
+Select an audio file in **WAV**, **AIFF**, **FLAC**, **OGG** or **MP3** format.
+
+Every file is converted into a WAV (16-bit, 44.1 kHz) and an MP3, and those are what plays. An AIFF can be heard once that conversion is done, because most browsers can't play AIFF directly.
 
 This file is uploaded to the server and becomes the core of the Audio release.
 
@@ -78,6 +80,8 @@ Additional contributors who are not on the platform can be credited later.
 Each Audio is assigned to a default Entangled World and Orbiter.
 
 You can change these selections to preview how the Audio behaves in different contexts.
+
+Only Audio Orbiters are offered: Orbiters whose World I plays the audio, on the **Audio player** or **Granular**. A Notes Orbiter plays its own instruments, so it can't play an Audio. See [Audio or Notes](/docs/orbiters/instruments).
 
 These selections will be default ones, but do not permanently limit future use.
 
