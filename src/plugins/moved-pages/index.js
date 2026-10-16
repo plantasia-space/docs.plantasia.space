@@ -8,6 +8,7 @@ import { redirectHtml } from '../redirect-html.js';
 // locale prefix; add a line here whenever a live page moves.
 const MOVED = [
   ['/docs/orbiters/drum-sequencer', '/docs/orbiters/midi-effects/drum-sequencer'],
+  ['/docs/orbiters/instruments/track-player', '/docs/orbiters/instruments/audio-player'],
 ];
 
 export default function movedPagesPlugin(context) {
