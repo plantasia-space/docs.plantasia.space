@@ -61,8 +61,8 @@ marker where **Tone** starts taking them away. The word above says **Odd** with 
 <TryModule module="oneSaturator" set="amount:60" source="drums">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-saturator.jpg"
-  alt="The One Saturator at Amount +60 %, Crunch, on drums: the Harmonics screen above the Amount knob."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Saturator at Amount 60 %: the flowering plant on the Harmonics screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -83,9 +83,8 @@ bud; turned either way, the stem grows and it flowers. To the right (Warm) it is
 petals: one pair for each odd harmonic loud enough to hear, each as long as it is loud, the outer ones
 shortening as the top end closes; past half way the petals grow teeth and sparks drift off: the crunch.
 To the left (Tube) it is a tulip: a cup of three broad petals, with a stamen inside for each even
-harmonic, and a soft glow around it past half way. The big number is the drive the knob has set
-inside, and the ladder counts the harmonics you can hear. The word above says **Warmth**, **Crunch** or
-**Tube**; below, the drive and the top end. While sound plays the plant breathes and leans with its
+harmonic, and a soft glow around it past half way. The ladder on the right counts the harmonics you
+can hear. The big number is Amount: drag it up or down to turn it, as you would the knob. While sound plays the plant breathes and leans with its
 level; at rest it is a still picture.
 
 ## Try it

@@ -86,8 +86,8 @@ that drift is the detune.
 <TryModule module="oneChorus" set="amount:60" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-chorus.jpg"
-  alt="The One Chorus playing at Amount +60 %, Sway: two voices ±26 cents apart at 0.82 Hz on the Voices screen."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Chorus at Amount 60 %: two strands winding round a line on the Voices screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -105,11 +105,11 @@ Map Amount to an <Term id="axis">axis</Term> and one gesture goes from a shimmer
 
 ### The screen
 
-<Dot>2</Dot>**A mobile.** The sound feeds up to a hub with the fixed low cut on it; two threads hold the copies
-out, an icosahedron and a dodecahedron. They turn in place, one each way: slowly for Sway, fast for
-Shimmer. How far apart they hang is how far the copies swing. The big number is the detune in cents,
-the ladder on the right follows how loud the copies are, and the word says **Sway**, **Off** or
-**Shimmer**.
+<Dot>2</Dot>**Chorus waves.** Named after the chorus waves found in Earth's magnetic field, which sound like
+birdsong. A line runs straight up from the sound, and the two copies wind round it: a wave travelling
+up, and a strand of dots travelling down and bunching as it goes. Where they pass behind the line they
+fade. For Sway they wind wide, long and slowly; for Shimmer, tight, short and fast. At 0 they rest,
+narrow, grey and still. The ladder on the right follows how loud the copies are. The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 

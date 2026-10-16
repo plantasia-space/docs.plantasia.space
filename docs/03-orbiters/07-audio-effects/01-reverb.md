@@ -68,8 +68,8 @@ hear (see [Audio effects](/docs/orbiters/audio-effects)).
 <TryModule module="oneReverb" set="amount:60" source="piano">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-reverb.jpg"
-  alt="The One Reverb playing at Amount 60 %, Hall: the Space screen shows Decay 1.7 s and Pre-delay 15 ms."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Reverb at Amount 60 %: an octopus reaching out over its echo rings on the Space screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -87,10 +87,11 @@ Map Amount to an <Term id="axis">axis</Term> and one gesture sweeps from the blo
 
 ### The screen
 
-<Dot>2</Dot>A craft hovers over the sound: hidden at 0, a small dome that widens into a flat saucer as you
-turn further either way. Turned right it flies dome up; turned left it flies upside down, shining on
-the sound. The big number is the decay in seconds; the word says **Room** or **Hall** turned right,
-**Plate** or **Bloom** turned left.
+<Dot>2</Dot>An octopus floats over the sound, and its arms are the room. At 0 they curl under its head,
+grey and still. Turned right they reach down and out over the ground, close for a room and wide for a
+hall; turned left they spread to the sides and curl up, the plate blooming. Rings spread on the ground
+under it, one for every second or so of the tail, and while sound plays the arms sway and the spots on
+its head light with the reverb's level, as does the ladder on the right. The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 

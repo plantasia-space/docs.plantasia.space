@@ -80,8 +80,8 @@ the whole mix, often what you want.
 <TryModule module="oneFlanger" set="amount:60" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-flanger.jpg"
-  alt="The One Flanger playing at Amount +60 %, Jet: Feedback +50 % and a 6.3 s sweep on the Sweep screen."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Flanger at Amount 60 %: a jellyfish with long tendrils on the Sweep screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -102,8 +102,8 @@ Map Amount to an <Term id="axis">axis</Term> and one gesture goes from the tube,
 
 <Dot>2</Dot>A jellyfish drifts over the sound: at 0 a still bell with no tendrils. Turned either way the
 bell pulses with the sweep and grows tendrils: long ones to the right (the Jet), shorter ones that
-end in rings to the left (the Hollow). The big number is Amount; below it, the Feedback and how long
-one sweep takes.
+end in rings to the left (the Hollow), and two arms hang from its middle as long as the sound rings.
+The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 

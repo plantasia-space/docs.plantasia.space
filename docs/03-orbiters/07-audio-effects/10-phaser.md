@@ -83,8 +83,8 @@ horizon marked 20 Hz … 20 kHz.
 <TryModule module="onePhaser" set="amount:60" source="pad">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-phaser.jpg"
-  alt="The One Phaser at Amount +60 %, Swirl: the Sweep screen above the Amount knob."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Phaser at Amount 60 %: the moon's face between two cloud banks on the Sweep screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -112,7 +112,7 @@ towards its left eye, closer as Amount grows, and **at 30 % it lands** in the ey
 - **On the Throb** (left) the moon winces once the capsule lands: its other eye squeezed shut, a wide
   grimace. The sweep is too fast to draw one by one, so its two ends show faintly.
 
-The big number is Amount; the word says **Swirl** or **Throb**.
+The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 

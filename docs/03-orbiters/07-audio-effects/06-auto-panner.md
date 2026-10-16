@@ -85,8 +85,8 @@ wire its path scrolls down, like a pen on a moving roll of paper.
 <TryModule module="oneAutoPanner" set="amount:60" source="drums">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-auto-panner.jpg"
-  alt="The One Auto-panner playing at Amount +60 %, Drift: one trip in 6.6 s on the Position screen."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Auto-panner at Amount 60 %: a cuckoo clock with its pendulum on the Position screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -106,10 +106,11 @@ sound, into the drift.
 
 ### The screen
 
-<Dot>2</Dot>**A metronome.** An arm stands over the sound, and its angle is where the sound is: the Chop
-ticks it from side to side on the beat, the Drift sways it slowly. A bird sits on the tip with a
-life of its own. The big number is Amount; the word says **Chop**, **Off** or **Drift**. At 0 the
-arm stands upright and still: **Centred**.
+<Dot>2</Dot>**A cuckoo clock.** Its pendulum hangs over the sound, and its angle is where the sound is: the
+Chop ticks it from side to side on the beat, the Drift swings it slowly. A dotted arc under it shows
+how far Amount lets it swing. Now and then, at times of its own, the cuckoo leans out of its door to
+call. At 0 the pendulum hangs straight down and still. The ladder on the right follows the sound's
+level. The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 

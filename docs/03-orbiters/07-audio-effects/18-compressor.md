@@ -69,8 +69,8 @@ drops from the top as it works, up to 40 dB, and the number below is the reducti
 <TryModule module="oneCompressor" set="amount:60" source="drums">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-compressor.jpg"
-  alt="The One Compressor at Amount +60 %, on drums: the Reduction screen above the Amount knob."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Compressor at Amount 60 %: the press over the block on the Reduction screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -89,10 +89,8 @@ to the glue.
 
 <Dot>2</Dot>**The Press.** The mix is a block on a plate, and a press comes down on it by as much as
 the sound is being turned down: clear of the block at 0 dB, touching it as the glue starts, flattening it
-and squeezing drops out past 6 dB. The block breathes with the sound's level while it plays. The big
-number is the reduction in dB, the ladder beside it lights from 0.3 to 24 dB, and a small dial shows
-which way Amount is turned. The word above says **Lift**, **Glue** or **Dense** (**None** while nothing
-is turned down); below, the reduction, then the ratio and the threshold the knob has set.
+and squeezing drops out past 6 dB. The block breathes with the sound's level while it plays. The ladder
+on the right lights from 0.3 to 24 dB of reduction. The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 

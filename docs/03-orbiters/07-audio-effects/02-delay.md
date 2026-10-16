@@ -72,8 +72,8 @@ hear (see [Audio effects](/docs/orbiters/audio-effects)).
 <TryModule module="oneEcho" set="amount:60" source="drums">
 <ModulePicture
   src="/img/orbiters/audio-effects/one-echo.jpg"
-  alt="The One Echo playing at Amount +60 %, Trail: four echoes at 1/8D (375 ms) on the Echoes screen."
-  dots={[[1, 50, 76], [2, 50, 14.2]]}
+  alt="The One Echo at Amount 60 %: echoes climbing the corridor on the Echoes screen, beside the Amount knob."
+  dots={[[1, 89.5, 54.2], [2, 39.5, 12.2]]}
 />
 </TryModule>
 
@@ -93,8 +93,8 @@ Map Amount to an <Term id="axis">axis</Term> and one gesture goes from a slap, t
 
 <Dot>2</Dot>A corridor runs up into the sky from the sound, with an octahedron hovering over it. Turned right,
 the echoes are diamonds climbing the corridor, left, right, left; turned left, one or two diamonds
-sit straight above the sound: the slap. The big number counts the echoes you hear; the word says
-**Soft** or **Trail** turned right, **Slap** turned left.
+sit straight above the sound: the slap. At 0 the octahedron rests over the sound, grey and still,
+with no echoes. The big number is Amount: drag it up or down to turn it, as you would the knob.
 
 ## Try it
 
