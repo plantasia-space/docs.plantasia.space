@@ -58,6 +58,10 @@ The <Dot>2</Dot>switch decides what Speed does to the pitch:
 
 <Dot>10</Dot>The screen is a small picture of how the track is playing: a plant growing on moving ground.
 
+The screen also plays: drag the plant across to change **Speed** and up or down to change **Pitch**
+(Stretch only). The corners are controls too: Speed on the number, **Level** on the meter at the
+bottom left, **Formant** and **Tonality** on the right.
+
 - **The ground runs at Speed.** Grass and seeds drift past as the track plays, the other way in
   reverse, and they stand still at a stop.
 - **The plant's height is the pitch you hear**, against a dashed line at the track's own pitch,
