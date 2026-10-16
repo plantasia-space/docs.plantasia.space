@@ -138,7 +138,9 @@ the launch grid.
 
 An Orbiter has **three LFOs per dimension**, slow waves that move things by themselves: **1X, 1Y,
 1Z** live in dimension I, **2X … 2Z** in dimension II, **3X … 3Z** in dimension III. That name is the
-LFO's label everywhere: in every menu, on the hexagons and on a module's tab.
+LFO's label everywhere: in every menu and on the hexagons. A module's **LFO 1** or **LFO 2** is
+something else: a slot of the module, where one of these LFOs is plugged in. Where both show, the slot
+comes first: **LFO 1 · 1X**.
 
 Which LFOs exist follows the body with the most dimensions: the World, the Moon or the Star. If they all
 have one dimension, the Orbiter has 1X, 1Y and 1Z; if the Moon has three while the World has one, it
@@ -152,7 +154,7 @@ The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
 - **Offset**: the value it swings this axis around. At the middle it moves the axis up and down
   evenly; turn it down to move the lower values, up to move the upper ones. The ends of the axis clip
   the swing. Offset is the axis's own.
-- **LFO**: which LFO this axis reads. Each axis reads its own as it loads (X in dimension II reads
+- **LFO**: which LFO this axis reads, listed by dimension (**Dimension I**, **II**, **III**). Each axis reads its own as it loads (X in dimension II reads
   2X); pick another and the column shows that LFO's controls, so turning them turns it for
   everything that reads it. An axis set to the LFO of a dimension the Orbiter no longer has reads its
   own until that dimension is back, then the one you picked again; the menu's hint says so.
@@ -186,7 +188,8 @@ each **reads one of the Orbiter's LFOs**. Its tab shows:
   on a World of one dimension. Pick the LFO an axis reads and the axis and the sound move together. A
   module set to the LFO of a dimension the Orbiter doesn't have (one taken out, or a module from a bigger
   Orbiter) reads its own dimension's until that dimension is there; the menu shows it as **1X (3Y off)**.
-- **The tab and its hexagon**: the tab is named after the LFO it reads (**1X**, **2Y**); the hexagon
+- **The tab and its hexagon**: the tab names the module's slot, then the LFO plugged into it
+  (**LFO 1 · 1X**, **LFO 2 · 2Y**; **LFO · 1X** in a module with one); the hexagon
   switches this module's connection on and off. The LFO keeps running for whatever else reads it.
 - **Rate in, Rate, Shape and Depth**: the LFO's own, shown in place. Turning them turns that LFO
   everywhere: in the Cosmic LFO panel too.

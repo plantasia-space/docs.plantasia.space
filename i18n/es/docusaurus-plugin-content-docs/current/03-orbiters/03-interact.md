@@ -142,7 +142,9 @@ Mira [Efectos MIDI](/docs/orbiters/midi-effects) para los generadores y
 
 Un Orbitador tiene **tres LFO por dimensión**, ondas lentas que mueven cosas por sí solas: **1X, 1Y,
 1Z** viven en la dimensión I, **2X … 2Z** en la II, **3X … 3Z** en la III. Ese nombre es la etiqueta del
-LFO en todas partes: en cada menú, en los hexágonos y en la pestaña de un módulo.
+LFO en todas partes: en cada menú y en los hexágonos. El **LFO 1** o el **LFO 2** de un módulo es otra
+cosa: un hueco del módulo, donde se conecta uno de estos LFO. Donde se ven los dos, primero va el hueco:
+**LFO 1 · 1X**.
 
 Qué LFO existen lo decide el cuerpo con más dimensiones: el Mundo, la Luna o la Estrella. Si todos tienen
 una dimensión, el Orbitador tiene 1X, 1Y y 1Z; si la Luna tiene tres y el Mundo una, tiene los nueve.
@@ -155,7 +157,7 @@ El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
 - **Desplazamiento**: el valor alrededor del cual oscila este eje. En el centro mueve el eje por igual
   arriba y abajo; bájalo para mover los valores bajos, súbelo para los altos. Los extremos del eje
   recortan la oscilación. El desplazamiento es del eje.
-- **LFO**: qué LFO lee este eje. Cada eje lee el suyo al cargar (X en la dimensión II lee 2X);
+- **LFO**: qué LFO lee este eje, agrupados por dimensión (**Dimensión I**, **II**, **III**). Cada eje lee el suyo al cargar (X en la dimensión II lee 2X);
   elige otro y la columna muestra los controles de ese LFO, así que girarlos lo cambia para todo lo que
   lo lee. Un eje puesto en el LFO de una dimensión que el Orbitador ya no tiene lee el suyo hasta que esa
   dimensión vuelve, y entonces otra vez el que elegiste; la ayuda del menú lo dice.
@@ -192,7 +194,8 @@ un Chorus, **leen uno de los LFO del Orbitador**. Su pestaña muestra:
   módulo puesto en el LFO de una dimensión que el Orbitador no tiene (una que quitaste, o un módulo de un
   Orbitador más grande) lee el de su propia dimensión hasta que esa dimensión esté; el menú lo muestra
   como **1X (3Y off)**.
-- **La pestaña y su hexágono**: la pestaña lleva el nombre del LFO que lee (**1X**, **2Y**); el hexágono
+- **La pestaña y su hexágono**: la pestaña nombra el hueco del módulo y luego el LFO conectado en él
+  (**LFO 1 · 1X**, **LFO 2 · 2Y**; **LFO · 1X** en un módulo con uno); el hexágono
   enciende y apaga la conexión de este módulo. El LFO sigue corriendo para lo demás que lo lea.
 - **Ritmo desde, Ritmo, Forma y Profundidad**: los del LFO, mostrados ahí mismo. Girarlos cambia ese LFO
   en todas partes, también en el panel Cosmic LFO.
