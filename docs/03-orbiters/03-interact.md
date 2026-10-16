@@ -147,17 +147,15 @@ have one dimension, the Orbiter has 1cX, 1cY and 1cZ; if the Moon has three whil
 has all nine. Every LFO menu lists only these. The axes and every module of the Orbiter share them: an
 LFO set once moves everything that reads it, in step.
 
-The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
+The Cosmic LFO panel shows each axis's own LFO, one column per axis. A column is its LFO: X in
+dimension I is 1cX, Y in dimension II is 2cY. An axis doesn't pick another LFO; only a module does
+(below).
 
 - **Depth**: how far the LFO swings. It belongs to the LFO, so it is the same for everything that
   reads it.
 - **Offset**: the value it swings this axis around. At the middle it moves the axis up and down
   evenly; turn it down to move the lower values, up to move the upper ones. The ends of the axis clip
   the swing. Offset is the axis's own.
-- **LFO**: which LFO this axis reads, listed by dimension (**Dimension I**, **II**, **III**). Each axis reads its own as it loads (X in dimension II reads
-  2cX); pick another and the column shows that LFO's controls, so turning them turns it for
-  everything that reads it. An axis set to the LFO of a dimension the Orbiter no longer has reads its
-  own until that dimension is back, then the one you picked again; the menu's hint says so.
 - **Shape**: one knob that runs from sine through triangle, ramp up, square and ramp down to random,
   blending each shape into the next; its label names the shape when it sits on one. Square and the
   ramps have soft 4 ms edges, so no shape clicks. The screen above it draws the wave you are making.
@@ -166,14 +164,12 @@ The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
   LFO, Stellar Luminosity, Frequency, Mass). A world value only appears when the world carries it;
   with one selected, the two arrows move its rate down or up an octave (×½, ×2). **ƒ** reads the rate
   it runs at.
-- **The hexagon**: switches this axis's LFO on and off. It reads the name of the LFO the axis reads:
-  **1cX** for X in dimension I on its own LFO, **2cY** when it reads 2cY. An LFO only runs while something
-  reading it is on.
+- **The hexagon**: switches this axis's LFO on and off. It reads the LFO's name: **1cX** for X in
+  dimension I, **2cY** for Y in dimension II. An LFO only runs while something reading it is on.
 
 The panel shows the World's dimensions. A dimension only the Moon or the Star has (dimension III of a
 Moon of three, on a World of one) has no Cosmic LFO columns of its own: set its LFOs (3cX, 3cY, 3cZ) in the
-LFO tab of a module that reads them, or pick one in an axis's **LFO** menu here and its controls show in
-that column.
+LFO tab of a module that reads them.
 
 An axis moves its mapped sounds smoothly up to about 2 Hz. For a faster wobble on a sound, pick the
 LFO in the module's own LFO input (below): there it runs inside the sound, smooth at any rate.

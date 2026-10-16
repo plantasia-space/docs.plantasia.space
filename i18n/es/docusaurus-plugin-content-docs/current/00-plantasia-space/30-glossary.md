@@ -63,7 +63,7 @@ El cuerpo del Orbiter donde se junta el sonido: su **mezclador** combina el Mund
 
 
 ### LFO {#lfo}
-Una de las ondas lentas de un Orbiter, tres por dimensión (1cX … 3cZ, según el cuerpo con más dimensiones), que mueven cosas por sí solas. Los ejes y todos los módulos del Orbiter las comparten: un módulo o un eje elige cuál lee, y un LFO ajustado una vez mueve todo lo que lo lee.
+Una de las ondas lentas de un Orbiter, tres por dimensión (1cX … 3cZ, según el cuerpo con más dimensiones), que mueven cosas por sí solas. Los ejes y todos los módulos del Orbiter las comparten: cada eje lee el suyo (X en la dimensión I lee 1cX), un módulo elige cuál lee, y un LFO ajustado una vez mueve todo lo que lo lee.
 [El Cosmic LFO y los LFO](/docs/orbiters/interact#cosmic-lfo)
 
 ### Luna {#moon}
