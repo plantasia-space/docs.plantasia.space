@@ -157,8 +157,8 @@ long as it rings, so a crash's tail isn't cut short by the beat around it.
 ## On the play monitor
 
 Set the Analog drum synth's Panel to **Screen** (the Visuals step in the Studio) and the play monitor
-shows the kit while an axis moves it: the sixteen pads by name, each lighting when it is struck and
-fading as it rings out.
+shows the kit in its place: the sixteen pads by name, each lighting when it is struck and fading as
+it rings out.
 
 ## Try it
 

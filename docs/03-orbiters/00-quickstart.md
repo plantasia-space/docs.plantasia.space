@@ -87,7 +87,7 @@ Open the **Visual** step. Everything already has a designed look, so you can kee
 
 - **Panel** (2D): the Orbiter's controls on screen. Pick a **Theme**, or set its own fonts and colours.
 - **Ring** (3D): the ring around the Orbiter, its colour and its shape (**Amplitude**, **Radius**, **Tilt**).
-- **Devices**: what each module shows on the panel, its **Screen**, or its **Mapping** while an axis moves it.
+- **Devices**: what each module shows on the play monitor, its **Screen** or its **Mapping**. The monitor shows the ones that are on, in the order you keep them here (**Move earlier**, **Move later**): row by row, three across and two down. Six show at most: turn one off to show another.
 
 The Panel and the Ring start **Tied · all bodies**: one look for the whole Orbiter.
 
