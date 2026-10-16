@@ -43,7 +43,7 @@ Una de las tres cadenas de Mundo de un Orbiter, **I**, **II** y **III**, cada un
 
 
 ### Eje {#axis}
-Uno de los tres controles de interpretación de un Orbiter: **X**, **Y** y **Z**. Al mover un eje se mueven todos los controles mapeados a él, cada uno entre su propio mínimo, equilibrio y máximo. Se mueven en pantalla, inclinando un teléfono (Sensores) o con el Cosmic LFO.
+Uno de los tres controles de interpretación de un Orbiter: **X**, **Y** y **Z**. Al mover un eje se mueven todos los controles mapeados a él, cada uno entre su propio mínimo, equilibrio y máximo. Se mueven en pantalla, inclinando un teléfono (Sensores) o con un LFO (el panel Cosmic LFO).
 [Cómo mapear un control a un eje](/docs/orbiters/quickstart#map)
 
 
@@ -61,6 +61,10 @@ El valor que toma un control mapeado mientras su eje descansa en el centro, entr
 El cuerpo del Orbiter donde se junta el sonido: su **mezclador** combina el Mundo y el retorno de la Luna, y sus propios efectos suenan sobre todo.
 [Efectos de audio: tres lugares para un efecto](/docs/orbiters/audio-effects)
 
+
+### LFO {#lfo}
+Una de las nueve ondas lentas de un Orbiter (LFO 1 X … 3 Z, tres por dimensión) que mueven cosas por sí solas. Los ejes y todos los módulos del Orbiter las comparten: un módulo o un eje elige cuál lee, y un LFO ajustado una vez mueve todo lo que lo lee.
+[El Cosmic LFO y los nueve LFO](/docs/orbiters/interact#cosmic-lfo)
 
 ### Luna {#moon}
 Un cuerpo del Orbiter que funciona como **envío y retorno**: el Mundo se envía a ella y solo devuelve su efecto, que el mezclador de la Estrella suma al sonido seco. Aquí vive una reverb o un delay compartido por todo el Orbiter.

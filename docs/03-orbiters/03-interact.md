@@ -165,7 +165,7 @@ The Cosmic LFO panel shows the LFO each axis reads, one column per axis:
 An axis moves its mapped sounds smoothly up to about 2 Hz. For a faster wobble on a sound, pick the
 LFO in the module's own LFO input (below): there it runs inside the sound, smooth at any rate.
 
-### An LFO in a module
+### An LFO in a module {#an-lfo-in-a-module}
 
 A module never has an LFO of its own: an instrument's LFO tab, a Tremolo's or a Chorus's motion,
 each **reads one of the nine**. Its tab shows:

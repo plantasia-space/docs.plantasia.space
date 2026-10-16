@@ -40,8 +40,9 @@ Cada Orbitador tiene hasta tres dimensiones, **I**, **II** y **III**. Cada una t
 su propio mapeo de X, Y y Z, así que los mismos ejes hacen cosas distintas en cada una. En un ordenador,
 las teclas **1**, **2** y **3** cambian entre ellas.
 
-El transporte, el loop y el volumen son comunes a las tres. Los ejes, el Cosmic LFO y los sensores
-pertenecen a la dimensión en la que estás.
+El transporte, el loop y el volumen son comunes a las tres. Los ejes, el panel Cosmic LFO y los
+sensores pertenecen a la dimensión en la que estás; el panel puede mostrar cualquiera de los nueve LFO
+del Orbitador.
 
 <video
   className="ps-doc-video"
@@ -139,23 +140,52 @@ Mira [Efectos MIDI](/docs/orbiters/midi-effects) para los generadores y
 
 ## Cosmic LFO
 
-Cada eje (X, Y, Z) tiene un Cosmic LFO independiente.
+Un Orbitador tiene **nueve LFO**, ondas lentas que mueven cosas por sí solas: **LFO 1 X, 1 Y, 1 Z**
+viven en la dimensión I, **2 X … 2 Z** en la II, **3 X … 3 Z** en la III. Los ejes y todos los módulos
+del Orbitador los comparten: un LFO ajustado una vez mueve, a la vez, todo lo que lo lee.
 
-Puedes controlar:
+El panel Cosmic LFO muestra el LFO que lee cada eje, una columna por eje:
 
-- **Profundidad**: cuánto mueve el eje.
-- **Desplazamiento**: el valor alrededor del cual oscila. En el centro mueve el eje por igual arriba y
-  abajo; bájalo para mover los valores bajos, súbelo para los altos. Los extremos del eje recortan la
-  oscilación.
+- **Profundidad**: cuánto oscila el LFO. Es del LFO, así que es la misma para todo lo que lo lee.
+- **Desplazamiento**: el valor alrededor del cual oscila este eje. En el centro mueve el eje por igual
+  arriba y abajo; bájalo para mover los valores bajos, súbelo para los altos. Los extremos del eje
+  recortan la oscilación. El desplazamiento es del eje.
+- **LFO**: cuál de los nueve lee este eje. Cada eje lee el suyo al cargar (X en la dimensión II lee el
+  LFO 2 X); elige otro y la columna muestra los controles de ese LFO, así que girarlos lo cambia para
+  todo lo que lo lee.
 - **Forma**: una sola perilla que va de senoidal a triangular, rampa ascendente, cuadrada, rampa
   descendente y aleatoria, fundiendo cada forma con la siguiente; su etiqueta nombra la forma cuando
   está en una. La cuadrada y las rampas tienen bordes suaves de 4 ms, así que ninguna forma produce
   clics. La pantalla de arriba dibuja la onda que estás creando.
-- **Fuente de frecuencia**: una frecuencia que eliges (Hz), el tempo (una figura musical) o un valor del
-  exoplaneta del Mundo Entrelazado (Cosmic LFO, Luminosidad estelar, Frecuencia, Masa).
+- **Ritmo desde**: de dónde viene el ritmo: una frecuencia que eliges (**Hz**), el tempo (**Beats**: de 8
+  compases a 1/32, con puntillos y tresillos) o un valor del exoplaneta del Mundo Entrelazado (Cosmic
+  LFO, Luminosidad estelar, Frecuencia, Masa). Un valor del mundo solo aparece si el mundo lo tiene; con
+  uno elegido, las dos flechas bajan o suben su ritmo una octava (×½, ×2). **ƒ** muestra el ritmo al
+  que va.
+- **El hexágono**: enciende y apaga el LFO de este eje. Dice **cX** cuando el eje lee su propio LFO, y el
+  nombre del LFO (**2Y**) cuando lee otro. Un LFO solo corre mientras algo que lo lee está encendido.
 
-Una fuente del mundo solo aparece si el mundo tiene ese valor. Con una elegida, las dos flechas bajan o
-suben su ritmo una octava (×½, ×2): sigue siendo una nota del mismo valor del planeta.
+Un eje mueve sus sonidos mapeados con suavidad hasta unos 2 Hz. Para una oscilación más rápida en un
+sonido, elige el LFO en la entrada de LFO del propio módulo (abajo): allí corre dentro del sonido, suave
+a cualquier ritmo.
+
+### Un LFO en un módulo {#an-lfo-in-a-module}
+
+Un módulo nunca tiene un LFO propio: la pestaña LFO de un instrumento, el movimiento de un Tremolo o de
+un Chorus, **leen uno de los nueve**. Su pestaña muestra:
+
+- **El menú LFO**: cuál de los nueve lee. Un módulo lee el LFO X de su dimensión al cargar (el segundo
+  LFO de un instrumento, el Y). Elige el que lee un eje y el eje y el sonido se mueven juntos.
+- **El hexágono de la pestaña**: enciende y apaga la conexión de este módulo. El LFO sigue corriendo
+  para lo demás que lo lea.
+- **Ritmo desde, Ritmo, Forma y Profundidad**: los del LFO, mostrados ahí mismo. Girarlos cambia ese LFO
+  en todas partes, también en el panel Cosmic LFO.
+- **Cantidad** (o la Profundidad propia del módulo) y sus extras (**Spread**, **Fase**, **Spin**): del
+  módulo. La Cantidad va después de la Profundidad del LFO.
+
+Los LFO y cuál lee cada eje y cada módulo se guardan con el Orbitador. Todos en una
+<Term id="room">sala</Term> ven y oyen los mismos nueve en la misma fase, y el LFO de un efecto nunca
+hace saltar un sonido al dar Play o al saltar: vuelve al pulso doblándose.
 
 <video
   className="ps-doc-video"

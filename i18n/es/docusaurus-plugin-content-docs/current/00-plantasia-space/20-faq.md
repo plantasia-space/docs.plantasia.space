@@ -51,7 +51,7 @@ sidebar_custom_props:
 
 <details>
   <summary>¿Cómo pueden interactuar lxs oyentes con una publicación?</summary>
-  <div>Dentro de los orbiters, mediante sensores de movimiento, controladores MIDI, controles en pantalla y datos de exoplanetas en los cosmic LFOs.</div>
+  <div>Dentro de los orbiters, mediante sensores de movimiento, controladores MIDI, controles en pantalla y datos de exoplanetas, que pueden dar su ritmo a los LFO del Orbiter.</div>
 </details>
 
 <details>
