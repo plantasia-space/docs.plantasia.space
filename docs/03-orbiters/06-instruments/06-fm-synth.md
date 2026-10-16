@@ -16,8 +16,8 @@ in, one Level at a time.
 <ModulePicture
   src="/img/orbiters/instruments/fm-synth.jpg"
   wide
-  alt="The FM synth set as an electric piano: algorithm 5's wiring and the sound on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the folded LFO, Matrix and Voice columns."
-  dots={[[1, 30.6, 55.2], [2, 3.1, 78.5], [3, 10.9, 65.2], [4, 17.4, 65.2], [5, 24, 65.2], [6, 30.5, 65.2], [7, 37, 93.8], [8, 48.5, 51.6], [9, 69.8, 77.8], [10, 92.8, 62], [11, 23, 27], [12, 74, 27]]}
+  alt="The FM synth set as an electric piano: algorithm 5's wiring on the screen with its sound fanning out of Out, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the folded LFO, Matrix and Voice columns."
+  dots={[[1, 50.9, 18.1], [2, 41.6, 40.5], [3, 46.2, 40.5], [4, 50.2, 40.5], [5, 54.1, 40.5], [6, 58.1, 40.5], [7, 62, 40.5], [8, 65.2, 14.5], [9, 81.8, 72.8], [10, 95.6, 50], [11, 16.8, 54], [12, 29.5, 30]]}
 />
 </TryModule>
 
