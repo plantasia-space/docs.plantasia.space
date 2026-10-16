@@ -16,7 +16,7 @@ in, one Level at a time.
 <ModulePicture
   src="/img/orbiters/instruments/fm-synth.jpg"
   wide
-  alt="The FM synth set as an electric piano: algorithm 5's wiring and the spectrum on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the folded LFO, Matrix and Voice columns."
+  alt="The FM synth set as an electric piano: algorithm 5's wiring and the sound on the screen, the eight algorithm buttons over the operators' matrix, the Amp envelope beside Velocity and Level, and the folded LFO, Matrix and Voice columns."
   dots={[[1, 30.6, 55.2], [2, 3.1, 78.5], [3, 10.9, 65.2], [4, 17.4, 65.2], [5, 24, 65.2], [6, 30.5, 65.2], [7, 37, 93.8], [8, 48.5, 51.6], [9, 69.8, 77.8], [10, 92.8, 62], [11, 23, 27], [12, 74, 27]]}
 />
 </TryModule>
@@ -97,14 +97,31 @@ every voice at once.
 
 ## The screen
 
-The screen has two halves. <Dot>11</Dot>On the left, the algorithm drawn in the same style as the connections in
-the Dimensions panel: the key comes in on the left, each route is a curve from a modulator into what
-it modulates, and the heard operators merge into **Out**. A route lights up and thickens as its
-modulator works harder, and is dashed while it is silent; an operator switched off or at Level 0 is
-drawn faint. A loop over D is its feedback.
+The screen is one picture between two rails. <Dot>11</Dot>In the middle, the algorithm drawn in the same
+style as the connections in the Dimensions panel: the key comes in on the left, each route is a curve
+from a modulator into what it modulates, and the heard operators merge into **Out**. A route lights up
+and thickens as its modulator works harder, and is dashed while it is silent; an operator switched off
+or at Level 0 is drawn faint, and the disc inside a ring is as wide as its Level. A loop over D is its
+feedback.
 
-<Dot>12</Dot>On the right, the sound's colour: bright lines for each tone in it, more and higher as the Levels
-go up. While a note plays, it follows the Timbre envelope.
+<Dot>12</Dot>Out of **Out** comes the sound: one line for each tone in it, higher tones higher, louder ones
+longer, more of them as the Levels go up. While a note plays, it follows the Timbre envelope, and it
+fades away with the note's release.
+
+### The rings
+
+Each ring is an operator you can play. Drag it **up or down** to set its **Level**, how hard it
+modulates (for one that is heard, how loud it is); drag it **sideways** to step its **Ratio**, ×½ up
+to ×16. While you hold it, its name and both values show above it. A drag moves one of the two, the
+way it sets out, so a Level move never nudges the Ratio. A has no Level: sideways steps its Ratio.
+Double-click a ring to put it back to its defaults.
+
+### The corners
+
+The corners are the four that change the whole voice: **Algorithm** (the number, top left),
+**Feedback** (the meter, bottom left), the Timbre envelope's **Decay** and the amp's **Release** (the
+ladders on the right). Drag one up or down: it stays where you let go, as a knob does. Double-click
+one to put it back to its default.
 
 ## Starting points
 
