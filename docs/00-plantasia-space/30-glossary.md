@@ -63,7 +63,7 @@ The grid an Orbiter's starts, jumps and switches wait for, so that they land on 
 
 
 ### LFO {#lfo}
-One of an Orbiter's slow waves, three per dimension (1X … 3Z, following the body with the most dimensions), that move things by themselves. The axes and every module of the Orbiter share them: a module or an axis picks which one it reads, and an LFO set once moves everything that reads it.
+One of an Orbiter's slow waves, three per dimension (1cX … 3cZ, following the body with the most dimensions), that move things by themselves. The axes and every module of the Orbiter share them: a module or an axis picks which one it reads, and an LFO set once moves everything that reads it.
 [The Cosmic LFO and the LFOs](/docs/orbiters/interact#cosmic-lfo)
 
 ### Moon {#moon}

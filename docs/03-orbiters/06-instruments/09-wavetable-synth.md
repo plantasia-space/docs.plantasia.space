@@ -93,7 +93,7 @@ what can move down the side, what moves it across the top, an amount in each cel
 | **Modulation** | **Env** (the Mod envelope), **LFO 1**, **LFO 2** | **Pitch** (both oscillators and the sub, up to ±12 semitones), **Pos 1**, **Cutoff** (up to ±5 octaves), **Pos 2**, **Pitch 2** (Osc 2 only), **Fx 1**, **Fx 2** (the effects' amounts), **Gain 2**, **Res**, **Unison** (its Amount) |
 | **MIDI** | **Vel** (velocity), **Key** (around C3), **PB** (pitch bend), **Press** (pressure), **Mod** (the mod wheel), **Rand** (a value drawn for each note) | the same rows, then **LFO 1** and **LFO 2** (each LFO's Amount) |
 
-Hover a cell to read its route ("LFO 1 · 1X › Cutoff": the slot, then the LFO plugged into it).
+Hover a cell to read its route ("LFO 1 · 1cX › Cutoff": the slot, then the LFO plugged into it).
 
 **Key › Cutoff** at 100 % is the cutoff following the keyboard exactly, and **PB › Pitch** is the
 pitch bend, two semitones until you change it. The Wavetable has no Vibrato or Level row: its two
