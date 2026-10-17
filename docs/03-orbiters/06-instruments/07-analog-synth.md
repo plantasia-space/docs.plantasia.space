@@ -108,16 +108,29 @@ block nothing reaches is dashed. Each source shows its wave, each filter where i
 2's mode links the two oscillators: a tether for **Sync**, a ring for **Ring**, a wave for **AM**.
 Under the bench, the two LFO dials, with dashed wires to what each moves.
 
-The open tab's block is outlined, and **tapping a block opens its tab**: a filter opens its Filter tab,
-an amp its Amp tab, the oscillators the Mod tab, an LFO dial its LFO tab, the output the Voice tab.
-### The corners and the crosshair
+The open tab's block is outlined.
+
+### Playing the bench
+
+Every block is also a control. **Drag it up or down** for its first value, **sideways** for its
+second; hold **Shift** to move it finer. While you hold it, its name and values show above it.
+
+| Block | Up or down | Sideways | Double-click |
+|---|---|---|---|
+| **Osc 1**, **Osc 2**, **Noise** | Level | To filter (Filter 1 ↔ Filter 2) | On or off |
+| **Filter 1**, **Filter 2** | Envelope | Drive | Back to the defaults |
+| **Amp 1**, **Amp 2** | Level | Pan | Back to the defaults |
+| **LFO 1**, **LFO 2** dials | Amount | | Back to the default |
+
+**Tapping a block opens its tab**: a filter its Filter tab, an amp its Amp tab, the sources the Mod tab,
+an LFO dial its LFO tab, the output the Voice tab.
+
+### The corners
 
 - **Cutoff** is the number at the top left: Filter 1's cutoff in kHz as it sounds (its envelope and
   LFOs move it). Drag it up or down to set it.
 - **Resonance** is the meter at the bottom left, Filter 1's peak (with the Vowel type, its **Vowel**).
 - **Glide** (top) and **Level** (bottom) are the ladders at the right.
-- The crosshair over the bench moves the same two, **Cutoff** (sideways) and **Resonance** or **Vowel**
-  (up or down), at once: a filter sweep in one drag. The triangles on the edges move one alone.
 
 Drag a corner up or down; double-click it to put it back to its default.
 
