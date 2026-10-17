@@ -124,14 +124,14 @@ A faint bar beside a Position shows how far the matrix can move it.
 
 ### Playing the waves
 
-The waves are the controls. **Drag up or down** for the first value, **sideways** for the second;
-hold **Shift** to move them finer. While you hold one, its name and values show above it.
+The waves are the controls. **Drag up or down** for the first value, **sideways** for the second, or
+both at once on a diagonal; hold **Shift** to move them finer. While you hold one, its name and values show above it.
 
 | Where | Up or down | Sideways | Double-click |
 |---|---|---|---|
 | **Osc 1**: the left half (Rings), the upper stack (Terrain) | Position 1 | Effect 1's Amount (FM, Sync, Warp or Fold) | Osc 1 on or off |
 | **Osc 2**: the right half (Rings), the lower stack (Terrain) | Position 2 | Effect 2's Amount | Osc 2 on or off |
-| **Sub**: the heartwood (Rings), the dot left of the stacks (Terrain) | Sub Gain | | Sub on or off |
+| **Sub**: the heartwood (Rings), the dot at the head of its line along the foot (Terrain) | Sub Gain | | Sub on or off |
 
 A Sub switched off is a faint dashed ring, so there is always something to double-click.
 
