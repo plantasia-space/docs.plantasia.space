@@ -76,7 +76,7 @@ Everyone in a <Term id="room">room</Term> draws the same.
 |---|---|
 | **Mod wheel** | The instrument's mod wheel, as the keys' wheel moves it. |
 | **Pressure** | The instrument's pressure (aftertouch), for the instruments that read it. |
-| **Slide** | Between two notes the pitch glides with the Pitch input, like a theremin, and lands on the next note. Best with one voice. **Slide amount** is how far it may bend, up to 2 semitones. |
+| **Slide** | Between two notes each held note glides with the Pitch input, like a theremin, and lands on the next note on the next step. **Slide amount** is how far it may glide, up to 2 semitones. |
 
 Map any axis to Mod wheel or Pressure with its own range. One axis can drive Velocity and the mod wheel
 at the same time.
