@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Activity, Dices, Grid3x3, Piano, Repeat, Ruler, Signal, KeyboardMusic, MoveVertical, ListMusic, Footprints } from 'lucide-react';
+import { Activity, Dices, Grid3x3, Piano, Repeat, Ruler, Signal, KeyboardMusic, MoveVertical, ListMusic, Footprints, Move3d } from 'lucide-react';
 
 **MIDI effects** work on notes, not on sound. They sit **before** the instrument, so they decide what
 it plays: which notes, when, and how hard. They belong to a Notes Orbiter (an Orbiter that plays notes with a synth or the Sampler, not an
@@ -35,7 +35,7 @@ audio).
 There are two kinds, and the order is always the same:
 
 1. **A generator** makes notes on its own, so it leads the chain: the **Drum sequencer**, the
-   **Arpeggiator**, **Step sequencer**. A dimension has at most one.
+   **Arpeggiator**, **Step sequencer**, **Axis notes**. A dimension has at most one.
 2. **MIDI effects** reshape the notes that reach them, from a generator, the keys, MIDI hardware or
    the piano roll: **Note echo**, **Velocity**, **Note length**, **Random**, **Chord**, **Scale**, **Pitch**. The **MIDI
    monitor** changes nothing: it shows what reaches it.
@@ -54,6 +54,7 @@ Adding one changes nothing until you move something: turn it up while you play. 
   <NavigationCard href="/docs/orbiters/midi-effects/drum-sequencer" label="Drum sequencer" icon={<Grid3x3 />} description="A pad controller for drum patterns: up to 32 beats, real-time FX." />
   <NavigationCard href="/docs/orbiters/midi-effects/arpeggiator" label="Arpeggiator" icon={<ListMusic />} description="The notes you hold, one after the other in time: thirteen orders, octaves, a rhythm grid." />
   <NavigationCard href="/docs/orbiters/midi-effects/step-sequencer" label="Step sequencer" icon={<Footprints />} description="Draw a line of up to 32 steps and it plays in time: 16 patterns, chance, even rhythms." />
+  <NavigationCard href="/docs/orbiters/midi-effects/axis-notes" label="Axis notes" icon={<Move3d />} description="Play melodies by moving: an axis walks up a range of the key and each new note lands on the beat." />
   <NavigationCard href="/docs/orbiters/midi-effects/note-echo" label="Note echo" icon={<Repeat />} description="Each note again after a delay, quieter or louder, climbing or falling." />
   <NavigationCard href="/docs/orbiters/midi-effects/velocity" label="Velocity" icon={<Signal />} description="Reshape how hard each note plays: curve, floor, randomness." />
   <NavigationCard href="/docs/orbiters/midi-effects/note-length" label="Note length" icon={<Ruler />} description="A new length for every note, notes on key release, or a chord held until the next." />
