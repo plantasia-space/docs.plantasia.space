@@ -450,9 +450,8 @@ ul li {
 }
 
 /* Same three rules as the markdown figures below — cap at the column, never
-   past the source's own size, never past the height ceiling, centred.
-   `mobile-client_mid.webp` on the Sensors page is 1147x1920: a portrait phone
-   shot, and the reason a blanket full width does not work here. */
+   past the source's own size, never past the height ceiling, centred. A
+   portrait phone shot is the reason a blanket full width does not work here. */
 .ps-doc-themed-image {
   display: block;
   margin-inline: auto;

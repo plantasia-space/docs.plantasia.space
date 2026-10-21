@@ -29,75 +29,131 @@ ways at once and the knobs lean on each other a little: tipping and rolling toge
 
 ## Turning a sensor on
 
-Open the **Sensors** panel. It has one toggle per axis: **X**, **Y** and **Z**. Turn on the axes you
-want the phone to move; the others stay under manual control.
+Open the **Sensors** panel. Under each axis knob there is a hexagon: the **sensor switch** for that
+axis. Press it to let the phone move the knob; press it again to take the knob back by hand. A switch
+that is on is filled.
 
-<img className="ps-doc-themed-image" src="https://herbarium.plantasia.space/docs/en/media/orbiters/orbiter-sensor-panel_mid.webp" alt="The Sensors panel with the X, Y and Z toggles" />
+<ModulePicture
+  src="/img/orbiters/sensors/sensors-panel.jpg"
+  alt="The Sensors panel on the World's dimension I: the X, Y and Z knobs, each with its sensor switch underneath; 1sX and 1sY on, 1sZ off."
+  dots={[[1, 19.3, 54.8], [2, 20.2, 81.7]]}
+  wide
+/>
 
-The toggles are **per dimension**. Enabling X in dimension 1 does not enable it in dimension 2:
-switch dimension and set the toggles you want there. Switching back restores what you had.
+| Control | What it is |
+|---|---|
+| <Dot>1</Dot>**The knob** | the axis the phone moves, the same knob you would turn by hand |
+| <Dot>2</Dot>**The sensor switch** | named by the dimension and the axis: **1sX** is the sensor on X in dimension I |
+
+The switches are **per dimension**, and the Moon and the Star have their **own**. Turning on 1sX on
+the World's dimension I does not turn it on in dimension II, nor on the Star: go to that dimension or
+body and set the switches you want there. Switching back restores what you had.
+
+An axis that drives nothing in a dimension has no knob there, so it has no switch either.
 
 The first time you turn a sensor on, the phone asks for permission to use motion. Accept it once.
 
 ### Calibrating
 
-Hold the phone the way you want to play and press **Calibrate**. That position becomes the centre:
-the equilibrium of X, Y and Z. Tilt away from it to move the controls, tilt back to return.
+Hold the phone the way you want to play and press **Calibrate**, the target in the top bar at the
+top right of the screen, shown while the Sensors panel is open. With the phone as a remote, you
+still press it on the desktop. That position becomes the centre: the equilibrium of X, Y and Z.
+Tilt away from it to move the controls, tilt back to return.
 
 ## Where the phone comes from
 
-There are two ways to use sensors. The toggles and calibration work the same in both.
+There are two ways to use sensors. The switches work the same in both, and Calibrate is always on the screen that shows the Orbiter.
 
 ### The phone is the Orbiter
 
-Open an Orbiter on your phone. Its own sensors drive it directly: turn on X, Y or Z in the Sensors
-panel and tilt.
+Open an Orbiter on your phone. Its own sensors drive it directly: turn on the switches in the
+Sensors panel and tilt.
 
 ### The phone controls the desktop
 
-Open an Orbiter on the desktop and press the **pair** button in the Sensors panel. Scan the QR code
-with your phone. The phone opens a small controller with the same **X, Y, Z** toggles and the
-**dimension** tabs; what you set there is what the desktop shows, and the other way round. Tilt the
-phone and the Orbiter on the desktop moves.
+Open an Orbiter on the desktop and open the **Sensors** panel. The first time, it shows a QR code:
+scan it with your phone.
 
-<img className="ps-doc-themed-image" src="https://herbarium.plantasia.space/docs/en/media/orbiters/orbiter-sensor-connect-dialog_mid.webp" alt="The pairing dialog with the QR code" />
+<ModulePicture
+  src="/img/orbiters/sensors/pairing.jpg"
+  alt="The Connect External Sensor dialog with its QR code"
+  width={480}
+/>
 
-<img className="ps-doc-themed-image" src="https://herbarium.plantasia.space/docs/en/media/orbiters/mobile-client-sensor-chart_mid.webp" alt="The phone as a controller for the desktop" />
+The phone opens the **phone remote** (below) and the dialog closes. A phone button appears at the top
+right, beside Calibrate: green while the phone is connected, red if it drops. Press it to reconnect:
+open the phone remote again and it finds the desktop on its own, or scan the new QR code from a fresh
+tab.
 
-The pairing lasts for the session. If the phone disconnects, the desktop tells you and you can scan
-again.
+## The phone remote
+
+The phone remote is laid out like the Orbiter's play screen, so a hand that knows one knows the
+other. Everything you need while playing sits at the bottom, under your thumb.
+
+<ModulePicture
+  src="/img/orbiters/sensors/phone-remote.jpg"
+  alt="The phone remote: Start, pairing and Hide along the top, the tilt circle in the middle, the view rail bottom left, the X, Y and Z sensor switches along the bottom (X and Y on), and Orbiter A bottom right."
+  width={320}
+  dots={[[1, 15.5, 6.4], [2, 76, 6.6], [3, 95.2, 6.4], [4, 64.9, 30], [5, 16.2, 63.5], [6, 16.5, 81], [7, 28.5, 81.2], [8, 83.3, 94.8]]}
+/>
+
+| Control | What it does |
+|---|---|
+| <Dot>1</Dot>**Start sensors** | Starts and stops the phone's motion sensors. You press it once, at the beginning; on an iPhone this is when it asks for motion, and the button pulses until you do. |
+| <Dot>2</Dot>**Paired** | Green while the phone is connected to the desktop. |
+| <Dot>3</Dot>**Hide controls** | Leaves only the tilt on screen: see [Sensors only](#sensors-only). |
+| <Dot>4</Dot>**Tilt** | What the phone is doing: the red mark turns with **X**, the green line lifts with **Y**, the dashed blue line rolls with **Z**. An axis whose sensor is off fades. The angles are written underneath. |
+| <Dot>5</Dot>**Dimensions** | The dimensions of the body you picked, as in play. Small coloured marks under a dimension show which of its sensors are on. |
+| <Dot>6</Dot>**Star, Moon, World** | Picks the body. The desktop goes there too, and when the desktop moves to a body, the phone follows. A body the Orbiter does not have is greyed out. |
+| <Dot>7</Dot>**Sensor switches** | The same switches as on the desktop, with the same names and the axis's colour when on. The value underneath is what the sensor sends. An axis that drives nothing in this dimension is left out. |
+| <Dot>8</Dot>**Orbiters** | The Orbiters open on the desktop: see [Several Orbiters at once](#several-orbiters-at-once). |
+
+What you set on the phone is what the desktop shows, and the other way round: they are the same
+switches.
+
+Picking the Star or the Moon shows that body's own dimensions and its own switches, all off until
+you turn them on:
+
+<ModulePicture
+  src="/img/orbiters/sensors/phone-remote-star.jpg"
+  alt="The phone remote with the Star picked: the Star's dimension I and its own sensor switches 1sX, 1sY and 1sZ, all off."
+  width={320}
+/>
 
 ## Several Orbiters at once
 
-When more than one Orbiter is open on the desktop, each Orbiter has its **own** sensor toggles, per dimension, exactly as above. Turning X
-on for one Orbiter does not turn it on for the others.
+When more than one Orbiter is open on the desktop, each Orbiter has its **own** sensor switches, per
+dimension and per body, exactly as above. Turning 1sX on for one Orbiter does not turn it on for the
+others.
 
 ### From the desktop
 
-Set the toggles on the Orbiter you want the phone to move. With several Orbiters selected, tilt
+Set the switches on the Orbiter you want the phone to move. With several Orbiters selected, tilt
 moves the selected ones that have that axis turned on.
 
 ### From the phone
 
-The paired phone shows the open Orbiters as **A, B, C, D**. Tap the ones you want to play: one or
-several. The phone drives only those:
+The phone remote shows the open Orbiters as **A, B, C, D** in the bottom right, A at the bottom. When
+the phone pairs, A is picked for you. With only one Orbiter open, that one is always driven: it cannot be untapped.
 
-<img className="ps-doc-themed-image" src="https://herbarium.plantasia.space/docs/en/media/orbiters/mobile-client_mid.webp" alt="The phone controller: Orbiters A to D, dimension tabs and the X, Y, Z toggles" />
+Tap the ones you want to play: one or several. The phone drives only those:
 
-- The **dimension** you pick on the phone switches the Orbiters you tapped, and only those.
-- The **X, Y, Z** toggles on the phone turn the axis on for the Orbiters you tapped, and only those.
+- The **dimension** and the **body** you pick on the phone switch the Orbiters you tapped, and only
+  those.
+- The **sensor switches** on the phone turn the axis on for the Orbiters you tapped, and only those.
   The desktop shows it.
 - Tilt moves the Orbiters you tapped, on their current dimension, on the axes you turned on.
 
 Selecting Orbiters on the phone does not change what is selected on the desktop, and selecting on
 the desktop does not change the phone. They are two hands on the same instrument.
 
-With no Orbiter tapped, the phone drives nothing: tilt and toggles do nothing until you pick one.
+With several open, you can untap them all; then the phone drives nothing: tilt and switches do nothing until you pick one.
 
-The phone's toggles and dimension tabs describe the **first Orbiter you tapped**. Turning an axis off
-on the desktop for that Orbiter turns it off on the phone too; it is the same toggle.
+The phone's switches and dimensions describe the **first Orbiter you tapped**. Turning an axis off
+on the desktop for that Orbiter turns it off on the phone too; it is the same switch.
 
 ## Sensors only
 
-On the phone you can **hide the controls** (the Orbiter buttons, the dimension tabs and the toggles)
-to leave a clean surface for tilting. The phone remembers this choice. Show them again the same way.
+On the phone, **Hide controls** <Dot>3</Dot> clears the rail, the switches and the Orbiters to leave a
+clean surface for tilting. Start and Hide stay. The phone remembers this choice; press it again to
+bring the controls back. If no Orbiter is picked, the Orbiters stay on screen so you can pick one.
