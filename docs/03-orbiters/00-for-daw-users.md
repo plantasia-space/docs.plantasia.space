@@ -39,10 +39,12 @@ Each World dimension's Channel has a send to each Moon dimension, taken **Pre** 
 
 The World and the Moon's return meet in the Star's **Main mix**. The Star's own effects play over everything after it, like inserts on the main bus.
 
-## What has no DAW twin
+## Each dimension is a rack with three macros
 
-- **The <Term id="axis">axes</Term>**: X, Y and Z each turn every control mapped to them at once, as you move them. Think of automation you play by hand.
-- **Each dimension maps the axes its own way**: switching to another dimension in play changes what X, Y and Z move.
-- **The Cosmic LFO**: slow waves the axes and the modules share, so one wave can move things in every track.
+Think of each dimension as a rack whose three macros are always there: its <Term id="axis">axes</Term>, **X**, **Y** and **Z**. Each turns every control mapped to it at once, and you play them by moving: on screen, with the keys, or by tilting a phone. Every dimension maps its three its own way, so switching to another dimension changes what X, Y and Z move.
+
+## The Cosmic LFO: three per dimension
+
+The Cosmic LFO's slow waves come in threes, one set per dimension: **1cX**, **1cY** and **1cZ** for dimension I, up to **3cX**, **3cY** and **3cZ** for III. For now they belong to the World, and the axes and the modules of the whole Orbiter share them, so one wave can move things in every track.
 
 [Interact](/docs/orbiters/interact) shows how to play all of this.

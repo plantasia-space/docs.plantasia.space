@@ -39,10 +39,12 @@ El Canal de cada dimensión del Mundo tiene un envío a cada dimensión de la Lu
 
 El Mundo y el retorno de la Luna se juntan en la **Mezcla principal** de la Estrella. Los efectos propios de la Estrella suenan sobre todo lo que viene después, como inserciones en el bus principal.
 
-## Lo que no tiene gemelo en un DAW
+## Cada dimensión es un rack con tres macros
 
-- **Los <Term id="axis">ejes</Term>**: X, Y y Z giran a la vez cada control asignado a ellos, mientras los mueves. Piensa en una automatización que tocas a mano.
-- **Cada dimensión asigna los ejes a su manera**: pasar a otra dimensión mientras tocas cambia lo que mueven X, Y y Z.
-- **El Cosmic LFO**: ondas lentas que comparten los ejes y los módulos, así que una onda puede mover cosas en todas las pistas.
+Piensa en cada dimensión como un rack cuyas tres macros siempre están ahí: sus <Term id="axis">ejes</Term>, **X**, **Y** y **Z**. Cada uno gira a la vez todos los controles asignados a él, y los tocas moviéndote: en la pantalla, con las teclas o inclinando un teléfono. Cada dimensión asigna sus tres a su manera, así que pasar a otra dimensión cambia lo que mueven X, Y y Z.
+
+## El Cosmic LFO: tres por dimensión
+
+Las ondas lentas del Cosmic LFO vienen de tres en tres, un juego por dimensión: **1cX**, **1cY** y **1cZ** para la dimensión I, hasta **3cX**, **3cY** y **3cZ** para la III. Por ahora pertenecen al Mundo, y los ejes y los módulos de todo el Orbitador las comparten, así que una onda puede mover cosas en todas las pistas.
 
 [Interactuar](/docs/orbiters/interact) muestra cómo tocar todo esto.
