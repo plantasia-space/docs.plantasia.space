@@ -35,8 +35,8 @@ that is on is filled.
 
 <ModulePicture
   src="/img/orbiters/sensors/sensors-panel.jpg"
-  alt="The Sensors panel on the World's dimension I: the X and Y knobs, each with its sensor switch underneath, 1sX and 1sY, both on."
-  dots={[[1, 33.6, 50.3], [2, 34.8, 79.5]]}
+  alt="The Sensors panel on the World's dimension I: the X, Y and Z knobs, each with its sensor switch underneath; 1sX and 1sY on, 1sZ off."
+  dots={[[1, 17.5, 54.8], [2, 18.3, 81.7]]}
   wide
 />
 
@@ -87,7 +87,7 @@ other. Everything you need while playing sits at the bottom, under your thumb.
 
 <ModulePicture
   src="/img/orbiters/sensors/phone-remote.jpg"
-  alt="The phone remote: Start, pairing and Hide along the top, the tilt circle in the middle, the view rail bottom left, the X and Y sensor switches along the bottom, and Orbiter A bottom right."
+  alt="The phone remote: Start, pairing and Hide along the top, the tilt circle in the middle, the view rail bottom left, the X, Y and Z sensor switches along the bottom (X and Y on), and Orbiter A bottom right."
   width={320}
   dots={[[1, 15.5, 6.4], [2, 81.4, 6.4], [3, 95.2, 6.4], [4, 64.9, 30], [5, 16.2, 63.5], [6, 16.5, 81], [7, 28.5, 81.2], [8, 83.3, 94.8]]}
 />
@@ -111,7 +111,7 @@ you turn them on:
 
 <ModulePicture
   src="/img/orbiters/sensors/phone-remote-star.jpg"
-  alt="The phone remote with the Star picked: the Star's dimension I, its own sensor switches 1sX and 1sZ, both off."
+  alt="The phone remote with the Star picked: the Star's dimension I and its own sensor switches 1sX, 1sY and 1sZ, all off."
   width={320}
 />
 
