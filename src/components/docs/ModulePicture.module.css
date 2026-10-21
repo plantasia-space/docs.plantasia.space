@@ -17,6 +17,11 @@
   border-radius: 6px;
 }
 
+.outlined {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 18px;
+}
+
 /* Dots and inline numbers share one look, the same on light and dark pages:
    the pictures are always the dark Studio. */
 .dot,
