@@ -36,7 +36,7 @@ that is on is filled.
 <ModulePicture
   src="/img/orbiters/sensors/sensors-panel.jpg"
   alt="The Sensors panel on the World's dimension I: the X, Y and Z knobs, each with its sensor switch underneath; 1sX and 1sY on, 1sZ off."
-  dots={[[1, 17.5, 54.8], [2, 18.3, 81.7]]}
+  dots={[[1, 19.3, 54.8], [2, 20.2, 81.7]]}
   wide
 />
 
@@ -55,13 +55,14 @@ The first time you turn a sensor on, the phone asks for permission to use motion
 
 ### Calibrating
 
-Hold the phone the way you want to play and press **Calibrate**, the crosshair at the top right
-while the Sensors panel is open. That position becomes the centre: the equilibrium of X, Y and Z.
+Hold the phone the way you want to play and press **Calibrate**, the target in the top bar at the
+top right of the screen, shown while the Sensors panel is open. With the phone as a remote, you
+still press it on the desktop. That position becomes the centre: the equilibrium of X, Y and Z.
 Tilt away from it to move the controls, tilt back to return.
 
 ## Where the phone comes from
 
-There are two ways to use sensors. The switches and calibration work the same in both.
+There are two ways to use sensors. The switches work the same in both, and Calibrate is always on the screen that shows the Orbiter.
 
 ### The phone is the Orbiter
 
@@ -73,7 +74,11 @@ Sensors panel and tilt.
 Open an Orbiter on the desktop and open the **Sensors** panel. The first time, it shows a QR code:
 scan it with your phone.
 
-![The Connect External Sensor dialog with its QR code](/img/orbiters/sensors/pairing.jpg)
+<ModulePicture
+  src="/img/orbiters/sensors/pairing.jpg"
+  alt="The Connect External Sensor dialog with its QR code"
+  width={480}
+/>
 
 The phone opens the **phone remote** (below) and the dialog closes. A phone button appears at the top
 right, beside Calibrate: green while the phone is connected, red if it drops. Press it to reconnect:
@@ -89,7 +94,7 @@ other. Everything you need while playing sits at the bottom, under your thumb.
   src="/img/orbiters/sensors/phone-remote.jpg"
   alt="The phone remote: Start, pairing and Hide along the top, the tilt circle in the middle, the view rail bottom left, the X, Y and Z sensor switches along the bottom (X and Y on), and Orbiter A bottom right."
   width={320}
-  dots={[[1, 15.5, 6.4], [2, 81.4, 6.4], [3, 95.2, 6.4], [4, 64.9, 30], [5, 16.2, 63.5], [6, 16.5, 81], [7, 28.5, 81.2], [8, 83.3, 94.8]]}
+  dots={[[1, 15.5, 6.4], [2, 76, 6.6], [3, 95.2, 6.4], [4, 64.9, 30], [5, 16.2, 63.5], [6, 16.5, 81], [7, 28.5, 81.2], [8, 83.3, 94.8]]}
 />
 
 | Control | What it does |
@@ -98,7 +103,7 @@ other. Everything you need while playing sits at the bottom, under your thumb.
 | <Dot>2</Dot>**Paired** | Green while the phone is connected to the desktop. |
 | <Dot>3</Dot>**Hide controls** | Leaves only the tilt on screen: see [Sensors only](#sensors-only). |
 | <Dot>4</Dot>**Tilt** | What the phone is doing: the red mark turns with **X**, the green line lifts with **Y**, the dashed blue line rolls with **Z**. An axis whose sensor is off fades. The angles are written underneath. |
-| <Dot>5</Dot>**Dimensions** | The dimensions of the body you picked, as in play. Small coloured hexagons under a dimension show which of its sensors are on. |
+| <Dot>5</Dot>**Dimensions** | The dimensions of the body you picked, as in play. Small coloured marks under a dimension show which of its sensors are on. |
 | <Dot>6</Dot>**Star, Moon, World** | Picks the body. The desktop goes there too, and when the desktop moves to a body, the phone follows. A body the Orbiter does not have is greyed out. |
 | <Dot>7</Dot>**Sensor switches** | The same switches as on the desktop, with the same names and the axis's colour when on. The value underneath is what the sensor sends. An axis that drives nothing in this dimension is left out. |
 | <Dot>8</Dot>**Orbiters** | The Orbiters open on the desktop: see [Several Orbiters at once](#several-orbiters-at-once). |
@@ -129,7 +134,7 @@ moves the selected ones that have that axis turned on.
 ### From the phone
 
 The phone remote shows the open Orbiters as **A, B, C, D** in the bottom right, A at the bottom. When
-the phone pairs, A is picked for you. With only one Orbiter open, that one is always driven.
+the phone pairs, A is picked for you. With only one Orbiter open, that one is always driven: it cannot be untapped.
 
 Tap the ones you want to play: one or several. The phone drives only those:
 
@@ -142,7 +147,7 @@ Tap the ones you want to play: one or several. The phone drives only those:
 Selecting Orbiters on the phone does not change what is selected on the desktop, and selecting on
 the desktop does not change the phone. They are two hands on the same instrument.
 
-With no Orbiter tapped, the phone drives nothing: tilt and switches do nothing until you pick one.
+With several open, you can untap them all; then the phone drives nothing: tilt and switches do nothing until you pick one.
 
 The phone's switches and dimensions describe the **first Orbiter you tapped**. Turning an axis off
 on the desktop for that Orbiter turns it off on the phone too; it is the same switch.

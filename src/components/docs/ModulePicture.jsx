@@ -9,12 +9,13 @@ import styles from './ModulePicture.module.css';
 // than 1.6× as wide as tall) keeps a readable size on a phone and scrolls
 // sideways in its own frame instead of shrinking under its dots. `width` caps
 // the drawn width in px, for a tall picture such as a phone screen, and outlines
-// it so a black screen keeps its edge on a dark page.
+// it so a black screen keeps its edge on a dark page. Ignored with `wide`, which
+// has its own phone width.
 export default function ModulePicture({ src, alt, dots = [], wide = false, width }) {
   return (
     <figure className={`${styles.figure} ${wide ? styles.wide : ''}`}>
-      <div className={styles.frame} style={width ? { width: `min(100%, ${width}px)` } : undefined}>
-        <img className={`${styles.image} ${width ? styles.outlined : ''}`} src={useBaseUrl(src)} alt={alt} loading="lazy" />
+      <div className={styles.frame} style={width && !wide ? { width: `min(100%, ${width}px)` } : undefined}>
+        <img className={`${styles.image} ${width && !wide ? styles.outlined : ''}`} src={useBaseUrl(src)} alt={alt} loading="lazy" />
         {dots.map(([n, x, y]) => (
           <span key={n} className={styles.dot} style={{ left: `${x}%`, top: `${y}%` }} aria-hidden="true">
             {n}
