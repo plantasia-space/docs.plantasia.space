@@ -1,7 +1,6 @@
 ---
 title: Latent generator
 sidebar_position: 1.8
-unlisted: true
 sidebar_custom_props:
   icon: Sparkles
 ---
