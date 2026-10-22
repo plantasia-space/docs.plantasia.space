@@ -70,6 +70,10 @@ Every model learned from music that can be shared:
   Rubin and Peter Barhoum, Google Magenta (2019), [CC BY 4.0](https://magenta.tensorflow.org/datasets/groove).
   House also learned from Plantasia Space's own loops.
 - **Bach**: editions from the [Mutopia Project](https://www.mutopiaproject.org), public domain and CC BY
-  3.0; each piece and its typesetter is credited in the model menu.
+  3.0. The pieces under CC BY 3.0, with their typesetters:
+  - Brandenburg Concerto No. 1 (First Movement, Allegro), BWV 1046, typeset by Ben Stewart
+    ([piece 1136](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1136)).
+  - A piece by J. S. Bach typeset by Hermógenes Hebert Pereira Oliveira
+    ([piece 1902](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1902)).
 
-The menu shows the credits of the model that plays, under the list.
+The credits live on this page; the model menu lists the models only.
