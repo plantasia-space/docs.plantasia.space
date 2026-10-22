@@ -61,8 +61,7 @@ performance, saved with play snapshots.
 
 **To piano roll** writes the loop playing now into the dimension's piano roll (it replaces the clip:
 percussion as notes on the drum keys) and powers the generator off, so the piano roll plays the same
-notes, ready to edit. Power the generator on again to go back to the live loop; undo brings the old
-clip back.
+notes, ready to edit. Power the generator on again to go back to the live loop.
 
 ## Where the models come from
 
