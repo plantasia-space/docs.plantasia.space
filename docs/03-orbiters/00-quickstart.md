@@ -30,6 +30,8 @@ In five minutes you will build a small Audio Orbiter: a player for an audio you 
 
 Open **Release → New Orbiter**. The Orbiter Studio opens on its first step, **Instrument**: the Orbiter on its stage at the top, and the rack you build it in below. The other two steps, **Visual** and **Release**, come later.
 
+A new Orbiter starts as the **World** alone, your tracks: everything in this quickstart happens in World I. The **Moon** (return tracks) and the **Star** (the main bus) are there only once you add them, with **Add Moon** or **Add Star**. If you know a DAW, [Orbiters for DAW users](/docs/orbiters/for-daw-users) translates each body.
+
 ![The Release menu with New Orbiter.](/img/orbiters/release/new.png)
 
 ## 2. Choose what it plays {#instrument}
@@ -102,7 +104,8 @@ Open the **Release** step: give the Orbiter a cover and an **Orbiter Name**, cho
 ## Next
 
 - **More instruments**: the [Sampler](/docs/orbiters/instruments/sampler), or a Notes Orbiter with [up to three instruments](/docs/orbiters/instruments/multiple-midi-instruments).
-- **More effects**: where an effect can go, a World dimension, the Star or a Moon, in [Audio effects](/docs/orbiters/audio-effects).
+- **More effects**: where an effect can go, a World dimension (a track), a Moon (return tracks) or the Star (the main bus), once you add them, in [Audio effects](/docs/orbiters/audio-effects).
+- **Know a DAW?** The World, the Moon and the Star as tracks, return tracks and the main bus, in [Orbiters for DAW users](/docs/orbiters/for-daw-users).
 - **Play it**: how to open and play a released Orbiter, in [Interact](/docs/orbiters/interact).
 - **Make it play notes**: sequencers, arpeggios and chords before the instrument, in [MIDI effects](/docs/orbiters/midi-effects).
 - **More ways to play**: [Sync](/docs/orbiters/sync) several Orbiters on one tempo, or tilt a phone with [Sensors](/docs/orbiters/sensors).

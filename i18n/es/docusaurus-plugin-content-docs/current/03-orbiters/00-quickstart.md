@@ -32,6 +32,8 @@ Algunos nombres del Studio (módulos, **Map**, **Mappings**) aparecen en inglés
 
 Abre **Publicar → Nuevo Orbitador**. El Orbiter Studio se abre en su primer paso, **Instrumento**: el Orbitador en su escenario arriba y, debajo, el rack donde lo construyes. Los otros dos pasos, **Visual** y **Publicar**, vienen después.
 
+Un Orbitador nuevo empieza solo con el **Mundo**, tus pistas: todo lo de este inicio rápido pasa en el Mundo I. La **Luna** (pistas de retorno) y la **Estrella** (el bus principal) solo están cuando las añades, con **Añadir Luna** o **Añadir Estrella**. Si conoces un DAW, [Orbitadores para quien usa un DAW](/docs/orbiters/for-daw-users) traduce cada cuerpo.
+
 ![El menú Publicar con Nuevo Orbitador.](/img/orbiters/release/new.es.png)
 
 ## 2. Elige qué toca {#instrument}
@@ -104,5 +106,6 @@ Abre el paso **Publicar**: dale al Orbitador una portada y un **Nombre del Orbit
 ## Siguiente
 
 - **Más instrumentos**: el [Sampler](/docs/orbiters/instruments/sampler), o un Orbitador de Notas con [hasta tres instrumentos](/docs/orbiters/instruments/multiple-midi-instruments).
-- **Más efectos**: dónde puede ir un efecto, una dimensión de Mundo, la Estrella o una Luna, en [Efectos de audio](/docs/orbiters/audio-effects).
+- **Más efectos**: dónde puede ir un efecto, una dimensión del Mundo (una pista), una Luna (pistas de retorno) o la Estrella (el bus principal), cuando las añades, en [Efectos de audio](/docs/orbiters/audio-effects).
+- **¿Conoces un DAW?** El Mundo, la Luna y la Estrella como pistas, pistas de retorno y el bus principal, en [Orbitadores para quien usa un DAW](/docs/orbiters/for-daw-users).
 - **Más formas de tocar**: [sincroniza](/docs/orbiters/sync) varios Orbitadores con un mismo tempo, o inclina un teléfono con los [Sensores](/docs/orbiters/sensors).
