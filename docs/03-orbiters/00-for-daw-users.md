@@ -20,8 +20,8 @@ An Orbiter has three bodies, each a group of up to three tracks: its dimensions 
 | **<Term id="moon">Moon</Term>** | return tracks: the effects the World sends to |
 | a **Moon dimension** | one return track, fed by a send from each World dimension |
 | **<Term id="star">Star</Term>** | the main bus: where everything meets before you hear it |
-| a **Star dimension** | processing on the main bus, after its mixer |
-| the **Main mix**, in Star I | the main bus's mixer: a level, a Mute and a Solo for the World and for the Moon |
+| the **Main mix** | the main bus's mixer: a level, a Mute and a Solo for the World and for the Moon. It is the Orbiter's own, there with or without a Star |
+| a **Star dimension** | processing on the main bus, after the Main mix |
 | a **[Channel](/docs/orbiters/audio-effects/channel)** | a track's fader, Solo, Mute and sends |
 
 ## The World: an audio track, or MIDI tracks
@@ -37,7 +37,7 @@ Each World dimension's Channel has a send to each Moon dimension, taken **Pre** 
 
 ## The Star: the main bus
 
-The World and the Moon's return meet in the Star's **Main mix**. The Star's own effects play over everything after it, like inserts on the main bus.
+The World and the Moon's return meet in the **Main mix**, on the way out: **World + Moon → Main mix → Star → Out**. The Main mix belongs to the Orbiter, so it is there before you add a Star, and adding or removing the Star keeps its levels. The Star's own effects play over everything after it, like inserts on the main bus.
 
 ## Each dimension is a rack with three macros
 

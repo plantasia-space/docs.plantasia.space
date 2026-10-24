@@ -15,8 +15,8 @@ The Channel has two faces, one for each body:
 - the **World channel**, on a World dimension: Level, Solo, and a send to each Moon dimension;
 - the **Moon channel**, on a Moon dimension: Level, Pan and Solo.
 
-The <Term id="star">Star</Term> has no Channel: its **Main mix** brings the World and the Moon together
-(see below).
+The <Term id="star">Star</Term> has no Channel: the **Main mix** brings the World and the Moon together
+before it (see below).
 
 :::tip[Loads doing nothing]
 
@@ -59,8 +59,9 @@ Levels decide the balance.
 
 ## The Main mix
 
-The Star's inputs, at the head of Star I: where the World and the Moon meet, before the Star's own
-effects.
+Where the World and the Moon meet on the way out, before the Star's effects: **World + Moon → Main mix →
+Star → Out**. It belongs to the Orbiter, so it is there with no Star, and adding or removing the Star keeps
+its levels.
 
 | Control | What it does |
 |---|---|
@@ -68,7 +69,7 @@ effects.
 | **Moon** | The level of all the Moon's dimensions together (its return), **−∞ … +6 dB**, −3 dB as it loads. |
 
 Its screen draws the World and the Moon coming in side by side, each through its level, meeting
-and going on to the Star. For a balance on the whole mix, add a
+and going on to the Out. For a balance on the whole mix, add a
 [Utility](/docs/orbiters/audio-effects/utility) to the Star: its Balance leans the sound to one side.
 
 ## The screen
