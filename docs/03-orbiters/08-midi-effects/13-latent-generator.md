@@ -43,6 +43,7 @@ models); after that it plays offline too. Until then the screen says **Loading m
 | **Temperature** | How freely the loop is drawn. **50 %** is the model's own. Lower plays its most likely loop (percussion straight on the grid at 0 %); higher is looser and more surprising (percussion draws extra hits and their feel). |
 | **Variation** | Another take of the same spot: other draws of the same loop (percussion: with Temperature above 50 %). |
 | **Length** | How much of the two bars plays, round and round: 1 beat, 2 beats, 1 bar or both bars. |
+| **Rate** | How long a step of the loop is: **1/16** as made, **1/8** at half speed. Or [another dimension's hits](./14-another-dimension.md): the loop's next note on each hit. |
 | **Density** | Percussion: more hits up, only the surest down. 0 % plays the model's own hits. |
 | **Accent** | Melody: how much the notes follow a drummer's accents. 0 % plays every note at one velocity. |
 

@@ -26,7 +26,7 @@ dimension has at most one. It plays on the Orbiter's tempo, and everyone in a ro
 | Control | What it does |
 |---|---|
 | <Dot>2</Dot>**Order** | The order the held notes play in, from the next step. See the table below. |
-| <Dot>3</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, straight, dotted or triplet. **1/16** as it loads. |
+| <Dot>3</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, straight, dotted or triplet. **1/16** as it loads. Or [another dimension's hits](./14-another-dimension.md): its next note on each hit. |
 | <Dot>4</Dot>**Gate** | How long each note sounds, as a share of its step, 1 … 150 % (50 % as it loads). Over 100 % a note overlaps the next: legato. |
 | <Dot>5</Dot>**Swing** | Delays every second step, by up to half a step. |
 
@@ -115,7 +115,7 @@ alone.
 
 ## Mapping
 
-<Term id="axis">Axes</Term> can drive **Rate**, **Gate**, **Swing**, **Distance**, **Steps**, the three
+<Term id="axis">Axes</Term> can drive **Gate**, **Swing**, **Distance**, **Steps**, the three
 Velocity knobs, **Repeats**, **Crescendo** and the Grid's **Length**. Toggles can flip **Hold** and
 **Grid**. The order is a choice, never on an axis.
 

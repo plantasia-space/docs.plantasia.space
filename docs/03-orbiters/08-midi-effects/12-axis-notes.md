@@ -32,7 +32,7 @@ dimension has at most one. It plays while the transport runs.
 | <Dot>2</Dot>**Pitch** | Where in each voice's range the note is. Moving it onto a new note plays that note on the next step. |
 | **Velocity** | How hard the next note plays, within each voice's velocity range. Moving it alone plays nothing. |
 | **Length** | How long the next note rings, within each voice's length range. Moving it alone plays nothing. |
-| <Dot>3</Dot>**Rate** | The grid the notes land on: a note value of the Orbiter's tempo, straight or triplet. **1/16** as it loads. |
+| <Dot>3</Dot>**Rate** | The grid the notes land on: a note value of the Orbiter's tempo, straight, dotted or triplet. **1/16** as it loads. Or [another dimension's hits](./14-another-dimension.md): the notes land on them. |
 
 The first step after you press Play strikes the note the input points at, so starting is always heard.
 
@@ -101,7 +101,7 @@ plays.
 
 ## Mapping
 
-Axes can drive **Pitch**, **Velocity**, **Length**, **Rate**, every voice's range ends, Random's knobs,
+Axes can drive **Pitch**, **Velocity**, **Length**, every voice's range ends, Random's knobs,
 **Mod wheel**, **Pressure** and **Slide amount**. Toggles can switch **Voice 2**, **Voice 3**, **Follow**,
 **Expression** and **Slide**. Random's own switch is not on a toggle: turning it on rebuilds the sound.
 
