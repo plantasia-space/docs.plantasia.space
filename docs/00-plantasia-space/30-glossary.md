@@ -67,7 +67,7 @@ One of an Orbiter's slow waves, three per dimension (1cX … 3cZ, following the 
 [The Cosmic LFO and the LFOs](/docs/orbiters/interact#cosmic-lfo)
 
 ### Moon {#moon}
-An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Star's Main mix adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.
+An Orbiter body that works as a **send and return**: the World is sent to it, and it returns only its effect, which the Main mix adds to the dry sound. A reverb or a delay shared by the whole Orbiter lives here.
 [Audio effects: three places for an effect](/docs/orbiters/audio-effects)
 
 
@@ -105,7 +105,7 @@ A soundscape is an environment of sound (or sonic environment) with emphasis on 
 
 
 ### Star {#star}
-The Orbiter body where the sound comes together: its **mixer** blends the World and the Moon's return, and its own effects play over everything.
+The Orbiter body on the main bus: after the Orbiter's **Main mix** blends the World and the Moon's return, the Star's effects play over everything.
 [Audio effects: three places for an effect](/docs/orbiters/audio-effects)
 
 
