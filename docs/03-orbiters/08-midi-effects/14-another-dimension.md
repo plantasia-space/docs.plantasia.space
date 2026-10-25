@@ -56,6 +56,17 @@ The source decides **when**, the follower decides **what**: every hit plays the 
   for the time to the next hit (two beats at most). Its **Rate** is new too: on a note value it plays
   the loop at another speed (**1/16** as made, **1/8** at half speed).
 
+## Step on hits or Play on hits
+
+Once a source is picked, the list shows two ways to follow it:
+
+- **Step on hits** (as it starts): each hit plays the follower's next note, as above. The follower
+  walks at the source's pace; its own note value waits.
+- **Play on hits**: the follower keeps its own note value and its own notes and rests, as if it
+  weren't following. A step of its own plays only when one of the source's hits lands inside it, so
+  a note sounds where both play, and a rest of either stays a rest. The note value stays picked in the
+  list and can still be changed; the button reads both (**1/16 · I · Kick**).
+
 While a generator follows hits, **Swing** does nothing (the hits bring their own feel) and stays set
 for when it goes back to a note value.
 
