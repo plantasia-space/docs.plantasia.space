@@ -19,7 +19,7 @@ There is nothing new to learn: it is one more section in the Rate list you alrea
 | **Step sequencer** | yes: the next step on each hit | yes: every note it plays |
 | **Arpeggiator** | yes: its next note on each hit | no |
 | **Axis notes** | yes: its notes land on the hits | no |
-| **Latent generator** | yes: the loop's next note on each hit | yes: percussion by lane, a melody every note |
+| **Latent generator** | yes: the loop's next note on each hit | yes: percussion by lane, a melody every note, a Voices model by its voices |
 | **Drum sequencer** | no (it keeps its own grid) | yes: by voice (Kick, Snare, Closed hat …) |
 
 - A source is always **another** dimension of the same Orbiter, never the generator's own.
@@ -34,6 +34,9 @@ dimension**, one row per dimension that can lead, numbered as the Orbiter number
 - **Drum sequencer** and **Latent generator · Percussion**: their lanes. Tap one to follow it, tap
   more to add them ("Kick + Open hat"). Tapping the last lit lane off goes back to the note value.
 - **Step sequencer** and **Latent generator · Melody**: **Every note**.
+- A Latent generator's **Voices** model: one row per voice, under the dimension that plays it: the
+  drums by lane (**I · Drums**), the bass, chords and melody **Every note** (**II · Bass**; a chord
+  counts once).
 
 Closed, the button names what it follows: **I · Kick+Snare**, and **+2** when more lanes are lit. The
 screen's Rate corner reads the same. Picking a note value goes back to it.
