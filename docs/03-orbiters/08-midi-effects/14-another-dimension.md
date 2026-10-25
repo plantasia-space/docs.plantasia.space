@@ -21,7 +21,6 @@ There is nothing new to learn: it is one more section in the Rate list you alrea
 | **Axis notes** | yes: its notes land on the hits | no |
 | **Latent generator** | yes: the loop's next note on each hit | yes: percussion by lane, a melody every note |
 | **Drum sequencer** | no (it keeps its own grid) | yes: by voice (Kick, Snare, Closed hat …) |
-| **Piano roll** | no | yes: every note of its clip |
 
 - A source is always **another** dimension of the same Orbiter, never the generator's own.
 - A generator that follows a clock is **not** a source itself: pick the drums directly.
@@ -34,20 +33,23 @@ dimension**, one row per dimension that can lead, numbered as the Orbiter number
 
 - **Drum sequencer** and **Latent generator · Percussion**: their lanes. Tap one to follow it, tap
   more to add them ("Kick + Open hat"). Tapping the last lit lane off goes back to the note value.
-- **Step sequencer**, **Latent generator · Melody** and **Piano roll**: **Every note**.
+- **Step sequencer** and **Latent generator · Melody**: **Every note**.
 
 Closed, the button names what it follows: **I · Kick+Snare**, and **+2** when more lanes are lit. The
 screen's Rate corner reads the same. Picking a note value goes back to it.
 
 ## What a hit does
 
-Each generator counts the hits the way it counts steps: hit 1 is step 1, hit 2 step 2.
+The source decides **when**, the follower decides **what**: every hit plays the follower's next note.
 
-- **Step sequencer**: Direction, the lanes' own lengths, Start, Chance and Euclid work as before. A
-  step's **Length** is measured to the next hit: 1 lasts until the next hit, 0.5 half of that gap.
+- **Step sequencer**: each hit plays its next step that is **on**, rests skipped, in its Direction and
+  from Start; Euclid picks which steps are on, as it does on the grid. A step's **Length** is measured
+  to the next hit: 1 lasts until the next hit, 0.5 half of that gap. Chance can still skip a hit.
 - **Arpeggiator**: its next note on each hit. **Restart** stays on the bar: the first hit at or after
   the line it names starts the figure again.
-- **Axis notes**: a move lands on the next hit instead of the next step of the grid.
+- **Axis notes**: with **Repeat on hits** (on as it loads), every hit plays the note the Pitch input is
+  on, so a still input repeats it in the source's rhythm and moving it changes the pitch. Off, only a
+  move onto a new note plays, on the next hit.
 - **Latent generator**: each hit plays the loop's next note, rests skipped, with the loop's velocity,
   for the time to the next hit (two beats at most). Its **Rate** is new too: on a note value it plays
   the loop at another speed (**1/16** as made, **1/8** at half speed).

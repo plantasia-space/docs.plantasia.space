@@ -99,7 +99,7 @@ The knobs around the pattern, in the Studio.
 | Control | What it does |
 |---|---|
 | <Dot>1</Dot>**Direction** | Which way the steps run: **Forward**, **Backward**, **Ping-pong** (there and back, the ends played once) or **Random**. |
-| <Dot>2</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, from 8 bars down to short notes, with dotted values and triplets. **1/16** as it loads. Or [another dimension's hits](./14-another-dimension.md): one step on each hit. |
+| <Dot>2</Dot>**Rate** | How long a step is: a note value of the Orbiter's tempo, from 8 bars down to short notes, with dotted values and triplets. **1/16** as it loads. Or [another dimension's hits](./14-another-dimension.md): each hit plays its next step that is on. |
 | <Dot>3</Dot>**Gate** | Every step's length, times this, 10 … 200 %: short for staccato, over 100 % for notes that run into each other. |
 | <Dot>4</Dot>**Swing** | Delays every second step, by up to half a step. |
 

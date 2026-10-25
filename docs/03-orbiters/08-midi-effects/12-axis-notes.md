@@ -33,6 +33,7 @@ dimension has at most one. It plays while the transport runs.
 | **Velocity** | How hard the next note plays, within each voice's velocity range. Moving it alone plays nothing. |
 | **Length** | How long the next note rings, within each voice's length range. Moving it alone plays nothing. |
 | <Dot>3</Dot>**Rate** | The grid the notes land on: a note value of the Orbiter's tempo, straight, dotted or triplet. **1/16** as it loads. Or [another dimension's hits](./14-another-dimension.md): the notes land on them. |
+| **Repeat on hits** | While another dimension's hits clock it. **On** as it loads: every hit plays the note the Pitch is on, still or not. **Off**: only a move onto a new note plays. |
 
 The first step after you press Play strikes the note the input points at, so starting is always heard.
 
