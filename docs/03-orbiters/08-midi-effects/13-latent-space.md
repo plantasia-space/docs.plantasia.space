@@ -1,11 +1,11 @@
 ---
-title: Latent generator
+title: Latent space
 sidebar_position: 1.8
 sidebar_custom_props:
   icon: Sparkles
 ---
 
-The **Latent Generator** plays loops made by small trained models: a drum groove, a melody, or
+The **Latent Space** plays loops made by small trained models: a drum groove, a melody, or
 several voices that play together, two or four bars long. Each model has learned a space of loops, and the Orbiter's **X**, **Y** and **Z** axes move a
 point through it, so leaning the Planet morphs the loop: busier, sparser, a shuffle, a leap. The same
 spot always plays the same loop, so a gesture you liked can be found again.
@@ -34,7 +34,7 @@ models); after that it plays offline too. Until then the screen says **Loading m
 ## Voices
 
 A **Voices** model plays several voices from one point in the space: Blue Ring has drums, chords, bass
-and a melody, and they fit together because the same point makes them all. One Latent Generator plays
+and a melody, and they fit together because the same point makes them all. One Latent Space plays
 them all, and sends each voice to a <Term id="world-dimension">dimension</Term> of its own, where that
 dimension's instrument and effects play it.
 
@@ -45,7 +45,7 @@ dimension's instrument and effects play it.
   notes, as the piano roll would. An Arpeggiator there arpeggiates it, so chords sent to it become a
   figure.
 - **What can't take a voice** is listed dimmed with why: a dimension led by a module that makes its own
-  notes (a Drum Sequencer, Step Sequencer, Axis Notes or another Latent Generator), or one whose
+  notes (a Drum Sequencer, Step Sequencer, Axis Notes or another Latent Space), or one whose
   instrument plays no notes.
 - **One generator leads them all.** Its X, Y and Z, Temperature, Variation, Density, Accent, Length,
   Rate and Octave move every voice, wherever it plays.

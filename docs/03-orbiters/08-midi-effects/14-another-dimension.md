@@ -19,7 +19,7 @@ There is nothing new to learn: it is one more section in the Rate list you alrea
 | **Step sequencer** | yes: the next step on each hit | yes: every note it plays |
 | **Arpeggiator** | yes: its next note on each hit | no |
 | **Axis notes** | yes: its notes land on the hits | no |
-| **Latent generator** | yes: the loop's next note on each hit | yes: percussion by lane, a melody every note, a Voices model by its voices |
+| **Latent space** | yes: the loop's next note on each hit | yes: percussion by lane, a melody every note, a Voices model by its voices |
 | **Drum sequencer** | no (it keeps its own grid) | yes: by voice (Kick, Snare, Closed hat …) |
 
 - A source is always **another** dimension of the same Orbiter, never the generator's own.
@@ -31,10 +31,10 @@ Open **Rate**: on the module's <Term id="play-surface">play surface</Term>, or i
 Rate is a menu in the module's panel. The list shows the note values first, then **From another
 dimension**, one row per dimension that can lead, numbered as the Orbiter numbers them:
 
-- **Drum sequencer** and **Latent generator · Percussion**: their lanes. Tap one to follow it, tap
+- **Drum sequencer** and **Latent space · Percussion**: their lanes. Tap one to follow it, tap
   more to add them ("Kick + Open hat"). Tapping the last lit lane off goes back to the note value.
-- **Step sequencer** and **Latent generator · Melody**: **Every note**.
-- A dimension playing a Latent generator's **Voices**: under that dimension, named by its voices
+- **Step sequencer** and **Latent space · Melody**: **Every note**.
+- A dimension playing a Latent space's **Voices**: under that dimension, named by its voices
   (**Chords+Bass · from I**), **Every note** (a chord counts once); the drums voice alone by lane.
 
 Closed, the button names what it follows: **I · Kick+Snare**, and **+2** when more lanes are lit. The
@@ -52,7 +52,7 @@ The source decides **when**, the follower decides **what**: every hit plays the 
 - **Axis notes**: with **Repeat on hits** (on as it loads), every hit plays the note the Pitch input is
   on, so a still input repeats it in the source's rhythm and moving it changes the pitch. Off, only a
   move onto a new note plays, on the next hit.
-- **Latent generator**: each hit plays the loop's next note, rests skipped, with the loop's velocity,
+- **Latent space**: each hit plays the loop's next note, rests skipped, with the loop's velocity,
   for the time to the next hit (two beats at most). Its **Rate** is new too: on a note value it plays
   the loop at another speed (**1/16** as made, **1/8** at half speed).
 
