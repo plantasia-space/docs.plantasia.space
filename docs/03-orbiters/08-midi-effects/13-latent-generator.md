@@ -34,24 +34,26 @@ models); after that it plays offline too. Until then the screen says **Loading m
 ## Voices
 
 A **Voices** model plays several voices from one point in the space: Blue Ring has drums, chords, bass
-and a melody, and they fit together because the same point makes them all. Each voice plays in its own
-<Term id="world-dimension">dimension</Term>, through that dimension's instrument and effects.
+and a melody, and they fit together because the same point makes them all. One Latent Generator plays
+them all, and sends each voice to a <Term id="world-dimension">dimension</Term> of its own, where that
+dimension's instrument and effects play it.
 
-- **The dimension with the model** plays one voice, picked in the **Voice** menu next to the model (the
-  first voice nobody else plays, as it loads).
-- **Another dimension** takes a voice from its own Latent Generator: open the model menu and pick, under
-  **From another dimension**, a voice such as **I · Bass**. That dimension now plays World I's bass.
-- **One voice, one place:** a voice plays in one dimension only, so the menus list only the voices
-  nobody plays yet.
-- **The model's dimension leads.** Its X, Y and Z, Temperature, Variation, Density, Accent, Length and
-  Rate move every voice. A dimension that takes a voice keeps only its own **Octave**.
+- **Where each voice plays:** next to each voice's name (in the panel, and beside its lane on the play
+  surface), its menu picks **I**, **II**, **III** or **Off**. A model just picked plays its first voice
+  where the generator sits; the others start Off.
+- **The other dimensions need no generator.** Give them an instrument and effects; the voice arrives as
+  notes, as the piano roll would. An Arpeggiator there arpeggiates it, so chords sent to it become a
+  figure.
+- **What can't take a voice** is listed dimmed with why: a dimension led by a module that makes its own
+  notes (a Drum Sequencer, Step Sequencer, Axis Notes or another Latent Generator), or one whose
+  instrument plays no notes.
+- **One generator leads them all.** Its X, Y and Z, Temperature, Variation, Density, Accent, Length,
+  Rate and Octave move every voice, wherever it plays.
 - **Chords** play as a held pad: every tone of the chord together, around middle C, for as long as the
   model holds it.
-- A model with one voice has no Voice menu.
-
-When a voice can't play, its screen says why: **I has no bass** (World I's model was changed or
-removed) or **Bass plays in II** (two people in a <Term id="room">room</Term> picked the same voice at
-once: the lower-numbered dimension keeps it). Pick another voice or model.
+- **Its screen and surface show every voice at once**, a lane each. On the screen, the strokes at the
+  end of a lane say where it plays (one for I, two for II, three for III); a voice that's Off is faint.
+- While a dimension plays a voice, its piano roll waits. A model with one voice has no voice menus.
 
 ## Space
 

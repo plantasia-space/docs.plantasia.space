@@ -34,9 +34,8 @@ dimension**, one row per dimension that can lead, numbered as the Orbiter number
 - **Drum sequencer** and **Latent generator · Percussion**: their lanes. Tap one to follow it, tap
   more to add them ("Kick + Open hat"). Tapping the last lit lane off goes back to the note value.
 - **Step sequencer** and **Latent generator · Melody**: **Every note**.
-- A Latent generator's **Voices** model: one row per voice, under the dimension that plays it: the
-  drums by lane (**I · Drums**), the bass, chords and melody **Every note** (**II · Bass**; a chord
-  counts once).
+- A dimension playing a Latent generator's **Voices**: under that dimension, named by its voices
+  (**Chords+Bass · from I**), **Every note** (a chord counts once); the drums voice alone by lane.
 
 Closed, the button names what it follows: **I · Kick+Snare**, and **+2** when more lanes are lit. The
 screen's Rate corner reads the same. Picking a note value goes back to it.
