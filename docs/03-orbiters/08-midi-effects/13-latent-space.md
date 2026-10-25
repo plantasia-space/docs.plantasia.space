@@ -53,7 +53,7 @@ dimension's instrument and effects play it.
   model holds it.
 - **Its screen and surface show every voice at once**, a lane each. On the screen, the strokes at the
   end of a lane say where it plays (one for I, two for II, three for III); a voice that's Off is faint.
-- While a dimension plays a voice, its piano roll waits. A model with one voice has no voice menus.
+- A dimension's piano roll plays along with the voices it gets. A model with one voice has no voice menus.
 
 ## Space
 
