@@ -41,12 +41,13 @@ make the two copies interfere.
 
 ### The screen
 
-**Output level.** The sound coming out over the last seconds, scrolling from right to left, with the
-**ceiling** as the line across: where the sound's top runs flat along it, the Limiter is working. The
-**reduction** hangs from the top in green, deeper as it turns the sound down harder. The big number is
-the Threshold and the half-ring under it the Ceiling; underneath, the gain the Threshold gives and the
-Release. The ladder on the right lights with the reduction now, and the number under it is the deepest
-reduction of the last second.
+**An air compressor.** The sound is the air. The pump on top pushes it into the tank: its piston
+works harder the more gain the Threshold gives. The **big gauge** reads the pressure that comes out,
+the output level, with the **ceiling** as its mark. When the sound would pass it, the **safety valve**
+lets the extra air out in puffs, more the harder the Limiter works, and the **small gauge** reads how
+much it lets out: the reduction. The big number is the Threshold and the half-ring under it the
+Ceiling; underneath, the gain the Threshold gives and the Release. The ladder on the right lights with
+the reduction, and the number under it says how much in dB.
 
 ## One Limiter
 
@@ -60,7 +61,9 @@ at 0 it does nothing. Either way, once you turn it, no peak passes −1 dB.
 - **Turn it left: Dense.** The same push with a slow release, and the level it added taken back off:
   the mix gets thicker and more even without getting louder. Safe to move on an axis.
 
-Its screen is the Limiter's, with Amount as the big number.
+Its screen is a smaller machine, a pancake compressor: one gauge for the output, with the ceiling's
+mark, and the safety valve's air while it limits. The big number is Amount, and the ladder on the right
+shows the reduction.
 
 ## Try it
 
