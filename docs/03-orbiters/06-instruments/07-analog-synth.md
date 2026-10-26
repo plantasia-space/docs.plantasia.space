@@ -160,7 +160,8 @@ In the Studio's **Map** mode, every number can be driven by an <Term id="axis">a
 
 Toggles can switch each source **On** and off, and flip **Follow**, **Slope**, an LFO on and off,
 **Mono** and **Legato**. Waves, modes, filter types, loops and Unison are never on an axis: a preset
-carries them.
+carries them. Osc 2's mode, the filter types and the loops are built into the instrument, so only the
+chosen ones cost anything: changing one rebuilds it, as Voices does, and held keys strike again.
 
 ## In a room
 
