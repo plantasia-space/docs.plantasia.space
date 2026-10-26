@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Layers, CassetteTape, AudioWaveform, Drum, Bell, Atom, Cable, AudioLines, Wheat, Sparkles } from 'lucide-react';
+import { Layers, CassetteTape, AudioWaveform, Drum, Bell, Atom, Cable, AudioLines, Wheat, Sparkles, Gamepad2 } from 'lucide-react';
 
 An **instrument** makes the sound. It sits at the head of a <Term id="world-dimension">World dimension</Term>'s chain: whatever comes
 after it (audio effects, the <Term id="star">Star</Term>'s mixer, a <Term id="moon">Moon</Term>) hears it, and whatever comes before it (a
@@ -148,6 +148,12 @@ pressure and the mod wheel stay on the device that plays them.
     label="Subtractive synth"
     icon={<Wheat />}
     description="One oscillator, a sub and noise into a low-pass filter: the quickest way to a bass, a lead or a pad."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/8-bit-synth"
+    label="8-bit synth"
+    icon={<Gamepad2 />}
+    description="The Commodore 64's sound chip: pulse leads, chip chords, sync and ring, noise drums, one filter and an analog boost."
   />
   <NavigationCard
     href="/docs/orbiters/instruments/granular"
