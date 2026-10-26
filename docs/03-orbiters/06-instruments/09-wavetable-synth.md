@@ -51,7 +51,8 @@ random value per note can move almost anything through the **matrix**.
     wave.
   - **Fold**: the wave is folded back on itself, brighter and buzzier as the amount rises.
 
-  A new table or effect lands on the next note, so a held note never jumps. Osc 2 keeps
+  A new table lands on the next note, so a held note never jumps. Only the chosen effect is built
+  into the instrument, so changing it rebuilds the instrument, as Voices does: held keys strike again. Osc 2 keeps
   feeding Osc 1's FM even while it is switched off, so it can be a pure modulator.
 
 - <Dot>3</Dot>**The table of numbers.** One row each for **1**, **2** and **Sub**: the hexagon switches it on

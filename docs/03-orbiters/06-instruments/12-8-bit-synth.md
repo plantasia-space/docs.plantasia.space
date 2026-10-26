@@ -16,8 +16,8 @@ piano roll or a sequencer.
 <ModulePicture
   src="/img/orbiters/instruments/8-bit-synth.jpg"
   wide
-  alt="The 8-bit synth set as a pulse lead: the home computer screen, then Oscillator (Wave, Width, Octave), Filter (Mode, Chip and its knobs), Amp with its envelope, and Ring & sync, Chip arpeggio, Attack, LFO, Matrix and Voice folded."
-  dots={[[1, 29.9, 20.2], [2, 31.3, 61.1], [3, 35.7, 61.1], [4, 39.2, 20.4], [5, 50.3, 20.4], [6, 40.7, 61.1], [7, 45.2, 61.1], [8, 49.6, 61.1], [9, 54.1, 61.1], [10, 58.5, 61.1], [11, 74, 28], [12, 73.4, 74.5], [13, 78.8, 74.5], [14, 84.2, 74.5], [15, 88.6, 40], [16, 90.7, 40], [17, 92.8, 40], [18, 94.8, 40], [19, 96.9, 40], [20, 98.9, 40], [21, 14, 50]]}
+  alt="The 8-bit synth set as a pulse lead: the home computer screen, then Oscillator (Wave, Width, Octave), Filter (Mode, Chip, its envelope and knobs), Amp with its envelope, and Ring & sync, Chip arpeggio, Attack, LFO, Matrix and Voice folded."
+  dots={[[1, 35.3, 20.1], [2, 36.4, 61.1], [3, 41.5, 61.1], [4, 45.7, 20.4], [5, 58.5, 20.4], [6, 48.5, 78.5], [7, 54.7, 78.5], [8, 61, 78.5], [9, 46, 31], [10, 66.5, 27], [11, 69, 74.5], [12, 75.3, 74.5], [13, 81.6, 74.5], [14, 86.8, 40], [15, 89.2, 40], [16, 91.6, 40], [17, 94, 40], [18, 96.4, 40], [19, 98.7, 40], [20, 16, 50]]}
 />
 </TryModule>
 
@@ -48,15 +48,16 @@ One filter for every note, over the chip's range (30 Hz … 12 kHz).
 | <Dot>7</Dot>**Resonance** | A peak at the cutoff, up to a whistle. The 6581's is weaker and rougher. |
 | <Dot>8</Dot>**Envelope** | How far the filter envelope moves the cutoff, up or down, in octaves. |
 
-**The filter envelope** is <Dot>9</Dot>**Attack** and <Dot>10</Dot>**Decay** back to the cutoff, each with a
-curve beside it. It has no sustain: it rises and falls whether the key is held or not, and every note
-restarts it, for the whole instrument, rising from wherever it is.
+<Dot>9</Dot>**The filter envelope** is drawn above the knobs: an **Attack** and a **Decay** back to the cutoff.
+Drag a point, or type a value under it; bend either from its round handle. It has no sustain: it rises
+and falls whether the key is held or not, and every note restarts it, for the whole instrument, rising
+from wherever it is.
 
 ## Amp
 
-<Dot>11</Dot>The envelope of each note's level, drawn above the knobs: **Attack**, **Decay**, **Sustain** and
-**Release**. Then <Dot>12</Dot>**Velocity** (how much a note's velocity moves its level; the chip had none: at 0 every
-note is full), <Dot>13</Dot>**Boost** and <Dot>14</Dot>**Level**.
+<Dot>10</Dot>The envelope of each note's level, drawn above the knobs: **Attack**, **Decay**, **Sustain** and
+**Release**. Then <Dot>11</Dot>**Velocity** (how much a note's velocity moves its level; the chip had none: at 0 every
+note is full), <Dot>12</Dot>**Boost** and <Dot>13</Dot>**Level**.
 
 **Boost** is the analog boost: warmth at a few decibels, a driven amp near the top. At 0 it is off, and
 the level stays about the same as it rises. For more drive, tone or a Dry/wet, put a Saturator after it.
@@ -68,34 +69,34 @@ own shape is a fall fast at the start with a long tail: Decay and Release curves
 
 These groups start folded; open one from its column.
 
-- <Dot>15</Dot>**Ring & sync**: each note has a **partner** at the **Interval** above it (and **Fine**, a few cents
+- <Dot>14</Dot>**Ring & sync**: each note has a **partner** at the **Interval** above it (and **Fine**, a few cents
   off it for a slow beating). **Ring** flips the triangle with the partner: bells and metal (only
   Triangle and Pulse + Tri ring, as on the chip). **Sync** restarts the wave at the key's rate while it
   runs at the partner's: sweep the Interval for the sync scream. The note keeps the key's pitch either
   way.
-- <Dot>16</Dot>**Chip arpeggio**: **2nd**, **3rd** and **4th**, each a number of semitones above the key, and
+- <Dot>15</Dot>**Chip arpeggio**: **2nd**, **3rd** and **4th**, each a number of semitones above the key, and
   **Speed**, steps a second. One key then plays a chord the way C64 tunes did, as a fast arpeggio on one
   voice: 50 steps a second is the chip's frame rate. All three at 0: no arpeggio. Major: 4, 7, 12;
   minor: 3, 7, 12. For arpeggios in time with the music, use the Arpeggiator before it instead.
-- <Dot>17</Dot>**Attack**: the chip's drum tricks. **Noise** plays noise instead of the wave for this many
+- <Dot>16</Dot>**Attack**: the chip's drum tricks. **Noise** plays noise instead of the wave for this many
   milliseconds at each strike; **Drop** starts the note this many semitones above the key and falls to
   it in **Time**.
 
 ## LFO, Matrix, Voice
 
-- <Dot>18</Dot>**LFO**: one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module), its **Amount**,
+- <Dot>17</Dot>**LFO**: one of [the Orbiter's LFOs](/docs/orbiters/interact#an-lfo-in-a-module), its **Amount**,
   and a **Delay**: each note brings the LFO in over this time, the delayed vibrato of the C64 leads.
   Its share on the filter and the boost comes in at once.
-- <Dot>19</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. The LFO
+- <Dot>18</Dot>**Matrix**: the [Matrix](/docs/orbiters/instruments#the-matrix) every notes instrument shares. The LFO
   can move **Pitch**, **Width**, **Cutoff**, **Interval** and **Boost**; velocity, the key, pitch bend,
   pressure, the mod wheel and a random value per note move **Pitch**, **Width**, **Interval**, **Level**
   and **Vibrato**; bend, pressure and the wheel move **Cutoff** and **Boost** too (one filter and one
   boost for every note), and can bring the **LFO** in. LFO › Width is the classic moving pulse.
-- <Dot>20</Dot>**Voice**: **Mono**, **Legato**, **Glide** and **Voices** (3 as it loads, up to 16).
+- <Dot>19</Dot>**Voice**: **Mono**, **Legato**, **Glide** and **Voices** (3 as it loads, up to 16).
 
 ## The screen
 
-<Dot>21</Dot>**The home computer.** A monitor, the keyboard under it and a joystick. The wave plays on the
+<Dot>20</Dot>**The home computer.** A monitor, the keyboard under it and a joystick. The wave plays on the
 monitor's glass in 8-bit steps, through the filter and the boost, and lights while a note sounds; the
 pulse's width is the accent under it. The playing note lights its key, the fire button lights at each
 strike, and the stick leans with the mod wheel.
