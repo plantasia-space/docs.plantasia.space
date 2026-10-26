@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
 import SignalChain from '@site/src/components/docs/SignalChain';
-import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal, SlidersVertical, Funnel, Blend, ChartSpline, Gauge, Flame, Binary } from 'lucide-react';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal, SlidersVertical, Funnel, Blend, ChartSpline, Gauge, ArrowUpToLine, Flame, Binary } from 'lucide-react';
 
 An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
 it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
@@ -83,6 +83,7 @@ Most effects come as a pair:
 | [Multimode filter](/docs/orbiters/audio-effects/multimode-filter) | Multimode filter | none | insert |
 | [Parametric EQ](/docs/orbiters/audio-effects/parametric-eq) | Parametric EQ | none | insert |
 | [Compressor](/docs/orbiters/audio-effects/compressor) | Compressor | One Compressor | insert |
+| [Limiter](/docs/orbiters/audio-effects/limiter) | Limiter | One Limiter | insert; not on a Moon |
 | [Saturator](/docs/orbiters/audio-effects/saturator) | Saturator | One Saturator | insert |
 | [Bitcrusher](/docs/orbiters/audio-effects/bitcrusher) | Bitcrusher | none | insert |
 | [Channel](/docs/orbiters/audio-effects/channel) | World channel, Moon channel | none | always last on each World and Moon dimension |
@@ -115,6 +116,7 @@ Most effects come as a pair:
   <NavigationCard href="/docs/orbiters/audio-effects/multimode-filter" label="Multimode filter" icon={<Blend />} description="A synth's filter for any sound: four types, a ladder model, moved by a steady cycle or by the sound's own level." />
   <NavigationCard href="/docs/orbiters/audio-effects/parametric-eq" label="Parametric EQ" icon={<ChartSpline />} description="Eight bands to shape the tone: cuts, shelves, bells and notches." />
   <NavigationCard href="/docs/orbiters/audio-effects/compressor" label="Compressor" icon={<Gauge />} description="Even out the level: punch on drums, glue on a mix, parallel compression." />
+  <NavigationCard href="/docs/orbiters/audio-effects/limiter" label="Limiter" icon={<ArrowUpToLine />} description="Louder, with the peaks held under a ceiling: Threshold and Ceiling, like a mastering limiter." />
   <NavigationCard href="/docs/orbiters/audio-effects/saturator" label="Saturator" icon={<Flame />} description="Warmth, then grit: three curves, with the level held." />
   <NavigationCard href="/docs/orbiters/audio-effects/bitcrusher" label="Bitcrusher" icon={<Binary />} description="Fewer bits and fewer samples, with a ceiling that clips, folds or wraps." />
   <NavigationCard href="/docs/orbiters/audio-effects/channel" label="Channel" icon={<SlidersVertical />} description="Each dimension's level, solo and sends to the Moon (World channel), or level, pan and solo (Moon channel), and the Main mix." />
