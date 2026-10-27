@@ -1,3 +1,4 @@
+@import 'plantasia.space-design/components.css';
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -827,4 +828,29 @@ ul li {
 
 .wn-changes ul {
   padding-left: 1.25rem;
+}
+
+/* Keep the assistant above docs chrome; all conversation visuals come from the design library. */
+.orchidea-docs-host { position: relative; z-index: 1000; }
+/* The panel's menus and model list open in a portal: above the panel, not under it. */
+.orchidea-docs-portal { z-index: 1001 !important; }
+
+/* The few browser defaults the design components assume (Tailwind's reset), only where they render:
+   the assistant and its portalled menus. In the base layer, so the components' own classes win; the
+   rest of the docs keeps its lists, images and spacing. */
+@layer base {
+  :where(.orchidea-docs-host, .orchidea-docs-portal),
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(*, ::before, ::after) {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(button, input, textarea, select) {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(button) { cursor: pointer; }
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(svg, img) { display: block; }
 }

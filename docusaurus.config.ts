@@ -44,6 +44,9 @@ const config = {
   },
 
   customFields: {
+    // The root site Orchidea talks to. A production build shows Orchidea only when this is set (to the
+    // root where it is live); unset, the docs ship without it. Local development pairs with local root.
+    orchideaRootUrl: process.env.ORCHIDEA_ROOT_URL || (process.env.NODE_ENV === 'production' ? '' : 'https://local.plantasia.space:3000'),
     // Where "Try it" (TryModule) loads a module from: the Orbiters app's module embed page. One value
     // for every page. `ORBITERS_EMBED_URL` sets it for a build; a local `docusaurus start` uses the
     // monitor's Orbiters preview. A production build without it shows the pictures only, so nothing
