@@ -14,7 +14,7 @@ export function useDocsAssistantAccess() {
 /** Children keep their normal SSR output; only the assistant is browser-only. */
 export default function DocsAssistantProvider({ children }: { children: React.ReactNode }) {
   const { siteConfig } = useDocusaurusContext();
-  const root = String(siteConfig.customFields?.orchideaRootUrl ?? '');
+  const root = String(siteConfig.customFields?.rootBase ?? '');
   const base = root ? new URL(root).origin : null;
   const [store] = useState(() => (base ? createDocsAccess(base) : null));
   // No root to talk to (a build without one): the docs show no assistant.
