@@ -20,7 +20,8 @@ export default function DocsAssistant({ base }: { base: string }) {
   }, []);
   const location = useLocation();
   const history = useHistory();
-  const { i18n: { currentLocale: locale } } = useDocusaurusContext();
+  // `siteConfig.url`: the public docs, where a help page's address always points, even locally.
+  const { i18n: { currentLocale: locale }, siteConfig: { url: publicDocs } } = useDocusaurusContext();
   const current = useRef({ location, locale });
   current.current = { location, locale };
   const es = locale === 'es';
@@ -36,10 +37,18 @@ export default function DocsAssistant({ base }: { base: string }) {
       if (response.status === 401) access.signedOut();
       return response;
     };
+    const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher });
     const registry = createDocsRegistry({
       docsOrigin: window.location.origin, rootOrigin: base,
       page: () => ({ path: current.current.location.pathname, title: document.title }),
       offerAppLink: setAppLink,
+      studio: {
+        route: transport,
+        // Root's edit address: it checks the Orbiter, then hands the token on to the Studio.
+        studioHref: (entity, token) => new URL(`/${current.current.locale}/release/${entity.type}/${entity.id ? encodeURIComponent(entity.id) : 'new'}${token ? `?handoff=${encodeURIComponent(token)}` : ''}`, base).href,
+        go: (href) => window.location.assign(href),
+        pricingHref: () => new URL(`/${current.current.locale}/pricing`, base).href,
+      },
       navigate: (url) => { const target = new URL(url); history.push(target.pathname + target.search + target.hash); },
       knowledge: async (topic) => {
         const query = new URLSearchParams({ app: 'docs', locale: current.current.locale });
@@ -73,7 +82,7 @@ export default function DocsAssistant({ base }: { base: string }) {
     // A docs page is read whole: results up to 6000 characters, where the Studios keep the default.
     return createAssistant({ app: 'docs', registry, resultChars: 6000,
       context: () => ({ page: current.current.location.pathname, title: document.title, locale: current.current.locale }),
-      transport: createSiteTransport({ app: 'docs', base, fetch: fetcher }),
+      transport,
     });
   }, [access, base, history]);
   // Welcome by name (from the config), with one short line picked per panel.
@@ -97,7 +106,7 @@ export default function DocsAssistant({ base }: { base: string }) {
             {state.status === 'failed' ? <OrchideaChatMessage from="orchidea">{es ? 'No se pudo cargar Orchidea.' : 'Orchidea could not load.'} <Button variant="link" onClick={() => void access.load()}>{es ? 'Reintentar' : 'Try again'}</Button></OrchideaChatMessage> : <OrchideaChatWait>{es ? 'Cargando Orchidea' : 'Loading Orchidea'}</OrchideaChatWait>}
           </OrchideaChatFeed></OrchideaChat> : <AssistantPanel assistant={assistant} account={state.account}
             signInHref={link('auth/login')} pricingHref={new URL(`/${locale}/pricing`, base).href} creditsHref={new URL(`/${locale}/credits`, base).href}
-            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base]} onClose={() => setOpen(false)}
+            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base, new URL(publicDocs).origin]} onClose={() => setOpen(false)}
             style={{ width: 'min(380px, calc(100vw - 32px))', height: 'min(620px, calc(100dvh - 160px), var(--floating-dock-room, 100dvh))' }} />}
           {appLink && state.account ? <Button asChild><a href={appLink}>{es ? 'Abrir en la aplicación' : 'Open in the app'}</a></Button> : null}
         </> : null}
