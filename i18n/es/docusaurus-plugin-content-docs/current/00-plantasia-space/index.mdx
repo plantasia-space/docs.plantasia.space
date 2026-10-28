@@ -9,7 +9,7 @@ sidebar_custom_props:
 ---
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
-import { Eye, CircleHelp, BookOpen, Scroll, HeartHandshake, Share2, Cookie, Bell, ShieldCheck, BarChart2 } from 'lucide-react';
+import { Eye, CircleHelp, BookOpen, Scroll, HeartHandshake, Share2, Cookie, Bell, ShieldCheck, BarChart2, CreditCard, Flower2, Star, Users } from 'lucide-react';
 
 <NavigationGrid>
   <NavigationCard
@@ -65,5 +65,29 @@ import { Eye, CircleHelp, BookOpen, Scroll, HeartHandshake, Share2, Cookie, Bell
     label="Estadísticas"
     icon={<BarChart2 />}
     description="Cómo funcionan las métricas y estadísticas."
+  />
+  <NavigationCard
+    href="/docs/plantasia-space/plans-and-credits"
+    label="Planes y créditos"
+    icon={<CreditCard />}
+    description="Los planes y cómo se gastan los créditos de IA."
+  />
+  <NavigationCard
+    href="/docs/plantasia-space/orchidea"
+    label="Orchidea"
+    icon={<Flower2 />}
+    description="La asistente: planes, precios, qué hace."
+  />
+  <NavigationCard
+    href="/docs/plantasia-space/stars"
+    label="Estrellas"
+    icon={<Star />}
+    description="Guarda cosas y encuéntralas otra vez."
+  />
+  <NavigationCard
+    href="/docs/plantasia-space/playground"
+    label="Playground y salas"
+    icon={<Users />}
+    description="Toca en directo con otras personas."
   />
 </NavigationGrid>

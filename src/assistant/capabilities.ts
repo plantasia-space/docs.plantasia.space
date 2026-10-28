@@ -5,7 +5,10 @@ export interface DocsHost {
   docsOrigin: string;
   rootOrigin: string;
   page: () => { path: string; title: string };
-  knowledge: (topic: string) => Promise<string>;
+  /** A help page by topic: its text, and its docs address when it is a docs page. */
+  knowledge: (topic: string) => Promise<{ text: string; url?: string }>;
+  /** The plans, credit packs and Orchidea's model prices, live from the backend config. */
+  plans: () => Promise<unknown>;
   read: (url: string) => Promise<string>;
   search: (query: string) => Promise<Array<{ title: string; url: string; excerpt: string }>>;
   navigate: (url: string) => void;
@@ -31,10 +34,16 @@ export function createDocsRegistry(host: DocsHost) {
     inputSchema: { type: 'object', required: ['topic'], properties: { topic: { type: 'string', minLength: 1 } } },
     execute: async ({ topic }) => {
       const path = String(topic);
-      if (!path.startsWith('/') && !path.startsWith('https:')) return { topic: path, text: await host.knowledge(path) };
+      if (!path.startsWith('/') && !path.startsWith('https:')) return { topic: path, ...await host.knowledge(path) };
       const url = publicUrl(path, host.docsOrigin, true);
       return { url, text: await host.read(url) };
     },
+  });
+  registry.register({ name: 'plans.catalog', kind: 'query', risk: 'read',
+    description: 'The plans (prices, limits, monthly AI credits, where each has Orchidea), the credit packs (sizes, prices) and what an Orchidea request costs per model in each app (docs is this site), live from the same settings as the pricing page. Answer every price, limit, credit amount and what a plan includes from this, never from memory or a documentation page.',
+    label: { en: 'Looked at the plans and prices', es: 'Miró los planes y precios' },
+    inputSchema: { type: 'object', properties: {} },
+    execute: () => host.plans(),
   });
   registry.register({ name: 'docs.search', kind: 'query', risk: 'read',
     description: 'Search this language of the public documentation. Returns page titles, paths and excerpts.',
