@@ -17,7 +17,7 @@ The collection must be one you've shared and must have tracks in it.
 
 ## Rooms
 
-- A room holds up to **2 Orbiters and 2 xPlorers** for now. When the seats are taken, others can still listen.
+- A room has a few seats for Orbiters and xPlorers; when they are taken, others can still listen.
 - Everyone in a room sees the same things: what the room's host can see.
 - In the waiting room, invite people with **copy the code**, **copy link** or **share room**. The host presses **start** when everyone is there.
 - To join with a code, open the playground, choose **Enter code** and type it (for example `bee-orchid-4821`).

@@ -18,4 +18,4 @@ Your stars are private unless you turn on **Show my Stars publicly** in **Settin
 
 ## Archive and restore
 
-On your own items, **Archive** takes an item out of view without deleting it, and **Restore** brings it back. An item over your plan's limit can only be restored after an upgrade.
+On your own items, **Archive** takes an item out of view without deleting it, and **Restore** brings it back. An item over your plan's limit can only be restored after an upgrade (see [Plans and credits](/docs/plantasia-space/plans-and-credits)).

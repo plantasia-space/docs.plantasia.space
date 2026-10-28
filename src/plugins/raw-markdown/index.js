@@ -20,6 +20,9 @@ export function plainMarkdown(content) {
       return `- [${label}](${href})${description ? `: ${description}` : ''}\n`;
     })
     .replace(/^<\/?NavigationGrid>\n?/gm, '')
+    // The live plan and price tables hold no figures in the page: say where the figures are.
+    .replace(/^<(?:PlansTable|CreditPacksTable|OrchideaPricesTable) \/>$/gm,
+      '(The current figures are read live from the plans settings: see https://plantasia.space/pricing. Orchidea reads them with its plans tool.)')
     .replace(/<Dot>(\d+)<\/Dot>/g, '($1) ')
     .replace(/<Term id="[\w-]+">([\s\S]*?)<\/Term>/g, '$1')
     .replace(/<StepFlow\b[\s\S]*?\n\/>\n?/g, '')

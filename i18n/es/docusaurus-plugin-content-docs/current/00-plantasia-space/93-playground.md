@@ -17,7 +17,7 @@ La colección tiene que ser una que hayas compartido y tener pistas.
 
 ## Salas
 
-- Una sala admite por ahora hasta **2 Orbiters y 2 xPlorers**. Cuando los puestos están ocupados, otras personas pueden escuchar.
+- Una sala tiene unos pocos puestos para Orbiters y xPlorers; cuando están ocupados, otras personas pueden escuchar.
 - Todos en una sala ven lo mismo: lo que puede ver quien la creó.
 - En la sala de espera, invita con el código, el enlace o compartiendo la sala. Quien la creó pulsa **empezar** cuando todos están.
 - Para entrar con un código, abre el playground, elige **Introducir código** y escríbelo (por ejemplo `bee-orchid-4821`).

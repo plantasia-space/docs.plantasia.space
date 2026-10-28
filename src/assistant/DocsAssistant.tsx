@@ -48,6 +48,12 @@ export default function DocsAssistant({ base }: { base: string }) {
         const body = await response.json();
         return { text: body.text, url: body.url };
       },
+      plans: async () => {
+        const query = new URLSearchParams({ app: 'docs', locale: current.current.locale });
+        const response = await fetcher(`${base}/api/orchidea/plans?${query}`, { credentials: 'include' });
+        if (!response.ok) throw new Error('Plans unavailable');
+        return response.json();
+      },
       read: async (url) => {
         const response = await fetch(url, { credentials: 'omit' });
         if (!response.ok) throw new Error('Documentation page unavailable');
