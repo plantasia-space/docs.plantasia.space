@@ -37,7 +37,7 @@ export function createDocsRegistry(host: DocsHost) {
     },
   });
   registry.register({ name: 'plans.catalog', kind: 'query', risk: 'read',
-    description: 'The plans (prices, limits, monthly AI credits), the credit packs (sizes, prices) and what an Orchidea request costs per model, live from the same settings as the pricing page. Answer every price, limit or credit amount from this, never from memory or a documentation page.',
+    description: 'The plans (prices, limits, monthly AI credits, where each has Orchidea), the credit packs (sizes, prices) and what an Orchidea request costs per model in each app (docs is this site), live from the same settings as the pricing page. Answer every price, limit, credit amount and what a plan includes from this, never from memory or a documentation page.',
     label: { en: 'Looked at the plans and prices', es: 'Miró los planes y precios' },
     inputSchema: { type: 'object', properties: {} },
     execute: () => host.plans(),

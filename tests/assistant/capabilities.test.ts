@@ -6,13 +6,13 @@ import { buildToolList } from 'plantasia.space-orchidea/assistant';
 const host: DocsHost = {
   docsOrigin: 'https://docs.plantasia.space', rootOrigin: 'https://plantasia.space',
   page: () => ({ path: '/docs/start', title: 'Start' }),
-  knowledge: async () => 'Help', read: async () => 'Documentation', search: async () => [{ title: 'Start', url: '/docs/start', excerpt: 'Begin' }], navigate: () => {},
+  knowledge: async () => ({ text: 'Help', url: 'https://docs.plantasia.space/docs/help' }), plans: async () => ({ plans: [] }), read: async () => 'Documentation', search: async () => [{ title: 'Start', url: '/docs/start', excerpt: 'Begin' }], navigate: () => {},
 };
 
 test('docs exposes only read-only tools with bilingual labels and strict schemas', () => {
   const list = buildToolList(createDocsRegistry(host));
   assert.deepEqual(list.skipped, []);
-  assert.equal(list.tools.length, 4);
+  assert.equal(list.tools.length, 5);
   for (const tool of list.tools) { assert.equal(tool.risk, 'read'); assert.ok(tool.label?.en); assert.ok(tool.label?.es); }
 });
 
@@ -21,7 +21,8 @@ test('read, search, navigation and app links use the host and stay public', asyn
   let offered = '';
   const registry = createDocsRegistry({ ...host, offerAppLink: (url) => { offered = url; }, navigate: (url) => { navigated = url; } });
   assert.deepEqual(await registry.invoke('docs.read', { topic: '/docs/start' }), { url: 'https://docs.plantasia.space/docs/start', text: 'Documentation' });
-  assert.deepEqual(await registry.invoke('docs.read', { topic: 'plans-and-credits' }), { topic: 'plans-and-credits', text: 'Help' });
+  assert.deepEqual(await registry.invoke('docs.read', { topic: 'plans-and-credits' }), { topic: 'plans-and-credits', text: 'Help', url: 'https://docs.plantasia.space/docs/help' });
+  assert.deepEqual(await registry.invoke('plans.catalog', {}), { plans: [] });
   const hits = await registry.invoke('docs.search', { query: 'start' }) as Array<{ url: string }>;
   assert.equal(hits[0].url, 'https://docs.plantasia.space/docs/start');
   await registry.invoke('docs.open', { path: '/es/docs/start' });

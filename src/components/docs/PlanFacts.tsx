@@ -3,77 +3,97 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from 'plantasia.space-design/react';
 
 /**
- * Plan, pack and Orchidea price tables, read live from the same public catalogs the pricing page and
- * every model picker read (root's /api/subscriptions/*, from the backend config). The pages hold no
- * figures of their own: a change in the backend shows here on the next load.
+ * Plan, pack and Orchidea tables, read live from the one plans summary (root's
+ * /api/subscriptions/plans-summary, built by the backend from the same settings as the pricing page
+ * and the model pickers). Orchidea answers from the same summary, so the page and its answers never
+ * disagree, and the pages hold no figures of their own.
  */
 
-type Catalog = 'plans-catalog' | 'credits-catalog' | 'services-catalog';
+type Amount = number | 'unlimited';
+type Summary = {
+  pricesBeforeTax: boolean;
+  plans: Array<{
+    plan: string;
+    free: boolean;
+    price: { monthly: string | null; yearly: string | null } | null;
+    limits: { tracks: Amount; fileSizeMB: Amount; entangledWorlds: Amount; orbiters: Amount };
+    monthlyAiCredits: { text: Amount; texture: Amount };
+    orchideaIn: string[];
+  }>;
+  creditPacks: Array<{ pool: string; pack: string; credits: Amount; price: string | null }>;
+  orchidea: Array<{ app: string; fromPlan: string; models: Array<{ model: string; creditsPerRequestAtMost: number }> }>;
+};
 
 const WORDS = {
   en: {
-    plan: 'Plan', monthly: 'Monthly', yearly: 'Yearly', tracks: 'Tracks', fileSize: 'File size',
+    plan: 'Plan', monthly: 'Monthly', yearly: 'Yearly', free: 'Free', tracks: 'Tracks', fileSize: 'File size',
     worlds: 'Entangled Worlds', orbiters: 'Orbiters', text: 'Text credits each month', texture: 'Texture credits each month',
-    unlimited: 'Unlimited', pack: 'Pack', pool: 'Pool', credits: 'Credits', price: 'Price', model: 'Model',
-    perRequest: 'Credits per request, at most', poolText: 'Text', poolTexture: 'Texture',
+    orchidea: 'Orchidea', unlimited: 'Unlimited', pack: 'Pack', pool: 'Pool', credits: 'Credits', price: 'Price',
+    where: 'Where', fromPlan: 'From plan', model: 'Model', perRequest: 'Credits per request, at most',
+    pools: { text: 'Text', texture: 'Texture' } as Record<string, string>,
+    apps: { root: 'plantasia.space', docs: 'These docs', orbiters: 'Orbiter Studio', 'entangled-worlds': 'Entangled Worlds Studio' } as Record<string, string>,
     failed: 'The current figures could not load here. They are on the', pricing: 'pricing page', beforeTax: 'Prices are shown before tax.',
   },
   es: {
-    plan: 'Plan', monthly: 'Mensual', yearly: 'Anual', tracks: 'Pistas', fileSize: 'Tamaño de archivo',
+    plan: 'Plan', monthly: 'Mensual', yearly: 'Anual', free: 'Gratis', tracks: 'Pistas', fileSize: 'Tamaño de archivo',
     worlds: 'Entangled Worlds', orbiters: 'Orbiters', text: 'Créditos de texto al mes', texture: 'Créditos de textura al mes',
-    unlimited: 'Ilimitado', pack: 'Paquete', pool: 'Bolsa', credits: 'Créditos', price: 'Precio', model: 'Modelo',
-    perRequest: 'Créditos por petición, como máximo', poolText: 'Texto', poolTexture: 'Textura',
+    orchidea: 'Orchidea', unlimited: 'Ilimitado', pack: 'Paquete', pool: 'Bolsa', credits: 'Créditos', price: 'Precio',
+    where: 'Dónde', fromPlan: 'Desde el plan', model: 'Modelo', perRequest: 'Créditos por petición, como máximo',
+    pools: { text: 'Texto', texture: 'Textura' } as Record<string, string>,
+    apps: { root: 'plantasia.space', docs: 'Esta documentación', orbiters: 'Orbiter Studio', 'entangled-worlds': 'Entangled Worlds Studio' } as Record<string, string>,
     failed: 'Las cifras actuales no se pudieron cargar aquí. Están en la', pricing: 'página de precios', beforeTax: 'Los precios se muestran sin impuestos.',
   },
-} as const;
+};
+type Words = (typeof WORDS)['en'];
 
-/** A plan limit at or above this is unlimited, as the plans list shows it. */
-const UNLIMITED = 1000000;
+// One request per page and language, shared by every table on it.
+const loads = new Map<string, Promise<Summary>>();
 
-function useCatalog<T>(name: Catalog): { data: T | null; failed: boolean; words: (typeof WORDS)['en']; pricing: string } {
+function useSummary(): { summary: Summary | null; failed: boolean; words: Words; lang: 'en' | 'es'; pricing: string } {
   const { siteConfig, i18n } = useDocusaurusContext();
   const root = String(siteConfig.customFields?.rootBase ?? '');
   const lang = i18n.currentLocale === 'es' ? 'es' : 'en';
-  const [state, setState] = useState<{ data: T | null; failed: boolean }>({ data: null, failed: false });
+  const [state, setState] = useState<{ summary: Summary | null; failed: boolean }>({ summary: null, failed: false });
   useEffect(() => {
     let live = true;
-    fetch(`${root}/api/subscriptions/${name}?locale=${lang}`, { credentials: 'omit' })
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((data) => { if (live) setState({ data, failed: false }); })
-      .catch(() => { if (live) setState({ data: null, failed: true }); });
+    const key = `${root}|${lang}`;
+    if (!loads.has(key)) {
+      loads.set(key, fetch(`${root}/api/subscriptions/plans-summary?locale=${lang}`, { credentials: 'omit' })
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+        .then((body) => body.summary as Summary)
+        .catch((err) => { loads.delete(key); throw err; }));
+    }
+    loads.get(key)!
+      .then((summary) => { if (live) setState({ summary, failed: false }); })
+      .catch(() => { if (live) setState({ summary: null, failed: true }); });
     return () => { live = false; };
-  }, [root, name, lang]);
-  return { ...state, words: WORDS[lang], pricing: `${root}/${lang}/pricing` };
+  }, [root, lang]);
+  return { ...state, words: WORDS[lang], lang, pricing: `${root}/${lang}/pricing` };
 }
 
-function Status({ failed, words, pricing }: { failed: boolean; words: (typeof WORDS)['en']; pricing: string }) {
+function Status({ failed, words, pricing }: { failed: boolean; words: Words; pricing: string }) {
   if (failed) return <p>{words.failed} <a href={pricing}>{words.pricing}</a>.</p>;
   return <Skeleton style={{ height: 160, width: '100%' }} />;
 }
 
-const count = (n: unknown, words: (typeof WORDS)['en'], unit = '') =>
-  Number(n) >= UNLIMITED ? words.unlimited : `${Number(n) || 0}${unit}`;
-
-type Plan = {
-  key: string;
-  limits?: Record<string, number>;
-  aiMonthlyCredits?: Record<string, number>;
-  pricing?: { monthly?: string; yearly?: string };
-};
+const show = (n: Amount, words: Words, unit = '') => (n === 'unlimited' ? words.unlimited : `${n}${unit}`);
 
 export function PlansTable() {
-  const { data, failed, words, pricing } = useCatalog<{ catalog?: { list?: Plan[] } }>('plans-catalog');
-  const plans = data?.catalog?.list;
-  if (!plans) return <Status failed={failed} words={words} pricing={pricing} />;
+  const { summary, failed, words, pricing } = useSummary();
+  if (!summary) return <Status failed={failed} words={words} pricing={pricing} />;
+  const { plans } = summary;
+  type Plan = Summary['plans'][number];
+  const price = (p: Plan, cycle: 'monthly' | 'yearly') => (p.free ? words.free : p.price?.[cycle] ?? '—');
   const rows: Array<[string, (p: Plan) => string]> = [
-    [words.monthly, (p) => p.pricing?.monthly ?? '—'],
-    [words.yearly, (p) => p.pricing?.yearly ?? '—'],
-    [words.tracks, (p) => count(p.limits?.maxTracks, words)],
-    [words.fileSize, (p) => count(p.limits?.maxFileSizeMB, words, ' MB')],
-    [words.worlds, (p) => count(p.limits?.maxEntangledWorlds, words)],
-    [words.orbiters, (p) => count(p.limits?.maxOrbiters, words)],
-    [words.text, (p) => count(p.aiMonthlyCredits?.text, words)],
-    [words.texture, (p) => count(p.aiMonthlyCredits?.texture, words)],
+    [words.monthly, (p) => price(p, 'monthly')],
+    [words.yearly, (p) => price(p, 'yearly')],
+    [words.tracks, (p) => show(p.limits.tracks, words)],
+    [words.fileSize, (p) => show(p.limits.fileSizeMB, words, ' MB')],
+    [words.worlds, (p) => show(p.limits.entangledWorlds, words)],
+    [words.orbiters, (p) => show(p.limits.orbiters, words)],
+    [words.text, (p) => show(p.monthlyAiCredits.text, words)],
+    [words.texture, (p) => show(p.monthlyAiCredits.texture, words)],
+    [words.orchidea, (p) => p.orchideaIn.map((app) => words.apps[app] ?? app).join(', ') || '—'],
   ];
   return (
     <>
@@ -81,30 +101,26 @@ export function PlansTable() {
         <TableHeader>
           <TableRow>
             <TableHead>{words.plan}</TableHead>
-            {plans.map((p) => <TableHead key={p.key}>{p.key}</TableHead>)}
+            {plans.map((p) => <TableHead key={p.plan}>{p.plan}</TableHead>)}
           </TableRow>
         </TableHeader>
         <TableBody>
           {rows.map(([name, value]) => (
             <TableRow key={name}>
               <TableCell>{name}</TableCell>
-              {plans.map((p) => <TableCell key={p.key}>{value(p)}</TableCell>)}
+              {plans.map((p) => <TableCell key={p.plan}>{value(p)}</TableCell>)}
             </TableRow>
           ))}
         </TableBody>
       </Table>
-      <p>{words.beforeTax}</p>
+      {summary.pricesBeforeTax ? <p>{words.beforeTax}</p> : null}
     </>
   );
 }
 
-type Pack = { type: string; tier: string; credits?: Record<string, number>; pricing?: { oneTime?: string } };
-
 export function CreditPacksTable() {
-  const { data, failed, words, pricing } = useCatalog<{ catalog?: { packs?: Pack[] } }>('credits-catalog');
-  const packs = data?.catalog?.packs;
-  if (!packs) return <Status failed={failed} words={words} pricing={pricing} />;
-  const pool = (type: string) => (type === 'text' ? words.poolText : type === 'texture' ? words.poolTexture : type);
+  const { summary, failed, words, pricing } = useSummary();
+  if (!summary) return <Status failed={failed} words={words} pricing={pricing} />;
   return (
     <Table>
       <TableHeader>
@@ -116,12 +132,12 @@ export function CreditPacksTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {packs.map((k) => (
-          <TableRow key={`${k.type}-${k.tier}`}>
-            <TableCell>{pool(k.type)}</TableCell>
-            <TableCell>{k.tier.charAt(0).toUpperCase() + k.tier.slice(1)}</TableCell>
-            <TableCell>{count(k.credits?.[k.type], words)}</TableCell>
-            <TableCell>{k.pricing?.oneTime ?? '—'}</TableCell>
+        {summary.creditPacks.map((k) => (
+          <TableRow key={`${k.pool}-${k.pack}`}>
+            <TableCell>{words.pools[k.pool] ?? k.pool}</TableCell>
+            <TableCell>{k.pack.charAt(0).toUpperCase() + k.pack.slice(1)}</TableCell>
+            <TableCell>{show(k.credits, words)}</TableCell>
+            <TableCell>{k.price ?? '—'}</TableCell>
           </TableRow>
         ))}
       </TableBody>
@@ -129,27 +145,28 @@ export function CreditPacksTable() {
   );
 }
 
-type Service = { serviceId: string; allowedSkus?: Array<{ sku: string; label: string; credits: number; capCredits?: number }> };
-
 export function OrchideaPricesTable() {
-  const { data, failed, words, pricing } = useCatalog<{ services?: Service[] }>('services-catalog');
-  const models = data?.services?.find((s) => s.serviceId === 'orchidea.turn')?.allowedSkus;
-  if (!models) return <Status failed={failed} words={words} pricing={pricing} />;
+  const { summary, failed, words, lang, pricing } = useSummary();
+  if (!summary) return <Status failed={failed} words={words} pricing={pricing} />;
   return (
     <Table>
       <TableHeader>
         <TableRow>
+          <TableHead>{words.where}</TableHead>
+          <TableHead>{words.fromPlan}</TableHead>
           <TableHead>{words.model}</TableHead>
           <TableHead>{words.perRequest}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {models.map((m) => (
-          <TableRow key={m.sku}>
-            <TableCell>{m.label}</TableCell>
-            <TableCell>{(m.capCredits ?? m.credits).toLocaleString(words === WORDS.es ? 'es' : 'en')}</TableCell>
+        {summary.orchidea.flatMap((o) => o.models.map((m, i) => (
+          <TableRow key={`${o.app}-${m.model}`}>
+            <TableCell>{i === 0 ? words.apps[o.app] ?? o.app : ''}</TableCell>
+            <TableCell>{i === 0 ? o.fromPlan : ''}</TableCell>
+            <TableCell>{m.model}</TableCell>
+            <TableCell>{m.creditsPerRequestAtMost.toLocaleString(lang)}</TableCell>
           </TableRow>
-        ))}
+        )))}
       </TableBody>
     </Table>
   );
