@@ -97,7 +97,7 @@ export default function DocsAssistant({ base }: { base: string }) {
             {state.status === 'failed' ? <OrchideaChatMessage from="orchidea">{es ? 'No se pudo cargar Orchidea.' : 'Orchidea could not load.'} <Button variant="link" onClick={() => void access.load()}>{es ? 'Reintentar' : 'Try again'}</Button></OrchideaChatMessage> : <OrchideaChatWait>{es ? 'Cargando Orchidea' : 'Loading Orchidea'}</OrchideaChatWait>}
           </OrchideaChatFeed></OrchideaChat> : <AssistantPanel assistant={assistant} account={state.account}
             signInHref={link('auth/login')} pricingHref={new URL(`/${locale}/pricing`, base).href} creditsHref={new URL(`/${locale}/credits`, base).href}
-            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base]} onClose={() => setOpen(false)}
+            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base, 'https://docs.plantasia.space']} onClose={() => setOpen(false)}
             style={{ width: 'min(380px, calc(100vw - 32px))', height: 'min(620px, calc(100dvh - 160px), var(--floating-dock-room, 100dvh))' }} />}
           {appLink && state.account ? <Button asChild><a href={appLink}>{es ? 'Abrir en la aplicación' : 'Open in the app'}</a></Button> : null}
         </> : null}
