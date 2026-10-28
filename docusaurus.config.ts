@@ -47,6 +47,9 @@ const config = {
     // Root's address (Orchidea signs in and asks through it). The docs have one site, production;
     // a local `docusaurus start` pairs with local root.
     rootBase: process.env.NODE_ENV === 'production' ? 'https://plantasia.space' : 'https://local.plantasia.space:3000',
+    // The person's event stream, paired with root above: Orchidea hears its steps end there. Local
+    // root's API (and its stream) is on dev-api.local.
+    eventsBase: process.env.NODE_ENV === 'production' ? 'https://events.plantasia.space' : 'https://dev-api.local.plantasia.space',
     // Where "Try it" (TryModule) loads a module from: the Orbiters app's module embed page. One value
     // for every page. `ORBITERS_EMBED_URL` sets it for a build; a local `docusaurus start` uses the
     // monitor's Orbiters preview. A production build without it shows the pictures only, so nothing
