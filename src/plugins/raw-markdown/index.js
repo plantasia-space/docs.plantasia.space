@@ -11,10 +11,11 @@ export function plainMarkdown(content) {
       const alt = decode(attrs.match(/\balt="([^"]*)"/)?.[1] ?? '');
       return `![${alt}](${src})`;
     })
-    // A card's `/>` ends its line; its icon prop holds a `/>` of its own that does not.
-    .replace(/^[ \t]*<NavigationCard\b([\s\S]*?)\/>[ \t]*$\n?/gm, (_, attrs) => {
-      const href = attrs.match(/\bhref="([^"]*)"/)?.[1] ?? '';
-      const label = decode(attrs.match(/\blabel="([^"]*)"/)?.[1] ?? '');
+    // A card on one line, or closing with `/>` at its own indent: an icon prop may hold
+    // elements that close with `/>` too, on the same line or indented deeper.
+    .replace(/^([ \t]*)<NavigationCard\b((?:[^\n]*?\/>(?=[ \t]*$))|(?:[\s\S]*?\n\1\/>))[ \t]*$\n?/gm, (_, _indent, attrs) => {
+      const href = attrs.match(/\b(?:href|to)="([^"]*)"/)?.[1] ?? '';
+      const label = decode(attrs.match(/\b(?:label|title)="([^"]*)"/)?.[1] ?? '');
       const description = decode(attrs.match(/\bdescription="([^"]*)"/)?.[1] ?? '');
       return `- [${label}](${href})${description ? `: ${description}` : ''}\n`;
     })

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Copy, Check, AlertCircle } from 'lucide-react';
 
 function stripFrontmatter(text) {
@@ -28,15 +29,16 @@ function cleanMdx(text) {
 export default function CopyMarkdownButton() {
   const [status, setStatus] = useState('idle');
   const { metadata } = useDoc();
+  // The page's raw Markdown, in this build's language: "@site/docs/a/b.md" or its translation
+  // "@site/i18n/es/docusaurus-plugin-content-docs/current/a/b.md" → "<base>_raw/docs/a/b.md".
+  const relative = metadata?.source?.replace(/^@site\/(?:docs|i18n\/[^/]+\/docusaurus-plugin-content-docs\/current)\//, '');
+  const rawUrl = useBaseUrl(`/_raw/docs/${relative ?? ''}`);
 
   async function handleCopy() {
     if (status === 'copying') return;
 
-    const source = metadata?.source;
-    if (!source) return;
-
-    // "@site/docs/path/to/file.md" → "/_raw/docs/path/to/file.md"
-    const url = `/_raw/${source.replace(/^@site\//, '')}`;
+    if (!relative) return;
+    const url = rawUrl;
 
     setStatus('copying');
     try {
