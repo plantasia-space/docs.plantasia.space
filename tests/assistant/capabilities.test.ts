@@ -7,7 +7,7 @@ const host: DocsHost = {
   docsOrigin: 'https://docs.plantasia.space', rootOrigin: 'https://plantasia.space',
   page: () => ({ path: '/docs/start', title: 'Start' }),
   knowledge: async () => 'Help', read: async () => 'Documentation', search: async () => [{ title: 'Start', url: '/docs/start', excerpt: 'Begin' }], navigate: () => {},
-  studio: { route: { handoffs: { create: async () => ({ token: 't', expiresAt: '' }), claim: async () => ({ entity: { type: 'orbiter', id: '' }, text: '' }) }, afterRequest: (fn) => fn() }, studioHref: () => '', go: () => {} },
+  studio: { route: { handoffs: { create: async () => ({ token: 't', expiresAt: '' }), claim: async () => ({ entity: { type: 'orbiter', id: '' }, text: '' }) }, afterRequest: (fn) => fn('done') }, studioHref: () => '', go: () => {} },
 };
 
 test('docs exposes only read-only tools with bilingual labels and strict schemas', () => {
