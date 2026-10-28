@@ -132,7 +132,7 @@ Selecciona uno de los modelos de IA disponibles y guía la generación usando:
 - Paleta de colores
 - Estilo de iluminación
 
-Cada mundo incluye un número limitado de créditos de textura según tu suscripción. Si lo necesitas, puedes añadir más con paquetes de créditos de textura.
+Cada mundo incluye un número limitado de créditos de textura según tu suscripción. Si lo necesitas, puedes añadir más con paquetes de créditos de textura. Los créditos de un paquete son válidos 12 meses desde el día de la compra.
 
 <video
   className="ps-doc-video"

@@ -125,7 +125,7 @@ Select one of the available AI models and guide the generation using:
 - Color palette
 - Lighting style
 
-Each world includes a limited number of texture credits based on your subscription. You can top up with texture credit packs if needed.
+Each world includes a limited number of texture credits based on your subscription. You can top up with texture credit packs if needed. Credits from a pack are valid 12 months from the day you buy them.
 
 <video
   className="ps-doc-video"
