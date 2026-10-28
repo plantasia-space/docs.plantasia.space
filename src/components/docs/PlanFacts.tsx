@@ -12,41 +12,45 @@ import { Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow
 type Amount = number | 'unlimited';
 type Summary = {
   pricesBeforeTax: boolean;
+  pricesKnown: boolean;
   plans: Array<{
     plan: string;
     free: boolean;
     price: { monthly: string | null; yearly: string | null } | null;
     limits: { tracks: Amount; fileSizeMB: Amount; entangledWorlds: Amount; orbiters: Amount };
     monthlyAiCredits: { text: Amount; texture: Amount };
+    orbiterStudio: boolean;
     orchideaIn: string[];
   }>;
   creditPacks: Array<{ pool: string; pack: string; credits: Amount; price: string | null }>;
-  orchidea: Array<{ app: string; fromPlan: string; models: Array<{ model: string; creditsPerRequestAtMost: number }> }>;
+  orchidea: Array<{ app: string; fromPlan: string; models: Array<{ model: string; creditsPerRequestAtMost: number | null }> }>;
 };
 
 const WORDS = {
   en: {
     plan: 'Plan', monthly: 'Monthly', yearly: 'Yearly', free: 'Free', tracks: 'Tracks', fileSize: 'File size',
     worlds: 'Entangled Worlds', orbiters: 'Orbiters', text: 'Text credits each month', texture: 'Texture credits each month',
-    orchidea: 'Orchidea', unlimited: 'Unlimited', pack: 'Pack', pool: 'Pool', credits: 'Credits', price: 'Price',
+    orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Yes', unlimited: 'Unlimited', pack: 'Pack', pool: 'Pool', credits: 'Credits', price: 'Price',
     where: 'Where', fromPlan: 'From plan', model: 'Model', perRequest: 'Credits per request, at most',
     pools: { text: 'Text', texture: 'Texture' } as Record<string, string>,
     apps: { root: 'plantasia.space', docs: 'These docs', orbiters: 'Orbiter Studio', 'entangled-worlds': 'Entangled Worlds Studio' } as Record<string, string>,
     failed: 'The current figures could not load here. They are on the', pricing: 'pricing page', beforeTax: 'Prices are shown before tax.',
+    noPrices: 'Prices could not load just now. They are on the',
   },
   es: {
     plan: 'Plan', monthly: 'Mensual', yearly: 'Anual', free: 'Gratis', tracks: 'Pistas', fileSize: 'Tamaño de archivo',
     worlds: 'Entangled Worlds', orbiters: 'Orbiters', text: 'Créditos de texto al mes', texture: 'Créditos de textura al mes',
-    orchidea: 'Orchidea', unlimited: 'Ilimitado', pack: 'Paquete', pool: 'Bolsa', credits: 'Créditos', price: 'Precio',
+    orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Sí', unlimited: 'Ilimitado', pack: 'Paquete', pool: 'Bolsa', credits: 'Créditos', price: 'Precio',
     where: 'Dónde', fromPlan: 'Desde el plan', model: 'Modelo', perRequest: 'Créditos por petición, como máximo',
     pools: { text: 'Texto', texture: 'Textura' } as Record<string, string>,
     apps: { root: 'plantasia.space', docs: 'Esta documentación', orbiters: 'Orbiter Studio', 'entangled-worlds': 'Entangled Worlds Studio' } as Record<string, string>,
     failed: 'Las cifras actuales no se pudieron cargar aquí. Están en la', pricing: 'página de precios', beforeTax: 'Los precios se muestran sin impuestos.',
+    noPrices: 'Los precios no se pudieron cargar ahora. Están en la',
   },
 };
 type Words = (typeof WORDS)['en'];
 
-// One request per page and language, shared by every table on it.
+// One request per language, shared by every table; a summary without prices is asked for again next time.
 const loads = new Map<string, Promise<Summary>>();
 
 function useSummary(): { summary: Summary | null; failed: boolean; words: Words; lang: 'en' | 'es'; pricing: string } {
@@ -60,7 +64,11 @@ function useSummary(): { summary: Summary | null; failed: boolean; words: Words;
     if (!loads.has(key)) {
       loads.set(key, fetch(`${root}/api/subscriptions/plans-summary?locale=${lang}`, { credentials: 'omit' })
         .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-        .then((body) => body.summary as Summary)
+        .then((body) => {
+          const summary = body.summary as Summary;
+          if (!summary.pricesKnown) loads.delete(key);
+          return summary;
+        })
         .catch((err) => { loads.delete(key); throw err; }));
     }
     loads.get(key)!
@@ -93,6 +101,7 @@ export function PlansTable() {
     [words.orbiters, (p) => show(p.limits.orbiters, words)],
     [words.text, (p) => show(p.monthlyAiCredits.text, words)],
     [words.texture, (p) => show(p.monthlyAiCredits.texture, words)],
+    [words.studio, (p) => (p.orbiterStudio ? words.yes : '—')],
     [words.orchidea, (p) => p.orchideaIn.map((app) => words.apps[app] ?? app).join(', ') || '—'],
   ];
   return (
@@ -113,7 +122,9 @@ export function PlansTable() {
           ))}
         </TableBody>
       </Table>
-      {summary.pricesBeforeTax ? <p>{words.beforeTax}</p> : null}
+      {summary.pricesKnown
+        ? summary.pricesBeforeTax ? <p>{words.beforeTax}</p> : null
+        : <p>{words.noPrices} <a href={pricing}>{words.pricing}</a>.</p>}
     </>
   );
 }
@@ -122,6 +133,7 @@ export function CreditPacksTable() {
   const { summary, failed, words, pricing } = useSummary();
   if (!summary) return <Status failed={failed} words={words} pricing={pricing} />;
   return (
+    <>
     <Table>
       <TableHeader>
         <TableRow>
@@ -142,6 +154,8 @@ export function CreditPacksTable() {
         ))}
       </TableBody>
     </Table>
+    {summary.pricesKnown ? null : <p>{words.noPrices} <a href={pricing}>{words.pricing}</a>.</p>}
+    </>
   );
 }
 
@@ -164,7 +178,7 @@ export function OrchideaPricesTable() {
             <TableCell>{i === 0 ? words.apps[o.app] ?? o.app : ''}</TableCell>
             <TableCell>{i === 0 ? o.fromPlan : ''}</TableCell>
             <TableCell>{m.model}</TableCell>
-            <TableCell>{m.creditsPerRequestAtMost.toLocaleString(lang)}</TableCell>
+            <TableCell>{m.creditsPerRequestAtMost == null ? '—' : m.creditsPerRequestAtMost.toLocaleString(lang)}</TableCell>
           </TableRow>
         )))}
       </TableBody>
