@@ -42,7 +42,8 @@ export default function DocsAssistant({ base }: { base: string }) {
     // site config: a step is answered there, never in one long call. None configured: steps are read back.
     const events = eventsBase ? createEventStream({ url: `${eventsBase.replace(/\/+$/, '')}/v1/events` }) : null;
     const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher, events });
-    // One undo per request: the platform writes' reverses (docs has no document of its own).
+    // One undo per request: the platform writes' reverses (docs has no document of its own). Made
+    // again when the session changes, so a reverse never runs for someone other than who wrote it.
     const undo = createUndoGroups();
     const registry = createDocsRegistry({
       docsOrigin: window.location.origin, rootOrigin: base,
@@ -80,7 +81,7 @@ export default function DocsAssistant({ base }: { base: string }) {
       context: () => ({ page: current.current.location.pathname, title: document.title, locale: current.current.locale }),
       transport,
     });
-  }, [access, base, eventsBase, history]);
+  }, [access, base, eventsBase, history, state.account]);
   // Welcome by name (from the config), with one short line picked per panel.
   const name = (state.config as { person?: { name?: string | null } } | null)?.person?.name ?? '';
   const [prompt] = useState(() => Math.floor(Math.random() * 4));
