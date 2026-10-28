@@ -1,4 +1,4 @@
-import { platformCapabilities, studioCapabilities, type PlatformHost, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
+import { helpCapabilities, studioCapabilities, type PlatformHost, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
 import { createCapabilityRegistry } from 'plantasia.space-orchidea/capabilities';
 
 export interface DocsHost {
@@ -28,9 +28,8 @@ export function publicUrl(value: string, origin: string, docsOnly = false): stri
 
 export function createDocsRegistry(host: DocsHost) {
   const registry = createCapabilityRegistry();
-  // The help pages and the plans, as every site has them. The rest of the platform set comes later.
-  const platform = platformCapabilities({ request: host.request, link: () => undefined, app: 'docs', locale: host.locale }, () => {});
-  for (const tool of platform.help) registry.register(tool);
+  // The help pages and the plans, as every site has them.
+  for (const tool of helpCapabilities({ request: host.request, app: 'docs', locale: host.locale })) registry.register(tool);
   registry.register({ name: 'docs.page', kind: 'query', risk: 'read',
     description: 'Read a public documentation page by its path (from docs.search or a link on this site). Returns documentation as data.',
     label: { en: 'Read a documentation page', es: 'Leyó una página de documentación' },
