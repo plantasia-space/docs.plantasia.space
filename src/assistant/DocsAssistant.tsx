@@ -21,7 +21,8 @@ export default function DocsAssistant({ base }: { base: string }) {
   const location = useLocation();
   const history = useHistory();
   // `siteConfig.url`: the public docs, where a help page's address always points, even locally.
-  const { i18n: { currentLocale: locale }, siteConfig: { url: publicDocs } } = useDocusaurusContext();
+  const { i18n: { currentLocale: locale }, siteConfig: { url: publicDocs, customFields } } = useDocusaurusContext();
+  const eventsBase = String(customFields?.eventsBase ?? '');
   const current = useRef({ location, locale });
   current.current = { location, locale };
   const es = locale === 'es';
@@ -37,10 +38,9 @@ export default function DocsAssistant({ base }: { base: string }) {
       if (response.status === 401) access.signedOut();
       return response;
     };
-    // The person's event stream (the session cookie, as root's): a step is answered there, never in
-    // one long call. Dev and local sites use the dev events host, as root does.
-    const eventsHost = /dev|local/.test(new URL(base).hostname) ? 'https://dev-events.plantasia.space' : 'https://events.plantasia.space';
-    const events = createEventStream({ url: `${eventsHost}/v1/events` });
+    // The person's event stream (the session cookie, as root's), paired with root's address in the
+    // site config: a step is answered there, never in one long call. None configured: steps are read back.
+    const events = eventsBase ? createEventStream({ url: `${eventsBase.replace(/\/+$/, '')}/v1/events` }) : null;
     const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher, events });
     const registry = createDocsRegistry({
       docsOrigin: window.location.origin, rootOrigin: base,
@@ -77,7 +77,7 @@ export default function DocsAssistant({ base }: { base: string }) {
       context: () => ({ page: current.current.location.pathname, title: document.title, locale: current.current.locale }),
       transport,
     });
-  }, [access, base, history]);
+  }, [access, base, eventsBase, history]);
   // Welcome by name (from the config), with one short line picked per panel.
   const name = (state.config as { person?: { name?: string | null } } | null)?.person?.name ?? '';
   const [prompt] = useState(() => Math.floor(Math.random() * 4));
