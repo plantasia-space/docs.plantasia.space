@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } fro
 import { useHistory, useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Button, FloatingDock, Orchidea, OrchideaChat, OrchideaChatFeed, OrchideaChatWait, OrchideaChatMessage } from 'plantasia.space-design/react';
-import { createAssistant, createSiteRequest, createSiteTransport } from 'plantasia.space-orchidea/assistant';
+import { createAssistant, createEventStream, createSiteRequest, createSiteTransport } from 'plantasia.space-orchidea/assistant';
 import { AssistantPanel } from 'plantasia.space-orchidea/assistant/react';
 import { createDocsRegistry } from './capabilities';
 import { useDocsAssistantAccess } from './DocsAssistantProvider';
@@ -37,7 +37,11 @@ export default function DocsAssistant({ base }: { base: string }) {
       if (response.status === 401) access.signedOut();
       return response;
     };
-    const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher });
+    // The person's event stream (the session cookie, as root's): a step is answered there, never in
+    // one long call. Dev and local sites use the dev events host, as root does.
+    const eventsHost = /dev|local/.test(new URL(base).hostname) ? 'https://dev-events.plantasia.space' : 'https://events.plantasia.space';
+    const events = createEventStream({ url: `${eventsHost}/v1/events` });
+    const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher, events });
     const registry = createDocsRegistry({
       docsOrigin: window.location.origin, rootOrigin: base,
       page: () => ({ path: current.current.location.pathname, title: document.title }),
