@@ -42,10 +42,11 @@ export default function DocsAssistant({ base }: { base: string }) {
       offerAppLink: setAppLink,
       navigate: (url) => { const target = new URL(url); history.push(target.pathname + target.search + target.hash); },
       knowledge: async (topic) => {
-        const response = await fetcher(`${base}/api/orchidea/knowledge/${encodeURIComponent(topic)}?app=docs`, { credentials: 'include' });
+        const query = new URLSearchParams({ app: 'docs', locale: current.current.locale });
+        const response = await fetcher(`${base}/api/orchidea/knowledge/${encodeURIComponent(topic)}?${query}`, { credentials: 'include' });
         if (!response.ok) throw new Error('Help page unavailable');
         const body = await response.json();
-        return body.text;
+        return { text: body.text, url: body.url };
       },
       read: async (url) => {
         const response = await fetch(url, { credentials: 'omit' });
@@ -54,7 +55,7 @@ export default function DocsAssistant({ base }: { base: string }) {
         const article = page.querySelector('article');
         if (!article) throw new Error('This is not a documentation page');
         article.querySelectorAll('script, style, iframe, nav').forEach((node) => node.remove());
-        return (article.textContent ?? '').replace(/\s+/g, ' ').trim().slice(0, 16000);
+        return (article.textContent ?? '').replace(/\s+/g, ' ').trim();
       },
       search: async (query) => {
         const { searchByWorker } = await import('@easyops-cn/docusaurus-search-local/dist/client/client/theme/searchByWorker');
@@ -63,7 +64,8 @@ export default function DocsAssistant({ base }: { base: string }) {
         return results.map((hit) => ({ title: hit.page?.t ?? hit.document.t, url: hit.document.u, excerpt: hit.document.t }));
       },
     });
-    return createAssistant({ app: 'docs', registry,
+    // A docs page is read whole: results up to 6000 characters, where the Studios keep the default.
+    return createAssistant({ app: 'docs', registry, resultChars: 6000,
       context: () => ({ page: current.current.location.pathname, title: document.title, locale: current.current.locale }),
       transport: createSiteTransport({ app: 'docs', base, fetch: fetcher }),
     });

@@ -4,7 +4,8 @@ export interface DocsHost {
   docsOrigin: string;
   rootOrigin: string;
   page: () => { path: string; title: string };
-  knowledge: (topic: string) => Promise<string>;
+  /** A help page by topic: its text, and its docs address when it is a docs page. */
+  knowledge: (topic: string) => Promise<{ text: string; url?: string }>;
   read: (url: string) => Promise<string>;
   search: (query: string) => Promise<Array<{ title: string; url: string; excerpt: string }>>;
   navigate: (url: string) => void;
@@ -28,7 +29,7 @@ export function createDocsRegistry(host: DocsHost) {
     inputSchema: { type: 'object', required: ['topic'], properties: { topic: { type: 'string', minLength: 1 } } },
     execute: async ({ topic }) => {
       const path = String(topic);
-      if (!path.startsWith('/') && !path.startsWith('https:')) return { topic: path, text: await host.knowledge(path) };
+      if (!path.startsWith('/') && !path.startsWith('https:')) return { topic: path, ...await host.knowledge(path) };
       const url = publicUrl(path, host.docsOrigin, true);
       return { url, text: await host.read(url) };
     },
