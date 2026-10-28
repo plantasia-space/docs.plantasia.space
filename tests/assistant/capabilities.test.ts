@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { createDocsRegistry, publicUrl, type DocsHost } from '../../src/assistant/capabilities';
-import { buildToolList } from 'plantasia.space-orchidea/assistant';
+import { createDocsRegistry, itemLink, publicUrl, type DocsHost } from '../../src/assistant/capabilities';
+import { buildToolList, createUndoGroups } from 'plantasia.space-orchidea/assistant';
 
 const host: DocsHost = {
   docsOrigin: 'https://docs.plantasia.space', rootOrigin: 'https://plantasia.space',
@@ -14,17 +14,42 @@ const host: DocsHost = {
   studio: { route: { handoffs: { create: async () => ({ token: 't', expiresAt: '' }), claim: async () => ({ entity: { type: 'orbiter', id: '' }, text: '' }) }, afterRequest: (fn) => fn('done') }, studioHref: () => '', go: () => {} },
 };
 
-test('docs exposes only read-only tools with bilingual labels and strict schemas', () => {
-  const list = buildToolList(createDocsRegistry(host));
+test('docs has the platform set and its own page tools: labelled, strict, reads or the person’s own', () => {
+  const list = buildToolList(createDocsRegistry(host, createUndoGroups()));
   assert.deepEqual(list.skipped, []);
-  assert.equal(list.tools.length, 8);
-  for (const tool of list.tools) { assert.equal(tool.risk, 'read'); assert.ok(tool.label?.en); assert.ok(tool.label?.es); }
+  assert.equal(list.tools.length, 24);
+  for (const name of ['site_search', 'library_list', 'star_set', 'collection_create', 'entity_archive', 'docs_page', 'studio_open'])
+    assert.ok(list.tools.some((tool) => tool.name === name), name);
+  for (const tool of list.tools) { assert.ok(['read', 'own'].includes(tool.risk)); assert.ok(tool.label?.en); assert.ok(tool.label?.es); }
+});
+
+test('a write on docs is undone with its request', async () => {
+  const stars = new Set<string>();
+  const id = 'a'.repeat(24);
+  const undo = createUndoGroups();
+  const registry = createDocsRegistry({ ...host, request: async (path, init) => {
+    if (path.startsWith('/v1/me/stars')) return { ok: true, status: 200, data: { stars: [...stars].map((targetId) => ({ targetType: 'track', targetId })) } };
+    if (path === '/v1/stars/toggle') { if (stars.has(id)) stars.delete(id); else stars.add(id); return { ok: true, status: 200, data: { starred: stars.has(id) } }; }
+    return { ok: false, status: 404, data: {} };
+  } }, undo);
+  undo.history.begin({ requestId: 'r1' });
+  const starred = await registry.invoke('star.set', { type: 'track', id, starred: true }, { source: 'orchidea' }) as { link?: string };
+  undo.history.end({ requestId: 'r1', status: 'done' });
+  assert.equal(stars.has(id), true);
+  assert.equal(starred.link, `https://plantasia.space/audio/${id}`);
+  await undo.history.undoGroup!('r1');
+  assert.equal(stars.has(id), false);
+});
+
+test('item links go to the item’s page on plantasia.space', () => {
+  assert.equal(itemLink('https://plantasia.space', 'world', 'w1'), 'https://plantasia.space/entangled-world/w1');
+  assert.equal(itemLink('https://plantasia.space', 'person', 'x'), undefined);
 });
 
 test('read, search, navigation and app links use the host and stay public', async () => {
   let navigated = '';
   let offered = '';
-  const registry = createDocsRegistry({ ...host, offerAppLink: (url) => { offered = url; }, navigate: (url) => { navigated = url; } });
+  const registry = createDocsRegistry({ ...host, offerAppLink: (url) => { offered = url; }, navigate: (url) => { navigated = url; } }, createUndoGroups());
   assert.deepEqual(await registry.invoke('docs.page', { path: '/docs/start' }), { url: 'https://docs.plantasia.space/docs/start', text: 'Documentation' });
   assert.deepEqual(await registry.invoke('docs.read', { topic: 'plans-and-credits' }), { text: 'Help', url: 'https://docs.plantasia.space/docs/help' });
   assert.deepEqual(await registry.invoke('plans.catalog', {}), { plans: [] });
@@ -45,7 +70,7 @@ test('search leaves out blog and other non-docs hits instead of failing', async 
   const registry = createDocsRegistry({ ...host, search: async () => [
     { title: 'Release notes', url: '/blog/october', excerpt: 'News' },
     { title: 'Start', url: '/docs/start', excerpt: 'Begin' },
-  ] });
+  ] }, createUndoGroups());
   const hits = await registry.invoke('docs.search', { query: 'start' }) as Array<{ url: string }>;
   assert.deepEqual(hits.map((hit) => hit.url), ['https://docs.plantasia.space/docs/start']);
 });

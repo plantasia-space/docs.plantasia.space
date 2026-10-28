@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } fro
 import { useHistory, useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Button, FloatingDock, Orchidea, OrchideaChat, OrchideaChatFeed, OrchideaChatWait, OrchideaChatMessage } from 'plantasia.space-design/react';
-import { createAssistant, createEventStream, createSiteRequest, createSiteTransport } from 'plantasia.space-orchidea/assistant';
+import { createAssistant, createEventStream, createRelayRequest, createSiteTransport, createUndoGroups } from 'plantasia.space-orchidea/assistant';
 import { AssistantPanel } from 'plantasia.space-orchidea/assistant/react';
 import { createDocsRegistry } from './capabilities';
 import { useDocsAssistantAccess } from './DocsAssistantProvider';
@@ -42,6 +42,8 @@ export default function DocsAssistant({ base }: { base: string }) {
     // site config: a step is answered there, never in one long call. None configured: steps are read back.
     const events = eventsBase ? createEventStream({ url: `${eventsBase.replace(/\/+$/, '')}/v1/events` }) : null;
     const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher, events });
+    // One undo per request: the platform writes' reverses (docs has no document of its own).
+    const undo = createUndoGroups();
     const registry = createDocsRegistry({
       docsOrigin: window.location.origin, rootOrigin: base,
       page: () => ({ path: current.current.location.pathname, title: document.title }),
@@ -54,7 +56,8 @@ export default function DocsAssistant({ base }: { base: string }) {
         pricingHref: () => new URL(`/${current.current.locale}/pricing`, base).href,
       },
       navigate: (url) => { const target = new URL(url); history.push(target.pathname + target.search + target.hash); },
-      request: createSiteRequest({ base, fetch: fetcher }),
+      // Through root's one relay for the platform calls: root's other routes never take docs.
+      request: createRelayRequest({ base, fetch: fetcher }),
       locale: () => current.current.locale,
       read: async (url) => {
         const response = await fetch(url, { credentials: 'omit' });
@@ -71,9 +74,9 @@ export default function DocsAssistant({ base }: { base: string }) {
         const results = await searchByWorker(prefix, undefined, query, 8);
         return results.map((hit) => ({ title: hit.page?.t ?? hit.document.t, url: hit.document.u, excerpt: hit.document.t }));
       },
-    });
+    }, undo);
     // A docs page is read whole: results up to 6000 characters, where the Studios keep the default.
-    return createAssistant({ app: 'docs', registry, resultChars: 6000,
+    return createAssistant({ app: 'docs', registry, resultChars: 6000, history: undo.history,
       context: () => ({ page: current.current.location.pathname, title: document.title, locale: current.current.locale }),
       transport,
     });

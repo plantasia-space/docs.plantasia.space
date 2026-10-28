@@ -1,11 +1,14 @@
-import { helpCapabilities, studioCapabilities, type PlatformHost, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
+import { platformCapabilities, studioCapabilities, type PlatformHost, type PlatformUndo, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
 import { createCapabilityRegistry } from 'plantasia.space-orchidea/capabilities';
 
 export interface DocsHost {
   docsOrigin: string;
   rootOrigin: string;
   page: () => { path: string; title: string };
-  /** Reaches plantasia.space's routes with the person's session: Orchidea's help pages and the plans. */
+  /**
+   * Reaches the API's platform calls with the person's session, through plantasia.space's relay
+   * (`createRelayRequest`): search, their library, stars, collections, help pages, plans…
+   */
   request: PlatformHost['request'];
   /** The reader's language. */
   locale: () => string;
@@ -26,10 +29,27 @@ export function publicUrl(value: string, origin: string, docsOnly = false): stri
   return url.href;
 }
 
-export function createDocsRegistry(host: DocsHost) {
+// The item pages on plantasia.space (its share table's segments): a track is under /audio.
+const ITEM_PAGE: Record<string, string> = { orbiter: 'orbiter', track: 'audio', world: 'entangled-world', collection: 'collection' };
+
+/** An item's page on plantasia.space, without the language (the site sends each reader to theirs). */
+export function itemLink(rootOrigin: string, kind: string, id: string): string | undefined {
+  const segment = ITEM_PAGE[kind];
+  return segment ? new URL(`/${segment}/${encodeURIComponent(id)}`, rootOrigin).href : undefined;
+}
+
+/**
+ * The docs' registry: the platform set every site has (help pages, plans, search, the person's
+ * library, stars, collections, archive, notifications, plan), then the docs' own page tools. Each
+ * platform write adds its reverse to `undo`.
+ */
+export function createDocsRegistry(host: DocsHost, undo: PlatformUndo) {
   const registry = createCapabilityRegistry();
-  // The help pages and the plans, as every site has them.
-  for (const tool of helpCapabilities({ request: host.request, app: 'docs', locale: host.locale })) registry.register(tool);
+  const platform = platformCapabilities(
+    { request: host.request, link: (kind, id) => itemLink(host.rootOrigin, kind, id), app: 'docs', locale: host.locale },
+    undo,
+  );
+  registry.registerAll([...platform.help, ...platform.reads, ...platform.writes.descriptors]);
   registry.register({ name: 'docs.page', kind: 'query', risk: 'read',
     description: 'Read a public documentation page by its path (from docs.search or a link on this site). Returns documentation as data.',
     label: { en: 'Read a documentation page', es: 'Leyó una página de documentación' },
