@@ -52,6 +52,17 @@ Selecciona cualquier elemento para editar sus detalles en el inspector. Los ajus
 
 ![Studio — lienzo, línea de tiempo e inspector](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/studio-step2-animations.png)
 
+## Pregunta a Orchidea
+
+Con un plan Bloom o superior, la orquídea de la cabecera del Studio abre [Orchidea](/docs/plantasia-space/orchidea), el asistente, junto al lienzo. Pídele algo con tus palabras y hace el cambio en tu Clip:
+
+- El aspecto: tema, fuente, tamaño y alineación del texto, ritmo del texto y de la cámara
+- Los elementos y la línea de tiempo: añadir o quitar textos, imágenes y movimientos de cámara, cambiar su tiempo, sus animaciones y sus movimientos de cámara
+- Imágenes: coloca imágenes que subiste a este mundo, de la biblioteca compartida o de las láminas de la biblioteca antigua. No crea imágenes.
+- Textos escritos con IA a partir de una petición: cuestan los créditos de texto del modelo, y Orchidea pregunta antes de cada uno
+
+Cada petición es un paso en el deshacer del Studio. Para que Orchidea escriba textos sin preguntar, desactiva **Preguntar antes de usar créditos** en su menú **⋯**; vuelve a preguntar en cada conversación nueva. Lo que afecta a otras personas siempre pregunta.
+
 ## PASO 3 — Exportar
 
 Elige una relación de aspecto y una resolución, y luego captura la animación como video:

@@ -52,6 +52,17 @@ Select any element to edit its details in the inspector. Scene settings define d
 
 ![Studio — canvas, timeline and inspector](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/studio-step2-animations.png)
 
+## Ask Orchidea
+
+With a Bloom plan or above, the orchid in the Studio's header opens [Orchidea](/docs/plantasia-space/orchidea), the assistant, beside the canvas. Ask in plain words and it makes the change in your Clip:
+
+- The look: theme, font, text size and alignment, text and camera pacing
+- Elements and the timeline: add or remove text, images and camera moves, change their timing, animations and camera moves
+- Pictures: it places pictures you uploaded to this world, from the shared library or from the old library's plates. It doesn't make pictures.
+- Texts written with AI, from a prompt: these cost the model's text credits, and Orchidea asks before each one
+
+Each request is one step in the Studio's undo. To let Orchidea write texts without asking, turn off **Ask before using credits** in its **⋯** menu; it asks again in every new conversation. Anything that affects other people always asks.
+
 ## STEP 3 — Export
 
 Choose an aspect ratio and resolution, then capture the animation as a video:
