@@ -13,7 +13,7 @@ const host: DocsHost = {
 test('docs exposes only read-only tools with bilingual labels and strict schemas', () => {
   const list = buildToolList(createDocsRegistry(host));
   assert.deepEqual(list.skipped, []);
-  assert.equal(list.tools.length, 6);
+  assert.equal(list.tools.length, 7);
   for (const tool of list.tools) { assert.equal(tool.risk, 'read'); assert.ok(tool.label?.en); assert.ok(tool.label?.es); }
 });
 

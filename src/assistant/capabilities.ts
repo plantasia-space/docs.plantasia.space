@@ -1,4 +1,4 @@
-import { studioOpenCapability, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
+import { studioCapabilities, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
 import { createCapabilityRegistry } from 'plantasia.space-orchidea/capabilities';
 
 export interface DocsHost {
@@ -66,6 +66,6 @@ export function createDocsRegistry(host: DocsHost) {
     inputSchema: { type: 'object', required: ['path'], properties: { path: { type: 'string', minLength: 1 } } },
     execute: ({ path }) => { const url = publicUrl(String(path), host.rootOrigin); host.offerAppLink?.(url); return { url }; },
   });
-  registry.register(studioOpenCapability(host.studio));
+  for (const tool of studioCapabilities(host.studio)) registry.register(tool);
   return registry;
 }

@@ -20,7 +20,8 @@ export default function DocsAssistant({ base }: { base: string }) {
   }, []);
   const location = useLocation();
   const history = useHistory();
-  const { i18n: { currentLocale: locale } } = useDocusaurusContext();
+  // `siteConfig.url`: the public docs, where a help page's address always points, even locally.
+  const { i18n: { currentLocale: locale }, siteConfig: { url: publicDocs } } = useDocusaurusContext();
   const current = useRef({ location, locale });
   current.current = { location, locale };
   const es = locale === 'es';
@@ -105,7 +106,7 @@ export default function DocsAssistant({ base }: { base: string }) {
             {state.status === 'failed' ? <OrchideaChatMessage from="orchidea">{es ? 'No se pudo cargar Orchidea.' : 'Orchidea could not load.'} <Button variant="link" onClick={() => void access.load()}>{es ? 'Reintentar' : 'Try again'}</Button></OrchideaChatMessage> : <OrchideaChatWait>{es ? 'Cargando Orchidea' : 'Loading Orchidea'}</OrchideaChatWait>}
           </OrchideaChatFeed></OrchideaChat> : <AssistantPanel assistant={assistant} account={state.account}
             signInHref={link('auth/login')} pricingHref={new URL(`/${locale}/pricing`, base).href} creditsHref={new URL(`/${locale}/credits`, base).href}
-            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base, 'https://docs.plantasia.space']} onClose={() => setOpen(false)}
+            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base, new URL(publicDocs).origin]} onClose={() => setOpen(false)}
             style={{ width: 'min(380px, calc(100vw - 32px))', height: 'min(620px, calc(100dvh - 160px), var(--floating-dock-room, 100dvh))' }} />}
           {appLink && state.account ? <Button asChild><a href={appLink}>{es ? 'Abrir en la aplicación' : 'Open in the app'}</a></Button> : null}
         </> : null}
