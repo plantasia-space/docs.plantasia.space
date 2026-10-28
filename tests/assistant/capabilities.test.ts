@@ -7,12 +7,13 @@ const host: DocsHost = {
   docsOrigin: 'https://docs.plantasia.space', rootOrigin: 'https://plantasia.space',
   page: () => ({ path: '/docs/start', title: 'Start' }),
   knowledge: async () => 'Help', read: async () => 'Documentation', search: async () => [{ title: 'Start', url: '/docs/start', excerpt: 'Begin' }], navigate: () => {},
+  studio: { route: { handoffs: { create: async () => ({ token: 't', expiresAt: '' }), claim: async () => ({ entity: { type: 'orbiter', id: '' }, text: '' }) }, afterRequest: (fn) => fn() }, studioHref: () => '', go: () => {} },
 };
 
 test('docs exposes only read-only tools with bilingual labels and strict schemas', () => {
   const list = buildToolList(createDocsRegistry(host));
   assert.deepEqual(list.skipped, []);
-  assert.equal(list.tools.length, 4);
+  assert.equal(list.tools.length, 5);
   for (const tool of list.tools) { assert.equal(tool.risk, 'read'); assert.ok(tool.label?.en); assert.ok(tool.label?.es); }
 });
 

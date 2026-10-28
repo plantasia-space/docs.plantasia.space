@@ -1,3 +1,4 @@
+import { studioOpenCapability, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
 import { createCapabilityRegistry } from 'plantasia.space-orchidea/capabilities';
 
 export interface DocsHost {
@@ -9,6 +10,8 @@ export interface DocsHost {
   search: (query: string) => Promise<Array<{ title: string; url: string; excerpt: string }>>;
   navigate: (url: string) => void;
   offerAppLink?: (url: string) => void;
+  /** Opens an Orbiter's Studio (through root) with a request waiting in its panel. */
+  studio: StudioOpenHost;
 }
 
 /** Navigation stays within the intended public surface, including when model input is a URL. */
@@ -54,5 +57,6 @@ export function createDocsRegistry(host: DocsHost) {
     inputSchema: { type: 'object', required: ['path'], properties: { path: { type: 'string', minLength: 1 } } },
     execute: ({ path }) => { const url = publicUrl(String(path), host.rootOrigin); host.offerAppLink?.(url); return { url }; },
   });
+  registry.register(studioOpenCapability(host.studio));
   return registry;
 }

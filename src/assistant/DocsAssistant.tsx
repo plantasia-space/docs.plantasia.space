@@ -36,10 +36,18 @@ export default function DocsAssistant({ base }: { base: string }) {
       if (response.status === 401) access.signedOut();
       return response;
     };
+    const transport = createSiteTransport({ app: 'docs', base, fetch: fetcher });
     const registry = createDocsRegistry({
       docsOrigin: window.location.origin, rootOrigin: base,
       page: () => ({ path: current.current.location.pathname, title: document.title }),
       offerAppLink: setAppLink,
+      studio: {
+        route: transport,
+        // Root's edit address: it checks the Orbiter, then hands the token on to the Studio.
+        studioHref: (entity, token) => new URL(`/${current.current.locale}/release/${entity.type}/${encodeURIComponent(entity.id)}?handoff=${encodeURIComponent(token)}`, base).href,
+        go: (href) => window.location.assign(href),
+        pricingHref: new URL(`/${current.current.locale}/pricing`, base).href,
+      },
       navigate: (url) => { const target = new URL(url); history.push(target.pathname + target.search + target.hash); },
       knowledge: async (topic) => {
         const response = await fetcher(`${base}/api/orchidea/knowledge/${encodeURIComponent(topic)}?app=docs`, { credentials: 'include' });
@@ -65,7 +73,7 @@ export default function DocsAssistant({ base }: { base: string }) {
     });
     return createAssistant({ app: 'docs', registry,
       context: () => ({ page: current.current.location.pathname, title: document.title, locale: current.current.locale }),
-      transport: createSiteTransport({ app: 'docs', base, fetch: fetcher }),
+      transport,
     });
   }, [access, base, history]);
   // Welcome by name (from the config), with one short line picked per panel.
