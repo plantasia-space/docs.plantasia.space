@@ -1,4 +1,4 @@
-import { platformCapabilities, studioCapabilities, type PlatformHost, type PlatformUndo, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
+import { itemPagePath, platformCapabilities, studioCapabilities, type PlatformHost, type PlatformUndo, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
 import { createCapabilityRegistry } from 'plantasia.space-orchidea/capabilities';
 
 export interface DocsHost {
@@ -29,13 +29,10 @@ export function publicUrl(value: string, origin: string, docsOnly = false): stri
   return url.href;
 }
 
-// The item pages on plantasia.space (its share table's segments): a track is under /audio.
-const ITEM_PAGE: Record<string, string> = { orbiter: 'orbiter', track: 'audio', world: 'entangled-world', collection: 'collection' };
-
 /** An item's page on plantasia.space, without the language (the site sends each reader to theirs). */
 export function itemLink(rootOrigin: string, kind: string, id: string): string | undefined {
-  const segment = ITEM_PAGE[kind];
-  return segment ? new URL(`/${segment}/${encodeURIComponent(id)}`, rootOrigin).href : undefined;
+  const path = itemPagePath(kind, id);
+  return path ? new URL(path, rootOrigin).href : undefined;
 }
 
 /**
