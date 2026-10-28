@@ -44,7 +44,7 @@ export default function DocsAssistant({ base }: { base: string }) {
       studio: {
         route: transport,
         // Root's edit address: it checks the Orbiter, then hands the token on to the Studio.
-        studioHref: (entity, token) => new URL(`/${current.current.locale}/release/${entity.type}/${encodeURIComponent(entity.id)}${token ? `?handoff=${encodeURIComponent(token)}` : ''}`, base).href,
+        studioHref: (entity, token) => new URL(`/${current.current.locale}/release/${entity.type}/${entity.id ? encodeURIComponent(entity.id) : 'new'}${token ? `?handoff=${encodeURIComponent(token)}` : ''}`, base).href,
         go: (href) => window.location.assign(href),
         pricingHref: () => new URL(`/${current.current.locale}/pricing`, base).href,
       },
