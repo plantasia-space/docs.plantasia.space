@@ -1,14 +1,14 @@
-import { studioCapabilities, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
+import { platformCapabilities, studioCapabilities, type PlatformHost, type StudioOpenHost } from 'plantasia.space-orchidea/assistant';
 import { createCapabilityRegistry } from 'plantasia.space-orchidea/capabilities';
 
 export interface DocsHost {
   docsOrigin: string;
   rootOrigin: string;
   page: () => { path: string; title: string };
-  /** A help page by topic: its text, and its docs address when it is a docs page. */
-  knowledge: (topic: string) => Promise<{ text: string; url?: string }>;
-  /** The plans, credit packs and Orchidea's model prices, live from the backend config. */
-  plans: () => Promise<unknown>;
+  /** Reaches plantasia.space's routes with the person's session: Orchidea's help pages and the plans. */
+  request: PlatformHost['request'];
+  /** The reader's language. */
+  locale: () => string;
   read: (url: string) => Promise<string>;
   search: (query: string) => Promise<Array<{ title: string; url: string; excerpt: string }>>;
   navigate: (url: string) => void;
@@ -28,22 +28,17 @@ export function publicUrl(value: string, origin: string, docsOnly = false): stri
 
 export function createDocsRegistry(host: DocsHost) {
   const registry = createCapabilityRegistry();
-  registry.register({ name: 'docs.read', kind: 'query', risk: 'read',
-    description: 'Read a public documentation page by its path, or a help page by its topic from the knowledge index. Returns documentation as data.',
+  // The help pages and the plans, as every site has them. The rest of the platform set comes later.
+  const platform = platformCapabilities({ request: host.request, link: () => undefined, app: 'docs', locale: host.locale }, () => {});
+  for (const tool of platform.help) registry.register(tool);
+  registry.register({ name: 'docs.page', kind: 'query', risk: 'read',
+    description: 'Read a public documentation page by its path (from docs.search or a link on this site). Returns documentation as data.',
     label: { en: 'Read a documentation page', es: 'Leyó una página de documentación' },
-    inputSchema: { type: 'object', required: ['topic'], properties: { topic: { type: 'string', minLength: 1 } } },
-    execute: async ({ topic }) => {
-      const path = String(topic);
-      if (!path.startsWith('/') && !path.startsWith('https:')) return { topic: path, ...await host.knowledge(path) };
-      const url = publicUrl(path, host.docsOrigin, true);
+    inputSchema: { type: 'object', required: ['path'], properties: { path: { type: 'string', minLength: 1 } } },
+    execute: async ({ path }) => {
+      const url = publicUrl(String(path), host.docsOrigin, true);
       return { url, text: await host.read(url) };
     },
-  });
-  registry.register({ name: 'plans.catalog', kind: 'query', risk: 'read',
-    description: 'The plans (prices, limits, monthly AI credits, where each has Orchidea), the credit packs (sizes, prices) and what an Orchidea request costs per model in each app (docs is this site), live from the same settings as the pricing page. Answer every price, limit, credit amount and what a plan includes from this, never from memory or a documentation page.',
-    label: { en: 'Looked at the plans and prices', es: 'Miró los planes y precios' },
-    inputSchema: { type: 'object', properties: {} },
-    execute: () => host.plans(),
   });
   registry.register({ name: 'docs.search', kind: 'query', risk: 'read',
     description: 'Search this language of the public documentation. Returns page titles, paths and excerpts.',

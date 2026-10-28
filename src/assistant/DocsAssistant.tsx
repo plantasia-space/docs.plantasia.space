@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } fro
 import { useHistory, useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Button, FloatingDock, Orchidea, OrchideaChat, OrchideaChatFeed, OrchideaChatWait, OrchideaChatMessage } from 'plantasia.space-design/react';
-import { createAssistant, createSiteTransport } from 'plantasia.space-orchidea/assistant';
+import { createAssistant, createSiteRequest, createSiteTransport } from 'plantasia.space-orchidea/assistant';
 import { AssistantPanel } from 'plantasia.space-orchidea/assistant/react';
 import { createDocsRegistry } from './capabilities';
 import { useDocsAssistantAccess } from './DocsAssistantProvider';
@@ -50,19 +50,8 @@ export default function DocsAssistant({ base }: { base: string }) {
         pricingHref: () => new URL(`/${current.current.locale}/pricing`, base).href,
       },
       navigate: (url) => { const target = new URL(url); history.push(target.pathname + target.search + target.hash); },
-      knowledge: async (topic) => {
-        const query = new URLSearchParams({ app: 'docs', locale: current.current.locale });
-        const response = await fetcher(`${base}/api/orchidea/knowledge/${encodeURIComponent(topic)}?${query}`, { credentials: 'include' });
-        if (!response.ok) throw new Error('Help page unavailable');
-        const body = await response.json();
-        return { text: body.text, url: body.url };
-      },
-      plans: async () => {
-        const query = new URLSearchParams({ locale: current.current.locale });
-        const response = await fetch(`${base}/api/subscriptions/plans-summary?${query}`, { credentials: 'omit' });
-        if (!response.ok) throw new Error('Plans unavailable');
-        return (await response.json()).summary;
-      },
+      request: createSiteRequest({ base, fetch: fetcher }),
+      locale: () => current.current.locale,
       read: async (url) => {
         const response = await fetch(url, { credentials: 'omit' });
         if (!response.ok) throw new Error('Documentation page unavailable');

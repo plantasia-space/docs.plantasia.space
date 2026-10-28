@@ -4,7 +4,7 @@ import { buildToolList } from 'plantasia.space-orchidea/assistant';
 import { createDocsRegistry } from '../src/assistant/capabilities';
 
 const unused = (): never => { throw new Error('Catalog generation never executes tools'); };
-const list = buildToolList(createDocsRegistry({ docsOrigin: 'https://docs.plantasia.space', rootOrigin: 'https://plantasia.space', page: unused, read: unused, knowledge: unused, plans: unused, search: unused, navigate: unused,
+const list = buildToolList(createDocsRegistry({ docsOrigin: 'https://docs.plantasia.space', rootOrigin: 'https://plantasia.space', page: unused, read: unused, request: unused, locale: unused, search: unused, navigate: unused,
   studio: { route: { handoffs: { create: unused, claim: unused }, afterRequest: unused }, studioHref: unused, go: unused } }));
 if (list.skipped.length || list.tools.some((tool) => tool.risk !== 'read' || !tool.label)) throw new Error('Docs tools must be strictly typed, labelled and read-only');
 const catalog = JSON.stringify({ version: list.version, tools: list.tools.map(({ name, description, inputSchema, risk, label }) => ({ name, description, inputSchema, risk, label })) }, null, 2) + '\n';
