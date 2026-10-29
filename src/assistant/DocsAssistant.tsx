@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } fro
 import { useHistory, useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Button, FloatingDock, Orchidea, OrchideaChat, OrchideaChatFeed, OrchideaChatWait, OrchideaChatMessage } from 'plantasia.space-design/react';
-import { createAssistant, createEventStream, createRelayRequest, createSiteTransport, createUndoGroups, studioPath } from 'plantasia.space-orchidea/assistant';
+import { createAssistant, createEventStream, createRelayRequest, createSiteTransport, createUndoGroups } from 'plantasia.space-orchidea/assistant';
 import { AssistantPanel } from 'plantasia.space-orchidea/assistant/react';
 import { createDocsRegistry } from './capabilities';
 import { useDocsAssistantAccess } from './DocsAssistantProvider';
@@ -52,7 +52,14 @@ export default function DocsAssistant({ base }: { base: string }) {
       studio: {
         route: transport,
         // Root's edit address: it checks the Orbiter, then hands the token on to the Studio.
-        studioHref: (entity, token) => new URL(studioPath(current.current.locale, entity, token), base).href,
+        // Root's pages: an Orbiter's release page (no id: "new"), a World's Studio new-clip page.
+        studioHref: (entity, token) => {
+          const query = token ? `?handoff=${encodeURIComponent(token)}` : '';
+          const path = entity.type === 'world' && entity.id
+            ? `/${current.current.locale}/entangled-world/${encodeURIComponent(entity.id)}/studio/new${query}`
+            : `/${current.current.locale}/release/${entity.type}/${entity.id ? encodeURIComponent(entity.id) : 'new'}${query}`;
+          return new URL(path, base).href;
+        },
         go: (href) => window.location.assign(href),
         pricingHref: () => new URL(`/${current.current.locale}/pricing`, base).href,
       },
