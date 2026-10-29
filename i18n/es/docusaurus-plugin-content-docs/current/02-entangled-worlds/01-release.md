@@ -132,7 +132,7 @@ Selecciona uno de los modelos de IA disponibles y guía la generación usando:
 - Paleta de colores
 - Estilo de iluminación
 
-Las texturas se pagan con tus créditos de IA, el mismo saldo que cualquier otra acción de IA. Tu plan te da créditos cada mes; si necesitas más, compra un paquete de créditos. Los créditos de un paquete duran 12 meses desde el día de la compra.
+Las texturas se pagan con tus créditos, el mismo saldo que cualquier otra acción de IA. Tu plan te da créditos cada mes; si necesitas más, compra un paquete de créditos. Los créditos de un paquete duran 12 meses desde el día de la compra.
 
 <video
   className="ps-doc-video"

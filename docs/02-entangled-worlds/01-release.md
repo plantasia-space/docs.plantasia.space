@@ -125,7 +125,7 @@ Select one of the available AI models and guide the generation using:
 - Color palette
 - Lighting style
 
-Textures are paid with your AI credits, the same balance as every other AI action. Your plan gives you credits every month; if you need more, buy a credit pack. Credits from a pack last 12 months from the day you buy them.
+Textures are paid with your credits, the same balance as every other AI action. Your plan gives you credits every month; if you need more, buy a credit pack. Credits from a pack last 12 months from the day you buy them.
 
 <video
   className="ps-doc-video"
