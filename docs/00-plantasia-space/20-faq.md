@@ -76,7 +76,7 @@ sidebar_custom_props:
 
 <details>
   <summary>What are AI Texture/Text credits?</summary>
-  <div>Usage credits for generating visuals and text; base credits refresh each cycle, and extra credits roll over until used.</div>
+  <div>Usage credits for generating visuals and text; base credits refresh each cycle, and credits you buy in packs are valid 12 months from the day you buy them.</div>
 </details>
 
 <details>

@@ -76,7 +76,7 @@ sidebar_custom_props:
 
 <details>
   <summary>¿Qué son los créditos de IA para Texturas/Textos?</summary>
-  <div>Créditos de uso para generar visuales y textos; los créditos base se renuevan en cada ciclo, y los extras se acumulan hasta ser usados.</div>
+  <div>Créditos de uso para generar visuales y textos; los créditos base se renuevan en cada ciclo, y los créditos que compras en paquetes son válidos 12 meses desde el día de la compra.</div>
 </details>
 
 <details>
