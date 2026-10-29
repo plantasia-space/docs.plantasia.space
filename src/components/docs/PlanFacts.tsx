@@ -87,7 +87,9 @@ function Status({ failed, words, pricing }: { failed: boolean; words: Words; pri
   return <Skeleton style={{ height: 160, width: '100%' }} />;
 }
 
-const show = (n: Amount, words: Words, unit = '') => (n === 'unlimited' ? words.unlimited : `${n}${unit}`);
+// A number or 'unlimited'; anything else (a summary in an older shape) shows as unknown, never as '[object Object]'.
+const show = (n: Amount, words: Words, unit = '') =>
+  n === 'unlimited' ? words.unlimited : typeof n === 'number' ? `${n}${unit}` : '—';
 
 export function PlansTable() {
   const { summary, failed, words, pricing } = useSummary();
