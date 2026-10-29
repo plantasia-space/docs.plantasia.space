@@ -4,14 +4,20 @@
 
 import { themes as prismThemes } from 'prism-react-renderer';
 
+// Which site a production build is: the public docs (from `main`), or the dev docs (from `dev`,
+// `DOCS_SITE=dev`), each paired with its own root and event stream. A local `docusaurus start`
+// pairs with local root.
+const DEV_SITE = process.env.DOCS_SITE === 'dev';
+const PRODUCTION = process.env.NODE_ENV === 'production';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Plantasia Space',
   tagline: 'Comprehensive Documentation',
   favicon: 'img/favico.ico',
 
-  // Production URL of your site
-  url: 'https://docs.plantasia.space',
+  // The site's address: the public docs, or the dev docs for a `DOCS_SITE=dev` build.
+  url: DEV_SITE ? 'https://dev-userdocs.plantasia.space' : 'https://docs.plantasia.space',
   // Base URL pathname
   baseUrl: '/',
 
@@ -44,19 +50,21 @@ const config = {
   },
 
   customFields: {
-    // Root's address (Orchidea signs in and asks through it). The docs have one site, production;
-    // a local `docusaurus start` pairs with local root.
-    rootBase: process.env.NODE_ENV === 'production' ? 'https://plantasia.space' : 'https://local.plantasia.space:3000',
+    // Root's address (Orchidea signs in and asks through it): production root, dev-root for the dev
+    // docs, local root for a local `docusaurus start`.
+    rootBase: !PRODUCTION ? 'https://local.plantasia.space:3000' : DEV_SITE ? 'https://dev-root.plantasia.space' : 'https://plantasia.space',
     // The person's event stream, paired with root above: Orchidea hears its steps end there. Local
     // root's API (and its stream) is on dev-api.local.
-    eventsBase: process.env.NODE_ENV === 'production' ? 'https://events.plantasia.space' : 'https://dev-api.local.plantasia.space',
+    eventsBase: !PRODUCTION
+      ? 'https://dev-api.local.plantasia.space'
+      : DEV_SITE ? 'https://dev-events.plantasia.space' : 'https://events.plantasia.space',
     // Where "Try it" (TryModule) loads a module from: the Orbiters app's module embed page. One value
     // for every page. `ORBITERS_EMBED_URL` sets it for a build; a local `docusaurus start` uses the
     // monitor's Orbiters preview. A production build without it shows the pictures only, so nothing
     // points at a host that can't serve (or frame) the embed yet.
     orbitersEmbedUrl:
       process.env.ORBITERS_EMBED_URL ||
-      (process.env.NODE_ENV === 'production' ? null : 'https://local.plantasia.space:3000/embed/module'),
+      (PRODUCTION ? null : 'https://local.plantasia.space:3000/embed/module'),
   },
 
   // Presets for Docusaurus

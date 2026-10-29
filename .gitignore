@@ -32,3 +32,4 @@ yarn-error.log*
 /AGENTS.md
 /CLAUDE.md
 /GEMINI.md
+/deploy/site
