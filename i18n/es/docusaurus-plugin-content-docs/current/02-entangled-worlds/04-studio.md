@@ -61,7 +61,7 @@ Con un plan Bloom o superior, la orquídea de la cabecera del Studio abre [Orchi
 - Imágenes: coloca imágenes que subiste a este mundo, de la biblioteca compartida o de las láminas de la biblioteca antigua, o crea una imagen cuadrada nueva con IA a partir de una indicación
 - Textos escritos con IA a partir de una petición
 
-Los textos y las imágenes hechos con IA cuestan créditos, según el modelo, y Orchidea pregunta antes de cada uno.
+Los textos y las imágenes hechos con IA cuestan créditos, según el modelo, y Orchidea pregunta antes de cada uno. Cada imagen se revisa, tanto lo que pides como lo que se crea: una que no está permitida en Plantasia Space no se crea ni se guarda, y sus créditos vuelven.
 
 Cada petición es un paso en el deshacer del Studio. Para que Orchidea escriba textos y cree imágenes sin preguntar, desactiva **Preguntar antes de usar créditos** en su menú **⋯**; vuelve a preguntar en cada conversación nueva. Lo que afecta a otras personas siempre pregunta.
 
