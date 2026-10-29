@@ -3,7 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { Skeleton, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from 'plantasia.space-design/react';
 
 /**
- * Plan, pack and Orchidea tables, read live from the one plans summary (root's
+ * Plan, pack, credit and Orchidea facts, read live from the one plans summary (root's
  * /api/subscriptions/plans-summary, built by the backend from the same settings as the pricing page
  * and the model pickers). Orchidea answers from the same summary, so the page and its answers never
  * disagree, and the pages hold no figures of their own.
@@ -18,31 +18,34 @@ type Summary = {
     free: boolean;
     price: { monthly: string | null; yearly: string | null } | null;
     limits: { tracks: Amount; fileSizeMB: Amount; entangledWorlds: Amount; orbiters: Amount };
-    monthlyAiCredits: { text: Amount; texture: Amount };
+    monthlyAiCredits: Amount;
     orbiterStudio: boolean;
     orchideaIn: string[];
   }>;
-  creditPacks: Array<{ pool: string; pack: string; credits: Amount; price: string | null }>;
+  credits?: { creditValueEUR: number; expiryMonths: number; planCreditsReset: string };
+  creditPacks: Array<{ pack: string; credits: Amount; price: string | null }>;
   orchidea: Array<{ app: string; fromPlan: string; models: Array<{ model: string; creditsPerRequestAtMost: number | null }> }>;
 };
 
 const WORDS = {
   en: {
     plan: 'Plan', monthly: 'Monthly', yearly: 'Yearly', free: 'Free', tracks: 'Tracks', fileSize: 'File size',
-    worlds: 'Entangled Worlds', orbiters: 'Orbiters', text: 'Text credits each month', texture: 'Texture credits each month',
-    orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Yes', unlimited: 'Unlimited', pack: 'Pack', pool: 'Pool', credits: 'Credits', price: 'Price',
+    worlds: 'Entangled Worlds', orbiters: 'Orbiters', aiCredits: 'AI credits each month',
+    orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Yes', unlimited: 'Unlimited', pack: 'Pack', credits: 'Credits', price: 'Price',
     where: 'Where', fromPlan: 'From plan', model: 'Model', perRequest: 'Credits per request, at most',
-    pools: { text: 'Text', texture: 'Texture' } as Record<string, string>,
+    packs: { small: 'Small', medium: 'Medium', large: 'Large' } as Record<string, string>,
+    creditFacts: (value: string, months: number) => `One credit is worth ${value} before tax. Bought credits last ${months} months from the day you buy them; plan credits reset every month.`,
     apps: { root: 'plantasia.space', docs: 'These docs', orbiters: 'Orbiter Studio', 'entangled-worlds': 'Entangled World Studio' } as Record<string, string>,
     failed: 'The current figures could not load here. They are on the', pricing: 'pricing page', beforeTax: 'Prices are shown before tax.',
     noPrices: 'Prices could not load just now. They are on the',
   },
   es: {
     plan: 'Plan', monthly: 'Mensual', yearly: 'Anual', free: 'Gratis', tracks: 'Pistas', fileSize: 'Tamaño de archivo',
-    worlds: 'Entangled Worlds', orbiters: 'Orbiters', text: 'Créditos de texto al mes', texture: 'Créditos de textura al mes',
-    orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Sí', unlimited: 'Ilimitado', pack: 'Paquete', pool: 'Bolsa', credits: 'Créditos', price: 'Precio',
+    worlds: 'Entangled Worlds', orbiters: 'Orbiters', aiCredits: 'Créditos de IA al mes',
+    orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Sí', unlimited: 'Ilimitado', pack: 'Paquete', credits: 'Créditos', price: 'Precio',
     where: 'Dónde', fromPlan: 'Desde el plan', model: 'Modelo', perRequest: 'Créditos por petición, como máximo',
-    pools: { text: 'Texto', texture: 'Textura' } as Record<string, string>,
+    packs: { small: 'Pequeño', medium: 'Mediano', large: 'Grande' } as Record<string, string>,
+    creditFacts: (value: string, months: number) => `Un crédito vale ${value} sin impuestos. Los créditos comprados duran ${months} meses desde el día de la compra; los del plan se reinician cada mes.`,
     apps: { root: 'plantasia.space', docs: 'Esta documentación', orbiters: 'Orbiter Studio', 'entangled-worlds': 'Entangled World Studio' } as Record<string, string>,
     failed: 'Las cifras actuales no se pudieron cargar aquí. Están en la', pricing: 'página de precios', beforeTax: 'Los precios se muestran sin impuestos.',
     noPrices: 'Los precios no se pudieron cargar ahora. Están en la',
@@ -99,8 +102,7 @@ export function PlansTable() {
     [words.fileSize, (p) => show(p.limits.fileSizeMB, words, ' MB')],
     [words.worlds, (p) => show(p.limits.entangledWorlds, words)],
     [words.orbiters, (p) => show(p.limits.orbiters, words)],
-    [words.text, (p) => show(p.monthlyAiCredits.text, words)],
-    [words.texture, (p) => show(p.monthlyAiCredits.texture, words)],
+    [words.aiCredits, (p) => show(p.monthlyAiCredits, words)],
     [words.studio, (p) => (p.orbiterStudio ? words.yes : '—')],
     [words.orchidea, (p) => p.orchideaIn.map((app) => words.apps[app] ?? app).join(', ') || '—'],
   ];
@@ -137,7 +139,6 @@ export function CreditPacksTable() {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>{words.pool}</TableHead>
           <TableHead>{words.pack}</TableHead>
           <TableHead>{words.credits}</TableHead>
           <TableHead>{words.price}</TableHead>
@@ -145,9 +146,8 @@ export function CreditPacksTable() {
       </TableHeader>
       <TableBody>
         {summary.creditPacks.map((k) => (
-          <TableRow key={`${k.pool}-${k.pack}`}>
-            <TableCell>{words.pools[k.pool] ?? k.pool}</TableCell>
-            <TableCell>{k.pack.charAt(0).toUpperCase() + k.pack.slice(1)}</TableCell>
+          <TableRow key={k.pack}>
+            <TableCell>{words.packs[k.pack] ?? k.pack}</TableCell>
             <TableCell>{show(k.credits, words)}</TableCell>
             <TableCell>{k.price ?? '—'}</TableCell>
           </TableRow>
@@ -157,6 +157,15 @@ export function CreditPacksTable() {
     {summary.pricesKnown ? null : <p>{words.noPrices} <a href={pricing}>{words.pricing}</a>.</p>}
     </>
   );
+}
+
+/** One sentence: what a credit is worth and how long bought credits last, from the summary. */
+export function CreditFacts() {
+  const { summary, failed, words, lang, pricing } = useSummary();
+  if (!summary) return <Status failed={failed} words={words} pricing={pricing} />;
+  if (!summary.credits) return null;
+  const value = summary.credits.creditValueEUR.toLocaleString(lang, { style: 'currency', currency: 'EUR' });
+  return <p>{words.creditFacts(value, summary.credits.expiryMonths)}</p>;
 }
 
 export function OrchideaPricesTable() {

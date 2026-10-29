@@ -75,8 +75,8 @@ sidebar_custom_props:
 </details>
 
 <details>
-  <summary>¿Qué son los créditos de IA para Texturas/Textos?</summary>
-  <div>Créditos de uso para generar visuales y textos; los créditos base se renuevan en cada ciclo, y los créditos que compras en paquetes son válidos 12 meses desde el día de la compra.</div>
+  <summary>¿Qué son los créditos de IA?</summary>
+  <div>Un solo saldo de créditos para toda acción de IA: texturas, textos de mundos, narración y Orchidea. Los créditos del plan se reinician cada mes, y los que compras en paquetes duran 12 meses desde el día de la compra. Mira <a href="/es/docs/plantasia-space/plans-and-credits">Planes y créditos</a>.</div>
 </details>
 
 <details>

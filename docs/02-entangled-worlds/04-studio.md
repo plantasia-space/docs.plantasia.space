@@ -59,7 +59,7 @@ With a Bloom plan or above, the orchid in the Studio's header opens [Orchidea](/
 - The look: theme, font, text size and alignment, text and camera pacing
 - Elements and the timeline: add or remove text, images and camera moves, change their timing, animations and camera moves
 - Pictures: it places pictures you uploaded to this world, from the shared library or from the old library's plates. It doesn't make pictures.
-- Texts written with AI, from a prompt: these cost the model's text credits, and Orchidea asks before each one
+- Texts written with AI, from a prompt: these cost credits, depending on the model, and Orchidea asks before each one
 
 Each request is one step in the Studio's undo. To let Orchidea write texts without asking, turn off **Ask before using credits** in its **⋯** menu; it asks again in every new conversation. Anything that affects other people always asks.
 

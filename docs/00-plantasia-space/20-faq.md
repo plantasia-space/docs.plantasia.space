@@ -75,8 +75,8 @@ sidebar_custom_props:
 </details>
 
 <details>
-  <summary>What are AI Texture/Text credits?</summary>
-  <div>Usage credits for generating visuals and text; base credits refresh each cycle, and credits you buy in packs are valid 12 months from the day you buy them.</div>
+  <summary>What are AI credits?</summary>
+  <div>One balance of credits for every AI action: textures, world texts, narration and Orchidea. Plan credits reset every month, and credits you buy in packs last 12 months from the day you buy them. See <a href="/docs/plantasia-space/plans-and-credits">Plans and credits</a>.</div>
 </details>
 
 <details>

@@ -59,7 +59,7 @@ Con un plan Bloom o superior, la orquídea de la cabecera del Studio abre [Orchi
 - El aspecto: tema, fuente, tamaño y alineación del texto, ritmo del texto y de la cámara
 - Los elementos y la línea de tiempo: añadir o quitar textos, imágenes y movimientos de cámara, cambiar su tiempo, sus animaciones y sus movimientos de cámara
 - Imágenes: coloca imágenes que subiste a este mundo, de la biblioteca compartida o de las láminas de la biblioteca antigua. No crea imágenes.
-- Textos escritos con IA a partir de una petición: cuestan los créditos de texto del modelo, y Orchidea pregunta antes de cada uno
+- Textos escritos con IA a partir de una petición: cuestan créditos, según el modelo, y Orchidea pregunta antes de cada uno
 
 Cada petición es un paso en el deshacer del Studio. Para que Orchidea escriba textos sin preguntar, desactiva **Preguntar antes de usar créditos** en su menú **⋯**; vuelve a preguntar en cada conversación nueva. Lo que afecta a otras personas siempre pregunta.
 
