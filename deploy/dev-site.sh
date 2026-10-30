@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Deploy the dev docs (dev-userdocs.plantasia.space): pull `dev`, build it as the dev site, publish
+# Deploy the dev docs (xplorer-docs.plantasia.space): pull `dev`, build it as the dev site, publish
 # to the nginx-served dir. Runs on the dev box, by hand or from .github/workflows/deploy-dev.yml over
 # SSH (a forced-command key runs this script whatever the client asks). See deploy/README.md.
 # The public docs (docs.plantasia.space) still deploy from `main` to GitHub Pages (deploy.yml).
 set -euo pipefail
 
-REPO=/srv/dev-userdocs.plantasia.space
+REPO=/srv/xplorer-docs.plantasia.space
 cd "$REPO"
 
 # Node via nvm is not on PATH in the non-login shell a forced-command key gets. Newest v24 install,
@@ -38,7 +38,7 @@ if [[ -f "$DE_EVENTS_LIB" ]]; then
   # shellcheck source=/dev/null
   source "$DE_EVENTS_LIB"
   [[ -f /srv/be-deploy/config/notify.env ]] && source /srv/be-deploy/config/notify.env
-  de_init "userdocs" "dev"
+  de_init "xplorer-docs" "dev"
 else
   echo "!!  deploy events lib not found at $DE_EVENTS_LIB — skipping event emission" >&2
   de_init() { :; }; de_stage() { :; }; de_emit() { :; }; de_finish_ok() { :; }; de_disarm() { :; }

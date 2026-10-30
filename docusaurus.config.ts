@@ -17,7 +17,7 @@ const config = {
   favicon: 'img/favico.ico',
 
   // The site's address: the public docs, or the dev docs for a `DOCS_SITE=dev` build.
-  url: DEV_SITE ? 'https://dev-userdocs.plantasia.space' : 'https://docs.plantasia.space',
+  url: DEV_SITE ? 'https://xplorer-docs.plantasia.space' : 'https://docs.plantasia.space',
   // Base URL pathname
   baseUrl: '/',
 
