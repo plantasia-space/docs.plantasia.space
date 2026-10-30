@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 # Deploy the dev docs (xplorer-docs.plantasia.space): pull `dev`, build it as the dev site, publish
-# to the nginx-served dir. Runs on the dev box, by hand or from .github/workflows/deploy-dev.yml over
-# SSH (a forced-command key runs this script whatever the client asks). See deploy/README.md.
+# to the nginx-served dir. Runs on the dev box, by hand or from .github/workflows/deploy-dev.yml
+# through be-deploy's CI wrapper (ci-deploy-command.sh, which also passes the Actions run id/URL as
+# DEPLOY_RUN_ID / DEPLOY_LOG_URL). See deploy/README.md.
 # The public docs (docs.plantasia.space) still deploy from `main` to GitHub Pages (deploy.yml).
 set -euo pipefail
+
+# One block, read whole before it runs: the reset below rewrites this very file.
+{
 
 REPO=/srv/xplorer-docs.plantasia.space
 cd "$REPO"
@@ -14,21 +18,6 @@ NVM_NODES=/home/bruna/.nvm/versions/node
 NODE_BIN="$(ls -d "$NVM_NODES"/v24.*/bin 2>/dev/null | sort -V | tail -1 || true)"
 [[ -n "$NODE_BIN" ]] || NODE_BIN="$(ls -d "$NVM_NODES"/v*/bin 2>/dev/null | sort -V | tail -1 || true)"
 [[ -n "$NODE_BIN" && -d "$NODE_BIN" ]] && export PATH="$NODE_BIN:$PATH"
-
-# --- CI run context ---------------------------------------------------------------
-# The workflow sends the GitHub run id + Actions run URL as the SSH command; SSH exposes it in
-# $SSH_ORIGINAL_COMMAND. Whitelist-validated, never executed: the deploy events link to the run.
-if [[ -n "${SSH_ORIGINAL_COMMAND:-}" ]]; then
-  read -r -a _de_toks <<<"$SSH_ORIGINAL_COMMAND"
-  for _tok in "${_de_toks[@]}"; do
-    if [[ -z "${DEPLOY_RUN_ID:-}" && "$_tok" =~ ^[0-9]+$ ]]; then
-      export DEPLOY_RUN_ID="$_tok"
-    elif [[ -z "${DEPLOY_LOG_URL:-}" && "$_tok" =~ ^https://github\.com/[A-Za-z0-9._-]+/[A-Za-z0-9._-]+/actions/runs/[0-9]+(/attempts/[0-9]+)?$ ]]; then
-      export DEPLOY_LOG_URL="$_tok"
-    fi
-  done
-  unset _de_toks _tok
-fi
 
 # --- deploy events --------------------------------------------------------------------
 # be-deploy's emitter, the channel every dev-box deploy reports through (deploy status dashboard;
@@ -69,3 +58,5 @@ rsync -a --delete build/ deploy/site/
 de_stage "done"
 echo "==> deployed $SHORT at $(date -u +%FT%TZ)"
 de_finish_ok
+exit 0
+}
