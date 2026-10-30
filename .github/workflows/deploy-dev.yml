@@ -1,0 +1,34 @@
+name: Deploy dev docs
+
+# The docs `dev` branch → xplorer-docs.plantasia.space, so dev-root (and its Orchidea) reads the docs
+# not yet promoted. The public docs stay on `main` → GitHub Pages (deploy.yml). The build runs ON the
+# dev box (deploy/dev-site.sh); this job only opens the SSH session. Setup: deploy/README.md.
+
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-xplorer-docs
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        env:
+          DEV_DEPLOY_SSH_KEY: ${{ secrets.DEV_DEPLOY_SSH_KEY }}
+          DEV_DEPLOY_HOST: ${{ secrets.DEV_DEPLOY_HOST }}
+          DEV_DEPLOY_USER: ${{ secrets.DEV_DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEV_DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DEV_DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          # A forced-command key: the box runs deploy/dev-site.sh whatever is sent. The run id and
+          # URL reach it as $SSH_ORIGINAL_COMMAND, for the deploy events.
+          ssh -i ~/.ssh/deploy_key "${DEV_DEPLOY_USER}@${DEV_DEPLOY_HOST}" \
+            "deploy xplorer-docs ${{ github.run_id }} ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
