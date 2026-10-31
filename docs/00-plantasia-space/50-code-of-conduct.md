@@ -1,6 +1,5 @@
 ---
 title: Code of Conduct
-wrapperClassName: doc-wrapper-icon-release
 sidebar_position: 50
 sidebar_custom_props:
   icon: HeartHandshake

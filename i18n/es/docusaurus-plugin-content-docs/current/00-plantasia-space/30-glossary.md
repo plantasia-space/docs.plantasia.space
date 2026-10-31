@@ -1,6 +1,5 @@
 ---
 title: Glosario
-wrapperClassName: doc-wrapper-icon-question
 sidebar_position: 30
 toc_max_heading_level: 2
 sidebar_custom_props:

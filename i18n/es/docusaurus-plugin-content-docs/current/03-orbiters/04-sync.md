@@ -1,6 +1,5 @@
 ---
 title: Sincronización
-wrapperClassName: doc-wrapper-icon-sync
 sidebar_position: 5
 sidebar_custom_props:
   icon: Repeat

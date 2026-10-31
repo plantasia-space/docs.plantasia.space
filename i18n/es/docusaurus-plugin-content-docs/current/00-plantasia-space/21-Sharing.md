@@ -1,7 +1,6 @@
 ---
 title: Compartir
 slug: /plantasia-space/sharing
-wrapperClassName: doc-wrapper-icon-release
 sidebar_position: 21
 sidebar_custom_props:
   icon: HeartHandshake

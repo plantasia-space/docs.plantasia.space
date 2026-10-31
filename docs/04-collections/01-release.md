@@ -1,6 +1,5 @@
 ---
 title: Release
-wrapperClassName: doc-wrapper-icon-release
 sidebar_position: 2
 sidebar_custom_props:
   icon: ReleaseIcon

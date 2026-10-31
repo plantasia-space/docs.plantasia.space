@@ -169,57 +169,6 @@ h3 {
 
 
 
-/* Header Icons (derived from wrapperClassName) */
-[class*='doc-wrapper-icon-'] article h1:first-of-type {
-  display: flex !important;
-  align-items: center;
-}
-
-[class*='doc-wrapper-icon-'] article h1:first-of-type::before {
-  content: '';
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: 0.5rem; /* Gap */
-  background-color: currentColor;
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-}
-
-.doc-wrapper-icon-question article h1:first-of-type::before {
-  mask-image: url("/img/circle-question-mark.svg");
-  -webkit-mask-image: url("/img/circle-question-mark.svg");
-}
-
-.doc-wrapper-icon-eye article h1:first-of-type::before {
-
-.doc-wrapper-icon-cookie article h1:first-of-type::before {
-  mask-image: url("/img/symbols-12-25/eye.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/eye.svg");
-}
-  mask-image: url("/img/symbols-12-25/eye.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/eye.svg");
-}
-
-.doc-wrapper-icon-release article h1:first-of-type::before {
-  mask-image: url("/img/symbols-12-25/release-current.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/release-current.svg");
-}
-
-.doc-wrapper-icon-edit article h1:first-of-type::before {
-  mask-image: url("/img/pencil.svg");
-  -webkit-mask-image: url("/img/pencil.svg");
-}
-
-.doc-wrapper-icon-use article h1:first-of-type::before {
-  mask-image: url("/img/symbols-12-25/power.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/power.svg");
-}
-
 .nav-xplorer.navbar__item {
   display: inline-flex;
   align-items: center;
@@ -857,7 +806,7 @@ ul li {
 
 /* Glossary: a dictionary page. Each letter opens with a hairline and a large letter; each term
  * sits in a narrow left column with its one-paragraph definition beside it. Keyed on the doc-id
- * class Docusaurus puts on <html> (docs ignore wrapperClassName). The page keeps
+ * class Docusaurus puts on <html>. The page keeps
  * plain `### Term {#id}` + paragraph markdown, which the glossary-terms plugin reads. */
 .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown {
   display: grid;

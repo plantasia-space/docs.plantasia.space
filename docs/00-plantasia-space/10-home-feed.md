@@ -2,7 +2,6 @@
 title: Your home feed
 slug: /plantasia-space/home-feed
 description: Choose how your home feed is ordered — Home, Recently updated, Popular, or Rediscover — with the feed-mode switcher.
-wrapperClassName: doc-wrapper-icon-eye
 sidebar_position: 10
 sidebar_custom_props:
   icon: Compass

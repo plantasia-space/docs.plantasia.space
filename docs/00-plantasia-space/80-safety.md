@@ -1,6 +1,5 @@
 ---
 title: Safety & Moderation
-wrapperClassName: doc-wrapper-icon-safety
 sidebar_position: 80
 sidebar_custom_props:
   icon: ShieldCheck
