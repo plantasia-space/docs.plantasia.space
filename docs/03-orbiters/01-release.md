@@ -9,15 +9,15 @@ sidebar_custom_props:
 
 Go to **Release → New Orbiter**.
 
-![New Orbiter](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/release-menu.jpg)
+![New Orbiter](https://herbarium.plantasia.space/docs/en/media/plantasia-space/release/release-menu.jpg)
 
 The Orbiter Studio opens. You build the Orbiter in its first two steps, **Instrument** and **Visual**:
 the [Quickstart](/docs/orbiters/quickstart) goes through them, and [Edit](/docs/orbiters/edit) explains
 how to map a control to an axis. This page is about the last step, **Release**.
 
-![A new Orbiter in the Studio](https://herbarium.plantasia.space/docs/en/media/orbiters/2026-10-31/new-orbiter-what-does-it-play.jpg)
+![A new Orbiter in the Studio](https://herbarium.plantasia.space/docs/en/media/orbiters/release/new-orbiter-what-does-it-play.jpg)
 
-![The Release step](https://herbarium.plantasia.space/docs/en/media/orbiters/2026-10-31/release-step.jpg)
+![The Release step](https://herbarium.plantasia.space/docs/en/media/orbiters/release/release-step.jpg)
 
 The audio you pick with **Choose preview audio** while you build is only for listening: it does not
 bind the Orbiter to that audio.

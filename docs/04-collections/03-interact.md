@@ -22,7 +22,7 @@ Opening a collection shows its artwork, description, and items in the order set 
 
 **Audio collections** show a tracklist:
 
-![Audio collection page](https://herbarium.plantasia.space/docs/en/media/collections/2026-10-31/collection-page-audios.jpg)
+![Audio collection page](https://herbarium.plantasia.space/docs/en/media/collections/interact/collection-page-audios.jpg)
 
 **World collections** show a world atlas:
 

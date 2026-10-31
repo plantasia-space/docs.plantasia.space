@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 In the side bar or bottom bar, Go to **Release → New Audio**.
 
-![New Audio](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/release-menu.jpg)
+![New Audio](https://herbarium.plantasia.space/docs/en/media/plantasia-space/release/release-menu.jpg)
 
 <video
   className="ps-doc-video"
@@ -68,7 +68,7 @@ The cover image is used across cards, previews, and listings.
 
 ## 3) Title and artist
 
-![Audio file, cover, name and artist](https://herbarium.plantasia.space/docs/en/media/audios/2026-10-31/release-file-and-information.jpg)
+![Audio file, cover, name and artist](https://herbarium.plantasia.space/docs/en/media/audios/release/release-file-and-information.jpg)
 
 Set the Audio title and define the artist or owner.
 
@@ -77,7 +77,7 @@ You can assign more than one artist, but they must already exist on the platform
 Additional contributors who are not on the platform can be credited later.
 
 ## 4) Entangled World and Orbiter (preview)
-![orbiter-on](https://herbarium.plantasia.space/docs/en/media/audios/2026-10-31/release-world-and-orbiter.jpg)
+![orbiter-on](https://herbarium.plantasia.space/docs/en/media/audios/release/release-world-and-orbiter.jpg)
 Each Audio is assigned to a default Entangled World and Orbiter.
 
 You can change these selections to preview how the Audio behaves in different contexts.
@@ -119,7 +119,7 @@ This section is optional, but it allows you to expand the narrative around the A
 
 ## 7) Privacy, distribution, and licensing
 
-![Privacy, licence and release](https://herbarium.plantasia.space/docs/en/media/audios/2026-10-31/release-privacy-and-release.jpg)
+![Privacy, licence and release](https://herbarium.plantasia.space/docs/en/media/audios/release/release-privacy-and-release.jpg)
 
 Choose how the Audio is shared:
 

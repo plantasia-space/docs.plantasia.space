@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Ve a **Publicar → Nuevo Audio**.
 
-![Nuevo Audio](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/release-menu.jpg)
+![Nuevo Audio](https://herbarium.plantasia.space/docs/en/media/plantasia-space/release/release-menu.jpg)
 
 <video
   className="ps-doc-video"
@@ -68,7 +68,7 @@ La portada se para identificar tu lanzamiento.
 
 ## 3) Título y artista
 
-![Audio file, cover, name and artist](https://herbarium.plantasia.space/docs/en/media/audios/2026-10-31/release-file-and-information.jpg)
+![Audio file, cover, name and artist](https://herbarium.plantasia.space/docs/en/media/audios/release/release-file-and-information.jpg)
 
 Define el título del Audio y el artista o propietarix.
 
@@ -79,7 +79,7 @@ Otrxs colaboradorxs que no estén en la plataforma pueden acreditarse más adela
 Es necesario tener al menos un Artista asociadx al lanzamiento.
 
 ## 4) Mundo entrelazado y orbitador (vista previa)
-![orbiter-on](https://herbarium.plantasia.space/docs/en/media/audios/2026-10-31/release-world-and-orbiter.jpg)
+![orbiter-on](https://herbarium.plantasia.space/docs/en/media/audios/release/release-world-and-orbiter.jpg)
 Cada Audio se asigna a un mundo entrelazado y a un orbitador predeterminados.
 
 Puedes cambiarlos para prever cómo se comporta el Audio en distintos contextos.
@@ -122,7 +122,7 @@ Es opcional, pero te permite expandir la narrativa del Audio y reconocer a quien
 
 ## 7) Privacidad, distribución y licencias
 
-![Privacy, licence and release](https://herbarium.plantasia.space/docs/en/media/audios/2026-10-31/release-privacy-and-release.jpg)
+![Privacy, licence and release](https://herbarium.plantasia.space/docs/en/media/audios/release/release-privacy-and-release.jpg)
 
 Elige cómo se comparte el Audio:
 

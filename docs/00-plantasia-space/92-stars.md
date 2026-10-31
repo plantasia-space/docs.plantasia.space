@@ -12,15 +12,15 @@ Press **Star** on a track, Entangled World, Orbiter or collection. The button tu
 
 ## My Stars
 
-![My Stars in the xPlorer menu](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/xplorer-menu-my-stars.jpg)
+![My Stars in the xPlorer menu](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/xplorer-menu-my-stars.jpg)
 
 Everything you starred is on **My Stars**, in the xPlorer menu (at `plantasia.space/<your username>/stars`). Filter it by **All**, **Tracks**, **Worlds**, **Orbiters** or **Collections**, and switch between the detailed view and mini cards with the two buttons beside the filters.
 
 Your stars are private unless you turn on **Show my Stars publicly** in **Settings → Preferences**. Then others can browse them on your profile.
 
-![My Stars, detailed view](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/my-stars-detailed.jpg)
+![My Stars, detailed view](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-detailed.jpg)
 
-![My Stars, mini cards](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/my-stars-mini-cards.jpg)
+![My Stars, mini cards](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-mini-cards.jpg)
 
 ## Archive and restore
 

@@ -15,11 +15,11 @@ El [playground](https://plantasia.space/es/playground) es donde tocas en directo
 
 Solo las colecciones de audios o mixtas con 5 o más pistas publicadas pueden abrir una sala.
 
-![Public jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/playground-public-jam.jpg)
+![Public jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/playground/public-jam.jpg)
 
-![Create a jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/playground-create-a-jam.jpg)
+![Create a jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/playground/create-a-jam.jpg)
 
-![Open the jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/playground-open-a-jam.jpg)
+![Open the jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/playground/open-a-jam.jpg)
 
 ## Salas
 

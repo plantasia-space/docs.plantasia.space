@@ -22,7 +22,7 @@ Abrir una colección muestra su arte, su descripción y sus elementos en el orde
 
 **Las colecciones de audios** muestran una lista de pistas:
 
-![Página de colección de audios](https://herbarium.plantasia.space/docs/en/media/collections/2026-10-31/collection-page-audios.jpg)
+![Página de colección de audios](https://herbarium.plantasia.space/docs/en/media/collections/interact/collection-page-audios.jpg)
 
 **Las colecciones de mundos** muestran un atlas de mundos:
 
