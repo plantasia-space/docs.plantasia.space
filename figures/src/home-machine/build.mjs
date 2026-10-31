@@ -25,14 +25,7 @@ const ONLY = process.argv.find((a) => a.startsWith("--only="))?.slice(7);
 const TOKENS = readFileSync(createRequire(import.meta.url).resolve("plantasia.space-design/tokens.css"), "utf8");
 const COLLECTION = TOKENS.match(/--ps-entity-collection:\s*([^;]+);/)?.[1].trim();
 if (!COLLECTION) throw new Error("--ps-entity-collection is missing from the design library's tokens.css");
-// The dark theme, kept off both extremes: the base and the objects in a near-black grey (darker than
-// the kit's), their lines a step brighter so every edge reads, and the brightest lines a light grey
-// instead of white. The entity-coloured parts keep their own colours. The light theme keeps the kit's.
-const DARK = {
-  paper: "#0a0a0a", face: "#0f0f0f", top: "#101010", "shade-0": "#080808", "shade-1": "#0a0a0a", "shade-2": "#0c0c0c", "shade-3": "#0e0e0e", "lit-top": "#161616", "lit-shade": "#101010",
-  hi: "#c8c8c8", mid: "#8c8c8c", lo: "#5c5c5c", faint: "#404040", dot: "#c8c8c8",
-};
-const CSS = `${STAGE_CSS}.lf-col{--lf:var(--ps-entity-collection,${COLLECTION})}.iso-svg.iso[data-theme="dark"]{${Object.entries(DARK).map(([v, c]) => `--anatomy-${v}:${c}`).join(";")}}`;
+const CSS = `${STAGE_CSS}.lf-col{--lf:var(--ps-entity-collection,${COLLECTION})}`;
 // the Collection's cabinet: its lines in the Collection's colour
 const asCollection = (T, make) => { const from = T.items.length, made = make(); for (let i = from; i < T.items.length; i++) T.items[i].svg = `<g class="lf-ink lf-col">${T.items[i].svg}</g>`; return made; };
 
