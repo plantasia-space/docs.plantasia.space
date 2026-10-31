@@ -133,6 +133,45 @@ A Notes Orbiter is played from the <Term id="play-surface">play surface</Term>, 
 See [MIDI effects](/docs/orbiters/midi-effects) for the generators and [Sync](/docs/orbiters/sync) for
 the launch grid.
 
+## MIDI controllers
+
+Plug in a MIDI controller and map its knobs, faders and pads to any control of the Orbiter. MIDI works
+in Chrome, Edge and Firefox on a computer; Safari has no MIDI. The first time, the browser asks to let the
+page use MIDI devices.
+
+1. Press **M** (or **MIDI** in the **⋯** menu) to open MIDI learn. A header shows at the top of the page,
+   and every control you can map gets a badge.
+2. Click a control, then move the knob or press the pad you want on it. The badge shows what you mapped:
+   **CH 1 / CC 74**.
+3. Press **M** again, or **Exit**, to play.
+
+Click a control that is already mapped to **Learn** it again or **Delete** its mapping. Mappings are saved
+to your account with the Orbiter (in a collection, with its stage). **Load Mappings** copies another
+Orbiter's mappings into this one.
+
+### Fine control
+
+A knob that sends more than 128 steps is used at its full resolution, up to 16,384 steps: controllers
+that send 14-bit values (the badge shows **CC14**) or NRPN (**NRPN**). Turn the knob for a moment while
+learning, not just a nudge, so the Orbiter can hear what it sends.
+
+**Endless encoders** (knobs that turn without stopping) are recognised too: turn one a few clicks while
+learning, both ways if you can. It moves its control from where it is, in fine steps, and never makes
+it jump. Map encoders to knobs and faders: on a switch, a menu or a mixer fader an encoder acts like a
+plain knob.
+
+### MIDI learn settings
+
+- **Input** and **Channel**: where the dimension in focus takes its notes from. See
+  [Multiple MIDI instruments](/docs/orbiters/instruments/multiple-midi-instruments).
+- **Takeover**: what a fader does the first time you move it after it started pointing at another
+  parameter (another Orbiter loaded, another dimension). **Off** jumps to the fader's position,
+  **Pick-up** waits until the fader passes the value, **Value scaling** moves the value toward the fader
+  until they meet.
+- **Autofocus**: moving a mapped control switches to its dimension.
+
+A controller with lights or motorized faders follows the values on screen by itself.
+
 ## Cosmic LFO
 
 An Orbiter has **three LFOs per dimension**, slow waves that move things by themselves: **1cX, 1cY,
