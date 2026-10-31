@@ -11,6 +11,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { k, G, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
 import { KNOB_SOURCE, knobFace, knobWedge, knobNeedle } from "../shared/knob.mjs";
+import { COLOURS } from "../shared/colours.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes one ES module, <slot>/static/figures/orbiters/sensors.js, which the docs' <IsoFigure> loads:
@@ -194,6 +195,7 @@ const svg = k.figureSvg({
   width: WIDTH, height: HEIGHT,
   label: "A phone held on a ball joint over a hull deck, beside a bridge of three knobs. Turning the phone turns the first knob, X. Tipping it front to back turns the second, Y. Rolling it side to side turns the third, Z. Each knob rests at 0°, its needle straight up, where the phone was calibrated.",
   body: [
+    COLOURS,
     deck(),
     bridge(),
     ...SLOTS.map((x, index) => { const knob = knobOf(faceOf(x), KNOB_R, 0); return knobWedge(`wedge-${index}`, knob.wedge) + knobFace(faceOf(x), KNOB_R, P, k.iso, k.lineSvg) + knobNeedle(`needle-${index}`, knob.needle); }),

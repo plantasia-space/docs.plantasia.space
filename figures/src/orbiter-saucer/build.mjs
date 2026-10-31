@@ -9,6 +9,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { k, G, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
 import { KNOB_SOURCE } from "../shared/knob.mjs";
+import { COLOURS } from "../shared/colours.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes one ES module, <slot>/static/figures/orbiters/saucer.js, which the docs' <IsoFigure> loads:
@@ -93,6 +94,7 @@ const svg = k.figureSvg({
   width: WIDTH, height: HEIGHT,
   label: "An Orbiter drawn as its craft: a glass dome over a wide ring, with a belly and a hatch under it, leaning to one side. Three tracks run round the ring, for the axes X, Y and Z from the outside in. A light rides each track and goes round it as the axis turns, the track lit behind it.",
   body: [
+    COLOURS,
     under(),
     ring(),
     ...TRACKS.map((_, index) => `<path data-part="arc-${index}" class="iso-line" data-tone="lit" data-free="" d="${rest[index].arc}" style="stroke-width:0.9"/><circle data-part="light-${index}" class="iso-wire-end" r="2.3" cx="${rest[index].light[0].toFixed(1)}" cy="${rest[index].light[1].toFixed(1)}" style="stroke:var(--anatomy-lit);fill:var(--anatomy-lit)"/>`),

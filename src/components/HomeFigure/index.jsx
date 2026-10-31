@@ -37,13 +37,13 @@ export default function HomeFigure() {
     orrery: translate({
       id: 'homepage.figure.orrery',
       message:
-        'A machine that stands for Plantasia Space. A planet with a ring, an Entangled World, turns at the centre, and a small craft, an Orbiter, circles it and sends it a beam. Round them, green balls, the Audios, run on a ring track. As each ball passes, it sets off the parts round the edge in turn: a cabinet of drawers, the Collection; a console with headphones, the xPlorer; a row of tuned bars, an instrument; a sprout, a Release; and an orchid, Plantasia Space itself.',
+        'A machine that stands for Plantasia Space. A planet with a ring, an Entangled World, turns at the centre, and a small craft, an Orbiter, circles it and sends it a beam. Round them, balls, the Audios, run on a ring track. As each ball passes, it sets off the parts round the edge in turn: a cabinet of drawers, the Collection; a console with headphones, the xPlorer; a row of tuned bars, an instrument; a sprout, a Release; and an orchid, Plantasia Space itself.',
       description: 'What the home page figure shows, wide arrangement (read by screen readers)',
     }),
     tower: translate({
       id: 'homepage.figure.tower',
       message:
-        'A machine that stands for Plantasia Space, built as a tower. At the top, a cabinet of drawers, the Collection, lets go of a green ball, an Audio. It runs down a chute, hops along a row of tuned bars, an instrument, and rolls past a console with headphones, the xPlorer. At the foot, a small craft, an Orbiter, circles a planet with a ring, an Entangled World, and sends it a beam. The ball lands in a pot where a sprout, a Release, grows. An orchid, Plantasia Space itself, stands beside them.',
+        'A machine that stands for Plantasia Space, built as a tower. At the top, a cabinet of drawers, the Collection, lets go of a ball, an Audio. It runs down a chute, hops along a row of tuned bars, an instrument, and rolls past a console with headphones, the xPlorer. At the foot, a small craft, an Orbiter, circles a planet with a ring, an Entangled World, and sends it a beam. The ball lands in a pot where a sprout, a Release, grows. An orchid, Plantasia Space itself, stands beside them.',
       description: 'What the home page figure shows, narrow arrangement (read by screen readers)',
     }),
   };

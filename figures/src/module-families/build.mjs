@@ -11,6 +11,7 @@ import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { k, G, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
+import { COLOURS } from "../shared/colours.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes three ES modules into <slot>/static/figures/orbiters/, which the docs' <IsoFigure> loads: each
@@ -249,7 +250,7 @@ const FIGURES = [
   { file: "midi-effects", title: "MIDI effects", body: midiEffects(), live: midiEffectsLive, label: "A length of the Orbiter's rack with a pin drum, a box with a grid of notes, and a box with a keyboard. A note leaves the drum, moves to another row on the grid, and a key plays it.", keys: "left and right arrows move the note along the rack, Home and End take it to either end" },
 ];
 for (const figure of FIGURES) {
-  const svg = k.figureSvg({ width: WIDTH, height: HEIGHT, label: figure.label, body: figure.body });
+  const svg = k.figureSvg({ width: WIDTH, height: HEIGHT, label: figure.label, body: [COLOURS].concat(figure.body) });
   const stageHtml = `<div class="iso-stage" tabindex="0" role="slider" aria-label="${figure.title}: ${figure.keys}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">${svg}</div>`;
   const live = `${figure.live}\n${runtime}`;
   writeFileSync(join(OUT, `${figure.file}.js`), `// Built by figures/src/module-families/build.mjs. Do not edit by hand.\n${kitScript()}\nexport const svg = ${JSON.stringify(stageHtml)};\n${live}`);
