@@ -5,10 +5,11 @@
 // Two arrangements of the same parts: the orrery (wide screens) and the tower (a narrow column).
 // It runs by itself and carries no words. Nothing here is a number from the app: it is a picture of the whole.
 import { createHash } from "node:crypto";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { k, G, scene, polar, UP, TAU } from "plantasia.space-design/anatomy/build";
+import { createRequire } from "node:module";
+import { k, G, stage, polar, UP, TAU, CSS as STAGE_CSS } from "plantasia.space-design/anatomy/build";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes into static/figures/home, per arrangement: a picture for each theme (<name>-dark.svg, <name>-light.svg),
@@ -17,15 +18,16 @@ const OUT = process.argv.find((a) => a.startsWith("--out="))?.slice(6) ?? join(H
 const PREVIEW = process.argv.includes("--preview");
 const ONLY = process.argv.find((a) => a.startsWith("--only="))?.slice(7);
 
-// The one accent: the Orbiters app's default Color C, the green of whatever is selected or active
-// (orbiters/src/ui/react/orbitersUI.css, --orb-default-color3: #33ff41). The ramp shades it for the kit's faces.
-const ACCENT = {
-  dark: { paper: "#149c1f", face: "#25d434", top: "#33ff41", shades: ["#149c1f", "#1cb82a", "#25d434", "#2dea3b"], hi: "#b8ffbd", mid: "#33ff41", line: "#33ff41" },
-  light: { paper: "#22c930", face: "#2adf39", top: "#33ff41", shades: ["#1ba827", "#22c930", "#2adf39", "#30f03e"], hi: "#0b5a12", mid: "#149c1f", line: "#17a823" },
-};
-const ramp = (a) => `--anatomy-paper:${a.paper};--anatomy-face:${a.face};--anatomy-top:${a.top};${a.shades.map((c, i) => `--anatomy-shade-${i}:${c}`).join(";")};--anatomy-hi:${a.hi};--anatomy-mid:${a.mid}`;
-const CSS = `.hm-acc{${ramp(ACCENT.dark)}}[data-theme="light"] .hm-acc{${ramp(ACCENT.light)}}`
-  + `.hm-beam{fill:none;stroke:${ACCENT.dark.line};stroke-width:1.1;stroke-dasharray:1 3.2;stroke-linecap:round;opacity:.45}[data-theme="light"] .hm-beam{stroke:${ACCENT.light.line}}`;
+// The colours are the platform's, as on root's home page: the design library's stage colours each
+// part as its entity (Orbiter, Audio, Entangled World, Release) from the page's `--ps-entity-*` tokens.
+// The Collection's cabinet takes `--ps-entity-collection` the same way. A picture shown alone has no
+// page tokens: it falls back to the library's own value, read from its tokens.css here.
+const TOKENS = readFileSync(createRequire(import.meta.url).resolve("plantasia.space-design/tokens.css"), "utf8");
+const COLLECTION = TOKENS.match(/--ps-entity-collection:\s*([^;]+);/)?.[1].trim();
+if (!COLLECTION) throw new Error("--ps-entity-collection is missing from the design library's tokens.css");
+const CSS = `${STAGE_CSS}.lf-col{--lf:var(--ps-entity-collection,${COLLECTION})}`;
+// the Collection's cabinet: its lines in the Collection's colour
+const asCollection = (T, make) => { const from = T.items.length, made = make(); for (let i = from; i < T.items.length; i++) T.items[i].svg = `<g class="lf-ink lf-col">${T.items[i].svg}</g>`; return made; };
 
 // The page describes the drawing in its own language (src/components/HomeFigure) and sets that on it.
 const LABEL = "The Plantasia Space machine";
@@ -64,7 +66,7 @@ function trigger(T, deg, r, z, name, to) {
 function orrery() {
   const R = 132, WIDTH = 680, HEIGHT = 500;
   const edge = Array.from({ length: 24 }, (_, i) => polar(R, i * 15, -10));
-  const T = scene(WIDTH, HEIGHT, [...edge, [0, 0, 104], polar(110, -14, 66), polar(52, 225, 92)]);
+  const T = stage(WIDTH, HEIGHT, [...edge, [0, 0, 104], polar(110, -14, 66), polar(52, 225, 92)]);
   T.round(R);
   const REST = 7.6; // the moment the still picture shows, in seconds
 
@@ -102,7 +104,7 @@ function orrery() {
   // round the edge, in the order a ball meets them
   const AT = { cabinet: 186, console: 124, bars: 90, sprout: 40, orchid: -14 };
   const cab = polar(100, AT.cabinet);
-  T.cabinet(cab[0], cab[1]);
+  asCollection(T, () => T.cabinet(cab[0], cab[1]));
   const con = polar(108, AT.console);
   T.console(con[0], con[1]);
   const barAt = polar(106, AT.bars);
@@ -135,7 +137,7 @@ function orrery() {
 // ---------- the tower: the same chain, top to bottom, for a narrow column ----------
 function tower() {
   const DECK = { x: -80, y: -80, w: 160, d: 160, r: 12 }, WIDTH = 420, HEIGHT = 690;
-  const T = scene(WIDTH, HEIGHT, [...k.boxCorners(DECK, -12, 0), [0, -14, 268], [-80, 0, 262]], { pad: 16 });
+  const T = stage(WIDTH, HEIGHT, [...k.boxCorners(DECK, -12, 0), [0, -14, 268], [-80, 0, 262]], { pad: 16 });
   T.deck(DECK);
   const LANE = 4, MAST = [0, -14];
   T.put([MAST[0], MAST[1], 262], T.S(G.sphereOf([MAST[0], MAST[1], 263], 3.4, T.P, { steps: 28 }), { tone: "hi" }), 0.2);
@@ -146,7 +148,7 @@ function tower() {
   // the mast, in lengths between the shelves so each paints over the shelf below it
   [[0, Z3 - 3], [Z3, Z2 - 3], [Z2, Z1 - 3], [Z1, 262]].forEach(([z0, z1]) => T.post(MAST[0], MAST[1], z0, z1, 2.6));
   T.shelf({ x: -80, y: -24, w: 86, d: 46, r: 4 }, Z1);
-  const cab = T.cabinet(-50, LANE, Z1);
+  const cab = asCollection(T, () => T.cabinet(-50, LANE, Z1));
   const start = [cab.mouth[0] - 9, LANE, cab.mouth[2] + 3.6];
   const c1 = G.fillet([[cab.mouth[0] - 2, LANE, cab.mouth[2] - 4], [cab.mouth[0] + 14, LANE, cab.mouth[2] - 7], [20, LANE, Z2 + 27], [27, LANE, Z2 + 23]], 9);
   T.rails(c1);

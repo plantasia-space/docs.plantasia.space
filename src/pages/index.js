@@ -15,8 +15,13 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+        {/* The wordmark, drawn as a mask so it takes the text colour. The words stay for screen
+            readers, hidden behind it. */}
+        <Heading
+          as="h1"
+          className={clsx('hero__title', styles.wordmark)}
+          style={{'--wordmark': `url(${siteConfig.customFields.assetsBase}/assets/logos/current/plantasia-space-wordmark-currentcolor-transparent-background.svg)`}}>
+          <span className={styles.wordmarkText}>{siteConfig.title}</span>
         </Heading>
         <p className="hero__subtitle">
           <Translate id="homepage.tagline">Comprehensive Documentation</Translate>

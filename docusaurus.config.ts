@@ -9,6 +9,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 // pairs with local root.
 const DEV_SITE = process.env.DOCS_SITE === 'dev';
 const PRODUCTION = process.env.NODE_ENV === 'production';
+// The CDN the dashboard publishes to: the public bucket for the public docs, the dev bucket for the
+// dev docs and for local work.
+const ASSETS_BASE = PRODUCTION && !DEV_SITE ? 'https://herbarium.plantasia.space' : 'https://dev-herbarium.plantasia.space';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -50,6 +53,8 @@ const config = {
   },
 
   customFields: {
+    // The CDN above, for what the pages draw from it (the home page's wordmark).
+    assetsBase: ASSETS_BASE,
     // Root's address (Orchidea signs in and asks through it): production root, dev-root for the dev
     // docs, local root for a local `docusaurus start`.
     rootBase: !PRODUCTION ? 'https://local.plantasia.space:3000' : DEV_SITE ? 'https://dev-root.plantasia.space' : 'https://plantasia.space',

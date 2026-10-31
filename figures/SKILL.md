@@ -14,7 +14,8 @@ every built figure below carries the kit's code inline).
 ## Docs only
 
 - **One lit accent**, the part the reader should watch; everything else in the kit's tones (the guest
-  home's entity colours are not for docs pages).
+  home's entity colours are not for docs pages; the home machine is the one exception: built on the
+  lib's `stage()`, each part in its entity's colour from the page's `--ps-entity-*` tokens, as on root).
 - **A figure is one module**: `figures/src/<name>/build.mjs` writes `static/figures/<area>/<name>.js`,
   exporting `svg` (the stage) and `mount(root, say)` (returns a cleanup), with the kit inlined
   (`kitSource()`). Built files are committed: the site build does not run the kit.
