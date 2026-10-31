@@ -10,10 +10,10 @@ sidebar_custom_props:
 
 The [playground](https://plantasia.space/playground) is where you jam live with other people, each on your own Orbiter, in one room. You need to be signed in.
 
-- **Public jam**: press **Find a jam** to join someone who is looking.
-- **Create a jam**: pick a collection, a score and a length, then **Open a private jam** or **Open a public jam**. You can also press **Start room** in an Orbiter collection.
+- **Public jam**: pick a length (3, 7, 18 or 33 min) and press **Find a jam** to join someone who is looking.
+- **Create a jam**: pick a length, a collection and a score, then **Open a private jam**. Turn on **Also open as a public jam** to list it for people looking for a jam too; your link keeps working. You can also press **Start room** in an Orbiter collection.
 
-The collection must be one you've shared and must have tracks in it.
+Only audio and mixed collections with 5 or more released tracks can open a room.
 
 ## Rooms
 

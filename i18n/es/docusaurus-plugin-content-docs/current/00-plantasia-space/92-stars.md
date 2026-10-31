@@ -12,7 +12,7 @@ Pulsa **Guardar** (la estrella) en una pista, un Entangled World, un Orbiter o u
 
 ## Mis Estrellas
 
-Todo lo que guardaste está en **Mis Estrellas**, en el menú de xPlorer (en `plantasia.space/<tu usuario>/stars`). Fíltralo por **Todos**, **Pistas**, **Colecciones**, **Orbitadores** o **Mundos**.
+Todo lo que guardaste está en **Mis Estrellas**, en el menú de xPlorer (en `plantasia.space/<tu usuario>/stars`). Fíltralo por **Todos**, **Pistas**, **Mundos**, **Orbitadores** o **Colecciones**, y cambia entre la vista detallada y las mini tarjetas con los dos botones junto a los filtros.
 
 Tus estrellas son privadas salvo que actives **Mostrar mis Estrellas públicamente** en **Configuración → Preferencias**. Entonces otras personas pueden verlas en tu perfil.
 

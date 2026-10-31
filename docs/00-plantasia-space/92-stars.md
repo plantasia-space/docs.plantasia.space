@@ -12,7 +12,7 @@ Press **Star** on a track, Entangled World, Orbiter or collection. The button tu
 
 ## My Stars
 
-Everything you starred is on **My Stars**, in the xPlorer menu (at `plantasia.space/<your username>/stars`). Filter it by **All**, **Tracks**, **Collections**, **Orbiters** or **Worlds**.
+Everything you starred is on **My Stars**, in the xPlorer menu (at `plantasia.space/<your username>/stars`). Filter it by **All**, **Tracks**, **Worlds**, **Orbiters** or **Collections**, and switch between the detailed view and mini cards with the two buttons beside the filters.
 
 Your stars are private unless you turn on **Show my Stars publicly** in **Settings → Preferences**. Then others can browse them on your profile.
 

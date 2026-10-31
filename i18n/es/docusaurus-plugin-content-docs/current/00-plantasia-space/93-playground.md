@@ -10,10 +10,10 @@ sidebar_custom_props:
 
 El [playground](https://plantasia.space/es/playground) es donde tocas en directo con otras personas, cada una con su Orbiter, en una sala. Necesitas haber iniciado sesión.
 
-- **Jam pública**: pulsa **Buscar una jam** para unirte a alguien que esté buscando.
-- **Crear una jam**: elige una colección, una partitura y una duración, y pulsa **Abrir una jam privada** o **Abrir una jam pública**. También puedes pulsar **Crear sala** en una colección de Orbiters.
+- **Jam pública**: elige una duración (3, 7, 18 o 33 min) y pulsa **Buscar una jam** para unirte a alguien que esté buscando.
+- **Crear una jam**: elige una duración, una colección y una partitura, y pulsa **Abrir una jam privada**. Activa **Abrir también como jam pública** para que aparezca también para quien busca una jam; tu enlace sigue funcionando. También puedes pulsar **Crear sala** en una colección de Orbiters.
 
-La colección tiene que ser una que hayas compartido y tener pistas.
+Solo las colecciones de audios o mixtas con 5 o más pistas publicadas pueden abrir una sala.
 
 ## Salas
 
