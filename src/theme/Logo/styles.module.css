@@ -1,0 +1,24 @@
+/* The symbol (square) and the wordmark (1145 × 353), side by side, in the text colour. */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.symbol,
+.wordmark {
+  display: block;
+  background-color: currentColor;
+  mask: var(--mark) center / contain no-repeat;
+  -webkit-mask: var(--mark) center / contain no-repeat;
+}
+
+.symbol {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.wordmark {
+  height: 2rem;
+  aspect-ratio: 1145 / 353;
+}
