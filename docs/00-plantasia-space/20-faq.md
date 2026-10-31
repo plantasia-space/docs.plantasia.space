@@ -6,96 +6,89 @@ sidebar_custom_props:
   icon: CircleHelp
 ---
 
-## Frequently Asked Questions (FAQ)
-
 <div class="ps-faq">
 <details open>
   <summary>What is Plantasia Space?</summary>
-  <div>A world-building project and regenerative music platform where you can listen to, reshape, and remix releases in real time.</div>
+  <div>A platform for regenerative music: you listen to releases, play them and remake them in real time.</div>
 </details>
 
 <details>
   <summary>What makes the music “regenerative”?</summary>
-  <div>Sonic releases are designed to transform through listener interaction—each play can be different.</div>
+  <div>Releases are made to be played again by the listener, so each play can sound different.</div>
 </details>
 
 <details>
   <summary>Who are xPlorers?</summary>
-  <div>Members who join the community to listen, publish, and create; they get access to different toolsets depending on membership level.</div>
+  <div>The people who join Plantasia Space to listen, publish and create. What you can do depends on your plan.</div>
 </details>
 
 <details>
-  <summary>What can I do as a guest?</summary>
-  <div>Browse featured audios, orbiters, and worlds for a limited time; you’ll need at least a free account to interact with or publish audios.</div>
+  <summary>What can I do without an account?</summary>
+  <div>Browse featured audios, Orbiters and worlds for a while. To play with them or publish, create a free account.</div>
 </details>
 
 <details>
   <summary>How do I become a member?</summary>
-  <div>Create a free account and choose a plan in the pricing section when you’re ready to upgrade.</div>
+  <div>Create a free account. Upgrade to a plan from the pricing page whenever you want.</div>
 </details>
 
 <details>
   <summary>What can I publish?</summary>
-  <div>Audios (tracks), Entangled Worlds, Orbiters, and curated Collections.</div>
+  <div>Audios, Entangled Worlds, Orbiters and Collections.</div>
 </details>
 
 <details>
   <summary>What is an Entangled World?</summary>
-  <div>A mix of story, visuals, and science facts that can be entangled with music releases; music lives inside these worlds and can be visited with orbiters.</div>
+  <div>A world of story, pictures and science facts. Music lives inside it, and you visit it with Orbiters.</div>
 </details>
 
 <details>
   <summary>What is an Orbiter?</summary>
-  <div>A spaceship that acts as a musical meta-instrument (sampler with effects/processing chain) you design and share to shape playback.</div>
+  <div>A spaceship that is also a musical instrument. You build it from modules, share it, and play music through it.</div>
 </details>
 
 <details>
-  <summary>How can listeners interact with a release?</summary>
-  <div>Inside orbiters through motion sensors, MIDI controllers, on-screen controls, and even exoplanet data, which can set the rate of the Orbiter's LFOs.</div>
+  <summary>How do listeners play a release?</summary>
+  <div>Inside an Orbiter: with the on-screen controls, by tilting a phone, with a MIDI controller, or with data from the world's exoplanet.</div>
 </details>
 
 <details>
-  <summary>Can I keep work private?</summary>
-  <div>Yes—set items to private, shared, or public, and assign roles like viewer, publisher, or editor.</div>
+  <summary>Can I keep my work private, or work with others?</summary>
+  <div>Yes. Make anything private, shared or public, and invite people as viewers, publishers or editors.</div>
 </details>
 
 <details>
-  <summary>Do you support collaboration?</summary>
-  <div>You can invite collaborators with specific roles on releases, worlds, orbiters and collections.</div>
-</details>
-
-<details>
-  <summary>What licenses are used?</summary>
-  <div>We currently use Creative Commons licenses. Publishing under Creative Commons does not mean giving up your copyright: you remain the rights holder. By publishing, you grant Plantasia Space a limited license to host and display your content, and you grant the public the permissions defined by the selected Creative Commons license (for example, remixing under its terms).</div>
+  <summary>What license does my work have?</summary>
+  <div>A Creative Commons license that you choose. You keep your copyright; the license says what others may do with your work, such as remix it.</div>
 </details>
 
 <details>
   <summary>How does AI fit in?</summary>
-  <div>Story and Texture assistants help build worlds (narratives and visuals) while you stay in control.</div>
+  <div>AI can make world textures, world texts and narration, and Orchidea, the assistant, can help you in a Studio. You decide what stays.</div>
 </details>
 
 <details>
   <summary>What are credits?</summary>
-  <div>One balance of credits for every AI action: textures, world texts, narration and Orchidea. Plan credits reset every month, and credits you buy in packs last 12 months from the day you buy them. See <a href="/docs/plantasia-space/plans-and-credits">Plans and credits</a>.</div>
+  <div>One balance for every AI action. Plan credits reset every month; credits from packs last 12 months. See <a href="/docs/plantasia-space/plans-and-credits">Plans and credits</a>.</div>
 </details>
 
 <details>
-  <summary>Are my audios used to train AI models?</summary>
-  <div>No. Audios published on Plantasia Space are not used for AI training, machine learning, or model development. The platform does not currently request or collect consent for AI training because no models are being trained. If this were to change in the future, you would be clearly informed and asked for explicit consent before any such use.</div>
+  <summary>Are my audios used to train AI?</summary>
+  <div>No. If that ever changed, we would ask you first.</div>
 </details>
 
 <details>
   <summary>How do I delete my account?</summary>
-  <div>In your account settings, open the <strong>Danger zone</strong> and choose <strong>Delete account</strong>. Deletion is scheduled, not immediate: during a grace period your account is disabled, and you can still restore it by logging in again and confirming the restore. After the deadline shown in the dialog, deletion becomes permanent. The dialog explains exactly what will be affected before you confirm.</div>
+  <div>In your account settings, open <strong>Danger zone</strong> and choose <strong>Delete account</strong>. Your account is paused first, and you can still restore it by logging in before the date shown. After that date it is deleted for good.</div>
 </details>
 
 <details>
   <summary>How do I get support?</summary>
-  <div>Submit a support form (login and form cookies required) or use the in-app contact links.</div>
+  <div>Use the support form (you need to be logged in) or the contact links in the app.</div>
 </details>
 
 <details>
-  <summary>Where can I read your policies?</summary>
-  <div>Check the Privacy & Cookies Policy, Terms, and related legal pages in the Legal section.</div>
+  <summary>Where are your policies?</summary>
+  <div>In the Legal section: Privacy & Cookies, Terms and the other legal pages.</div>
 </details>
 </div>

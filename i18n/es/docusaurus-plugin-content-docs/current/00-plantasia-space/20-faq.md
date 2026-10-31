@@ -6,96 +6,89 @@ sidebar_custom_props:
   icon: CircleHelp
 ---
 
-## Preguntas Frecuentes (FAQ)
-
 <div class="ps-faq">
 <details open>
   <summary>¿Qué es Plantasia Space?</summary>
-  <div>Un proyecto de construcción de mundos y una plataforma de música regenerativa donde podés escuchar, transformar y remezclar publicaciones en tiempo real.</div>
+  <div>Una plataforma de música regenerativa: escuchás publicaciones, las tocás y las rehacés en tiempo real.</div>
 </details>
 
 <details>
   <summary>¿Qué hace que la música sea “regenerativa”?</summary>
-  <div>Las publicaciones sonoras están diseñadas para transformarse mediante la interacción del oyente; cada reproducción puede ser diferente.</div>
+  <div>Las publicaciones están hechas para que quien escucha las vuelva a tocar, así que cada escucha puede sonar distinta.</div>
 </details>
 
 <details>
   <summary>¿Quiénes son lxs xPlorers?</summary>
-  <div>Miembrxs que se unen a la comunidad para escuchar, publicar y crear; acceden a diferentes herramientas según su nivel de membresía.</div>
+  <div>Las personas que se suman a Plantasia Space para escuchar, publicar y crear. Lo que podés hacer depende de tu plan.</div>
 </details>
 
 <details>
-  <summary>¿Qué puedo hacer como invitadx?</summary>
-  <div>Navegar audios, orbiters y mundos destacados por un tiempo limitado; necesitás una cuenta para interactuar o publicar.</div>
+  <summary>¿Qué puedo hacer sin cuenta?</summary>
+  <div>Explorar audios, Orbiters y mundos destacados por un tiempo. Para tocarlos o publicar, creá una cuenta gratis.</div>
 </details>
 
 <details>
   <summary>¿Cómo me convierto en miembrx?</summary>
-  <div>Creá una cuenta gratuita y elegí un plan en la sección de precios cuando quieras actualizar tu nivel.</div>
+  <div>Creá una cuenta gratis. Pasate a un plan desde la página de precios cuando quieras.</div>
 </details>
 
 <details>
   <summary>¿Qué puedo publicar?</summary>
-  <div>Audios (tracks), Entangled Worlds, Orbiters y Colecciones curadas.</div>
+  <div>Audios, Entangled Worlds, Orbiters y Colecciones.</div>
 </details>
 
 <details>
   <summary>¿Qué es un Entangled World?</summary>
-  <div>Una mezcla de historia, visuales y datos científicos que puede entrelazarse con publicaciones musicales; la música “vive” dentro de estos mundos y se puede visitar con orbiters.</div>
+  <div>Un mundo de historia, imágenes y datos científicos. La música vive dentro de él, y lo visitás con Orbiters.</div>
 </details>
 
 <details>
   <summary>¿Qué es un Orbiter?</summary>
-  <div>Una nave que funciona como meta-instrumento musical (sampler con cadena de efectos/procesamiento) que diseñás y compartís para transformar la reproducción.</div>
+  <div>Una nave espacial que también es un instrumento musical. La armás con módulos, la compartís y tocás música a través de ella.</div>
 </details>
 
 <details>
-  <summary>¿Cómo pueden interactuar lxs oyentes con una publicación?</summary>
-  <div>Dentro de los orbiters, mediante sensores de movimiento, controladores MIDI, controles en pantalla y datos de exoplanetas, que pueden dar su ritmo a los LFO del Orbiter.</div>
+  <summary>¿Cómo tocan lxs oyentes una publicación?</summary>
+  <div>Dentro de un Orbiter: con los controles en pantalla, inclinando el teléfono, con un controlador MIDI o con datos del exoplaneta del mundo.</div>
 </details>
 
 <details>
-  <summary>¿Puedo mantener mi trabajo privado?</summary>
-  <div>Sí—podés configurar elementos como privados, compartidos o públicos, y asignar roles como viewer, publisher o editor.</div>
+  <summary>¿Puedo mantener mi trabajo privado, o trabajar con otras personas?</summary>
+  <div>Sí. Hacé cualquier cosa privada, compartida o pública, e invitá personas como lectoras, publicadoras o editoras.</div>
 </details>
 
 <details>
-  <summary>¿Hay soporte para colaboración?</summary>
-  <div>Sí, podés invitar colaboradorxs con roles específicos en publicaciones, mundos, orbiters y collecciones.</div>
-</details>
-
-<details>
-  <summary>¿Qué licencias utilizan?</summary>
-  <div>Actualmente se utilizan licencias Creative Commons. Publicar bajo Creative Commons no significa ceder tus derechos de autor: seguís siendo titular de tu obra. Al publicar, otorgás a Plantasia Space una licencia limitada para alojar y mostrar tu contenido, y otorgás al público los permisos definidos por la licencia Creative Commons seleccionada (por ejemplo, la remezcla bajo sus términos).</div>
+  <summary>¿Qué licencia tiene mi trabajo?</summary>
+  <div>Una licencia Creative Commons que elegís vos. Conservás tus derechos de autor; la licencia dice qué pueden hacer otras personas con tu obra, por ejemplo remezclarla.</div>
 </details>
 
 <details>
   <summary>¿Cómo se integra la IA?</summary>
-  <div>Asistentes de Historia y Texturas ayudan a construir mundos (narrativas y visuales) mientras mantenés el control creativo.</div>
+  <div>La IA puede crear texturas, textos y narración para mundos, y Orchidea, la asistente, puede ayudarte en un Studio. Vos decidís qué queda.</div>
 </details>
 
 <details>
   <summary>¿Qué son los créditos?</summary>
-  <div>Un solo saldo de créditos para toda acción de IA: texturas, textos de mundos, narración y Orchidea. Los créditos del plan se reinician cada mes, y los que compras en paquetes duran 12 meses desde el día de la compra. Mira <a href="/es/docs/plantasia-space/plans-and-credits">Planes y créditos</a>.</div>
+  <div>Un solo saldo para toda acción de IA. Los créditos del plan se reinician cada mes; los de paquetes duran 12 meses. Mirá <a href="/es/docs/plantasia-space/plans-and-credits">Planes y créditos</a>.</div>
 </details>
 
 <details>
-  <summary>¿Se usan mis audios para entrenar modelos de IA?</summary>
-  <div>No. Los audios publicados en Plantasia Space no se utilizan para entrenar modelos de IA, machine learning ni para el desarrollo de modelos. Actualmente la plataforma no solicita ni gestiona consentimiento para entrenamiento de IA porque no se están entrenando modelos. Si esto cambiara en el futuro, se te informaría claramente y se te pediría tu consentimiento explícito antes de cualquier uso de este tipo.</div>
+  <summary>¿Se usan mis audios para entrenar IA?</summary>
+  <div>No. Si eso cambiara alguna vez, te lo preguntaríamos antes.</div>
 </details>
 
 <details>
   <summary>¿Cómo elimino mi cuenta?</summary>
-  <div>En la configuración de tu cuenta, abrí la <strong>Zona de peligro</strong> y elegí <strong>Eliminar cuenta</strong>. La eliminación se programa, no es inmediata: durante un período de gracia tu cuenta queda deshabilitada, y todavía podés restaurarla iniciando sesión de nuevo y confirmando la restauración. Pasada la fecha límite que se muestra en el diálogo, la eliminación se vuelve permanente. El diálogo explica exactamente qué se verá afectado antes de confirmar.</div>
+  <div>En la configuración de tu cuenta, abrí la <strong>Zona de peligro</strong> y elegí <strong>Eliminar cuenta</strong>. Primero tu cuenta queda en pausa, y todavía podés restaurarla iniciando sesión antes de la fecha que se muestra. Después de esa fecha se elimina para siempre.</div>
 </details>
 
 <details>
   <summary>¿Cómo obtengo soporte?</summary>
-  <div>Podés enviar un formulario de soporte (requiere login y cookies del formulario) o usar los enlaces de contacto dentro de la app.</div>
+  <div>Usá el formulario de soporte (con la sesión iniciada) o los enlaces de contacto de la app.</div>
 </details>
 
 <details>
-  <summary>¿Dónde puedo leer sus políticas?</summary>
-  <div>En la sección Legal: Política de Privacidad y Cookies, Términos y otras páginas relacionadas.</div>
+  <summary>¿Dónde están sus políticas?</summary>
+  <div>En la sección Legal: Privacidad y Cookies, Términos y las demás páginas legales.</div>
 </details>
 </div>
