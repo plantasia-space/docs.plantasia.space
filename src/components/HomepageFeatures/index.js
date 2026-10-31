@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import Translate, {translate} from '@docusaurus/Translate';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 
 const FeatureList = [
@@ -11,7 +12,8 @@ const FeatureList = [
     titleId: 'homepage.features.plantasia_space',
     description: 'Get started with the platform — its vision, core concepts, and how everything connects.',
     descriptionId: 'homepage.features.plantasia_space.description',
-    image: 'https://herbarium.plantasia.space/assets/logos/current/plantasia-space-logo-black-transparent-background-512.svg',
+    // The symbol: its address is the site's (customFields.symbolUrl, the bucket for this build).
+    symbol: true,
     link: '/docs/plantasia-space/',
   },
   {
@@ -48,12 +50,14 @@ const FeatureList = [
   },
 ];
 
-function Feature({ image, title, titleId, description, descriptionId, link }) {
+function Feature({ image, symbol, title, titleId, description, descriptionId, link }) {
+  const {siteConfig} = useDocusaurusContext();
+  const src = symbol ? siteConfig.customFields.symbolUrl : image;
   return (
     <Link to={link} className={styles.featureCard}>
       <div className={styles.featureIcon}>
         <img
-          src={image}
+          src={src}
           className={clsx(styles.featureSvg, 'invert-on-dark')}
           alt={translate({message: title, id: titleId})}
           width="96"
