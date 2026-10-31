@@ -9,10 +9,10 @@ sidebar_custom_props:
 
 Go to **Release → New Collection**.
 
-![New Collection](https://herbarium.plantasia.space/docs/en/media/collections/new.png)
+![New Collection](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/release-menu.jpg)
 
 
-![New Collection](https://herbarium.plantasia.space/docs/en/media/collections/new-2.png)
+![New Collection](https://herbarium.plantasia.space/docs/en/media/collections/2026-10-31/create-collection.jpg)
 
 ## 1) Describe the collection
 

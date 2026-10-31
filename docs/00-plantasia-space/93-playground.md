@@ -15,6 +15,12 @@ The [playground](https://plantasia.space/playground) is where you jam live with 
 
 Only audio and mixed collections with 5 or more released tracks can open a room.
 
+![Public jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/playground-public-jam.jpg)
+
+![Create a jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/playground-create-a-jam.jpg)
+
+![Open the jam](https://herbarium.plantasia.space/docs/en/media/plantasia-space/2026-10-31/playground-open-a-jam.jpg)
+
 ## Rooms
 
 - A room has a few seats for Orbiters and xPlorers; when they are taken, others can still listen.
