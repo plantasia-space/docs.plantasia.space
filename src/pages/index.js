@@ -20,7 +20,7 @@ function HomepageHeader() {
         <Heading
           as="h1"
           className={clsx('hero__title', styles.wordmark)}
-          style={{'--wordmark': `url(${siteConfig.customFields.assetsBase}/assets/logos/current/plantasia-space-wordmark-currentcolor-transparent-background.svg)`}}>
+          style={{'--wordmark': `url(${siteConfig.customFields.wordmarkUrl})`}}>
           <span className={styles.wordmarkText}>{siteConfig.title}</span>
         </Heading>
         <p className="hero__subtitle">

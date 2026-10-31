@@ -10,14 +10,13 @@ import styles from './styles.module.css';
 // (as an <img> it would paint its currentColor black). The navbar's title ("docs") follows it.
 export default function Logo(props) {
   const {siteConfig} = useDocusaurusContext();
-  const {navbar: {title: navbarTitle, logo}} = useThemeConfig();
+  const {navbar: {title: navbarTitle}} = useThemeConfig();
   const {imageClassName, titleClassName, ...rest} = props;
-  const href = useBaseUrl(logo?.href || '/');
-  const wordmark = `${siteConfig.customFields.assetsBase}/assets/logos/current/plantasia-space-wordmark-currentcolor-transparent-background.svg`;
+  const href = useBaseUrl('/');
   return (
-    <Link to={href} {...rest} {...(logo?.target && {target: logo.target})}>
+    <Link to={href} {...rest}>
       <span className={clsx(imageClassName, styles.brand)}>
-        <span className={styles.wordmark} role="img" aria-label={siteConfig.title} style={{'--mark': `url(${wordmark})`}} />
+        <span className={styles.wordmark} role="img" aria-label={siteConfig.title} style={{'--mark': `url(${siteConfig.customFields.wordmarkUrl})`}} />
       </span>
       {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>}
     </Link>
