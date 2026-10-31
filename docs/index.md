@@ -9,19 +9,14 @@ sidebar_custom_props:
 ---
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/NavigationGrid';
+import PlantasiaSymbol from '@site/static/img/sidebar-icons/plantasia-logo.svg';
 
 Explore the main sections through quick visual cards using our own symbols.
 
 <NavigationGrid>
   <NavigationCard
     icon={
-      <img
-        src="https://herbarium.plantasia.space/assets/logos/current/plantasia-space-logo-black-transparent-background-512.svg"
-        alt="Plantasia Space"
-        width="32"
-        height="32"
-        className="invert-on-dark"
-      />
+      <PlantasiaSymbol role="img" aria-label="Plantasia Space" width="32" height="32" />
     }
     title="Plantasia Space"
     description=""

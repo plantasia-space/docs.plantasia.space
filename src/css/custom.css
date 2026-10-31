@@ -673,6 +673,13 @@ ul li {
   filter: invert(0);
 }
 
+/* An inline icon (the Plantasia Space symbol) draws in the page's ground: the tile's opposite. */
+.navCardIcon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--ifm-background-color);
+}
+
 .docTitleWithIcon {
   display: inline-flex;
   align-items: center;
