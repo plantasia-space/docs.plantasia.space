@@ -7,44 +7,87 @@ sidebar_custom_props:
 
 ## Finding collections
 
-Released collections appear in several places:
+Released collections show on the home feed, under **Collections**, and on every profile, under its
+**Collections** filter. Drafts and archived collections stay private to their owner and collaborators.
 
-- **Public profiles** — every profile includes a **Collections** filter alongside Audios, Entangled Worlds, Orbiters, and Stars. Open someone's profile and select it to browse everything they have released.
-- **Home feed** — the feed has a **Collections** tab for discovery.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/home-feed-collections.jpg"
+  alt="The home feed on its Collections tab, with the collection Sky Sounds Deck."
+  width={600}
+  dots={[[1, 64.5, 9.5]]}
+/>
 
-![Collections tab in the home feed](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/home-feed-collections-tab.png)
+1. **Collections** on the home feed lists released collections.
 
-Drafts and archived collections stay private to their owner and collaborators — only released collections are visible to visitors.
+## Where a collection opens
 
-## Inside a collection
+Each collection shows its cover, description and items in the order its curator set. Where it opens
+depends on its category:
 
-Opening a collection shows its artwork, description, and items in the order set by the curator. Each category has its own page layout:
+<CollectionViews />
 
-**Audio collections** show a tracklist:
+- **Audios**, **Worlds** and **Orbiters** collections open as a page on Plantasia Space.
+- An **Audios** collection can also open in the **multi-Orbiter view**, where you play its tracks on
+  several Orbiters at once.
+- A **Mixed** collection has no page: it opens straight in the multi-Orbiter view.
 
-![Audio collection page](https://herbarium.plantasia.space/docs/en/media/collections/interact/collection-page-audios.jpg)
+## Audios collections {#audios}
 
-**World collections** show a world atlas:
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/audio-collection-tracklist.jpg"
+  alt="The Tracklist of Sky Sounds Deck: the five buttons under the title, 5 audios, and the first track, Skysounds 1 VIII."
+  width={420}
+/>
 
-![World collection page](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/collection-page-world.png)
+Under **Tracklist** sit five buttons, from left to right:
 
-**Orbiter collections** show an orbiter roster:
+1. **Detailed**: each track as a full card.
+2. **Compact**: the tracks as mini cards.
+3. **Studio**: opens the collection in the multi-Orbiter view (it asks first).
+4. **Download for offline**: saves the tracks to play without a connection, as compressed MP3
+   (320 kbps) or lossless WAV (16-bit, 44.1 kHz). It only shows when the collection allows downloads.
+5. **Start room**: opens a jam with this collection in the [playground](/docs/plantasia-space/playground).
 
-![Orbiter collection page](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/collection-page-orbiters.png)
+## Worlds collections {#worlds}
 
-**Mixed collections** open as a station (see below):
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/world-collection.jpg"
+  alt="A Worlds collection, Cortinarius leptocephalus: the Detailed and Compact buttons, 1 world, and the Entangled World Snap."
+  width={480}
+/>
 
-![Mixed collection page](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/collection-page-mixed.png)
+Under the heading **Entangled Worlds**, the page shows the collection's Entangled Worlds, one after
+another. Switch between **Detailed** and **Compact** with the two buttons.
 
-## Playing a mixed collection
+## Orbiters collections {#orbiters}
 
-Opening a mixed collection launches a station where its audios can be played through one or more Orbiters at the same time:
+Under the heading **Orbiters**, the page shows the collection's Orbiters, with the same
+**Detailed** and **Compact** buttons.
 
-- Choose a **layout** (I–IV) to set how many orbiter slots are on screen
-- Drag an audio card from the card drawer into a slot to load it
-- Swap cards or remove orbiters at any time
+## Mixed collections: the multi-Orbiter view {#mixed}
 
-Leaving the station or reloading it stops playback in the open orbiters.
+A Mixed collection opens straight in the multi-Orbiter view, and an Audios collection opens there with
+its **Studio** button. Each stage is an Orbiter playing one card of the collection.
+
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/multi-orbiter-view.jpg"
+  alt="The collection mixed stage in the multi-Orbiter view: two stages, an Audio Orbiter and a drum Orbiter, the card drawer with Skysounds tracks, and the bar with Prev, Next, Cards and Options."
+  width={640}
+  dots={[[1, 2.5, 4], [2, 75.5, 98.3], [3, 19.5, 74.5], [4, 9.2, 70.7], [5, 35, 98.3], [6, 95.5, 98.3]]}
+/>
+
+1. **A stage**: one Orbiter, playing one card. An empty stage says **Drop a card here, or double-tap
+   one to load**.
+2. **Cards** opens and closes the card drawer.
+3. **The cards**: the collection's items. Drag a card onto a stage, or double-tap it, to load it.
+   Only a track can start an empty stage; a World card changes the World of a stage that is already
+   playing.
+4. **The filters** show only the Audio, Orbiter or World cards.
+5. **Prev** and **Next** move from one stage to the next.
+6. **Options**: how many Orbiters are on screen (**1 orbiter**, **2 orbiters**…), **Start room**,
+   **Leave collection** and **Fullscreen**.
+
+Leaving the collection or reloading the page stops what the stages are playing.
 
 ## Reactions and comments
 

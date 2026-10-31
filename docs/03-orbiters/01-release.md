@@ -9,67 +9,65 @@ sidebar_custom_props:
 
 Go to **Release → New Orbiter**.
 
-![New Orbiter](https://herbarium.plantasia.space/docs/en/media/plantasia-space/release/release-menu.jpg)
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/release/release-menu.jpg"
+  alt="The side bar with Release open: New Audio, New Entangled World, New Orbiter, New Collection and New Clip."
+  width={360}
+/>
 
-The Orbiter Studio opens. You build the Orbiter in its first two steps, **Instrument** and **Visual**:
-the [Quickstart](/docs/orbiters/quickstart) goes through them, and [Edit](/docs/orbiters/edit) explains
-how to map a control to an axis. This page is about the last step, **Release**.
+The Orbiter Studio opens with a new Orbiter, under a generated name you can change later. The
+Studio has three steps, at the top: **Sound**, **Visuals** and **Release**. You build the Orbiter in
+**Sound** and **Visuals**: the [Quickstart](/docs/orbiters/quickstart) goes through them, and
+[Edit](/docs/orbiters/edit) explains how to map a control to an axis. A new Orbiter first asks what
+it plays: an **Audio**, or **Notes**.
 
-![A new Orbiter in the Studio](https://herbarium.plantasia.space/docs/en/media/orbiters/release/new-orbiter-what-does-it-play.jpg)
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/release/new-orbiter-what-does-it-play.jpg"
+  alt="A new Orbiter in the Studio on the Sound step: the Orbiter on its stage, and below it the question What does this Orbiter play?, with Audio and Notes."
+  width={640}
+/>
 
-![The Release step](https://herbarium.plantasia.space/docs/en/media/orbiters/release/release-step.jpg)
+This page is about the last step, **Release**. Your work is saved as a draft by itself while you
+build, so you can come back to it whenever you like. The audio you pick with **Choose preview
+audio** while you build is only for listening: it does not bind the Orbiter to that audio.
 
-The audio you pick with **Choose preview audio** while you build is only for listening: it does not
-bind the Orbiter to that audio.
+## The Release step
 
-## 1) Cover
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/release/release-step.jpg"
+  alt="The Release step of the Orbiter Willow: the cover in its hexagon, the Orbiter Name, the Description, Collaboration with Add xPlorers and General Access, and the Release Orbiter button."
+  width={420}
+  dots={[[1, 16, 11.7], [2, 24.5, 44.5], [3, 21.5, 51.1], [4, 32.5, 70], [5, 67, 96.1]]}
+/>
 
-Upload an image that will identify your Orbiter.
+### 1. Cover
 
-- You can upload your own design.
-- You can generate an image using the regeneration button, then edit it.
+Upload an image that identifies your Orbiter, or press the regenerate button at the top right of the
+hexagon to get a public-domain picture. Orbiter covers are shown in a **hexagonal frame**.
 
-Orbiter images are displayed in a **hexagonal frame**. If needed, open the guidelines to design for this shape.
+### 2. Orbiter Name
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/orbiters/01-release-orb-image.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+A unique name for your Orbiter on Plantasia Space. If you need a starting point, the menu and the
+button just above the name draw one from a plant, an animal or a fungus (**Plantae**, **Animalia** or
+**Fungi**); that menu also chooses where a regenerated cover comes from.
 
-## 2) Orbiter Name
+### 3. Description
 
-Set the **Orbiter Name**: a unique name that identifies your Orbiter on the platform.
+A few words on what the Orbiter plays and how to play it: up to 280 characters.
 
-You can regenerate the name if you need a starting point.
+### 4. Who can open it
 
-## 3) Who can see it
+A new Orbiter is **Restricted**: only you and the xPlorers you add can open it, and it is not listed
+or searchable.
 
-Set who can:
+- **Add xPlorers**: choose a role, then search for an xPlorer. A **Viewer** can open the Orbiter, a
+  **Publisher** can also publish with it, and an **Editor** can also edit it and manage who works on
+  it.
+- **General Access**: switch **Restricted** to **Anyone with the link** to open the Orbiter to
+  everyone, with the role you choose (Viewer to start). Then it can also show in public listings and
+  search. Only the owner can change General Access.
 
-- **View** the Orbiter
-- **Publish** with the Orbiter
-- **Edit** the Orbiter
+### 5. Release Orbiter
 
-You can also set general access rules (for example: anyone with the link can view, publish or edit).
-
-By default, Orbiters are visible and searchable.
-
-## 4) Draft and release
-
-- Your work is **saved as a draft by itself** while you build: come back to it whenever you like.
-- Press **Release Orbiter** when you are ready to publish.
-
-After release, you can reuse the Orbiter across different audios and Entangled Worlds.
-
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/orbiters/04-collaborate-draft-release.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+Press **Release Orbiter** when you are ready. After release, you can play the Orbiter with different
+audios and Entangled Worlds. Later edits are published with **Release Changes**.

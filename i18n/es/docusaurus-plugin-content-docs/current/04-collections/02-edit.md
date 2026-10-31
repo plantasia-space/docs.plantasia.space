@@ -5,34 +5,54 @@ sidebar_custom_props:
   icon: Pencil
 ---
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/es/media/collections/edit-collection.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de video.
-</video>
-
 ## Tus colecciones
 
-Todas tus colecciones viven en un mismo lugar, agrupadas en publicadas, sin publicar y archivadas:
+Todas tus colecciones están en **Mis Colecciones**, en el menú de xPlorer.
 
-![Página Mis Colecciones](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/my-collections-page.png)
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/edit/my-collections.jpg"
+  alt="Mis Colecciones: las pestañas Publicadas y No publicadas, el buscador, y las colecciones Hawkweed y Trigo."
+  width={600}
+  dots={[[1, 63.5, 9.5]]}
+/>
 
-## Qué puedes editar
+1. Las pestañas las agrupan: **Publicadas**, **No publicadas**, y **Archivadas** cuando archivaste alguna.
 
-Puedes actualizar el nombre, la descripción, la categoría y el subtipo, la portada y los elementos que contiene la colección.
+## Abrir el editor
+
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/edit/collection-menu-edit.jpg"
+  alt="El menú de la colección Hawkweed: Compartir, Editar, Archivar y Eliminar."
+  width={400}
+  dots={[[2, 78.5, 13.6], [3, 78, 54]]}
+/>
+
+2. Abre el menú **⋯** de la colección.
+3. Elige **Editar**.
+
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/edit/edit-collection.jpg"
+  alt="El diálogo Editar colección de Hawkweed: portada, Nombre, Descripción, Categoría, Subcategoría, Colaboración con Acceso general en Cualquiera con el enlace, y el botón Publicar."
+  width={420}
+  dots={[[4, 23.5, 2.5], [5, 61.5, 96.8]]}
+/>
+
+4. **Editar colección** tiene los mismos campos que al crearla: portada, nombre, descripción,
+   categoría y subcategoría, y quién puede abrirla. Consulta [Publicar](/docs/collections/release)
+   para cada uno.
+5. En una colección publicada, pulsa **Publicar** para publicar tus cambios. Hasta entonces, quien la
+   visita la sigue viendo como estaba.
+
+Mientras una colección es un borrador, tus cambios se guardan solos: el pequeño icono del disco,
+arriba del diálogo, lo indica, y su punto cambia de color según cómo va (cambios sin guardar,
+guardando, guardado o no se pudo guardar). Una vez publicada ya no se guarda sola: tus cambios esperan
+a **Publicar**. La portada es la excepción: una imagen que subes se aplica al elegirla.
 
 ## Reordenar elementos
 
 Las colecciones pueden mezclar tipos de contenido, y puedes ordenar los elementos en cualquier secuencia — el orden que definas es el que ven los visitantes en la página pública de la colección.
 
 Abre la colección que quieres curar y arrastra los elementos a sus nuevas posiciones. El nuevo orden se guarda sobre la marcha; no hay un paso de guardado aparte para reordenar.
-
-## Publicar cambios
-
-Una colección ya publicada sigue mostrando su versión publicada mientras trabajas. Publica tus últimas ediciones con **Publicar cambios**, o guarda un borrador para retomarlo más tarde.
 
 ## Colecciones archivadas
 

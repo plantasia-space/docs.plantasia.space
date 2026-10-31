@@ -12,15 +12,34 @@ Pulsa **Guardar** (la estrella) en una pista, un Entangled World, un Orbiter o u
 
 ## Mis Estrellas
 
-![Mis Estrellas en el menú de xPlorer](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/xplorer-menu-my-stars.jpg)
+Todo lo que guardaste está en **Mis Estrellas**: abre **xPlorer** en la barra lateral y elige **Mis
+Estrellas** (o ve a `plantasia.space/<tu usuario>/stars`).
 
-Todo lo que guardaste está en **Mis Estrellas**, en el menú de xPlorer (en `plantasia.space/<tu usuario>/stars`). Fíltralo por **Todos**, **Pistas**, **Mundos**, **Orbitadores** o **Colecciones**, y cambia entre la vista detallada y las mini tarjetas con los dos botones junto a los filtros.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/xplorer-menu-my-stars.jpg"
+  alt="La barra lateral con xPlorer abierto: Mis Audios, Mis Mundos Entrelazados, Mis Orbitadores, Mis Colecciones, Mis Clips y Mis Estrellas."
+  width={360}
+/>
 
-Tus estrellas son privadas salvo que actives **Mostrar mis Estrellas públicamente** en **Configuración → Preferencias**. Entonces otras personas pueden verlas en tu perfil.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-detailed.jpg"
+  alt="Mis Estrellas en la vista detallada: los filtros Todos, Pistas, Mundos, Orbitadores y Colecciones, los dos botones de vista, y una pista guardada."
+  width={560}
+  dots={[[1, 19.5, 7.5], [2, 78, 7.5]]}
+/>
 
-![Mis Estrellas, vista detallada](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-detailed.jpg)
+<Dot>1</Dot>Filtra tus estrellas por **Todos**, **Pistas**, **Mundos**, **Orbitadores** o **Colecciones**.
 
-![Mis Estrellas, mini tarjetas](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-mini-cards.jpg)
+<Dot>2</Dot>Cambia entre la vista detallada, de a un elemento, y las mini tarjetas, que muestran muchos a la vez:
+
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-mini-cards-v2.jpg"
+  alt="Las mismas estrellas como mini tarjetas: dos pistas y dos mundos, cada uno con sus números y su artista."
+  width={560}
+/>
+
+Tus estrellas son privadas salvo que actives **Mostrar mis Estrellas públicamente** en
+**Configuración → Preferencias**. Entonces otras personas pueden verlas en tu perfil.
 
 ## Archivar y restaurar
 

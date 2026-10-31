@@ -13,13 +13,13 @@ In five minutes you will build a small Audio Orbiter: a player for an audio you 
 <StepFlow
   groups={[
     { label: 'Release menu', steps: [{ n: 1, label: 'New Orbiter', href: '#start' }] },
-    { label: 'Instrument step', steps: [
+    { label: 'Sound step', steps: [
       { n: 2, label: 'Choose what it plays', href: '#instrument' },
       { n: 3, label: 'Add an effect', href: '#effect' },
       { n: 4, label: 'Map it to an axis', href: '#map' },
       { n: 5, label: 'Play it', href: '#play' },
     ] },
-    { label: 'Visual step', steps: [{ n: 6, label: 'Choose its look', href: '#visual' }] },
+    { label: 'Visuals step', steps: [{ n: 6, label: 'Choose its look', href: '#visual' }] },
     { label: 'Release step', steps: [{ n: 7, label: 'Release it', href: '#release' }] },
   ]}
 />
@@ -28,7 +28,7 @@ In five minutes you will build a small Audio Orbiter: a player for an audio you 
 
 ## 1. Start a new Orbiter {#start}
 
-Open **Release → New Orbiter**. The Orbiter Studio opens on its first step, **Instrument**: the Orbiter on its stage at the top, and the rack you build it in below. The other two steps, **Visual** and **Release**, come later.
+Open **Release → New Orbiter**. The Orbiter Studio opens on its first step, **Sound**: the Orbiter on its stage at the top, and the rack you build it in below. The other two steps, **Visuals** and **Release**, come later.
 
 A new Orbiter starts as the **World** alone, your tracks: everything in this quickstart happens in World I. The **Moon** (return tracks) and the **Star** (the main bus) are there only once you add them, with **Add Moon** or **Add Star**. If you know a DAW, [Orbiters for DAW users](/docs/orbiters/for-daw-users) translates each body.
 
@@ -85,7 +85,7 @@ Press **Play** at the top of the stage, then drag the **X** axis up. The axis no
 
 ## 6. Choose its look {#visual}
 
-Open the **Visual** step. Everything already has a designed look, so you can keep it and move on, or change it:
+Open the **Visuals** step. Everything already has a designed look, so you can keep it and move on, or change it:
 
 - **Panel** (2D): the Orbiter's controls on screen. Pick a **Theme**, or set its own fonts and colours.
 - **Ring** (3D): the ring around the Orbiter, its colour and its shape (**Amplitude**, **Radius**, **Tilt**).
@@ -93,7 +93,7 @@ Open the **Visual** step. Everything already has a designed look, so you can kee
 
 The Panel and the Ring start **Tied · all bodies**: one look for the whole Orbiter.
 
-![The Visual step: the Panel's theme, fonts and colours, the Ring's colour and shape, and the Audio player under Devices.](/img/orbiters/quickstart/visual-step.jpg)
+![The Visuals step: the Panel's theme, fonts and colours, the Ring's colour and shape, and the Audio player under Devices.](/img/orbiters/quickstart/visual-step.jpg)
 
 ## 7. Release it {#release}
 

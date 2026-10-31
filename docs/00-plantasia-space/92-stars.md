@@ -12,15 +12,34 @@ Press **Star** on a track, Entangled World, Orbiter or collection. The button tu
 
 ## My Stars
 
-![My Stars in the xPlorer menu](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/xplorer-menu-my-stars.jpg)
+Everything you starred is on **My Stars**: open **xPlorer** in the side bar and choose **My Stars**
+(or go to `plantasia.space/<your username>/stars`).
 
-Everything you starred is on **My Stars**, in the xPlorer menu (at `plantasia.space/<your username>/stars`). Filter it by **All**, **Tracks**, **Worlds**, **Orbiters** or **Collections**, and switch between the detailed view and mini cards with the two buttons beside the filters.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/xplorer-menu-my-stars.jpg"
+  alt="The side bar with xPlorer open: My Audios, My Entangled Worlds, My Orbiters, My Collections, My Clips and My Stars."
+  width={360}
+/>
 
-Your stars are private unless you turn on **Show my Stars publicly** in **Settings → Preferences**. Then others can browse them on your profile.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-detailed.jpg"
+  alt="My Stars in the detailed view: the filters All, Tracks, Worlds, Orbiters and Collections, the two view buttons, and a starred track."
+  width={560}
+  dots={[[1, 19.5, 7.5], [2, 78, 7.5]]}
+/>
 
-![My Stars, detailed view](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-detailed.jpg)
+<Dot>1</Dot>Filter your stars by **All**, **Tracks**, **Worlds**, **Orbiters** or **Collections**.
 
-![My Stars, mini cards](https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-mini-cards.jpg)
+<Dot>2</Dot>Switch between the detailed view, one item at a time, and mini cards, which show many at once:
+
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/stars/my-stars-mini-cards-v2.jpg"
+  alt="The same stars as mini cards: two tracks and two worlds, each with its numbers and artist."
+  width={560}
+/>
+
+Your stars are private unless you turn on **Show my Stars publicly** in **Settings → Preferences**.
+Then others can browse them on your profile.
 
 ## Archive and restore
 

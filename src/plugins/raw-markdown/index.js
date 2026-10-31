@@ -1,10 +1,11 @@
 import path from 'path';
 import fs from 'fs';
+import { collectionViewsMarkdown } from '../../components/docs/collectionViewsData.js';
 
 const decode = (text) => text.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
 
 // The raw view is plain Markdown: the docs components go back to what they mean.
-export function plainMarkdown(content) {
+export function plainMarkdown(content, locale = 'en') {
   return content
     .replace(/<ModulePicture\b([\s\S]*?)\/>/g, (_, attrs) => {
       const src = attrs.match(/\bsrc="([^"]*)"/)?.[1] ?? '';
@@ -26,6 +27,7 @@ export function plainMarkdown(content) {
     .replace(/<Dot>(\d+)<\/Dot>/g, '($1) ')
     .replace(/<Term id="[\w-]+">([\s\S]*?)<\/Term>/g, '$1')
     .replace(/<StepFlow\b[\s\S]*?\n\/>\n?/g, '')
+    .replace(/^<CollectionViews\s*\/>$/gm, () => collectionViewsMarkdown(locale))
     .replace(/^<\/?Walkthrough>\n?/gm, '')
     .replace(/\n{3,}/g, '\n\n');
 }
@@ -35,9 +37,10 @@ class RawMarkdownWebpackPlugin {
    * @param {string} docsDir the docs, in the default language
    * @param {string|null} localizedDir this build's translations of them, or null
    */
-  constructor(docsDir, localizedDir = null) {
+  constructor(docsDir, localizedDir = null, locale = 'en') {
     this.docsDir = docsDir;
     this.localizedDir = localizedDir;
+    this.locale = locale;
   }
 
   findMarkdownFiles(dir) {
@@ -68,7 +71,7 @@ class RawMarkdownWebpackPlugin {
             const relativePath = path.relative(docsDir, file).replace(/\\/g, '/');
             const localized = localizedDir && path.join(localizedDir, relativePath);
             const source = localized && fs.existsSync(localized) ? localized : file;
-            const content = plainMarkdown(fs.readFileSync(source, 'utf8'));
+            const content = plainMarkdown(fs.readFileSync(source, 'utf8'), this.locale);
             compilation.emitAsset(`_raw/docs/${relativePath}`, new RawSource(content));
           } catch (err) {
             console.warn('[raw-markdown-plugin] skipping', file, err.message);
@@ -89,7 +92,7 @@ export default function rawMarkdownPlugin(context) {
     configureWebpack(_config, isServer) {
       if (isServer) return {};
       return {
-        plugins: [new RawMarkdownWebpackPlugin(docsDir, localizedDir)],
+        plugins: [new RawMarkdownWebpackPlugin(docsDir, localizedDir, currentLocale)],
       };
     },
   };

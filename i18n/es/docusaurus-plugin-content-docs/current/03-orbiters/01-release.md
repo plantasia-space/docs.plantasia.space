@@ -9,63 +9,66 @@ sidebar_custom_props:
 
 Ve a **Publicar → Nuevo Orbitador**.
 
-![Nuevo Orbitador](/img/orbiters/release/new.es.png)
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/plantasia-space/release/release-menu.jpg"
+  alt="La barra lateral con Publicar abierto: Nuevo Audio, Nuevo Mundo Entrelazado, Nuevo Orbitador, Nueva Colección y Nuevo Clip."
+  width={360}
+/>
 
-Se abre el Orbiter Studio. El Orbitador se construye en sus dos primeros pasos, **Instrument** y
-**Visual**: [Primeros pasos](/docs/orbiters/quickstart) los recorre, y [Editar](/docs/orbiters/edit)
-explica cómo mapear un control a un eje. Esta página trata del último paso, **Release**.
+Se abre el Orbiter Studio con un Orbitador nuevo, con un nombre generado que puedes cambiar después.
+El Studio tiene tres pasos, arriba: **Sonido**, **Visuales** y **Publicar**. El Orbitador se
+construye en **Sonido** y **Visuales**: [Primeros pasos](/docs/orbiters/quickstart) los recorre, y
+[Editar](/docs/orbiters/edit) explica cómo mapear un control a un eje. Lo primero que pregunta un
+Orbitador nuevo es qué toca: un **Audio** o **Notas**.
 
-El audio que eliges con **Choose preview audio** mientras construyes es solo para escuchar: no vincula
-el Orbitador a ese audio.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/release/new-orbiter-what-does-it-play.jpg"
+  alt="Un Orbitador nuevo en el Studio, en el paso Sonido: el Orbitador en su escenario y, debajo, la pregunta ¿Qué toca este Orbiter?, con Audio y Notas."
+  width={640}
+/>
 
-## 1) Portada
+Esta página trata del último paso, **Publicar**. Lo que construyes se guarda solo como borrador, así
+que puedes volver cuando quieras. El audio que eliges con **Elegir audio de vista previa** mientras
+construyes es solo para escuchar: no vincula el Orbitador a ese audio.
 
-Sube una imagen que identificará tu Orbitador.
+## El paso Publicar
 
-- Puedes subir tu propio diseño.
-- Puedes generar una imagen usando el botón de regenerar y luego editarla.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/release/release-step.jpg"
+  alt="El paso Publicar del Orbitador Willow: la portada en su hexágono, el Nombre del Orbiter, la Descripción, Colaboración con Agregar xPlorers y Acceso general, y el botón Publicar Orbiter."
+  width={420}
+  dots={[[1, 16, 11.7], [2, 24.5, 44.5], [3, 21.5, 51.1], [4, 32.5, 70], [5, 67, 96.1]]}
+/>
 
-Las imágenes del Orbitador se muestran en un **marco hexagonal**. Si lo necesitas, abre las guías para diseñar con esta forma.
+### 1. Portada
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/es/media/orbiters/01-release-orb-image.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de video.
-</video>
+Sube una imagen que identifique a tu Orbitador, o pulsa el botón de regenerar, arriba a la derecha
+del hexágono, para obtener una imagen de dominio público. Las portadas de los Orbitadores se
+muestran en un **marco hexagonal**.
 
-## 2) Nombre del Orbitador
+### 2. Nombre del Orbiter
 
-Define el **Orbiter Name**: un nombre único que identifica tu Orbitador en la plataforma.
+Un nombre único para tu Orbitador en Plantasia Space. Si te hace falta un punto de partida, el menú
+y el botón justo encima del nombre sacan uno de una planta, un animal o un hongo (**Plantae**,
+**Animalia** o **Fungi**); ese menú también decide de dónde sale una portada regenerada.
 
-Puedes regenerar el nombre si necesitas un punto de partida.
+### 3. Descripción
 
-## 3) Quién puede verlo
+Unas palabras sobre lo que toca el Orbitador y cómo tocarlo: hasta 280 caracteres.
 
-Define quién puede:
+### 4. Quién puede abrirlo
 
-- **Ver** el Orbitador
-- **Publicar** usando el Orbitador
-- **Editar** el Orbitador
+Un Orbitador nuevo está **Restringido**: solo lo abren tú y los xPlorers que agregues, y no aparece
+en listados ni en búsquedas.
 
-También puedes establecer reglas de acceso generales (por ejemplo: cualquiera con el enlace puede ver, publicar o editar).
+- **Agregar xPlorers**: elige un rol y busca a un xPlorer. Con **Visualizar** puede abrir el
+  Orbitador, con **Publicar** también publicar con él, y con **Editar** también editarlo y decidir
+  quién trabaja en él.
+- **Acceso general**: cambia **Restringido** por **Cualquiera con el enlace** para abrir el
+  Orbitador a todo el mundo, con el rol que elijas (al principio, Visualizar). Entonces también puede
+  aparecer en listados públicos y en búsquedas. Solo quien es dueñx puede cambiar el Acceso general.
 
-Por defecto, los Orbitadores son visibles y se pueden buscar.
+### 5. Publicar Orbiter
 
-## 4) Borrador y publicación
-
-- Tu trabajo **se guarda solo como borrador** mientras construyes: vuelve a él cuando quieras.
-- Pulsa **Release Orbiter** cuando estés listo para publicar.
-
-Después de publicar, puedes reutilizar el Orbitador en diferentes audios y Mundos Entrelazados.
-
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/es/media/orbiters/04-collaborate-draft-release.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de video.
-</video>
+Pulsa **Publicar Orbiter** cuando esté listo. Una vez publicado, puedes tocar el Orbitador con
+distintos audios y Mundos Entrelazados. Los cambios posteriores se publican con **Publicar Cambios**.

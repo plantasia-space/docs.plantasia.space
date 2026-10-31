@@ -13,7 +13,7 @@ and a lead, or a bass, a pad and a lead. Here is how. (For Audio or Notes, see
 
 ## Add a second or third instrument
 
-1. In the Studio's **Instrument** step, give World **I** its notes instrument.
+1. In the Studio's **Sound** step, give World **I** its notes instrument.
 2. Open the **Dimensions** tab and switch on **II**. Dimensions switch on in order: II before III.
 3. Select **World II** and add a notes instrument. Add a generator or MIDI effects in front of it if
    you like, such as the **Arpeggiator** or the **Step sequencer**.

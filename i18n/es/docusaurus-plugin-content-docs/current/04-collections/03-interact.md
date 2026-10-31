@@ -7,45 +7,91 @@ sidebar_custom_props:
 
 ## Encontrar colecciones
 
-Las colecciones publicadas aparecen en varios lugares:
+Las colecciones publicadas aparecen en el feed de inicio, en **Colecciones**, y en cada perfil, en su
+filtro **Colecciones**. Los borradores y las colecciones archivadas solo las ven quien es dueñx y sus
+colaboradorxs.
 
-- **Perfiles públicos** — cada perfil incluye un filtro de **Colecciones** junto a Audios, Mundos entrelazados, Orbitadores y Estrellas. Abre el perfil de alguien y selecciónalo para explorar todo lo que ha publicado.
-- **Feed de inicio** — el feed tiene una pestaña de **Colecciones** para descubrir.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/home-feed-collections.jpg"
+  alt="El feed de inicio en la pestaña Colecciones, con la colección Sky Sounds Deck."
+  width={600}
+  dots={[[1, 64.5, 9.5]]}
+/>
 
-![Pestaña de Colecciones en el feed de inicio](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/home-feed-collections-tab.png)
+1. **Colecciones**, en el feed de inicio, lista las colecciones publicadas.
 
-Los borradores y las colecciones archivadas permanecen privados para su dueño y colaboradores — los visitantes solo ven las colecciones publicadas.
+## Dónde se abre una colección
 
-## Dentro de una colección
+Cada colección muestra su portada, su descripción y sus elementos en el orden que eligió quien la
+cura. Dónde se abre depende de su categoría:
 
-Abrir una colección muestra su arte, su descripción y sus elementos en el orden definido por quien la cura. Cada categoría tiene su propia página:
+<CollectionViews />
 
-**Las colecciones de audios** muestran una lista de pistas:
+- Las colecciones de **Audios**, **Mundos** y **Orbitadores** se abren como una página de Plantasia
+  Space.
+- Una colección de **Audios** también se puede abrir en la **vista multi-Orbitador**, donde tocas sus
+  pistas en varios Orbitadores a la vez.
+- Una colección **Mixta** no tiene página: se abre directamente en la vista multi-Orbitador.
 
-![Página de colección de audios](https://herbarium.plantasia.space/docs/en/media/collections/interact/collection-page-audios.jpg)
+## Colecciones de Audios {#audios}
 
-**Las colecciones de mundos** muestran un atlas de mundos:
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/audio-collection-tracklist.jpg"
+  alt="La lista de audios de Sky Sounds Deck: los cinco botones bajo el título, 5 audios y la primera pista, Skysounds 1 VIII."
+  width={420}
+/>
 
-![Página de colección de mundos](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/collection-page-world.png)
+Bajo **Lista de audios** hay cinco botones, de izquierda a derecha:
 
-**Las colecciones de orbitadores** muestran una alineación de orbitadores:
+1. **Detallado**: cada pista como una tarjeta completa.
+2. **Compacto**: las pistas como mini tarjetas.
+3. **Estudio**: abre la colección en la vista multi-Orbitador (antes te lo pregunta).
+4. **Descargar para usar sin conexión**: guarda las pistas para tocarlas sin conexión, en MP3
+   comprimido (320 kbps) o WAV sin pérdida (16 bits, 44,1 kHz). Solo aparece si la colección permite
+   descargas.
+5. **Crear sala**: abre una jam con esta colección en el [playground](/docs/plantasia-space/playground).
 
-![Página de colección de orbitadores](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/collection-page-orbiters.png)
+## Colecciones de Mundos {#worlds}
 
-**Las colecciones mixtas** se abren como una estación (ver abajo):
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/world-collection.jpg"
+  alt="Una colección de Mundos, Cortinarius leptocephalus: los botones Detallado y Compacto, 1 mundo, y el Mundo Entrelazado Snap."
+  width={480}
+/>
 
-![Página de colección mixta](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/collection-page-mixed.png)
+Bajo el título **Mundos Entrelazados**, la página muestra los Mundos Entrelazados de la colección,
+uno tras otro. Cambia entre **Detallado** y **Compacto** con los dos botones.
 
-## Reproducir una colección mixta
+## Colecciones de Orbitadores {#orbiters}
 
-Abrir una colección mixta lanza una estación donde sus audios pueden reproducirse a través de uno o más Orbiters al mismo tiempo:
+Bajo el título **Orbitadores**, la página muestra los Orbitadores de la colección, con los mismos
+botones **Detallado** y **Compacto**.
 
-- Elige un **layout** (I–IV) para definir cuántos orbitadores hay en pantalla
-- Arrastra una carta de audio desde el cajón de cartas hasta un espacio para cargarla
-- Cambia cartas o quita orbitadores en cualquier momento
+## Colecciones Mixtas: la vista multi-Orbitador {#mixed}
 
-Salir de la estación o recargarla detiene la reproducción en los orbitadores abiertos.
+Una colección Mixta se abre directamente en la vista multi-Orbitador, y una colección de Audios llega
+ahí con su botón **Estudio**. Cada escenario es un Orbitador que toca una carta de la colección.
+
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/collections/interact/multi-orbiter-view.jpg"
+  alt="La colección mixed stage en la vista multi-Orbitador: dos escenarios, un Orbitador de Audio y uno de batería, el cajón de cartas con pistas Skysounds, y la barra con Ant., Sig., Cartas y Opciones."
+  width={640}
+  dots={[[1, 2.5, 4], [2, 75.5, 98.3], [3, 19.5, 74.5], [4, 9.2, 70.7], [5, 35, 98.3], [6, 95.5, 98.3]]}
+/>
+
+1. **Un escenario**: un Orbitador que toca una carta. Un escenario vacío dice **Suelta una carta aquí,
+   o tócala dos veces para cargarla**.
+2. **Cartas** abre y cierra el cajón de cartas.
+3. **Las cartas**: los elementos de la colección. Arrastra una carta a un escenario, o tócala dos
+   veces, para cargarla. Solo una pista puede arrancar un escenario vacío; una carta de Mundo cambia
+   el Mundo de un escenario que ya está sonando.
+4. **Los filtros** muestran solo las cartas de Audio, de Orbitador o de Mundo.
+5. **Ant.** y **Sig.** pasan de un escenario al siguiente.
+6. **Opciones**: cuántos Orbitadores hay en pantalla (**1 orbitador**, **2 orbitadores**…), **Crear
+   sala**, **Salir de la colección** y **Pantalla completa**.
+
+Salir de la colección o recargar la página detiene lo que suena en los escenarios.
 
 ## Reacciones y comentarios
 
-Como cualquier otro contenido, a las colecciones se les pueden dar corazones, estrellas y comentarios. Mira [Sobre las estadísticas](/docs/plantasia-space/stats) para saber cómo funcionan estos conteos.
+Como cualquier otro contenido, las colecciones pueden recibir corazones, estrellas y comentarios. Consulta [Acerca de las estadísticas](/docs/plantasia-space/stats) para saber cómo funcionan estos contadores y [Seguridad y moderación](/docs/plantasia-space/safety) para las normas de la comunidad.

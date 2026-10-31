@@ -6,6 +6,7 @@ import Walkthrough from '@site/src/components/docs/Walkthrough';
 import TryModule from '@site/src/components/docs/TryModule';
 import LoopVideo from '@site/src/components/docs/LoopVideo';
 import IsoFigure from '@site/src/components/docs/IsoFigure';
+import CollectionViews from '@site/src/components/docs/CollectionViews';
 
 // Available on every docs page without an import.
 export default {
@@ -18,4 +19,5 @@ export default {
   TryModule,
   LoopVideo,
   IsoFigure,
+  CollectionViews,
 };

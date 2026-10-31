@@ -15,13 +15,13 @@ Algunos nombres del Studio (módulos, **Map**, **Mappings**) aparecen en inglés
 <StepFlow
   groups={[
     { label: 'Menú Publicar', steps: [{ n: 1, label: 'Nuevo Orbitador', href: '#start' }] },
-    { label: 'Paso Instrumento', steps: [
+    { label: 'Paso Sonido', steps: [
       { n: 2, label: 'Elige qué toca', href: '#instrument' },
       { n: 3, label: 'Añade un efecto', href: '#effect' },
       { n: 4, label: 'Mapéalo a un eje', href: '#map' },
       { n: 5, label: 'Tócalo', href: '#play' },
     ] },
-    { label: 'Paso Visual', steps: [{ n: 6, label: 'Elige su aspecto', href: '#visual' }] },
+    { label: 'Paso Visuales', steps: [{ n: 6, label: 'Elige su aspecto', href: '#visual' }] },
     { label: 'Paso Publicar', steps: [{ n: 7, label: 'Publícalo', href: '#release' }] },
   ]}
 />
@@ -30,7 +30,7 @@ Algunos nombres del Studio (módulos, **Map**, **Mappings**) aparecen en inglés
 
 ## 1. Empieza un Orbitador nuevo {#start}
 
-Abre **Publicar → Nuevo Orbitador**. El Orbiter Studio se abre en su primer paso, **Instrumento**: el Orbitador en su escenario arriba y, debajo, el rack donde lo construyes. Los otros dos pasos, **Visual** y **Publicar**, vienen después.
+Abre **Publicar → Nuevo Orbitador**. El Orbiter Studio se abre en su primer paso, **Sonido**: el Orbitador en su escenario arriba y, debajo, el rack donde lo construyes. Los otros dos pasos, **Visuales** y **Publicar**, vienen después.
 
 Un Orbitador nuevo empieza solo con el **Mundo**, tus pistas: todo lo de este inicio rápido pasa en el Mundo I. La **Luna** (pistas de retorno) y la **Estrella** (el bus principal) solo están cuando las añades, con **Añadir Luna** o **Añadir Estrella**. Si conoces un DAW, [Orbitadores para quien usa un DAW](/docs/orbiters/for-daw-users) traduce cada cuerpo.
 
@@ -87,7 +87,7 @@ Pulsa **Reproducir** arriba del escenario y arrastra el eje **X** hacia arriba. 
 
 ## 6. Elige su aspecto {#visual}
 
-Abre el paso **Visual**. Todo tiene ya un aspecto diseñado, así que puedes dejarlo como está y seguir, o cambiarlo:
+Abre el paso **Visuales**. Todo tiene ya un aspecto diseñado, así que puedes dejarlo como está y seguir, o cambiarlo:
 
 - **Panel** (2D): los controles del Orbitador en pantalla. Elige un **Theme**, o sus propias fuentes y colores.
 - **Ring** (3D): el anillo alrededor del Orbitador, su color y su forma (**Amplitude**, **Radius**, **Tilt**).
@@ -95,7 +95,7 @@ Abre el paso **Visual**. Todo tiene ya un aspecto diseñado, así que puedes dej
 
 El Panel y el Ring empiezan **Tied · all bodies**: un mismo aspecto para todo el Orbitador.
 
-![El paso Visual: el tema, las fuentes y los colores del Panel, el color y la forma del Ring, y el Audio player en Devices.](/img/orbiters/quickstart/visual-step.jpg)
+![El paso Visuales: el tema, las fuentes y los colores del Panel, el color y la forma del Ring, y el Audio player en Devices.](/img/orbiters/quickstart/visual-step.jpg)
 
 ## 7. Publícalo {#release}
 
