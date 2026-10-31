@@ -25,7 +25,10 @@ const ONLY = process.argv.find((a) => a.startsWith("--only="))?.slice(7);
 const TOKENS = readFileSync(createRequire(import.meta.url).resolve("plantasia.space-design/tokens.css"), "utf8");
 const COLLECTION = TOKENS.match(/--ps-entity-collection:\s*([^;]+);/)?.[1].trim();
 if (!COLLECTION) throw new Error("--ps-entity-collection is missing from the design library's tokens.css");
-const CSS = `${STAGE_CSS}.lf-col{--lf:var(--ps-entity-collection,${COLLECTION})}`;
+// In the dark theme the base and the objects are filled black, as line drawings on the page's ground
+// (the entity-coloured solids keep their own ramp). The light theme keeps the kit's fills.
+const BLACK = ["paper", "face", "top", "shade-0", "shade-1", "shade-2", "shade-3", "lit-top", "lit-shade"].map((v) => `--anatomy-${v}:#000`).join(";");
+const CSS = `${STAGE_CSS}.lf-col{--lf:var(--ps-entity-collection,${COLLECTION})}.iso-svg.iso[data-theme="dark"]{${BLACK}}`;
 // the Collection's cabinet: its lines in the Collection's colour
 const asCollection = (T, make) => { const from = T.items.length, made = make(); for (let i = from; i < T.items.length; i++) T.items[i].svg = `<g class="lf-ink lf-col">${T.items[i].svg}</g>`; return made; };
 
