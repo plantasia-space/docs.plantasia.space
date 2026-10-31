@@ -598,7 +598,6 @@ ul li {
   height: 18px;
   flex-shrink: 0;
   color: currentColor;
-  stroke: currentColor;
 }
 
 @media (min-width: 997px) {
@@ -609,14 +608,6 @@ ul li {
 
 /* Plantasia logo is a filled mark — follow the sidebar text color so it
    stays visible in both themes (dark on light bg, white on dark bg). */
-.sidebarItemIcon--plantasia,
-.sidebarItemIcon--plantasia svg,
-.sidebarItemIcon--plantasia * {
-  color: currentColor;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
 .menu__link [class*="linkLabel"],
 .menu__link [class*="categoryLinkLabel"] {
   display: inline-flex;
@@ -690,7 +681,6 @@ ul li {
   width: 24px;
   height: 24px;
   color: currentColor;
-  stroke: currentColor;
   flex-shrink: 0;
 }
 
