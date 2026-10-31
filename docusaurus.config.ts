@@ -9,6 +9,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 // pairs with local root.
 const DEV_SITE = process.env.DOCS_SITE === 'dev';
 const PRODUCTION = process.env.NODE_ENV === 'production';
+// The CDN the dashboard publishes to: the public bucket for the public docs, the dev bucket for the
+// dev docs and for local work.
+const ASSETS_BASE = PRODUCTION && !DEV_SITE ? 'https://herbarium.plantasia.space' : 'https://dev-herbarium.plantasia.space';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -107,6 +110,7 @@ const config = {
     './src/plugins/raw-markdown',
     './src/plugins/moved-pages',
     './src/plugins/glossary-terms',
+    ['./src/plugins/theme-fonts', { assetsBase: ASSETS_BASE }],
     './src/plugins/dev-feeds',
     // What's new: one post per promotion (dev → main), drafted by comms routine 02 from triaged tickets.
     // The root app's menu reads feed.json (PLA-514).

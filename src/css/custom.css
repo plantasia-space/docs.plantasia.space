@@ -4,49 +4,23 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-/* Lato and Orbit are served from this site (`static/fonts/`), not fetched from a font host. A
- * webfont request hands that host every visitor's IP before they have read a word, and there is
- * nothing to gain from it once the bytes are ours. Latin subsets — enough for the English and
- * Spanish docs — at ~14KB each.
- *
- * Orbit is single-weight upstream, so the old `family=Orbit` request returned exactly the 400
- * declared below. Lato ships 400 and 700; the headings below ask for 600, which CSS resolves to
- * the 700 face, same as before. */
-@font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Orbit';
-  src: url('/fonts/Orbit-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* Fonts come from the dashboard's theme: the faces from the design library (self-hosted, no font
+ * host), the families from `<style id="theme-fonts">`, which the theme-fonts plugin writes from the
+ * published catalog. Nothing here names a font. */
+@import 'plantasia.space-design/styles/fonts.css';
 
 h1,
 h2,
 h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 600; /* Regular weight */
   font-style: bold;
 }
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'Lato', sans-serif;
+  --ifm-font-family-base: var(--font-sans);
+  --ifm-font-family-monospace: var(--font-mono);
   --ifm-color-primary: #000000;
 
   --ifm-background-color: #ffffff;
@@ -102,7 +76,7 @@ h3 {
 }
 
 .navbar__title, .navbar__item {
-  font-family: 'Orbit', sans-serif;
+  font-family: var(--font-title);
   font-weight: 400; /* Regular weight */
   font-style: normal;
 }
@@ -804,54 +778,93 @@ ul li {
   :where(.orchidea-docs-host, .orchidea-docs-portal) :where(svg, img) { display: block; }
 }
 
-/* Glossary: a dictionary page. Each letter opens with a hairline and a large letter; each term
- * sits in a narrow left column with its one-paragraph definition beside it. Keyed on the doc-id
- * class Docusaurus puts on <html>. The page keeps
- * plain `### Term {#id}` + paragraph markdown, which the glossary-terms plugin reads. */
+/* Glossary: a dictionary page in three columns. Each letter opens with a large serif letter in the
+ * left column, under a short bar in the next entity colour (track, world, Orbiter, collection, clip);
+ * each term sits beside it, its one-paragraph definition on the right. Keyed on the doc-id class
+ * Docusaurus puts on <html>. The page keeps plain `## A` / `### Term {#id}` + paragraph markdown,
+ * which the glossary-terms plugin reads. */
 .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown {
   display: grid;
-  grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr);
-  column-gap: 2rem;
+  grid-template-columns: 5.5rem minmax(8rem, 12rem) minmax(0, 1fr);
+  column-gap: 1.75rem;
 }
 
 .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > * {
   grid-column: 1 / -1;
 }
 
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 1) { --glossary-letter: var(--ps-entity-track); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 2) { --glossary-letter: var(--ps-entity-world); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 3) { --glossary-letter: var(--ps-entity-orbiter); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 4) { --glossary-letter: var(--ps-entity-collection); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 5) { --glossary-letter: var(--ps-entity-clip); }
+
+/* The letter takes no height of its own: it overhangs the empty first column beside its terms. */
 .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.75rem;
-  margin: 2.5rem 0 1.5rem;
-  font-family: 'Orbit', sans-serif;
+  grid-column: 1;
+  height: 0;
+  margin: 0;
+  padding-top: 1.25rem;
+  border-top: 4px solid var(--glossary-letter);
+  color: var(--glossary-letter);
+  font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 2.5rem;
-  line-height: 1;
+  font-size: 5.5rem;
+  line-height: 0.8;
 }
 
-.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2::before {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid var(--ifm-color-emphasis-400);
-  margin-bottom: 0.2em;
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 .hash-link {
+  font-size: 1rem;
 }
 
 .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h3 {
-  grid-column: 1;
+  grid-column: 2;
   margin: 0 0 1.25rem;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.4;
 }
 
 .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h3 + p {
-  grid-column: 2;
+  grid-column: 3;
   margin: 0 0 1.25rem;
   font-size: 0.95rem;
 }
 
+/* The first term of a letter shares the letter's rule line, and leaves room for the letter below. */
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3,
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3 + p {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ifm-color-emphasis-400);
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3 + p {
+  min-height: 6.5rem;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:not(:first-of-type),
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:not(:first-of-type) + h3,
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:not(:first-of-type) + h3 + p {
+  margin-top: 2rem;
+}
+
+/* Phones: one column; the letter sits above its terms at a smaller size. */
 @media (max-width: 600px) {
   .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown {
     display: block;
+  }
+
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 {
+    height: auto;
+    margin: 2rem 0 1rem;
+    font-size: 3.5rem;
+  }
+
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3,
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3 + p {
+    padding-top: 0;
+    border-top: 0;
+    min-height: 0;
   }
 
   .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h3 {
