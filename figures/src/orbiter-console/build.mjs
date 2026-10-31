@@ -9,6 +9,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { k, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
 import { KNOB_SOURCE, knobFace, knobWedge, knobNeedle } from "../shared/knob.mjs";
+import { COLOURS } from "../shared/colours.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes one ES module, <slot>/static/figures/orbiters/console.js, which the docs' <IsoFigure> loads:
@@ -151,12 +152,16 @@ const svg = k.figureSvg({
   width: WIDTH, height: HEIGHT,
   label: "An Orbiter drawn as a console of its craft. A screen shows the World with its ring and its Moon, and a Star far off. Three knobs in a row are the axes X, Y and Z, each with a toggle in front of it. A rack holds the instrument and three effects, joined by a line. Three keys are the dimensions. Turning a knob turns the World on the screen and moves a marker on one effect.",
   body: [
+    COLOURS,
     body(),
     screen(),
     L(star, { tone: "mid" }),
+    // the World, its ring and its Moon, in the World's colour
+    `<g class="lf-wld">`,
     `<path data-part="ring" class="iso-line" data-tone="hi" data-free="" d="${rest.scene.ring}"/>`,
     `<path class="iso-fill" d="${circleOnGlass(WORLD_R, 40)}"/>` + L(circleOnGlass(WORLD_R, 40), { tone: "hi" }),
     `<circle data-part="moon" class="iso-wire-end" r="2.2" cx="${rest.scene.moon?.[0].toFixed(1) ?? 0}" cy="${rest.scene.moon?.[1].toFixed(1) ?? 0}" style="stroke:var(--anatomy-hi)${rest.scene.moon ? "" : ";display:none"}"/>`,
+    `</g>`,
     rack(),
     ...EFFECTS.map((x, index) => `${effect(x)}<g data-part="pip-${index}">${pip(x)}</g>`),
     keys(),

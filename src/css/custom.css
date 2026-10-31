@@ -606,8 +606,6 @@ ul li {
   }
 }
 
-/* Plantasia logo is a filled mark — follow the sidebar text color so it
-   stays visible in both themes (dark on light bg, white on dark bg). */
 .menu__link [class*="linkLabel"],
 .menu__link [class*="categoryLinkLabel"] {
   display: inline-flex;

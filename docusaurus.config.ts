@@ -53,10 +53,8 @@ const config = {
   },
 
   customFields: {
-    // The wordmark and the symbol on the CDN above: the wordmark is the navbar's brand and the home
-    // page's title, the symbol is the home page's Plantasia Space card.
+    // The wordmark on the CDN above: the navbar's brand and the home page's title.
     wordmarkUrl: `${ASSETS_BASE}/assets/logos/current/plantasia-space-wordmark-currentcolor-transparent-background.svg`,
-    symbolUrl: `${ASSETS_BASE}/assets/logos/current/plantasia-space-symbol-currentcolor-transparent-background.svg`,
     // Root's address (Orchidea signs in and asks through it): production root, dev-root for the dev
     // docs, local root for a local `docusaurus start`.
     rootBase: !PRODUCTION ? 'https://local.plantasia.space:3000' : DEV_SITE ? 'https://dev-root.plantasia.space' : 'https://plantasia.space',

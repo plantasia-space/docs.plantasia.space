@@ -13,7 +13,9 @@ every built figure below carries the kit's code inline).
 
 ## Docs only
 
-- **One lit accent**, the part the reader should watch; everything else in the kit's tones (the guest
+- **One lit accent**, the part the reader should watch, in the Orbiter's colour, and a World inside a
+  figure in the World's (`shared/colours.mjs`, from the page's entity tokens); everything else in the
+  kit's tones (the guest
   home's entity colours are not for docs pages; the home machine is the one exception: built on the
   lib's `stage()`, each part in its entity's colour from the page's `--ps-entity-*` tokens, as on root).
 - **The dark theme** is the kit's (near-black fills, brighter edges, light-grey whites; the values are in

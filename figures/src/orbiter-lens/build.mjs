@@ -5,6 +5,7 @@ import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { k, G, kitSource as kitScript } from "plantasia.space-design/anatomy/build";
+import { COLOURS } from "../shared/colours.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 // Writes one ES module, <slot>/static/figures/orbiters/lens.js, which the docs' <IsoFigure> loads:
@@ -200,11 +201,12 @@ const svg = k.figureSvg({
   width: WIDTH, height: HEIGHT,
   label: "The Orbiter's camera on a hull deck. Its lens barrel slides in and out to open or close the field of view, drawn as two lines across the deck to a horizon rule. The camera rides a cross-slide that moves it sideways. A console holds the Amount knob and a viewfinder that shows the World growing, shrinking and sliding as the lens moves.",
   body: [
+    COLOURS,
     deck(),
     `<path data-part="cone" class="iso-line" data-tone="lit" d="${rest.cone}" style="stroke-width:1"/>`,
     `<circle data-part="apex" class="iso-wire-end" cx="${rest.apex[0].toFixed(1)}" cy="${rest.apex[1].toFixed(1)}" r="1.3"/>`,
     consoleBox(),
-    `<path data-part="world" class="iso-line" data-tone="hi" d="${rest.world}" style="stroke-width:1"/>`,
+    `<g class="lf-wld"><path data-part="world" class="iso-line" data-tone="hi" d="${rest.world}" style="stroke-width:1"/></g>`,
     `<g data-part="stars" class="iso-dots" data-tone="mid">${starDots(rest.stars)}</g>`,
     `<path data-part="knob" class="iso-line" data-tone="hi" d="${k.lineOnTop(KNOB, [KNOB[0] + 4.2 * Math.sin(Math.PI * 0.75), KNOB[1] - 4.2 * Math.cos(Math.PI * 0.75)], CON_TOP + 5.4, P)}"/>`,
     k.wireSvg(at([CON.x, -106, 0]), at([-62, -50, 0]), { via: [at([-62, -106, 0])], tone: "lo", size: 1.1 }),
