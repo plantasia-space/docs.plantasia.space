@@ -96,6 +96,19 @@ Revisa tu Clip antes de publicarlo. Puedes:
 
 Un Clip nunca es más visible que su mundo: si el mundo es privado, el Clip también permanece privado.
 
+## ¿Quién puede trabajar en un Clip? {#quien-puede-trabajar-en-un-clip}
+
+Un Clip sigue los roles de su Mundo Entrelazado (mira [Compartir](/docs/plantasia-space/sharing#permisos-individuales-de-xplorer)), y siempre conservas el control total de los Clips que haces:
+
+- **Quien es Owner del mundo** puede abrir, editar y publicar cualquier Clip del mundo, y es la única persona, además de quien lo hizo, que puede archivarlo o eliminarlo
+- **Lxs Editors** del mundo pueden abrir, editar y publicar cualquier Clip del mundo, borradores incluidos
+- **Lxs Publishers** hacen y publican sus propios Clips en el mundo
+- **Lxs Viewers** y el resto pueden ver los Clips publicados, pero no abrirlos en el Studio
+
+Si abres el enlace del Studio de un Clip sin haber iniciado sesión, primero se te pide iniciar sesión. Si el Clip no es tuyo para editar, ves una página que lo indica en lugar del Studio.
+
+Cuando alguien trabaja en un Clip que no es suyo, el Clip sigue siendo de quien lo hizo: se publica a su nombre, y su audio tiene que ser una pista que esa persona pueda usar. Los créditos de imágenes y textos hechos con IA salen de quien los pide.
+
 ## Gestiona tus Clips
 
 ![Abrir un Clip desde el feed de inicio](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/clip-page.png)
@@ -103,7 +116,7 @@ Un Clip nunca es más visible que su mundo: si el mundo es privado, el Clip tamb
 Desde **Mis Clips** o la página del Clip, puedes:
 
 - **Descargar** el video en versión original o MP4 comprimido — solo para Clips con video capturado, y durante dos semanas después de la captura. Pasado ese plazo, la animación del Clip permanece, y puedes hacer una nueva captura cuando quieras
-- **Archivar** un Clip — se oculta de los feeds y perfiles y permanece privado para ti. Los Clips archivados no se pueden editar y no cuentan para los límites de tu plan, y puedes restaurarlos en cualquier momento.
+- **Archivar** un Clip — se oculta de los feeds y perfiles, y solo tú y quienes son Owner o Editors del mundo pueden seguir viéndolo. Los Clips archivados no se pueden editar y no cuentan para los límites de tu plan, y tú (o quien es Owner del mundo) puedes restaurarlos en cualquier momento.
 - **Eliminar** un Clip de forma permanente — sus archivos se borran y los enlaces directos dejan de funcionar. Esto no se puede deshacer.
 
 Cada Clip incluye la atribución del Mundo Entrelazado del que fue creado y del Audio que utiliza, incluida la licencia de la pista.

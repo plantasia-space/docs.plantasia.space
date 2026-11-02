@@ -68,6 +68,8 @@ Inviting people and opening an entity up are two different decisions, so they si
 
 Editors can bring in another pair of hands, since they already edit and publish the entity. Deciding whether anyone with the link can reach it stays with the owner alone — as does archiving or deleting it.
 
+Clips follow the roles of their Entangled World: the world's owner and editors can edit any Clip in it, and only the world's owner — besides the Clip's maker — can archive or delete one. See [Who can work on a Clip](../02-entangled-worlds/04-studio.md#who-can-work-on-a-clip).
+
 If a setting is not yours to change, you will see it greyed out with a note explaining why, rather than an error after the fact.
 
 Audio has no collaborator list. Its audience is the owner's to set — see [Audio Visibility](#audio-visibility-audience) above.

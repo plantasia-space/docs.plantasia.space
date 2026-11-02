@@ -96,6 +96,19 @@ Review your Clip before publishing. You can:
 
 A Clip is never more visible than its parent world: if the world is private, the Clip stays private too.
 
+## Who can work on a Clip {#who-can-work-on-a-clip}
+
+A Clip follows the roles of its Entangled World (see [Sharing](/docs/plantasia-space/sharing#individual-xplorer-permissions)), and you always keep full control of the Clips you make:
+
+- **The world's owner** can open, edit and release any Clip in the world, and is the only one besides its maker who can archive or delete it
+- **Editors** of the world can open, edit and release any Clip in the world, drafts included
+- **Publishers** make and release their own Clips in the world
+- **Viewers** and everyone else can watch released Clips, but can't open them in the Studio
+
+If you open a Clip's Studio link while signed out, you're asked to sign in first. If the Clip isn't yours to edit, you see a page saying so instead of the Studio.
+
+When someone works on a Clip that isn't theirs, the Clip stays its maker's: it is released under their name, and its audio has to be a track they can use. Credits for pictures and texts made with AI come from whoever asks for them.
+
 ## Manage your Clips
 
 ![Opening a Clip from the home feed](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/clip-page.png)
@@ -103,7 +116,7 @@ A Clip is never more visible than its parent world: if the world is private, the
 From **My Clips** or the Clip's page, you can:
 
 - **Download** the video as original or compressed MP4 — only for Clips with a captured video, and for two weeks after the capture. After that, the Clip's animation remains, and you can take a new capture whenever you want
-- **Archive** a Clip — it is hidden from feeds and profiles and stays private to you. Archived Clips can't be edited and don't count toward your plan limits, and you can restore them at any time.
+- **Archive** a Clip — it is hidden from feeds and profiles, and only you and the world's owner and editors can still see it. Archived Clips can't be edited and don't count toward your plan limits, and you (or the world's owner) can restore them at any time.
 - **Delete** a Clip permanently — its files are removed and direct links stop working. This cannot be undone.
 
 Every Clip carries attribution for the Entangled World it was created from and the Audio it uses, including the track's license.
