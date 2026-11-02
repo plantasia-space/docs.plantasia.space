@@ -59,9 +59,10 @@ With a Bloom plan or above, the orchid in the Studio's header opens [Orchidea](/
 - The look: theme, font, text size and alignment, text and camera pacing
 - Elements and the timeline: add or remove text, images and camera moves, change their timing, animations and camera moves
 - Pictures: it places pictures you uploaded to this world, from the shared library or from the old library's plates, or makes a new square picture with AI from a prompt
+- Picture edits: it changes one of your pictures or a shared library picture with AI from a prompt ("make it night", "remove the background and leave only the flower"). The edit is a new picture and the original stays. It can also cut out the subject on a transparent background
 - Texts written with AI, from a prompt
 
-Texts and pictures made with AI cost credits, depending on the model, and Orchidea asks before each one. Every picture is checked, both what you ask for and what is made: one that isn't allowed on Plantasia Space isn't made or kept, and its credits come back.
+Texts, pictures and picture edits made with AI cost credits, depending on the model, and Orchidea asks before each one. Every picture is checked, both what you ask for and what is made: one that isn't allowed on Plantasia Space isn't made or kept, and its credits come back.
 
 Each request is one step in the Studio's undo. To let Orchidea write texts and make pictures without asking, turn off **Ask before using credits** in its **⋯** menu; it asks again in every new conversation. Anything that affects other people always asks.
 
