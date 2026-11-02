@@ -39,11 +39,9 @@ These use a collaboration model to decide:
 
 ### Individual xPlorer Permissions
 
-When you invite specific xPlorers, you can assign roles:
+When you invite specific xPlorers, you give each one a role: **Viewer**, **Publisher** or **Editor**. The **Owner** is whoever made the entity. What each can do:
 
-- **Viewer** — can view and experience
-- **Publisher** — can publish content inside the entity
-- **Editor** — can edit the entity, publish inside it, and invite other xPlorers
+<RoleGrid id="entity-roles" />
 
 ### General Access (Link or Public Rules)
 
@@ -60,13 +58,7 @@ Default roles for general access can be:
 
 ### Who Can Change These Settings
 
-Inviting people and opening an entity up are two different decisions, so they sit with different people:
-
-- **Owner** — everything: invite and remove xPlorers, change their roles, and set General Access
-- **Editor** — can invite and remove xPlorers and change their roles, but cannot change General Access
-- **Publisher** and **Viewer** — cannot change collaboration settings
-
-Editors can bring in another pair of hands, since they already edit and publish the entity. Deciding whether anyone with the link can reach it stays with the owner alone — as does archiving or deleting it.
+Inviting people and opening an entity up are two different decisions, so they sit with different people. Editors can invite and remove xPlorers and change their roles, since they already edit and publish the entity. Deciding whether anyone with the link can reach it stays with the owner alone, as does archiving or deleting it. Publishers and Viewers can't change collaboration settings.
 
 Clips follow the roles of their Entangled World: the world's owner and editors can edit any Clip in it, and only the world's owner — besides the Clip's maker — can archive or delete one. See [Who can work on a Clip](../02-entangled-worlds/04-studio.md#who-can-work-on-a-clip).
 

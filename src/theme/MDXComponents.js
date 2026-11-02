@@ -7,6 +7,7 @@ import TryModule from '@site/src/components/docs/TryModule';
 import LoopVideo from '@site/src/components/docs/LoopVideo';
 import IsoFigure from '@site/src/components/docs/IsoFigure';
 import CollectionViews from '@site/src/components/docs/CollectionViews';
+import RoleGrid from '@site/src/components/docs/RoleGrid';
 
 // Available on every docs page without an import.
 export default {
@@ -20,4 +21,5 @@ export default {
   LoopVideo,
   IsoFigure,
   CollectionViews,
+  RoleGrid,
 };

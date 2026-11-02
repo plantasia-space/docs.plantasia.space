@@ -100,14 +100,11 @@ Un Clip nunca es más visible que su mundo: si el mundo es privado, el Clip tamb
 
 Un Clip sigue los roles de su Mundo Entrelazado (mira [Compartir](/docs/plantasia-space/sharing#permisos-individuales-de-xplorer)), y siempre conservas el control total de los Clips que haces:
 
-- **Quien es Owner del mundo** puede abrir, editar y publicar cualquier Clip del mundo, y es la única persona, además de quien lo hizo, que puede archivarlo o eliminarlo
-- **Lxs Editors** del mundo pueden abrir, editar y publicar cualquier Clip del mundo, borradores incluidos
-- **Lxs Publishers** hacen y publican sus propios Clips en el mundo
-- **Lxs Viewers** y el resto pueden ver los Clips publicados, pero no abrirlos en el Studio
+<RoleGrid id="clip-roles" />
 
-Si abres el enlace del Studio de un Clip sin haber iniciado sesión, primero se te pide iniciar sesión. Si el Clip no es tuyo para editar, ves una página que lo indica en lugar del Studio.
+El enlace del Studio de un Clip te pide iniciar sesión si no la has iniciado, y muestra una página que lo indica si el Clip no es tuyo para editar.
 
-Cuando alguien trabaja en un Clip que no es suyo, el Clip sigue siendo de quien lo hizo: se publica a su nombre, y su audio tiene que ser una pista que esa persona pueda usar. Los créditos de imágenes y textos hechos con IA salen de quien los pide.
+Trabaje quien trabaje en un Clip, sigue siendo de quien lo hizo: se publica a su nombre, con una pista que esa persona pueda usar. Los créditos de imágenes y textos hechos con IA salen de quien los pide.
 
 ## Gestiona tus Clips
 

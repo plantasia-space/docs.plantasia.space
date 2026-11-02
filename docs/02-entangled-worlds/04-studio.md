@@ -100,14 +100,11 @@ A Clip is never more visible than its parent world: if the world is private, the
 
 A Clip follows the roles of its Entangled World (see [Sharing](/docs/plantasia-space/sharing#individual-xplorer-permissions)), and you always keep full control of the Clips you make:
 
-- **The world's owner** can open, edit and release any Clip in the world, and is the only one besides its maker who can archive or delete it
-- **Editors** of the world can open, edit and release any Clip in the world, drafts included
-- **Publishers** make and release their own Clips in the world
-- **Viewers** and everyone else can watch released Clips, but can't open them in the Studio
+<RoleGrid id="clip-roles" />
 
-If you open a Clip's Studio link while signed out, you're asked to sign in first. If the Clip isn't yours to edit, you see a page saying so instead of the Studio.
+A Clip's Studio link asks you to sign in first if you're signed out, and shows a page saying so if the Clip isn't yours to edit.
 
-When someone works on a Clip that isn't theirs, the Clip stays its maker's: it is released under their name, and its audio has to be a track they can use. Credits for pictures and texts made with AI come from whoever asks for them.
+Whoever works on a Clip, it stays its maker's: it's released under their name, with a track they can use. Credits for pictures and texts made with AI come from whoever asks for them.
 
 ## Manage your Clips
 
