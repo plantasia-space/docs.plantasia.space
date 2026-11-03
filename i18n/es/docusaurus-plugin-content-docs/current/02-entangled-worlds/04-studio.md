@@ -59,7 +59,7 @@ Con un plan Bloom o superior, la orquídea de la cabecera del Studio abre [Orchi
 - El aspecto: tema, fuente, tamaño y alineación del texto, ritmo del texto y de la cámara
 - Los elementos y la línea de tiempo: añadir o quitar textos, imágenes y movimientos de cámara, cambiar su tiempo, sus animaciones y sus movimientos de cámara
 - Imágenes: coloca imágenes que subiste a este mundo, de la biblioteca compartida o de las láminas de la biblioteca antigua, o crea una imagen cuadrada nueva con IA a partir de una indicación
-- Edición de imágenes: cambia una de tus imágenes o una de la biblioteca compartida con IA a partir de una indicación ("hazla de noche", "quita el fondo y deja solo la flor"). La edición es una imagen nueva y la original se queda. También puede recortar el motivo sobre un fondo transparente
+- Edición de imágenes: cambia una de tus imágenes, una de la biblioteca compartida o una lámina de la biblioteca antigua con IA a partir de una indicación ("hazla de noche", "quita el fondo y deja solo la flor"). La edición es una imagen nueva y la original se queda. También puede recortar el motivo sobre un fondo transparente
 - Textos escritos con IA a partir de una petición
 
 Los textos, las imágenes y las ediciones de imágenes hechos con IA cuestan créditos, según el modelo, y Orchidea pregunta antes de cada uno. Cada imagen se revisa, tanto lo que pides como lo que se crea: una que no está permitida en Plantasia Space no se crea ni se guarda, y sus créditos vuelven.
