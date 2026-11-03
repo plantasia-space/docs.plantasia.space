@@ -146,8 +146,8 @@ page use MIDI devices.
 3. Press **M** again, or **Exit**, to play.
 
 Click a control that is already mapped to **Learn** it again or **Delete** its mapping. Mappings are saved
-to your account with the Orbiter (in a collection, with its stage). **Load Mappings** copies another
-Orbiter's mappings into this one.
+to your account with the Orbiter (in a collection, where **Save to** says). **Load Mappings** copies
+another Orbiter's mappings into this one.
 
 ### Fine control
 
@@ -164,11 +164,16 @@ plain knob.
 
 - **Input** and **Channel**: where the dimension in focus takes its notes from. See
   [Multiple MIDI instruments](/docs/orbiters/instruments/multiple-midi-instruments).
-- **Takeover**: what a fader does the first time you move it after it started pointing at another
-  parameter (another Orbiter loaded, another dimension). **Off** jumps to the fader's position,
-  **Pick-up** waits until the fader passes the value, **Value scaling** moves the value toward the fader
-  until they meet.
+- **Takeover**: what a fader does when you touch it and its value is no longer where the fader left it:
+  something else moved it (the screen, a preset, another control, a Cosmic LFO), or the fader now
+  points at another parameter (another Orbiter loaded, another dimension). **Off** jumps to the fader's
+  position, **Pick-up** waits until the fader passes the value, **Value scaling** moves the value toward
+  the fader until they meet. Once they meet, the value follows the fader until something else moves it
+  again. A new setting applies the next time you touch a fader.
 - **Autofocus**: moving a mapped control switches to its dimension.
+- **Save to** (in a collection): where the stages' mappings are saved. **Collection** keeps them with
+  the stage, whatever you load in it. **Orbiter** keeps them with the Orbiter, so they go wherever it is
+  loaded. The badges show which: blue for the collection, green for the Orbiter.
 
 A controller with lights or motorized faders follows the values on screen by itself.
 
