@@ -29,6 +29,7 @@ type Summary = {
 
 const WORDS = {
   en: {
+    locale: 'en',
     plan: 'Plan', monthly: 'Monthly', yearly: 'Yearly', free: 'Free', tracks: 'Tracks', fileSize: 'File size',
     worlds: 'Entangled Worlds', orbiters: 'Orbiters', aiCredits: 'Credits each month',
     orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Yes', unlimited: 'Unlimited', pack: 'Pack', credits: 'Credits', price: 'Price',
@@ -40,6 +41,7 @@ const WORDS = {
     noPrices: 'Prices could not load just now. They are on the',
   },
   es: {
+    locale: 'es',
     plan: 'Plan', monthly: 'Mensual', yearly: 'Anual', free: 'Gratis', tracks: 'Pistas', fileSize: 'Tamaño de archivo',
     worlds: 'Entangled Worlds', orbiters: 'Orbiters', aiCredits: 'Créditos al mes',
     orchidea: 'Orchidea', studio: 'Orbiter Studio', yes: 'Sí', unlimited: 'Ilimitado', pack: 'Paquete', credits: 'Créditos', price: 'Precio',
@@ -89,7 +91,7 @@ function Status({ failed, words, pricing }: { failed: boolean; words: Words; pri
 
 // A number or 'unlimited'; anything else (a summary in an older shape) shows as unknown, never as '[object Object]'.
 const show = (n: Amount, words: Words, unit = '') =>
-  n === 'unlimited' ? words.unlimited : typeof n === 'number' ? `${n}${unit}` : '—';
+  n === 'unlimited' ? words.unlimited : typeof n === 'number' ? `${n.toLocaleString(words.locale)}${unit}` : '—';
 
 export function PlansTable() {
   const { summary, failed, words, pricing } = useSummary();
