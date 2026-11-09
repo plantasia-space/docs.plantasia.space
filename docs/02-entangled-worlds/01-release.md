@@ -195,3 +195,25 @@ You can also set general access rules (private, link-based, or open).
 Save your world as a draft while iterating.
 
 Release the world when you are ready for it to be explored and used by others.
+
+## The story as audio
+
+Once your world's chapters have a voice, you can release the story as one audio. The chapters you pick are joined in your order, with the world's cover, name and people. The audio plays in Orbiters like any other.
+
+A chapter can be picked once its voice matches its text. If you changed the text after recording, the chapter shows **voice older than its text**.
+
+### From the world page
+
+1. Open the world's **Release** menu and choose **The story as audio**. It shows once the story has a voice.
+2. Tick the chapters and drag them into order.
+3. Select **Make the draft**. The audio form opens on the draft: check it and release it there.
+
+Releasing it again later makes a new version of the same audio.
+
+### From the Builder
+
+In the Release step, turn on **Release the story as audio** and pick the chapters and their order. Your choice is kept with the world's draft.
+
+Select **Release**: the world is released first, then the audio form opens on the story's draft.
+
+If a chapter shows **voice older than its text**, select it and confirm to go back to the text that was voiced. You can undo this.
