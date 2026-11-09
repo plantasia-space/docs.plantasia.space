@@ -200,9 +200,11 @@ Release the world when you are ready for it to be explored and used by others.
 
 Once your world's chapters have a voice, you can release the story as one audio. The chapters you pick are joined in your order, with the world's cover, name and people. The audio plays in Orbiters like any other.
 
-A chapter can be picked once its voice matches its text. If you changed the text after recording, the chapter shows **voice older than its text**.
+A chapter can be picked once its voice matches its text and its recording is ready. If you changed the text after recording, the chapter shows **voice older than its text**.
 
 ### From the world page
+
+The world needs to be released first, and you need to be able to edit it.
 
 1. Open the world's **Release** menu and choose **The story as audio**. It shows once the story has a voice.
 2. Tick the chapters and drag them into order.
@@ -214,6 +216,6 @@ Releasing it again later makes a new version of the same audio.
 
 In the Release step, turn on **Release the story as audio** and pick the chapters and their order. Your choice is kept with the world's draft.
 
-Select **Release**: the world is released first, then the audio form opens on the story's draft.
+Select **Release Entangled World** (or **Release Changes**): the world is released first, then the audio form opens on the story's draft.
 
 If a chapter shows **voice older than its text**, select it and confirm to go back to the text that was voiced. You can undo this.
