@@ -13,188 +13,150 @@ Go to **Release → New Entangled World**.
 
 Depending on your user type, you can create a limited number of Entangled Worlds. Additional worlds can be added through add-ons.
 
-Releasing a world opens a multi-step form.
+A new world opens in **EW Builder**. You make the world in four steps, shown at the top of the page: **Origin**, **Story**, **Landscape** and **Release**. You can move between them in any order, and your work is saved as a draft as you go.
 
-## STEP 1
+## How EW Builder is laid out
 
-### 1) Choose an exoplanet
+- **The stage** fills the page: the sky, the story or the world in 3D, depending on the step.
+- **The drawer** at the bottom holds the step's cards. Scroll it sideways to see them all, drag its top edge to resize it, or hide it with the drawer button at the top.
+- **The inspector** on the right holds the step's settings. Hide it with the inspector button at the top.
+- **Orchidea**, the assistant, opens from the flower at the top.
+- **Undo** and **Redo** are at the top left.
 
-Start by selecting a real exoplanet to entangle with your world.
+### On a phone
 
-You can:
+- The top of the page reads **Step 2 of 4 · Story**. Tap it to list the steps and go to another.
+- The inspector opens as a sheet from the bottom. Open it with the inspector button at the top; tap outside it to close it.
+- The drawer's cards scroll sideways. In Landscape, the drawer goes away while a section's picture is on the stage; the drawer button brings back the world and its cards.
+- Release is a single column: the world, then everything else below it.
+- Orchidea opens over the whole page.
 
-- Pick from suggested or future exoplanets
-- Search by name
-- Search by number (for example, typing `95` will show planets with that number in their name)
+## Step 1 · Origin
 
-You can change the selected exoplanet later.
+### Choose an exoplanet
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/02-release-choose-exoplanet.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-### Exoplanet data
-
-By expanding the information panel, you can see astronomical and physical measurements from the current exoplanet database.
-
-At the moment, this data mainly gives the rates an Orbiter's LFOs can take (the Cosmic LFO's rate in). Choosing a planet is primarily an artistic and symbolic decision.
-
-### 2) Name your world
-
-Set a name for your Entangled World.
-
-If you need inspiration, you can generate a name by selecting a biological kingdom:
-
-- Plantae
-- Fungi
-- Animalia
-
-The generated name can be edited later.
-
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/03-release-choose-name.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-### 3) Worldbuilding elementals
-
-Worldbuilding Elementals define the identity of your world.
-
-They describe:
-
-- Geography
-- Flora
-- Fauna
-- Society
-- History
+Every world comes from a real exoplanet. The stage shows the whole sky with the planets a world can come from.
 
 You can:
 
-- Apply a preset
-- Randomize all values
-- Define each element manually
+- Search by name or number in the search box (typing `95` shows planets with that number in their name)
+- Pick one of the suggested planets
+- Select a planet on the sky map
 
-These values are later used to generate visuals and narration.
+Use the buttons under the map to zoom, center on your planet, go back to the whole sky, or choose which layers show (exoplanets, night sky, guides). The second view shows the numbers of the whole catalog.
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/04-release-worldbuilding-elementals.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+You can change the exoplanet later.
 
-### 4) Elemental Matrix
+### What the planet tells you
 
-The Elemental Matrix places your world between **water, fire, earth, and air**.
+Once a planet is picked, the stage shows three facts about it:
 
-This influences visual generation and creates six world sections:
+- **Sunlight it gets**, compared with Earth
+- **Equilibrium temperature**, in °C or K
+- **Distance in light-years**, with the year its light left and the year it was found
 
-- Main
-- Geography
-- Flora
-- Fauna
-- Society
-- DNA
+The **Astronomical Body** card in the drawer draws the planet's system to scale: every known planet of its star on its orbit, beside Earth's orbit for comparison. The catalog has no orbit shapes, so orbits are drawn as circles.
 
-### Save draft or continue
+This data also gives the rates an Orbiter's Cosmic LFO can take. Choosing a planet is mostly an artistic and symbolic decision.
 
-After completing the first step, you can save the world as a draft or continue to the next step.
+### Name your world
 
-## STEP 2
+The **Artistic Name** card sets the world's name. For inspiration, pick a biological kingdom (Plantae, Fungi or Animalia) and generate one. You can edit the name at any time.
 
-### 5) Planet texture generation
+## Step 2 · Story
 
-In the second step, you can generate or regenerate the planet texture.
+### The elementals
 
-Select one of the available AI models and guide the generation using:
+The drawer holds the world's elementals as cards: its kind of planet, geography, flora, fauna, society, history and elements. They define the identity of the world, and the story, the texture and the pictures are all made from them.
 
-- Art medium
-- Art technique
-- Color palette
-- Lighting style
+You can set each card by hand, apply one of the **Presets**, or press **Random**. **Reset**, in the Presets menu, goes back to the starting values.
 
-Textures are paid with your credits, the same balance as every other AI action. Your plan gives you credits every month; if you need more, buy a credit pack. Credits from a pack last 12 months from the day you buy them.
+### The text
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/05-release-texture-gen.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+The stage shows the story as the world page will show it, in seven chapters: World Intro, Geography, Flora, Fauna, Society, History and Narrative Coda.
 
-### 6) Scene and atmosphere
+In the inspector, under **Text**:
 
-On desktop, you can open the world in fullscreen to adjust scene parameters:
+- Choose the tone, format, point of view and narration language
+- Choose the AI model; its price in credits is shown on the button
+- Generate the whole story, or open one chapter to regenerate only that one
 
-- Starfield presets
-- Background colors
-- Number of moons (up to 247)
-- Moon textures and colors
-- World size and detail
-- Halo (color and size)
-- Clouds (texture, color, opacity, movement)
-- Lighting (ambient, surface, direction X/Y/Z)
+You can also write or edit any chapter yourself (up to 2000 characters each).
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/06-release-scene.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+### The voice
 
-### 7) Narration and story
+Under **Voice**, one voice reads the whole world. Choose the voice, its speed and its instructions (the voice's character, mood and pace), then make the speech. While it plays, the line being read lights up on the stage.
 
-You can write narration for the world, including:
+You can also read a chapter yourself: open it and upload your recording (up to 20 minutes). It plays like made voice and costs no credits.
 
-- Introduction
-- Geography
-- Flora
-- Fauna
-- Society
-- History
-- Conclusion
+Each chapter keeps up to ten versions of its voice. Play any of them and pick the one the chapter is read by.
 
-You can also use assisted writing tools to generate or translate stories using different tones, formats, and languages.
+If you change a chapter's text after its voice was made, the chapter shows **Older than the text** until you make its speech again.
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/07-release-narrative.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+## Step 3 · Landscape
 
-### 8) Collaboration and access
+### The world in 3D
 
-Define who can:
+The stage shows the world. Drag to turn it and zoom to get closer. The body selector at the bottom left of the stage moves the camera to the **World**, its **Moon** or its **Star**, and brings that body's cards into view.
 
-- View the world
-- Publish Audios inside the world
-- Edit the world
+The drawer's cards shape what you see:
 
-You can also set general access rules (private, link-based, or open).
+- **Starfield**
+- **Star** and **Light**
+- **Shell**, **Surface** and **Clouds**
+- **Moons**
 
-### 9) Draft and release
+Each card has a reset.
 
-Save your world as a draft while iterating.
+### The texture
 
-Release the world when you are ready for it to be explored and used by others.
+In the **Surface** card, generate the planet's texture. Choose the AI model and guide it with the art medium, technique, color palette and lighting. Then select the texture you want the world to wear. A world needs a selected texture to be released.
+
+### The pictures
+
+The inspector holds the pictures of the seven sections. Each section has its figure and up to ten pictures.
+
+Open a section and its pictures take the stage. Swipe the stage (or select a picture in the inspector) to look through them, and pinch or double-tap to zoom in. Looking changes nothing: select the **pin** under a picture to make it the section's picture, the one the world page shows. Until a picture is pinned, the figure shows.
+
+In the inspector you can make a picture from the section's text, upload your own, or remove one. A section needs its text (written in Story) before a picture can be made from it. Pictures can share the texture's look or have their own.
+
+Textures, stories, voices and pictures made with AI are paid with your credits, the same balance as every other AI action. Your plan gives you credits every month; if you need more, buy a credit pack. Credits from a pack last 12 months from the day you buy them.
+
+## Step 4 · Release
+
+### The cover
+
+Turn and zoom the world on the stage, pick its World, Moon or Star, then select **Capture the world**. Or upload an image. The cover is shown in a circle.
+
+Without a cover, the world's DNA figure stands in for it.
+
+### Collaboration and access
+
+Add xPlorers and give each a role:
+
+- **Viewer**: can view the world
+- **Publisher**: can publish Audios inside the world
+- **Editor**: can edit the world
+
+Under **General Access**, keep the world **Restricted** or open it to **Anyone with the link**.
+
+### World Readiness
+
+The checklist shows what the world still needs. Each item takes you to the step where you can complete it.
+
+A world needs these to be released:
+
+- A real exoplanet and a name (Origin)
+- A selected texture (Landscape)
+- No AI job still running
+
+A story, shaped elementals and a cover are recommended, not required.
+
+### Draft and release
+
+Your world is saved as a draft while you work. Select **Release Entangled World** when you are ready for it to be explored and used by others. After that, the button reads **Release Changes**.
+
+Only the owner and publishers can release a world.
 
 ## The story as audio
 

@@ -11,194 +11,177 @@ Esta página documenta funciones que todavía están en desarrollo y estarán di
 
 ### Por dónde empezar
 
-Ve a **Release → New Entangled World**.
+Ve a **Publicar → Nuevo Mundo Entrelazado**.
 
 ![New Entangled World](https://herbarium.plantasia.space/docs/en/media/worlds/new.png)
 
+Según tu tipo de usuario, puedes crear un número limitado de Mundos Entrelazados. Se pueden añadir más mundos con complementos.
 
-Según tu tipo de usuario, puedes crear un número limitado de Mundos Entrelazados. Se pueden añadir mundos adicionales mediante add-ons.
+Un mundo nuevo se abre en **EW Builder**. Haces el mundo en cuatro pasos, que se ven arriba en la página: **Origen**, **Historia**, **Paisaje** y **Publicar**. Puedes pasar de uno a otro en cualquier orden, y tu trabajo se guarda como borrador mientras avanzas.
 
-Lanzar un mundo abre un formulario de varios pasos.
+## Cómo está organizado EW Builder
 
-## PASO 1
+- **El escenario** ocupa la página: el cielo, la historia o el mundo en 3D, según el paso.
+- **El cajón**, abajo, tiene las tarjetas del paso. Deslízalo hacia los lados para verlas todas, arrastra su borde superior para cambiar su tamaño, u ocúltalo con el botón del cajón, arriba.
+- **El inspector**, a la derecha, tiene los ajustes del paso. Ocúltalo con el botón del inspector, arriba.
+- **Orchidea**, la asistente, se abre desde la flor, arriba.
+- **Deshacer** y **Rehacer** están arriba a la izquierda.
 
-### 1) Elegir un exoplaneta
+### En un teléfono
 
-Empieza seleccionando un exoplaneta real con el que entrelazar tu mundo.
+- Arriba se lee **Paso 2 de 4 · Historia**. Tócalo para ver la lista de pasos e ir a otro.
+- El inspector se abre como una hoja desde abajo. Ábrelo con el botón del inspector, arriba; toca fuera de él para cerrarlo.
+- Las tarjetas del cajón se deslizan hacia los lados. En Paisaje, el cajón se retira mientras la imagen de una sección está en el escenario; el botón del cajón trae de vuelta el mundo y sus tarjetas.
+- Publicar es una sola columna: el mundo y, debajo, todo lo demás.
+- Orchidea se abre sobre toda la página.
 
-Puedes:
+## Paso 1 · Origen
 
-- Elegir entre exoplanetas sugeridos o futuros
-- Buscar por nombre
-- Buscar por número (por ejemplo, al escribir `95` se mostrarán planetas con ese número en su nombre)
+### Elige un exoplaneta
 
-Puedes cambiar el exoplaneta seleccionado más adelante.
-
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/02-release-choose-exoplanet.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de vídeo.
-</video>
-
-
-### Datos del exoplaneta
-
-Al expandir el panel de información, puedes ver medidas astronómicas y físicas de la base de datos actual de exoplanetas.
-
-Por el momento, estos datos afectan principalmente al comportamiento del Cosmic LFO dentro de los Orbiters. Elegir un planeta es sobre todo una decisión artística y simbólica.
-
-
-### 2) Nombra tu mundo
-
-Define un nombre para tu Mundo Entrelazado.
-
-Si necesitas inspiración, puedes generar un nombre seleccionando un reino biológico:
-
-- Plantae
-- Fungi
-- Animalia
-
-El nombre generado se puede editar más adelante.
-
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/03-release-choose-name.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de vídeo.
-</video>
-
-### 3) Elementales de worldbuilding
-
-Los Elementales de Worldbuilding definen la identidad de tu mundo.
-
-Describen:
-
-- Geografía
-- Flora
-- Fauna
-- Sociedad
-- Historia
+Cada mundo nace de un exoplaneta real. El escenario muestra el cielo entero con los planetas de los que puede nacer un mundo.
 
 Puedes:
 
-- Aplicar un preset
-- Aleatorizar todos los valores
-- Definir cada elemento manualmente
+- Buscar por nombre o número en el buscador (al escribir `95` aparecen los planetas con ese número en su nombre)
+- Elegir uno de los planetas sugeridos
+- Seleccionar un planeta en el mapa del cielo
 
-Estos valores se usan después para generar visuales y narración.
+Con los botones bajo el mapa puedes acercar y alejar, centrar en tu planeta, volver al cielo entero o elegir qué capas se ven (exoplanetas, cielo nocturno, guías). La segunda vista muestra los números de todo el catálogo.
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/04-release-worldbuilding-elementals.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de vídeo.
-</video>
+Puedes cambiar el exoplaneta más adelante.
 
-### 4) Matriz Elemental
+### Lo que te cuenta el planeta
 
-La Matriz Elemental sitúa tu mundo entre **agua, fuego, tierra y aire**.
+Con un planeta elegido, el escenario muestra tres datos:
 
-Esto influye en la generación visual y crea seis secciones del mundo:
+- **Luz solar que recibe**, comparada con la Tierra
+- **Temperatura de equilibrio**, en °C o K
+- **Distancia en años luz**, con el año en que salió su luz y el año en que se descubrió
 
-- Principal
-- Geografía
-- Flora
-- Fauna
-- Sociedad
-- ADN
+La tarjeta **Cuerpo Astronómico**, en el cajón, dibuja a escala el sistema del planeta: cada planeta conocido de su estrella en su órbita, junto a la órbita de la Tierra para comparar. El catálogo no tiene la forma de las órbitas, así que se dibujan como círculos.
 
-### Guardar borrador o continuar
+Estos datos también dan las velocidades que puede tomar el LFO Cósmico de un Orbiter. Elegir un planeta es sobre todo una decisión artística y simbólica.
 
-Después de completar el primer paso, puedes guardar el mundo como borrador o continuar al siguiente paso.
+### Nombra tu mundo
 
-## PASO 2
+La tarjeta **Nombre artístico** define el nombre del mundo. Si necesitas inspiración, elige un reino biológico (Plantae, Fungi o Animalia) y genera uno. Puedes editar el nombre cuando quieras.
 
-### 5) Generación de textura del planeta
+## Paso 2 · Historia
 
-En el segundo paso, puedes generar o regenerar la textura del planeta.
+### Los elementales
 
-Selecciona uno de los modelos de IA disponibles y guía la generación usando:
+El cajón tiene los elementales del mundo como tarjetas: su tipo de planeta, geografía, flora, fauna, sociedad, historia y elementos. Definen la identidad del mundo, y de ellos salen la historia, la textura y las imágenes.
 
-- Medio artístico
-- Técnica artística
-- Paleta de colores
-- Estilo de iluminación
+Puedes ajustar cada tarjeta a mano, aplicar uno de los **Presets** o pulsar **Aleatorio**. **Restablecer**, en el menú de Presets, vuelve a los valores iniciales.
 
-Las texturas se pagan con tus créditos, el mismo saldo que cualquier otra acción de IA. Tu plan te da créditos cada mes; si necesitas más, compra un paquete de créditos. Los créditos de un paquete duran 12 meses desde el día de la compra.
+### El texto
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/05-release-texture-gen.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de vídeo.
-</video>
+El escenario muestra la historia como la mostrará la página del mundo, en siete capítulos: introducción, geografía, flora, fauna, sociedad, historia y coda narrativa.
 
-### 6) Escena y atmósfera
+En el inspector, en **Texto**:
 
-En escritorio, puedes abrir el mundo a pantalla completa para ajustar los parámetros de la escena:
+- Elige el tono, el formato, el punto de vista y el idioma de la narración
+- Elige el modelo de IA; su precio en créditos se ve en el botón
+- Genera la historia entera, o abre un capítulo para regenerar solo ese
 
-- Presets de campo estelar
-- Colores de fondo
-- Número de lunas (hasta 247)
-- Texturas y colores de las lunas
-- Tamaño y detalle del mundo
-- Halo (color y tamaño)
-- Nubes (textura, color, opacidad, movimiento)
-- Iluminación (ambiente, superficie, dirección X/Y/Z)
+También puedes escribir o editar cualquier capítulo (hasta 2000 caracteres cada uno).
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/06-release-scene.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de vídeo.
-</video>
+### La voz
 
-### 7) Narración e historia
+En **Voz**, una sola voz lee todo el mundo. Elige la voz, su velocidad y sus instrucciones (el carácter de la voz, su ánimo y su ritmo), y luego crea la voz. Mientras suena, la línea que se lee se ilumina en el escenario.
 
-Puedes escribir la narración del mundo, incluyendo:
+También puedes leer un capítulo tú: ábrelo y sube tu grabación (hasta 20 minutos). Suena como una voz creada y no cuesta créditos.
 
-- Introducción
-- Geografía
-- Flora
-- Fauna
-- Sociedad
-- Historia
-- Conclusión
+Cada capítulo guarda hasta diez versiones de su voz. Escucha cualquiera y elige con cuál se lee el capítulo.
 
-También puedes usar herramientas de escritura asistida para generar o traducir historias con distintos tonos, formatos e idiomas.
+Si cambias el texto de un capítulo después de crear su voz, el capítulo muestra **Más antigua que el texto** hasta que crees su voz de nuevo.
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/07-release-narrative.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de vídeo.
-</video>
+## Paso 3 · Paisaje
 
-### 8) Colaboración y acceso
+### El mundo en 3D
 
-Define quién puede:
+El escenario muestra el mundo. Arrastra para girarlo y haz zoom para acercarte. El selector de cuerpos, abajo a la izquierda del escenario, lleva la cámara al **Mundo**, a su **Luna** o a su **Estrella**, y trae a la vista las tarjetas de ese cuerpo.
 
-- Ver el mundo
-- Publicar Audios dentro del mundo
-- Editar el mundo
+Las tarjetas del cajón dan forma a lo que ves:
 
-También puedes definir reglas generales de acceso (privado, por enlace o abierto).
+- **Campo Estelar**
+- **Estrella** y **Luz**
+- **Capa**, **Superficie** y **Nubes**
+- **Lunas**
 
-### 9) Borrador y lanzamiento
+Cada tarjeta tiene su restablecer.
 
-Guarda tu mundo como borrador mientras iteras.
+### La textura
 
-Lanza el mundo cuando esté listo para ser explorado y utilizado por otras personas.
+En la tarjeta **Superficie**, genera la textura del planeta. Elige el modelo de IA y guíalo con el medio artístico, la técnica, la paleta de colores y la iluminación. Luego selecciona la textura que llevará el mundo. Un mundo necesita una textura seleccionada para publicarse.
+
+### Las imágenes
+
+El inspector tiene las imágenes de las siete secciones. Cada sección tiene su figura y hasta diez imágenes.
+
+Abre una sección y sus imágenes ocupan el escenario. Desliza el escenario (o selecciona una imagen en el inspector) para verlas, y pellizca o toca dos veces para acercar. Mirar no cambia nada: selecciona el **pin** bajo una imagen para fijarla como la imagen de la sección, la que muestra la página del mundo. Hasta que fijes una imagen, se ve la figura.
+
+En el inspector puedes hacer una imagen a partir del texto de la sección, subir la tuya o quitar una. Una sección necesita su texto (escrito en Historia) antes de poder hacer una imagen. Las imágenes pueden compartir el estilo de la textura o tener el suyo.
+
+Las texturas, historias, voces e imágenes hechas con IA se pagan con tus créditos, el mismo saldo que cualquier otra acción de IA. Tu plan te da créditos cada mes; si necesitas más, compra un paquete de créditos. Los créditos de un paquete duran 12 meses desde el día en que lo compras.
+
+## Paso 4 · Publicar
+
+### La portada
+
+Gira y acerca el mundo en el escenario, elige su Mundo, Luna o Estrella, y selecciona **Capturar el mundo**. O sube una imagen. La portada se muestra en un círculo.
+
+Sin portada, la figura de ADN del mundo ocupa su lugar.
+
+### Colaboración y acceso
+
+Agrega xPlorers y da a cada uno un rol:
+
+- **Visualizar**: puede ver el mundo
+- **Publicar**: puede publicar Audios dentro del mundo
+- **Editar**: puede editar el mundo
+
+En **Acceso general**, deja el mundo **Restringido** o ábrelo a **Cualquiera con el enlace**.
+
+### Preparación del mundo
+
+La lista muestra lo que aún le falta al mundo. Cada punto te lleva al paso donde puedes completarlo.
+
+Para publicarse, un mundo necesita:
+
+- Un exoplaneta real y un nombre (Origen)
+- Una textura seleccionada (Paisaje)
+- Ningún trabajo de IA en curso
+
+Una historia, unos elementales ajustados y una portada son recomendables, no obligatorios.
+
+### Borrador y publicación
+
+Tu mundo se guarda como borrador mientras trabajas. Selecciona **Publicar Mundo Entrelazado** cuando quieras que otras personas lo exploren y lo usen. Después, el botón dice **Publicar cambios**.
+
+Solo el propietario y quienes tienen el rol de publicar pueden publicar un mundo.
+
+## La historia como audio
+
+Cuando los capítulos de tu mundo tienen voz, puedes publicar la historia como un solo audio. Los capítulos que elijas se unen en tu orden, con la portada, el nombre y las personas del mundo. El audio suena en Orbiters como cualquier otro.
+
+Un capítulo se puede elegir cuando su voz coincide con su texto y su grabación está lista. Si cambiaste el texto después de grabar, el capítulo muestra **voz anterior a su texto**.
+
+### Desde la página del mundo
+
+El mundo tiene que estar publicado y debes poder editarlo.
+
+1. Abre el menú **Publicar** del mundo y elige la opción de la historia como audio. Aparece cuando la historia tiene voz.
+2. Marca los capítulos y arrástralos para ordenarlos.
+3. Crea el borrador. El formulario de audio se abre en el borrador: revísalo y publícalo ahí.
+
+Publicarlo de nuevo más adelante crea una nueva versión del mismo audio.
+
+### Desde el Builder
+
+En el paso Publicar, activa **Publicar la historia como audio** y elige los capítulos y su orden. Tu elección se guarda con el borrador del mundo.
+
+Selecciona **Publicar Mundo Entrelazado** (o **Publicar cambios**): primero se publica el mundo y luego se abre el formulario de audio en el borrador de la historia.
+
+Si un capítulo muestra **voz anterior a su texto**, selecciónalo y confirma para volver al texto que se leyó. Puedes deshacerlo.
