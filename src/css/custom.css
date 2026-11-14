@@ -753,6 +753,21 @@ ul li {
 /* The panel's menus and model list open in a portal: above the panel, not under it. */
 .orchidea-docs-portal { z-index: 1001 !important; }
 
+/* Orchidea's dock button: the size of a sidebar icon, round, lifted off the page. */
+.orchidea-docs-host .orchidea-docs-dock-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.35);
+}
+/* Its home at the foot of the docs sidebar, in line with the collapse button. */
+.orchidea-docs-home-row {
+  display: flex;
+  flex-shrink: 0;
+  padding: 8px 12px;
+}
+
 /* The few browser defaults the design components assume (Tailwind's reset), only where they render:
    the assistant and its portalled menus. In the base layer, so the components' own classes win; the
    rest of the docs keeps its lists, images and spacing. */

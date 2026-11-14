@@ -102,9 +102,12 @@ export default function DocsAssistant({ base }: { base: string }) {
   const returnTo = window.location.href;
   const link = (path: string) => { const url = new URL(`/${locale}/${path}`, base); url.searchParams.set('redirectTo', returnTo); return url.href; };
   return <div className={`orchidea-docs-host ${mode}`}>
-    <FloatingDock storageKey="docs.orchidea.spot" placement="free" bottomClearance="24px" topClearance="72px">
+    {/* Docked at the foot of the docs sidebar (its home) where there is one; elsewhere and on phones,
+        the bottom-left corner is its home. Drag it anywhere; drop it back on the home, or press the
+        dot left there, to dock it. */}
+    <FloatingDock storageKey="docs.orchidea.dock" home="docs-orchidea" defaultCorner="bottom-left" homeLabel={es ? 'Traer a Orchidea' : 'Bring Orchidea back'} placement="free" bottomClearance="8px" topClearance="72px">
       {(corner) => <div style={{ display: 'flex', flexDirection: corner.startsWith('bottom') ? 'column-reverse' : 'column', alignItems: corner.endsWith('right') ? 'flex-end' : 'flex-start', gap: 8 }}>
-        <Button variant="ghost" size="icon" data-floating-dock-handle aria-label={es ? 'Pregunta a Orchidea' : 'Ask Orchidea'} aria-expanded={open} style={{ width: 72, height: 72 }} onClick={() => { setOpen(!open); if (!open) void access.load(); }}><Orchidea size={64} className="size-16" style={{ width: 64, height: 64 }} /></Button>
+        <Button variant="ghost" size="icon" data-floating-dock-handle aria-label={es ? 'Pregunta a Orchidea' : 'Ask Orchidea'} aria-expanded={open} className="orchidea-docs-dock-button" onClick={() => { setOpen(!open); if (!open) void access.load(); }}><Orchidea size={24} style={{ width: 24, height: 24 }} /></Button>
         {open ? <>
           {state.status === 'unknown' || state.status === 'loading' || state.status === 'failed' ? <OrchideaChat layout="window"><OrchideaChatFeed>
             {state.status === 'failed' ? <OrchideaChatMessage from="orchidea">{es ? 'No se pudo cargar Orchidea.' : 'Orchidea could not load.'} <Button variant="link" onClick={() => void access.load()}>{es ? 'Reintentar' : 'Try again'}</Button></OrchideaChatMessage> : <OrchideaChatWait>{es ? 'Cargando Orchidea' : 'Loading Orchidea'}</OrchideaChatWait>}
