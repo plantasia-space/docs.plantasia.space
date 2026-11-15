@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { collectionViewsMarkdown } from '../../components/docs/collectionViewsData.js';
 import { roleGridMarkdown } from '../../components/docs/roleGridData.js';
+import { worldPartsMarkdown } from '../../components/docs/worldPartsData.js';
 
 const decode = (text) => text.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
 
@@ -29,6 +30,10 @@ export function plainMarkdown(content, locale = 'en') {
     .replace(/<Term id="[\w-]+">([\s\S]*?)<\/Term>/g, '$1')
     .replace(/<StepFlow\b[\s\S]*?\n\/>\n?/g, '')
     .replace(/^<CollectionViews\s*\/>$/gm, () => collectionViewsMarkdown(locale))
+    .replace(/^<WorldParts\b([^\n]*)\/>$/gm, (_, attrs) => {
+      const caption = decode(attrs.match(/\bcaption="([^"]*)"/)?.[1] ?? '');
+      return worldPartsMarkdown(locale) + (caption ? `\n\n${caption}` : '');
+    })
     .replace(/^<RoleGrid id="([\w-]+)"\s*\/>$/gm, (_, id) => roleGridMarkdown(id, locale))
     .replace(/^<\/?Walkthrough>\n?/gm, '')
     .replace(/\n{3,}/g, '\n\n');

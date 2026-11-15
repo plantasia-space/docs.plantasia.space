@@ -1,79 +1,75 @@
 ---
 title: Entangled Worlds Overview
 sidebar_label: Overview
-description: Learn how to release, edit, and explore Entangled Worlds, the immersive interactive spaces of Plantasia Space.
+description: Make an Entangled World from a real exoplanet, change it, and play inside it.
 sidebar_position: 1
 sidebar_custom_props:
   icon: EyeIcon
 ---
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
-import { Pencil, Power, Clapperboard } from 'lucide-react';
+import { Pencil, Power, Clapperboard, AudioLines, Rocket } from 'lucide-react';
 import ReleaseIcon from '@site/static/img/symbols-12-25/release-current.svg';
 
-Entangled Worlds are world-building spaces where sound, visuals, and narrative come together.
+An Entangled World is a world made from a **real exoplanet**: a planet in 3D with a story in seven chapters, read aloud. Audios play inside it, and Orbiters turn its data into sound.
 
 <NavigationGrid>
-  <NavigationCard 
+  <NavigationCard
+    href="/docs/entangled-worlds/quickstart"
+    label="Quickstart"
+    icon={<Rocket />}
+    description="Your first world in 10 minutes."
+  />
+  <NavigationCard
     href="/docs/entangled-worlds/release"
     label="Release"
     icon={<ReleaseIcon style={{ width: 24, height: 24, fill: "currentColor" }} />}
-    description="Create a new world."
+    description="Make a world in World Studio."
   />
-  <NavigationCard 
+  <NavigationCard
     href="/docs/entangled-worlds/edit"
     label="Edit"
     icon={<Pencil />}
-    description="Modify world settings."
+    description="Change a world you released."
   />
-  <NavigationCard 
+  <NavigationCard
     href="/docs/entangled-worlds/interact"
     label="Interact"
     icon={<Power />}
-    description="Explore and inhabit worlds."
+    description="Listen and play inside a world."
   />
-  <NavigationCard 
+  <NavigationCard
+    href="/docs/entangled-worlds/story-audio"
+    label="The story as audio"
+    icon={<AudioLines />}
+    description="Release the world's voice as an Audio."
+  />
+  <NavigationCard
     href="/docs/entangled-worlds/studio"
     label="Studio & Clips"
     icon={<Clapperboard />}
-    description="Create and release Clips."
+    description="Make short videos from a world."
   />
 </NavigationGrid>
 
-They are artistic representations of **real exoplanets**, designed to host Audios and give them spatial, visual, and story context.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/overview/world-page.jpg"
+  alt="The world page of Flatfish: the planet with its moons, its name above, and its maker below."
+  width={600}
+/>
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/01-overview-world.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+## What a world holds
 
-## What an Entangled World does
+- **A real exoplanet**, with its sky, its star and the data astronomers measured
+- **Its elementals**: geography, flora, fauna, society, history and elements
+- **A story** in seven chapters, with a voice that reads it
+- **A landscape**: the planet in 3D with its texture, clouds and moons, and a picture for each chapter
+- **Audios** released inside it, and the **Orbiters** that play them
 
-An Entangled World connects:
+## The world page
 
-- **A real exoplanet** (astronomical data and reference)
-- **A world identity** (geography, flora, fauna, society, history)
-- **Audios** (music and sound placed inside the world)
-- **Orbiters** (the instruments used to explore and transform sound)
+A released world has its own page on Plantasia Space. The main page shows the planet and its moons; once the story has a voice, **Listen to the story** plays it all. Each chapter you write in World Studio becomes one part of the page:
 
-Together, these elements turn listening into exploration.
+<WorldParts caption="Each part shows its chapter's text, lit up line by line while the voice reads it, and the picture you pinned for it." />
 
-## Sections and structure
-
-Each Entangled World is organized into sections:
-
-- A **main** section that brings everything together
-- **Geography**, **Flora**, **Fauna**, **Society**, and **DNA** sections
-
-These sections act as visual and narrative anchors, helping communicate the identity of the world.
-
-## What this section covers
-
-- **Release**: create and publish a new Entangled World
-- **Edit**: refine an existing world over time
-- **Interact**: explore worlds, place Audios, and navigate them with Orbiters
-- **Studio & Clips**: create and release Clips — short music-backed videos made from your world
+Move between the parts with the links at the foot of each one.

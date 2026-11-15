@@ -1,101 +1,137 @@
 ---
 title: Studio & Clips
-sidebar_position: 5
+sidebar_position: 6
 sidebar_custom_props:
   icon: Clapperboard
 ---
 
-## What is a Clip?
+A **Clip** is a short video made from an Entangled World: the world on screen, with music, the world's voice reading a chapter, or both, and text, pictures and camera moves on a timeline. You make it in **Clip Studio**.
 
-A Clip is a short, music-backed video created from an Entangled World. In the Studio, you combine your world's visuals with a segment of an Audio, then add animated text, images, and other elements on a timeline.
+Released Clips show on the world's page, in the **Clips** tab of the home feed, and in search under the **Clips** filter. Your own are under **My Clips**.
 
-Released Clips appear:
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/clips-feed.jpg"
+  alt="The home feed on its Clips tab, showing a Clip of the world Flatfish."
+  width={600}
+/>
 
-- On the world's public page
-- In the **Clips** tab of the home feed
-- In search results, under the **Clips** filter
+<StepFlow
+  groups={[
+    { label: 'Create clip', steps: [{ n: 1, label: 'Choose the world', href: '#start' }] },
+    { label: 'Clip Studio', steps: [
+      { n: 2, label: 'Select audio', href: '#audio' },
+      { n: 3, label: 'Set animations', href: '#animations' },
+      { n: 4, label: 'Export', href: '#export' },
+      { n: 5, label: 'Release Clip', href: '#release' },
+    ] },
+  ]}
+/>
 
-You can find all of your own Clips under **My Clips**.
+## 1. Choose the world {#start}
 
-![Clips tab in the home feed](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/home-feed-clips-tab.png)
+Go to **Release → New Clip**, or open the **Release** menu on a world's page. In **Create clip**, choose the Entangled World and its **Section** (the chapter the Clip is about), then select **Open clip studio**.
 
-## Open the Studio
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/create-clip.jpg"
+  alt="The Create clip dialog with Flatfish selected among the available worlds, and Open clip studio."
+  width={480}
+  dots={[[1, 76.9, 96.3]]}
+/>
 
-Go to **Release → New Clip**, select the Entangled World you want to use, then choose **Open video studio**. You can also start a new Clip directly from your world's page.
+Depending on your plan, you can make a limited number of Clips per world. See [Plans and credits](/docs/plantasia-space/plans-and-credits).
 
-Depending on your subscription, you can create a limited number of Clips per world.
+## 2. Select audio {#audio}
 
-The Studio guides you through four steps.
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/select-audio.jpg"
+  alt="Select audio: the audio search with Exraña Señal Luminosa chosen."
+  width={480}
+  dots={[[2, 49.6, 25.6]]}
+/>
 
-## STEP 1 — Select audio
+Search for the Audio that plays under the Clip, or pick a suggested one. When the Clip's section has a voice, the **Voice-over** card lets the voice read it in the Clip: switch it on or off. A Clip can have music, the voice, or both. A Clip with only the voice starts out the same length as the voice.
 
-Choose the Audio that will back your Clip.
+Picking an Audio takes you to the next step. On the timeline, you choose which part of it plays.
 
-You can search the tracks available to you, preview them, and trim the exact segment you want to use. The Clip's length follows the segment you select.
+## 3. Set animations {#animations}
 
-![Studio — Select audio](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/studio-step1-audio.png)
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/set-animations.jpg"
+  alt="Set animations: the world on the canvas, the elements bar and the timeline with the Music track below it, and the Scene settings in the inspector."
+  dots={[['A', 43.9, 58], ['B', 39.8, 28.5], ['C', 44.2, 80], ['D', 84.5, 27.2]]}
+/>
 
-## STEP 2 — Set animations
+This is where the Clip is made: a live canvas of your world, with a timeline under it.
 
-This is the heart of the Studio: a live canvas of your world, paired with a timeline.
+- **A. Elements**: the bar above the timeline adds **Text**, an **Image**, a **Video**, a **World** camera move or a **Shape**
+- **B. The canvas** shows the Clip as it plays
+- **C. The timeline** places each element in time
+- **D. The inspector** sets the selected element (**Element**) or the whole Clip (**Scene**)
 
-Here you can:
+### The timeline
 
-- Add elements to the canvas: **text**, **images**, **videos**, **shapes**, and the **world** itself
-- Arrange when each element appears and disappears on the timeline
-- Pick a theme preset or customize colors and typography
-- Set camera moves with presets like *Calm orbit*, *Reveal*, *Drift*, or *Arrival* — or fine-tune them manually
-- Control text animation pacing and granularity (phrases, words, or mixed)
-- Add audio fade in and fade out
+The **Music** and **Voice** tracks each have their own **Level** and mute. Drag the music to choose which part of the Audio plays; its fade in and fade out are set on the music track.
 
-Select any element to edit its details in the inspector. Scene settings define defaults; individual elements can override them.
+The voice's **Subtitles** have their own track. With **Link to voice** on, the voice and its subtitles move as one block.
 
-![Studio — canvas, timeline and inspector](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/studio-step2-animations.png)
+### Scene and elements
 
-## Ask Orchidea
+Under **Scene**, the **Clip** tab holds the Clip's name, its aspect ratio and its theme **Preset** (or your own colors). The **Text** tab sets the text style: size, font, alignment and background. The **World** tab sets the camera moves: a preset such as **Calm orbit**, **Drift** or **Arrival**, or **Custom**, and how many moves the Clip has (**Sparse**, **Balanced** or **Dense**). Text animates by phrases, words or both.
 
-With a Bloom plan or above, the orchid in the Studio's header opens [Orchidea](/docs/plantasia-space/orchidea), the assistant, beside the canvas. Ask in plain words and it makes the change in your Clip:
+Select any element to change it in the inspector. Scene settings are the defaults, and each element can set its own.
 
-- The look: theme, font, text size and alignment, text and camera pacing
-- Elements and the timeline: add or remove text, images and camera moves, change their timing, animations and camera moves
+### Ask Orchidea
+
+With a Bloom plan or above, the flower in Clip Studio's header opens [Orchidea](/docs/plantasia-space/orchidea), the assistant, beside the canvas. Ask in plain words and it makes the change in your Clip:
+
+- The look: theme, font, text size and alignment, and how often the camera moves
+- Elements and the timeline: add or remove text, images and camera moves, change their timing and animation
+- The sound: switch the voice-over and its subtitles on or off, set each track's level, mute a track
 - Pictures: it places pictures you uploaded to this world, from the shared library or from the old library's plates, or makes a new square picture with AI from a prompt
-- Picture edits: it changes one of your pictures, a shared library picture or an old library plate with AI from a prompt ("make it night", "remove the background and leave only the flower"). The edit is a new picture and the original stays. It can also cut out the subject on a transparent background
+- Picture edits: it changes one of those pictures with AI from a prompt ("make it night", "remove the background and leave only the flower"). The edit is a new picture and the original stays. It can also cut out the subject on a transparent background
 - Texts written with AI, from a prompt
 
 Texts, pictures and picture edits made with AI cost credits, depending on the model, and Orchidea asks before each one. Every picture is checked, both what you ask for and what is made: one that isn't allowed on Plantasia Space isn't made or kept, and its credits come back.
 
-Each request is one step in the Studio's undo. To let Orchidea write texts and make pictures without asking, turn off **Ask before using credits** in its **⋯** menu; it asks again in every new conversation. Anything that affects other people always asks.
+Each request is one step in Clip Studio's undo. To let Orchidea write texts and make pictures without asking, turn off **Ask before using credits** in its **⋯** menu; it asks again in every new conversation. Orchidea always asks before anything that affects other people.
 
-## STEP 3 — Export
+## 4. Export {#export}
 
-Choose an aspect ratio and resolution, then capture the animation as a video:
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/export.jpg"
+  alt="Export options: Landscape, Square, Vertical and Portrait, the resolution of the chosen one, Capture video, Release Clip without video and Back to editor."
+  width={520}
+  dots={[[4, 95, 69.4]]}
+/>
 
-- **Landscape** — YouTube · Web · TV
-- **Square** — Social feed
-- **Vertical** — Reels · Shorts
-- **Portrait** — Feed post
+Choose the shape of the video:
 
-Select **Capture video** to start recording. A capture window opens — accept the share prompt there, then keep both windows open and unchanged until the recording finishes.
+- **Landscape**: YouTube / web
+- **Square**: Social feed
+- **Vertical**: Reels / Shorts
+- **Portrait**: Feed post
 
-Video capture works on desktop browsers; Safari is not compatible.
+Select **Capture video** to record it. A capture window opens: accept the share prompt there, then keep both windows open and unchanged until the recording finishes. Or choose **Release Clip without video** to release the animation without a recording.
 
-You can also choose **Release Clip without video** to skip the capture and release the animation directly.
+Capturing works in desktop Chrome, Edge and Firefox. In Safari and on a phone there is no Export step: the Clip is released without a video.
 
-![Studio — export options](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/studio-step3-export%20.png)
+## 5. Release Clip {#release}
 
-## STEP 4 — Release Clip
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/release-bar.jpg"
+  alt="The bar at the bottom of the Release Clip step: Back, Thumbnail and Release Clip."
+  wide
+  dots={[[5, 81.9, 58]]}
+/>
 
-Review your Clip before publishing. You can:
+Look over your Clip before you release it. The bar at the bottom has:
 
-- Play back the animation or the captured recording
-- Set a **thumbnail** — capture a frame or upload an image (a thumbnail is required to release)
-- Save the Clip as a **draft** and come back later
-- **Download** the captured video
-- **Release Clip** to publish it
+- **Thumbnail**: capture a frame or upload an image. A Clip needs one to be released
+- **Release Clip**, to publish it
 
-![Studio — release review](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/studio-step4-release.png)
+A Clip not released yet also has **Draft**, to keep it and come back later. With a recording, the bar also has **Download**, and a switch between the **Animation** and the **Recording**.
 
-A Clip is never more visible than its parent world: if the world is private, the Clip stays private too.
+A Clip is never more visible than its world: if the world is private, the Clip stays private too.
 
 ## Who can work on a Clip {#who-can-work-on-a-clip}
 
@@ -105,16 +141,20 @@ A Clip follows the roles of its Entangled World (see [Sharing](/docs/plantasia-s
 
 A Clip's Studio link asks you to sign in first if you're signed out, and shows a page saying so if the Clip isn't yours to edit.
 
-Whoever works on a Clip, it stays its maker's: it's released under their name, with a track they can use. Credits for pictures and texts made with AI come from whoever asks for them.
+Whoever works on a Clip, it stays its maker's: it's released under their name, and its Audio must be one they are allowed to use. Credits for pictures and texts made with AI come from whoever asks for them.
 
 ## Manage your Clips
 
-![Opening a Clip from the home feed](https://herbarium.plantasia.space/docs/2026-01-01_to_2026-06-09/clip-page.png)
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/studio/clip-menu.jpg"
+  alt="A Clip in the feed with its More options menu open: Share, Edit, Archive and Delete, and the download button on the left."
+  wide
+/>
 
 From **My Clips** or the Clip's page, you can:
 
-- **Download** the video as original or compressed MP4 — only for Clips with a captured video, and for two weeks after the capture. After that, the Clip's animation remains, and you can take a new capture whenever you want
-- **Archive** a Clip — it is hidden from feeds and profiles, and only you and the world's owner and editors can still see it. Archived Clips can't be edited and don't count toward your plan limits, and you (or the world's owner) can restore them at any time.
-- **Delete** a Clip permanently — its files are removed and direct links stop working. This cannot be undone.
+- **Download** the video as **Original** or **Compressed (MP4)**. Only for Clips with a recording, and for two weeks after the capture. After that the animation stays, and you can capture it again whenever you like.
+- **Archive** a Clip: it is hidden from feeds and profiles and kept private to you. Archived Clips can't be edited and don't count toward your plan limits. You can restore them at any time.
+- **Delete** a Clip permanently: its files are removed and direct links stop working. This can't be undone.
 
-Every Clip carries attribution for the Entangled World it was created from and the Audio it uses, including the track's license.
+Every Clip credits the Entangled World it was made from and the Audio it uses, with the Audio's license.

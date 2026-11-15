@@ -104,6 +104,28 @@
   color: var(--ifm-color-emphasis-700);
 }
 
+/* Stacked: one row per group, its steps side by side with the number before the label. */
+.stacked .flow {
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.stacked .group + .group::before {
+  content: '↓';
+  top: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stacked .link {
+  flex-direction: row;
+  align-items: center;
+}
+
+.stacked .number {
+  flex-shrink: 0;
+}
+
 @media (max-width: 996px) {
   .flow {
     flex-direction: column;

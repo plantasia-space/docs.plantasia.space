@@ -8,6 +8,7 @@ import LoopVideo from '@site/src/components/docs/LoopVideo';
 import IsoFigure from '@site/src/components/docs/IsoFigure';
 import CollectionViews from '@site/src/components/docs/CollectionViews';
 import RoleGrid from '@site/src/components/docs/RoleGrid';
+import WorldParts from '@site/src/components/docs/WorldParts';
 
 // Available on every docs page without an import.
 export default {
@@ -22,4 +23,5 @@ export default {
   IsoFigure,
   CollectionViews,
   RoleGrid,
+  WorldParts,
 };

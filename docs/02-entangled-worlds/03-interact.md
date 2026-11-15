@@ -5,53 +5,28 @@ sidebar_custom_props:
   icon: Power
 ---
 
-## Interacting with Entangled Worlds
+## Read and listen
 
-At the moment, Entangled Worlds are primarily interacted with through **Audios**.
+A released world has its own page. The main page shows the planet and its moons; once the story has a voice, **Listen to the story** plays it all. Each chapter of the story has its own part of the page:
 
-When you work with a track, you can select which Entangled World it belongs to. This selection defines the visual, narrative, and contextual space in which the Audio will be explored.
+<WorldParts caption="Each part shows its chapter's text, lit up line by line while the voice reads it, and the picture pinned for it." />
 
-## Worlds and tracks
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/interact/world-parts.jpg"
+  alt="Two parts of the world page of Flatfish, World Introduction and Geography DNA, each with its figure and its code."
+  width={600}
+/>
 
-Each Audio lives inside an Entangled World.
+## Worlds and Audios
 
-From the track view, you can:
+Every Audio plays inside an Entangled World. When an Audio is released, its maker chooses its world and, if they like, the chapter it belongs to (its **Narration section**). See [Audios › Release](/docs/audios/release).
 
-- See which Entangled World the Audio is assigned to
-- Switch between different sections of the world
-- Navigate the Audio through the world’s structure
+The world is only the Audio's default: listeners can still play it in another world.
 
-The Entangled World provides a spatial and narrative frame for listening.
+## Worlds and Orbiters
 
-## World sections
+Orbiters are the instruments you use to play and transform sound inside a world. The world's real exoplanet data sets the rates an Orbiter's Cosmic LFO can take. See [Orbiters › Interact](/docs/orbiters/interact).
 
-Entangled Worlds are divided into sections that represent different aspects of the world:
+## Worlds in Collections
 
-- Main
-- Geography
-- Flora
-- Fauna
-- Society
-- DNA
-
-When listening to a track, you can move between these sections to experience different visual and narrative contexts connected to the same Audio.
-
-## Listening and exploration
-
-As you navigate a track through an Entangled World, the world acts as a container for exploration rather than a static background.
-
-The visuals, narration, and world structure support a deeper listening experience and prepare the context for sound transformation using [Orbiters](/docs/orbiters/interact).
-
-## Relationship with Orbiters
-
-See [Orbiters](/docs/orbiters/interact) Section for more details. 
-
-Orbiters are used to actively explore and transform sound inside Entangled Worlds.
-
-While the Entangled World defines the context, Orbiters define the interaction. Together, they turn listening into an exploratory process.
-
-## Looking ahead
-
-In future versions, Entangled Worlds will also be used inside **Collections**, including mixed collections that combine multiple worlds, Audios, and Orbiters.
-
-This will allow worlds to be experienced not only per track, but as part of longer curated journeys.
+Worlds can be gathered in a **Worlds** collection, with its own page on Plantasia Space. See [Collections › Interact](/docs/collections/interact#worlds).
