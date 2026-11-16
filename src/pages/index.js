@@ -21,7 +21,7 @@ function HomepageHeader() {
           as="h1"
           className={clsx('hero__title', styles.wordmark)}
           style={{'--wordmark': `url(${siteConfig.customFields.wordmarkUrl})`}}>
-          <span className={styles.wordmarkText}>{siteConfig.title}</span>
+          <span className={styles.wordmarkText}>Plantasia Space</span>
         </Heading>
         <p className="hero__subtitle">
           <Translate id="homepage.tagline">Comprehensive Documentation</Translate>
@@ -43,8 +43,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={translate({message: 'Plantasia Space — Documentation & Guides', id: 'homepage.metaTitle'})}
-      description={translate({message: 'Official documentation for Plantasia Space — guides for Audios, Entangled Worlds, Orbiters, and Collections.', id: 'homepage.description'})}>
+      description={translate({message: 'Guides', id: 'homepage.description'})}>
       <HomepageHeader />
       <HomeFigure />
       <main>

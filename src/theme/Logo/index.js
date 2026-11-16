@@ -16,7 +16,7 @@ export default function Logo(props) {
   return (
     <Link to={href} {...rest}>
       <span className={clsx(imageClassName, styles.brand)}>
-        <span className={styles.wordmark} role="img" aria-label={siteConfig.title} style={{'--mark': `url(${siteConfig.customFields.wordmarkUrl})`}} />
+        <span className={styles.wordmark} role="img" aria-label="Plantasia Space" style={{'--mark': `url(${siteConfig.customFields.wordmarkUrl})`}} />
       </span>
       {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>}
     </Link>

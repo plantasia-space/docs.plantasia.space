@@ -391,16 +391,12 @@
     "message": "Documentación Completa",
     "description": "The tagline of the site"
   },
-  "homepage.metaTitle": {
-    "message": "Plantasia Space — Documentación y guías",
-    "description": "The homepage meta title (SEO)"
-  },
   "cookie.dialog.necessaryToggleLabel": {
     "message": "Cookies necesarias (siempre activadas)",
     "description": "Accessible name for the always-on necessary cookies toggle"
   },
   "homepage.description": {
-    "message": "Documentación oficial de Plantasia Space — guías de Audios, Mundos Entrelazados, Orbitadores y Colecciones.",
+    "message": "Guías",
     "description": "The description of the site"
   },
   "homepage.figure.orrery": {

@@ -13,11 +13,18 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 // dev docs and for local work.
 const ASSETS_BASE = PRODUCTION && !DEV_SITE ? 'https://herbarium.plantasia.space' : 'https://dev-herbarium.plantasia.space';
 
+// The share card: root draws it (the same card every Plantasia page shares), so the docs ship no
+// image of their own. Crawlers need a public address, so a local build points at production root.
+const SHARE_CARD_ROOT = PRODUCTION && DEV_SITE ? 'https://dev-root.plantasia.space' : 'https://plantasia.space';
+const SHARE_CARD_URL = `${SHARE_CARD_ROOT}/api/og?${new URLSearchParams({ title: 'Plantasia Space Docs', description: 'Guides' })}`;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Plantasia Space',
-  tagline: 'Comprehensive Documentation',
+  title: 'Plantasia Space Docs',
+  tagline: 'Guides',
   favicon: 'img/favico.ico',
+  // Browsers that take an SVG tab icon get this one: it follows the light/dark colour scheme.
+  headTags: [{ tagName: 'link', attributes: { rel: 'icon', type: 'image/svg+xml', href: '/img/favicon.svg' } }],
 
   // The site's address: the public docs, or the dev docs for a `DOCS_SITE=dev` build.
   url: DEV_SITE ? 'https://xplorer-docs.plantasia.space' : 'https://docs.plantasia.space',
@@ -151,7 +158,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Social card image for meta tags
-      image: 'img/docusaurus-social-card.jpg',
+      image: SHARE_CARD_URL,
       navbar: {
         title: 'docs',
         items: [
