@@ -58,7 +58,13 @@ listed or searchable.
   everyone, with the role you choose (Viewer to start). Then it can also show in public listings and
   search. Only the owner can change General Access.
 
-### 6. Release collection
+### 6. Licence
+
+Choose **Creative Commons BY 4.0** or, with **Noncommercial** on, **BY-NC 4.0**. The licence covers
+your curation: the title, cover, text and order. Every item keeps its own licence. Only the owner can
+change it. See [Licences](/docs/plantasia-space/sharing#licences).
+
+### 7. Release collection
 
 Press **Release collection** when it is ready. After release, the collection no longer saves
 by itself: publish your edits with **Release changes**.

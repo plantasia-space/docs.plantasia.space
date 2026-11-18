@@ -95,6 +95,36 @@ Others will not be able to open, edit, or publish inside that World unless you i
 	Entities = collaboration & contribution layer
 :::
 
+## Licences {#licences}
+
+Permissions decide who can open a work **inside** Plantasia Space. A **Creative Commons licence**
+decides what anyone may do with it **outside** too. Every work you release carries one:
+an Audio, an Orbiter, an Entangled World or a collection.
+
+- **CC BY 4.0**: anyone may use and adapt the work, also commercially, if they credit you.
+- **CC BY-NC 4.0**: the same, but not for commercial use. Turn on **Noncommercial** in the
+  Licensing & Rights box to choose it.
+
+You keep your copyright either way. Only the owner chooses the licence.
+
+### Works made from other works
+
+- **The strictest licence wins.** If a work uses someone else's non-commercial work, it is
+  non-commercial too. You can always be stricter than the works you use, never less.
+- **Credit every author.** A Clip's credits name you, its Entangled World and its Audio, each with
+  the author and the licence it was used under.
+- **Clips** take the licence of their Entangled World, made non-commercial by someone else's
+  non-commercial Audio.
+- **Collections**: the licence covers your curation (title, cover, text and order). Each item keeps
+  its own licence.
+- **Someone else's Orbiter** you play or record with is a work you use: credit its author and
+  respect its licence.
+- Someone else's work with **no licence yet** can't be used in a Clip until its author chooses one.
+  Your own works never block you.
+
+A licence can't be taken back. If you change it later, whoever used an earlier release under the
+earlier licence may go on doing so. Each release keeps the licence it was published with.
+
 ## Downloading Content
 
 Some audios can be downloaded directly. Downloads are enabled per release by the creator: when publishing or editing an audio, the **Enable Direct Downloads** option allows listeners to download it.

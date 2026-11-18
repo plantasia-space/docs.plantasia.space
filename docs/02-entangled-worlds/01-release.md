@@ -249,7 +249,13 @@ Under **General Access**, keep the world **Restricted** or open it to **Anyone w
 
 Below Collaboration, **Release the story as audio** joins the voiced chapters into one Audio. See [The story as audio](./05-story-audio.md).
 
-### 12. World Readiness {#readiness}
+### 12. Licence {#licence}
+
+A World is released under **Creative Commons BY 4.0**: others can use and adapt it if they credit
+you. Turn on **Noncommercial** to make it **BY-NC 4.0**, which also rules out commercial use. Clips
+made from the World take its licence. Only the owner can change it. See [Licences](/docs/plantasia-space/sharing#licences).
+
+### 13. World Readiness {#readiness}
 
 The checklist shows what the world still needs. A step with something missing has its own **Go to** button.
 
@@ -262,6 +268,6 @@ To be released, a world needs:
 
 **Elementals**, a **Story** and a **Cover** are recommended, not required.
 
-### 13. Release {#release}
+### 14. Release {#release}
 
 Select **Release Entangled World** when you want others to explore and use the world. After that, the button reads **Release Changes**: see [Edit](./02-edit.md).

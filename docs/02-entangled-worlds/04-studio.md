@@ -157,4 +157,6 @@ From **My Clips** or the Clip's page, you can:
 - **Archive** a Clip: it is hidden from feeds and profiles and kept private to you. Archived Clips can't be edited and don't count toward your plan limits. You can restore them at any time.
 - **Delete** a Clip permanently: its files are removed and direct links stop working. This can't be undone.
 
-Every Clip credits the Entangled World it was made from and the Audio it uses, with the Audio's license.
+Every Clip takes the licence of its Entangled World. If it uses someone else's non-commercial Audio,
+the Clip is non-commercial too. Its credits name you, the World and its author, and the Audio and its
+authors, each with their licence. See [Licences](/docs/plantasia-space/sharing#licences).

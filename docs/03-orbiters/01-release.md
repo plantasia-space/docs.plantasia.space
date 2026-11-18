@@ -67,7 +67,13 @@ or searchable.
   everyone, with the role you choose (Viewer to start). Then it can also show in public listings and
   search. Only the owner can change General Access.
 
-### 5. Release Orbiter
+### 5. Licence
+
+An Orbiter is released under **Creative Commons BY 4.0**: others can use and adapt it if they
+credit you. Turn on **Noncommercial** to make it **BY-NC 4.0**, which also rules out commercial use.
+Only the owner can change it. See [Licences](/docs/plantasia-space/sharing#licences).
+
+### 6. Release Orbiter
 
 Press **Release Orbiter** when you are ready. After release, you can play the Orbiter with different
 audios and Entangled Worlds. Later edits are published with **Release Changes**.
