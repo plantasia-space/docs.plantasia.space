@@ -15,7 +15,7 @@ const [root, flag] = process.argv.slice(2);
 if (root === '--print') { process.stdout.write(catalog); process.stderr.write(`${list.tools.length} tools, ${tokens} tokens, version ${list.version}\n`); }
 else {
   if (!root || (flag !== undefined && flag !== '--check')) throw new Error('Usage: assistant:catalog <mycelium checkout> [--check] | --print');
-  const target = path.resolve(root, 'config/server/ai/assistantCatalogs/docs.json');
+  const target = path.resolve(root, 'config/ai/assistantCatalogs/docs.json');
   if (!fs.existsSync(path.dirname(target))) throw new Error('Not a Mycelium checkout');
   if (flag === '--check') { if (fs.readFileSync(target, 'utf8') !== catalog) throw new Error('Docs catalog is stale'); }
   else { fs.writeFileSync(target, catalog); console.log(`wrote ${target}: ${list.tools.length} tools, ${tokens} tokens, version ${list.version}`); }
