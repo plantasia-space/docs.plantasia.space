@@ -109,14 +109,16 @@ You keep your copyright either way. Only the owner chooses the licence.
 
 ### Works made from other works
 
-- **The strictest licence wins.** If a work uses someone else's non-commercial work, it is
-  non-commercial too. You can always be stricter than the works you use, never less.
+- **The strictest licence wins.** If a work adapts someone else's non-commercial work, it is
+  non-commercial too. Putting music to moving image, as a Clip does, always counts as adapting it.
+  You can always be stricter than the works you use, never less.
 - **Credit every author.** A Clip's credits name you, its Entangled World and its Audio, each with
   the author and the licence it was used under.
 - **Clips** take the licence of their Entangled World, made non-commercial by someone else's
   non-commercial Audio.
 - **Collections**: the licence covers your curation (title, cover, text and order). Each item keeps
-  its own licence.
+  its own licence. Collecting is not adapting: a collection never turns non-commercial because of
+  what it holds.
 - **Someone else's Orbiter** you play or record with is a work you use: credit its author and
   respect its licence.
 - Someone else's work with **no licence yet** can't be used in a Clip until its author chooses one.
