@@ -262,7 +262,7 @@ export default async function createConfig() {
                 { label: 'Terms of Use', href: `${ROOT_BASE}/legal/terms` },
                 { label: 'Privacy Policy', href: `${ROOT_BASE}/legal/privacy` },
                 { label: 'Refunds and cancellation', href: `${ROOT_BASE}/legal/terms#refunds` },
-                { label: 'Withdraw from a purchase', href: `${ROOT_BASE}/legal/withdrawal` },
+                { label: 'Withdraw from contract here', href: `${ROOT_BASE}/legal/withdrawal` },
               ],
             },
             ...contactColumn(entity),

@@ -39,12 +39,12 @@
     "message": "Reembolsos y cancelación",
     "description": "Footer (PLA-724)"
   },
-  "link.item.label.Withdraw from a purchase": {
-    "message": "Desistir de una compra",
-    "description": "Footer (PLA-724)"
-  },
   "link.item.label.GitHub": {
     "message": "GitHub",
+    "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Withdraw from contract here": {
+    "message": "Desistir del contrato aquí",
     "description": "Footer (PLA-724)"
   }
 }
