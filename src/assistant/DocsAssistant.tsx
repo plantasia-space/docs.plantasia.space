@@ -1,11 +1,21 @@
 import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { useHistory, useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Button, FloatingDock, Orchidea, OrchideaChat, OrchideaChatFeed, OrchideaChatWait, OrchideaChatMessage } from 'plantasia.space-design/react';
+import { Button, Drawer, DrawerContent, DrawerTitle, FloatingDock, Orchidea, OrchideaChat, OrchideaChatFeed, OrchideaChatWait, OrchideaChatMessage } from 'plantasia.space-design/react';
 import { createAssistant, createEventStream, createRelayRequest, createSiteTransport, createUndoGroups } from 'plantasia.space-orchidea/assistant';
 import { AssistantPanel } from 'plantasia.space-orchidea/assistant/react';
 import { createDocsRegistry } from './capabilities';
 import { useDocsAssistantAccess } from './DocsAssistantProvider';
+
+
+/** Phone width (the site's own phone breakpoint): Orchidea opens in a bottom sheet there (PLA-731). */
+const PHONE = '(max-width: 767px)';
+function subscribePhone(onChange: () => void) {
+  const media = window.matchMedia(PHONE);
+  media.addEventListener('change', onChange);
+  return () => media.removeEventListener('change', onChange);
+}
+const usePhone = () => useSyncExternalStore(subscribePhone, () => window.matchMedia(PHONE).matches, () => false);
 
 export default function DocsAssistant({ base }: { base: string }) {
   const access = useDocsAssistantAccess();
@@ -101,23 +111,32 @@ export default function DocsAssistant({ base }: { base: string }) {
   const labels = useMemo(() => ({ greeting }), [greeting]);
   const returnTo = window.location.href;
   const link = (path: string) => { const url = new URL(`/${locale}/${path}`, base); url.searchParams.set('redirectTo', returnTo); return url.href; };
-  return <div className={`orchidea-docs-host ${mode}`}>
-    {/* Docked at the foot of the docs sidebar (its home) where there is one; elsewhere and on phones,
-        the bottom-left corner is its home. Drag it anywhere; drop it back on the home, or press the
-        dot left there, to dock it. */}
-    <FloatingDock storageKey="docs.orchidea.dock" home="docs-orchidea" defaultCorner="bottom-left" homeLabel={es ? 'Traer a Orchidea' : 'Bring Orchidea back'} placement="free" bottomClearance="8px" topClearance="72px">
-      {(corner) => <div style={{ display: 'flex', flexDirection: corner.startsWith('bottom') ? 'column-reverse' : 'column', alignItems: corner.endsWith('right') ? 'flex-end' : 'flex-start', gap: 8 }}>
-        <Button variant="ghost" size="icon" data-floating-dock-handle aria-label={es ? 'Pregunta a Orchidea' : 'Ask Orchidea'} aria-expanded={open} className="orchidea-docs-dock-button" onClick={() => { setOpen(!open); if (!open) void access.load(); }}><Orchidea size={24} style={{ width: 24, height: 24 }} /></Button>
-        {open ? <>
-          {state.status === 'unknown' || state.status === 'loading' || state.status === 'failed' ? <OrchideaChat layout="window"><OrchideaChatFeed>
+  const phone = usePhone();
+  const toggle = () => { setOpen(!open); if (!open) void access.load(); };
+  const chat = (layout: 'panel' | 'window') => <>
+          {state.status === 'unknown' || state.status === 'loading' || state.status === 'failed' ? <OrchideaChat layout={layout}><OrchideaChatFeed>
             {state.status === 'failed' ? <OrchideaChatMessage from="orchidea">{es ? 'No se pudo cargar Orchidea.' : 'Orchidea could not load.'} <Button variant="link" onClick={() => void access.load()}>{es ? 'Reintentar' : 'Try again'}</Button></OrchideaChatMessage> : <OrchideaChatWait>{es ? 'Cargando Orchidea' : 'Loading Orchidea'}</OrchideaChatWait>}
           </OrchideaChatFeed></OrchideaChat> : <AssistantPanel assistant={assistant} account={state.account}
             signInHref={link('auth/login')} pricingHref={new URL(`/${locale}/pricing`, base).href} creditsHref={new URL(`/${locale}/credits`, base).href}
-            locale={locale} surface="docs" layout="window" labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base, new URL(publicDocs).origin]} onClose={() => setOpen(false)}
-            style={{ width: 'min(380px, calc(100vw - 32px))', height: 'min(620px, calc(100dvh - 160px), var(--floating-dock-room, 100dvh))' }} />}
+            locale={locale} surface="docs" layout={layout} labels={labels} portalClassName="orchidea-docs-portal" linkOrigins={[window.location.origin, base, new URL(publicDocs).origin]} onClose={() => setOpen(false)}
+            style={layout === 'window' ? { width: 'min(380px, calc(100vw - 32px))', height: 'min(620px, calc(100dvh - 160px), var(--floating-dock-room, 100dvh))' } : undefined} />}
           {appLink && state.account ? <Button asChild><a href={appLink}>{es ? 'Abrir en la aplicación' : 'Open in the app'}</a></Button> : null}
-        </> : null}
+        </>;
+  return <div className={`orchidea-docs-host ${mode}`}>
+    {/* Docked at the foot of the docs sidebar (its home) where there is one; elsewhere and on phones,
+        the bottom-left corner is its home. Drag it anywhere; drop it back on the home, or press the
+        dot left there, to dock it. On phones the chat opens in a bottom sheet, not by the button. */}
+    <FloatingDock storageKey="docs.orchidea.dock" home="docs-orchidea" defaultCorner="bottom-left" homeLabel={es ? 'Traer a Orchidea' : 'Bring Orchidea back'} placement="free" bottomClearance="8px" topClearance="72px">
+      {(corner) => <div style={{ display: 'flex', flexDirection: corner.startsWith('bottom') ? 'column-reverse' : 'column', alignItems: corner.endsWith('right') ? 'flex-end' : 'flex-start', gap: 8 }}>
+        <Button variant="ghost" size="icon" data-floating-dock-handle aria-label={es ? 'Pregunta a Orchidea' : 'Ask Orchidea'} aria-expanded={open} className="orchidea-docs-dock-button" onClick={toggle}><Orchidea size={24} style={{ width: 24, height: 24 }} /></Button>
+        {open && !phone ? chat('window') : null}
       </div>}
     </FloatingDock>
+    {phone ? <Drawer open={open} modal={false} onOpenChange={(next) => { if (!next) setOpen(false); }}>
+      <DrawerContent aria-describedby={undefined} className={`orchidea-docs-portal orchidea-docs-sheet ${mode}`}>
+        <DrawerTitle className="sr-only">Orchidea</DrawerTitle>
+        <div className="orchidea-docs-sheet-body">{chat('panel')}</div>
+      </DrawerContent>
+    </Drawer> : null}
   </div>;
 }
