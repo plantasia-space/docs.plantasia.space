@@ -753,6 +753,28 @@ ul li {
 /* The panel's menus and model list open in a portal: above the panel, not under it. */
 .orchidea-docs-portal { z-index: 1001 !important; }
 
+/* Phones (PLA-731): the chat opens in a bottom sheet, nearly full height. Not modal, so its menus can
+   be tapped (and there is no scrim). The sheet is portalled to <body>, so it carries the portal's
+   class (the reset below) and its own z. */
+.orchidea-docs-sheet[data-slot="drawer-content"] {
+  z-index: 1000 !important;
+  height: 92dvh;
+  max-height: 92dvh;
+  border-top: 1px solid var(--ifm-color-emphasis-300) !important;
+  border-radius: 12px 12px 0 0;
+  outline: none;
+}
+.orchidea-docs-sheet-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+.orchidea-docs-sheet-body > * {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
 /* Orchidea's dock button: the size of a sidebar icon, round, lifted off the page. */
 .orchidea-docs-host .orchidea-docs-dock-button {
   width: 36px;
