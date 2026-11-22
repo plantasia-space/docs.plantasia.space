@@ -904,13 +904,21 @@ ul li {
   }
 }
 
-/* Footer (PLA-724): the docs' own footer colour, no external-link arrows, column titles small and
-   muted. */
+/* Footer (PLA-724): the docs' own footer colour, column titles small and muted. Links to outside
+   services open in a new tab and keep the external-link arrow, small and quiet as in root's footer;
+   links to plantasia.space stay in this tab (`target: '_self'` in the config) and show none
+   (PLA-544). */
 .footer {
   --ifm-footer-padding-vertical: 5rem;
 }
-.footer__link-item svg {
+.footer__link-item[target="_self"] svg {
   display: none;
+}
+.footer__link-item svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.375rem;
+  opacity: 0.7;
 }
 .footer__title {
   font-size: 0.75rem;

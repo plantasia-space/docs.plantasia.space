@@ -242,6 +242,8 @@ export default async function createConfig() {
           ],
         },
         // The same footer as root's guest pages (PLA-724): help, the legal pages, who runs the site.
+        // Links to plantasia.space stay in this tab (same product, another site); only the outside
+        // services (Discord, Instagram, GitHub) open a new tab with the arrow (PLA-544).
         footer: {
           // Not 'dark': the colours follow the page's light/dark theme (custom.css).
           style: 'light',
@@ -249,7 +251,8 @@ export default async function createConfig() {
             {
               title: 'Help',
               items: [
-                { label: 'Pricing', href: `${ROOT_BASE}/pricing` },
+                { label: 'Pricing', href: `${ROOT_BASE}/pricing`, target: '_self' },
+                { label: 'Desktop app', href: `${ROOT_BASE}/download`, target: '_self' },
                 { label: 'Documentation', to: '/docs/index' },
                 { label: 'Discord', href: 'https://discord.gg/JkKybrvqSN' },
                 { label: 'Instagram', href: 'https://instagram.com/plantasia_space' },
@@ -259,10 +262,10 @@ export default async function createConfig() {
             {
               title: 'Legal',
               items: [
-                { label: 'Terms of Use', href: `${ROOT_BASE}/legal/terms` },
-                { label: 'Privacy Policy', href: `${ROOT_BASE}/legal/privacy` },
-                { label: 'Refunds and cancellation', href: `${ROOT_BASE}/legal/terms#refunds` },
-                { label: 'Withdraw from contract here', href: `${ROOT_BASE}/legal/withdrawal` },
+                { label: 'Terms of Use', href: `${ROOT_BASE}/legal/terms`, target: '_self' },
+                { label: 'Privacy Policy', href: `${ROOT_BASE}/legal/privacy`, target: '_self' },
+                { label: 'Refunds and cancellation', href: `${ROOT_BASE}/legal/terms#refunds`, target: '_self' },
+                { label: 'Withdraw from contract here', href: `${ROOT_BASE}/legal/withdrawal`, target: '_self' },
               ],
             },
             ...contactColumn(entity),

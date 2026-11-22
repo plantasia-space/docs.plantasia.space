@@ -46,5 +46,9 @@
   "link.item.label.Withdraw from contract here": {
     "message": "Desistir del contrato aquí",
     "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Desktop app": {
+    "message": "App de escritorio",
+    "description": "Footer (PLA-544)"
   }
 }
