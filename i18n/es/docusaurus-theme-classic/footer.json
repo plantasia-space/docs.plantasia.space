@@ -1,34 +1,54 @@
 {
-  "link.title.Docs": {
-    "message": "Docs",
-    "description": "The title of the footer links column with title=Docs in the footer"
+  "link.title.Help": {
+    "message": "Ayuda",
+    "description": "Footer (PLA-724)"
   },
-  "link.title.Community": {
-    "message": "Community",
-    "description": "The title of the footer links column with title=Community in the footer"
+  "link.title.Legal": {
+    "message": "Legal",
+    "description": "Footer (PLA-724)"
   },
-  "link.title.More": {
-    "message": "More",
-    "description": "The title of the footer links column with title=More in the footer"
+  "link.title.Contact": {
+    "message": "Contacto",
+    "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Pricing": {
+    "message": "Precios",
+    "description": "Footer (PLA-724)"
   },
   "link.item.label.Documentation": {
     "message": "Documentación",
-    "description": "The label of footer link with label=Documentation linking to /docs/index"
+    "description": "Footer (PLA-724)"
   },
   "link.item.label.Discord": {
     "message": "Discord",
-    "description": "The label of footer link with label=Discord linking to https://discord.gg/ArcGZhws"
+    "description": "Footer (PLA-724)"
   },
   "link.item.label.Instagram": {
     "message": "Instagram",
-    "description": "The label of footer link with label=Instagram linking to https://instagram.com/plantasia_space"
+    "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Terms of Use": {
+    "message": "Condiciones de uso",
+    "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Política de privacidad",
+    "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Refunds and cancellation": {
+    "message": "Reembolsos y cancelación",
+    "description": "Footer (PLA-724)"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/plantasia-space-org/docs.plantasia.space"
+    "description": "Footer (PLA-724)"
   },
-  "copyright": {
-    "message": "Copyright © 2025 Plantasia Space Docs.",
-    "description": "The footer copyright"
+  "link.item.label.Withdraw from contract here": {
+    "message": "Desistir del contrato aquí",
+    "description": "Footer (PLA-724)"
+  },
+  "link.item.label.Desktop app": {
+    "message": "App de escritorio",
+    "description": "Footer (PLA-544)"
   }
 }

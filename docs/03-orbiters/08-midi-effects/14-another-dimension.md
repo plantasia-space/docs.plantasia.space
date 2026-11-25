@@ -1,0 +1,86 @@
+---
+title: Play on another dimension's hits
+sidebar_position: 1.9
+sidebar_custom_props:
+  icon: Waypoints
+---
+
+A generator's **Rate** can follow another <Term id="world-dimension">dimension</Term> of the same
+Orbiter instead of a note value. Type a melody into the Step sequencer of World II and pick
+**I · Kick** as its Rate: the melody walks one step on every kick, so it plays the drums' rhythm and
+stays in step with them, whatever the drums do. Add the open hat and it walks faster where the hats are.
+
+There is nothing new to learn: it is one more section in the Rate list you already know.
+
+## Who follows, who leads
+
+| Module | Follows (its Rate) | Leads (what it plays on) |
+|---|---|---|
+| **Step sequencer** | yes: the next step on each hit | yes: every note it plays |
+| **Arpeggiator** | yes: its next note on each hit | no |
+| **Axis notes** | yes: its notes land on the hits | no |
+| **Latent space** | yes: the loop's next note on each hit | yes: percussion by lane, a melody every note, a Voices model by its voices |
+| **Drum sequencer** | no (it keeps its own grid) | yes: by voice (Kick, Snare, Closed hat …) |
+
+- A source is always **another** dimension of the same Orbiter, never the generator's own.
+- A generator that follows a clock is **not** a source itself: pick the drums directly.
+
+## Picking a source
+
+Open **Rate**: on the module's <Term id="play-surface">play surface</Term>, or in the Studio, where
+Rate is a menu in the module's panel. The list shows the note values first, then **From another
+dimension**, one row per dimension that can lead, numbered as the Orbiter numbers them:
+
+- **Drum sequencer** and **Latent space · Percussion**: their lanes. Tap one to follow it, tap
+  more to add them ("Kick + Open hat"). Tapping the last lit lane off goes back to the note value.
+- **Step sequencer** and **Latent space · Melody**: **Every note**.
+- A dimension playing a Latent space's **Voices**: under that dimension, named by its voices
+  (**Chords+Bass · from I**), **Every note** (a chord counts once); the drums voice alone by lane.
+
+Closed, the button names what it follows: **I · Kick+Snare**, and **+2** when more lanes are lit. The
+screen's Rate corner reads the same. Picking a note value goes back to it.
+
+## What a hit does
+
+The source decides **when**, the follower decides **what**: every hit plays the follower's next note.
+
+- **Step sequencer**: each hit plays its next step that is **on**, rests skipped, in its Direction and
+  from Start; Euclid picks which steps are on, as it does on the grid. A step's **Length** is measured
+  to the next hit: 1 lasts until the next hit, 0.5 half of that gap. Chance can still skip a hit.
+- **Arpeggiator**: its next note on each hit. **Restart** stays on the bar: the first hit at or after
+  the line it names starts the figure again.
+- **Axis notes**: with **Repeat on hits** (on as it loads), every hit plays the note the Pitch input is
+  on, so a still input repeats it in the source's rhythm and moving it changes the pitch. Off, only a
+  move onto a new note plays, on the next hit.
+- **Latent space**: each hit plays the loop's next note, rests skipped, with the loop's velocity,
+  for the time to the next hit (two beats at most). Its **Rate** is new too: on a note value it plays
+  the loop at another speed (**1/16** as made, **1/8** at half speed).
+
+## Step on hits or Play on hits
+
+Once a source is picked, the list shows two ways to follow it:
+
+- **Step on hits** (as it starts): each hit plays the follower's next note, as above. The follower
+  walks at the source's pace; its own note value waits.
+- **Play on hits**: the follower keeps its own note value and its own notes and rests, as if it
+  weren't following. A step of its own plays only when one of the source's hits lands inside it, so
+  a note sounds where both play, and a rest of either stays a rest. The note value stays picked in the
+  list and can still be changed; the button reads both (**1/16 · I · Kick**).
+
+While a generator follows hits, **Swing** does nothing (the hits bring their own feel) and stays set
+for when it goes back to a note value.
+
+The hits are the ones that really play: when the source drops a hit (its Chance, Euclid, a muted
+voice), the follower drops it too. For probability on top, use the follower's own Chance.
+
+## In a room and after a seek
+
+The step a follower plays is the number of the source's hits **since beat 0**, never a count kept since
+it started. Everyone in a <Term id="room">room</Term>, someone joining late and a jump in the timeline
+all land on the same step.
+
+## When the source goes
+
+If the source is powered off, removed, or starts following a clock itself, the follower plays on its
+last note value. Its choice stays saved and shows dimmed ("I · Kick · off"); it follows again as soon
+as the source is back.

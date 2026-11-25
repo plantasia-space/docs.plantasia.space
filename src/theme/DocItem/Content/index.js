@@ -4,7 +4,7 @@ import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
-import { resolveIcon } from '../../utils/iconResolver';
+import { resolveIcon, ICON_STROKE } from '../../utils/iconResolver';
 import CopyMarkdownButton from '@site/src/components/CopyMarkdownButton';
 
 export default function DocItemContent({ children }) {
@@ -19,9 +19,7 @@ export default function DocItemContent({ children }) {
     contentTitle && metadata?.title && contentTitle.trim() === metadata.title.trim(),
   );
 
-  const iconClassName = clsx('docTitleIcon', {
-    'sidebarItemIcon--plantasia': iconName === 'PlantasiaIcon',
-  });
+  const iconClassName = 'docTitleIcon';
 
   return (
     <div
@@ -31,7 +29,7 @@ export default function DocItemContent({ children }) {
       {showTitle && (
         <header>
           <Heading as="h1" className={Icon ? 'docTitleWithIcon' : undefined}>
-            {Icon ? <Icon className={iconClassName} size={24} /> : null}
+            {Icon ? <Icon className={iconClassName} size={24} strokeWidth={ICON_STROKE} /> : null}
             <span>{metadata?.title}</span>
           </Heading>
         </header>

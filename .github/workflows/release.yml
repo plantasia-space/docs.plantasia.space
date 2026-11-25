@@ -1,0 +1,56 @@
+# Releases this app when main carries a package.json version that has no tag yet.
+# A release is: set the next version, merge dev to main (the `promote` skill does both).
+#
+# This workflow then creates the tag vX.Y.Z and the GitHub Release with generated notes.
+# It FAILS when main moved but the version did not: every commit that reaches main must be
+# a new version, so a red run here means the promotion forgot the bump. Fix the number on
+# dev and merge again; never move or delete a tag.
+#
+# Nobody tags by hand. The check is .github/scripts/release-version.sh, the same file in
+# every app and service repo.
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Tag and release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # create the tag and the GitHub Release
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Is this version new?
+        id: v
+        run: .github/scripts/release-version.sh
+      # Also runs on a re-run of an already tagged commit, so a release that was tagged but
+      # never got its notes is completed instead of skipped.
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.v.outputs.tag }}
+          VERSION: ${{ steps.v.outputs.version }}
+          PREVIOUS: ${{ steps.v.outputs.previous }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "$TAG is already released; nothing to do." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          # Notes cover the commits since the release before this one.
+          since=()
+          if [ -n "$PREVIOUS" ]; then since=(--notes-start-tag "$PREVIOUS"); fi
+          gh release create "$TAG" --target "$GITHUB_SHA" "${since[@]}" --title "Plantasia Space Docs $VERSION" --generate-notes
+          echo "Released $TAG" >> "$GITHUB_STEP_SUMMARY"

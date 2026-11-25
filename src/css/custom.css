@@ -1,51 +1,26 @@
+@import 'plantasia.space-design/components.css';
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-/* Lato and Orbit are served from this site (`static/fonts/`), not fetched from a font host. A
- * webfont request hands that host every visitor's IP before they have read a word, and there is
- * nothing to gain from it once the bytes are ours. Latin subsets — enough for the English and
- * Spanish docs — at ~14KB each.
- *
- * Orbit is single-weight upstream, so the old `family=Orbit` request returned exactly the 400
- * declared below. Lato ships 400 and 700; the headings below ask for 600, which CSS resolves to
- * the 700 face, same as before. */
-@font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Orbit';
-  src: url('/fonts/Orbit-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* Fonts come from the dashboard's theme: the faces from the design library (self-hosted, no font
+ * host), the families from `<style id="theme-fonts">`, which the theme-fonts plugin writes from the
+ * published catalog. Nothing here names a font. */
+@import 'plantasia.space-design/styles/fonts.css';
 
 h1,
 h2,
 h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 600; /* Regular weight */
   font-style: bold;
 }
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'Lato', sans-serif;
+  --ifm-font-family-base: var(--font-sans);
+  --ifm-font-family-monospace: var(--font-mono);
   --ifm-color-primary: #000000;
 
   --ifm-background-color: #ffffff;
@@ -101,7 +76,7 @@ h3 {
 }
 
 .navbar__title, .navbar__item {
-  font-family: 'Orbit', sans-serif;
+  font-family: var(--font-title);
   font-weight: 400; /* Regular weight */
   font-style: normal;
 }
@@ -168,57 +143,6 @@ h3 {
 
 
 
-/* Header Icons (derived from wrapperClassName) */
-[class*='doc-wrapper-icon-'] article h1:first-of-type {
-  display: flex !important;
-  align-items: center;
-}
-
-[class*='doc-wrapper-icon-'] article h1:first-of-type::before {
-  content: '';
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: 0.5rem; /* Gap */
-  background-color: currentColor;
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-}
-
-.doc-wrapper-icon-question article h1:first-of-type::before {
-  mask-image: url("/img/circle-question-mark.svg");
-  -webkit-mask-image: url("/img/circle-question-mark.svg");
-}
-
-.doc-wrapper-icon-eye article h1:first-of-type::before {
-
-.doc-wrapper-icon-cookie article h1:first-of-type::before {
-  mask-image: url("/img/symbols-12-25/eye.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/eye.svg");
-}
-  mask-image: url("/img/symbols-12-25/eye.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/eye.svg");
-}
-
-.doc-wrapper-icon-release article h1:first-of-type::before {
-  mask-image: url("/img/symbols-12-25/release-current.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/release-current.svg");
-}
-
-.doc-wrapper-icon-edit article h1:first-of-type::before {
-  mask-image: url("/img/pencil.svg");
-  -webkit-mask-image: url("/img/pencil.svg");
-}
-
-.doc-wrapper-icon-use article h1:first-of-type::before {
-  mask-image: url("/img/symbols-12-25/power.svg");
-  -webkit-mask-image: url("/img/symbols-12-25/power.svg");
-}
-
 .nav-xplorer.navbar__item {
   display: inline-flex;
   align-items: center;
@@ -235,7 +159,8 @@ h3 {
   -webkit-mask: url("/img/symbols-12-25/xplorer-current.svg") center / contain no-repeat;
 }
 
-.nav-blog.navbar__item {
+.nav-blog.navbar__item,
+.nav-whats-new.navbar__item {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -251,6 +176,16 @@ h3 {
   -webkit-mask: url("/img/pencil.svg") center / contain no-repeat;
 }
 
+.nav-whats-new.navbar__item::before {
+  content: '';
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: currentColor;
+  mask: url("/img/rss.svg") center / contain no-repeat;
+  -webkit-mask: url("/img/rss.svg") center / contain no-repeat;
+}
+
 @media (max-width: 1024px) {
   .navbar__brand .navbar__title {
     display: none;
@@ -261,7 +196,8 @@ h3 {
   }
 
   .nav-xplorer.navbar__item,
-  .nav-blog.navbar__item {
+  .nav-blog.navbar__item,
+  .nav-whats-new.navbar__item {
     width: 2.75rem;
     height: 2.75rem;
     padding: 0.25rem;
@@ -271,7 +207,8 @@ h3 {
   }
 
   .nav-xplorer.navbar__item::before,
-  .nav-blog.navbar__item::before {
+  .nav-blog.navbar__item::before,
+  .nav-whats-new.navbar__item::before {
     margin: 0;
   }
 }
@@ -437,9 +374,8 @@ ul li {
 }
 
 /* Same three rules as the markdown figures below — cap at the column, never
-   past the source's own size, never past the height ceiling, centred.
-   `mobile-client_mid.webp` on the Sensors page is 1147x1920: a portrait phone
-   shot, and the reason a blanket full width does not work here. */
+   past the source's own size, never past the height ceiling, centred. A
+   portrait phone shot is the reason a blanket full width does not work here. */
 .ps-doc-themed-image {
   display: block;
   margin-inline: auto;
@@ -585,23 +521,12 @@ ul li {
   height: 18px;
   flex-shrink: 0;
   color: currentColor;
-  stroke: currentColor;
 }
 
 @media (min-width: 997px) {
   .theme-doc-sidebar-container {
     border-right: 0 !important;
   }
-}
-
-/* Plantasia logo is a filled mark — follow the sidebar text color so it
-   stays visible in both themes (dark on light bg, white on dark bg). */
-.sidebarItemIcon--plantasia,
-.sidebarItemIcon--plantasia svg,
-.sidebarItemIcon--plantasia * {
-  color: currentColor;
-  stroke: currentColor;
-  fill: currentColor;
 }
 
 .menu__link [class*="linkLabel"],
@@ -660,6 +585,13 @@ ul li {
   filter: invert(0);
 }
 
+/* An inline icon (the Plantasia Space symbol) draws in the page's ground: the tile's opposite. */
+.navCardIcon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--ifm-background-color);
+}
+
 .docTitleWithIcon {
   display: inline-flex;
   align-items: center;
@@ -670,7 +602,6 @@ ul li {
   width: 24px;
   height: 24px;
   color: currentColor;
-  stroke: currentColor;
   flex-shrink: 0;
 }
 
@@ -725,4 +656,317 @@ ul li {
 .copy-markdown-btn--error {
   border-color: var(--ifm-color-danger);
   color: var(--ifm-color-danger);
+}
+
+/* What's new (COM-44): product chips and the Improvements / Fixes lists.
+   The root app's pop-up (PLA-514) reuses these class names on the feed HTML. */
+.wn-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.45rem;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: 0.05em;
+}
+
+.wn-chip::before {
+  content: '';
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--wn-chip-dot, var(--ifm-color-emphasis-500));
+}
+
+.wn-chip--orbiters { --wn-chip-dot: #4fb3d9; }
+.wn-chip--audios { --wn-chip-dot: #e8a23a; }
+.wn-chip--entangled-worlds { --wn-chip-dot: #8f7ae6; }
+.wn-chip--collections { --wn-chip-dot: #5bbf7a; }
+.wn-chip--platform { --wn-chip-dot: #d9665b; }
+
+.wn-changes > ul > li {
+  margin-bottom: 0.6rem;
+}
+
+.wn-rss {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  color: inherit;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.wn-rss:hover {
+  color: inherit;
+  opacity: 1;
+}
+
+.wn-rss::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-color: currentColor;
+  mask: url('/img/rss.svg') center / contain no-repeat;
+  -webkit-mask: url('/img/rss.svg') center / contain no-repeat;
+}
+
+/* Improvements / Fixes: a plain collapsible heading, not Docusaurus' info box. */
+.wn-changes details.alert {
+  margin: 2rem 0 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  --ifm-alert-background-color: transparent;
+  --ifm-alert-border-color: transparent;
+}
+
+.wn-changes details > summary {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.wn-changes details > summary::before {
+  border-color: transparent transparent transparent currentColor;
+}
+
+
+.wn-changes details > div > div {
+  margin-top: 0.75rem;
+  padding-top: 0;
+  border-top: none;
+}
+
+.wn-changes ul {
+  padding-left: 1.25rem;
+}
+
+/* Keep the assistant above docs chrome; all conversation visuals come from the design library. */
+.orchidea-docs-host { position: relative; z-index: 1000; }
+/* The panel's menus and model list open in a portal: above the panel, not under it. */
+.orchidea-docs-portal { z-index: 1001 !important; }
+
+/* Phones (PLA-731): the chat opens in a bottom sheet, nearly full height. Not modal, so its menus can
+   be tapped (and there is no scrim). The sheet is portalled to <body>, so it carries the portal's
+   class (the reset below) and its own z. */
+.orchidea-docs-sheet[data-slot="drawer-content"] {
+  z-index: 1000 !important;
+  height: 92dvh;
+  max-height: 92dvh;
+  border-top: 1px solid var(--ifm-color-emphasis-300) !important;
+  border-radius: 12px 12px 0 0;
+  outline: none;
+}
+.orchidea-docs-sheet-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+.orchidea-docs-sheet-body > * {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* Orchidea's dock button: the size of a sidebar icon, round, lifted off the page. */
+.orchidea-docs-host .orchidea-docs-dock-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.35);
+}
+/* Its home at the foot of the docs sidebar, in line with the collapse button. */
+.orchidea-docs-home-row {
+  display: flex;
+  flex-shrink: 0;
+  padding: 8px 12px;
+}
+
+/* The few browser defaults the design components assume (Tailwind's reset), only where they render:
+   the assistant and its portalled menus. In the base layer, so the components' own classes win; the
+   rest of the docs keeps its lists, images and spacing. */
+@layer base {
+  :where(.orchidea-docs-host, .orchidea-docs-portal),
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(*, ::before, ::after) {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(button, input, textarea, select) {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(button) { cursor: pointer; }
+  :where(.orchidea-docs-host, .orchidea-docs-portal) :where(svg, img) { display: block; }
+}
+
+/* Glossary: a dictionary page in three columns. Each letter opens with a large serif letter in the
+ * left column, under a short bar in the next entity colour (track, world, Orbiter, collection, clip);
+ * each term sits beside it, its one-paragraph definition on the right. Keyed on the doc-id class
+ * Docusaurus puts on <html>. The page keeps plain `## A` / `### Term {#id}` + paragraph markdown,
+ * which the glossary-terms plugin reads. */
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(8rem, 12rem) minmax(0, 1fr);
+  column-gap: 1.75rem;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > * {
+  grid-column: 1 / -1;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 1) { --glossary-letter: var(--ps-entity-track); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 2) { --glossary-letter: var(--ps-entity-world); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 3) { --glossary-letter: var(--ps-entity-orbiter); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 4) { --glossary-letter: var(--ps-entity-collection); }
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:nth-of-type(5n + 5) { --glossary-letter: var(--ps-entity-clip); }
+
+/* The letter takes no height of its own: it overhangs the empty first column beside its terms. */
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 {
+  grid-column: 1;
+  height: 0;
+  margin: 0;
+  padding-top: 1.25rem;
+  border-top: 4px solid var(--glossary-letter);
+  color: var(--glossary-letter);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 5.5rem;
+  line-height: 0.8;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 .hash-link {
+  font-size: 1rem;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h3 {
+  grid-column: 2;
+  margin: 0 0 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h3 + p {
+  grid-column: 3;
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* The first term of a letter shares the letter's rule line, and leaves room for the letter below. */
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3,
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3 + p {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ifm-color-emphasis-400);
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3 + p {
+  min-height: 6.5rem;
+}
+
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:not(:first-of-type),
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:not(:first-of-type) + h3,
+.docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2:not(:first-of-type) + h3 + p {
+  margin-top: 2rem;
+}
+
+/* Phones: one column; the letter sits above its terms at a smaller size. */
+@media (max-width: 600px) {
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown {
+    display: block;
+  }
+
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 {
+    height: auto;
+    margin: 2rem 0 1rem;
+    font-size: 3.5rem;
+  }
+
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3,
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h2 + h3 + p {
+    padding-top: 0;
+    border-top: 0;
+    min-height: 0;
+  }
+
+  .docs-doc-id-plantasia-space\/glossary .theme-doc-markdown > h3 {
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Footer (PLA-724): the docs' own footer colour, column titles small and muted. Links to outside
+   services open in a new tab and keep the external-link arrow, small and quiet as in root's footer;
+   links to plantasia.space stay in this tab (`target: '_self'` in the config) and show none
+   (PLA-544). */
+.footer {
+  --ifm-footer-padding-vertical: 5rem;
+}
+.footer__link-item[target="_self"] svg {
+  display: none;
+}
+.footer__link-item svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.375rem;
+  opacity: 0.7;
+}
+.footer__title {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+}
+.footer__contact {
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Header icons on the right (PLA-724 follow-up): the same thin line as the xPlorer icon. The
+   language and theme icons are Docusaurus' filled ones, so they are swapped for line masks; the
+   external-link arrows next to Discord and GitHub go. */
+.navbar__link:has(> svg[class*='iconLanguage']) > svg[class*='iconLanguage'] {
+  display: none;
+}
+.navbar__link:has(> svg[class*='iconLanguage'])::before {
+  content: '';
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 0.35rem;
+  vertical-align: -0.2rem;
+  background-color: currentColor;
+  mask: url('/img/languages.svg') center / contain no-repeat;
+  -webkit-mask: url('/img/languages.svg') center / contain no-repeat;
+}
+.navbar .nav-discord svg,
+.navbar .nav-github svg {
+  display: none;
+}
+/* !important: Docusaurus shows the icon of the current mode with a more specific rule. */
+button[class*='toggleButton'] > svg {
+  display: none !important;
+}
+button[class*='toggleButton']::before {
+  content: '';
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: currentColor;
+  mask: url('/img/moon.svg') center / contain no-repeat;
+  -webkit-mask: url('/img/moon.svg') center / contain no-repeat;
+}
+[data-theme='light'] button[class*='toggleButton']::before {
+  mask-image: url('/img/sun.svg');
+  -webkit-mask-image: url('/img/sun.svg');
 }

@@ -1,7 +1,6 @@
 ---
 title: Sharing
 slug: /plantasia-space/sharing
-wrapperClassName: doc-wrapper-icon-release
 sidebar_position: 21
 sidebar_custom_props:
   icon: HeartHandshake
@@ -40,11 +39,9 @@ These use a collaboration model to decide:
 
 ### Individual xPlorer Permissions
 
-When you invite specific xPlorers, you can assign roles:
+When you invite specific xPlorers, you give each one a role: **Viewer**, **Publisher** or **Editor**. The **Owner** is whoever made the entity. What each can do:
 
-- **Viewer** — can view and experience
-- **Publisher** — can publish content inside the entity
-- **Editor** — can edit the entity, publish inside it, and invite other xPlorers
+<RoleGrid id="entity-roles" />
 
 ### General Access (Link or Public Rules)
 
@@ -61,13 +58,9 @@ Default roles for general access can be:
 
 ### Who Can Change These Settings
 
-Inviting people and opening an entity up are two different decisions, so they sit with different people:
+Inviting people and opening an entity up are two different decisions, so they sit with different people. Editors can invite and remove xPlorers and change their roles, since they already edit and publish the entity. Deciding whether anyone with the link can reach it stays with the owner alone, as does archiving or deleting it. Publishers and Viewers can't change collaboration settings.
 
-- **Owner** — everything: invite and remove xPlorers, change their roles, and set General Access
-- **Editor** — can invite and remove xPlorers and change their roles, but cannot change General Access
-- **Publisher** and **Viewer** — cannot change collaboration settings
-
-Editors can bring in another pair of hands, since they already edit and publish the entity. Deciding whether anyone with the link can reach it stays with the owner alone — as does archiving or deleting it.
+Clips follow the roles of their Entangled World: the world's owner and editors can edit any Clip in it, and only the world's owner — besides the Clip's maker — can archive or delete one. See [Who can work on a Clip](../02-entangled-worlds/04-studio.md#who-can-work-on-a-clip).
 
 If a setting is not yours to change, you will see it greyed out with a note explaining why, rather than an error after the fact.
 
@@ -101,6 +94,38 @@ Others will not be able to open, edit, or publish inside that World unless you i
 	Audio = master visibility switch
 	Entities = collaboration & contribution layer
 :::
+
+## Licences {#licences}
+
+Permissions decide who can open a work **inside** Plantasia Space. A **Creative Commons licence**
+decides what anyone may do with it **outside** too. Every work you release carries one:
+an Audio, an Orbiter, an Entangled World or a collection.
+
+- **CC BY 4.0**: anyone may use and adapt the work, also commercially, if they credit you.
+- **CC BY-NC 4.0**: the same, but not for commercial use. Turn on **Noncommercial** in the
+  Licensing & Rights box to choose it.
+
+You keep your copyright either way. Only the owner chooses the licence.
+
+### Works made from other works
+
+- **The strictest licence wins.** If a work adapts someone else's non-commercial work, it is
+  non-commercial too. Putting music to moving image, as a Clip does, always counts as adapting it.
+  You can always be stricter than the works you use, never less.
+- **Credit every author.** A Clip's credits name you, its Entangled World and its Audio, each with
+  the author and the licence it was used under.
+- **Clips** take the licence of their Entangled World, made non-commercial by someone else's
+  non-commercial Audio.
+- **Collections**: the licence covers your curation (title, cover, text and order). Each item keeps
+  its own licence. Collecting is not adapting: a collection never turns non-commercial because of
+  what it holds.
+- **Someone else's Orbiter** you play or record with is a work you use: credit its author and
+  respect its licence.
+- Someone else's work with **no licence yet** can't be used in a Clip until its author chooses one.
+  Your own works never block you.
+
+A licence can't be taken back. If you change it later, whoever used an earlier release under the
+earlier licence may go on doing so. Each release keeps the licence it was published with.
 
 ## Downloading Content
 

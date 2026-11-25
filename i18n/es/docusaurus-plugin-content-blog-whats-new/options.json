@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Novedades",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Lo que puedes hacer en Plantasia Space ahora, versión a versión.",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Todas las versiones",
+    "description": "The label for the left sidebar"
+  }
+}

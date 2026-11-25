@@ -1,0 +1,39 @@
+---
+title: Planes y créditos
+description: Los planes, qué abre cada uno y cómo funcionan, duran y se gastan los créditos.
+sidebar_position: 90
+sidebar_custom_props:
+  icon: CreditCard
+---
+
+import { PlansTable, CreditPacksTable, CreditFacts } from '@site/src/components/docs/PlanFacts';
+
+## Los planes
+
+Cada plan abre más de Plantasia Space: subir pistas, Entangled Worlds, créditos cada mes, Orchidea y el Orbiter Studio. Los planes de pago se facturan mensual o anualmente.
+
+La tabla se lee en directo de los mismos ajustes que la [página de precios](https://plantasia.space/es/pricing), así que siempre muestra los planes actuales:
+
+<PlansTable />
+
+## Créditos
+
+Todo el trabajo de IA se paga de un solo saldo de créditos: textos de mundos, narración, texturas, Orchidea y los Studios gastan el mismo crédito.
+
+<CreditFacts />
+
+Tus créditos vienen de tres sitios:
+
+- **Créditos del plan**: un plan de pago te da créditos cada mes. Se reinician cuando empieza tu mes de nuevo; los que no usas no se acumulan.
+- **Créditos de bonus**: créditos que añadimos para el mes. Terminan con el mes, como los del plan.
+- **Créditos comprados**: créditos de un paquete. Cada paquete dura 12 meses desde el día de la compra.
+
+Si necesitas más, elige **Conseguir créditos** en **Configuración → Plan y créditos**, en Orchidea o donde una acción necesite más créditos de los que tienes:
+
+<CreditPacksTable />
+
+## Cómo se gastan
+
+Los créditos se gastan en este orden: los créditos del plan, luego los de bonus, luego los comprados, primero los que terminan antes.
+
+Antes de empezar una acción de IA ves lo que cuesta. Una textura cuesta un número fijo de créditos que depende del modelo que elijas. En una acción de texto, y con Orchidea, el precio que ves es lo máximo que puede costar: se cobra lo que realmente usó y el resto vuelve. Tu saldo, lo que costó cada acción, tus compras y cuándo terminan tus créditos comprados están en [**Configuración → Plan y créditos**](https://plantasia.space/es/settings?tab=plan).

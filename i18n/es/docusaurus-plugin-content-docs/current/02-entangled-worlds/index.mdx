@@ -1,54 +1,75 @@
 ---
-title: Mundos Entrelazados — Resumen
+title: Mundos Entrelazados
 sidebar_label: Resumen
-description: Aprende a publicar, editar y explorar los Mundos Entrelazados, los espacios interactivos e inmersivos de Plantasia Space.
-wrapperClassName: doc-wrapper-icon-eye
+description: Haz un Mundo Entrelazado a partir de un exoplaneta real, cámbialo y toca dentro de él.
 sidebar_position: 1
 sidebar_custom_props:
   icon: EyeIcon
 ---
 
 import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
-import { Pencil, Power, Clapperboard } from 'lucide-react';
+import { Pencil, Power, Clapperboard, AudioLines, Rocket } from 'lucide-react';
 import ReleaseIcon from '@site/static/img/symbols-12-25/release-current.svg';
 
-
-Los mundos entrelazados son representaciones artísticas de mundos físicos donde se colocan, exploran y transforman los sonidos publicados. Proveen el contexto espacial y sensorial para la música regenerativa en Plantasia Space.
+Un Mundo Entrelazado es un mundo hecho a partir de un **exoplaneta real**: un planeta en 3D con una historia en siete capítulos, leída en voz alta. Los Audios suenan dentro de él, y los Orbitadores convierten sus datos en sonido.
 
 <NavigationGrid>
-  <NavigationCard 
+  <NavigationCard
+    href="/docs/entangled-worlds/quickstart"
+    label="Primeros pasos"
+    icon={<Rocket />}
+    description="Tu primer mundo en 10 minutos."
+  />
+  <NavigationCard
     href="/docs/entangled-worlds/release"
     label="Publicar"
     icon={<ReleaseIcon style={{ width: 24, height: 24, fill: "currentColor" }} />}
-    description="Crea un nuevo mundo."
+    description="Haz un mundo en World Studio."
   />
-  <NavigationCard 
+  <NavigationCard
     href="/docs/entangled-worlds/edit"
     label="Editar"
     icon={<Pencil />}
-    description="Modifica la configuración del mundo."
+    description="Cambia un mundo que publicaste."
   />
-  <NavigationCard 
+  <NavigationCard
     href="/docs/entangled-worlds/interact"
-    label="Usar"
+    label="Interactuar"
     icon={<Power />}
-    description="Explora y habita mundos."
+    description="Escucha y toca dentro de un mundo."
   />
-  <NavigationCard 
+  <NavigationCard
+    href="/docs/entangled-worlds/story-audio"
+    label="La historia como audio"
+    icon={<AudioLines />}
+    description="Publica la voz del mundo como un Audio."
+  />
+  <NavigationCard
     href="/docs/entangled-worlds/studio"
     label="Studio y Clips"
     icon={<Clapperboard />}
-    description="Crea y publica Clips."
+    description="Haz videos cortos a partir de un mundo."
   />
 </NavigationGrid>
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/es/media/worlds/01-overview-world.mp4" type="video/mp4" />
-  Tu navegador no soporta la etiqueta de video.
-</video>
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/overview/world-page.jpg"
+  alt="La página del mundo Flatfish: el planeta con sus lunas, su nombre arriba y quien lo hizo abajo."
+  width={600}
+/>
 
-Usa esta sección para aprender cómo se publican, editan y utilizan los mundos.
+## Lo que tiene un mundo
+
+- **Un exoplaneta real**, con su cielo, su estrella y los datos medidos por la astronomía
+- **Sus elementales**: geografía, flora, fauna, sociedad, historia y elementos
+- **Una historia** en siete capítulos, con una voz que la lee
+- **Un paisaje**: el planeta en 3D con su textura, sus nubes y sus lunas, y una imagen para cada capítulo
+- **Audios** publicados dentro de él, y los **Orbitadores** que los tocan
+
+## La página del mundo
+
+Un mundo publicado tiene su propia página en Plantasia Space. La página principal muestra el planeta y sus lunas; cuando la historia tiene voz, **Escuchar la historia** la reproduce entera. Cada capítulo que escribes en World Studio se convierte en una parte de la página:
+
+<WorldParts caption="Cada parte muestra el texto de su capítulo, que se ilumina línea a línea mientras la voz lo lee, y la imagen que fijaste para él." />
+
+Pasa de una parte a otra con los enlaces al pie de cada una.

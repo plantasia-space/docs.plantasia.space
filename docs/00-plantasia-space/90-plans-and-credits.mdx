@@ -1,0 +1,39 @@
+---
+title: Plans and credits
+description: The plans, what each one opens, and how credits work, last and are spent.
+sidebar_position: 90
+sidebar_custom_props:
+  icon: CreditCard
+---
+
+import { PlansTable, CreditPacksTable, CreditFacts } from '@site/src/components/docs/PlanFacts';
+
+## The plans
+
+Each plan opens more of Plantasia Space: uploading tracks, Entangled Worlds, monthly credits, Orchidea and the Orbiter Studio. Paid plans are billed monthly or yearly.
+
+The table is read live from the same settings as the [pricing page](https://plantasia.space/pricing), so it always shows the current plans:
+
+<PlansTable />
+
+## Credits
+
+All AI work is paid from one balance of credits: world texts, narration, textures, Orchidea and the Studios all spend the same credit.
+
+<CreditFacts />
+
+Your credits come from three places:
+
+- **Plan credits**: a paid plan gives you credits every month. They reset when your month starts again; unused plan credits do not carry over.
+- **Bonus credits**: credits we add for the month. They end with the month, like plan credits.
+- **Bought credits**: credits from a pack. Each pack lasts 12 months from the day you buy it.
+
+When you need more, choose **Get credits** in **Settings → Plan & credits**, in Orchidea, or wherever an action needs more credits than you have:
+
+<CreditPacksTable />
+
+## How credits are spent
+
+Credits are spent in this order: your plan credits, then bonus credits, then bought credits, the ones that end soonest first.
+
+Before you start an AI action you see what it costs. A texture costs a fixed number of credits that depends on the model you pick. For a text action, and for Orchidea, the price you see is the most it can cost: you are charged what it really used, and the rest comes back. Your balance, what each action cost, your purchases and when your bought credits end are in [**Settings → Plan & credits**](https://plantasia.space/settings?tab=plan).

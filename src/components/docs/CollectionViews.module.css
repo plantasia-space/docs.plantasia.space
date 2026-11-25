@@ -1,0 +1,137 @@
+/* Same frame, borders and type as StepFlow, so the two diagrams read as one family. */
+.figure {
+  margin: 1.5rem 0;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+}
+
+.head,
+.row {
+  display: grid;
+  grid-template-columns: 7rem 1fr 1.4fr;
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+.head {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.kindCell {
+  display: flex;
+}
+
+.kind {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kind:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  padding: 0.4rem 0.6rem;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+}
+
+.view {
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-200);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.multi {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+}
+
+.arrow {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+  white-space: nowrap;
+}
+
+.empty {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.cellLabel {
+  display: none;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* On a phone each kind becomes a small card: its page, then its way into the multi-Orbiter view. */
+@media (max-width: 700px) {
+  .head {
+    display: none;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  }
+
+  .cell {
+    flex-wrap: wrap;
+  }
+
+  /* The header row is gone, so each cell names its own column. */
+  .cellLabel {
+    display: block;
+    flex-basis: 100%;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ifm-color-emphasis-600);
+  }
+}

@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import Translate, {translate} from '@docusaurus/Translate';
+import PlantasiaSymbol from '@site/static/img/sidebar-icons/plantasia-logo.svg';
 import styles from './styles.module.css';
 
 const FeatureList = [
@@ -11,7 +12,8 @@ const FeatureList = [
     titleId: 'homepage.features.plantasia_space',
     description: 'Get started with the platform — its vision, core concepts, and how everything connects.',
     descriptionId: 'homepage.features.plantasia_space.description',
-    image: 'https://herbarium.plantasia.space/assets/logos/current/plantasia-space-logo-black-transparent-background-512.svg',
+    // The symbol, drawn inline in the text colour (the same file as the sidebar's).
+    symbol: true,
     link: '/docs/plantasia-space/',
   },
   {
@@ -48,18 +50,22 @@ const FeatureList = [
   },
 ];
 
-function Feature({ image, title, titleId, description, descriptionId, link }) {
+function Feature({ image, symbol, title, titleId, description, descriptionId, link }) {
   return (
     <Link to={link} className={styles.featureCard}>
       <div className={styles.featureIcon}>
-        <img
-          src={image}
-          className={clsx(styles.featureSvg, 'invert-on-dark')}
-          alt={translate({message: title, id: titleId})}
-          width="96"
-          height="96"
-          loading="lazy"
-        />
+        {symbol ? (
+          <PlantasiaSymbol className={styles.featureSvg} role="img" aria-label={translate({message: title, id: titleId})} />
+        ) : (
+          <img
+            src={image}
+            className={clsx(styles.featureSvg, 'invert-on-dark')}
+            alt={translate({message: title, id: titleId})}
+            width="96"
+            height="96"
+            loading="lazy"
+          />
+        )}
       </div>
       <div className={styles.featureContent}>
         <Heading as="h3" className={styles.featureTitle}>

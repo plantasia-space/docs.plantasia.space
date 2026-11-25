@@ -1,0 +1,11 @@
+{
+  "label": "Instruments",
+  "position": 7,
+  "link": {
+    "type": "doc",
+    "id": "index"
+  },
+  "customProps": {
+    "icon": "Piano"
+  }
+}

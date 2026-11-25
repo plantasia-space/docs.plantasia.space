@@ -1,0 +1,11 @@
+{
+  "label": "MIDI effects",
+  "position": 9,
+  "link": {
+    "type": "doc",
+    "id": "index"
+  },
+  "customProps": {
+    "icon": "KeyboardMusic"
+  }
+}

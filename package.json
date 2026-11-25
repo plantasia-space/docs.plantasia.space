@@ -1,18 +1,22 @@
 {
   "name": "docs-plantasia-space",
-  "version": "0.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "caddy run --config ./Caddyfile & docusaurus start --host 127.0.0.1 --port 3014 --no-open",
     "start:no-proxy": "docusaurus start --host 127.0.0.1 --port 3014",
     "build": "docusaurus build",
+    "build:cf": "docusaurus build && node scripts/cf-headers.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "type-check": "tsc --noEmit",
+    "test:assistant": "node --test --import jiti/register tests/assistant/*.test.ts",
+    "assistant:catalog": "jiti scripts/assistant-catalog.ts"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
@@ -21,6 +25,8 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.562.0",
+    "plantasia.space-design": "^0.91.1",
+    "plantasia.space-orchidea": "^0.22.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
@@ -29,7 +35,11 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
-    "remark-breaks": "^4.0.0"
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.3.0",
+    "jiti": "^2.7.0",
+    "remark-breaks": "^4.0.0",
+    "typescript": "^5.9.3"
   },
   "browserslist": {
     "production": [

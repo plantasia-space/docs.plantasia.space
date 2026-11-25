@@ -1,0 +1,42 @@
+/* A dotted underline says "defined in the glossary", not "another page". */
+.link {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--ifm-color-emphasis-500);
+  text-underline-offset: 0.2em;
+}
+
+.link:hover {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
+/* Hidden until open; then fixed to the window next to its word. */
+.tip {
+  display: none;
+}
+
+.tip.open {
+  position: fixed;
+  z-index: var(--ifm-z-index-overlay, 400);
+  display: block;
+  width: max-content;
+  max-width: min(18rem, calc(100vw - 16px));
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.18);
+  font-size: 0.82rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
+  pointer-events: none;
+}
+
+.tip.above {
+  transform: translateY(-100%);
+}

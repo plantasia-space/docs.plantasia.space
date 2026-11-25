@@ -7,12 +7,13 @@ description: Explora la documentación de Plantasia Space — Audios, Mundos Ent
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import PlantasiaSymbol from '@site/static/img/sidebar-icons/plantasia-logo.svg';
 
 <div className="container">
   <div className="row">
     <div className="col col--4 margin-bottom--lg">
       <a className="card padding--lg cardContainer_node_modules-@docusaurus-theme-classic-lib-theme-DocCard-styles-module" href={useBaseUrl('/docs/plantasia-space/')} style={{ height: '100%', textAlign: 'center', display: 'block' }}>
-        <img src="https://herbarium.plantasia.space/assets/logos/current/plantasia-space-logo-black-transparent-background-512.svg" className="invert-on-dark" alt="Plantasia Space" width="100" height="100" />
+        <PlantasiaSymbol role="img" aria-label="Plantasia Space" width="100" height="100" />
         <h3 className="text--center">Plantasia Space</h3>
       </a>
     </div>

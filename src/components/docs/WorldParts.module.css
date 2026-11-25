@@ -1,0 +1,94 @@
+/* Same frame, borders and type as StepFlow and CollectionViews, so the diagrams read as one family. */
+.figure {
+  margin: 1.5rem 0;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+}
+
+.head,
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1.5rem 1fr;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.head {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.chapter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+  font-size: 0.7rem;
+}
+
+.arrow {
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.part {
+  padding: 0.4rem 0.6rem;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* On a phone the two columns stay side by side (the labels are short and wrap), so the
+   header keeps saying which side is the chapter and which the page part. */
+@media (max-width: 500px) {
+  .grid {
+    padding: 0.75rem;
+  }
+
+  .head,
+  .row {
+    grid-template-columns: 1fr 1rem 1fr;
+    gap: 0.4rem;
+  }
+
+  .chapter,
+  .part {
+    padding: 0.35rem 0.45rem;
+    font-size: 0.8rem;
+  }
+}

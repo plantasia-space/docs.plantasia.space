@@ -1,0 +1,20 @@
+// Cloudflare Workers static site (PLA-747). Assets only, no Worker code.
+// The Xplorer (user) docs — NOT dev-docs.plantasia.space, which is the internal dashboard.
+// Two Workers from this repo, both built by Workers Builds (linked to GitHub):
+//   ps-xplorer-docs      ← main → docs.plantasia.space         build: npm run build:cf
+//   ps-xplorer-docs-dev  ← dev  → xplorer-docs.plantasia.space build: DOCS_SITE=dev npm run build:cf
+//                                                       deploy: npx wrangler@4.166.0 deploy --env dev
+// Response headers come from build/_headers, written by scripts/cf-headers.mjs.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ps-xplorer-docs",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./build",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "env": {
+    "dev": {}
+  }
+}

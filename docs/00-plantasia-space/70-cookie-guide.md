@@ -1,6 +1,5 @@
 ---
 title: Cookie Guide
-wrapperClassName: doc-wrapper-icon-cookie
 sidebar_position: 70
 sidebar_custom_props:
   icon: Cookie

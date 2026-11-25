@@ -1,0 +1,91 @@
+/* The home figure is the object alone: no card, no frame, no background of its own. */
+.figure {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* The drawing's own shape, so the page does not jump when it arrives. */
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 680 / 500;
+}
+
+.still img,
+.stage :global(svg) {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stage[hidden] {
+  display: none;
+}
+
+/* One picture per theme: only the site's is shown. Dark is the default, and what shows
+   without JavaScript (the theme is set on <html> by a script). Each picks its arrangement by width. */
+.still.light,
+html[data-theme='light'] .still.dark {
+  display: none;
+}
+
+html[data-theme='light'] .still.light {
+  display: inline;
+}
+
+/* Sound and pause / play, out of the way in the corner. */
+.buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.15s ease;
+}
+
+.button svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--ifm-color-emphasis-900);
+  outline-offset: 2px;
+}
+
+.button .stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+/* A narrow column: the tower. The same number is in index.jsx. */
+@media (max-width: 640px) {
+  .frame {
+    max-width: 420px;
+    aspect-ratio: 420 / 690;
+  }
+}

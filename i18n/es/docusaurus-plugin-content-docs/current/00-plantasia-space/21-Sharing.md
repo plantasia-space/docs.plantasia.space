@@ -1,7 +1,6 @@
 ---
 title: Compartir
 slug: /plantasia-space/sharing
-wrapperClassName: doc-wrapper-icon-release
 sidebar_position: 21
 sidebar_custom_props:
   icon: HeartHandshake
@@ -40,11 +39,9 @@ Estos usan un modelo de colaboracion para definir:
 
 ### Permisos individuales de xPlorer
 
-Cuando invitas xPlorers especificos, puedes asignar roles:
+Cuando invitas xPlorers especificos, le das a cada persona un rol: **Viewer**, **Publisher** o **Editor**. Quien es **Owner** es quien hizo la entidad. Lo que puede hacer cada rol:
 
-- **Viewer**: puede ver y experimentar
-- **Publisher**: puede publicar contenido dentro de la entidad
-- **Editor**: puede editar la entidad, publicar dentro de ella e invitar a otrxs xPlorers
+<RoleGrid id="entity-roles" />
 
 ### Acceso general (reglas de enlace o publico)
 
@@ -61,13 +58,9 @@ Los roles por defecto para el acceso general pueden ser:
 
 ### Quien puede cambiar estos ajustes
 
-Invitar personas y abrir una entidad son dos decisiones distintas, asi que corresponden a personas distintas:
+Invitar personas y abrir una entidad son dos decisiones distintas, asi que corresponden a personas distintas. Lxs Editors pueden invitar y quitar xPlorers y cambiar sus roles, ya que de por si editan y publican la entidad. Decidir si cualquiera con el enlace puede llegar a ella queda solo en manos de quien es Owner, igual que archivarla o eliminarla. Lxs Publishers y Viewers no pueden cambiar los ajustes de colaboracion.
 
-- **Owner**: todo. Invitar y quitar xPlorers, cambiar sus roles y definir el Acceso general
-- **Editor**: puede invitar y quitar xPlorers y cambiar sus roles, pero no puede cambiar el Acceso general
-- **Publisher** y **Viewer**: no pueden cambiar los ajustes de colaboracion
-
-Lxs Editors pueden sumar otro par de manos, ya que de por si editan y publican la entidad. Decidir si cualquiera con el enlace puede llegar a ella queda solo en manos de quien es Owner, igual que archivarla o eliminarla.
+Los Clips siguen los roles de su Mundo Entrelazado: quien es Owner del mundo y lxs Editors pueden editar cualquier Clip del mundo, y solo quien es Owner del mundo (ademas de quien hizo el Clip) puede archivarlo o eliminarlo. Mira [Quien puede trabajar en un Clip](../02-entangled-worlds/04-studio.md#quien-puede-trabajar-en-un-clip).
 
 Si un ajuste no es tuyo para cambiar, lo veras desactivado con una nota que explica por que, en lugar de un error despues de intentarlo.
 

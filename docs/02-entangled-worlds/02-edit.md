@@ -1,48 +1,39 @@
 ---
 title: Edit
-wrapperClassName: doc-wrapper-icon-edit
 sidebar_position: 3
 sidebar_custom_props:
   icon: Pencil
 ---
 
-Editing an Entangled World allows you to refine its identity over time.
+## Open a world to edit it
 
-<video
-  className="ps-doc-video"
-  controls
-  poster="/img/video-placeholder.svg"
->
-  <source src="https://herbarium.plantasia.space/docs/en/media/worlds/08-edit-world.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+On the world's page, open the **⋯** menu and choose **Edit**. The world opens in **World Studio**, in the same four steps you released it with: **Origin**, **Story**, **Landscape** and **Release**.
 
-## What you can edit
+<ModulePicture
+  src="https://herbarium.plantasia.space/docs/en/media/worlds/edit/world-menu-edit.jpg"
+  alt="The More options menu of the world Flatfish, open on its page: Add to Collection, Share, Edit, Archive and Delete."
+  width={420}
+/>
 
-You can update:
+## What you can change
 
-- World name
-- Worldbuilding elementals
-- Elemental Matrix position
-- Planet textures
-- Scene and atmosphere settings
-- Narration and story sections
-- Collaboration and access rules
+| To change | Go to |
+|---|---|
+| The exoplanet or the world's name | [Origin](./01-release.md#exoplanet) |
+| The elementals, the story's text or its voice | [Story](./01-release.md#elementals) |
+| The world in 3D, its texture, moons, clouds and light, or its pictures | [Landscape](./01-release.md#world) |
+| The cover, collaborators and access, or [the story as audio](./05-story-audio.md) | [Release](./01-release.md#cover) |
 
-## Iteration mindset
+A world is made to change over time: rewrite a chapter, or pin another picture. **Undo** and **Redo**, at the top left, step back and forward through your changes.
 
-Entangled Worlds are designed to evolve.
+## Saving and releasing changes
 
-You can revisit a world, regenerate textures, rewrite narration, or adjust visuals as your ideas develop.
+Your changes save themselves into the world's draft. The dot at the top of the page shows whether the last change is saved.
 
-## Saving and publishing changes
+Saving only updates your draft. Visitors keep seeing the version you last released, so you can try things without anyone watching. When you want your changes to reach everyone, go to the Release step and select **Release Changes**.
 
-Your edits save themselves. A couple of seconds after you stop changing something, the world's draft is saved for you — there is no save button to remember.
+Images you upload are the exception: they are applied as soon as you choose them, not kept in the draft.
 
-The small disk icon at the top of the page shows where that has got to, and its dot changes colour as it goes: unsaved changes, saving, saved, or couldn't save. Hover it to read the current state. You can also click it to save straight away instead of waiting.
+## Archived worlds
 
-Saving only ever updates your draft. Visitors keep seeing the version you last published, so you can regenerate textures and rewrite narration without anyone watching over your shoulder.
-
-Publish when you want those changes to apply to the public version of the world. That step is always yours to take.
-
-Uploads are the exception: images you add are applied when you choose them, not by autosave.
+An archived world can't be edited. World Studio shows it as **Archived**: select **Restore on Plantasia Space** to continue.

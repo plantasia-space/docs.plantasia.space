@@ -1,0 +1,209 @@
+---
+title: Instruments
+sidebar_label: Overview
+description: "The instruments that make an Orbiter's sound: audio players and notes instruments."
+sidebar_position: 0
+sidebar_custom_props:
+  icon: EyeIcon
+---
+
+import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
+import SignalChain from '@site/src/components/docs/SignalChain';
+import { Layers, CassetteTape, AudioWaveform, Drum, Bell, Atom, Cable, AudioLines, Wheat, Sparkles, Gamepad2 } from 'lucide-react';
+
+An **instrument** makes the sound. It sits at the head of a <Term id="world-dimension">World dimension</Term>'s chain: whatever comes
+after it (audio effects, the <Term id="star">Star</Term>'s mixer, a <Term id="moon">Moon</Term>) hears it, and whatever comes before it (a
+generator, MIDI effects) tells it which notes to play.
+
+<IsoFigure name="orbiters/instruments" label="A length of the Orbiter's rack with two instruments on it: one with two reels, which plays an audio, and one with a keyboard, which plays notes. Only one of them plays at a time.">
+  Move over the rack: the left half plays the audio, the right half plays the notes.
+</IsoFigure>
+
+| On the rack | In an Orbiter |
+|---|---|
+| **The box with two reels** | an Audio instrument: it plays the audio you choose |
+| **The box with a keyboard** | a Notes instrument: it plays the notes that reach it |
+| **The small screen** on each lid | the screen every instrument has in its panel |
+| **The lit box** | the one that plays. An Orbiter is Audio or Notes, never both |
+
+<SignalChain
+  highlight={['instrument']}
+  caption="One World dimension. The instrument turns notes, or the audio you pick, into sound."
+/>
+
+## Audio or Notes
+
+What World **I** holds decides what kind of Orbiter you are building:
+
+| | World I plays… | World II and III | Instruments |
+|---|---|---|---|
+| **Audio Orbiter** | the audio you choose, on the **Audio player** or **Granular** | audio effects that shape it | one |
+| **Notes Orbiter** | a notes instrument, such as the **Sampler**, the **Subtractive synth** or the **FM synth** | one more notes instrument each, if you like | up to three |
+
+:::note[Audio or Notes, never both]
+
+An Orbiter is one or the other. Replacing World I's instrument with one of the other kind switches the Orbiter, and the Studio asks first. See [Multiple MIDI instruments](/docs/orbiters/instruments/multiple-midi-instruments) for how a Notes Orbiter plays two or three instruments side by side.
+
+:::
+
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/instruments/switch-to-notes"
+  caption="Replace with → Sampler on World I's Audio player. The Studio asks first; Switch to Notes puts the Sampler in its place, with a MIDI in slot before it."
+  label="The Audio player's module menu opens, Replace with and then Sampler are picked, a Switch to Notes? dialog appears and Switch to Notes is pressed; the Sampler loads in World I in place of the Audio player."
+/>
+
+## What every instrument shares
+
+- **It is built in the Studio.** Pick it in the **Sound** step, or from the module picker of a
+  World dimension.
+- **Its knobs map to the Orbiter.** Any knob or switch can follow an <Term id="axis">axis</Term> (X, Y, Z) or a toggle, with
+  its own minimum, <Term id="equilibrium">equilibrium</Term> and maximum. See [Edit](/docs/orbiters/edit).
+- **It shows its sound on a screen.** Each instrument has a small screen in its panel; what it draws
+  is described on the instrument's page.
+- **A notes instrument plays whatever notes reach it**, from the keys, MIDI, the piano roll or a
+  sequencer. In the chain it sits after any generator and MIDI effects, and before the audio effects.
+
+### Envelopes
+
+An envelope is drawn above its knobs: **Attack**, **Decay**, **Sustain** and **Release**. Drag a
+point, or type a value under it. Attack, Decay and Release can each be **bent**: the small hollow
+handle in the middle of a sloped segment is its curve. Drag it across the segment, from **−100 %** to
+**+100 %**: **+** is fast at the start (a quick rise, a quick drop and a long tail), **−** slow (a
+swell, a fall that holds before it goes). Double-click a handle to straighten it. A curve can be
+mapped to an axis like any other control.
+
+### LFO and Voice
+
+Most notes instruments have these two groups, folded at first:
+
+- **LFO**: a slow wave that moves things by itself, one of the Orbiter's
+  [LFOs](/docs/orbiters/interact#an-lfo-in-a-module). The menu on the tab picks which one (the
+  instrument's dimension's X as it loads; a second LFO, the Y), the hexagon on the tab switches it on
+  and off. **Rate in** (Hz, Beats or a value of the World), **Rate**, **Shape** and **Depth** are that
+  LFO's own: turn them and everything reading it changes too, an axis included. **Amount** is the
+  instrument's: how much of it gets through. What it moves is set in the [Matrix](#the-matrix).
+- **Voice**: **Voices** (how many notes sound at once, 1 … 16), **Mono** (one note at a time) and
+  **Legato** (with Mono, a note played over a held one slides there without a new strike, over
+  **Glide**).
+
+### In a room
+
+Everyone in a room hears the same notes and the same sound, the LFOs included: they are the
+Orbiter's, on the same phase for everyone. Only noise can differ a little between players. The pitch bend, the
+pressure and the mod wheel stay on the device that plays them.
+
+## Every instrument
+
+<NavigationGrid>
+  <NavigationCard
+    href="/docs/orbiters/instruments/multiple-midi-instruments"
+    label="Multiple MIDI instruments"
+    icon={<Layers />}
+    description="Audio or Notes, and up to three notes instruments in one Orbiter."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/audio-player"
+    label="Audio player"
+    icon={<CassetteTape />}
+    description="Plays the audio you choose. Speed, pitch and character, all mappable."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/sampler"
+    label="Sampler"
+    icon={<AudioWaveform />}
+    description="Real recorded instruments under the keys: piano, marimba, percussion."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/hybrid-drum-synth"
+    label="Hybrid drum synth"
+    icon={<Drum />}
+    description="A synthesized drum kit: sixteen pads of eleven types, swap pads on its kit screen."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/pitched-percussion"
+    label="Pitched percussion"
+    icon={<Bell />}
+    description="A mallet striking a body: marimba, vibraphone, glockenspiel, kalimba, tubular bells, bowl."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/fm-synth"
+    label="FM synth"
+    icon={<Atom />}
+    description="Four operators and eight algorithms: e-pianos, bells, basses, organs."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/analog-synth"
+    label="Analog synth"
+    icon={<Cable />}
+    description="Two complete paths in one voice: sync, ring and AM, two filters in series or side by side."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/analog-drum-synth"
+    label="Analog drum synth"
+    icon={<AudioLines />}
+    description="A drum machine whose sixteen pads are each a small synth; name them, play them from a Drum sequencer."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/subtractive-synth"
+    label="Subtractive synth"
+    icon={<Wheat />}
+    description="One oscillator, a sub and noise into a low-pass filter: the quickest way to a bass, a lead or a pad."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/8-bit-synth"
+    label="8-bit synth"
+    icon={<Gamepad2 />}
+    description="The Commodore 64's sound chip: pulse leads, chip chords, sync and ring, noise drums, one filter and an analog boost."
+  />
+  <NavigationCard
+    href="/docs/orbiters/instruments/granular"
+    label="Granular"
+    icon={<Sparkles />}
+    description="Your audio as a cloud of grains: frozen moments, shimmers, scattered loops."
+  />
+</NavigationGrid>
+
+## The Matrix
+
+The **Matrix** is where you say what moves a knob: velocity, the mod wheel, an LFO. The Sampler, the
+Subtractive synth, the FM synth, the Analog synth, the Wavetable synth and Pitched percussion share
+it: a group in the panel that starts folded. It is a grid: what moves things across the top, what is
+moved down the side, an amount in each cell.
+
+It has two tabs:
+
+- **Modulation**: the instrument's LFOs and own envelopes across the top. An instrument with none
+  (Pitched percussion) has no such tab.
+- **MIDI**: what you play, the same six columns in every instrument.
+
+| Column | What it reads |
+|---|---|
+| **Vel** | The note's velocity. |
+| **Key** | Where the note is on the keyboard, around C3. |
+| **PB** | The pitch bend wheel. |
+| **Press** | The keyboard's pressure (channel aftertouch). |
+| **Mod** | The mod wheel. |
+| **Rand** | A value drawn once for each note. |
+
+**A cell.** A dot means nothing is routed. Drag a cell left or right to set an amount from
+**−100 %** to **+100 %** (hold Shift for finer steps), or use the arrow keys; double-click puts it
+back. The arrow in the cell points the way the amount goes. **Key › Cutoff** at 100 % follows the
+keyboard exactly. Every cell of a row adds to its knob, and the result never leaves the knob's range.
+
+**The rows.** A tab opens short: the instrument's few main rows, and every row that has an amount.
+Turn one of the instrument's knobs while the Matrix is open and its row comes in, if it has one. A
+row you leave empty is gone the next time you open the Orbiter. A row's label fills up to where its
+knob stands, so you can read the starting point beside the amounts.
+
+Three kinds of row are in the MIDI tab only (the Wavetable synth has no Vibrato or Level row: its LFOs and Gain rows do that work):
+
+- **Pitch** holds the pitch bend: **PB › Pitch** rests at **16.7 %**, two semitones. Set it to 0 and
+  the wheel stops bending the pitch; another PB cell makes it move something else.
+- **Vibrato** is the instrument's own vibrato, a fixed 5.5 Hz. **Mod › Vibrato** rests at 50 %, so
+  the mod wheel does something on a fresh instrument. **Level** is the note's level.
+- **LFO** (or **LFO 1** and **LFO 2**) is that LFO's **Amount** knob, which scales everything the LFO
+  moves. Amount at 0 % with **Mod › LFO** at 100 % is the wheel bringing the LFO in. Only PB, Press
+  and Mod reach an LFO row.
+
+Like any number, a cell can go on an <Term id="axis">axis</Term> in the Studio's **Map** mode: the axis then sets *how
+much* the source moves its row.

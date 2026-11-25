@@ -13,6 +13,10 @@ export const STATIC_ICONS = {
   XplorerIcon: require('@site/static/img/symbols-12-25/xplorer-current.svg').default,
 };
 
+// One weight for every icon: the outline icons (Lucide, and the Lucide-drawn files above) at the
+// weight of the drawn symbols. The drawn symbols are filled shapes and take no stroke.
+export const ICON_STROKE = 1.5;
+
 export function resolveIcon(iconName) {
   if (!iconName) return undefined;
   if (STATIC_ICONS[iconName]) return STATIC_ICONS[iconName];

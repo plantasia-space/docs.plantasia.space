@@ -1,0 +1,32 @@
+/* A figure is the object alone: no card, no frame, no background of its own. */
+.figure {
+  margin: 1.5rem 0;
+}
+
+.stage {
+  max-width: 640px;
+  margin: 0 auto;
+  /* The drawing's own shape, so the page does not jump when it arrives. */
+  aspect-ratio: 640 / 400;
+}
+
+.stage :global(.iso-stage) {
+  outline-offset: 6px;
+  border-radius: 6px;
+  cursor: crosshair;
+  /* A finger can still scroll the page past the figure. */
+  touch-action: pan-y;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.readout {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  color: var(--ifm-color-emphasis-900);
+}

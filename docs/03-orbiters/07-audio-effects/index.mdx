@@ -1,0 +1,123 @@
+---
+title: Audio effects
+sidebar_label: Overview
+description: "The effects that shape an Orbiter's sound: where they go and how they behave."
+sidebar_position: 0
+sidebar_custom_props:
+  icon: EyeIcon
+---
+
+import { NavigationGrid, NavigationCard } from '@site/src/components/dashboard/NavigationGrid';
+import SignalChain from '@site/src/components/docs/SignalChain';
+import { Waves, Timer, Wind, AudioLines, Orbit, MoveHorizontal, ArrowUpDown, Sprout, Activity, AudioWaveform, MoonStar, UnfoldHorizontal, SlidersHorizontal, SlidersVertical, Funnel, Blend, ChartSpline, Gauge, ArrowUpToLine, Flame, Binary } from 'lucide-react';
+
+An **audio effect** changes a sound that is already there: it puts it in a room, repeats it, makes
+it whoosh or makes it wider. Audio effects come after the instrument, and they can go in three
+places.
+
+<IsoFigure name="orbiters/audio-effects" label="A length of the Orbiter's rack with three audio effects in a row and a line along its edge. The sound travels along the line from left to right and passes each effect in turn, picking up a ring from each one.">
+  Move over the rack to send the sound through the effects.
+</IsoFigure>
+
+| On the rack | In an Orbiter |
+|---|---|
+| **The three boxes** | the audio effects of one place: up to three, run in order from left to right |
+| **The dot** on the line | the sound, on its way through |
+| **A ring round the dot** | one effect it has passed: each effect changes what the next one hears |
+
+<SignalChain
+  highlight={['audio', 'star', 'moon']}
+  caption="Audio effects go after the instrument in a World dimension, on the Star, or on a Moon."
+/>
+
+## Three places for an effect
+
+| Place | What it hears | Good for |
+|---|---|---|
+| **Insert on a <Term id="world-dimension">World dimension</Term>** | only that dimension's sound | colouring one part: a chorus on the pad, a flanger on the drums |
+| **Insert on the <Term id="star">Star</Term>** | everything, after the mixer | one effect over the whole Orbiter |
+| **On a <Term id="moon">Moon</Term>** | what the World sends to it; it returns only the effect | a shared reverb or delay, mixed in with the Moon level |
+
+<LoopVideo
+  src="https://herbarium.plantasia.space/docs/en/media/orbiters/audio-effects/add-a-module"
+  caption="Press an empty Audio effect slot: Modules that fit here lists every effect, the One versions further down. The One Reverb goes in as an insert on World I."
+  label="The empty Audio effect slot after the Audio player is pressed, the Modules that fit here list opens and scrolls down to the One versions, and Reverb One is picked; the One Reverb appears in the rack."
+/>
+
+:::note[On a Moon, Dry/wet starts at 100 %]
+
+A Moon is a **send and return**: it adds its effect next to the dry sound instead of replacing it, which is why the Reverb and the Delay feel most at home there. An effect added to a Moon returns only the effect: it starts at **Dry/wet 100 %**, and how much you hear is set by the [Channels](/docs/orbiters/audio-effects/channel): the World channels' sends, each Moon dimension's Level, and the Moon level of the Main mix.
+
+:::
+
+:::note[Up to three effects in each place]
+
+Each place holds **up to three** audio effects, run in order from left to right.
+
+:::
+
+## Two versions of each effect
+
+Most effects come as a pair:
+
+- **The full module**, with every control in reach, for when you want to shape it.
+- **The One** version, one **Amount** knob that does it all, often in two directions (a slow sway one
+  way, a fast shimmer the other). Quick to use and the easiest to map to an <Term id="axis">axis</Term>.
+
+| Effect | Full | One | Most at home |
+|---|---|---|---|
+| [Reverb](/docs/orbiters/audio-effects/reverb) | Reverb | One Reverb | Moon (Reverb), insert (One Reverb) |
+| [Delay](/docs/orbiters/audio-effects/delay) | Delay | One Echo | Moon (Delay), insert (One Echo) |
+| [Flanger](/docs/orbiters/audio-effects/flanger) | Flanger | One Flanger | insert |
+| [Chorus](/docs/orbiters/audio-effects/chorus) | Chorus | One Chorus | insert, Moon too |
+| [Frequency shifter](/docs/orbiters/audio-effects/frequency-shifter) | Frequency shifter | none | insert, Moon too |
+| [Auto-panner](/docs/orbiters/audio-effects/auto-panner) | Auto-panner | One Auto-panner | insert |
+| [Pitch shifter](/docs/orbiters/audio-effects/pitch-shifter) | Pitch shifter | none | insert, Moon too |
+| [Waveshaper](/docs/orbiters/audio-effects/waveshaper) | Waveshaper | none | insert, Moon too |
+| [Tremolo](/docs/orbiters/audio-effects/tremolo) | Tremolo | none | insert |
+| [Phaser](/docs/orbiters/audio-effects/phaser) | Phaser | One Phaser | insert |
+| [Vibrato](/docs/orbiters/audio-effects/vibrato) | Vibrato | none | insert, Moon too |
+| [Stereo widener](/docs/orbiters/audio-effects/stereo-widener) | Stereo widener | none | insert, Moon too |
+| [Utility](/docs/orbiters/audio-effects/utility) | Utility | none | insert |
+| [Filters](/docs/orbiters/audio-effects/filters) | Filters | none | insert |
+| [Multimode filter](/docs/orbiters/audio-effects/multimode-filter) | Multimode filter | none | insert |
+| [Parametric EQ](/docs/orbiters/audio-effects/parametric-eq) | Parametric EQ | none | insert |
+| [Compressor](/docs/orbiters/audio-effects/compressor) | Compressor | One Compressor | insert |
+| [Limiter](/docs/orbiters/audio-effects/limiter) | Limiter | One Limiter | insert; not on a Moon |
+| [Saturator](/docs/orbiters/audio-effects/saturator) | Saturator | One Saturator | insert |
+| [Bitcrusher](/docs/orbiters/audio-effects/bitcrusher) | Bitcrusher | none | insert |
+| [Channel](/docs/orbiters/audio-effects/channel) | World channel, Moon channel | none | always last on each World and Moon dimension |
+
+:::tip[How effects load]
+
+- The Reverb, the Delay, the Chorus, the Flanger, the Phaser and the Frequency shifter load at Dry/wet 50 % on a World, 0 % on the Star and 100 % on a Moon.
+- Every other effect loads doing nothing, except the Multimode filter, which filters as soon as you add it.
+- Each page's tip says what to turn first. So you can drop one in while you play and bring it in by ear, or map it to an axis that rests on its <Term id="equilibrium">equilibrium</Term>.
+
+:::
+
+## Every audio effect
+
+<NavigationGrid>
+  <NavigationCard href="/docs/orbiters/audio-effects/reverb" label="Reverb" icon={<Waves />} description="Put a sound in a space, from a small room to a long hall." />
+  <NavigationCard href="/docs/orbiters/audio-effects/delay" label="Delay" icon={<Timer />} description="Repeat a sound in time: synced echoes, dub, slapback." />
+  <NavigationCard href="/docs/orbiters/audio-effects/flanger" label="Flanger" icon={<Wind />} description="The jet whoosh, slow or fast, through-zero included." />
+  <NavigationCard href="/docs/orbiters/audio-effects/chorus" label="Chorus" icon={<AudioLines />} description="Wider and thicker, without louder, darker or out of tune." />
+  <NavigationCard href="/docs/orbiters/audio-effects/frequency-shifter" label="Frequency shifter" icon={<Orbit />} description="Every frequency moved by the same Hz: beating, metallic, an endless staircase." />
+  <NavigationCard href="/docs/orbiters/audio-effects/auto-panner" label="Auto-panner" icon={<MoveHorizontal />} description="Move a sound from side to side at a steady level: drift, sweep or chop on the beat." />
+  <NavigationCard href="/docs/orbiters/audio-effects/pitch-shifter" label="Pitch shifter" icon={<ArrowUpDown />} description="A copy moved by an interval: harmonies, sub-octaves, doubling, shimmer." />
+  <NavigationCard href="/docs/orbiters/audio-effects/waveshaper" label="Waveshaper" icon={<Sprout />} description="Add the harmonics you choose, the 2nd to the 8th: warm octaves, hollow fifths, a bright top." />
+  <NavigationCard href="/docs/orbiters/audio-effects/tremolo" label="Tremolo" icon={<Activity />} description="The level rises and falls: a slow swell, the amp tremolo, or a chop on the beat." />
+  <NavigationCard href="/docs/orbiters/audio-effects/phaser" label="Phaser" icon={<MoonStar />} description="The classic swirl, or a fast throb." />
+  <NavigationCard href="/docs/orbiters/audio-effects/vibrato" label="Vibrato" icon={<AudioWaveform />} description="The pitch wavers above and below the note: a singer's vibrato, a warble, a tape wow." />
+  <NavigationCard href="/docs/orbiters/audio-effects/stereo-widener" label="Stereo widener" icon={<UnfoldHorizontal />} description="Wider or narrower at the same loudness, a mono sound opened into stereo, the bass kept in the middle." />
+  <NavigationCard href="/docs/orbiters/audio-effects/utility" label="Utility" icon={<SlidersHorizontal />} description="Housekeeping for a stereo channel: mono, width, gain, balance, mute." />
+  <NavigationCard href="/docs/orbiters/audio-effects/filters" label="Filters" icon={<Funnel />} description="One knob: a low-pass one way, a high-pass the other, the dry sound in the middle." />
+  <NavigationCard href="/docs/orbiters/audio-effects/multimode-filter" label="Multimode filter" icon={<Blend />} description="A synth's filter for any sound: four types, a ladder model, moved by a steady cycle or by the sound's own level." />
+  <NavigationCard href="/docs/orbiters/audio-effects/parametric-eq" label="Parametric EQ" icon={<ChartSpline />} description="Eight bands to shape the tone: cuts, shelves, bells and notches." />
+  <NavigationCard href="/docs/orbiters/audio-effects/compressor" label="Compressor" icon={<Gauge />} description="Even out the level: punch on drums, glue on a mix, parallel compression." />
+  <NavigationCard href="/docs/orbiters/audio-effects/limiter" label="Limiter" icon={<ArrowUpToLine />} description="Louder, with the peaks held under a ceiling: Threshold and Ceiling, like a mastering limiter." />
+  <NavigationCard href="/docs/orbiters/audio-effects/saturator" label="Saturator" icon={<Flame />} description="Warmth, then grit: three curves, with the level held." />
+  <NavigationCard href="/docs/orbiters/audio-effects/bitcrusher" label="Bitcrusher" icon={<Binary />} description="Fewer bits and fewer samples, with a ceiling that clips, folds or wraps." />
+  <NavigationCard href="/docs/orbiters/audio-effects/channel" label="Channel" icon={<SlidersVertical />} description="Each dimension's level, solo and sends to the Moon (World channel), or level, pan and solo (Moon channel), and the Main mix." />
+</NavigationGrid>
