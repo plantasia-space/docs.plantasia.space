@@ -110,13 +110,15 @@ export default async function createConfig() {
       eventsBase: !PRODUCTION
         ? 'https://dev-api.local.plantasia.space'
         : DEV_SITE ? 'https://dev-events.plantasia.space' : 'https://events.plantasia.space',
-      // Where "Try it" (TryModule) loads a module from: the Orbiters app's module embed page. One value
-      // for every page. `ORBITERS_EMBED_URL` sets it for a build; a local `docusaurus start` uses the
-      // monitor's Orbiters preview. A production build without it shows the pictures only, so nothing
-      // points at a host that can't serve (or frame) the embed yet.
+      // Where "Try it" (TryModule) loads a module from: root's `/embed/module` route, the one page root
+      // lets docs.plantasia.space frame (PLA-516). One value for every page. The dev docs site
+      // (xplorer-docs.) shows the pictures only: dev root frames for docs.plantasia.space alone. A local
+      // `docusaurus start` uses the monitor's root preview. `ORBITERS_EMBED_URL` overrides any of these.
       orbitersEmbedUrl:
         process.env.ORBITERS_EMBED_URL ||
-        (PRODUCTION ? null : 'https://local.plantasia.space:3000/embed/module'),
+        (!PRODUCTION
+          ? 'https://local.plantasia.space:3000/embed/module'
+          : DEV_SITE ? null : 'https://plantasia.space/embed/module'),
     },
 
     // Presets for Docusaurus
